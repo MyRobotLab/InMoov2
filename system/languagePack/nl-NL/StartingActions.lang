@@ -1,0 +1,30 @@
+CHATBOTACTIVATED::Chatbot geladen, ik kan andere componenten starten, even geduld aub
+CHATBOTLOADING::Ik laad mijn hersenen, wacht alstublieft
+OSSYNCED::Inmoov besturingssysteem gesynchroniseerd met control center
+READY::Oké, je hebt mijn aandacht
+STARTINGEAR::Startende oren
+STARTINGEYELIDS::Start oogleden
+STARTINGFULL::Volledige robot arduino gekozen uit configuratie
+STARTINGHEAD::Startkop
+STARTINGLEFTARM::Startende linkerarm
+STARTINGLEFTHAND::Met linkerhand beginnen
+STARTINGLEFTHANDSENSOR::Met de rechterhand sensor beginnen
+STARTINGLEFTONLY::Alleen Linkerzijde van de robot gekozen uit de configuratie
+STARTINGMOUTH::Begin van de mond
+STARTINGMOUTHCONTROL::Starting mouth control
+STARTINGNEOPIXEL::Neo pixel Service starten
+STARTINGNERVOPOWER::Het starten van de nervo board krachtstroom
+STARTINGNOARDUINO::Arduino uitgeschakeld van configuratie
+STARTINGOPENCV::open c.v. Camera, klaar
+STARTINGOPENNI::Kinect, klaar
+STARTINGPIR::p,i,r Sensor activering
+STARTINGRIGHTARM::Start rechterarm
+STARTINGRIGHTHAND::Met de rechterhand beginnen
+STARTINGRIGHTHANDSENSOR::Met de rechterhand sensor beginnen
+STARTINGRIGHTONLY::Alleen de rechterkant van de robot gekozen uit de configuratie
+STARTINGROLLNECK::Startrol nek
+STARTINGTORSO::Torso starten
+STARTINGULTRASONICRIGHT::Ultrasone sensor starten Rechts
+STARTINGULTRASONICLEFT::Ultrasone sensor starten Links
+STARTINGVIRTUAL::Virtuele inmoov geactiveerd
+TRACKINGSTARTED::Beginnen met tracking

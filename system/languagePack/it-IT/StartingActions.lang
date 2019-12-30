@@ -1,0 +1,30 @@
+CHATBOTACTIVATED:: Ho caricato il programma di conversazione,forse dovrò attivare altri componenti.Aspetta un momento, per favore
+CHATBOTLOADING::Sto caricando il mio cervello, per favore aspetta
+OSSYNCED:: Sistema operativo dell'InMoov sincronizzato con il centro di controllo
+READY::OK,sono pronto ad eseguire  i tuoi ordini
+STARTINGEAR:: Attivo gli  orecchi
+STARTINGEYELIDS::Attivo le palpebre
+STARTINGFULL:: Tutta la configurazione del robot su Arduino è stata abilitata
+STARTINGHEAD:: Attivo la testa
+STARTINGLEFTARM::Attivo il braccio sinistro
+STARTINGLEFTHAND:: Attivo la mano sinistra
+STARTINGLEFTHANDSENSOR:: Attivo il sensore de la mano destra
+STARTINGLEFTONLY:: Soltanto la configurazione della parte sinistra  del robot è stata abilitata
+STARTINGMOUTH:: Attivo la bocca
+STARTINGMOUTHCONTROL::Starting mouth control
+STARTINGNEOPIXEL:: Attivo il Neo Pixel
+STARTINGNERVOPOWER::Attivo l' accensione del Nervoboard
+STARTINGNOARDUINO:: Arduino è disabilitato dalla configurazione
+STARTINGOPENCV::Accendo la videocamera
+STARTINGOPENNI::Kinetics è acceso
+STARTINGPIR::Attivo il sensore P.I.R.
+STARTINGRIGHTARM::Attivo il braccio destro
+STARTINGRIGHTHAND::Attivo la mano destra
+STARTINGRIGHTHANDSENSOR::Attivo il sensore de la mano sinistra
+STARTINGRIGHTONLY:: Soltanto la configurazione della parte destra del robot è stata abilitata
+STARTINGROLLNECK:: Attivo i movimenti del collo
+STARTINGTORSO::Attivo il busto
+STARTINGULTRASONICRIGHT::Attivo il sensore ultrasonico destro
+STARTINGULTRASONICLEFT::Attivo il sensore ultrasonico sinistro
+STARTINGVIRTUAL::InMoov virtuale attivato
+TRACKINGSTARTED::Attivo la localizzazione

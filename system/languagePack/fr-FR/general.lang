@@ -1,0 +1,8 @@
+MOUTHSYNCRONISATION::Je syncronise ma bouche automatiquement, en me basant sur le signal audio
+MOUTHSYNCRONISATIONBAD::umaousse controle désactivé Je n'ai détecté auqun signal audio de qualité sur le port, 
+MOUTHSYNCRONISATIONNOTPERFECT::uJ'ai détecté un signal audio mais ce n'est pas parfait, problème d'arèfe de  l'arduino
+MOUTHSYNCRONISATIONOK::uOK maousse controle activé
+NEWMRL::Alert, Nouvelle version de mon système d'exploitation, voulez vous mettre à jour? oui ou non
+NOSKELETON::Alerte ! mon système est configuré pour utiliser arduino mais vous n'avez pas activé les parties fonctionnelles de mon squelette
+SHUTDOWN::extinction de mon systaime, veuillez patienter 10 secondes
+WHATISTHISLANGUAGE::Pack de langue configuré en français

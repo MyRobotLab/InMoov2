@@ -1,0 +1,29 @@
+CHATBOTACTIVATED::Dialogsystem bereit, jetzt weitere Komponenten starten
+CHATBOTLOADING::Ich aktiviere mein Hirn, das dauert etwas
+OSSYNCED::inmoov operating system mit control center synchronisiert
+READY::Ok, ich bin bereit
+STARTINGEAR::Ich öffne meine Ohren
+STARTINGEYELIDS::Augenlieder aktiviert
+STARTINGFULL::Gesamter Roboter wird gestartet
+STARTINGHEAD::Kopf aktiviert
+STARTINGLEFTARM::Linker Arm aktiviert
+STARTINGLEFTHAND::Linke Hand aktiviert
+STARTINGLEFTHANDSENSOR::Linke Hand sensor aktiviert
+STARTINGLEFTONLY::Nur die linke Seite wird gestartet
+STARTINGMOUTH::Stimme aktiviert
+STARTINGMOUTHCONTROL::Stimme control aktiviert
+STARTINGNEOPIXEL::neo pixel aktiviert
+STARTINGNERVOPOWER::nervoboard Stromversorgung aktiviert
+STARTINGNOARDUINO::Arduino ist deaktiviert
+STARTINGOPENCV::Kamera aktiviert
+STARTINGOPENNI::Kinect aktiviert
+STARTINGPIR::p,i,r sensor activiert
+STARTINGRIGHTARM::Rechter Arm aktiviert
+STARTINGRIGHTHAND::Rechte Hand aktiviert
+STARTINGRIGHTHANDSENSOR::Rechte Hand sensor aktiviert
+STARTINGRIGHTONLY::Nur die rechte Seite wird gestartet
+STARTINGROLLNECK::Rollneck aktiviert 
+STARTINGTORSO::Torso aktiviert
+STARTINGULTRASONIC::Ultraschallsensor starten
+STARTINGVIRTUAL::virtueller inmoov wird gestartet
+TRACKINGSTARTED::tracking aktiviet

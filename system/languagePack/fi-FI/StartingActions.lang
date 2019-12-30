@@ -1,0 +1,30 @@
+CHATBOTACTIVATED :: Chatbot ladattu, voin käynnistää muita komponentteja, odota
+CHATBOTLOADING :: Minä lataan aivoni, odota
+OSSYNCED :: inmoov-käyttöjärjestelmä synkronoidun ohjauskeskuksen kanssa
+READY :: Ok, sinulla on minun huomioni
+STARTINGEAR :: Korvien aloitus
+STARTINGEYELIDS :: Aloittaminen silmäluomien
+STARTINGFULL :: Täydellinen robotti arduino valittu kokoonpanosta
+STARTINGHEAD :: Aloituspään
+STARTINGLEFTARM :: Vasemman käden aloitus
+STARTINGLEFTHAND :: Vasemmanpuoleinen käsi
+STARTINGLEFTHANDSENSOR :: Vasemmanpuoleinen sensor käsi
+STARTINGLEFTONLY :: Vain robottien vasen puoli, joka on valittu konfiguroinnista
+STARTINGMOUTH :: Aloittavan suun
+STARTINGMOUTHCONTROL::Starting mouth control
+STARTINGNEOPIXEL :: Aloita neopikselipalvelu
+STARTINGNERVOPOWER :: Käynnistäminen hermostoon
+STARTINGNOARDUINO :: Arduino ei ole konfiguroitu
+STARTINGOPENCV :: avaa c.v. kamera, valmis
+STARTINGOPENNI :: Kinect, aloitettu
+STARTINGPIR :: p, i, r anturin aktivointi
+STARTINGRIGHTARM :: Oikean käden aloitus
+STARTINGRIGHTHAND :: Oikeanpuoleinen käsi
+STARTINGRIGHTHANDSENSOR :: Oikeanpuoleinen sensor käsi
+STARTINGRIGHTONLY :: Vain robotin oikea puoli konfiguroinnista
+STARTINGROLLNECK :: Aloita telan kaula
+STARTINGTORSO :: Aloitus Torso
+STARTINGULTRASONICRIGHT :: Käynnistä ultraäänianturi oikealla
+STARTINGULTRASONICLEFT :: Käynnistä ultraäänianturi vasen
+STARTINGVIRTUAL :: virtuaalinen inmoov aktivoitu
+TRACKINGSTARTED :: aloittavan seurannan

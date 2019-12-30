@@ -1,0 +1,30 @@
+CHATBOTACTIVATED::Chatebote activé
+CHATBOTLOADING::Je charge les fichiers de mon intelligence artificielle, veuillez patienter
+OSSYNCED::système d'exploitation syncronisé avec le centre de controle
+READY::Je suis prêt à fonctionner
+STARTINGEAR::reconnaissance vocale, oké
+STARTINGEYELIDS::démarrage des paupières
+STARTINGFULL::Mode robot complet sélectionné
+STARTINGHEAD::démarrage de la tête
+STARTINGLEFTARM::démarrage du bras gauche
+STARTINGLEFTHAND::démarrage de la main gauche
+STARTINGLEFTHANDSENSOR::démarrage des capteurs de la main gauche
+STARTINGLEFTONLY::arduino coté gauche uniquement sélectionné
+STARTINGMOUTH::bouche, oké
+STARTINGMOUTHCONTROL::syncronisation bouche, oké
+STARTINGNEOPIXEL::neo pixel, oké
+STARTINGNERVOPOWER::Activation de la puissance des nervo borde
+STARTINGNOARDUINO::Mode vocal uniquement, désactivation des arduino
+STARTINGOPENCV::opeune cévé caméra, oké
+STARTINGOPENNI::Kinect, oké
+STARTINGPIR::capteur de présence, oké
+STARTINGRIGHTARM::démarrage du bras droit
+STARTINGRIGHTHAND::démarrage de la main droite
+STARTINGRIGHTHANDSENSOR::démarrage des capteurs de la main droite
+STARTINGRIGHTONLY::arduino coté droit uniquement sélectionné
+STARTINGROLLNECK::démarrage du rollneck mode
+STARTINGTORSO::démarrage du Torse
+STARTINGULTRASONICRIGHT::démarrage du Capteur à ultrason droit
+STARTINGULTRASONICLEFT::démarrage du Capteur à ultrason gauche
+STARTINGVIRTUAL::Mode inmoov virtuel
+TRACKINGSTARTED::tracking service démarré

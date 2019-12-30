@@ -1,0 +1,15 @@
+ALERT::चेतावनी! क्या आपका आपका ध्यान कृपया हो सकता है! 
+ARDUINONOTCONNECTED::वहाँ एक समस्या है ! मेरे संचार पोर्ट के साथ, अपने arduino की जांच करें
+BADMRLCOMMVERSION::आर्डिनो में खराब एम आर एल कॉम संस्करण, कृपया अपडेट करें 
+BADRDUINOCHOOSEN::चुना Arduino मौजूद नहीं है, कृपया जांच करें
+CHATBOTERROR::The chatbot cannot start because I found no dictionary about your language
+CONFIGPARSERPROBLEM::There is a problem in your config file 
+GESTURE_ERROR::मैं इस इशारा को निष्पादित नहीं कर सकता।
+MRLNEEDUPDATE::You My Robotlab version is too old, please update it
+MYLANGUAGE::आपके द्वारा चुने गए भाषा में एक समस्या है!
+MYVOICETYPE::आपके द्वारा चुने गए आवाज़ में एक समस्या है!
+NEOPIXELNOWORKY::नेपिक्सल के साथ एक समस्या है, कनेक्शन की जाँच करें और एमआरएल कॉम प्रोटोकॉल
+OPENCVNOWORKY::Opencv शुरू नहीं कर सकता, समस्या के साथ,
+OPENNINOWORKY::Kinect खुला एन मैं, शुरू नहीं कर सकते माइक्रोसॉफ्ट कीनेट एस की जांच करें घ। कश्मीर।
+VINMOOOVNOWORKY::चेतावनी! वर्चुअल इनमोओव शुरू नहीं हो सकता है, जे लापता है मीटर। 3. फ़ोल्डर या, आपके पास जावा 64 बिट संस्करण नहीं है
+VOICERSSNOWORKY::चेतावनी! चेतावनी! टी के साथ एक समस्या है टी। एस प्रणाली शायद एक पी मैं कुंजी समस्या है, कुंजी की जांच करें

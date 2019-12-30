@@ -1,0 +1,30 @@
+CHATBOTACTIVATED::Чатбот загружен, я запускаю другие компоненты, пожалуйста, подождите
+CHATBOTLOADING::Я загружаю свой мозг, пожалуйста, подождите
+OSSYNCED::Операционная система ИНМООВ синхронизирована с центром управления
+READY::Хорошо, я весь во внимании
+STARTINGEAR::Запускаю уши
+STARTINGEYELIDS::Запускаю управление глаз
+STARTINGFULL::Полный запуск робота на ардуине,как выбранно в конфигурации
+STARTINGHEAD::Запускаю управление головы
+STARTINGLEFTARM::Запускаю управление левого плеча
+STARTINGLEFTHAND::Запускаю управление левой руки
+STARTINGLEFTHANDSENSOR::Пусковой левый датчик
+STARTINGLEFTONLY::Запускаю только левую сторону робота, как выбранно в конфигурации
+STARTINGMOUTH::Запускаю управление рта
+STARTINGMOUTHCONTROL::Starting mouth control
+STARTINGNEOPIXEL::Запуск службы нео пиксель
+STARTINGNERVOPOWER::Запускаю управление питанием нервной системы
+STARTINGNOARDUINO::Ардуино отключен из конфигурации
+STARTINGOPENCV::Запускаю ОПЭН ЦВ. Камера включена
+STARTINGOPENNI::Запускаю КИННЕКТ
+STARTINGPIR::Активация датчика ПИР
+STARTINGRIGHTARM::Запускаю управление правого плеча
+STARTINGRIGHTHAND::Запускаю управление правой руки
+STARTINGRIGHTHANDSENSOR::Пусковой правый датчик
+STARTINGRIGHTONLY::Запускаю только правую сторону робота, как выбранно в конфигурации
+STARTINGROLLNECK::Запускаю управление шеи
+STARTINGTORSO::Запускаю управление торса
+STARTINGULTRASONICRIGHT::Стартовый ультразвуковой датчик справа
+STARTINGULTRASONICLEFT::Стартовый ультразвуковой датчик слева
+STARTINGVIRTUAL::Виртуальный инмоов активирован
+TRACKINGSTARTED::Начинаю отслеживание

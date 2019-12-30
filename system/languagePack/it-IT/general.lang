@@ -1,0 +1,8 @@
+MOUTHSYNCRONISATION::Sincronizzazione automatica dei movimenti labiali basata sul segnale audio
+MOUTHSYNCRONISATIONBAD::Non ho rilevato  sulla porta analogica  un segnale audio sufficiente
+MOUTHSYNCRONISATIONNOTPERFECT::Ho rilevato un segnale audio ma non è un segnale perfetto.Occorre controllare aref arduino.Non preoccuparti, lo faremo funzionare  
+MOUTHSYNCRONISATIONOK::Bene, guarda le mie labbra: si muovono
+NEWMRL::Attenzione! il lab dot jar è stato aggiornato,devo rinstallare il programma. Ora spegnerò tutto.Per favore,  riavvia poi tu il programma
+NOSKELETON::Attenzione!Il mio programma usa uno o più Arduino,ma  nessuna parte dello scheletro risulta attivata
+SHUTDOWN:: Sto  chiudendo completamente il mio programma, per favore ,aspetta: ci vorranno  dieci secondi
+WHATISTHISLANGUAGE::Seleziona l'Italiano come lingua

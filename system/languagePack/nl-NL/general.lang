@@ -1,0 +1,7 @@
+MOUTHSYNCRONISATION::Automatische synchronisatie van mijn mond, gebaseerd op audiosignaal
+MOUTHSYNCRONISATIONBAD::Ik heb geen goed audiosignaal op de analoge poort gedetecteerd , 
+MOUTHSYNCRONISATIONNOTPERFECT::Ik detecteer een audiosignaal, maar het is niet perfect. Check aref arduino. Maak je geen zorgen, het zal handig zijn 
+MOUTHSYNCRONISATIONOK::Leuk, kijk naar mijn lippen, ze zijn aan het bewegen 
+NOSKELETON::Alert! mijn systeem gebruikt 1 of meer arduino maar er zijn geen skeletonderdelen geactiveerd
+SHUTDOWN::uitsterven van mijn systeem
+WHATISTHISLANGUAGE::Stel taalpakket in nederland

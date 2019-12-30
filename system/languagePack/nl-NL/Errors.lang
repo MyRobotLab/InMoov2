@@ -1,0 +1,15 @@
+ALERT::Alert! Mag ik je aandacht alsjeblieft ! 
+ARDUINONOTCONNECTED::Er is een probleem ! Met mijn communicatie poort, controleer je arduino 
+BADMRLCOMMVERSION::Slechte M R L com versie binnen arduino, aub update 
+BADRDUINOCHOOSEN::De gekozen Arduino bestaat niet, plese check 
+CHATBOTERROR::De chatbot kan niet starten omdat ik geen woordenboek over uw taal heb gevonden
+CONFIGPARSERPROBLEM::Er is een probleem in uw config bestand 
+GESTURE_ERROR::Ik kan dit gebaar niet uitvoeren.
+MRLNEEDUPDATE::Uw My Robotlab-versie is te oud, geef het alstublieft bij
+MYLANGUAGE::Er is een probleem met de taal die u hebt gekozen !
+MYVOICETYPE::Er is een probleem met de stem die u hebt gekozen !
+NEOPIXELNOWORKY::Er is een probleem met neopixel, controleer de verbinding en het protocol van m.r.l Com
+OPENCVNOWORKY::Open ceve kan niet starten, er is een probleem met het 
+OPENNINOWORKY::Kinect open n i , kan niet starten
+VINMOOOVNOWORKY::Virtual inmoov kan niet starten, missen j. m. 3. map of, geen Java 64 bit versie
+VOICERSSNOWORKY::Er is een probleem met voice r s s. Misschien een belangrijk probleem, controleer alstublieft de pass code

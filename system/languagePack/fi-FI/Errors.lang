@@ -1,0 +1,15 @@
+ALERT::Hälytys, voinko kiinnittää huomionne!
+ARDUINONOTCONNECTED::On olemassa ongelma! viestintäporttini, tarkista arduino
+BADMRLCOMMVERSION::Bad M R L com -versio sisällä arduino, päivitä
+BADRDUINOCHOOSEN::Valittua Arduinoa ei ole, tarkista
+CHATBOTERROR::Chatbot ei voi käynnistää, koska en löytänyt sanastoa omasta kielestäsi
+CONFIGPARSERPROBLEM::Konfiguroidussa tiedostossa on ongelma
+GESTURE_ERROR::En voi suorittaa tätä eleä.
+MRLNEEDUPDATE::Sinä Robotlab-versio on liian vanha, päivitä se
+MYLANGUAGE::Valitulla kielellä on ongelma!
+MYVOICETYPE::Puheen moottorin nimen tai äänen nimen kanssa on ongelma!
+NEOPIXELNOWORKY::ongelma on neopikselin kanssa, tarkista yhteys ja m r l com -protokolla
+OPENCVNOWORKY::Avaa Ceve ei voi käynnistää, ongelma,
+OPENNINOWORKY::Kinect avoinna n, ei voi aloittaa. Tarkista microsoft kinect s. d. k.
+VINMOOOVNOWORKY::Virtual inmoov ei voi käynnistää, puuttuu j. m. 3. kansio tai sinulla ei ole java 64-bittistä versiota
+VOICERSSNOWORKY:: on puhemiehen ongelma, ehkä avainongelma, tarkista kokoonpano

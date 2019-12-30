@@ -1,0 +1,12 @@
+;----------------------------- NERVO BOARD RELAY ----------------------------------------
+[MAIN]
+isNervoboardRelayActivated=False
+
+;witch arduino control relay :
+NervoboardRelayControlerArduino=left
+PinLeftNervoPower1=51
+PinRightNervoPower1=53
+
+;----------------------------------- END --------------------------------------------------
+
+

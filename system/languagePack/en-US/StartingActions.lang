@@ -1,0 +1,29 @@
+CHATBOTACTIVATED::Chatbot loaded, I may start other components, please wait
+CHATBOTLOADING::I am loading my brain, please wait
+OSSYNCED::inmoov operating system synced with control center
+READY::Ok, you have my attention
+STARTINGEAR::Starting ears
+STARTINGEYELIDS::Starting eyelids
+STARTINGFULL::Full robot arduino chosen from configuration
+STARTINGHEAD::Starting head
+STARTINGLEFTARM::Starting left arm
+STARTINGLEFTHAND::Starting left hand
+STARTINGLEFTHANDSENSOR::Starting left hand sensor
+STARTINGLEFTONLY::Only Left side of the robot chosen from configuration
+STARTINGMOUTH::Starting mouth
+STARTINGMOUTHCONTROL::Starting mouth control
+STARTINGNEOPIXEL::Starting neo pixel Service
+STARTINGNERVOPOWER::Starting nervoboard power
+STARTINGNOARDUINO::Arduino disabled from configuration
+STARTINGOPENCV::Starting open c.v. camera
+STARTINGOPENNI::Kinect, started
+STARTINGPIR::p,i,r sensor activation
+STARTINGRIGHTARM::Starting right arm
+STARTINGRIGHTHAND::Starting right hand
+STARTINGRIGHTHANDSENSOR::Starting right hand sensor
+STARTINGRIGHTONLY::Only Right side of the robot chosen from configuration
+STARTINGROLLNECK::Starting roll neck
+STARTINGTORSO::Starting Torso
+STARTINGULTRASONIC::Starting ultrasonic sensor
+STARTINGVIRTUAL::virtual inmoov activated
+TRACKINGSTARTED::starting tracking
