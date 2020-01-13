@@ -1,7 +1,7 @@
 ;----------------------------- HEAD CONFIGURATION ----------------------------------------
 
 [MAIN]
-isHeadActivated=False
+i01.isHeadActivated()=False
 
 [ROLLNECKSERVO]
 isrollneckactivated = True

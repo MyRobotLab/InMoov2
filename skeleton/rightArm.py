@@ -9,7 +9,7 @@
 # ##############################################################################  
   
 #read current skeleton part config
-isRightArmActivated=0
+i01.isRightArmActivated()=0
 ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
 try:
@@ -17,7 +17,7 @@ try:
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
-  isRightArmActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isRightArmActivated') 
+  i01.isRightArmActivated()=ThisSkeletonPartConfig.getboolean('MAIN', 'i01.isRightArmActivated()') 
 
 except:
   errorSpokenFunc('ConfigParserProblem','rightarm.config')
@@ -27,8 +27,8 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full")  or ScriptType=="Virtual":
-  isRightArmActivated=1
+if i01.isRightArmActivated()==1 and (ScriptType=="RightSide" or ScriptType=="Full")  or ScriptType=="Virtual":
+  i01.isRightArmActivated()=1
   if RightPortIsConnected:
     rightArm = Runtime.create("i01.rightArm", "InMoovArm")
     rightArm.startPeers()
@@ -72,4 +72,4 @@ if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full")  o
 
   else:
     #we force parameter if arduino is off
-    isRightArmActivated=0
+    i01.isRightArmActivated()=0

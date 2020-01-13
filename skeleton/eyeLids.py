@@ -7,7 +7,7 @@
 # ##############################################################################
 #               PERSONNAL PARAMETERS
 # ##############################################################################  
-isEyeLidsActivated=0  
+i01.isEyeLidsActivated()=0  
 #read current skeleton part config
 ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
@@ -16,14 +16,14 @@ try:
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
-  isEyeLidsActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isEyeLidsActivated')
+  i01.isEyeLidsActivated()=ThisSkeletonPartConfig.getboolean('MAIN', 'i01.isEyeLidsActivated()')
   EyeLidsLeftActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'EyeLidsLeftActivated') 
   EyeLidsRightActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'EyeLidsRightActivated') 
   
-  if (isEyeLidsActivated and (ScriptType=="RightSide" or ScriptType=="LeftSide" or ScriptType=="Full")) or ScriptType=="Virtual":
+  if (i01.isEyeLidsActivated() and (ScriptType=="RightSide" or ScriptType=="LeftSide" or ScriptType=="Full")) or ScriptType=="Virtual":
     EyeLidsConnectedToArduino=eval(ThisSkeletonPartConfig.get('MAIN', 'EyeLidsConnectedToArduino'))
 except:
-  isEyeLidsActivated=0
+  i01.isEyeLidsActivated()=0
   errorSpokenFunc('ConfigParserProblem','eyelids . config')
   pass
 
@@ -32,7 +32,7 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if (isEyeLidsActivated and (ScriptType=="RightSide" or ScriptType=="LeftSide" or ScriptType=="Full")):
+if (i01.isEyeLidsActivated() and (ScriptType=="RightSide" or ScriptType=="LeftSide" or ScriptType=="Full")):
   if LeftPortIsConnected or RightPortIsConnected:
     eyelids = Runtime.create("i01.eyelids","InMoovEyelids")
     eyelids.startPeers()        
@@ -50,4 +50,4 @@ if (isEyeLidsActivated and (ScriptType=="RightSide" or ScriptType=="LeftSide" or
     eyelids.autoBlink(True)
   else:
     #we force parameter if arduino is off
-    isEyeLidsActivated=0
+    i01.isEyeLidsActivated()=0

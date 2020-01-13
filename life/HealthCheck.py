@@ -30,7 +30,7 @@ def HealthCheck_def(timedata):
   
   if RobotIsErrorMode==1:
     if error_red:
-      if isNeopixelActivated:
+      if i01.isNeopixelActivated():
         i01.setNeopixelAnimation("Flash Random", 255, 0, 0, 5)
       
   else:HealthCheck.stopClock()

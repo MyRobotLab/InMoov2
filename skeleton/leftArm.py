@@ -9,14 +9,14 @@
 # ##############################################################################  
   
 #read current skeleton part config
-isLeftArmActivated=0
+i01.isLeftArmActivated()=0
 ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
 try:
   CheckFileExist(ThisSkeletonPart)
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
-  isLeftArmActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isLeftArmActivated') 
+  i01.isLeftArmActivated()=ThisSkeletonPartConfig.getboolean('MAIN', 'i01.isLeftArmActivated()') 
 
 except:
   errorSpokenFunc('ConfigParserProblem','leftarm.config')
@@ -27,8 +27,8 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" ) or ScriptType=="Virtual":
-  isLeftArmActivated=1
+if i01.isLeftArmActivated()==1 and (ScriptType=="LeftSide" or ScriptType=="Full" ) or ScriptType=="Virtual":
+  i01.isLeftArmActivated()=1
   if LeftPortIsConnected==True:
 
     leftArm = Runtime.create("i01.leftArm", "InMoovArm")
@@ -74,4 +74,4 @@ if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" ) or 
 
   else:
     #we force parameter if arduino is off
-    isLeftArmActivated=0
+    i01.isLeftArmActivated()=0

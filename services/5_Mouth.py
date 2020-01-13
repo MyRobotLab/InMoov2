@@ -60,7 +60,7 @@ def publishMouthcontrolPinLeft(pins):
   for pin in range(0, len(pins)):
     #print pins[pin].value
     #mouth control listener
-    if isHeadActivated:
+    if i01.isHeadActivated():
       if AudioSignalProcessingCalibration:AudioInputValues.append(pins[pin].value)
         
       if AudioSignalProcessing:
@@ -76,7 +76,7 @@ def onEndSpeaking(text):
     if not MoveRandomTimer.isClockRunning:
       MoveHeadTimer.stopClock()
       MoveEyesTimer.stopClock()
-    if flash_when_speak and isNeopixelActivated:i01.stopNeopixelAnimation()
+    if flash_when_speak and i01.isNeopixelActivated():i01.stopNeopixelAnimation()
 
   if AudioSignalProcessing:
     try:
@@ -108,7 +108,7 @@ def onStartSpeaking(text):
     if random.randint(0,1)==1:
       i01.RobotCanMoveEyesRandom=True
       MoveEyesTimer.startClock()
-    if flash_when_speak and isNeopixelActivated:i01.setNeopixelAnimation("Flash Random", 255, 255, 255, 1)
+    if flash_when_speak and i01.isNeopixelActivated():i01.setNeopixelAnimation("Flash Random", 255, 255, 255, 1)
     
 # ##############################################################################
 # MOUTH RELATED FUNCTIONS

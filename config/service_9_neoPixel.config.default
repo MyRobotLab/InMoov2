@@ -1,6 +1,6 @@
 ;----------------------------- NEOPIXEL RX/TX CONFIG ----------------------------------------
 [MAIN]
-isNeopixelActivated=False
+i01.isNeopixelActivated()=False
 NeopixelMaster=left
 ;NeopixelMaster= right / left
 NeopixelMasterPort=Serial2

@@ -10,12 +10,12 @@
 ## warning : yolo publisher is now inside java land to avoid threading issues because of python sleep
 
 # filter, maybe we don't want to inventory every objects, like the table : i01.vision.filteredLabel.add("table");
-i01.vision.filteredLabel.add("sample");
+# i01.vision.filteredLabel.add("sample");
 
 def startYoloInventory(duration):
   i01.speak(i01.chatBot.getPredicate("startupSentence"))
   sleep(5)
-  if isNeopixelActivated==1:
+  if i01.isNeopixelActivated()==1:
     i01.setNeopixelAnimation("Color Wipe", 25, 5, 10, 15)
   enableYoloFor(duration)
   # interpret results ...

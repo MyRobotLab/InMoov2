@@ -28,24 +28,24 @@ def sleepModeWakeUp():
       sleep(0.5)
       if PlayCurstomSoundIfDetection:AudioPlayer.playFile(RuningFolder+'/system/sounds/Notifications/'+random.choice(os.listdir(RuningFolder+'/system/sounds/Notifications')),False)
     elif rdmWakup==2:
-      if isNeopixelActivated:i01.setNeopixelAnimation("Larson Scanner", 255, 255, 0, 1)
+      if i01.isNeopixelActivated():i01.setNeopixelAnimation("Larson Scanner", 255, 255, 0, 1)
       sleep(2)
-      if isNeopixelActivated:i01.stopNeopixelAnimation()
+      if i01.isNeopixelActivated():i01.stopNeopixelAnimation()
     else: welcomeMessage()
     #optional switchon nervoboard
     switchOnAllNervo()
-    if isEyeLidsActivated:
+    if i01.isEyeLidsActivated():
       eyelids.eyelidleft.moveTo(0)
       eyelids.eyelidright.moveTo(0)
       eyelids.autoBlink(True)
           #head up
-    if isHeadActivated:
+    if i01.isHeadActivated():
       head.neck.setVelocity(50)
       head.neck.moveToBlocking(head.neck.getRest())
   else:
     welcomeMessage()
   i01.RobotIsSleeping=False
-  if isNeopixelActivated:i01.stopNeopixelAnimation()
+  if i01.isNeopixelActivated():i01.stopNeopixelAnimation()
   fullspeed()
 
 
@@ -63,19 +63,19 @@ def sleepModeSleep():
   #display sleeping robot on screen
   display(RuningFolder+'/system/pictures/sleeping_2_1024-600.jpg')
   #head down
-  if isEyeLidsActivated:
+  if i01.isEyeLidsActivated():
     eyelids.autoBlink(False)
     eyelids.eyelidleft.moveTo(180)
     eyelids.eyelidright.moveTo(180)
-  if isHeadActivated:
+  if i01.isHeadActivated():
     head.neck.setVelocity(40)
     head.neck.moveTo(10)
   i01.waitTargetPos()
   i01.disable()
   switchOffAllNervo()
-  if isNeopixelActivated:i01.stopNeopixelAnimation()
+  if i01.isNeopixelActivated():i01.stopNeopixelAnimation()
   sleep(2)
-  if isNeopixelActivated:i01.setNeopixelAnimation("Color Wipe", 10, 12, 12, 50)
+  if i01.isNeopixelActivated():i01.setNeopixelAnimation("Color Wipe", 10, 12, 12, 50)
   
   #restart pir poling
   if isPirActivated:
@@ -107,14 +107,14 @@ def humanDetected():
     if (isOpenCvActivated and UsePirToActivateTracking):
       if (not i01.vision.isTracking() and WaitXsecondBeforeRelaunchTracking>=5):
         WaitXsecondBeforeRelaunchTracking=0
-        if isNeopixelActivated:i01.setNeopixelAnimation("Larson Scanner", 255, 0, 255, 1)
+        if i01.isNeopixelActivated():i01.setNeopixelAnimation("Larson Scanner", 255, 0, 255, 1)
         autoTrackingStarted=1
         trackHumans()      
       TrackingTimer.restartClock(True)
     
 def SleepTimerRoutine(timedata):
   if not i01.RobotIsSleeping:
-    if isNeopixelActivated:i01.setNeopixelAnimation("Larson Scanner", 0, 0, 255, 1)
+    if i01.isNeopixelActivated():i01.setNeopixelAnimation("Larson Scanner", 0, 0, 255, 1)
     PirControlerArduino.disablePin(PirPin)
     #sleep function to call
     SleepTimer.stopClock()  
@@ -130,7 +130,7 @@ def TrackingTimerRoutine(timedata):
     if autoTrackingStarted:
       autoTrackingStarted=0
       stopTracking()
-    if isNeopixelActivated:i01.stopNeopixelAnimation()
+    if i01.isNeopixelActivated():i01.stopNeopixelAnimation()
   TrackingTimer.stopClock()    
   
 #pir starting  

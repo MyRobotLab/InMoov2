@@ -63,7 +63,7 @@ for filename in os.listdir(RuningFolder+'skeleton'):
   if os.path.splitext(filename)[1] == ".py":execfile(RuningFolder+'skeleton/'+filename.encode('utf8'))
 
 
-if ((not isEyeLidsActivated and not isHeadActivated and not isLeftArmActivated and not isLeftHandActivated and not isRightArmActivated and not isRightHandActivated and not isTorsoActivated) and (ScriptType!="Virtual" and ScriptType!="NoArduino")):
+if ((not i01.isEyeLidsActivated() and not i01.isHeadActivated() and not i01.isLeftArmActivated() and not i01.isLeftHandActivated() and not i01.isRightArmActivated() and not i01.isRightHandActivated() and not i01.isTorsoActivated()) and (ScriptType!="Virtual" and ScriptType!="NoArduino")):
   i01.speakBlocking(i01.languagePack.get("noSkeleton"))
 
 if virtualInmoovActivated:i01.startVinMoov()
@@ -116,7 +116,7 @@ if DEBUG==1:runtime.setLogLevel("INFO")
 else:runtime.setLogLevel("ERROR")
 i01.setMute(False)
 
-if boot_green and isNeopixelActivated:    
+if boot_green and i01.isNeopixelActivated():    
   i01.setNeopixelAnimation("Flash Random", 0, 255, 0, 1)
   sleep(2)
   i01.stopNeopixelAnimation()

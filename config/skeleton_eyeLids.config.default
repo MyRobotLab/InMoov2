@@ -1,6 +1,6 @@
 ;----------------------------- EYELID CONFIGURATION ----------------------------------------
 [MAIN]
-isEyeLidsActivated=False
+i01.isEyeLidsActivated()=False
 EyeLidsConnectedToArduino=right
 ;chose left or right existing and connected arduino
 

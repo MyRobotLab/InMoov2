@@ -7,7 +7,7 @@
 # ##############################################################################
 #               PERSONNAL PARAMETERS
 # ##############################################################################  
-isHeadActivated=0
+i01.isHeadActivated()=0
 
 #read current skeleton part config
 ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
@@ -17,7 +17,7 @@ try:
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
-  isHeadActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isHeadActivated') 
+  i01.isHeadActivated()=ThisSkeletonPartConfig.getboolean('MAIN', 'i01.isHeadActivated()') 
   MouthControlActivated=ThisSkeletonPartConfig.getboolean('MOUTHCONTROL', 'MouthControlActivated')
   AudioSignalProcessing=ThisSkeletonPartConfig.getboolean('AUDIOSIGNALPROCESSING', 'AudioSignalProcessing')
   AnalogPinFromSoundCard=ThisSkeletonPartConfig.getint('AUDIOSIGNALPROCESSING', 'AnalogPin')
@@ -35,7 +35,7 @@ try:
   rotheadRest=ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rothead')
   neckPin=ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck')
 except:
-  isHeadActivated=0
+  i01.isHeadActivated()=0
   errorSpokenFunc('ConfigParserProblem','head.config')
   pass
 
@@ -46,8 +46,8 @@ RollNeckArduino=ThisSkeletonPartConfig.get('ROLLNECKSERVO', 'RollNeckArduino')
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or ScriptType=="Virtual":
-  isHeadActivated=1
+if i01.isHeadActivated()==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or ScriptType=="Virtual":
+  i01.isHeadActivated()=1
   if LeftPortIsConnected:
     head = Runtime.create("i01.head","InMoovHead")
     head.startPeers()
@@ -169,7 +169,7 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
    
   else:
     #we force parameter if arduino is off
-    isHeadActivated=0
+    i01.isHeadActivated()=0
     MouthControlActivated=0
     
 else:

@@ -11,21 +11,21 @@
 #read current skeleton part config
 ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
-isTorsoActivated=0
+i01.isTorsoActivated()=0
 try:
   CheckFileExist(ThisSkeletonPart)
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
-  isTorsoActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isTorsoActivated') 
+  i01.isTorsoActivated()=ThisSkeletonPartConfig.getboolean('MAIN', 'i01.isTorsoActivated()') 
   
-  if isTorsoActivated or ScriptType=="Virtual":
+  if i01.isTorsoActivated() or ScriptType=="Virtual":
     TorsoConnectedToArduinoPort=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino').replace("left","MyLeftPort").replace("right","MyRightPort"))
     TorsoConnectedToArduino=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino'))
     TorsoConnectedToArduinoPortBoardType=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino').replace("left","BoardTypeMyLeftPort").replace("right","BoardTypeMyRightPort"))
 except:
   errorSpokenFunc('ConfigParserProblem','torso.config')
-  isTorsoActivated=0
+  i01.isTorsoActivated()=0
   TorsoConnectedToArduino=""
   pass
 
@@ -33,9 +33,9 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if isTorsoActivated or ScriptType=="Virtual":
+if i01.isTorsoActivated() or ScriptType=="Virtual":
   if LeftPortIsConnected or RightPortIsConnected  or ScriptType=="Virtual":
-    isTorsoActivated=1
+    i01.isTorsoActivated()=1
     torso = Runtime.create("i01.torso","InMoovTorso")
     torso.startPeers()
     #pffff :) we need to manualy load now to get last position to avoid breaking parts

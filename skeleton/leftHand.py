@@ -9,7 +9,7 @@
 # ##############################################################################  
   
 #read current skeleton part config
-isLeftHandActivated=0
+i01.isLeftHandActivated()=0
 ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
 try:
@@ -17,7 +17,7 @@ try:
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
-  isLeftHandActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isLeftHandActivated') 
+  i01.isLeftHandActivated()=ThisSkeletonPartConfig.getboolean('MAIN', 'i01.isLeftHandActivated()') 
   
   
 except:
@@ -29,8 +29,8 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or ScriptType=="Virtual":
-  isLeftHandActivated=1
+if i01.isLeftHandActivated()==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or ScriptType=="Virtual":
+  i01.isLeftHandActivated()=1
   if LeftPortIsConnected:
     leftHand = Runtime.create("i01.leftHand", "InMoovHand")
     leftHand.startPeers()

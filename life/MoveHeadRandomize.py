@@ -9,7 +9,7 @@ def MoveHead(timedata):
   MoveHeadTimer.setInterval(random.randint(200,1000))
   if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.vision.isTracking():
     
-    if isHeadActivated:
+    if i01.isHeadActivated():
       i01.setHeadVelocity(random.randint(8,20),random.randint(8,20),random.randint(8,20))
       #wait servo last move
       if not head.rothead.isMoving():head.rothead.moveTo(random.uniform(65,115))
@@ -23,12 +23,12 @@ def MoveHeadStart():
   
   print "moveheadstart"
   if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.vision.isTracking():
-    if not isHeadActivated:MoveHeadTimer.stopClock()
+    if not i01.isHeadActivated():MoveHeadTimer.stopClock()
     
 def MoveHeadStop():
   
   if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.vision.isTracking():
-    if isHeadActivated:
+    if i01.isHeadActivated():
       i01.setHeadVelocity(25,25,25)
       i01.head.rest()
       i01.setHeadVelocity(40,40,40)
