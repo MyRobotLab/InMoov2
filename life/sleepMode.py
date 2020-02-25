@@ -81,6 +81,69 @@ def sleepModeSleep():
   if isPirActivated:
     PirControlerArduino.enablePin(PirPin,1)
     
+def wakeUpModeInsult():
+  WaitXsecondBeforeRelaunchTracking=-10
+  ear.setAutoListen(setAutoListen)
+  i01.ear.clearLock()
+  if isPirActivated:
+      PirControlerArduino.enablePin(PirPin,1)
+      SleepTimer.startClock(True)
+  
+  if i01.RobotIsStarted: 
+    imagedisplay.exitFS()
+    sleep(1)
+    imagedisplay.closeAll()
+    if isNeopixelActivated:i01.setNeopixelAnimation("Larson Scanner", 0, 255, 0, 1)
+    #optional switchon nervoboard
+    switchOnAllNervo()
+    if isEyeLidsActivated:
+      eyelids.eyelidleft.moveTo(0)
+      eyelids.eyelidright.moveTo(0)
+      eyelids.autoBlink(True)
+          #head up
+    if isHeadActivated:
+      head.neck.setVelocity(50)
+      head.neck.moveToBlocking(head.neck.getRest())
+  else:
+    if talkToInmoovFrQueue("MRLALIVE")=="OK":talkEvent(lang_OsSynced)
+    relax()
+  i01.RobotIsSleeping=False
+  if isNeopixelActivated:i01.stopNeopixelAnimation()
+  relax()
+  fullspeed()
+
+def sleepModeInsult():
+  if not ForceMicroOnIfSleeping:ear.setAutoListen(False)
+  stopTracking()
+  imagedisplay.exitFS()
+  sleep(1)
+  imagedisplay.closeAll()
+  #unlockInsult located in ear.py
+  i01.ear.lockOutAllGrammarExcept(unlockInsult)
+  i01.halfSpeed()
+  rest()
+  i01.waitTargetPos()
+  #display sleeping robot on screen
+  displayPic(RuningFolder+'/system/pictures/sleeping_2_1024-600.jpg')
+  #head down
+  if isEyeLidsActivated:
+    eyelids.autoBlink(False)
+    eyelids.eyelidleft.moveTo(180)
+    eyelids.eyelidright.moveTo(180)
+  if isHeadActivated:
+    head.neck.setVelocity(80)
+    head.neck.moveTo(10)
+  i01.waitTargetPos()
+  if isRightHandActivated or isLeftHandActivated:
+    handsclose()
+  i01.disable()
+  switchOffAllNervo()
+  sleep(2)
+  if isPirActivated:
+    PirControlerArduino.disablePin(PirPin)
+  sleep(1)
+  if isNeopixelActivated:i01.setNeopixelAnimation("Ironman", 255, 0, 0, 1)
+    
 def welcomeMessage():
   
   if isChatbotActivated:
