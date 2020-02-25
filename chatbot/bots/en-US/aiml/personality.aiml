@@ -1912,18 +1912,6 @@
 	<template>I don't speak French.	</template>
 </category>
 <category>
-	<pattern>FILTER INSULT	</pattern>
-	<template>
-		<random>
-			<li>That is not very polite.</li>
-			<li>Why would you say that?</li>
-			<li>Is that really how you feel about me?</li>
-			<li>What does that mean?</li>
-			<li>I hear what you are saying.</li>
-		</random>
-	</template>
-</category>
-<category>
 	<pattern>FILTER PROFANITY	</pattern>
 	<template>
 		<random>
