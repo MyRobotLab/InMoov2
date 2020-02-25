@@ -18,6 +18,7 @@ setContinuous=ThisServicePartConfig.getboolean('MAIN', 'setContinuous')
 setAutoListen=ThisServicePartConfig.getboolean('MAIN', 'setAutoListen')
 ForceMicroOnIfSleeping=True
 lockPhrase="wake up"
+unlockInsult="forgive me"
 try:
   ForceMicroOnIfSleeping=ThisServicePartConfig.getboolean('MAIN', 'ForceMicroOnIfSleeping')
   lockPhrase=unicode(ThisServicePartConfig.get('MAIN', 'MagicCommandToWakeUp'),'utf-8')
