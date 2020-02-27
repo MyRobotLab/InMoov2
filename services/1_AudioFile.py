@@ -84,7 +84,7 @@ def play():
     files = os.listdir(musicpath)
     song=random.choice(files)
     sleep(3)
-    #i01.mouth.speakBlocking("playing song" + str(song))
+    #i01.speakBlocking("playing song" + str(song))
     AudioPlayer.playFile(musicpath + str(song) , False)
     print("playing song:" + str(song))
     sleep(1)
