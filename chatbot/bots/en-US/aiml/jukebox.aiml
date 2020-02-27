@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!--Not worky anymore  -->
-<!--
-<category>
-    <pattern>listen to *</pattern> 
-    <template>ok, say STOP JUKEBOX.<oob><mrl><service>python</service><method>exec</method><param>PlayUtub("listen","<star />")</param></mrl></oob></template>
-</category>
-        <category>
-      <pattern>STOP JUKEBOX</pattern>
-      <template>Ok, let's stop it. <oob><mrl><service>python</service><method>exec</method><param>PlayUtub("stop","0")</param></mrl></oob></template>
-    </category>
--->
+<!-- File: jukebox.aiml -->
+<!--  -->
 <category><pattern>PLAY MUSIC</pattern>
 <template><random>
         <li>Sure thing!</li>
         <li>Playing music now</li>
         <li>OK!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>play()</param></mrl></oob></template>
+    <oob><mrl><service>python</service><method>exec</method><param>playMusic()</param></mrl></oob></template>
+</category>
+<category><pattern>PLAY RANDOM MUSIC</pattern>
+<template><random>
+        <li>Selecting random music</li>
+        <li>Sure!</li>
+        <li>Ok!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>playRandomMusic()</param></mrl></oob></template>
+</category>
+<category><pattern>STOP MUSIC</pattern>
+<template><random>
+        <li>As you please</li>
+        <li>Stopping music now</li>
+        <li>OK!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>stopMusic()</param></mrl></oob></template>
 </category>
 <category><pattern>PLAY NEXT MUSIC</pattern>
 <template><random>
@@ -27,27 +34,25 @@
       </random>
     <oob><mrl><service>python</service><method>exec</method><param>nextMusic()</param></mrl></oob></template>
 </category>
-<category><pattern>STOP MUSIC</pattern>
-<template><random>
-        <li>As you please</li>
-        <li>Stopping music now</li>
-        <li>OK!</li>
-      </random>
-    <oob><mrl><service>python</service><method>exec</method><param>stop()</param></mrl></oob></template>
-</category>
 <category><pattern>PAUSE MUSIC</pattern>
 <template><random>
         <li>Music in pause</li>
         <li>Pausing music now</li>
         <li>OK!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>pause()</param></mrl></oob></template>
+    <oob><mrl><service>python</service><method>exec</method><param>pauseMusic()</param></mrl></oob></template>
 </category>
 <category><pattern>RESUME MUSIC</pattern>
 <template><random>
         <li>Resuming music now</li>
         <li>Sure!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>resume()</param></mrl></oob></template>
-</category>    
+    <oob><mrl><service>python</service><method>exec</method><param>resumeMusic()</param></mrl></oob></template>
+</category>
+<category><pattern>VOLUME MUSIC LOUDER</pattern>
+<template><oob><mrl><service>AudioFile</service><method>exec</method><param>setVolume(1.0)</param></mrl></oob></template>
+</category>
+<category><pattern>VOLUME MUSIC LOWER</pattern>
+<template><oob><mrl><service>AudioFile</service><method>exec</method><param>setVolume(0.5)</param></mrl></oob></template>
+</category>
 </aiml>
