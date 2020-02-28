@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sample</groupId>
-    <artifactId>assemblyPluginTutorial</artifactId>
+    <groupId>fr.inmoov</groupId>
+    <artifactId>InMoov2</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -15,6 +15,30 @@
             <version>3.0</version>
         </dependency>
     </dependencies>
+
+    <id>src</id>
+    <formats>
+        <format>tar.gz</format>
+        <format>tar.bz2</format>
+        <format>zip</format>
+    </formats>
+    <fileSets>
+        <fileSet>
+        <directory>${project.basedir}</directory>
+        <includes>
+            <include>README*</include>
+            <include>LICENSE*</include>
+            <include>NOTICE*</include>
+            <include>pom.xml</include>
+        </includes>
+        <useDefaultExcludes>true</useDefaultExcludes>
+        </fileSet>
+        <fileSet>
+        <directory>${project.build.sourceDirectory}/src</directory>
+        <useDefaultExcludes>true</useDefaultExcludes>
+        </fileSet>
+    </fileSets>
+
 
     <build>
         <plugins>

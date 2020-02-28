@@ -1,13 +1,13 @@
 /**********************************************************************************
- * JenkinsFile for inmoov
+ * JenkinsFile for InMoov2
  *
  * for adjusting build number for specific branch build
- * Jenkins.instance.getItemByFullName("inmoov-multibranch/develop").updateNextBuildNumber(185)
+ * Jenkins.instance.getItemByFullName("InMoov2-multibranch/develop").updateNextBuildNumber(185)
  *  
  * CHANGE build.properties TO BUILD AND DEPLOY A NEW BUILD
  *
  ***********************************************************************************/
-properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/inmoov/'], pipelineTriggers([[$class: 'PeriodicFolderTrigger', interval: '2m']])])
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/InMoov2/'], pipelineTriggers([[$class: 'PeriodicFolderTrigger', interval: '2m']])])
 
 // node ('ubuntu') { // use any node
 node ('master') { // use any node
@@ -27,8 +27,8 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
          // Get some code from a GitHub repository
       // dir('build') { // sub-dir
          checkout scm
-         // git 'https://github.com/MyRobotLab/inmoov.git'
-         // git url: 'https://github.com/MyRobotLab/inmoov.git', branch: 'develop'
+         // git 'https://github.com/MyRobotLab/InMoov2.git'
+         // git url: 'https://github.com/MyRobotLab/InMoov2.git', branch: 'develop'
          // props = readProperties file: 'build.properties'
          // echo "props ${props}"
          
@@ -59,21 +59,21 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
    
       sh "'${mvnHome}/bin/mvn' -Dbuild.number=${env.BUILD_NUMBER} -Dgit_commit=$git_commit -Dgit_branch=$git_branch deploy "
 
-      // sh 'jar cfv InMoov2.jar -C build .'
+      // sh 'jar cfv InMoov22.jar -C build .'
 
       //  maven(MavenPublication) {
-      //           groupId 'fr.inmoov.inmoov2'
+      //           groupId 'fr.InMoov2.InMoov22'
       //           artifactId 'test-publish'
       //           version version
-      //           artifact "InMoov2-"+"$version"+".jar"
+      //           artifact "InMoov22-"+"$version"+".jar"
       //    }
     
    	// def server = Artifactory.server 'repo' 
    	// def uploadSpec = """{
       //                   "files": [
       //                               {
-      //                                   "pattern": "dist/inmoov-1.1.${env.BUILD_NUMBER}.zip",
-      //                                   "target": "inmoov/fr/inmoov/1.1.${env.BUILD_NUMBER}/"
+      //                                   "pattern": "dist/InMoov2-1.1.${env.BUILD_NUMBER}.zip",
+      //                                   "target": "InMoov2/fr/InMoov2/1.1.${env.BUILD_NUMBER}/"
       //                               }
       //                               ]
       //                           }"""
