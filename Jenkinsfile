@@ -25,7 +25,7 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
       mvnHome = tool 'M3'
       cleanWs()
          // Get some code from a GitHub repository
-      dir('build') {
+      // dir('build') { // sub-dir
          checkout scm
          // git 'https://github.com/MyRobotLab/inmoov.git'
          // git url: 'https://github.com/MyRobotLab/inmoov.git', branch: 'develop'
@@ -42,7 +42,7 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
       
          echo git_commit
          echo "git_commit=$git_commit"
-      }
+      // }
       // Run the maven build
       // if (isUnix()) {
       // // -o == offline      
