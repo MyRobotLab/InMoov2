@@ -55,7 +55,7 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
 
    stage('publish') {
    
-   
+
 
       sh 'jar cfv InMoov2.jar -C build .'
 
@@ -63,7 +63,7 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
                 groupId 'fr.inmoov.inmoov2'
                 artifactId 'test-publish'
                 version version
-                artifact "InMoov2-'+"$version"+'.jar'
+                artifact "InMoov2-"+"$version"+".jar"
          }
     
    	// def server = Artifactory.server 'repo' 
