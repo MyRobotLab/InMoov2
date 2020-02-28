@@ -15,9 +15,6 @@
             <version>3.0</version>
         </dependency>
     </dependencies>
-    <configuration>
-    <descriptors></descriptors>
-    </configuration>
 
     <build>
         <plugins>
