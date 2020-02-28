@@ -21,6 +21,7 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
    // def mvnHome
    stage('preparation') { // for display purposes
       echo 'clean the workspace'
+      mvnHome = tool 'M3'
       cleanWs()
          // Get some code from a GitHub repository
       dir('build') {
@@ -55,16 +56,16 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
 
    stage('publish') {
    
+      sh "'${mvnHome}/bin/mvn' -Dbuild.number=${env.BUILD_NUMBER} -Dgit_commit=$git_commit -Dgit_branch=$git_branch deploy "
 
+      // sh 'jar cfv InMoov2.jar -C build .'
 
-      sh 'jar cfv InMoov2.jar -C build .'
-
-       maven(MavenPublication) {
-                groupId 'fr.inmoov.inmoov2'
-                artifactId 'test-publish'
-                version version
-                artifact "InMoov2-"+"$version"+".jar"
-         }
+      //  maven(MavenPublication) {
+      //           groupId 'fr.inmoov.inmoov2'
+      //           artifactId 'test-publish'
+      //           version version
+      //           artifact "InMoov2-"+"$version"+".jar"
+      //    }
     
    	// def server = Artifactory.server 'repo' 
    	// def uploadSpec = """{
