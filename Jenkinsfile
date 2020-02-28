@@ -9,7 +9,8 @@
  ***********************************************************************************/
 properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/inmoov/'], pipelineTriggers([[$class: 'PeriodicFolderTrigger', interval: '2m']])])
 
-node ('ubuntu') { // use any node
+// node ('ubuntu') { // use any node
+node ('master') { // use any node
 
 sh "set version=1.1.${env.BUILD_NUMBER}" 
 
