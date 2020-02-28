@@ -22,42 +22,48 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
    stage('preparation') { // for display purposes
       echo 'clean the workspace'
       cleanWs()
-      // Get some code from a GitHub repository
-      checkout scm
-      // git 'https://github.com/MyRobotLab/inmoov.git'
-      // git url: 'https://github.com/MyRobotLab/inmoov.git', branch: 'develop'
-      // props = readProperties file: 'build.properties'
-      // echo "props ${props}"
-      
-      sh 'git rev-parse --abbrev-ref HEAD > GIT_BRANCH'
-      git_branch = readFile('GIT_BRANCH').trim()
-      echo git_branch
-    
-      sh 'git rev-parse HEAD > GIT_COMMIT'
-      git_commit = readFile('GIT_COMMIT').trim()
-      echo git_commit
-    
-      echo git_commit
-      echo "git_commit=$git_commit"
-      // Run the maven build
-      if (isUnix()) {
-      // -o == offline      
+         // Get some code from a GitHub repository
+      dir('build') {
+         checkout scm
+         // git 'https://github.com/MyRobotLab/inmoov.git'
+         // git url: 'https://github.com/MyRobotLab/inmoov.git', branch: 'develop'
+         // props = readProperties file: 'build.properties'
+         // echo "props ${props}"
          
-         sh('printenv | sort')
-         sh "'ant' -Dversion=1.1.${env.BUILD_NUMBER}"
-      } else {
-        //  bat(/"${mvnHome}\bin\mvn" -Dbuild.number=${env.BUILD_NUMBER} -Dgit_commit=$git_commit -Dgit_branch=$git_branch -Dmaven.test.failure.ignore -q clean compile  /)
-        bat(/"ant" -Dversion=1.1.${env.BUILD_NUMBER}/)
+         sh 'git rev-parse --abbrev-ref HEAD > GIT_BRANCH'
+         git_branch = readFile('GIT_BRANCH').trim()
+         echo git_branch
+      
+         sh 'git rev-parse HEAD > GIT_COMMIT'
+         git_commit = readFile('GIT_COMMIT').trim()
+         echo git_commit
+      
+         echo git_commit
+         echo "git_commit=$git_commit"
       }
+      // Run the maven build
+      // if (isUnix()) {
+      // // -o == offline      
+         
+      //    sh('printenv | sort')
+      //    sh "'ant' -Dversion=1.1.${env.BUILD_NUMBER}"
+      // } else {
+      //   //  bat(/"${mvnHome}\bin\mvn" -Dbuild.number=${env.BUILD_NUMBER} -Dgit_commit=$git_commit -Dgit_branch=$git_branch -Dmaven.test.failure.ignore -q clean compile  /)
+      //   bat(/"ant" -Dversion=1.1.${env.BUILD_NUMBER}/)
+      // }
    }
 
    stage('publish') {
    
+   
+
+      sh 'jar cfv InMoov2.jar -C build .'
+
        maven(MavenPublication) {
                 groupId 'fr.inmoov.inmoov2'
                 artifactId 'test-publish'
                 version version
-                artifact "$buildDir"+'/libs/'+"${title}"+'-'+"$version"+'.jar'
+                artifact "InMoov2-'+"$version"+'.jar'
          }
     
    	// def server = Artifactory.server 'repo' 
