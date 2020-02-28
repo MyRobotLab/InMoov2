@@ -2,13 +2,13 @@
 <aiml>
 <!-- File: _inmoovWeather.aiml -->
 <!-- Author: Greg Perry -->
-<!-- Last modified: July 07, 2018 -->
+<!-- Last modified: February 13, 2020 -->
 <!--  -->
-<!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
+<!-- This AIML file is part of the EN-US 0.1 chat bot knowledge base. -->
 <!--  -->
-<!-- The EN brain is Copyright &copy; 2018 by InMoov Foundation. -->
+<!-- The EN-US brain is Copyright &copy; 2020 by InMoov Foundation. -->
 <!--  -->
-<!-- The EN brain is released under the terms of the GNU Lesser General -->
+<!-- The EN-US brain is released under the terms of the GNU Lesser General -->
 <!-- Public License, as published by the Free Software Foundation. -->
 <!--  -->
 <!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
@@ -164,7 +164,7 @@ period;
                 <li>The thermometer shows, </li>
                 </random>
                 <star index="1"/> degrees</template>
-</category>       
+</category>
 <category><pattern>SYSTEM OPENWEATHERMAPERROR</pattern>
 <template>open weathermap a.p.i. error, or maybe this town is unrecognized.</template>
 </category>

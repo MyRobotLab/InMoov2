@@ -27,4 +27,4 @@ def YoloOnUSonic():
   else:
     sleep(1)
     No()
-    i01.mouth.speakBlocking("I think my Ultrasonic is not activated")
+    i01.speakBlocking("I think my Ultrasonic is not activated")

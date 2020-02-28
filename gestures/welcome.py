@@ -11,8 +11,8 @@ def welcome():
   i01.moveHand("left",2,2,2,2,2,90)
   i01.moveHand("right",2,2,2,2,2,90)
   sleep(1)
-  i01.mouth.speakBlocking("Welcome to the inmoov nation")
-  #i01.mouth.speakBlocking(u"Добро пожаловать в страну Инмоов")
+  i01.speakBlocking("Welcome to the inmoov nation")
+  #i01.speakBlocking(u"Добро пожаловать в страну Инмоов")
   sleep(1)
 
 

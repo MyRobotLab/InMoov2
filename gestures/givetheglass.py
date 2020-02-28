@@ -11,8 +11,8 @@ def givetheglass():
   i01.moveArm("right",21,80,77,10)
   i01.moveHand("left",109,138,180,164,180,60)
   i01.moveHand("right",102,86,105,105,143,133)
-  i01.mouth.speakBlocking("Hello please take the glass")
-  #i01.mouth.speakBlocking(u"Привет, пожалуйста, возьмите стакан")
+  i01.speakBlocking("Hello please take the glass")
+  #i01.speakBlocking(u"Привет, пожалуйста, возьмите стакан")
   sleep(1)
   i01.finishedGesture()
 

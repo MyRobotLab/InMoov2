@@ -85,11 +85,11 @@ def danceYes():
     sleep(5)
     w = (random.randint(1, 3))
     if w == 1:
-      i01.mouth.speakBlocking("Are you hungry for a hamburger, or maybe it is not appropriate")
+      i01.speakBlocking("Are you hungry for a hamburger, or maybe it is not appropriate")
     if w == 2:
-      i01.mouth.speakBlocking("may I have your phone number")
+      i01.speakBlocking("may I have your phone number")
     if w == 3:
-      i01.mouth.speakBlocking("please don't step on my feet")
+      i01.speakBlocking("please don't step on my feet")
     sleep(1)
     AudioPlayer.playFile(RuningFolder+'/system/sounds/Cant Get Enough CutVersion.mp3')  
     sleep(45)
@@ -124,10 +124,10 @@ def danceYes():
     i01.moveHand("right",20,20,20,20,20,90)
     MoveHeadTimer.startClock()
     sleep(4)
-    i01.mouth.speakBlocking("Put your left hand in my hand")
+    i01.speakBlocking("Put your left hand in my hand")
     sleep(4)
     i01.moveHand("right",20,120,120,120,120,70)
-    i01.mouth.speakBlocking("Carefull my arm is not strong")
+    i01.speakBlocking("Carefull my arm is not strong")
     sleep(1)
     i01.moveHead(20,100,60)
     AudioPlayer.playFile(RuningFolder+'/system/sounds/Ah le petit vin blanc.mp3')
@@ -135,17 +135,17 @@ def danceYes():
     ear.setAutoListen(setAutoListen)  
   y = (random.randint(1, 6))
   if y == 1:
-    i01.mouth.speakBlocking("Is it your first time?")
+    i01.speakBlocking("Is it your first time?")
   if y == 2:
-    i01.mouth.speakBlocking("Very nice, isn't it?")
+    i01.speakBlocking("Very nice, isn't it?")
   if y == 3:
-    i01.mouth.speakBlocking("I love this moment")
+    i01.speakBlocking("I love this moment")
   if y == 4:
-    i01.mouth.speakBlocking("First time with a robot?")
+    i01.speakBlocking("First time with a robot?")
   if y == 5:
-    i01.mouth.speakBlocking("I could spent my life with you")
+    i01.speakBlocking("I could spent my life with you")
   if y == 6:
-    i01.mouth.speakBlocking("Would you marry me?")  
+    i01.speakBlocking("Would you marry me?")  
   sleep(8)
   #remove arms
   i01.moveHead(20,90,30)
@@ -154,13 +154,13 @@ def danceYes():
   sleep(2)
   z = (random.randint(1, 4))
   if x == 1:
-    i01.mouth.speakBlocking("Thank you for this lovely moment")
+    i01.speakBlocking("Thank you for this lovely moment")
   if x == 2:
-    i01.mouth.speakBlocking("It was a pleasure")
+    i01.speakBlocking("It was a pleasure")
   if x == 3:
-    i01.mouth.speakBlocking("I hope we meet soon again")
+    i01.speakBlocking("I hope we meet soon again")
   if x == 4:
-    i01.mouth.speakBlocking("Time just flies, and this wonderull moment is already finished")  
+    i01.speakBlocking("Time just flies, and this wonderull moment is already finished")  
   i01.moveHead(90,90,90)
   MoveEyesTimer.stopClock()
   MoveHeadTimer.stopClock()

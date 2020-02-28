@@ -14,7 +14,7 @@ def happy():
     i01.moveHand("right",81,79,118,47,0,90)
     sleep(1)
     if w==1:
-        i01.mouth.speakBlocking("happy birthday grog")
+        i01.speakBlocking("happy birthday grog")
         i01.setHandVelocity("left", -1, -1, -1, -1, -1, -1)
         i01.setHandVelocity("right", -1, -1, -1, -1, -1, -1)
         i01.setArmVelocity("right", 43.0, 43.0, 43.0, -1)

@@ -11,7 +11,7 @@ def missedYou():
   i01.moveArm("right",37,124,30,27)
   i01.moveHand("left",2,2,2,2,2,90)
   i01.moveHand("right",2,2,2,2,2,90)
-  i01.mouth.speakBlocking("Oh, I missed you so much")
+  i01.speakBlocking("Oh, I missed you so much")
   sleep(2)
   #close arms
   i01.chatBot.getResponse("SAY " + "Shall we give a hug")

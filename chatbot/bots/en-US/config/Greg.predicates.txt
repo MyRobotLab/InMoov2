@@ -1,0 +1,122 @@
+contactbirthday:unknown
+familiarcontactid:sweetie
+birthdate:after the devils are all have the same sign
+county:which
+familiarcontactname:who
+startupSentence:This takes a few seconds to process.
+favoriteactor:who
+province:which
+road:which
+friend:who
+contacturi:unknown
+state:which
+sister:who
+contacttype:unknown
+wife:who
+them:who
+emailaddress:unknown
+dislikes:that let us try to find it YouTube
+it:it do not get this wrong i got to find a hint cuz i do not know what the hell they are talking about
+favoritepredicate:LANGUAGE
+multipleids:false
+lastname:what
+birthplace:where
+dialnumber:unknown
+meta:set
+favoriteactress:who
+brother:who
+dog:who
+status:what
+yoloReturn:null
+favoritetvshow:what
+gender:UNDEFINED
+city:which
+contactid:sweetie
+boyfriend:who
+latitude:which
+firstword:295
+phonenumber:unknown
+isanumber:false
+jsenabled:true
+email:what
+familiarpronoun:unknown
+address:where
+grandmother:who
+favoritemovie:The Matrix
+religion:data
+newcontact:unknown
+voicemailnumber:unknown
+displayname:sweetie
+checkednameoruri:true
+favoritename:true
+country:which
+contactquery:unknown
+favoritedrink:what
+isanemailaddress:false
+favoriteband:who
+favoritesport:what
+sign:which
+husband:who
+isacontacturi:false
+favoriteicecream:what
+mother:who
+son:who
+forceaddcontact:false
+employer:who
+nephew:who
+grandfather:who
+checkedfamiliarname:true
+has:it do not get this wrong i got to find a hint cuz i do not know what the hell they are talking about
+residence:where
+iama:mobile virtual assistant
+bestfriend:who
+likes:stay informed
+favoritefood:what
+contactaddress:unknown
+familiarname:sweetie
+town:which
+externalname:unknown
+favoritecolor:Turquoise
+longitute:which
+familiarpredicate:unknown
+girlfriend:who
+she:actress
+isaname:false
+customname:unknown
+name:Greg
+topic:it do not get this wrong i got to find a hint cuz i do not know what the hell they are talking about
+daughter:who
+isfamiliarname:false
+birthday:when
+request:you suck
+firstname:what
+isaphonenumber:false
+father:who
+we:who
+savedtopic:lost
+favoritesong:what
+contactname:sweetie
+hair:what
+messagebody:unknown
+niece:who
+street:which
+cat:what
+statement:you can
+favoritebook:sometimes A Great Notion by Ken Kesey
+ustatement:you bought a coat
+favoritecar:what
+learnpattern:WHAT IS AN
+modecom:CALL
+orientation:unknown
+newpattern:NORESP
+equalto:false
+middlename:what
+botname:unknown
+istatement:I BUY a coat
+response:lt oob gt lt dialog gt lt title gt Would you like to send a bug report? lt slash title gt lt list gt lt item gt Yes lt slash item gt lt item gt No lt slash item gt lt slash list gt lt slash dialog gt lt slash oob gt 	 To help the developers understand your problem you can choose to send us a transcript of your recent conversation with InMoov. 	 You can add your own comments to the email message too. Would you like to send a report?
+there:it
+baby:who
+location:Seas
+he:get the day started
+age:8
+isafamiliarname:false

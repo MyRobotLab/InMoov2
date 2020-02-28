@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!-- File: horoscope.aiml -->
-<!-- Author: Gael Langevin -->
-<!-- Last modified: october 19, 2018 -->
+<!-- Author: Greg Perry -->
+<!-- Last modified: February 13, 2020 -->
 <!--  -->
-<!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
+<!-- This AIML file is part of the EN-US 0.1 chat bot knowledge base. -->
 <!--  -->
-<!-- The EN brain is Copyright &copy; 2018 by InMoov Foundation. -->
+<!-- The EN-US brain is Copyright &copy; 2020 by InMoov Foundation. -->
 <!--  -->
-<!-- The EN brain is released under the terms of the GNU Lesser General -->
+<!-- The EN-US brain is released under the terms of the GNU Lesser General -->
 <!-- Public License, as published by the Free Software Foundation. -->
 <!--  -->
 <!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
@@ -16,27 +16,20 @@
 <!--  -->
 <!-- For more information see http://www.inmoov.fr -->
 <!--  -->
-
 <category><pattern>LIBRA</pattern>
-  <template>
-    <think>
-      <set name="it"></set>
-      <set name="sign"></set>
-      <set name="topic"></set>
+<template><think>
+      <set name="it"/>
+      <set name="sign"/>
+      <set name="topic"/>
     </think>
-      <sraix>RANDOM HOROSCOPE</sraix>
-  </template>
+      <sraix>RANDOM HOROSCOPE</sraix></template>
 </category>
-
-  <category>
-    <pattern>HOROSCOPE FOR *</pattern>
-    <template><think><set name="it"><star/></set><set name="sign"><star/></set><set name="topic"><star/></set></think>
-      <sraix>RANDOM HOROSCOPE</sraix>
-    </template>
-  </category>
-<category>
-  <pattern>RANDOM HOROSCOPE</pattern>
-  <template>The daily horoscope for <get name="sign" />
+<category><pattern>HOROSCOPE FOR *</pattern>
+<template><think><set name="it"><star/></set><set name="sign"><star/></set><set name="topic"><star/></set></think>
+      <sraix>RANDOM HOROSCOPE</sraix></template>
+</category>
+<category><pattern>RANDOM HOROSCOPE</pattern>
+<template>The daily horoscope for <get name="sign"/>
     <random>
       <li>Today will be interesting although</li>
       <li>If you have money issue, it is a good timing because</li>
@@ -114,4 +107,4 @@
           </mrl>
         </oob></template>
 </category>
- </aiml>
+</aiml>

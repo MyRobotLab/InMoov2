@@ -1,0 +1,19 @@
+lui:straight line
+gender:it
+courant:tour eiffel
+quoi:straight line
+memoriser:incomprehension de "straight line" dans le contexte : default pour "default"
+mastercontent:incomprehension de "straight line" dans le contexte : default
+toi:straight line
+lastUsername:default
+tmpname:
+determinantinterogatif:QU EST CE QUE
+jsenabled:true
+null:
+identity:0
+name:default
+parameterHowDoYouDo:
+topic:default
+questionfirstinit:
+heshe:ça
+articles:la

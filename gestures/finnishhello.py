@@ -31,7 +31,7 @@ def finnishhello():
         i01.setArmVelocity("right", 22.0, -1, -1, -1)
         i01.setHeadVelocity(22.0, 31.0)
         i01.moveHead(83,70)
-        i01.mouth.speakBlocking("hei, nimeni on inmoov")
+        i01.speakBlocking("hei, nimeni on inmoov")
         i01.moveArm("left",78,48,37,11)
         i01.moveArm("right",57,145,50,68)
         i01.moveHand("left",100,90,85,80,71,15)

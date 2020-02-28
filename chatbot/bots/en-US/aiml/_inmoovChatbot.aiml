@@ -2,13 +2,13 @@
 <aiml>
 <!-- File: _inmoovChatbot.aiml -->
 <!-- Author: Greg Perry -->
-<!-- Last modified: Novembre 01, 2018 -->
+<!-- Last modified: February 13, 2020 -->
 <!--  -->
-<!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
+<!-- This AIML file is part of the EN-US 0.1 chat bot knowledge base. -->
 <!--  -->
-<!-- The EN brain is Copyright &copy; 2018 by InMoov Foundation. -->
+<!-- The EN-US brain is Copyright &copy; 2020 by InMoov Foundation. -->
 <!--  -->
-<!-- The EN brain is released under the terms of the GNU Lesser General -->
+<!-- The EN-US brain is released under the terms of the GNU Lesser General -->
 <!-- Public License, as published by the Free Software Foundation. -->
 <!--  -->
 <!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
@@ -16,9 +16,6 @@
 <!--  -->
 <!-- For more information see http://www.inmoov.fr -->
 <!--  -->
-<category><pattern>SAY *</pattern>
-<template><star/></template>
-</category>
 <category><pattern>FIRST_INIT</pattern>
 <template><think>
         <set name="firstinit">started</set>
@@ -121,20 +118,18 @@
        </oob></template>
 </category>
 <category><pattern>WAKE_UP</pattern>
-<template>
-        <random>
+<template><random>
           <li>I am ready and listening.</li>
           <li>What can I do for you.</li>
           <li>How can I help you.</li>
-        </random>
-      </template>
+        </random></template>
 </category>
 <category><pattern>SYSTEM_SAY_HELLO</pattern>
 <template><srai>HI</srai></template>
 </category>
 <category><pattern>WAKE UP</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
-</category>	
+</category>
 <category><pattern>SHUTDOWN</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>
 </category>
@@ -231,20 +226,16 @@
 <template>Detaching my torso
       <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
 </category>
+<topic name="">
+<category><pattern>#</pattern>
+<template><think><set name="topic">default</set></think><srai><star/></srai></template>
+</category></topic>
 
-  <!-- fix for null topic -->
-
-  <topic name="">
-  <category><pattern>#</pattern>
-  <template><think><set name="topic">default</set></think><srai><star /></srai></template>
-  </category>
-  </topic>
 <category><pattern>STOP YOUR GESTURE</pattern>
 <template>You have my attention
       <oob><mrl><service>python</service><method>exec</method><param>stopingGesture()</param></mrl></oob></template>
 </category>
 <category><pattern># YOUR ATTENTION</pattern>
 <template><srai>STOP YOUR GESTURE</srai></template>
-</category>	
-  
+</category>
 </aiml>

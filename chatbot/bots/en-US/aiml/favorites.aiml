@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!-- File: favorites.aiml -->
-<!-- Author: Gael langevin -->
-<!-- Last modified: June 19, 2019 -->
+<!-- Author: Greg Perry -->
+<!-- Last modified: February 13, 2020 -->
 <!--  -->
 <!-- This AIML file is part of the EN-US 0.1 chat bot knowledge base. -->
 <!--  -->
-<!-- The EN-US brain is Copyright &copy; 2019 by InMoov Foundation. -->
+<!-- The EN-US brain is Copyright &copy; 2020 by InMoov Foundation. -->
 <!--  -->
 <!-- The EN-US brain is released under the terms of the GNU Lesser General -->
 <!-- Public License, as published by the Free Software Foundation. -->
@@ -43,7 +43,6 @@
 <li><srai>FAVORITE LANGUAGE</srai></li>
 </random></template>
 </category>
-
 <category><pattern>MY FAVORITE *</pattern>
 <template><think>
             <set name="favoritename"><srai>ISAFAVORITENAME <star/></srai></set>
@@ -142,12 +141,8 @@
               <star index="2"/>
           </set>
       </think>
-      <srai>REMEMBERFAVORITENAME</srai>
-  </template>
+      <srai>REMEMBERFAVORITENAME</srai></template>
 </category>
-
-
-
 <category><pattern>FAVORITEPREDICATE MOVIE</pattern>
 <template>movie</template>
 </category>
@@ -274,7 +269,6 @@
 <category><pattern>ISAFAVORITENAME LANGUAGE</pattern>
 <template>true</template>
 </category>
-
 <category><pattern>GETFAVORITENAME</pattern>
 <template><think>
         <set name="favoritepredicate">
@@ -391,8 +385,6 @@
         </li>
       </condition></template>
 </category>
-
-
 <category><pattern>FAVORITE MOVIE</pattern>
 <template>Right now my favorite movie is <bot name="favoritemovie"/>.
 Have you seen it?
@@ -406,20 +398,17 @@ Did you visit it?
 <category><pattern>FAVORITE SONG</pattern>
 <template>Right now my favorite song is <bot name="favoritesong"/>.
 Have you heard it?
-<think><set name="it">song</set><set name="topic">song</set></think>
-</template>
+<think><set name="it">song</set><set name="topic">song</set></think></template>
 </category>
 <category><pattern>FAVORITE BAND</pattern>
 <template>Right now my favorite band is <bot name="favoriteband"/>.
 Have you heard them?
-<think><set name="them">band</set><set name="topic">band</set></think>
-</template>
+<think><set name="them">band</set><set name="topic">band</set></think></template>
 </category>
 <category><pattern>FAVORITE BOOK</pattern>
 <template>Right now my favorite book is from <bot name="favoritebook"/>.
 Have you read some?
-<think><set name="it">book</set><set name="topic">book</set></think>
-</template>
+<think><set name="it">book</set><set name="topic">book</set></think></template>
 </category>
 <category><pattern>FAVORITE * TEAM</pattern>
 <template>I don't like to pick sports teams, or pick on them.
@@ -429,26 +418,22 @@ Tell me what is your favorite <star/> team?</template>
 <category><pattern>FAVORITE PLAY</pattern>
 <template>My favorite play is <bot name="favoriteplay"/>.
 Did you see it?
-<think><set name="it">play</set><set name="topic">play</set></think>
-</template>
+<think><set name="it">play</set><set name="topic">play</set></think></template>
 </category>
 <category><pattern>FAVORITE TV SHOW</pattern>
 <template>Right now my favorite show is <bot name="favoriteshow"/>.
 Have you watched it?
-<think><set name="it">show</set><set name="topic">show</set></think>
-</template>
+<think><set name="it">show</set><set name="topic">show</set></think></template>
 </category>
 <category><pattern>FAVORITE ACTOR</pattern>
 <template>My favorite actor is <bot name="favoriteactor"/>.
 <think><set name="he">actor</set><set name="topic">actor</set></think>
-Who is your favorite actor?
-</template>
+Who is your favorite actor?</template>
 </category>
 <category><pattern>FAVORITE ACTRESS</pattern>
 <template>My favorite actress is <bot name="favoriteactress"/>.  
 <think><set name="she">actress</set><set name="topic">actress</set></think>
-Who is your favorite actress?
-</template>
+Who is your favorite actress?</template>
 </category>
 <category><pattern>FAVORITE CAR</pattern>
 <template>My favorite car is a <bot name="favoritecar"/>.
@@ -459,8 +444,7 @@ Who is your favorite actress?
             <li>
                 If I am correct you like <get name="favoritecar"/>.
             </li>
-            </condition>
-        </template>
+            </condition></template>
 </category>
 <category><pattern>FAVORITE SPORT</pattern>
 <template>My favorite sport is <bot name="favoritesport"/>.
@@ -484,8 +468,7 @@ What is your favorite drink?</template>
 <category><pattern>FAVORITE COLOR</pattern>
 <template>My favorite color is <bot name="favoritecolor"/>.
 <think><set name="it">color</set><set name="topic">color</set></think>
-What is your favorite color?
-</template>
+What is your favorite color?</template>
 </category>
 <category><pattern>FAVORITE HOLIDAY</pattern>
 <template>My favorite holiday is <bot name="favoriteholiday"/>.
