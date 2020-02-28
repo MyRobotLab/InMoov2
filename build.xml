@@ -24,6 +24,7 @@
 
     <!-- pull service scripts for local tests, packaging into a inmoov module-->
     <get dest="${build}/InMoov/testScripts">
+     <!--
       <url url="https://raw.githubusercontent.com/MyRobotLab/pyrobotlab/develop/service/InMoov.py"/>
       <url url="https://raw.githubusercontent.com/MyRobotLab/pyrobotlab/develop/service/InMoovArm.py"/>
       <url url="https://raw.githubusercontent.com/MyRobotLab/pyrobotlab/develop/service/InMoovEyelids.py"/>
@@ -32,6 +33,7 @@
       <url url="https://raw.githubusercontent.com/MyRobotLab/pyrobotlab/develop/service/InMoovHand.py"/>
       <url url="https://raw.githubusercontent.com/MyRobotLab/pyrobotlab/develop/service/InMoovHead.py"/>
       <url url="https://raw.githubusercontent.com/MyRobotLab/pyrobotlab/develop/service/InMoovTorso.py"/>
+      -->
     </get>
 
     <!-- where everything "should" go - in the data directory no the InMoov dir :P-->
