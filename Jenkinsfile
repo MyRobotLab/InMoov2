@@ -53,17 +53,23 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
 
    stage('publish') {
    
+       maven(MavenPublication) {
+                groupId 'fr.inmoov.inmoov2'
+                artifactId 'test-publish'
+                version version
+                artifact "$buildDir"+'/libs/'+"${title}"+'-'+"$version"+'.jar'
+         }
     
-   	def server = Artifactory.server 'repo' 
-   	def uploadSpec = """{
-                        "files": [
-                                    {
-                                        "pattern": "dist/inmoov-1.1.${env.BUILD_NUMBER}.zip",
-                                        "target": "inmoov/fr/inmoov/1.1.${env.BUILD_NUMBER}/"
-                                    }
-                                    ]
-                                }"""
-		server.upload(uploadSpec)
+   	// def server = Artifactory.server 'repo' 
+   	// def uploadSpec = """{
+      //                   "files": [
+      //                               {
+      //                                   "pattern": "dist/inmoov-1.1.${env.BUILD_NUMBER}.zip",
+      //                                   "target": "inmoov/fr/inmoov/1.1.${env.BUILD_NUMBER}/"
+      //                               }
+      //                               ]
+      //                           }"""
+		// server.upload(uploadSpec)
 
 	}
 }
