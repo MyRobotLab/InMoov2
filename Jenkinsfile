@@ -16,7 +16,7 @@ node ('master') { // use any node
 // sh "set repo=/repo/fr/inmoov/inmoov2/${version}"
 
    def version = "2.0.${env.BUILD_NUMBER}" 
-   def repo = "/repo/fr/inmoov/inmoov2/${version}" 
+   def repo = "/repo/release/fr/inmoov/inmoov2/${version}" 
 
    stage('clean') { 
       echo 'clean the workspace'
