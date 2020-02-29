@@ -41,7 +41,7 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
    stage('zip') {
    
       script{
-        zip archive: true, dir: 'resource',  zipFile: 'inmoov2-x.x.x.zip'
+        zip archive: true, dir: '.',  zipFile: 'inmoov2-x.x.x.zip'
       } 
 	}
 }
