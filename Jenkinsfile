@@ -16,6 +16,7 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
 
    stage('clean') { 
       echo 'clean the workspace'
+      // deleteDir()
       cleanWs()
    }
 
@@ -39,7 +40,8 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
 
    stage('zip') {
    
-      zip archive: true, dir: 'resource',  zipFile: 'inmoov2-x.x.x.zip'
-
+      script{
+        zip archive: true, dir: 'resource',  zipFile: 'inmoov2-x.x.x.zip'
+      } 
 	}
 }
