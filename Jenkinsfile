@@ -13,7 +13,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
 node ('master') { // use any node
 
 sh "set version=2.0.${env.BUILD_NUMBER}" 
-sh "set repo=/repo/fr/inmoov/inmoov2/${version}"
+sh "set repo=/repo/fr/inmoov/inmoov2/${env.BUILD_NUMBER}"
 
    stage('clean') { 
       echo 'clean the workspace'
