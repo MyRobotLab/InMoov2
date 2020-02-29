@@ -57,7 +57,7 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
 
    stage('publish') {
    
-      sh "'${mvnHome}/bin/mvn' -Dbuild.number=${env.BUILD_NUMBER} -Dgit_commit=$git_commit -Dgit_branch=$git_branch deploy "
+      sh "'${mvnHome}/bin/mvn' -Dbuild.number=${env.BUILD_NUMBER} -Dgit_commit=$git_commit -Dgit_branch=$git_branch install "
 
       // sh 'jar cfv InMoov22.jar -C build .'
 
@@ -76,7 +76,7 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
       //                                   "target": "InMoov2/fr/InMoov2/1.1.${env.BUILD_NUMBER}/"
       //                               }
       //                               ]
-      //                           }"""
+      //                           }""" 
 		// server.upload(uploadSpec)
 
 	}
