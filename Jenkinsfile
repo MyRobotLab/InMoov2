@@ -44,7 +44,7 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
         // zip archive: true, dir: '.',  zipFile: 'inmoov2-x.x.x.zip'
          sh 'mkdir archive'
          sh 'echo test > archive/test.txt'
-         zip zipFile: 'test.zip', archive: true, dir: 'archive'
+         zip zipFile: 'test.zip', archive: true, dir: 'archive', glob '**/*'
          archiveArtifacts artifacts: 'test.zip', fingerprint: true
       } 
 	}
