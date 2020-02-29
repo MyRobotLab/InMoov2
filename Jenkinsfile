@@ -12,7 +12,8 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
 // node ('ubuntu') { // use any node
 node ('master') { // use any node
 
-sh "set version=1.1.${env.BUILD_NUMBER}" 
+sh "set version=2.0.${env.BUILD_NUMBER}" 
+sh "set repo=/repo/fr/inmoov/inmoov2/${version}"
 
    stage('clean') { 
       echo 'clean the workspace'
@@ -40,13 +41,14 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
 
    stage('zip') {
    
-        sh 'zip -r inmoov-x.x.x.zip resource'
-    
-        // zip archive: true, dir: '.',  zipFile: 'inmoov2-x.x.x.zip'
-        // sh 'mkdir archive'
-        // sh 'echo test > archive/test.txt'
-        // zip zipFile: 'test.zip', archive: true, dir: 'resource'
+        sh "zip -r inmoov2-${version}.zip resource"
+
         // archiveArtifacts artifacts: 'test.zip', fingerprint: true
     
 	}
+
+     stage('install') {
+        sh "mkdir -p ${repo}"
+        sh "cp inmoov2-${version}.zip ${repo}"
+     }
 }
