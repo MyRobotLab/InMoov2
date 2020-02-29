@@ -39,7 +39,7 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
 
    stage('zip') {
    
-      zip archive: true, dir: 'resource', glob: '', zipFile: 'inmoov2-x.x.x.zip'
+      zip archive: true, dir: 'resource',  zipFile: 'inmoov2-x.x.x.zip'
 
 	}
 }
