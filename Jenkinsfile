@@ -40,12 +40,13 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
 
    stage('zip') {
    
-      script{
+        sh 'zip -r inmoov-x.x.x.zip resource'
+    
         // zip archive: true, dir: '.',  zipFile: 'inmoov2-x.x.x.zip'
-         sh 'mkdir archive'
-         sh 'echo test > archive/test.txt'
-         zip zipFile: 'test.zip', archive: true, dir: 'resource'
-         archiveArtifacts artifacts: 'test.zip', fingerprint: true
-      } 
+        // sh 'mkdir archive'
+        // sh 'echo test > archive/test.txt'
+        // zip zipFile: 'test.zip', archive: true, dir: 'resource'
+        // archiveArtifacts artifacts: 'test.zip', fingerprint: true
+    
 	}
 }
