@@ -48,8 +48,8 @@ node ('master') { // use any node
      stage('install') {
         sh "mkdir -p ${repo}${version}"
         sh "mkdir -p ${repo}latest.release"
-        
+
         sh "cp inmoov2-${version}.zip ${repo}${version}"
-        sh "cp inmoov2-latest.release.zip ${repo}latest.release"
+        sh "cp inmoov2-${version}.zip ${repo}latest.release/inmoov2-latest.release.zip"
      }
 }
