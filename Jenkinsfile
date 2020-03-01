@@ -13,7 +13,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
 node ('master') { // use any node
 
    def version = "2.0.${env.BUILD_NUMBER}" 
-   def repo = "/repo/artifactory/myrobotlab/fr/inmoov/inmoov2/${version}" 
+   def repo = "/repo/artifactory/myrobotlab/fr/inmoov/inmoov2/" 
 
    stage('clean') { 
       echo 'clean the workspace'
@@ -46,7 +46,10 @@ node ('master') { // use any node
 	}
 
      stage('install') {
-        sh "mkdir -p ${repo}"
-        sh "cp inmoov2-${version}.zip ${repo}"
+        sh "mkdir -p ${repo}${version}"
+        sh "mkdir -p ${repo}latest.release"
+        
+        sh "cp inmoov2-${version}.zip ${repo}${version}"
+        sh "cp inmoov2-latest.release.zip ${repo}latest.release"
      }
 }
