@@ -54,8 +54,8 @@ node ('master') { // use any node
 
       sh "cp inmoov2-${version}.zip ${repo}${version}"
 
-      echo "writing pom ${repo}${version}pom.xml"
-      File file = new File("${repo}${version}pom.xml")
+      echo "writing pom ${repo}${version}/pom.xml"
+      File file = new File("${repo}${version}/pom.xml")
       def pom = '''<project>
       <modelVersion>4.0.0</modelVersion>
       <groupId>${groupId}</groupId>
