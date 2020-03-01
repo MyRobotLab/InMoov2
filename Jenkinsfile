@@ -16,7 +16,7 @@ node ('master') { // use any node
    def groupId = "fr.inmoov"
    def artifactId = "inmoov2"
    def path = groupId.replace(".","/") + artifactId.replace(".","/")
-   def repo = "/repo/artifactory/myrobotlab/" + groupId + "/" + artifactId + "/" 
+   def repo = "/repo/artifactory/myrobotlab/" + path + "/" 
 
    stage('clean') { 
       echo 'clean the workspace'
