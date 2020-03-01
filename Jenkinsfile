@@ -13,7 +13,10 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
 node ('master') { // use any node
 
    def version = "2.0.${env.BUILD_NUMBER}" 
-   def repo = "/repo/artifactory/myrobotlab/fr/inmoov/inmoov2/" 
+   def groupId = "fr.inmoov"
+   def artifactId = "inmoov2"
+   def path = groupId.relpace(".","/") + artifactId.replace(".","/")
+   def repo = "/repo/artifactory/myrobotlab/" + groupId + "/" + artifactId + "/" 
 
    stage('clean') { 
       echo 'clean the workspace'
@@ -45,11 +48,24 @@ node ('master') { // use any node
         // archiveArtifacts artifacts: 'test.zip', fingerprint: true    
 	}
 
-     stage('install') {
-        sh "mkdir -p ${repo}${version}"
-        sh "mkdir -p ${repo}latest.release"
+   stage('install') {
+      sh "mkdir -p ${repo}${version}"
+      // sh "mkdir -p ${repo}latest.release"
 
-        sh "cp inmoov2-${version}.zip ${repo}${version}"
-        sh "cp inmoov2-${version}.zip ${repo}latest.release/inmoov2-latest.release.zip"
+      sh "cp inmoov2-${version}.zip ${repo}${version}"
+
+      File file = new File("${repo}${version}pom.xml")
+      def pom = '''<project>
+      <modelVersion>4.0.0</modelVersion>
+      <groupId>${groupId}</groupId>
+      <artifactId>${artifactId}</artifactId>
+      <name>${artifactId}</name>
+      <version>${version}</version>
+      <description>InMoov2 main service module for InMoov compatible with Nixie release of myrobotlab</description>
+      <url>http://myrobotlab.org</url>
+      </project>'''
+      file.write(pom)
+
+      // sh "cp inmoov2-${version}.zip ${repo}latest.release/inmoov2-latest.release.zip"
      }
 }
