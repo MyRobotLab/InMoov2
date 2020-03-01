@@ -15,7 +15,7 @@ node ('master') { // use any node
    def version = "2.0.${env.BUILD_NUMBER}" 
    def groupId = "fr.inmoov"
    def artifactId = "inmoov2"
-   def path = groupId.relpace(".","/") + artifactId.replace(".","/")
+   def path = groupId.replace(".","/") + artifactId.replace(".","/")
    def repo = "/repo/artifactory/myrobotlab/" + groupId + "/" + artifactId + "/" 
 
    stage('clean') { 
