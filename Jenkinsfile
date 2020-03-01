@@ -54,7 +54,7 @@ node ('master') { // use any node
       sh "cp inmoov2-${version}.zip ${repo}${version}"
 
       // inmoov2-2.0.47.pom
-      def depFileName = repo + version + "/" + artifactId + "-" + version + ".xml"
+      def depFileName = repo + version + "/" + artifactId + "-" + version + ".pom"
       echo "writing pom " + depFileName
       File file = new File(depFileName)
       file.write("<project>")
