@@ -50,22 +50,19 @@ node ('master') { // use any node
 
    stage('install') {
       sh "mkdir -p ${repo}${version}"
-      // sh "mkdir -p ${repo}latest.release"
-
+      
       sh "cp inmoov2-${version}.zip ${repo}${version}"
 
       echo "writing pom ${repo}${version}/pom.xml"
       File file = new File("${repo}${version}/pom.xml")
-      def pom = '''<project>
-      <modelVersion>4.0.0</modelVersion>
-      <groupId>${groupId}</groupId>
-      <artifactId>${artifactId}</artifactId>
-      <name>${artifactId}</name>
-      <version>${version}</version>
-      <description>InMoov2 main service module for InMoov compatible with Nixie release of myrobotlab</description>
-      <url>http://myrobotlab.org</url>
-      </project>'''
-      file.write(pom)
+      file.write("<project>")
+      file.append("<modelVersion>4.0.0</modelVersion>")
+      file.append("<groupId>"+groupId+"</groupId>")
+      file.append("<artifactId>"+artifactId+"</artifactId>")
+      file.append("<version>"+version+"</version>")
+      file.append("<description>InMoov2 main service module for InMoov compatible with Nixie release of myrobotlab</description>")
+      file.append("<url>http://myrobotlab.org</url>")
+      file.write("</project>")
 
       // sh "cp inmoov2-${version}.zip ${repo}latest.release/inmoov2-latest.release.zip"
      }
