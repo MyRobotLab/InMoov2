@@ -12,9 +12,6 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
 // node ('ubuntu') { // use any node
 node ('master') { // use any node
 
-// sh "set version=2.0.${env.BUILD_NUMBER}" 
-// sh "set repo=/repo/fr/inmoov/inmoov2/${version}"
-
    def version = "2.0.${env.BUILD_NUMBER}" 
    def repo = "/repo/artifactory/myrobotlab/fr/inmoov/inmoov2/${version}" 
 
@@ -45,9 +42,7 @@ node ('master') { // use any node
    stage('zip') {
    
         sh "zip -r inmoov2-${version}.zip resource"
-
-        // archiveArtifacts artifacts: 'test.zip', fingerprint: true
-    
+        // archiveArtifacts artifacts: 'test.zip', fingerprint: true    
 	}
 
      stage('install') {
