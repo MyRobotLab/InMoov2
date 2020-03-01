@@ -50,7 +50,7 @@ node ('master') { // use any node
 
    stage('install') {
       sh "mkdir -p ${repo}${version}"
-      
+
       sh "cp inmoov2-${version}.zip ${repo}${version}"
 
       echo "writing pom ${repo}${version}/pom.xml"
@@ -62,7 +62,7 @@ node ('master') { // use any node
       file.append("<version>"+version+"</version>")
       file.append("<description>InMoov2 main service module for InMoov compatible with Nixie release of myrobotlab</description>")
       file.append("<url>http://myrobotlab.org</url>")
-      file.write("</project>")
+      file.append("</project>")
 
       // sh "cp inmoov2-${version}.zip ${repo}latest.release/inmoov2-latest.release.zip"
      }
