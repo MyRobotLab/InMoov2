@@ -1,10 +1,8 @@
 # InMooV - Service dependencies ( gestures, chatbot, language pack, config files, etc ... )    
   
-Develop branch WIP ( used only for last BETA build - Nixie release ) , not compatible with manticore!  
+Compatible with Nixie  
   
-please use master branch for the stable release ( Manticore )  
-  
-https://github.com/MyRobotLab/inmoov  
+https://github.com/MyRobotLab/inmoov2
   
   
-MORE INFO : http://myrobotlab.org/service/InMoov  
+MORE INFO : http://myrobotlab.org/service/InMoov2
