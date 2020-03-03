@@ -193,13 +193,15 @@
 </td></tr>
 <tr>
     <td>
-        <label>speech Engine:</label>
+        
         <div width="120" height="28">
+            <label ng-show="!service.isMouthActivated">speech service</label>
             <select ng-show="!service.isMouthActivated" class="form-control" ng-model="service.speechService" id="language-select" ng-change="msg.setSpeechType(service.speechService)">
                 <option ng-repeat="speechType in speechTypes" value="{{getShortName(speechType)}}">{{getShortName(speechType)}}</option>
             </select>
         </div>
         <div width="120" height="28" ng-show="service.isMouthActivated">
+            <label ng-show="service.isMouthActivated && !service.mute">voices</label>
             <span ng-show="service.isMouthActivated && !service.mute" width="120" height="28">
                 <select class="form-control" ng-model="service.voiceSelected" id="language-select" ng-change="msg.setVoice(service.voiceSelected)" width="120" height="28">
                     <option ng-repeat="voice in service.voices" value="{{voice.name}}">{{voice.name}} {{voice.gender}} {{voice.locale.tag}}  {{voice.description}}</option>
