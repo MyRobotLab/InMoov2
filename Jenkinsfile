@@ -18,6 +18,9 @@ node ('master') { // use any node
    def path = groupId.replace(".","/") + "/" + artifactId.replace(".","/")
    def repo = "/repo/artifactory/myrobotlab/" + path + "/" 
 
+   // src/resources/resource for interactive dev 
+   // resource/{serviceName} for repo and unzipped resource names
+
    stage('clean') { 
       echo 'clean the workspace'
       // deleteDir()
@@ -25,9 +28,17 @@ node ('master') { // use any node
    }
 
    stage('check out') { 
+      checkout scm
+   }
+
+   stage('build') { 
+      // Awesome - nothing to do here :)
+      /* TODO build InMoov2.jar into lib - shortest way to do this is have
+                        myrobotlab/pom.xml just build the jar and install it into
+                        the repo as a new dependency
 
       dir('resource/InMoov2') {
-         checkout scm
+         
          
          sh 'git rev-parse --abbrev-ref HEAD > GIT_BRANCH'
          git_branch = readFile('GIT_BRANCH').trim()
@@ -39,7 +50,8 @@ node ('master') { // use any node
       
          echo git_commit
          echo "git_commit=$git_commit"
-      }
+         
+      }*/
    }
 
    stage('zip') {

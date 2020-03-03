@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: ontology.aiml -->
+<!--  -->
+<category><pattern>IS A MAMMAL A MAMMAL</pattern>
+<template>Yes</template>
+</category>
+<category><pattern>IS A * A MAMMAL</pattern>
+<template>unknown</template>
+</category>
+<category><pattern>IS A BIRD A BIRD</pattern>
+<template>Yes</template>
+</category>
+<category><pattern>IS A * A BIRD</pattern>
+<template>unknown</template>
+</category>
+<category><pattern>DOES A MAMMAL HAVE MAMMALFEATURE</pattern>
+<template>Yes</template>
+</category>
+<category><pattern>DOES A MAMMAL HAVE *</pattern>
+<template>unknown</template>
+</category>
+<category><pattern>DOES A BIRD HAVE BIRDFEATURE</pattern>
+<template>Yes</template>
+</category>
+<category><pattern>DOES A BIRD HAVE *</pattern>
+<template>unknown</template>
+</category>
+</aiml>

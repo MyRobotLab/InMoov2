@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: insults.aiml -->
+<!--  -->
+<category><pattern>FILTER INSULT</pattern>
+<template><think><set name="topic">insults</set></think>
+          <think><set name="insultPoints"><javascript>
+          eval( <get name="insultPoints"/> + 1 );
+          </javascript></set></think>
+  <random>
+      <li>That is not very polite. </li>
+      <li>That is rude, </li>
+      <li>Not very nice. </li>
+      <li>Okay, </li>
+      <li>I hear what you are saying. </li>
+    </random><srai>SYSTEM_COUNT_INSULTS</srai></template>
+</category>
+<topic name="INSULTS">
+<category><pattern>SYSTEM_COUNT_INSULTS</pattern>
+<template>You have insulted me <get name="insultPoints"/> time.<condition>
+        <li name="insultPoints" value="2"> One more insult, and I won't speak with you.</li>
+        <li name="insultPoints" value="3"> I won't speak with you, unless you say Forgive me.<srai>SPEAK_BLOCK_INSULT</srai></li>
+      </condition></template>
+</category></topic>
+
+<category><pattern>SPEAK_BLOCK_INSULT</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeInsult()</param></mrl></oob></template>
+</category>
+<category><pattern>FORGIVE ME</pattern>
+<template><random>
+  <li>Okay, I will speak with you again.</li>
+  <li>You are forgiven</li>
+  </random>
+  <think><set name="topic">insults</set></think>
+  <think><set name="insultPoints">0</set></think><oob><mrl><service>python</service><method>exec</method><param>wakeUpModeInsult()</param></mrl></oob></template>
+</category>
+<category><pattern>ARE YOU A WHORE</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>ARE YOU A BITCH</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>ARE YOU A B ASTERISK ASTERISK ASTERISK ASTERISK</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>ARE YOU A B STAR STAR STAR STAR</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU F ASTERISK ASTERISK ASTERISK ASTERISK ASTERISK ASTERISK *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU F STAR STAR STAR STAR STAR STAR *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU IDIOT</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU ARE A B ASTERISK ASTERISK ASTERISK ASTERISK</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU ARE A B STAR STAR STAR STAR</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU ARE A B ASTERISK ASTERISK ASTERISK ASTERISK *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU ARE A B STAR STAR STAR STAR *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU ARE A C ASTERISK ASTERISK ASTERISK</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU ARE A C STAR STAR STAR</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU ARE A DICK</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU ARE A BITCH</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>F U *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>F ASTERISK ASTERISK ASTERISK YOU BITCH</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>F STAR STAR STAR YOU BITCH</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>B ASTERISK ASTERISK ASTERISK ASTERISK YOU *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>C ASTERISK ASTERISK ASTERISK</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>C STAR STAR STAR</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>S ASTERISK ASTERISK ASTERISK *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>S STAR STAR STAR *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>GO FUCK YOURSELF</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>GO DIE IN A HOLE</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>GO TO HELL *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>DUMB ASS</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>PUSSY</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>F STAR STAR STAR U B STAR STAR STAR STAR</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>FUCK U BITCH</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>F STAR STAR STAR IT</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>FUCK IT</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>F STAR STAR STAR YOU THEN</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>FUCK YOU THEN</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>B STAR STAR STAR STAR</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>BITCH</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>B STAR STAR STAR STAR PLEASE</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>BITCH PLEASE</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>BITCH *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>B STAR STAR STAR STAR *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>NO B STAR STAR STAR STAR</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>NO BITCH</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>NO D STAR STAR STAR STAR STAR STAR *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>NO DUMBASS *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>SHUT UP B STAR STAR STAR STAR</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>SHUT UP BITCH</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YEAH B STAR STAR STAR STAR</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YEAH BITCH</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>EAT MY *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>WHORE</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>HEY B ASTERISK ASTERISK ASTERISK ASTERISK</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>HEY B STAR STAR STAR STAR</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>HEY BITCH</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>DICK HEAD</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>ASSHOLE</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>DUMBASS</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>BASTARD</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>STUPID B STAR STAR STAR STAR</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>STUPID BITCH</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>F STAR STAR STAR STAR STAR</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>F STAR STAR STAR YOU</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>FAGGOT</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>WHAT IS UP B STAR STAR STAR STAR</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>WHAT IS UP BITCH</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOUR A B STAR STAR STAR STAR</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOUR A BITCH</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>S STAR STAR STAR</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>SLUT</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>GAY</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>HOE</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU ARE FAT</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU ARE CRAZY</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>B STAR STAR STAR STAR YOU *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>BITCH YOU *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>DICKHEAD</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU DIRTY *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>F STAR STAR</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>FAG</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU ARE A DIRTY *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU ARE A MORON</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU ARE RETARDED</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU BITCH *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>YOU B STAR STAR STAR STAR *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+<category><pattern>SCREW *</pattern>
+<template><srai>FILTER INSULT</srai></template>
+</category>
+</aiml>
