@@ -22,7 +22,7 @@ cls
 echo ------------------------------------------------------
 echo          !!!         INMOOV INSTALLER        !!!
 echo          !!!            PLEASE WAIT          !!!
-echo          !!!       IT CAN TAKE LONG TIME     !!!
+echo          !!!       IT CAN TAKE A LONG TIME     !!!
 echo          !!!            DO NOT CLOSE         !!!
 echo ------------------------------------------------------
 timeout 2 > NUL
@@ -31,6 +31,6 @@ timeout 10 > NUL
 COLOR 3F
 cls
 echo ------------------------------------------------------
-echo You can now run START_INMOOV.bat
+echo You can now close this and run START_INMOOV2.bat
 echo ------------------------------------------------------
-timeout 5 > NUL
+timeout 15 > NUL
