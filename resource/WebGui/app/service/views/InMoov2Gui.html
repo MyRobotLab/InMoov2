@@ -125,6 +125,33 @@
 </tr>
 </table>
 <!------------------------ arm end ------------------------------>
+<!------------------------ arm begin ------------------------------>
+<table ng-show="showPanel('arm')" class="inmoov-sub-panel table table-striped">
+    <tr>
+        <td>
+            <img src="../InMoovArm.png"/>
+            <label>leftArm Activated:</label>
+            <td>
+                <toggle width="70" height="28" ng-model="service.isLeftArmActivated" ng-change="!service.isLeftArmActivated?msg.stopLeftArm():msg.startLeftArm()" width="120" height="30" on="ON" off="OFF"/>
+            </td>
+        </td>
+    </tr>
+    <tr>
+            <td>
+                <img src="../InMoovArm.right.png"/>
+                <label>rightArm Activated:</label>
+                <td>
+                    <toggle width="70" height="28" ng-model="service.isRightArmActivated" ng-change="!service.isRightArmActivated?msg.stopRightArm():msg.startRightArm()" width="120" height="30" on="ON" off="OFF"/>
+                </td>
+            </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+        </td>
+    </tr>
+</table>
+<!------------------------ arm end ------------------------------>
 <!------------------------ ear begin ------------------------------>
 <table ng-show="showPanel('ear')" class="inmoov-sub-panel table table-striped">
     <tr>
@@ -135,7 +162,23 @@
             <toggle width="70" height="28" ng-model="service.isEarActivated" ng-change="!service.isEarActivated?msg.stopEar():msg.startEar()" width="80" height="30" on="ON" off="OFF"/>
             <img src="../peers.png" height="28" ng-click="filterPeers('ear')"/>
         </td>
-</td></tr>
+    </td>
+</tr>
+    <td>
+        <select class="form-control" ng-model="selectedLanguage" ng-change="setLanguage()">
+            <option ng-repeat="(key, value) in service.locales" value="{{key}}">{{value.displayLanguage}} - {{value.displayCountry}} </option>
+        </select>
+        {{service.status}}
+    </td>
+<tr>
+    <td>
+        <button ng-click="changeListeningState()">
+            <span>
+                <img ng-src="../WebkitSpeechRecognition/mic-animate.gif" width="80" src="../WebkitSpeechRecognition/mic-animate.gif">
+            </span>
+        </button>
+    </td>
+</tr>
 <tr>
     <td>
         <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
@@ -283,23 +326,379 @@
 </tr>
 </table>
 <!------------------------ head end ------------------------------>
-<!------------------------ extra begin ------------------------------>
-<table ng-show="showPanel('extra')" class="inmoov-sub-panel table table-striped">
-    <tr>
+<!------------------------ controller begin ------------------------------>
+<table ng-show="showPanel('controller')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <img src="../microcontroller_1.png"/>
+        <label>controller Right:</label>
         <td>
-            <img src="../NeoPixel.png"/>
-            <label>neopixel Activated:</label>
-        <td>
-            <toggle width="70" height="28" ng-model="service.isNeopixelActivated" ng-change="!service.isNeopixelActivated?msg.stopNeopixel():msg.startNeopixel()" on="ON" off="OFF"/></toggle>
+            <toggle width="100" height="30" ng-model="service.MyRightPort" ng-change="MyRightPort" on="ON" off="COM select"/></toggle>
         </td>
-</td></tr>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img src="../microcontroller_1.png"/>
+        <label>controller Left:</label>
+        <td>
+            <toggle width="100" height="30" ng-model="MyLeftPort" ng-change="MyLeftPort" on="ON" off="COM select"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img src="../microcontroller_1.png"/>
+        <label>controller Extra 1:</label>
+        <td>
+            <toggle width="100" height="30" ng-model="service.arduino3" ng-change="arduino3" on="ON" off="COM select"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img src="../microcontroller_1.png"/>
+        <label>controller Extra 2:</label>
+        <td>
+            <toggle width="100" height="30" ng-model="service.arduino4" ng-change="arduino4" on="ON" off="COM select"/></toggle>
+        </td>
+    </td>
+</tr>
 <tr>
     <td>
         <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
     </td>
 </tr>
+<tr>
+    <td>
+        <img width="30" height="30" ng-click="setPanel('extra')" ng-src="../arrow_left_green.png" src="../arrow_left_green.png">
+    </td>
+</tr>
+</table>    
+<!------------------------ controller end ------------------------------>
+<!------------------------ neopixel begin ------------------------------>
+<table ng-show="showPanel('neopixel')" class="inmoov-sub-panel table table-striped">
+    <tr>
+        <td>
+        <img src="../neopixel.png"/>
+        <label>neopixel Activated:</label>
+        <td>
+            <toggle width="70" height="28" ng-model="service.isNeopixelActivated" ng-change="!service.isNeopixelActivated?msg.stopNeopixel():msg.startNeopixel()" on="ON" off="OFF"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>controller:</label>
+        <td>
+            <toggle width="100" height="28" ng-model="service.arduino3" ng-change="arduino3" on="ON" off="COM select"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>NeopixelMaster:</label>
+        <td>
+            <toggle width="100" height="28" ng-model="service.NeopixelMaster" ng-change="NeopixelMaster" on="ON" off="left"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>NeopixelMasterPort:</label>
+        <td>
+            <toggle width="100" height="28" ng-model="service.NeopixelMasterPort" ng-change="NeopixelMasterPort" on="ON" off="Serial2"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>pin:</label>
+        <td>
+            <toggle width="70" height="28" ng-model="service.pin" ng-change="pin" on="ON" off="2"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>number Of Pixel:</label>
+        <td>
+            <toggle width="70" height="28" ng-model="service.numberOfPixel" ng-change="numberOfPixel" on="ON" off="16"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>boot_green:</label>
+        <td>
+            <toggle width="70" height="28" ng-model="service.boot_green" ng-change="boot_green" on="ON" off="OFF"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>downloadSomething_blue:</label>
+        <td>
+            <toggle width="70" height="28" ng-model="service.downloadSomething_blue" ng-change="downloadSomething_blue" on="ON" off="OFF"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>error_red:</label>
+        <td>
+            <toggle width="70" height="28" ng-model="service.error_red" ng-change="error_red" on="ON" off="OFF"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>flash_when_speak:</label>
+        <td>
+            <toggle width="70" height="28" ng-model="service.flash_when_speak" ng-change="flash_when_speak" on="ON" off="OFF"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img width="30" height="30" ng-click="setPanel('extra')" ng-src="../arrow_left_green.png" src="../arrow_left_green.png">
+    </td>
+</tr>
+</table>    
+<!------------------------ neopixel end ------------------------------>    
+<!------------------------ extra begin ------------------------------>
+<table ng-show="showPanel('extra')" class="inmoov-sub-panel table table-striped">
+ <tr>
+    <td>
+        <img src="../microcontroller_1.png"/>
+        <label>controllers:</label>
+        <td>
+            <button class="btn btn-default" ng-click="setPanel('controller')">Settings</button>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img src="../neopixel.png"/>
+        <label>neopixel:</label>
+        <td>
+            <button class="btn btn-default" ng-click="setPanel('neopixel')">Settings</button>
+        </td>
+    </td>
+</tr>
 </table>
 <!------------------------ extra end ------------------------------>
+<!------------------------ sensor begin ------------------------------>
+<table ng-show="showPanel('sensor')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <img src="../Pir.png"/>
+        <label>PIR</label>
+        <td>
+            <button class="btn btn-default" ng-click="setPanel('pir')">Settings</button>
+            <!--<img width="20" height="20" ng-click="setPanel('pir')" ng-src="../add.png" src="../add.png">-->
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img src="../UltrasonicSensor.png"/>
+        <label>ultraSonic</label>
+        <td>
+            <button class="btn btn-default" ng-click="setPanel('ultraSonic')">Settings</button>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img src="../kinect.png"/>
+        <label>Kinect</label>
+        <td>
+            <button class="btn btn-default" ng-click="setPanel('kinect')">Settings</button>
+        </td>
+    </td>
+</tr>
+</table>
+<!------------------------ sensor end ------------------------------>
+<!------------------------ pir begin ------------------------------>
+<table ng-show="showPanel('pir')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <img src="../Pir.png"/>
+        <label>PIR Activated:</label>
+        <td>
+            <toggle width="70" height="30" ng-model="service.isPirActivated" ng-change="!service.isPirActivated?msg.stopPir():msg.startPir()" on="ON" off="OFF"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>controller:</label>
+        <td>
+            <toggle width="100" height="30" ng-model="PirControlerArduino" ng-change="PirControlerArduino" on="ON" off="select"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>pin:</label>
+        <td>
+            <toggle width="100" height="30" ng-model="PirPin" ng-change="PirPin" on="ON" off="23"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>    
+    <td>
+        <label>custom sounds if detection:</label>
+        <td>
+            <toggle width="100" height="30" ng-model="PlayCurstomSoundIfDetection" ng-change="PlayCurstomSoundIfDetection" on="ON" off="OFF"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img width="30" height="30" ng-click="setPanel('sensor')" ng-src="../arrow_left_green.png" src="../arrow_left_green.png">
+    </td>
+</tr>
+</table>
+<!------------------------ pir end ------------------------------>
+<!------------------------ ultraSonic begin ------------------------------>
+<table ng-show="showPanel('ultraSonic')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <img src="../UltrasonicSensor.png"/>
+        <label>UltraSonic Right Activated:</label>
+        <td>
+            <toggle width="70" height="30" ng-model="service.isUltraSonicRightActivated" ng-change="!service.isUltraSonicRightActivated?msg.stopUltraSonicRight():msg.startUltraSonicRight()" on="ON" off="OFF"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>  
+    <td>
+        <label>controller:</label>
+        <td>
+            <toggle width="100" height="30" ng-model="FIXME" ng-change="FIXME" on="ON" off="select"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>trigPin:</label>
+        <td>
+            <toggle width="70" height="30" ng-model="FIXME" ng-change="FIXME" on="ON" off="29"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>echoPin:</label>
+        <td>
+            <toggle width="70" height="30" ng-model="FIXME" ng-change="FIXME" on="ON" off="33"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img src="../UltrasonicSensor.png"/>
+        <label>UltraSonic Left Activated:</label>
+        <td>
+            <toggle width="70" height="30" ng-model="service.isUltraSonicLeftActivated" ng-change="!service.isUltraSonicLeftActivated?msg.stopUltraSonicLeft():msg.startUltraSonicLeft()" on="ON" off="OFF"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>controller:</label>
+        <td>
+            <toggle width="100" height="30" ng-model="FIXME" ng-change="FIXME" on="ON" off="select"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>trigPin:</label>
+        <td>
+            <toggle width="70" height="30" ng-model="FIXME" ng-change="FIXME" on="ON" off="29"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>echoPin:</label>
+        <td>
+            <toggle width="70" height="30" ng-model="FIXME" ng-change="FIXME" on="ON" off="33"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img width="30" height="30" ng-click="setPanel('sensor')" ng-src="../arrow_left_green.png" src="../arrow_left_green.png">
+    </td>
+</tr>
+</table>
+<!------------------------ ultraSonic end ------------------------------>
+<!------------------------ kinect begin ------------------------------>
+<table ng-show="showPanel('kinect')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <img src="../kinect.png"/>
+        <label>kinect:</label>
+        <td>
+            <toggle width="70" height="30" ng-model="service.isKinectActivated" ng-change="!service.isKinectActivated?msg.stopOpenNi():msg.startOpenNi()" on="ON" off="OFF"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>ShouldersOffset:</label>
+        <td>
+            <toggle width="70" height="30" ng-model="openNiShouldersOffset" ng-change="FIXME" on="ON" off="50"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>LeftShoulderInverted:</label>
+        <td>
+            <toggle width="70" height="30" ng-model="service.openNiLeftShoulderInverted" ng-change="!service.isOpenNiActivated?msg.openNiLeftShoulderInverted" on="ON" off="OFF"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>RightShoulderInverted:</label>
+        <td>
+            <toggle width="70" height="30" ng-model="service.openNiRightShoulderInverted" ng-change="!service.isOpenNiActivated?msg.openNiRightShoulderInverted" on="ON" off="OFF"/></toggle>
+        </td>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img width="30" height="30" ng-click="setPanel('sensor')" ng-src="../arrow_left_green.png" src="../arrow_left_green.png">
+    </td>
+</tr>
+</table>
+<!------------------------ kinect end ------------------------------>
 <!------------------------ InMoov begin ------------------------------>
 <table ng-show="showPanel('InMoov')" class="inmoov-sub-panel table table-striped">
     <tr>
@@ -314,9 +713,8 @@
                     <option>my-config-02</option>
                 </select>
             </div>
-            <button class="btn btn-default" ng-click="msg.export()">save</button>
-            <button class="btn btn-default" ng-click="msg.newConfig()">create new</button>
-            <button class="btn btn-default" ng-click="msg.exportAll()">save all</button>
+        <button class="btn btn-default" ng-click="msg.export()">select config</button>
+        <button class="btn btn-default" ng-click="msg.exportAll()">create new</button>
             <button class="btn btn-default" ng-click="msg.load()">load</button>
         </td>
     </tr>
@@ -331,9 +729,16 @@
             <button class="btn btn-default" ng-click="msg.halfSpeed()">half speed</button>
             <button class="btn btn-default" type="button" ng-click="msg.stop()">
                 <span>
-                    <img src="../stop.png"/>&nbsp;&nbsp;&nbsp;&nbsp;stop </span>
+                <img src="../stop.png"/>&nbsp;&nbsp;&nbsp;&nbsp;stop 
+            </span>
             </button>
             <button class="btn btn-default" ng-click="msg.disable()">disable</button>
+        <!-- FIXME-PLEASE------------------------------------------------------>
+        <!--<button class="btn btn-default" type="button" ng-click="msg.setAutoDisable(!service.autoDisable)">autoDisable all 
+            <span class="ng-binding">off
+            </span>
+        </button>-->
+        <!--------------------------------------------------------------------->
         </td>
     </tr>
     <tr>
