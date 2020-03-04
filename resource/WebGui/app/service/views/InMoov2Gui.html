@@ -65,7 +65,7 @@
                         <label>brain Activated:</label>
                     </td>
                     <td>
-                        <toggle width="70" height="30" ng-model="service.isBrainActivated" ng-change="!service.isBrainActivated?msg.stopBrain():msg.startBrain()" on="ON" off="OFF"/>
+                        <toggle width="70" height="28" ng-model="service.isBrainActivated" ng-change="!service.isBrainActivated?msg.stopBrain():msg.startBrain()" on="ON" off="OFF"/>
                         <img src="../peers.png" height="28" ng-click="filterPeers('brain')"/>
                     </td>
                 </tr>
@@ -103,7 +103,7 @@
                     <td>
                         <label>leftArm Activated:</label>
                     <td>
-                        <toggle width="70" height="28" ng-model="service.isLeftArmActivated" ng-change="!service.isLeftArmActivated?msg.stopLeftArm():msg.startLeftArm()" width="120" height="30" on="ON" off="OFF"/>
+                        <toggle width="70" height="28" ng-model="service.isLeftArmActivated" ng-change="!service.isLeftArmActivated?msg.stopLeftArm():msg.startLeftArm()" width="120" height="28" on="ON" off="OFF"/>
                         <img src="../peers.png" height="28" ng-click="filterPeers('leftArm')"/>
                     </td>
         </td>
@@ -112,7 +112,7 @@
         <td>
             <label>rightArm Activated:</label>
         <td>
-            <toggle width="70" height="28" ng-model="service.isRightArmActivated" ng-change="!service.isRightArmActivated?msg.stopRightArm():msg.startRightArm()" width="120" height="30" on="ON" off="OFF"/>
+            <toggle width="70" height="28" ng-model="service.isRightArmActivated" ng-change="!service.isRightArmActivated?msg.stopRightArm():msg.startRightArm()" width="120" height="28" on="ON" off="OFF"/>
             <img src="../peers.png" height="28" ng-click="filterPeers('rightArm')"/>
         </td>
 </td></tr>
@@ -129,7 +129,7 @@
         <td>
             <label>ear Activated:</label>
         <td>
-            <toggle width="120" height="28" ng-model="service.isEarActivated" ng-change="!service.isEarActivated?msg.stopEar():msg.startEar()" width="80" height="30" on="ON" off="OFF"/>
+            <toggle width="70" height="28" ng-model="service.isEarActivated" ng-change="!service.isEarActivated?msg.stopEar():msg.startEar()" width="80" height="30" on="ON" off="OFF"/>
             <img src="../peers.png" height="28" ng-click="filterPeers('ear')"/>
         </td>
 </td></tr>
@@ -145,7 +145,7 @@
         <td>
             <label>torso Activated:</label>
         <td>
-            <toggle width="120" height="28" ng-model="service.isTorsoActivated" ng-change="!service.isTorsoActivated?msg.stopTorso():msg.startTorso()" width="80" height="30" on="ON" off="OFF"/>
+            <toggle width="70" height="28" ng-model="service.isTorsoActivated" ng-change="!service.isTorsoActivated?msg.stopTorso():msg.startTorso()" width="80" height="30" on="ON" off="OFF"/>
             <img src="../peers.png" height="28" ng-click="filterPeers('torso')"/>
         </td>
 </td></tr>
@@ -187,7 +187,7 @@
         <td>
             <label>mouth Activated:</label>
         <td>
-            <toggle width="70" height="30" ng-model="service.isMouthActivated" ng-change="!service.isMouthActivated?msg.stopMouth():msg.startMouth()" on="ON" off="OFF"/>
+            <toggle width="70" height="28" ng-model="service.isMouthActivated" ng-change="!service.isMouthActivated?msg.stopMouth():msg.startMouth()" on="ON" off="OFF"/>
             <img src="../peers.png" height="28" ng-click="filterPeers('mouth')"/>
         </td>
 </td></tr>
@@ -227,7 +227,7 @@
         <td>
             <label>head Activated:</label>
         <td>
-            <toggle width="80" height="30" ng-model="service.isHeadActivated" ng-change="!service.isHeadActivated?msg.stopHead():msg.startHead()" width="80" height="25" on="ON" off="OFF"/></toggle>
+            <toggle width="70" height="28" ng-model="service.isHeadActivated" ng-change="!service.isHeadActivated?msg.stopHead():msg.startHead()" on="ON" off="OFF"/></toggle>
             <img src="../peers.png" height="28" ng-click="filterPeers('head')"/>
         </td>
 </td></tr>
@@ -236,28 +236,28 @@
         <!-- toggle width="120" height="28" ng-model="service.isHeadActivated" ng-change="msg.startHead(!service.isHeadActivated)" width="80" height="30" on="head on" off="head off"/ -->
         <label>vision Activated:</label>
     <td>
-        <toggle width="80" height="30" ng-model="service.isOpenCVActivated" ng-change="!service.isOpenCVActivated?msg.stopOpenCV():msg.startOpenCV()" on="ON" off="OFF"/></toggle>
+        <toggle width="70" height="28" ng-model="service.isOpenCVActivated" ng-change="!service.isOpenCVActivated?msg.stopOpenCV():msg.startOpenCV()" on="ON" off="OFF"/></toggle>
     </td>
 </td></tr>
 <tr>
     <td>
         <label>eyeLids Activated:</label>
     <td>
-        <toggle width="80" height="30" ng-model="service.isEyeLidsActivated" ng-change="!service.isEyeLidsActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF"></toggle>
+        <toggle width="70" height="28" ng-model="service.isEyeLidsActivated" ng-change="!service.isEyeLidsActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF"></toggle>
     </td>
 </td></tr>
 <tr>
     <td>
         <label>eyeLidsLeft Activated:</label>
     <td>
-        <toggle width="80" height="30" ng-model="EyeLidsLeftActivated" ng-change="!EyeLidsLeftActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF"></toggle>
+        <toggle width="70" height="28" ng-model="EyeLidsLeftActivated" ng-change="!EyeLidsLeftActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF"></toggle>
     </td>
 </td></tr>
 <tr>
     <td>
         <label>eyeLidsRight Activated:</label>
     <td>
-        <toggle width="80" height="30" ng-model="EyeLidsRightActivated" ng-change="!EyeLidsRightActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF"></toggle>
+        <toggle width="70" height="28" ng-model="EyeLidsRightActivated" ng-change="!EyeLidsRightActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF"></toggle>
     </td>
 </td></tr>
 <tr>
@@ -280,7 +280,7 @@
         <td>
             <label>neopixel Activated:</label>
         <td>
-            <toggle width="80" height="30" ng-model="service.isNeopixelActivated" ng-change="!service.isNeopixelActivated?msg.stopNeopixel():msg.startNeopixel()" on="ON" off="OFF"/></toggle>
+            <toggle width="70" height="28" ng-model="service.isNeopixelActivated" ng-change="!service.isNeopixelActivated?msg.stopNeopixel():msg.startNeopixel()" on="ON" off="OFF"/></toggle>
         </td>
 </td></tr>
 <tr>
