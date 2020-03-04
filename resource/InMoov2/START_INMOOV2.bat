@@ -4,7 +4,7 @@ REG ADD HKCU\Console /v FaceName /t REG_SZ /d "Lucida Console" /f
 @chcp 65001>nul
 @echo off
 echo ------------------------------------------------------
-echo 			INMOOV BATCH LAUNCHER 0.3 Nixie - 1.1.190+
+echo 			INMOOV2 BATCH LAUNCHER 0.3 Nixie - 1.1.190+
 echo ------------------------------------------------------
 echo KILL JAVA to clean reborn
 
