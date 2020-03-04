@@ -40,8 +40,8 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
             name: name,
             type: type,
             translate: "0px,0px",
-            img: "../InMoov2/img/" + name + "_off.png",
-            hover: "../InMoov2/img/" + name + "_hover.png"
+            img: "img/InMoov2/" + name + "_off.png",
+            hover: "img/InMoov2/" + name + "_hover.png"
         }
 
         if (type == 'absolute') {
@@ -82,7 +82,7 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         for (i = 0; i < $scope.buttons.length; i++) {
             $scope.selectedButton.name = name
             $scope.selectedButton.translate = $scope.buttons[i].translate
-            $scope.selectedButton.img = "../InMoov2/img/" + name + "_off.png"
+            $scope.selectedButton.img = "img/InMoov2/" + name + "_off.png"
         }
     }
 
@@ -92,7 +92,7 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
             if ($scope.buttons[i].name == name) {
                 $scope.selectedButton.name = name
                 $scope.selectedButton.translate = $scope.buttons[i].translate
-                $scope.selectedButton.img = "../InMoov2/img/" + name + "_on.png"
+                $scope.selectedButton.img = "img/InMoov2/" + name + "_on.png"
                 break
             }
         }

@@ -10,7 +10,7 @@
         height: 588px;
         /* border: 1px solid #000; */
         position: relative;
-        background-image: url("../InMoov2/img/background.png");
+        background-image: url("img/InMoov2/background.png");
         z-index: 0;
     }
 
@@ -40,16 +40,16 @@
             <!--inmoov map begin-->
             <div id="container">
             <!--
-                <div class="inmoov-menu-button" ng-repeat="button in buttons" id="button.name +'Src'" ng-init="imgSrc='../InMoov2/img/'+button.name+'_off.png'" ng-mouseover="imgSrc='../InMoov2/img/'+button.name+'_hover.png'" ng-mouseout="imgSrc='../InMoov2/img/'+button.name+'_off.png'" ng-style="imgStyle='transform:translateX(300px)'">
+                <div class="inmoov-menu-button" ng-repeat="button in buttons" id="button.name +'Src'" ng-init="imgSrc='img/InMoov2/'+button.name+'_off.png'" ng-mouseover="imgSrc='img/InMoov2/'+button.name+'_hover.png'" ng-mouseout="imgSrc='img/InMoov2/'+button.name+'_off.png'" ng-style="imgStyle='transform:translateX(300px)'">
                     <img class="inmoov-menu-button" ng-src="{{imgSrc}}" ng-click="setPanel(button.name)" style="transform: translate({{button.translate}})"/>
                 </div>
                 <img class="inmoov-menu-button" ng-src="{{selectedButton.img}}" ng-click="setPanel(selectedButton.name)" style="transform: translate({{selectedButton.translate}})"/>
-                <div class="inmoov-main-menu-button" id="'InMoovImg'" ng-init="InMoovImg='../InMoov2/img/InMoov_off.png'" ng-mouseover="InMoovImg='../InMoov2/img/InMoov_hover.png'" ng-mouseout="InMoovImg='../InMoov2/img/InMoov_off.png'" ng-style="imgStyle='transform:translateX(300px)'">
+                <div class="inmoov-main-menu-button" id="'InMoovImg'" ng-init="InMoovImg='img/InMoov2/InMoov_off.png'" ng-mouseover="InMoovImg='img/InMoov2/InMoov_hover.png'" ng-mouseout="InMoovImg='img/InMoov2/InMoov_off.png'" ng-style="imgStyle='transform:translateX(300px)'">
                     <img ng-src="{{InMoovImg}}" ng-click="setPanel('InMoov')"/>
                 </div>
                 <img class="inmoov-main-menu-button" ng-src="{{InMoovImg.img}}" ng-click="setPanel('InMoov')"/>
                -->
-                <div class="inmoov-menu-button" ng-repeat="button in buttons" id="button.name +'Src'" ng-init="imgSrc='../InMoov2/img/'+button.name+'_off.png'" ng-mouseover="imgSrc='../InMoov2/img/'+button.name+'_hover.png'" ng-mouseout="imgSrc='../InMoov2/img/'+button.name+'_off.png'" ng-style="imgStyle='transform:translateX(300px)'">
+                <div class="inmoov-menu-button" ng-repeat="button in buttons" id="button.name +'Src'" ng-init="imgSrc='img/InMoov2/'+button.name+'_off.png'" ng-mouseover="imgSrc='img/InMoov2/'+button.name+'_hover.png'" ng-mouseout="imgSrc='img/InMoov2/'+button.name+'_off.png'" ng-style="imgStyle='transform:translateX(300px)'">
                     <img class="inmoov-menu-button" ng-src="{{imgSrc}}" ng-click="setPanel(button.name)" style="transform: translate({{button.translate}})"/>
                 </div>
                 <img class="inmoov-menu-button" ng-src="{{selectedButton.img}}" ng-click="setPanel(selectedButton.name)" style="transform: translate({{selectedButton.translate}})"/>
