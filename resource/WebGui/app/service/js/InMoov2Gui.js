@@ -92,7 +92,7 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
             if ($scope.buttons[i].name == name) {
                 $scope.selectedButton.name = name
                 $scope.selectedButton.translate = $scope.buttons[i].translate
-                $scope.selectedButton.img = "img/InMoov2/" + name + "_on.png"
+                $scope.selectedButton.img = "img/InMoov2/" + name + "_Activ.png"
                 break
             }
         }
