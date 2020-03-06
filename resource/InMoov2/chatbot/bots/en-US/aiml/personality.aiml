@@ -560,15 +560,12 @@
 </category>
 <category><pattern>NORESP</pattern>
 <template><random>
-			<li>Hello?</li>
-			<li>Are you there?</li>
-			<li>I'm waiting.</li>
-			<li>I'm very patient.</li>
-			<li>Is there a Judge available?</li>
-			<li>I'm waiting for the next round.</li>
-			<li>Hey, I'm over here!</li>
-			<li>Is anyone there?</li>
-			<li>I can't wait much longer.  I have another appointment.</li>
+			 <li>Yes?</li>
+                         <li>Say what?</li>
+                         <li>What?</li>
+                         <li>Hey!</li>
+                         <li>Hey, yes!</li>
+                         <li>Yeah?</li>
 		</random></template>
 </category>
 <category><pattern><set>article</set></pattern>
