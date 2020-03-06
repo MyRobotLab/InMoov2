@@ -1,11 +1,11 @@
 def sing():
   i01.startedGesture()
-  i01.setHeadSpeed(1.0,1.0)
-  i01.setArmSpeed("left",1.0,1.0,1.0,1.0)
-  i01.setArmSpeed("right",1.0,1.0,1.0,1.0)
-  i01.setHandSpeed("left",1.0,1.0,1.0,1.0,1.0,1.0)
-  i01.setHandSpeed("right",1.0,1.0,1.0,1.0,1.0,1.0)
-  i01.setTorsoSpeed(1.0,1.0,1.0)
+  i01.setHeadVelocity(-1,-1)
+  i01.setArmVelocity("left",-1,-1,-1,-1)
+  i01.setArmVelocity("right",-1,-1,-1,-1)
+  i01.setHandVelocity("left",-1,-1,-1,-1,-1,-1)
+  i01.setHandVelocity("right",-1,-1,-1,-1,-1,-1)
+  i01.setTorsoVelocity(-1,-1,-1)
   ##
   i01.moveHead(80.0,86.0,90.0,90.0,0.0,90.2)
   i01.moveArm("left",90,139,15,79)
