@@ -95,29 +95,32 @@
                         <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
                     </td>
                 </tr>
-            </table>
-            <!------------------------ brain end ------------------------------>
-            <!------------------------ arm begin ------------------------------>
-            <table ng-show="showPanel('arm')" class="inmoov-sub-panel table table-striped">
-                <tr>
-                    <td>
-            <img src="../InMoovArm.png"/>
-                        <label>leftArm Activated:</label>
-                    <td>
-                        <toggle width="70" height="28" ng-model="service.isLeftArmActivated" ng-change="!service.isLeftArmActivated?msg.stopLeftArm():msg.startLeftArm()" width="120" height="28" on="ON" off="OFF"/>
-                        <img src="../peers.png" height="28" ng-click="filterPeers('leftArm')"/>
-                    </td>
-        </td>
-    </tr>
-    <tr>
-        <td>
+</table>
+<!------------------------ brain end ------------------------------>
+<!------------------------ arm begin ------------------------------>
+<table ng-show="showPanel('arm')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('leftArm')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
+        <img src="../InMoovArm.png"/>
+        <label>leftArm Activated:</label>
+    </td>    
+    <td>
+        <toggle width="70" height="28" ng-model="service.isLeftArmActivated" ng-change="!service.isLeftArmActivated?msg.stopLeftArm():msg.startLeftArm()" width="120" height="28" on="ON" off="OFF"/>
+        <img src="../peers.png" height="28" ng-click="filterPeers('leftArm')"/>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('rightArm')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
         <img src="../InMoovArm.right.png"/>
-            <label>rightArm Activated:</label>
-        <td>
-            <toggle width="70" height="28" ng-model="service.isRightArmActivated" ng-change="!service.isRightArmActivated?msg.stopRightArm():msg.startRightArm()" width="120" height="28" on="ON" off="OFF"/>
-            <img src="../peers.png" height="28" ng-click="filterPeers('rightArm')"/>
-        </td>
-</td></tr>
+        <label>rightArm Activated:</label>
+    </td>
+     <td>
+         <toggle width="70" height="28" ng-model="service.isRightArmActivated" ng-change="!service.isRightArmActivated?msg.stopRightArm():msg.startRightArm()" width="120" height="28" on="ON" off="OFF"/>
+         <img src="../peers.png" height="28" ng-click="filterPeers('rightArm')"/>
+    </td>
+</tr>
 <tr>
     <td>
         <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
@@ -127,22 +130,24 @@
 <!------------------------ arm end ------------------------------>
 <!------------------------ ear begin ------------------------------>
 <table ng-show="showPanel('ear')" class="inmoov-sub-panel table table-striped">
-    <tr>
-        <td>
-            <img src="../InMoov_ear.png"/>
-            <label>ear Activated:</label>
-        <td>
-            <toggle width="70" height="28" ng-model="service.isEarActivated" ng-change="!service.isEarActivated?msg.stopEar():msg.startEar()" width="80" height="30" on="ON" off="OFF"/>
-            <img src="../peers.png" height="28" ng-click="filterPeers('ear')"/>
-        </td>
+<tr>
+    <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('ear')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
+        <img src="../InMoov_ear.png"/>
+        <label>ear Activated:</label>
+    </td>
+    <td>
+        <toggle width="70" height="28" ng-model="service.isEarActivated" ng-change="!service.isEarActivated?msg.stopEar():msg.startEar()" width="80" height="30" on="ON" off="OFF"/>
     </td>
 </tr>
+<tr>
     <td>
         <select class="form-control" ng-model="selectedLanguage" ng-change="setLanguage()">
             <option ng-repeat="(key, value) in service.locales" value="{{key}}">{{value.displayLanguage}} - {{value.displayCountry}} </option>
         </select>
         {{service.status}}
     </td>
+</tr>    
 <tr>
     <td>
         <button ng-click="changeListeningState()">
@@ -158,17 +163,19 @@
     </td>
 </tr>
 </table>
+<!------------------------ ear end ------------------------------>
 <!------------------------ torso begin ------------------------------>
 <table ng-show="showPanel('torso')" class="inmoov-sub-panel table table-striped">
-    <tr>
-        <td>
-            <img src="../InMoovTorso.png"/>
-            <label>torso Activated:</label>
-        <td>
-            <toggle width="70" height="28" ng-model="service.isTorsoActivated" ng-change="!service.isTorsoActivated?msg.stopTorso():msg.startTorso()" width="80" height="30" on="ON" off="OFF"/>
-            <img src="../peers.png" height="28" ng-click="filterPeers('torso')"/>
-        </td>
-</td></tr>
+<tr>
+    <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('torso')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
+        <img src="../InMoovTorso.png"/>
+        <label>torso Activated:</label>
+    </td>
+    <td>
+        <toggle width="70" height="28" ng-model="service.isTorsoActivated" ng-change="!service.isTorsoActivated?msg.stopTorso():msg.startTorso()" width="80" height="30" on="ON" off="OFF"/>
+    </td>
+</tr>
 <tr>
     <td>
         <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
@@ -178,24 +185,26 @@
 <!------------------------ torso end ------------------------------>
 <!------------------------ hand begin ------------------------------>
 <table ng-show="showPanel('hand')" class="inmoov-sub-panel table table-striped">
-    <tr>
-        <td>
-            <img src="../InMoovHand.png"/>
-            <label>leftHand Activated:</label>
-        <td>
-            <toggle width="70" height="28" ng-model="service.isLeftHandActivated" ng-change="!service.isLeftHandActivated?msg.stopLeftHand():msg.startLeftHand()" width="120" height="30" on="ON" off="OFF"/>
-            <img src="../peers.png" height="28" ng-click="filterPeers('leftHand')"/>
-        </td>
-</td></tr>
 <tr>
     <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('leftHand')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
+        <img src="../InMoovHand.png"/>
+        <label>leftHand Activated:</label>
+    </td>
+    <td>
+        <toggle width="70" height="28" ng-model="service.isLeftHandActivated" ng-change="!service.isLeftHandActivated?msg.stopLeftHand():msg.startLeftHand()" width="120" height="30" on="ON" off="OFF"/>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('rightHand')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
         <img src="../InMoovHand.right.png"/>
         <label>rightHand Activated:</label>
+    </td>
     <td>
         <toggle width="70" height="28" ng-model="service.isRightHandActivated" ng-change="!service.isRightHandActivated?msg.stopRightHand():msg.startRightHand()" width="120" height="30" on="ON" off="OFF"/>
-        <img src="../peers.png" height="28" ng-click="filterPeers('rightHand')"/>
     </td>
-</td></tr>
+</tr>
 <tr>
     <td>
         <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
@@ -205,18 +214,18 @@
 <!------------------------ hand end ------------------------------>
 <!------------------------ mouth begin ------------------------------>
 <table ng-show="showPanel('mouth')" class="inmoov-sub-panel table table-striped">
-    <tr>
-        <td>
-            <img src="../InMoov_mouth.png"/>
-            <label>mouth Activated:</label>
-        <td>
-            <toggle width="70" height="28" ng-model="service.isMouthActivated" ng-change="!service.isMouthActivated?msg.stopMouth():msg.startMouth()" on="ON" off="OFF"/>
-            <img src="../peers.png" height="28" ng-click="filterPeers('mouth')"/>
-        </td>
-</td></tr>
 <tr>
     <td>
-        
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('mouth')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
+        <img src="../InMoov_mouth.png"/>
+        <label>mouth Activated:</label>
+    </td>
+    <td>
+        <toggle width="70" height="28" ng-model="service.isMouthActivated" ng-change="!service.isMouthActivated?msg.stopMouth():msg.startMouth()" on="ON" off="OFF"/>
+    </td>
+</tr>
+<tr>
+    <td>
         <div width="120" height="28">
             <label ng-show="!service.isMouthActivated">speech service</label>
             <select ng-show="!service.isMouthActivated" class="form-control" ng-model="service.speechService" id="language-select" ng-change="msg.setSpeechType(service.speechService)">
@@ -246,45 +255,52 @@
 <!------------------------ mouth end ------------------------------>
 <!------------------------ head begin ------------------------------>
 <table ng-show="showPanel('head')" class="inmoov-sub-panel table table-striped">
-    <tr>
-        <td>
-            <img src="../InMoovHead.png"/>
-            <label>head Activated:</label>
-        <td>
-            <toggle width="70" height="28" ng-model="service.isHeadActivated" ng-change="!service.isHeadActivated?msg.stopHead():msg.startHead()" on="ON" off="OFF"/></toggle>
-            <img src="../peers.png" height="28" ng-click="filterPeers('head')"/>
-        </td>
-</td></tr>
 <tr>
     <td>
-        <!-- toggle width="120" height="28" ng-model="service.isHeadActivated" ng-change="msg.startHead(!service.isHeadActivated)" width="80" height="30" on="head on" off="head off"/ -->
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('head')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
+        <img src="../InMoovHead.png"/>
+        <label>head Activated:</label>
+    </td>
+    <td>
+        <toggle width="70" height="28" ng-model="service.isHeadActivated" ng-change="!service.isHeadActivated?msg.stopHead():msg.startHead()" on="ON" off="OFF"/></toggle>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('eye')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
+        <img src="../OpenCV.png"/>
         <label>vision Activated:</label>
+    </td>
     <td>
         <toggle width="70" height="28" ng-model="service.isOpenCVActivated" ng-change="!service.isOpenCVActivated?msg.stopOpenCV():msg.startOpenCV()" on="ON" off="OFF"/></toggle>
     </td>
-</td></tr>
+</tr>
 <tr>
     <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('head.eyelid')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
         <img src="../InMoovEyelids.png"/>
         <label>eyeLids Activated:</label>
+    </td>    
     <td>
         <toggle width="70" height="28" ng-model="service.isEyeLidsActivated" ng-change="!service.isEyeLidsActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF"></toggle>
     </td>
-</td></tr>
+</tr>
 <tr>
     <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('head.eyelidLeft')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
         <label>eyeLidsLeft Activated:</label>
     <td>
         <toggle width="70" height="28" ng-model="EyeLidsLeftActivated" ng-change="!EyeLidsLeftActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF"></toggle>
     </td>
-</td></tr>
+</tr>
 <tr>
     <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('head.eyelidRight')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
         <label>eyeLidsRight Activated:</label>
     <td>
         <toggle width="70" height="28" ng-model="EyeLidsRightActivated" ng-change="!EyeLidsRightActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF"></toggle>
     </td>
-</td></tr>
+</tr>
 <tr>
     <td>
         <img src="../Tracking.png"/>
@@ -303,38 +319,34 @@
 <table ng-show="showPanel('controller')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('rightPort')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
         <img src="../microcontroller_1.png"/>
-        <label>controller Right:</label>
-        <td>
-            <toggle width="100" height="30" ng-model="service.MyRightPort" ng-change="MyRightPort" on="ON" off="COM select"/></toggle>
-        </td>
+        <label>controller Right:</label>&nbsp;
+        <img width="30" height="30" ng-click="setPanel('controller_right')" ng-src="../square_blue_in.png" src="../square_blue_in.png.png">
     </td>
 </tr>
 <tr>
     <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('leftPort')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
         <img src="../microcontroller_1.png"/>
-        <label>controller Left:</label>
-        <td>
-            <toggle width="100" height="30" ng-model="MyLeftPort" ng-change="MyLeftPort" on="ON" off="COM select"/></toggle>
-        </td>
+        <label>controller Left:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img width="30" height="30" ng-click="setPanel('controller_left')" ng-src="../square_blue_in.png" src="../square_blue_in.png.png">
     </td>
 </tr>
 <tr>
     <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('arduino3')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
         <img src="../microcontroller_1.png"/>
-        <label>controller Extra 1:</label>
-        <td>
-            <toggle width="100" height="30" ng-model="service.arduino3" ng-change="arduino3" on="ON" off="COM select"/></toggle>
-        </td>
+        <label>controller Extra1:</label>
+        <img width="30" height="30" ng-click="setPanel('controller_extra1')" ng-src="../square_blue_in.png" src="../square_blue_in.png.png">
     </td>
 </tr>
 <tr>
     <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('arduino4')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
         <img src="../microcontroller_1.png"/>
-        <label>controller Extra 2:</label>
-        <td>
-            <toggle width="100" height="30" ng-model="service.arduino4" ng-change="arduino4" on="ON" off="COM select"/></toggle>
-        </td>
+        <label>controller Extra2:</label>
+        <img width="30" height="30" ng-click="setPanel('controller_extra2')" ng-src="../square_blue_in.png" src="../square_blue_in.png.png">
     </td>
 </tr>
 <tr>
@@ -344,27 +356,153 @@
 </tr>
 <tr>
     <td>
-        <img width="30" height="30" ng-click="setPanel('extra')" ng-src="../arrow_left_green.png" src="../arrow_left_green.png">
+        <img width="50" height="50" ng-click="setPanel('extra')" ng-src="../arrow_blue_left.png" src="../arrow_blue_left.png">
     </td>
 </tr>
-</table>    
+</table>
 <!------------------------ controller end ------------------------------>
+<!------------------------ controller setting right begin ------------------------------>
+<table ng-show="showPanel('controller_right')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <img src="../microcontroller_1.png"/>
+        <label>controller Right:</label>
+    </td>
+    <td>    
+        <div class="form-group">
+            <label for="port">port</label>
+            <input class="form-control ng-pristine ng-valid ng-empty ng-touched" type="text" id="port" ng-model="portName" ng-readonly="isConnected" uib-typeahead="portName for portName in possiblePorts | filter:$viewValue" typeahead-min-length="0" title="Serial port to connect to - 
+            clicking on this box should show a list of possible ports. 
+            Typically Windows list serial ports as COM1,COM2 etc and Linux or Mac will have /dev/ttyS1 .. etc 
+            You may create a virtual port just by typing some arbitrary name and making sure the service is in virtual mode, then pressing the connect button" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1021-2471" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1021-2471" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate" style="">
+    <!-- ngRepeat: match in matches track by $index -->
+        </ul>
+            <label for="rate">rate</label>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" ng-readonly="isConnected" id="rate" ng-model="rate" uib-typeahead="rate for rate in possibleBaud | filter:$viewValue" typeahead-min-length="0" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1022-2440" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1022-2440" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate">
+    <!-- ngRepeat: match in matches track by $index -->
+        </ul>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img width="50" height="50" ng-click="setPanel('controller')" ng-src="../arrow_blue_left.png" src="../arrow_blue_left.png">
+    </td>
+</tr>
+</table>        
+<!------------------------ controller setting right end ------------------------------>
+<!------------------------ controller setting left begin ------------------------------>
+<table ng-show="showPanel('controller_left')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <img src="../microcontroller_1.png"/>
+        <label>controller Left:</label>
+    </td>
+    <td>    
+        <div class="form-group">
+            <label for="port">port</label>
+            <input class="form-control ng-pristine ng-valid ng-empty ng-touched" type="text" id="port" ng-model="portName" ng-readonly="isConnected" uib-typeahead="portName for portName in possiblePorts | filter:$viewValue" typeahead-min-length="0" title="Serial port to connect to - 
+            clicking on this box should show a list of possible ports. 
+            Typically Windows list serial ports as COM1,COM2 etc and Linux or Mac will have /dev/ttyS1 .. etc 
+            You may create a virtual port just by typing some arbitrary name and making sure the service is in virtual mode, then pressing the connect button" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1021-2471" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1021-2471" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate" style="">
+    <!-- ngRepeat: match in matches track by $index -->
+        </ul>
+            <label for="rate">rate</label>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" ng-readonly="isConnected" id="rate" ng-model="rate" uib-typeahead="rate for rate in possibleBaud | filter:$viewValue" typeahead-min-length="0" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1022-2440" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1022-2440" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate">
+    <!-- ngRepeat: match in matches track by $index -->
+        </ul>
+    </div>
+</tr>
+<tr>
+    <td>
+        <img width="50" height="50" ng-click="setPanel('controller')" ng-src="../arrow_blue_left.png" src="../arrow_blue_left.png">
+    </td>
+</tr>
+</table>        
+<!------------------------ controller setting left end ------------------------------>
+<!------------------------ controller setting extra1 begin ------------------------------>
+<table ng-show="showPanel('controller_extra1')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <img src="../microcontroller_1.png"/>
+        <label>controller Extra1:</label>
+    </td>
+    <td>    
+        <div class="form-group">
+            <label for="port">port</label>
+            <input class="form-control ng-pristine ng-valid ng-empty ng-touched" type="text" id="port" ng-model="portName" ng-readonly="isConnected" uib-typeahead="portName for portName in possiblePorts | filter:$viewValue" typeahead-min-length="0" title="Serial port to connect to - 
+            clicking on this box should show a list of possible ports. 
+            Typically Windows list serial ports as COM1,COM2 etc and Linux or Mac will have /dev/ttyS1 .. etc 
+            You may create a virtual port just by typing some arbitrary name and making sure the service is in virtual mode, then pressing the connect button" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1021-2471" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1021-2471" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate" style="">
+    <!-- ngRepeat: match in matches track by $index -->
+        </ul>
+            <label for="rate">rate</label>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" ng-readonly="isConnected" id="rate" ng-model="rate" uib-typeahead="rate for rate in possibleBaud | filter:$viewValue" typeahead-min-length="0" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1022-2440" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1022-2440" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate">
+    <!-- ngRepeat: match in matches track by $index -->
+        </ul>
+    </div>
+</tr>
+<tr>
+    <td>
+        <img width="50" height="50" ng-click="setPanel('controller')" ng-src="../arrow_blue_left.png" src="../arrow_blue_left.png">
+    </td>
+</tr>
+</table>        
+<!------------------------ controller setting extra1 end ------------------------------>
+<!------------------------ controller setting extra2 begin ------------------------------>
+<table ng-show="showPanel('controller_extra2')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <img src="../microcontroller_1.png"/>
+        <label>controller Extra2:</label>
+    </td>
+    <td>    
+        <div class="form-group">
+            <label for="port">port</label>
+            <input class="form-control ng-pristine ng-valid ng-empty ng-touched" type="text" id="port" ng-model="portName" ng-readonly="isConnected" uib-typeahead="portName for portName in possiblePorts | filter:$viewValue" typeahead-min-length="0" title="Serial port to connect to - 
+            clicking on this box should show a list of possible ports. 
+            Typically Windows list serial ports as COM1,COM2 etc and Linux or Mac will have /dev/ttyS1 .. etc 
+            You may create a virtual port just by typing some arbitrary name and making sure the service is in virtual mode, then pressing the connect button" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1021-2471" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1021-2471" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate" style="">
+    <!-- ngRepeat: match in matches track by $index -->
+        </ul>
+            <label for="rate">rate</label>
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" ng-readonly="isConnected" id="rate" ng-model="rate" uib-typeahead="rate for rate in possibleBaud | filter:$viewValue" typeahead-min-length="0" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1022-2440" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1022-2440" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate">
+    <!-- ngRepeat: match in matches track by $index -->
+        </ul>
+        </div>
+</tr>
+<tr>
+    <td>
+        <img width="50" height="50" ng-click="setPanel('controller')" ng-src="../arrow_blue_left.png" src="../arrow_blue_left.png">
+    </td>
+</tr>
+</table>        
+<!------------------------ controller setting extra2 end ------------------------------>
 <!------------------------ neopixel begin ------------------------------>
 <table ng-show="showPanel('neopixel')" class="inmoov-sub-panel table table-striped">
-    <tr>
-        <td>
+<tr>
+    <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('neopixel')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
         <img src="../NeoPixel.png"/>
         <label>neopixel Activated:</label>
-        <td>
-            <toggle width="70" height="28" ng-model="service.isNeopixelActivated" ng-change="!service.isNeopixelActivated?msg.stopNeopixel():msg.startNeopixel()" on="ON" off="OFF"/></toggle>
-        </td>
+    </td>    
+    <td>
+        <toggle width="70" height="28" ng-model="service.isNeopixelActivated" ng-change="!service.isNeopixelActivated?msg.stopNeopixel():msg.startNeopixel()" on="ON" off="OFF"/></toggle>
     </td>
 </tr>
 <tr>
     <td>
         <label>controller:</label>
         <td>
-            <toggle width="100" height="28" ng-model="service.arduino3" ng-change="arduino3" on="ON" off="COM select"/></toggle>
+            <div class="input-group">
+            <span class="input-group-addon dropdown" uib-dropdown="" on-toggle="toggled(open)" style="">
+            <a href="" id="simple-dropdown" uib-dropdown-toggle="" ng-disabled="isAttached" class="dropdown-toggle"  title="Set here the controller that is master or the COM port of your extra arduino.">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span></a>
+            <ul uib-dropdown-menu="" class="dropdown-menu">
+            <!-- ngRepeat: possibleController in controllers --><li ng-repeat="possibleController in controllers" ng-click="setControllerName(possibleController)" class="ng-scope" style=""><a href="" class="ng-binding">arduino</a></li><!-- end ngRepeat: possibleController in controllers -->
+            </ul>
+            </span>
+            <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-touched" ng-model="controllerName" ng-disabled="isAttached" style="">
+            </div>
         </td>
     </td>
 </tr>
@@ -388,7 +526,11 @@
     <td>
         <label>pin:</label>
         <td>
-            <toggle width="70" height="28" ng-model="service.pin" ng-change="pin" on="ON" off="2"/></toggle>
+            <span class="input-group-addon dropdown" uib-dropdown="" on-toggle="toggled(open)">
+            <a href="" id="simple-dropdown" uib-dropdown-toggle="" ng-disabled="isAttached" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">pin<span class="caret"></span></a>
+                <ul uib-dropdown-menu="" class="dropdown-menu">
+                </ul>
+            </span>
         </td>
     </td>
 </tr>
@@ -396,7 +538,11 @@
     <td>
         <label>number Of Pixel:</label>
         <td>
-            <toggle width="70" height="28" ng-model="service.numberOfPixel" ng-change="numberOfPixel" on="ON" off="16"/></toggle>
+            <span class="input-group-addon dropdown" uib-dropdown="" on-toggle="toggled(open)">
+                <a href="" id="simple-dropdown" uib-dropdown-toggle="" ng-disabled="isAttached" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Pixels<span class="caret"></span></a>
+                <ul uib-dropdown-menu="" class="dropdown-menu">
+                </ul>
+            </span>
         </td>
     </td>
 </tr>
@@ -439,11 +585,11 @@
 </tr>
 <tr>
     <td>
-        <img width="30" height="30" ng-click="setPanel('extra')" ng-src="../arrow_left_green.png" src="../arrow_left_green.png">
+        <img width="50" height="50" ng-click="setPanel('extra')" ng-src="../arrow_blue_left.png" src="../arrow_blue_left.png">
     </td>
 </tr>
-</table>    
-<!------------------------ neopixel end ------------------------------>    
+</table>
+<!------------------------ neopixel end ------------------------------>
 <!------------------------ extra begin ------------------------------>
 <table ng-show="showPanel('extra')" class="inmoov-sub-panel table table-striped">
  <tr>
@@ -470,30 +616,33 @@
 <table ng-show="showPanel('sensor')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('pir')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
         <img src="../Pir.png"/>
-        <label>PIR</label>
-        <td>
-            <button class="btn btn-default" ng-click="setPanel('pir')">Settings</button>
-            <!--<img width="20" height="20" ng-click="setPanel('pir')" ng-src="../add.png" src="../add.png">-->
-        </td>
+        <label>PIR:</label>
+    </td>
+    <td>
+        <button class="btn btn-default" ng-click="setPanel('pir')">Settings</button>
+        <!--<img width="20" height="20" ng-click="setPanel('pir')" ng-src="../add.png" src="../add.png">-->
     </td>
 </tr>
 <tr>
     <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('ultraSonic')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
         <img src="../UltrasonicSensor.png"/>
-        <label>ultraSonic</label>
-        <td>
-            <button class="btn btn-default" ng-click="setPanel('ultraSonic')">Settings</button>
-        </td>
+        <label>ultraSonic:</label>
+    </td>
+    <td>
+        <button class="btn btn-default" ng-click="setPanel('ultraSonic')">Settings</button>
     </td>
 </tr>
 <tr>
     <td>
+        <img src="../img/InMoov2/markerBlue_right.png" height="14" ng-click="filterPeers('openNi')"/><img src="../img/InMoov2/markerBlue_left.png" height="18" ng-click="filterPeers(null)"/>&nbsp;&nbsp;
         <img src="../kinect.png"/>
-        <label>Kinect</label>
-        <td>
-            <button class="btn btn-default" ng-click="setPanel('kinect')">Settings</button>
-        </td>
+        <label>Kinect:</label>
+    </td>
+    <td>
+        <button class="btn btn-default" ng-click="setPanel('kinect')">Settings</button>
     </td>
 </tr>
 </table>
@@ -540,7 +689,7 @@
 </tr>
 <tr>
     <td>
-        <img width="30" height="30" ng-click="setPanel('sensor')" ng-src="../arrow_left_green.png" src="../arrow_left_green.png">
+        <img width="50" height="50" ng-click="setPanel('sensor')" ng-src="../arrow_blue_left.png" src="../arrow_blue_left.png">
     </td>
 </tr>
 </table>
@@ -620,7 +769,7 @@
 </tr>
 <tr>
     <td>
-        <img width="30" height="30" ng-click="setPanel('sensor')" ng-src="../arrow_left_green.png" src="../arrow_left_green.png">
+        <img width="50" height="50" ng-click="setPanel('sensor')" ng-src="../arrow_blue_left.png" src="../arrow_blue_left.png">
     </td>
 </tr>
 </table>
@@ -667,7 +816,7 @@
 </tr>
 <tr>
     <td>
-        <img width="30" height="30" ng-click="setPanel('sensor')" ng-src="../arrow_left_green.png" src="../arrow_left_green.png">
+        <img width="50" height="50" ng-click="setPanel('sensor')" ng-src="../arrow_blue_left.png" src="../arrow_blue_left.png">
     </td>
 </tr>
 </table>
