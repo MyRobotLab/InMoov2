@@ -30,7 +30,8 @@ node ('master') { // use any node
    }
 
    stage('check out') { 
-      checkout scm
+      // checkout scm - apparently below "polls" what is the rate?
+      git 'https://github.com/MyRobotLab/InMoov2.git'
    }
 
    stage('build') { 
