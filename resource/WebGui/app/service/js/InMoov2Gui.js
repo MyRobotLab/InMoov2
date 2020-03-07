@@ -194,9 +194,17 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     addButton('hand', 'circular')
     addButton('ear', 'circular')
 
-    addButton('InMoov', 'absolute', 170, 164)
-    addButton('battery', 'absolute', 22, 498)
-    addButton('handR', 'absolute', 155, 206)
+    addButton('InMoov', 'absolute', 157, 150)
+    addButton('battery', 'absolute', 22, 484)
+    // glowing body parts for Activated purpose
+    addButton('handR', 'absolute', 141, 199)
+    addButton('handL', 'absolute', 392, 199)
+    addButton('headA', 'absolute', 284, 145)
+    addButton('armR', 'absolute', 191, 183)
+    addButton('armL', 'absolute', 315, 183)
+    addButton('legL', 'absolute', 304, 262)
+    addButton('legR', 'absolute', 275, 262)
+    addButton('torsoA', 'absolute', 278, 216)
 
     calculatButtonPos()
 
