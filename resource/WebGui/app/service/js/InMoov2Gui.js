@@ -8,7 +8,7 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     // dynamically calculated from size of background and radius
     let centerX = 238
     let centerY = 226
-    let radius = 230
+    let radius = 215
 
     $scope.servos = []
     $scope.sliders = []
@@ -195,6 +195,8 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     addButton('ear', 'circular')
 
     addButton('InMoov', 'absolute', 170, 164)
+    addButton('battery', 'absolute', 22, 498)
+    addButton('handR', 'absolute', 155, 206)
 
     calculatButtonPos()
 
