@@ -15,6 +15,8 @@ node ('master') { // use any node
    def version = "2.0.${env.BUILD_NUMBER}" 
    def groupId = "fr.inmoov"
    def artifactId = "inmoov2"
+
+   // deployment variables
    def path = groupId.replace(".","/") + "/" + artifactId.replace(".","/")
    def repo = "/repo/artifactory/myrobotlab/" + path + "/" 
 
@@ -32,6 +34,7 @@ node ('master') { // use any node
    }
 
    stage('build') { 
+      sh 'echo \"' + version + '\" > resource/InMoov2/version.txt'
       // Awesome - nothing to do here :)
       /* TODO build InMoov2.jar into lib - shortest way to do this is have
                         myrobotlab/pom.xml just build the jar and install it into
