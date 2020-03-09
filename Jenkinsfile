@@ -7,8 +7,14 @@
  * CHANGE build.properties TO BUILD AND DEPLOY A NEW BUILD
  *
  ***********************************************************************************/
-properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/InMoov2/'], pipelineTriggers([[$class: 'PeriodicFolderTrigger', interval: '2m']])])
+// [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/InMoov2/']
 
+properties(
+   [buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), 
+   [pipelineTriggers([pollSCM('* * * * *')])], 
+   pipelineTriggers([[$class: 'PeriodicFolderTrigger', interval: '2m']])])
+
+   
 // node ('ubuntu') { // use any node
 node ('master') { // use any node
 
