@@ -10,7 +10,7 @@
         height: 588px;
         /* border: 1px solid #000; */
         position: relative;
-        background-image: url("img/InMoov2/background.png");*/
+        background-image: url("img/InMoov2/background.png");
         /*background-image: url("img/InMoov2/HeadBackground.png");*/
         /*background-image: url("img/InMoov2/ArmBackground.png");*/
         /*background-image: url("img/InMoov2/HandBackground.png");*/
@@ -44,22 +44,11 @@
     <tr>
         <td id="container-cell">
             <!--inmoov map begin-->
-            <div id="container">
-            <!--
+            <div id="container">            
                 <div class="inmoov-menu-button" ng-repeat="button in buttons" id="button.name +'Src'" ng-init="imgSrc='../img/InMoov2/'+button.name+'_off.png'" ng-mouseover="imgSrc='../img/InMoov2/'+button.name+'_hover.png'" ng-mouseout="imgSrc='../img/InMoov2/'+button.name+'_off.png'" ng-style="imgStyle='transform:translateX(300px)'">
                     <img class="inmoov-menu-button" ng-src="{{imgSrc}}" ng-click="setPanel(button.name)" style="transform: translate({{button.translate}})"/>
                 </div>
-                <img class="inmoov-menu-button" ng-src="{{selectedButton.img}}" ng-click="setPanel(selectedButton.name)" style="transform: translate({{selectedButton.translate}})"/>
-                <div class="inmoov-main-menu-button" id="'InMoovImg'" ng-init="InMoovImg='../img/InMoov2/InMoov_off.png'" ng-mouseover="InMoovImg='../img/InMoov2/InMoov_hover.png'" ng-mouseout="InMoovImg='../img/InMoov2/InMoov_off.png'" ng-style="imgStyle='transform:translateX(300px)'">
-                    <img ng-src="{{InMoovImg}}" ng-click="setPanel('InMoov')"/>
-                </div>
-                <img class="inmoov-main-menu-button" ng-src="{{InMoovImg.img}}" ng-click="setPanel('InMoov')"/>
-               -->
-                <div class="inmoov-menu-button" ng-repeat="button in buttons" id="button.name +'Src'" ng-init="imgSrc='../img/InMoov2/'+button.name+'_off.png'" ng-mouseover="imgSrc='../img/InMoov2/'+button.name+'_hover.png'" ng-mouseout="imgSrc='../img/InMoov2/'+button.name+'_off.png'" ng-style="imgStyle='transform:translateX(300px)'">
-                    <img class="inmoov-menu-button" ng-src="{{imgSrc}}" ng-click="setPanel(button.name)" style="transform: translate({{button.translate}})"/>
-                </div>
-                <img class="inmoov-menu-button" ng-src="{{selectedButton.img}}" ng-click="setPanel(selectedButton.name)" style="transform: translate({{selectedButton.translate}})"/>
-               
+                <img class="inmoov-menu-button" ng-src="{{selectedButton.img}}" ng-click="setPanel(selectedButton.name)" style="transform: translate({{selectedButton.translate}})"/>               
             </div>
 </td>
 <td>
@@ -407,16 +396,19 @@
     <td>    
         <div class="form-group">
             <label for="port">port</label>
+<!-- typeahead            
             <input class="form-control ng-pristine ng-valid ng-empty ng-touched" type="text" id="port" ng-model="portName" ng-readonly="isConnected" uib-typeahead="portName for portName in possiblePorts | filter:$viewValue" typeahead-min-length="0" title="Serial port to connect to - 
             clicking on this box should show a list of possible ports. 
             Typically Windows list serial ports as COM1,COM2 etc and Linux or Mac will have /dev/ttyS1 .. etc 
             You may create a virtual port just by typing some arbitrary name and making sure the service is in virtual mode, then pressing the connect button" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1021-2471" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1021-2471" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate" style="">
-    <!-- ngRepeat: match in matches track by $index -->
+
+
         </ul>
             <label for="rate">rate</label>
             <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" ng-readonly="isConnected" id="rate" ng-model="rate" uib-typeahead="rate for rate in possibleBaud | filter:$viewValue" typeahead-min-length="0" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1022-2440" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1022-2440" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate">
-    <!-- ngRepeat: match in matches track by $index -->
+
         </ul>
+-->        
         </div>
     </td>
 </tr>
@@ -437,11 +429,12 @@
     <td>    
         <div class="form-group">
             <label for="port">port</label>
+<!-- typeahead            
+            
             <input class="form-control ng-pristine ng-valid ng-empty ng-touched" type="text" id="port" ng-model="portName" ng-readonly="isConnected" uib-typeahead="portName for portName in possiblePorts | filter:$viewValue" typeahead-min-length="0" title="Serial port to connect to - 
             clicking on this box should show a list of possible ports. 
             Typically Windows list serial ports as COM1,COM2 etc and Linux or Mac will have /dev/ttyS1 .. etc 
             You may create a virtual port just by typing some arbitrary name and making sure the service is in virtual mode, then pressing the connect button" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1021-2471" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1021-2471" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate" style="">
-    <!-- ngRepeat: match in matches track by $index -->
         </ul>
             <label for="rate">rate</label>
             <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" ng-readonly="isConnected" id="rate" ng-model="rate" uib-typeahead="rate for rate in possibleBaud | filter:$viewValue" typeahead-min-length="0" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1022-2440" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1022-2440" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate">
@@ -464,13 +457,13 @@
         <label>controller Extra1:</label>
     </td>
     <td>    
+<!-- typeahead            
         <div class="form-group">
             <label for="port">port</label>
             <input class="form-control ng-pristine ng-valid ng-empty ng-touched" type="text" id="port" ng-model="portName" ng-readonly="isConnected" uib-typeahead="portName for portName in possiblePorts | filter:$viewValue" typeahead-min-length="0" title="Serial port to connect to - 
             clicking on this box should show a list of possible ports. 
             Typically Windows list serial ports as COM1,COM2 etc and Linux or Mac will have /dev/ttyS1 .. etc 
             You may create a virtual port just by typing some arbitrary name and making sure the service is in virtual mode, then pressing the connect button" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1021-2471" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1021-2471" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate" style="">
-    <!-- ngRepeat: match in matches track by $index -->
         </ul>
             <label for="rate">rate</label>
             <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" ng-readonly="isConnected" id="rate" ng-model="rate" uib-typeahead="rate for rate in possibleBaud | filter:$viewValue" typeahead-min-length="0" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1022-2440" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1022-2440" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate">
@@ -493,13 +486,13 @@
         <label>controller Extra2:</label>
     </td>
     <td>    
+<!-- typeahead            
         <div class="form-group">
             <label for="port">port</label>
             <input class="form-control ng-pristine ng-valid ng-empty ng-touched" type="text" id="port" ng-model="portName" ng-readonly="isConnected" uib-typeahead="portName for portName in possiblePorts | filter:$viewValue" typeahead-min-length="0" title="Serial port to connect to - 
             clicking on this box should show a list of possible ports. 
             Typically Windows list serial ports as COM1,COM2 etc and Linux or Mac will have /dev/ttyS1 .. etc 
             You may create a virtual port just by typing some arbitrary name and making sure the service is in virtual mode, then pressing the connect button" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1021-2471" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1021-2471" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate" style="">
-    <!-- ngRepeat: match in matches track by $index -->
         </ul>
             <label for="rate">rate</label>
             <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" ng-readonly="isConnected" id="rate" ng-model="rate" uib-typeahead="rate for rate in possibleBaud | filter:$viewValue" typeahead-min-length="0" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1022-2440" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1022-2440" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate">
