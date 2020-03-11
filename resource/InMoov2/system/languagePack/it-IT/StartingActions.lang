@@ -24,7 +24,28 @@ STARTINGRIGHTHANDSENSOR::Attivo il sensore de la mano sinistra
 STARTINGRIGHTONLY:: Soltanto la configurazione della parte destra del robot è stata abilitata
 STARTINGROLLNECK:: Attivo i movimenti del collo
 STARTINGTORSO::Attivo il busto
-STARTINGULTRASONICRIGHT::Attivo il sensore ultrasonico destro
-STARTINGULTRASONICLEFT::Attivo il sensore ultrasonico sinistro
+STARTINGULTRASONIC::Attivo il sensore ultrasonico
 STARTINGVIRTUAL::InMoov virtuale attivato
 TRACKINGSTARTED::Attivo la localizzazione
+STOPCHATBOT::Interruzione del chatbot
+STOPEAR::Orecchie di arresto
+STOPEYELIDS::Fermare le palpebre
+STOPHEAD::Testa di arresto
+STOPLEFTARM::Arresto del braccio sinistro
+STOPLEFTHAND::Fermare la mano sinistra
+STOPLEFTHANDSENSOR::Arresto del sensore sinistro
+STOPMOUTH::Fermare la bocca
+STOPMOUTHCONTROL::Arresto del controllo della bocca
+STOPNEOPIXEL::Interruzione del servizio neo pixel
+STOPNERVOPOWER::Arresto dell'alimentazione nervoboard
+STOPOPENCV::Arresto aperto c.v. telecamera
+STOPOPENNI::Fermare Kinect
+STOPPIR::Arresto del sensore p, i, r
+STOPRIGHTARM::Arresto del braccio destro
+STOPRIGHTHAND::Fermare la mano destra
+STOPRIGHTHANDSENSOR::Arresto del sensore destro
+STOPROLLNECK::Arresto del collo arrotolato
+STOPTORSO::Fermare il busto
+STOPULTRASONIC::Arresto del sensore a ultrasuoni
+STOPVIRTUAL::Arresto di inmoov virtuale
+STOPTRACKING::Interruzione del tracciamento
