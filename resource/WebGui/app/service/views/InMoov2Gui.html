@@ -60,6 +60,7 @@
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('brain')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
+        <img src="../Brain.png"/>
         <label>brain Activated:</label><toggle width="70" height="30" ng-model="service.isBrainActivated" ng-change="!service.isBrainActivated?msg.stopBrain():msg.startBrain()" on="ON" off="OFF"/>
     </td>
 </tr>
