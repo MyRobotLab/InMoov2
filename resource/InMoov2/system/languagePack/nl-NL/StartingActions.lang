@@ -24,7 +24,28 @@ STARTINGRIGHTHANDSENSOR::Met de rechterhand sensor beginnen
 STARTINGRIGHTONLY::Alleen de rechterkant van de robot gekozen uit de configuratie
 STARTINGROLLNECK::Startrol nek
 STARTINGTORSO::Torso starten
-STARTINGULTRASONICRIGHT::Ultrasone sensor starten Rechts
-STARTINGULTRASONICLEFT::Ultrasone sensor starten Links
+STARTINGULTRASONIC::to translate Starting ultrasonic sensor
 STARTINGVIRTUAL::Virtuele inmoov geactiveerd
 TRACKINGSTARTED::Beginnen met tracking
+STOPCHATBOT::Chatbot stoppen
+STOPEAR::Oren stoppen
+STOPEYELIDS::Oogleden stoppen
+STOPHEAD::Hoofd stoppen
+STOPLEFTARM::Linkerarm stoppen
+STOPLEFTHAND::Linkerhand stoppen
+STOPLEFTHANDSENSOR::Linker sensor stoppen
+STOPMOUTH::Mond stoppen
+STOPMOUTHCONTROL::Mondcontrole stoppen
+STOPNEOPIXEL::Neo Pixel Service stoppen
+STOPNERVOPOWER::De kracht van het zenuwbord stoppen
+STOPOPENCV::Open c.v. stoppen camera
+STOPOPENNI::Kinect stoppen
+STOPPIR::P, i, r sensor stoppen
+STOPRIGHTARM::Rechterarm stoppen
+STOPRIGHTHAND::Rechts stoppen
+STOPRIGHTHANDSENSOR::Rechtse sensor stoppen
+STOPROLLNECK::Stoppen met rolkraag
+STOPTORSO::Torso stoppen
+STOPULTRASONIC::Ultrasone sensor stoppen
+STOPVIRTUAL::Virtuele inmoov stoppen
+STOPTRACKING::Volgen stoppen
