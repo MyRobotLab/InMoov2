@@ -27,3 +27,25 @@ STARTINGTORSO::Torso aktiviert
 STARTINGULTRASONIC::Ultraschallsensor starten
 STARTINGVIRTUAL::virtueller inmoov wird gestartet
 TRACKINGSTARTED::tracking aktiviet
+STOPCHATBOT::Chatbot stoppen
+STOPEAR::Ohren stoppen
+STOPEYELIDS::Augenlider stoppen
+STOPHEAD::Kopf anhalten
+STOPLEFTARM::Linken Arm anhalten
+STOPLEFTHAND::Linke Hand anhalten
+STOPLEFTHANDSENSOR::Sensor für die linke Hand anhalten
+STOPMOUTH::Mund anhalten
+STOPMOUTHCONTROL::Mundkontrolle stoppen
+STOPNEOPIXEL::Neo Pixel Service stoppen
+STOPNERVOPOWER::Stoppen der Nervoboard-Leistung
+STOPOPENCV::Anhalten offen c.v. Kamera
+STOPOPENNI::Kinect blieb stehen
+STOPPIR::Stoppen des p, i, r-Sensors
+STOPRIGHTARM::Den rechten Arm anhalten
+STOPRIGHTHAND::Rechte Hand anhalten
+STOPRIGHTHANDSENSOR::Sensor rechts anhalten
+STOPROLLNECK::Rollhals stoppen
+STOPTORSO::Torso stoppen
+STOPULTRASONIC::Ultraschallsensor stoppen
+STOPVIRTUAL::Virtuelle Inmoov stoppen
+STOPTRACKING::Tracking stoppen
