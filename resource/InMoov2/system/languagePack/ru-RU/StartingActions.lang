@@ -24,7 +24,28 @@ STARTINGRIGHTHANDSENSOR::Пусковой правый датчик
 STARTINGRIGHTONLY::Запускаю только правую сторону робота, как выбранно в конфигурации
 STARTINGROLLNECK::Запускаю управление шеи
 STARTINGTORSO::Запускаю управление торса
-STARTINGULTRASONICRIGHT::Стартовый ультразвуковой датчик справа
-STARTINGULTRASONICLEFT::Стартовый ультразвуковой датчик слева
+STARTINGULTRASONIC::to translate Starting ultrasonic sensor
 STARTINGVIRTUAL::Виртуальный инмоов активирован
 TRACKINGSTARTED::Начинаю отслеживание
+STOPCHATBOT::Остановка чата
+STOPEAR::Остановка ушей
+STOPEYELIDS::Остановить веки
+STOPHEAD::Остановка головы
+STOPLEFTARM::Остановка левой руки
+STOPLEFTHAND::Остановка левой руки
+STOPLEFTHANDSENSOR::Остановка левого датчика
+STOPMOUTH::Остановить рот
+STOPMOUTHCONTROL::Остановка контроля рта
+STOPNEOPIXEL::Остановка нео пиксельного сервиса
+STOPNERVOPOWER::Остановка нервной системы
+STOPOPENCV::Остановка открытия камера
+STOPOPENNI::Остановка kinect
+STOPPIR::Остановка датчика p, i, r
+STOPRIGHTARM::Остановка правой руки
+STOPRIGHTHAND::Остановка правой рукой
+STOPRIGHTHANDSENSOR::Остановка правого датчика
+STOPROLLNECK::Остановка рулона шеи
+STOPTORSO::Остановка торса
+STOPULTRASONIC::Остановка ультразвукового датчика
+STOPVIRTUAL::Остановка виртуальных инмоов
+STOPTRACKING::Остановка отслеживания
