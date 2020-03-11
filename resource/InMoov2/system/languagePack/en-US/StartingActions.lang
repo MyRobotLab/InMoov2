@@ -27,6 +27,7 @@ STARTINGTORSO::Starting Torso
 STARTINGULTRASONIC::Starting ultrasonic sensor
 STARTINGVIRTUAL::virtual inmoov activated
 TRACKINGSTARTED::starting tracking
+STOPCHATBOT::Stopping brain
 STOPEAR::Stopping ears
 STOPEYELIDS::Stopping eyelids
 STOPHEAD::Stopping head
