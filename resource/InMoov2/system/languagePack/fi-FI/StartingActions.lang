@@ -24,7 +24,28 @@ STARTINGRIGHTHANDSENSOR :: Oikeanpuoleinen sensor käsi
 STARTINGRIGHTONLY :: Vain robotin oikea puoli konfiguroinnista
 STARTINGROLLNECK :: Aloita telan kaula
 STARTINGTORSO :: Aloitus Torso
-STARTINGULTRASONICRIGHT :: Käynnistä ultraäänianturi oikealla
-STARTINGULTRASONICLEFT :: Käynnistä ultraäänianturi vasen
+STARTINGULTRASONIC :: Käynnistys ultraäänianturilla
 STARTINGVIRTUAL :: virtuaalinen inmoov aktivoitu
 TRACKINGSTARTED :: aloittavan seurannan
+STOPCHATBOT :: Pysäytä chatbot
+STOPEAR :: Korvien pysähtyminen
+STOPEYELIDS :: Silmäluomien pysähtyminen
+STOPHEAD :: Pysäytyspää
+STOPLEFTARM :: Vasen käsivarsi pysähtyy
+STOPLEFTHAND :: Vasemman käden pysäyttäminen
+STOPLEFTHANDSENSOR :: Vasemmanpuoleisen anturin pysäyttäminen
+STOPMOUTH :: Lopeta suu
+STOPMOUTHCONTROL :: Suun hallinnan lopettaminen
+STOPNEOPIXEL :: Uuspikselipalvelun lopettaminen
+STOPNERVOPOWER :: Nervoboard-virran pysäyttäminen
+STOPOPENCV :: Pysäytä avoin c.v. kamera
+STOPOPENNI :: Kinectin lopettaminen
+STOPPIR :: P, i, r-anturin pysäyttäminen
+STOPRIGHTARM :: Oikea käsi pysähtyy
+STOPRIGHTHAND :: Oikeanpuoleinen pysähtyminen
+STOPRIGHTHANDSENSOR :: Oikeanpuoleisen anturin pysähtyminen
+STOPROLLNECK :: Pysäytä rullan kaula
+STOPTORSO :: Torson pysäyttäminen
+STOPULTRASONIC :: Ultraäänianturin pysäyttäminen
+STOPVIRTUAL :: Virtuaalisen inmoovin pysäyttäminen
+STOPTRACKING :: Seurannan lopettaminen
