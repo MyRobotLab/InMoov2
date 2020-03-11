@@ -27,3 +27,24 @@ STARTINGTORSO::Starting Torso
 STARTINGULTRASONIC::Starting ultrasonic sensor
 STARTINGVIRTUAL::virtual inmoov activated
 TRACKINGSTARTED::starting tracking
+STOPEAR::Stopping ears
+STOPEYELIDS::Stopping eyelids
+STOPHEAD::Stopping head
+STOPLEFTARM::Stopping left arm
+STOPLEFTHAND::Stopping left hand
+STOPLEFTHANDSENSOR::Stopping left hand sensor
+STOPMOUTH::Stopping mouth
+STOPMOUTHCONTROL::Stopping mouth control
+STOPNEOPIXEL::Stopping neo pixel Service
+STOPNERVOPOWER::Stopping nervoboard power
+STOPOPENCV::Stopping open c.v. camera
+STOPOPENNI::Kinect, stopped
+STOPPIR::Stopping p,i,r sensor
+STOPRIGHTARM::Stopping right arm
+STOPRIGHTHAND::Stopping right hand
+STOPRIGHTHANDSENSOR::Stopping right hand sensor
+STOPROLLNECK::Stopping roll neck
+STOPTORSO::Stopping Torso
+STOPULTRASONIC::Stopping ultrasonic sensor
+STOPVIRTUAL::Stopping virtual inmoov
+STOPTRACKING::Stopping tracking
