@@ -28,3 +28,25 @@ STARTINGULTRASONICRIGHT::démarrage du Capteur à ultrason droit
 STARTINGULTRASONICLEFT::démarrage du Capteur à ultrason gauche
 STARTINGVIRTUAL::Mode inmoov virtuel
 TRACKINGSTARTED::tracking service démarré
+STOPCHATBOT::Arrêt du chatebot
+STOPEAR::Arrêt de la reconnaissance vocale
+STOPEYELIDS::Arrêt des paupières
+STOPHEAD::Arrêt de la tête
+STOPLEFTARM::Arrêt du bras gauche
+STOPLEFTHAND::Arrêt de la main gauche
+STOPLEFTHANDSENSOR::Arrêt des capteurs de la main gauche
+STOPMOUTH::Arrêt de la bouche
+STOPMOUTHCONTROL::Arrêt de la syncronisation de la bouche
+STOPNEOPIXEL::Arrêt du service  neo pixel
+STOPNERVOPOWER::Arrêt de la puissance des nervo board
+STOPOPENCV::Arrêt d'opeune cévé caméra
+STOPOPENNI::Arrêt de la Kinect
+STOPPIR::Arrêt du capteur de présence
+STOPRIGHTARM::Arrêt du bras droit
+STOPRIGHTHAND::Arrêt de la main droite
+STOPRIGHTHANDSENSOR::Arrêt des capteurs de la main droite
+STOPROLLNECK::Arrêt du rollneck mode
+STOPTORSO::Arrêt du torse
+STOPULTRASONIC::Arrêt du capteur ultrasonic sensor
+STOPVIRTUAL::Arrêt du mode inmoov virtuel
+STOPTRACKING::Arrêt du service tracking
