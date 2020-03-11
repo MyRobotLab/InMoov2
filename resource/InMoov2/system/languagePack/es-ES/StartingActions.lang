@@ -1,22 +1,22 @@
 CHATBOTACTIVATED::Chatbot Activado, Ahora estoy listo
 CHATBOTLOADING::Cargando Inteligencia Artificial, Por favor, espere un momento
-OSSYNCED::sistema operativo inmoov sincronizado con el centro de control
+OSSYNCED::to translate inmoov operating system synced with control center
 READY::Muy bien, lo estoy escuchando
 STARTINGEAR::Iniciando oídos
-STARTINGEYELIDS::Párpados iniciales
-STARTINGFULL::Robot arduino completo elegido de la configuración
+STARTINGEYELIDS::to translate Starting eyelids
+STARTINGFULL::to translate Full robot arduino chosen from configuration
 STARTINGHEAD::Iniciando la cabeza
 STARTINGLEFTARM::Iniciando el brazo izquierdo
 STARTINGLEFTHAND::Iniciando la mano izquierda
 STARTINGLEFTHANDSENSOR::Iniciando el sensor de la mano izquierda
-STARTINGLEFTONLY::Solo el lado izquierdo del robot elegido de la configuración
+STARTINGLEFTONLY::to translate Only Left side of the robot chosen from configuration
 STARTINGMOUTH::Iniciando la boca
 STARTINGMOUTHCONTROL::Iniciando la control boca
 STARTINGNEOPIXEL::Iniciando el servicio Neo Pixel
 STARTINGNERVOPOWER::Iniciando la alimentación del NervoBoard
 STARTINGNOARDUINO::Arduino deshabilitado de la configuración
-STARTINGOPENCV::open c.v. camera, okay
-STARTINGOPENNI::Kinect, comenzó
+STARTINGOPENCV::c.v. camera, okay
+STARTINGOPENNI::Iniciando el Kinect
 STARTINGPIR::pir sensor activation
 STARTINGRIGHTARM::Iniciando el brazo derecho
 STARTINGRIGHTHAND::Iniciando la mano derecha
@@ -24,8 +24,28 @@ STARTINGRIGHTHANDSENSOR::Iniciando el sensor de la mano derecha
 STARTINGRIGHTONLY::Solo el lado derecho del robot elegido de la configuración
 STARTINGROLLNECK::Iniciando servo de movimiento del cuello
 STARTINGTORSO::Iniciando el torso
-STARTINGULTRASONICRIGHT::Arranque del sensor ultrasónico derecho
-STARTINGULTRASONICLEFT::Sensor ultrasónico de arranque a la izquierda
+STARTINGULTRASONIC::Arrancando sensor ultrasónico
 STARTINGVIRTUAL::modo virtual inmoov
-TRACKINGSTARTED::servicio de seguimiento iniciado
-Arranque del sensor ultrasónico derecho
+TRACKINGSTARTED::Servicio de seguimiento iniciado
+STOPCHATBOT::Detener chatbot
+STOPEAR::Parando los oídos
+STOPEYELIDS::Parando los párpados
+STOPHEAD::Cabeza de parada
+STOPLEFTARM::Parar el brazo izquierdo
+STOPLEFTHAND::Deteniendo la mano izquierda
+STOPLEFTHANDSENSOR::Detención del sensor izquierdo
+STOPMOUTH::Boca cerrada
+STOPMOUTHCONTROL::Detener el control bucal
+STOPNEOPIXEL::Detener el servicio neo pixel
+STOPNERVOPOWER::Detener la energía del nervoboard
+STOPOPENCV::Deteniendo abierto c.v. cámara
+STOPOPENNI::Kinect, detenido
+STOPPIR::Detención del sensor p, i, r
+STOPRIGHTARM::Parar el brazo derecho
+STOPRIGHTHAND::Deteniendo la mano derecha
+STOPRIGHTHANDSENSOR::Detener el sensor de la mano derecha
+STOPROLLNECK::Detener el cuello enrollado
+STOPTORSO::Detener el torso
+STOPULTRASONIC::Sensor ultrasónico de parada
+STOPVIRTUAL::Detener inmoov virtual
+STOPTRACKING::Deteniendo el seguimiento
