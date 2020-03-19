@@ -1,0 +1,344 @@
+
+
+.preventArmDragSelect{
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+.dotArmDisabled{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #0042A4;
+    border-top: 2px solid #AFE1EC;
+    border-right: 2px solid #AFE1EC;
+    border-bottom: 2px solid #AFE1EC;
+    border-left: 2px solid #AFE1EC;
+    background-color: #7d7d7d;
+}
+
+.dotArmEnabled{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #0042A4;
+    border-top: 2px solid #AFE1EC;
+    border-right: 2px solid #AFE1EC;
+    border-bottom: 2px solid #AFE1EC;
+    border-left: 2px solid #AFE1EC;
+    background-color: #00a5cb;
+    box-shadow: inset 0 0px 1px 1px rgb(255, 255, 255, 0.54);
+}
+
+@keyframes dotArmActive {
+  0% { filter: saturate(200%) brightness(200%) drop-shadow(0px 0px 10px rgba(255, 0, 0, 0.6)); }
+  10% { background-color: #FF0000; }
+  50% {box-shadow: 0 0px 20px 6px rgb(250, 0, 0, 0.54), 0px 0px 10px 1px rgba(255, 133, 133, 0.92), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.54);}
+
+  90% { background-color: #d68080; }
+  100% { filter: none; }
+}
+
+.dotArmActive{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #0042A4;
+    border-top: 2px solid #AFE1EC;
+    border-right: 2px solid #AFE1EC;
+    border-bottom: 2px solid #AFE1EC;
+    border-left: 2px solid #AFE1EC;
+    animation: dotArmActive 2000ms infinite;
+}
+
+
+#rightArmIndicator{
+    display: table-cell;
+    position:absolute;
+    left:74px;
+    top:36px;
+    width: 200px;
+    height: 40px;
+}
+
+#leftArmIndicator{
+    display: table-cell;
+    position:absolute;
+    left:346px;
+    top:36px;
+    width: 200px;
+    height: 40px;
+}
+
+
+.rectangleRightArmIndicator{
+    border-radius: 5px;
+    background: #73AD21;
+    line-height: 40px;
+    font-family: helvetica,sans-serif;
+    font-size: 22;
+    font-weight: normal;
+    color: #17d6ed;
+    background-image: linear-gradient(#001720, #01424c);
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 0 0 3px #3e2e2e, 0 0 20px #fff, 0 0 30px #00a5cb, 0 0 40px #74ace6, 0 0 50px #0042a4, 0 0 60px #3582f5, 0 0 70px #4954ff;
+    box-shadow: 0 0px 5px 2px rgb(21, 215, 237);
+    cursor:default;  
+}
+
+.rectangleLeftArmIndicator{
+    border-radius: 5px;
+    background: #73AD21;
+    line-height: 40px;
+    font-family: helvetica,sans-serif;
+    font-size: 22;
+    font-weight: normal;
+    color: #17d6ed;
+    background-image: linear-gradient(#001720, #01424c);
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 0 0 3px #3e2e2e, 0 0 20px #fff, 0 0 30px #00a5cb, 0 0 40px #74ace6, 0 0 50px #0042a4, 0 0 60px #3582f5, 0 0 70px #4954ff;
+    box-shadow: 0 0px 5px 2px rgb(21, 215, 237);
+    cursor:default;  
+}
+
+.rectangleRightArmIndicatorActive{
+    border-radius: 5px;
+    background: #73AD21;
+    line-height: 40px;
+    font-family: helvetica,sans-serif;
+    font-size: 22;
+    font-weight: normal;
+    color: #17d6ed;
+    background-image: linear-gradient(#001720, #01424c);
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 0 0 3px #3e2e2e, 0 0 20px #fff, 0 0 30px #00a5cb, 0 0 12px #74ace6, 0 0 50px #0042a4, 0 0 60px #3582f5, 0 0 70px #4954ff;
+
+    -webkit-filterg: saturate(200%)  drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
+    box-shadow: 0 0px 4px 3px rgb(21, 215, 237), 0px 0px 10px 1px rgb(255, 255, 255), 0px 0px 9px 3px rgb(255, 0, 0);
+
+}
+
+.rectangleLeftArmIndicatorActive{
+    border-radius: 5px;
+    background: #73AD21;
+    line-height: 40px;
+    font-family: helvetica,sans-serif;
+    font-size: 22;
+    font-weight: normal;
+    color: #17d6ed;
+    background-image: linear-gradient(#001720, #01424c);
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 0 0 3px #3e2e2e, 0 0 20px #fff, 0 0 30px #00a5cb, 0 0 12px #74ace6, 0 0 50px #0042a4, 0 0 60px #3582f5, 0 0 70px #4954ff;
+
+    -webkit-filterg: saturate(200%)  drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
+    box-shadow: 0 0px 4px 3px rgb(21, 215, 237), 0px 0px 10px 1px rgb(255, 255, 255), 0px 0px 9px 3px rgb(255, 0, 0);
+
+}
+
+.dotArmButtons{
+    position:absolute;
+    font-family: helvetica,sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    color: #29d4ff;
+    cursor: pointer;
+    display: inline-block;
+    /* 
+    overflow: hidden;
+    break the glow
+    */
+    height: 24px;
+    max-height: 24px;
+    text-shadow: 0 0 3px #414b4e, 0 0 7px #76bed3, 0 0 7px #8ddaefd9;
+}
+.dotArmButtons:hover{
+    color: #FFFFFF;
+}
+.dotArmButtons:active{
+    color: #FFFFFF;
+    text-shadow: 0 0 3px #414b4e, 0 0 10px #FFFFFF, 0 0 10px #FFFFFF, 0 0 10px #FFFFFF;
+}
+
+.dotArmButtonsActive{
+    position:absolute;
+    font-family: helvetica,sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    color: #f38094;
+    cursor: pointer;
+    display: inline-block;
+    height: 24px;
+    max-height: 24px;
+    text-shadow: 0 0 3px #ff1414, 0 0 10px #FFFFFF;
+    cursor: default;
+}
+
+
+.leftArmSide{
+    text-align: left;
+}
+
+.rightArmSide{
+    text-align: right;
+}
+
+
+/* -------------------    Right hand DOTs position --------------------*/
+
+#rightBicepDot{
+    position:absolute;
+    left:167px;
+    top:268px;
+}
+
+#rightRotateDot{
+    position:absolute;
+    left:219px;
+    top:243px;
+}
+
+#rightShoulderDot{
+    position:absolute;
+    left:246px;
+    top:262px;
+}
+
+#rightOmoplateDot{
+    position:absolute;
+    left:267px;
+    top:280px;
+}
+
+/* -------------------    Right Hand Buttons  --------------------*/
+
+#rightBicepButton{
+    right: 451px;
+    top: 223px;
+}
+#rightBicepButton:hover + #rightBicepDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+#rightRotateButton{
+    right: 400px;
+    top: 171px;
+}
+#rightRotateButton:hover + #rightRotateDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+#rightShoulderButton{
+    right: 406px;
+    top: 381px;
+}
+#rightShoulderButton:hover + #rightShoulderDot{
+    background-color: #FF0000;
+    animation: none;
+
+}
+
+#rightOmoplateButton{
+    right: 384px;
+    top: 445px;
+}
+#rightOmoplateButton:hover + #rightOmoplateDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+
+/* -------------------    Left Hand DOTs position --------------------*/
+
+#leftBicepDot{
+    position:absolute;
+    left:442px;
+    top:268px;
+}
+
+#leftRotateDot{
+    position:absolute;
+    left:390px;
+    top:243px;
+}
+
+#leftShoulderDot{
+    position:absolute;
+    left:366px;
+    top:262px;
+}
+
+#leftOmoplateDot{
+    position:absolute;
+    left:345px;
+    top:279px;
+}
+
+/* -------------------    Left Hand Buttons --------------------*/
+
+#leftBicepButton{
+    left: 452px;
+    top: 222px;
+}
+#leftBicepButton:hover + #leftBicepDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+#leftRotateButton{
+    left: 400px;
+    top: 171px;
+}
+#leftRotateButton:hover + #leftRotateDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+#leftShoulderButton{
+    left: 406px;
+    top: 382px;
+}
+#leftShoulderButton:hover + #leftShoulderDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+#leftOmoplateButton{
+    left: 386px;
+    top: 445px;
+}
+#leftOmoplateButton:hover + #leftOmoplateDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+/* -------------------    Left Back position --------------------*/
+
+#leftBackArmButton{
+    left: 41px;
+    top: 525px;
+}
+#leftBackArmButton:#leftBackArmArrow{
+    background-color: #FF0000;
+    animation: none;
+}
+/* -------------------    Left Back Arrow position --------------------*/
+
+#leftBackArmArrow{
+    border-top: 9px solid transparent;
+    border-right: 10px solid #29d4ff;
+    border-bottom: 9px solid transparent;
+    display: inline-block;
+    position:absolute;
+    left:29px;
+    top:531px;
