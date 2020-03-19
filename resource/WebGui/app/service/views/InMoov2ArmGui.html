@@ -1,0 +1,110 @@
+<style>
+    #containerArm2{
+    width: 620px;
+    height: 588px;
+    /* border: 1px solid #000; */
+    position: relative;
+    background-image: url("../img/InMoov2/ArmBackground.png");
+    z-index: 0;
+    float: none;
+    }
+
+    #containerArm2-cell {
+    width: 620px;
+    }
+
+    .inmoov-sub-panel {
+        width: auto;
+        max-width: auto;
+        margin-bottom: 0px;
+    }
+
+    .inmoov-menu-button {
+        position: absolute;
+        z-index: 30;
+    }
+
+</style>
+
+<table border="1" class="table table-striped">
+<tr>
+    <td colspan="2">&nbsp;{{onText}} 
+    </td>
+</tr>
+<tr>
+    <link type="text/css" rel="stylesheet" media="all" href="../service/css/InMoov2ArmGui.css">
+    <td id="containerArm2-cell">
+        <div id="containerArm2">
+            <!-- Right -->
+            <div id="rightArmIndicator" class="rectangleRightArmIndicator preventDragSelect">right Arm</div>
+
+            <div id="rightBicepButton" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="filterPeers('bicep')">right bicep</div>   
+            <div id="rightBicepDot" class="dotArmEnabled preventArmDragSelect"></div>
+
+            <div id="rightRotateButton" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="filterPeers('rotate')">right rotate</div>
+            <div id="rightRotateDot" class="dotArmEnabled preventArmDragSelect"></div>
+            
+            <div id="rightShoulderButton" class="dotArmButtonsActive rightArmSide preventArmDragSelect">right shoulder</div>
+            <div id="rightShoulderDot" class="dotArmActive preventArmDragSelect"></div>
+
+            <div id="rightOmoplateButton" class="dotArmButtons rightArmSide preventArmDragSelect">right omoplate</div>
+            <div id="rightOmoplateDot" class="dotArmEnabled preventArmDragSelect"></div>
+
+            <!-- Left -->
+            <div id="leftArmIndicator" class="rectangleLeftArmIndicator preventArmDragSelect">left Arm</div>
+
+            <div id="leftBicepButton" class="dotArmButtons leftArmSide preventArmDragSelect" ng-click="filterPeers('bicep')">left bicep</div>
+            <div id="leftBicepDot" class="dotArmEnabled preventArmDragSelect"></div>
+
+            <div id="leftRotateButton" class="dotArmButtons leftArmSide preventArmDragSelect">left rotate</div>
+            <div id="leftRotateDot" class="dotArmEnabled preventArmDragSelect"></div>
+
+            <div id="leftShoulderButton" class="dotArmButtons leftArmSide preventArmDragSelect">left shoulder</div>
+            <div id="leftShoulderDot" class="dotArmEnabled preventArmDragSelect"></div>
+
+            <div id="leftOmoplateButton" class="dotArmButtons leftArmSide preventArmDragSelect">left omoplate</div>
+            <div id="leftOmoplateDot" class="dotArmEnabled preventArmDragSelect"></div>
+
+            <div id="leftBackArmButton" class="dotArmButtons leftArmSide preventArmDragSelect" ng-click="filterPeers(null)">Back</div>
+
+            <div id="leftBackArmArrow" class="leftBackArmArrow preventArmDragSelect"></div>
+
+       </div>
+</td>
+<td>
+<!-- panels begin -->
+<!------------------------ arm begin ------------------------------>
+<table ng-show="showPanel('arm')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftArm')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovArm.png"/>
+        <label>leftArm Activated:</label>
+    </td>    
+    <td>    
+        <toggle width="70" height="28" ng-model="service.isLeftArmActivated" ng-change="!service.isLeftArmActivated?msg.stopLeftArm():msg.startLeftArm()" ng-click="changeTab('i01.leftArm')" width="120" height="28" on="ON" off="OFF"/>
+    </td>
+</tr>
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightArm')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!---------------------------------------------------------------->
+        <img src="../InMoovArm.right.png"/>
+        <label>rightArm Activated:</label>
+    </td>    
+    <td>    
+        <toggle width="70" height="28" ng-model="service.isRightArmActivated" ng-change="!service.isRightArmActivated?msg.stopRightArm():msg.startRightArm()" width="120" height="28" on="ON" off="OFF"/>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ arm end ------------------------------>
+<!-- panels end -->
+</td></tr></table>
