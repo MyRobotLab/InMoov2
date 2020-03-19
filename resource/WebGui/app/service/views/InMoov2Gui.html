@@ -11,12 +11,6 @@
         /* border: 1px solid #000; */
         position: relative;
         background-image: url("img/InMoov2/background.png");
-        /*background-image: url("img/InMoov2/HeadBackground.png");*/
-        /*background-image: url("img/InMoov2/ArmBackground.png");*/
-        /*background-image: url("img/InMoov2/HandBackground.png");*/
-        /*background-image: url("img/InMoov2/TorsoBackground.png");*/
-        /*background-image: url("img/InMoov2/HandSensorBackground.png");*/
-        /*background-image: url("img/InMoov2/LegBackground.png");*/
         z-index: 0;
     }
 
@@ -100,9 +94,7 @@
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftArm')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../InMoovArm.png"/>
-        <label>leftArm Activated:</label>
-    </td>    
-    <td>    
+        <label>leftArm Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;    
         <toggle width="70" height="28" ng-model="service.isLeftArmActivated" ng-change="!service.isLeftArmActivated?msg.stopLeftArm():msg.startLeftArm()" width="120" height="28" on="ON" off="OFF"/>
     </td>
 </tr>
@@ -112,9 +104,7 @@
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightArm')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../InMoovArm.right.png"/>
-        <label>rightArm Activated:</label>
-    </td>    
-    <td>    
+        <label>rightArm Activated:</label>&nbsp;&nbsp;  
         <toggle width="70" height="28" ng-model="service.isRightArmActivated" ng-change="!service.isRightArmActivated?msg.stopRightArm():msg.startRightArm()" width="120" height="28" on="ON" off="OFF"/>
     </td>
 </tr>
@@ -171,9 +161,7 @@
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('torso')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../InMoovTorso.png"/>
-        <label>torso Activated:</label>
-    </td>
-    <td>
+        <label>torso Activated:</label>&nbsp;&nbsp;
         <toggle width="70" height="28" ng-model="service.isTorsoActivated" ng-change="!service.isTorsoActivated?msg.stopTorso():msg.startTorso()" width="80" height="30" on="ON" off="OFF"/>
     </td>
 </tr>
@@ -193,9 +181,7 @@
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftHand')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../InMoovHand.png"/>
-        <label>leftHand Activated:</label>
-    </td>
-    <td>
+        <label>leftHand Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;
         <toggle width="70" height="28" ng-model="service.isLeftHandActivated" ng-change="!service.isLeftHandActivated?msg.stopLeftHand():msg.startLeftHand()" width="120" height="30" on="ON" off="OFF"/>
     </td>
 </tr>
@@ -205,9 +191,7 @@
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightHand')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../InMoovHand.right.png"/>
-        <label>rightHand Activated:</label>
-    </td>
-    <td>
+        <label>rightHand Activated:</label>&nbsp;&nbsp;
         <toggle width="70" height="28" ng-model="service.isRightHandActivated" ng-change="!service.isRightHandActivated?msg.stopRightHand():msg.startRightHand()" width="120" height="30" on="ON" off="OFF"/>
     </td>
 </tr>
