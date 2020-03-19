@@ -55,35 +55,37 @@
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('brain')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../Brain.png"/>
-        <label>brain Activated:</label><toggle width="70" height="30" ng-model="service.isBrainActivated" ng-change="!service.isBrainActivated?msg.stopBrain():msg.startBrain()" on="ON" off="OFF"/>
+        <label>brain Activated:</label>&nbsp;
+        <toggle width="70" height="30" ng-model="service.isBrainActivated" ng-change="!service.isBrainActivated?msg.stopBrain():msg.startBrain()" on="ON" off="OFF"/>
     </td>
 </tr>
-                <tr>
-                    <td>
-                        <label>chatBot</label>
-                        {{service.language}}   
-                        
-                        <div class="form-group">
-                            <select class="form-control" ng-model="languageSelected" id="language-select" ng-change="msg.setLocale(languageSelected)">
-                                <option ng-repeat="(key, value) in service.locales" value="{{key}}">{{key}} - {{value.displayLanguage}}</option>
-                            </select>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <!------needs FIXING-------------->
-                        <label>session</label>
-                        {{currentUserName}}
-                        
-                        <!------end FIXING-------------->
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
-                    </td>
-                </tr>
+<tr>
+    <td>
+        <label>chatBot</label>
+        {{service.language}}   
+        
+        <div class="form-group">
+            <select class="form-control" ng-model="languageSelected" id="language-select" ng-change="msg.setLocale(languageSelected)">
+                <option ng-repeat="(key, value) in service.locales" value="{{key}}">{{key}} - {{value.displayLanguage}}</option>
+            </select>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <!------START FIXING-------------->
+        <p>---FIXME---</p>
+        <label>user:</label>
+        {{currentUserName}}
+        
+        <!------end FIXING-------------->
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
 </table>
 <!------------------------ brain end ------------------------------>
 <!------------------------ arm begin ------------------------------>
@@ -123,9 +125,7 @@
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ear')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../InMoov_ear.png"/>
-        <label>ear Activated:</label>
-    </td>
-    <td>
+        <label>ear Activated:</label>&nbsp;&nbsp;
         <toggle width="70" height="28" ng-model="service.isEarActivated" ng-change="!service.isEarActivated?msg.stopEar():msg.startEar()" width="80" height="30" on="ON" off="OFF"/>
     </td>
 </tr>
@@ -210,9 +210,7 @@
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('mouth')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../InMoov_mouth.png"/>
-        <label>mouth Activated:</label>
-    </td>
-    <td>
+        <label>mouth Activated:</label>&nbsp;&nbsp;
         <toggle width="70" height="28" ng-model="service.isMouthActivated" ng-change="!service.isMouthActivated?msg.stopMouth():msg.startMouth()" on="ON" off="OFF"/>
     </td>
 </tr>
@@ -253,10 +251,8 @@
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('head')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../InMoovHead.png"/>
-        <label>head Activated:</label>
-    </td>
-    <td>
-        <toggle width="70" height="28" ng-model="service.isHeadActivated" ng-change="!service.isHeadActivated?msg.stopHead():msg.startHead()" on="ON" off="OFF"/></toggle>
+        <label>head Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <toggle width="70" height="28" ng-model="service.isHeadActivated" ng-change="!service.isHeadActivated?msg.stopHead():msg.startHead()" on="ON" off="OFF"/>
     </td>
 </tr>
 <tr>
@@ -265,10 +261,8 @@
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eye')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../OpenCV.png"/>
-        <label>vision Activated:</label>
-    </td>
-    <td>
-        <toggle width="70" height="28" ng-model="service.isOpenCVActivated" ng-change="!service.isOpenCVActivated?msg.stopOpenCV():msg.startOpenCV()" on="ON" off="OFF"/></toggle>
+        <label>vision Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <toggle width="70" height="28" ng-model="service.isOpenCVActivated" ng-change="!service.isOpenCVActivated?msg.stopOpenCV():msg.startOpenCV()" on="ON" off="OFF"/>
     </td>
 </tr>
 <tr>
@@ -277,10 +271,8 @@
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('head.eyelid')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../InMoovEyelids.png"/>
-        <label>eyeLids Activated:</label>
-    </td>    
-    <td>
-        <toggle width="70" height="28" ng-model="service.isEyeLidsActivated" ng-change="!service.isEyeLidsActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF"></toggle>
+        <label>eyeLids Activated:</label>&nbsp;&nbsp;
+        <toggle width="70" height="28" ng-model="service.isEyeLidsActivated" ng-change="!service.isEyeLidsActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF">
     </td>
 </tr>
 <tr>
@@ -288,9 +280,8 @@
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('head.eyelidLeft')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
-        <label>eyeLidsLeft Activated:</label>
-    <td>
-        <toggle width="70" height="28" ng-model="EyeLidsLeftActivated" ng-change="!EyeLidsLeftActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF"></toggle>
+        <label>eyeLidsLeft Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <toggle width="70" height="28" ng-model="EyeLidsLeftActivated" ng-change="!EyeLidsLeftActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF">
     </td>
 </tr>
 <tr>
@@ -298,9 +289,8 @@
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('head.eyelidRight')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
-        <label>eyeLidsRight Activated:</label>
-    <td>
-        <toggle width="70" height="28" ng-model="EyeLidsRightActivated" ng-change="!EyeLidsRightActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF"></toggle>
+        <label>eyeLidsRight Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <toggle class="btn-right" width="70" height="28" ng-model="EyeLidsRightActivated" ng-change="!EyeLidsRightActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF">
     </td>
 </tr>
 <tr>
