@@ -26,6 +26,7 @@ STARTINGROLLNECK::Startrol nek
 STARTINGTORSO::Torso starten
 STARTINGULTRASONIC::to translate Starting ultrasonic sensor
 STARTINGVIRTUAL::Virtuele inmoov geactiveerd
+STARTINGSERVOMIXER::Servo mixer starten
 TRACKINGSTARTED::Beginnen met tracking
 STOPCHATBOT::Chatbot stoppen
 STOPEAR::Oren stoppen
@@ -49,3 +50,4 @@ STOPTORSO::Torso stoppen
 STOPULTRASONIC::Ultrasone sensor stoppen
 STOPVIRTUAL::Virtuele inmoov stoppen
 STOPTRACKING::Volgen stoppen
+STOPSERVOMIXER::Servo mixer stoppen
