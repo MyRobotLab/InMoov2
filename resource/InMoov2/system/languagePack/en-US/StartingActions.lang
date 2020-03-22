@@ -26,7 +26,7 @@ STARTINGROLLNECK::Starting roll neck
 STARTINGTORSO::Starting Torso
 STARTINGULTRASONIC::Starting ultrasonic sensor
 STARTINGVIRTUAL::virtual inmoov activated
-STARTSERVOMIXER::servo mixer is started
+STARTINGSERVOMIXER::servo mixer is started
 TRACKINGSTARTED::starting tracking
 STOPCHATBOT::Stopping brain
 STOPEAR::Stopping ears
