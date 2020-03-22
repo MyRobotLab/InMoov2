@@ -26,6 +26,7 @@ STARTINGROLLNECK::Запускаю управление шеи
 STARTINGTORSO::Запускаю управление торса
 STARTINGULTRASONIC::to translate Starting ultrasonic sensor
 STARTINGVIRTUAL::Виртуальный инмоов активирован
+STARTINGSERVOMIXER::пусковой сервомиксер
 TRACKINGSTARTED::Начинаю отслеживание
 STOPCHATBOT::Остановка чата
 STOPEAR::Остановка ушей
@@ -49,3 +50,4 @@ STOPTORSO::Остановка торса
 STOPULTRASONIC::Остановка ультразвукового датчика
 STOPVIRTUAL::Остановка виртуальных инмоов
 STOPTRACKING::Остановка отслеживания
+STOPSERVOMIXER::остановка сервомиксера
