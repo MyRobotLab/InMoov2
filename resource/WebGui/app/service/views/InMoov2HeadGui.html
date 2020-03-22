@@ -1,0 +1,277 @@
+<style>
+    #containerHead2{
+    width: 620px;
+    height: 588px;
+    /* border: 1px solid #000; */
+    position: relative;
+    background-image: url("../img/InMoov2/HeadBackground.png");
+    z-index: 0;
+    /* float: none; */
+    }
+
+    #containerHead2-cell {
+    width: 620px;
+    }
+
+    #containerServo-cell {
+    width: 520px;
+    }
+
+    .inmoov-sub-panel {
+        width: auto;
+        max-width: auto;
+        margin-bottom: 0px;
+    }
+
+    .inmoov-menu-button {
+        position: absolute;
+        z-index: 30;
+    }
+
+</style>
+
+<table border="1" class="table table-striped">
+<tr>
+    <td colspan="2">&nbsp;{{onText}} 
+    </td>
+</tr>
+<tr>
+    <link type="text/css" rel="stylesheet" media="all" href="../service/css/InMoov2HeadGui.css">
+    <td id="containerHead2-cell">
+        <div id="containerHead2">
+            <!-- Right -->
+            <div id="headIndicator" class="rectangleHeadIndicator preventHeadDragSelect">Head</div>
+
+            <div id="eyeLidsButton" class="dotHeadButtons rightHeadSide preventHeadDragSelect">eyeLids</div>
+            <div id="eyeLidsDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+
+            <div id="eyeYButton" class="dotHeadButtons rightHeadSide preventHeadDragSelect" ng-click="setPanel('head.eyeY')">eyeY</div>
+            <div id="eyeYDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+            <div id="eyeYArrowVertical" class="rightHeadSide preventHeadDragSelect"><img src="../img/InMoov2/arrow_vertical.png"/></div>
+
+            <div id="jawButton" class="dotHeadButtons rightHeadSide preventHeadDragSelect" ng-click="setPanel('head.jaw')">jaw</div>
+            <div id="jawDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+
+            <!-- Left -->
+
+            <div id="rotHeadButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('head.rotHead')">rotHead</div>
+            <div id="rotHeadDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+            <div id="rotHeadArrowHorizontal" class="leftHeadSide preventHeadDragSelect"><img src="../img/InMoov2/arrow_horizontal.png"/></div>
+
+            <div id="neckButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('head.neck')">neck</div>
+            <div id="neckDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+            <div id="neckArrowVertical" class="leftHeadSide preventHeadDragSelect"><img src="../img/InMoov2/arrow_vertical.png"/></div>
+
+            <div id="rollNeckButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('head.rollNeck')">rollNeck</div>
+            <div id="rollNeckDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+
+            <div id="eyeXButton" class="dotHeadButtonsActive leftHeadSide preventHeadDragSelect" ng-click="setPanel('head.eyeX')">eyeX</div>
+            <div id="eyeXDot" class="dotHeadActive preventHeadDragSelect"></div>
+            <div id="eyeXArrowHorizontal" class="leftHeadSide preventHeadDragSelect"><img src="../img/InMoov2/arrow_horizontal.png"/></div>
+
+            <div id="leftBackHeadButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" href="#/service/i01" target="_self">Back</div>
+            <div id="leftBackHeadArrow" class="leftBackHeadArrow preventHeadDragSelect"></div>
+
+        </div>
+</td>
+<td>
+<!-- panels begin -->
+<!------------------------ headGui begin ------------------------------>
+<table ng-show="showPanel('head')" class="inmoov-sub-panel table table-striped">
+    <tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('head')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHead.png"/>
+        <label>head Activated:</label>
+    </td>
+    <td>
+        <toggle width="70" height="28" ng-model="service.isHeadActivated" ng-change="!service.isHeadActivated?msg.stopHead():msg.startHead()" on="ON" off="OFF"/></toggle>
+    </td>
+</tr>
+</table>    
+<!------------------------ headGui end ------------------------------>
+<!------------------------ head.eyeY begin ------------------------------>
+<table ng-show="showPanel('head.eyeY')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.head.eyeY</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
+        And we need to have the button "head.eyeY" <br>and the dot to become red and active</p>
+        <a class="btn pull-left" ng-click="changeTab(panel.name)" href="">
+            <b class="ng-binding">eyeY</b>
+        </a>
+        <a id="rightEyeYButton" class="dotArmButtonsActive"></a>
+        <div id="rightEyeYDot" class="dotArmEnabledActive preventArmDragSelect"></div>
+            <a href="#/service/i01.head.eyeY" target="_self">DISPLAY</a>
+    </td>
+</tr>
+<tr>
+    <td>
+        </div></div></div>
+        <div class="container">
+            <div class="col-md-2"></div>
+            <div class="col-md-1">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" ng-show="!isAttached()" ng-click="attachController()">control all</button>
+                    <!--button class="btn btn-default" ng-show="!isAttached()" ng-click="attachController()">enable</button-->
+                </span>
+            </div>
+        </div>
+        <div class="container">
+            <div ng-repeat="servo in servos" class="row">
+                <!--div class="col-md-2">&nbsp;</div-->
+                <div class="col-md-10">
+                    <rzslider class="custom-slider" rz-slider-model="sliders[servo].value" rz-slider-options="sliders[servo].options"/>
+                </div>
+                <div class="col-md-2">
+                    <button ng-class="['btn', sliders[servo].tracking?'btn-default':'btn-primary']" ng-click="toggle(servo)">{{servo}}</button>
+                </div>
+            </div>
+        </div>-->
+    </td>    
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ head.eyeY end ------------------------------>
+<!------------------------ head.eyeX begin ------------------------------>
+<table ng-show="showPanel('head.eyeX')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.head.eyeX</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="row">
+    <div class="col-md-5">
+        <h2>{{service.targetPos.toFixed(2)}}</h2>
+    </div>
+    <div class="col-md-1">
+        <img src="enabled.png" ng-show="service.enabled" title="the servo is energized"/>
+    </div>
+    <div class="col-md-5">
+        <h2>{{service.currentPos.toFixed(2)}}</h2>
+    </div>
+    <div class="col-md-8">
+        <rzslider class="custom-slider" rz-slider-model="pos.value" rz-slider-options="pos.options"/>
+    </div>
+    <div class="col-md-8">
+        <rzslider class="custom-slider" rz-slider-model="limits.minValue" rz-slider-high="limits.maxValue" rz-slider-options="limits.options"/>
+    </div>
+    <div class="col-md-10 input-group">
+        <attach ng-model="possibleController" interface="org.myrobotlab.service.interfaces.ServoController"/>
+        <span class="input-group-btn">
+            <button class="btn btn-default" ng-show="!isAttached()" ng-click="attachController()">attach</button>
+        </span>
+        <input type="text" class="form-control" ng-disabled="service.enabled" placeholder="pin" ng-model="pin"/>
+        <span class="input-group-btn">
+            <button class="btn btn-default" ng-show="service.enabled" ng-click="msg.disable()">disable pin</button>
+            <button class="btn btn-default" ng-show="!service.enabled" ng-click="msg.setPin(pin);msg.enable()">enable pin</button>
+        </span>
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button" ng-click="msg.setAutoDisable(!service.autoDisable)">
+                auto-disable <span>{{(service.autoDisable)?"on":"off"}}</span>
+            </button>
+            <button class="btn btn-default" type="button" ng-click="msg.stop()">
+                <span>
+                    <img src="../stop.png"/>&nbsp;&nbsp;&nbsp;&nbsp;stop
+                </span>
+            </button>
+        </span>
+    </div>
+</div>
+<div class="row">
+    <table class="table table-striped">
+        <tr ng-repeat="c in service.controllers">
+            <td>{{c}}</td>
+            <td>
+                <button class="btn btn-default" ng-click="msg.detach(c)">detach</button>
+            </td>
+        </tr>
+    </table>
+</div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ head.eyeY end ------------------------------>
+<!------------------------ head.rotHead begin ------------------------------>
+<table ng-show="showPanel('head.rotHead')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.head.rotHead</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <div id="containerServo-cell">
+        <div class="row ng-scope">
+    <div class="col-md-5">
+        <h2 class="ng-binding">10.00</h2>
+    </div>
+    <div class="col-md-1">
+        <img src="enabled.png" ng-show="service.enabled" title="the servo is energized" class="ng-hide" style="">
+    </div>
+    <div class="col-md-5">
+        <h2 class="ng-binding">10.00</h2>
+    </div>
+    <div class="col-md-8">
+        <div class="custom-slider rzslider ng-isolate-scope" rz-slider-model="pos.value" rz-slider-options="pos.options"><span class="rz-bar-wrapper"><span class="rz-bar"></span></span> <span class="rz-bar-wrapper" style="visibility: hidden; width: 66px; left: 0px;"><span class="rz-bar rz-selection" ng-style="barStyle"></span></span> <span class="rz-pointer rz-pointer-min" ng-style="minPointerStyle" role="slider" aria-valuenow="10" aria-valuetext="10" aria-valuemin="0" aria-valuemax="180" tabindex="0" style="left: 62px;"></span> <span class="rz-pointer rz-pointer-max" ng-style="maxPointerStyle" style="display: none;"></span> <span class="rz-bubble rz-limit rz-floor" style="visibility: visible; left: 0px;">0</span> <span class="rz-bubble rz-limit rz-ceil" style="visibility: visible; left: 502px;">180</span> <span class="rz-bubble" style="visibility: visible; left: 56px;">10</span> <span class="rz-bubble" style="visibility: hidden;"></span> <span class="rz-bubble" style="visibility: hidden;"></span><ul ng-show="showTicks" class="rz-ticks ng-hide" style=""><!-- ngRepeat: t in ticks track by $index --></ul></div>
+    </div>
+    <div class="col-md-8">
+        <div class="custom-slider rzslider ng-isolate-scope" rz-slider-model="limits.minValue" rz-slider-high="limits.maxValue" rz-slider-options="limits.options"><span class="rz-bar-wrapper"><span class="rz-bar"></span></span> <span class="rz-bar-wrapper" style="visibility: visible; width: 437px; left: 66px;"><span class="rz-bar rz-selection" ng-style="barStyle"></span></span> <span class="rz-pointer rz-pointer-min" ng-style="minPointerStyle" role="slider" aria-valuenow="10" aria-valuetext="10" aria-valuemin="0" aria-valuemax="180" tabindex="0" style="left: 62px;"></span> <span class="rz-pointer rz-pointer-max" ng-style="maxPointerStyle" aria-valuenow="80" aria-valuetext="80" aria-valuemin="0" aria-valuemax="180" role="slider" tabindex="0" style="left: 499px;"></span> <span class="rz-bubble rz-limit rz-floor" style="visibility: visible; left: 0px;">0</span> <span class="rz-bubble rz-limit rz-ceil" style="visibility: visible; left: 502px;">180</span> <span class="rz-bubble" style="visibility: visible; left: 56px;">10</span> <span class="rz-bubble" style="visibility: visible; left: 292px;">80</span> <span class="rz-bubble" style="visibility: hidden; left: -30px;">10 - 80</span><ul ng-show="showTicks" class="rz-ticks ng-hide" style=""><!-- ngRepeat: t in ticks track by $index --></ul></div>
+    </div>
+    <div class="col-md-15 input-group">
+        <attach ng-model="possibleController" interface="org.myrobotlab.service.interfaces.ServoController" class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty" style=""><input type="text" ng-model="bindModel" ng-disabled="bindDisabled" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="attach" uib-typeahead="controllerName as panel.name for panel in services | filter:{name:$viewValue}" typeahead-min-length="0" typeahead-template-url="widget/attachTemplate.html" typeahead-on-select="onSelect($item, $model, $label)" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-216-4370" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-216-4370" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate" template-url="widget/attachTemplate.html" style="">
+    <!-- ngRepeat: match in matches track by $index -->
+</ul></attach>
+        <span class="input-group-btn">
+            <button class="btn btn-default" ng-show="!isAttached()" ng-click="attachController()">attach</button>
+        </span>
+        <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" ng-disabled="service.enabled" placeholder="pin" ng-model="pin" style="">
+        <span class="input-group-btn">
+            <button class="btn btn-default ng-hide" ng-show="service.enabled" ng-click="msg.disable()" style="">disable pin</button>
+            <button class="btn btn-default" ng-show="!service.enabled" ng-click="msg.setPin(pin);msg.enable()">enable pin</button>
+        </span>
+        <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" placeholder="speed" ng-model="speed" style="">
+        <span class="input-group-btn">
+            <button class="btn btn-default" ng-click="setSpeed(speed);">set speed</button>
+        </span>
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button" ng-click="msg.setAutoDisable(!service.autoDisable)">
+                auto-disable <span class="ng-binding">on</span>
+            </button>
+            <button class="btn btn-default" type="button" ng-click="msg.stop()">
+                <span>
+                    <img src="../stop.png">&nbsp;&nbsp;&nbsp;&nbsp;stop
+                </span>
+            </button>
+        </span>
+    </div>
+</div>
+</div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ head.rotHead end ------------------------------>
+<!-- panels end -->
+</td></tr></table>

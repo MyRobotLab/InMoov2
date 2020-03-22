@@ -1,0 +1,119 @@
+<style>
+    #containerHand2{
+    width: 620px;
+    height: 588px;
+    /* border: 1px solid #000; */
+    position: relative;
+    background-image: url("../img/InMoov2/HandBackground.png");
+    z-index: 0;
+    float: none;
+    }
+
+    .inmoov-sub-panel {
+        width: auto;
+        max-width: auto;
+        margin-bottom: 0px;
+    }
+
+    .inmoov-menu-button {
+        position: absolute;
+        z-index: 30;
+    }
+
+</style>
+
+<table border="1" class="table table-striped">
+<tr>
+    <td colspan="2">&nbsp;{{onText}} 
+    </td>
+</tr>
+<tr>
+    <link type="text/css" rel="stylesheet" media="all" href="../service/css/InMoov2HandGui.css">
+    <td id="containerHand2-cell">
+        <div id="containerHand2">
+            <!-- Right -->
+            <div id="rightHandIndicator" class="rectangleHandIndicator preventHandDragSelect">Right Hand</div>
+
+            <div id="rightWristButton" class="dotHandButtons rightHandSide preventHandDragSelect">wrist</div>
+            <div id="rightWristDot" class="dotHandEnabled preventHandDragSelect"></div>
+
+            <div id="rightThumbButton" class="dotHandButtons rightHandSide preventHandDragSelect">thumb</div>
+            <div id="rightThumbDot" class="dotHandEnabled preventHandDragSelect"></div>
+
+            <div id="rightIndexButton" class="dotHandButtons rightHandSide preventHandDragSelect">index</div>
+            <div id="rightIndexDot" class="dotHandEnabled preventHandDragSelect"></div>
+
+            <div id="rightMajeureButton" class="dotHandButtons rightHandSide preventHandDragSelect">majeure</div>
+            <div id="rightMajeureDot" class="dotHandEnabled preventHandDragSelect"></div>
+
+            <div id="rightRingFingerButton" class="dotHandButtons rightHandSide preventHandDragSelect">ringFinger</div>
+            <div id="rightRingFingerDot" class="dotHandEnabled preventHandDragSelect"></div>
+
+            <div id="rightPinkyButton" class="dotHandButtons rightHandSide preventHandDragSelect">pinky</div>
+            <div id="rightPinkyDot" class="dotHandEnabled preventHandDragSelect"></div>
+
+            <!-- Left -->
+            <div id="leftHandIndicator" class="rectangleHandIndicatorActive preventHandDragSelect">Left Hand</div>
+
+            <div id="leftWristButton" class="dotHandButtons leftHandSide preventHandDragSelect">wrist</div>
+            <div id="leftWristDot" class="dotHandEnabled preventHandDragSelect"></div>
+
+            <div id="leftThumbButton" class="dotHandButtons leftHandSide preventHandDragSelect">thumb</div>
+            <div id="leftThumbDot" class="dotHandEnabled preventHandDragSelect"></div>
+
+            <div id="leftIndexButton" class="dotHandButtons leftHandSide preventHandDragSelect">index</div>
+            <div id="leftIndexDot" class="dotHandEnabled preventHandDragSelect"></div>
+
+            <div id="leftMajeureButton" class="dotHandButtons leftHandSide preventHandDragSelect">majeure</div>
+            <div id="leftMajeureDot" class="dotHandEnabled preventHandDragSelect"></div>
+
+            <div id="leftRingFingerButton" class="dotHandButtons leftHandSide preventHandDragSelect">ringFinger</div>
+            <div id="leftRingFingerDot" class="dotHandEnabled preventHandDragSelect"></div>
+
+            <div id="leftPinkyButton" class="dotHandButtonsActive leftHandSide preventHandDragSelect">pinky</div>
+            <div id="leftPinkyDot" class="dotHandActive preventHandDragSelect"></div>
+
+            <div id="leftBackHandButton" class="dotHandButtons leftHandSide preventHandDragSelect">Back</div>
+            <!--<p><i class="leftBackArrow"></i></p>-->
+            <div id="leftBackHandArrow" class="leftBackHandArrow preventHandDragSelect"></div>
+
+        </div>
+    </td>
+<td>
+<!-- panels begin -->
+<!------------------------ hand begin ------------------------------>
+<table ng-show="showPanel('hand')" class="inmoov-sub-panel table table-striped">
+<table ng-show="showPanel('hand')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftHand')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHand.png"/>
+        <label>leftHand Activated:</label>
+    </td>
+    <td>
+        <toggle width="70" height="28" ng-model="service.isLeftHandActivated" ng-change="!service.isLeftHandActivated?msg.stopLeftHand():msg.startLeftHand()" width="120" height="30" on="ON" off="OFF"/>
+    </td>
+</tr>
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightHand')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHand.right.png"/>
+        <label>rightHand Activated:</label>
+    </td>
+    <td>
+        <toggle width="70" height="28" ng-model="service.isRightHandActivated" ng-change="!service.isRightHandActivated?msg.stopRightHand():msg.startRightHand()" width="120" height="30" on="ON" off="OFF"/>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ hand end ------------------------------>
+<!-- panels end -->
+</td></tr></table>

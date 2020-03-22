@@ -1,0 +1,85 @@
+<style>
+    #containerTorso2{
+    width: 620px;
+    height: 588px;
+    /* border: 1px solid #000; */
+    position: relative;
+    background-image: url("../img/InMoov2/TorsoBackground.png");
+    z-index: 0;
+    float: none;
+    }
+
+    #containerTorso2-cell {
+    width: 620px;
+    }
+
+    .inmoov-sub-panel {
+        width: auto;
+        max-width: auto;
+        margin-bottom: 0px;
+    }
+
+    .inmoov-menu-button {
+        position: absolute;
+        z-index: 30;
+    }
+
+</style>
+
+<table border="1" class="table table-striped">
+<tr>
+    <td colspan="2">&nbsp;{{onText}} 
+    </td>
+</tr>
+<tr>
+    <link type="text/css" rel="stylesheet" media="all" href="../service/css/InMoov2TorsoGui.css">
+    <td id="containerTorso2-cell">
+        <div id="containerTorso2">
+            <!-- Right -->
+            <div id="torsoIndicator" class="rectangleTorsoIndicator preventTorsoDragSelect">Torso</div>
+
+            <div id="topStomButton" class="dotTorsoButtons rightTorsoSide preventTorsoDragSelect">top Stom</div>
+            <div id="topStomDot" class="dotTorsoEnabled preventTorsoDragSelect"></div>
+            <div id="topStomArrowVertical" class="rightTorsoSide preventTorsoDragSelect"><img src="http://www.inmoov.fr/InMoovWebGui/img/arrow_vertical.png"/></div>
+
+            <!-- Left -->
+
+            <div id="lowStomButton" class="dotTorsoButtons leftTorsoSide preventTorsoDragSelect">low Stom</div>
+            <div id="lowStomDot" class="dotTorsoEnabled preventTorsoDragSelect"></div>
+            <div id="lowStomArrowHorizontal" class="leftTorsoSide preventTorsoDragSelect"><img src="http://www.inmoov.fr/InMoovWebGui/img/arrow_horizontal.png"/></div>
+
+            <div id="midStomButton" class="dotTorsoButtons leftTorsoSide preventTorsoDragSelect">mid Stom</div>
+            <div id="midStomDot" class="dotTorsoEnabled preventTorsoDragSelect"></div>
+            <div id="midStomArrowHorizontal" class="leftTorsoSide preventTorsoDragSelect"><img src="http://www.inmoov.fr/InMoovWebGui/img/arrow_horizontal.png"/></div>
+
+            <div id="leftBackTorsoButton" class="dotTorsoButtons leftTorsoSide preventTorsoDragSelect">Back</div>
+            <!--<p><i class="leftBackArrow"></i></p>-->
+            <div id="leftBackTorsoArrow" class="leftBackTorsoArrow preventTorsoDragSelect"></div>
+
+        </div>
+    </td>
+<td>
+<!-- panels begin -->
+<!------------------------ torso begin ------------------------------>
+<table ng-show="showPanel('torso')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('torso')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovTorso.png"/>
+        <label>torso Activated:</label>
+    </td>
+    <td>
+        <toggle width="70" height="28" ng-model="service.isTorsoActivated" ng-change="!service.isTorsoActivated?msg.stopTorso():msg.startTorso()" width="80" height="30" on="ON" off="OFF"/>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ torso end ------------------------------>
+<!-- panels end -->
+</td></tr></table>
