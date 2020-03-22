@@ -880,6 +880,7 @@
         <td>
             <toggle width="120" height="28" ng-model="service.isVirtual" ng-change="!service.isVirtual?msg.setVirtual(false):msg.setVirtual(true)" on="virtualize on" off="virtualize off"></toggle>
             <toggle width="120" height="28" ng-model="service.isSimulatorActivated" ng-change="!service.isSimulatorActivated?msg.stopSimulator():msg.startSimulator()" on="simulator on" off="simulator off"></toggle>
+            <toggle width="120" height="28" ng-model="service.isServoMixerActivated" ng-change="!service.isServoMixerActivated?msg.stopServoMixer():msg.startServoMixer()" on="ServoMixer on" off="ServoMixer off"></toggle>
         </td>
     </tr>
     <tr>
