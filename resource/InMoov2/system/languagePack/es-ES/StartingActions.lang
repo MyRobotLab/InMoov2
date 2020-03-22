@@ -26,6 +26,7 @@ STARTINGROLLNECK::Iniciando servo de movimiento del cuello
 STARTINGTORSO::Iniciando el torso
 STARTINGULTRASONIC::Arrancando sensor ultrasónico
 STARTINGVIRTUAL::modo virtual inmoov
+STARTSERVOMIXER::Arrancando servo mixer
 TRACKINGSTARTED::Servicio de seguimiento iniciado
 STOPCHATBOT::Detener chatbot
 STOPEAR::Parando los oídos
@@ -49,3 +50,4 @@ STOPTORSO::Detener el torso
 STOPULTRASONIC::Sensor ultrasónico de parada
 STOPVIRTUAL::Detener inmoov virtual
 STOPTRACKING::Deteniendo el seguimiento
+STOPSERVOMIXER::Detener el servo mixer
