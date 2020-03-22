@@ -26,6 +26,7 @@ STARTINGROLLNECK:: Attivo i movimenti del collo
 STARTINGTORSO::Attivo il busto
 STARTINGULTRASONIC::Attivo il sensore ultrasonico
 STARTINGVIRTUAL::InMoov virtuale attivato
+STARTINGSERVOMIXER::Attivo il servo mixer
 TRACKINGSTARTED::Attivo la localizzazione
 STOPCHATBOT::Interruzione del chatbot
 STOPEAR::Orecchie di arresto
@@ -49,3 +50,4 @@ STOPTORSO::Fermare il busto
 STOPULTRASONIC::Arresto del sensore a ultrasuoni
 STOPVIRTUAL::Arresto di inmoov virtuale
 STOPTRACKING::Interruzione del tracciamento
+STOPSERVOMIXER::Interruzione del servo mixer
