@@ -26,6 +26,7 @@ STARTINGROLLNECK::Começando o pescoço do rolo
 STARTINGTORSO::Torso Inicial
 STARTINGULTRASONIC::Começando o sensor ultrassônico
 STARTINGVIRTUAL::virtual emmoov ativado
+STARTINGSERVOMIXER::Servo mixer ativado
 TRACKINGSTARTED::iniciando o rastreamento
 STOPCHATBOT::Parando o chatbot
 STOPEAR::Parando os ouvidos
@@ -49,3 +50,4 @@ STOPTORSO::Parando o torso
 STOPULTRASONIC::Parando o sensor ultrassônico
 STOPVIRTUAL::Parando o inmoov virtual
 STOPTRACKING::Parando o rastreamento
+STOPSERVOMIXER::Parando o servo mixer
