@@ -26,8 +26,8 @@ STARTINGROLLNECK :: Aloita telan kaula
 STARTINGTORSO :: Aloitus Torso
 STARTINGULTRASONIC :: Käynnistys ultraäänianturilla
 STARTINGVIRTUAL :: virtuaalinen inmoov aktivoitu
+STARTINGSERVOMIXER::Aloita servo mixer
 TRACKINGSTARTED :: aloittavan seurannan
-STARTSERVOMIXER::Aloita servo mixer
 STOPCHATBOT :: Pysäytä chatbot
 STOPEAR :: Korvien pysähtyminen
 STOPEYELIDS :: Silmäluomien pysähtyminen
