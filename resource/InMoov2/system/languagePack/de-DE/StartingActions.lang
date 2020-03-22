@@ -26,6 +26,7 @@ STARTINGROLLNECK::Rollneck aktiviert
 STARTINGTORSO::Torso aktiviert
 STARTINGULTRASONIC::Ultraschallsensor starten
 STARTINGVIRTUAL::virtueller inmoov wird gestartet
+STARTINGSERVOMIXER::servo mixer wird gestartet
 TRACKINGSTARTED::tracking aktiviet
 STOPCHATBOT::Chatbot stoppen
 STOPEAR::Ohren stoppen
@@ -49,3 +50,4 @@ STOPTORSO::Torso stoppen
 STOPULTRASONIC::Ultraschallsensor stoppen
 STOPVIRTUAL::Virtuelle Inmoov stoppen
 STOPTRACKING::Tracking stoppen
+STOPSERVOMIXER::servo mixer wird stoppen
