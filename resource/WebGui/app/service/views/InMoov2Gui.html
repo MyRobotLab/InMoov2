@@ -231,8 +231,8 @@
             </span>
             <toggle ng-model="service.mute" ng-change="msg.setMute(service.mute)" width="80" height="28" on="muted" off="unmuted"></toggle>
             <br/>
-            <input class="form-control" type="text" id="speakText" ng-model="speakText">
-            <button class="btn btn-default form-control" ng-click="speak()">speak</button>
+            <input class="form-control" type="text" id="speakText" ng-model="speakText" placeholder="type here" press-enter="speak()">
+            <button class="btn btn-default form-control" ng-click="speak()">let it speak</button>
         </div>
     </td>
 </tr>
