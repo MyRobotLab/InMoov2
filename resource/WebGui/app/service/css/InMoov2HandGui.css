@@ -1,0 +1,353 @@
+
+
+#containerHand2-cell {
+    width: 620px;
+}
+
+.preventHandDragSelect{
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+.dotHandDisabled{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #0042A4;
+    border-top: 2px solid #AFE1EC;
+    border-right: 2px solid #AFE1EC;
+    border-bottom: 2px solid #AFE1EC;
+    border-left: 2px solid #AFE1EC;
+    background-color: #7d7d7d;
+}
+
+.dotHandEnabled{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #0042A4;
+    border-top: 2px solid #AFE1EC;
+    border-right: 2px solid #AFE1EC;
+    border-bottom: 2px solid #AFE1EC;
+    border-left: 2px solid #AFE1EC;
+    background-color: #00a5cb;
+    box-shadow: inset 0 0px 1px 1px rgb(255, 255, 255, 0.54);
+}
+
+@keyframes dotHandActive {
+  0% { filter: saturate(200%) brightness(200%) drop-shadow(0px 0px 10px rgba(255, 0, 0, 0.6)); }
+  10% { background-color: #FF0000; }
+  50% {box-shadow: 0 0px 20px 6px rgb(250, 0, 0, 0.54), 0px 0px 10px 1px rgba(255, 133, 133, 0.92), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.54);}
+
+  90% { background-color: #d68080; }
+  100% { filter: none; }
+}
+
+.dotHandActive{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #0042A4;
+    border-top: 2px solid #AFE1EC;
+    border-right: 2px solid #AFE1EC;
+    border-bottom: 2px solid #AFE1EC;
+    border-left: 2px solid #AFE1EC;
+    animation: dotHandActive 2000ms infinite;
+}
+
+
+#rightHandIndicator{
+    display: table-cell;
+    position:absolute;
+    left:80px;
+    top:36px;
+    width: 200px;
+    height: 40px;
+}
+
+#leftHandIndicator{
+    display: table-cell;
+    position:absolute;
+    right:80px;
+    top:36px;
+    width: 200px;
+    height: 40px;
+}
+
+
+.rectangleHandIndicator{
+    border-radius: 5px;
+    background: #73AD21;
+    line-height: 40px;
+    font-family: helvetica,sans-serif;
+    font-size: 22;
+    font-weight: normal;
+    color: #17d6ed;
+    background-image: linear-gradient(#001720, #01424c);
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 0 0 3px #3e2e2e, 0 0 20px #fff, 0 0 30px #00a5cb, 0 0 40px #74ace6, 0 0 50px #0042a4, 0 0 60px #3582f5, 0 0 70px #4954ff;
+    box-shadow: 0 0px 5px 2px rgb(21, 215, 237);
+    cursor:default;  
+}
+
+.rectangleHandIndicatorActive{
+    border-radius: 5px;
+    background: #73AD21;
+    line-height: 40px;
+    font-family: helvetica,sans-serif;
+    font-size: 22;
+    font-weight: normal;
+    color: #17d6ed;
+    background-image: linear-gradient(#001720, #01424c);
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 0 0 3px #3e2e2e, 0 0 20px #fff, 0 0 30px #00a5cb, 0 0 12px #74ace6, 0 0 50px #0042a4, 0 0 60px #3582f5, 0 0 70px #4954ff;
+
+    -webkit-filterg: saturate(200%)  drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
+    box-shadow: 0 0px 4px 3px rgb(21, 215, 237), 0px 0px 10px 1px rgb(255, 255, 255), 0px 0px 9px 3px rgb(255, 0, 0);
+
+}
+
+.dotHandButtons{
+    position:absolute;
+    font-family: helvetica,sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    color: #29d4ff;
+    cursor: pointer;
+    display: inline-block;
+    /* 
+    overflow: hidden;
+    break the glow
+    */
+    height: 24px;
+    max-height: 24px;
+    text-shadow: 0 0 3px #414b4e, 0 0 7px #76bed3, 0 0 7px #8ddaefd9;
+}
+.dotHandButtons:hover{
+    color: #FFFFFF;
+}
+.dotHandButtons:active{
+    color: #FFFFFF;
+    text-shadow: 0 0 3px #414b4e, 0 0 10px #FFFFFF, 0 0 10px #FFFFFF, 0 0 10px #FFFFFF;
+}
+
+.dotHandButtonsActive{
+    position:absolute;
+    font-family: helvetica,sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    color: #f38094;
+    cursor: pointer;
+    display: inline-block;
+    height: 24px;
+    max-height: 24px;
+    text-shadow: 0 0 3px #ff1414, 0 0 10px #FFFFFF;
+    cursor: default;
+}
+
+
+.leftHandSide{
+    text-align: left;
+}
+
+.rightHandSide{
+    text-align: right;
+}
+
+
+/* -------------------    Right hand DOTs position --------------------*/
+
+#rightWristDot{
+    position:absolute;
+    left:214px;
+    top:110px;
+}
+#rightThumbDot{
+    position:absolute;
+    left:273px;
+    top:267px;
+}
+#rightIndexDot{
+    position:absolute;
+    left:238px;
+    top:376px;
+}
+#rightMajeureDot{
+    position:absolute;
+    left:214px;
+    top:365px;
+}
+#rightRingFingerDot{
+    position:absolute;
+    left:188px;
+    top:344px;
+}
+#rightPinkyDot{
+    position:absolute;
+    left:162px;
+    top:324px;
+}
+
+/* -------------------    Right Hand Buttons  --------------------*/
+
+#rightWristButton{
+    right: 486px;
+    top: 321px;
+}
+#rightWristButton:hover + #rightWristDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#rightThumbButton{
+    right: 344px;
+    top: 485px;
+}
+#rightThumbButton:hover + #rightThumbDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#rightIndexButton{  
+    right: 380px;
+    top: 456px;
+}
+#rightIndexButton:hover + #rightIndexDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#rightMajeureButton{
+    right: 405px;
+    top: 422px;
+}
+#rightMajeureButton:hover + #rightMajeureDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#rightRingFingerButton{
+    right: 431px;
+    top: 390px;
+}
+#rightRingFingerButton:hover + #rightRingFingerDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#rightPinkyButton{
+    right: 457px;
+    top: 353px;
+}
+#rightPinkyButton:hover + #rightPinkyDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+
+/* -------------------    Left Hand DOTs position --------------------*/
+
+#leftWristDot{
+    position:absolute;
+    left:386px;
+    top:111px;
+}
+#leftPinkyDot{
+    position:absolute;
+    left:437px;
+    top:323px;
+}
+#leftRingFingerDot{
+    position:absolute;
+    left:411px;
+    top:344px;
+}
+#leftMajeureDot{
+    position:absolute;
+    left:384px;
+    top:365px;
+}
+#leftIndexDot{
+    position:absolute;
+    left:360px;
+    top:376px;
+}
+#leftThumbDot{
+    position:absolute;
+    left:324px;
+    top:267px;
+}
+
+/* -------------------    Left Hand Buttons --------------------*/
+
+#leftWristButton{
+    left: 474px;
+    top: 321px;
+}
+#leftWristButton:hover + #leftWristDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#leftThumbButton{
+    left: 337px;
+    top: 485px;
+}
+#leftThumbButton:hover + #leftThumbDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#leftIndexButton{   
+    left: 370px;
+    top: 455px;
+}
+#leftIndexButton:hover + #leftIndexDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#leftMajeureButton{
+    left: 396px;
+    top: 422px;
+}
+#leftMajeureButton:hover + #leftMajeureDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#leftRingFingerButton{
+    left: 422px;
+    top: 390px;
+}
+#leftRingFingerButton:hover + #leftRingFingerDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#leftPinkyButton{
+    left: 448px;
+    top: 353px;
+}
+#leftPinkyButton:hover + #leftPinkyDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+/* -------------------    Left Back position --------------------*/
+
+#leftBackHandButton{
+    left: 41px;
+    top: 525px;
+}
+#leftBackHandButton:#leftBackHandArrow{
+    background-color: #FF0000;
+    animation: none;
+}
+/* -------------------    Left Back Arrow position --------------------*/
+
+#leftBackHandArrow{
+    border-top: 9px solid transparent;
+    border-right: 10px solid #29d4ff;
+    border-bottom: 9px solid transparent;
+    display: inline-block;
+    position:absolute;
+    left:29px;
+    top:531px;
