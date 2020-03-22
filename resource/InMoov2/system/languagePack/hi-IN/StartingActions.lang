@@ -26,7 +26,7 @@ STARTINGROLLNECK::रोल गर्दन की शुरुआत
 STARTINGTORSO::टॉरो शुरू करना
 STARTINGULTRASONIC::अल्ट्रासोनिक सेंसर शुरू करना
 STARTINGVIRTUAL::वर्चुअल इनमोओव सक्रिय
-STARTSERVOMIXER::इमदादी मिक्सर शुरू
+STARTINGSERVOMIXER::इमदादी मिक्सर शुरू
 TRACKINGSTARTED::ट्रैकिंग शुरू करना
 STOPCHATBOT::चैटबॉट को रोकना।
 STOPEAR::कानों को रोकना।
