@@ -27,6 +27,7 @@ STARTINGTORSO :: Aloitus Torso
 STARTINGULTRASONIC :: Käynnistys ultraäänianturilla
 STARTINGVIRTUAL :: virtuaalinen inmoov aktivoitu
 TRACKINGSTARTED :: aloittavan seurannan
+STARTSERVOMIXER::Aloita servo mixer
 STOPCHATBOT :: Pysäytä chatbot
 STOPEAR :: Korvien pysähtyminen
 STOPEYELIDS :: Silmäluomien pysähtyminen
@@ -49,3 +50,4 @@ STOPTORSO :: Torson pysäyttäminen
 STOPULTRASONIC :: Ultraäänianturin pysäyttäminen
 STOPVIRTUAL :: Virtuaalisen inmoovin pysäyttäminen
 STOPTRACKING :: Seurannan lopettaminen
+STOPSERVOMIXER::servo mixer pysäyttäminen
