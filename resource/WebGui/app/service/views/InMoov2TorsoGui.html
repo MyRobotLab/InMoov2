@@ -38,21 +38,21 @@
             <!-- Right -->
             <div id="torsoIndicator" class="rectangleTorsoIndicator preventTorsoDragSelect">Torso</div>
 
-            <div id="topStomButton" class="dotTorsoButtons rightTorsoSide preventTorsoDragSelect">top Stom</div>
+            <div id="topStomButton" class="dotTorsoButtons rightTorsoSide preventTorsoDragSelect" ng-click="setPanel('topStom')">top Stom</div>
             <div id="topStomDot" class="dotTorsoEnabled preventTorsoDragSelect"></div>
-            <div id="topStomArrowVertical" class="rightTorsoSide preventTorsoDragSelect"><img src="http://www.inmoov.fr/InMoovWebGui/img/arrow_vertical.png"/></div>
+            <div id="topStomArrowVertical" class="rightTorsoSide preventTorsoDragSelect"><img src="../img/InMoov2/arrow_vertical.png"/></div>
 
             <!-- Left -->
 
-            <div id="lowStomButton" class="dotTorsoButtons leftTorsoSide preventTorsoDragSelect">low Stom</div>
+            <div id="lowStomButton" class="dotTorsoButtons leftTorsoSide preventTorsoDragSelect" ng-click="setPanel('lowStom')">low Stom</div>
             <div id="lowStomDot" class="dotTorsoEnabled preventTorsoDragSelect"></div>
-            <div id="lowStomArrowHorizontal" class="leftTorsoSide preventTorsoDragSelect"><img src="http://www.inmoov.fr/InMoovWebGui/img/arrow_horizontal.png"/></div>
+            <div id="lowStomArrowHorizontal" class="leftTorsoSide preventTorsoDragSelect"><img src="../img/InMoov2/arrow_horizontal.png"/></div>
 
-            <div id="midStomButton" class="dotTorsoButtons leftTorsoSide preventTorsoDragSelect">mid Stom</div>
+            <div id="midStomButton" class="dotTorsoButtons leftTorsoSide preventTorsoDragSelect" ng-click="setPanel('midStom')">mid Stom</div>
             <div id="midStomDot" class="dotTorsoEnabled preventTorsoDragSelect"></div>
-            <div id="midStomArrowHorizontal" class="leftTorsoSide preventTorsoDragSelect"><img src="http://www.inmoov.fr/InMoovWebGui/img/arrow_horizontal.png"/></div>
+            <div id="midStomArrowHorizontal" class="leftTorsoSide preventTorsoDragSelect"><img src="../img/InMoov2/arrow_horizontal.png"/></div>
 
-            <div id="leftBackTorsoButton" class="dotTorsoButtons leftTorsoSide preventTorsoDragSelect">Back</div>
+            <a id="leftBackTorsoButton" class="dotTorsoButtons leftTorsoSide preventTorsoDragSelect" href="#/service/i01" target="_self">Back</a>
             <!--<p><i class="leftBackArrow"></i></p>-->
             <div id="leftBackTorsoArrow" class="leftBackTorsoArrow preventTorsoDragSelect"></div>
 
@@ -60,18 +60,20 @@
     </td>
 <td>
 <!-- panels begin -->
-<!------------------------ torso begin ------------------------------>
-<table ng-show="showPanel('torso')" class="inmoov-sub-panel table table-striped">
+<!------------------------ topStom begin ------------------------------>
+<table ng-show="showPanel('topStom')" class="inmoov-sub-panel table table-striped">    
 <tr>
     <td>
-        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('torso')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
-        <!--------------------------------------------------------------->
-        <img src="../InMoovTorso.png"/>
-        <label>torso Activated:</label>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.topStom</label>
     </td>
+</tr>
+<tr>
     <td>
-        <toggle width="70" height="28" ng-model="service.isTorsoActivated" ng-change="!service.isTorsoActivated?msg.stopTorso():msg.startTorso()" width="80" height="30" on="ON" off="OFF"/>
+        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
+        And we need to have the button "topStom" <br>and the dot to become red and active</p>
+        <a id="topStomButton" class="dotTorsoButtonsActive"></a>
+        <div id="topStomDot" class="dotTorsoEnabledActive preventArmDragSelect"></div>
+            <a href="#/service/i01.torso.topStom" target="_self">DISPLAY</a>
     </td>
 </tr>
 <tr>
@@ -80,6 +82,52 @@
     </td>
 </tr>
 </table>
-<!------------------------ torso end ------------------------------>
+<!------------------------ topStom end ------------------------------>
+<!------------------------ midStom begin ------------------------------>
+<table ng-show="showPanel('midStom')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.midStom</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
+        And we need to have the button "midStom" <br>and the dot to become red and active</p>
+        <a id="midStomButton" class="dotTorsoButtonsActive"></a>
+        <div id="midStomDot" class="dotTorsoEnabledActive preventArmDragSelect"></div>
+            <a href="#/service/i01.torso.midStom" target="_self">DISPLAY</a>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ midStom end ------------------------------>
+<!------------------------ lowStom begin ------------------------------>
+<table ng-show="showPanel('lowStom')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.lowStom</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
+        And we need to have the button "lowStom" <br>and the dot to become red and active</p>
+        <a id="lowStomButton" class="dotTorsoButtonsActive"></a>
+        <div id="lowStomDot" class="dotTorsoEnabledActive preventArmDragSelect"></div>
+            <a href="#/service/i01.torso.lowStom" target="_self">DISPLAY</a>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ lowStom end ------------------------------>
 <!-- panels end -->
 </td></tr></table>
