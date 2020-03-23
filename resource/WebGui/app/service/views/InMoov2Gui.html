@@ -83,7 +83,7 @@
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
 </table>
@@ -112,7 +112,7 @@
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
 </table>
@@ -148,7 +148,7 @@
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
 </table>
@@ -196,7 +196,7 @@
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
 </table>
@@ -228,8 +228,15 @@
                     <option ng-repeat="voice in service.voices" value="{{voice.name}}">{{voice.name}} {{voice.gender}} {{voice.locale.tag}}  {{voice.description}}</option>
                 </select>
             </span>
-            <toggle ng-model="service.mute" ng-change="msg.setMute(service.mute)" width="80" height="28" on="muted" off="unmuted"></toggle>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>mute is</label>&nbsp;
+            <toggle ng-model="service.mute" ng-change="msg.setMute(service.mute)" width="70" height="28" on="ON" off="OFF"></toggle>
             <br/>
+            <div width="120" height="28">
             <input class="form-control" type="text" id="speakText" ng-model="speakText" placeholder="type here" press-enter="speak()">
             <button class="btn btn-default form-control" ng-click="speak()">let it speak</button>
         </div>
@@ -237,7 +244,7 @@
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
 </table>
@@ -301,7 +308,7 @@
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
 </table>
@@ -350,7 +357,7 @@
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
 <tr>
@@ -585,7 +592,7 @@
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
 <tr>
@@ -695,7 +702,7 @@
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
 <tr>
@@ -775,7 +782,7 @@
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
 <tr>
@@ -822,7 +829,7 @@
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
 <tr>
@@ -846,8 +853,8 @@
                     <option>my-config-02</option>
                 </select>
             </div>
-        <button class="btn btn-default" ng-click="msg.export()">select config</button>
-        <button class="btn btn-default" ng-click="msg.exportAll()">create new</button>
+        <button class="btn btn-default" ng-click="msg.export()">export config</button>
+        <button class="btn btn-default" ng-click="msg.exportAll()">export All</button>
             <button class="btn btn-default" ng-click="msg.load()">load</button>
         </td>
     </tr>
