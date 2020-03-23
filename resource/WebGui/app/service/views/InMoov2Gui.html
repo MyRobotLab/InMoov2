@@ -504,22 +504,6 @@
 </tr>
 <tr>
     <td>
-        <label>controller:</label>
-        <td>
-            <div class="input-group">
-            <span class="input-group-addon dropdown" uib-dropdown="" on-toggle="toggled(open)" style="">
-            <a href="" id="simple-dropdown" uib-dropdown-toggle="" ng-disabled="isAttached" class="dropdown-toggle"  title="Set here the controller that is master or the COM port of your extra arduino.">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span></a>
-            <ul uib-dropdown-menu="" class="dropdown-menu">
-            <!-- ngRepeat: possibleController in controllers --><li ng-repeat="possibleController in controllers" ng-click="setControllerName(possibleController)" class="ng-scope" style=""><a href="" class="ng-binding">arduino</a></li><!-- end ngRepeat: possibleController in controllers -->
-            </ul>
-            </span>
-            <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-touched" ng-model="controllerName" ng-disabled="isAttached" style="">
-            </div>
-        </td>
-    </td>
-</tr>
-<tr>
-    <td>
         <label>NeopixelMaster:</label>
         <td>
             <toggle width="100" height="28" ng-model="service.NeopixelMaster" ng-change="NeopixelMaster" on="ON" off="left"/></toggle>
@@ -536,26 +520,44 @@
 </tr>
 <tr>
     <td>
-        <label>pin:</label>
-        <td>
-            <span class="input-group-addon dropdown" uib-dropdown="" on-toggle="toggled(open)">
-            <a href="" id="simple-dropdown" uib-dropdown-toggle="" ng-disabled="isAttached" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">pin<span class="caret"></span></a>
-                <ul uib-dropdown-menu="" class="dropdown-menu">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- simple dropdown -->
+            <div class="input-group">
+              <span class="input-group-addon" uib-dropdown on-toggle="toggled(open)">
+                <a href id="simple-dropdown" uib-dropdown-toggle ng-disabled="isAttached">controller<span class="caret"></span></a>
+                <ul uib-dropdown-menu>
+                  <li ng-repeat="possibleController in controllers" ng-click="setControllerName(possibleController)"><a href>{{possibleController}}</a></li>
                 </ul>
-            </span>
-        </td>
-    </td>
-</tr>
-<tr>
-    <td>
-        <label>number Of Pixel:</label>
-        <td>
-            <span class="input-group-addon dropdown" uib-dropdown="" on-toggle="toggled(open)">
-                <a href="" id="simple-dropdown" uib-dropdown-toggle="" ng-disabled="isAttached" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Pixels<span class="caret"></span></a>
-                <ul uib-dropdown-menu="" class="dropdown-menu">
+              </span>
+          
+              <input type="text" class="form-control" ng-model="controllerName" ng-disabled="isAttached"><!-- FIXME - type-ahead -->  
+
+              <span class="input-group-addon" uib-dropdown on-toggle="toggled(open)">
+                <a href id="simple-dropdown" uib-dropdown-toggle ng-disabled="isAttached">pin<span class="caret"></span></a>
+                <ul uib-dropdown-menu>
+                  <li ng-repeat="newPin in pins" ><a href ng-click="setPin(newPin)">{{newPin}}</a></li>
                 </ul>
-            </span>
-        </td>
+              </span>
+
+              <input type="text" class="form-control" ng-model="pin" ng-disabled="isAttached"><!-- FIXME - type-ahead -->  
+             
+              <span class="input-group-addon" uib-dropdown on-toggle="toggled(open)" >
+                <a href id="simple-dropdown" uib-dropdown-toggle ng-disabled="isAttached">Pixels<span class="caret"></span></a>
+                <ul uib-dropdown-menu>
+                  <li ng-repeat="newPixel in numPixels" ><a href ng-click="setPixel(newPixel)">{{newPixel}}</a></li>
+                </ul>
+              </span>
+
+              <input type="text" class="form-control" ng-model="numPixel" ng-disabled="isAttached"><!-- FIXME - type-ahead -->  
+
+              <span class="input-group-btn">
+                 <button class="btn btn-default" ng-show="isAttached"  ng-click="msg.detach()">detach</button>
+                 <button class="btn btn-default" ng-show="!isAttached"  ng-click="msg.attach(controllerName, pin, numPixel)">attach</button>
+              </span>
+            </div>
+          </div>
+        </div>
     </td>
 </tr>
 <tr>
@@ -592,7 +594,7 @@
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
     </td>
 </tr>
 <tr>
