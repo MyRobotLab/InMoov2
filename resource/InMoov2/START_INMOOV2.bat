@@ -24,9 +24,9 @@ echo ------------------------------------------------------
 COLOR 0F
 cls
 echo ------------------------------------------------------
-echo START MRL AND INMOOV
+echo START MRL AND INMOOV2
 echo ------------------------------------------------------
-
+start chrome --new-tab "http://localhost:8888/#/service"
 REM This is the command to start up the agent jar, specify the memory and run the default InMoov script
 
 SET script=%cd%\InMoov\InMoov.py
