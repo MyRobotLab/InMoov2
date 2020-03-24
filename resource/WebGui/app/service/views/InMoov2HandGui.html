@@ -34,46 +34,46 @@
             <!-- Right -->
             <div id="rightHandIndicator" class="rectangleHandIndicator preventHandDragSelect">Right Hand</div>
 
-            <div id="rightWristButton" class="dotHandButtons rightHandSide preventHandDragSelect">wrist</div>
+            <div id="rightWristButton" class="dotHandButtons rightHandSide preventHandDragSelect" ng-click="setPanel('rightWrist')">wrist</div>
             <div id="rightWristDot" class="dotHandEnabled preventHandDragSelect"></div>
 
-            <div id="rightThumbButton" class="dotHandButtons rightHandSide preventHandDragSelect">thumb</div>
+            <div id="rightThumbButton" class="dotHandButtons rightHandSide preventHandDragSelect" ng-click="setPanel('rightThumb')">thumb</div>
             <div id="rightThumbDot" class="dotHandEnabled preventHandDragSelect"></div>
 
-            <div id="rightIndexButton" class="dotHandButtons rightHandSide preventHandDragSelect">index</div>
+            <div id="rightIndexButton" class="dotHandButtons rightHandSide preventHandDragSelect" ng-click="setPanel('rightIndex')">index</div>
             <div id="rightIndexDot" class="dotHandEnabled preventHandDragSelect"></div>
 
-            <div id="rightMajeureButton" class="dotHandButtons rightHandSide preventHandDragSelect">majeure</div>
+            <div id="rightMajeureButton" class="dotHandButtons rightHandSide preventHandDragSelect" ng-click="setPanel('rightMajeure')">majeure</div>
             <div id="rightMajeureDot" class="dotHandEnabled preventHandDragSelect"></div>
 
-            <div id="rightRingFingerButton" class="dotHandButtons rightHandSide preventHandDragSelect">ringFinger</div>
+            <div id="rightRingFingerButton" class="dotHandButtons rightHandSide preventHandDragSelect" ng-click="setPanel('rightRingFinger')">ringFinger</div>
             <div id="rightRingFingerDot" class="dotHandEnabled preventHandDragSelect"></div>
 
-            <div id="rightPinkyButton" class="dotHandButtons rightHandSide preventHandDragSelect">pinky</div>
+            <div id="rightPinkyButton" class="dotHandButtons rightHandSide preventHandDragSelect" ng-click="setPanel('rightPinky')">pinky</div>
             <div id="rightPinkyDot" class="dotHandEnabled preventHandDragSelect"></div>
 
             <!-- Left -->
             <div id="leftHandIndicator" class="rectangleHandIndicatorActive preventHandDragSelect">Left Hand</div>
 
-            <div id="leftWristButton" class="dotHandButtons leftHandSide preventHandDragSelect">wrist</div>
+            <div id="leftWristButton" class="dotHandButtons leftHandSide preventHandDragSelect" ng-click="setPanel('leftWrist')">wrist</div>
             <div id="leftWristDot" class="dotHandEnabled preventHandDragSelect"></div>
 
-            <div id="leftThumbButton" class="dotHandButtons leftHandSide preventHandDragSelect">thumb</div>
+            <div id="leftThumbButton" class="dotHandButtons leftHandSide preventHandDragSelect" ng-click="setPanel('leftThumb')">thumb</div>
             <div id="leftThumbDot" class="dotHandEnabled preventHandDragSelect"></div>
 
-            <div id="leftIndexButton" class="dotHandButtons leftHandSide preventHandDragSelect">index</div>
+            <div id="leftIndexButton" class="dotHandButtons leftHandSide preventHandDragSelect" ng-click="setPanel('leftIndex')">index</div>
             <div id="leftIndexDot" class="dotHandEnabled preventHandDragSelect"></div>
 
-            <div id="leftMajeureButton" class="dotHandButtons leftHandSide preventHandDragSelect">majeure</div>
+            <div id="leftMajeureButton" class="dotHandButtons leftHandSide preventHandDragSelect" ng-click="setPanel('leftMajeure')">majeure</div>
             <div id="leftMajeureDot" class="dotHandEnabled preventHandDragSelect"></div>
 
-            <div id="leftRingFingerButton" class="dotHandButtons leftHandSide preventHandDragSelect">ringFinger</div>
+            <div id="leftRingFingerButton" class="dotHandButtons leftHandSide preventHandDragSelect" ng-click="setPanel('leftRingFinger')">ringFinger</div>
             <div id="leftRingFingerDot" class="dotHandEnabled preventHandDragSelect"></div>
 
-            <div id="leftPinkyButton" class="dotHandButtonsActive leftHandSide preventHandDragSelect">pinky</div>
+            <div id="leftPinkyButton" class="dotHandButtonsActive leftHandSide preventHandDragSelect" ng-click="setPanel('leftPinky')">pinky</div>
             <div id="leftPinkyDot" class="dotHandActive preventHandDragSelect"></div>
 
-            <div id="leftBackHandButton" class="dotHandButtons leftHandSide preventHandDragSelect">Back</div>
+            <div id="leftBackHandButton" class="dotHandButtons leftHandSide preventHandDragSelect" href="#/service/i01" target="_self">Back</div>
             <!--<p><i class="leftBackArrow"></i></p>-->
             <div id="leftBackHandArrow" class="leftBackHandArrow preventHandDragSelect"></div>
 
@@ -81,31 +81,23 @@
     </td>
 <td>
 <!-- panels begin -->
-<!------------------------ hand begin ------------------------------>
-<table ng-show="showPanel('hand')" class="inmoov-sub-panel table table-striped">
-<table ng-show="showPanel('hand')" class="inmoov-sub-panel table table-striped">
+
+<!--------------rightHand begin ------------------------------>
+
+<!------------------------ rightWrist begin ------------------------------>
+<table ng-show="showPanel('rightWrist')" class="inmoov-sub-panel table table-striped">    
 <tr>
     <td>
-        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftHand')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
-        <!--------------------------------------------------------------->
-        <img src="../InMoovHand.png"/>
-        <label>leftHand Activated:</label>
-    </td>
-    <td>
-        <toggle width="70" height="28" ng-model="service.isLeftHandActivated" ng-change="!service.isLeftHandActivated?msg.stopLeftHand():msg.startLeftHand()" width="120" height="30" on="ON" off="OFF"/>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.rightHand.wrist</label>
     </td>
 </tr>
 <tr>
     <td>
-        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightHand')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
-        <!--------------------------------------------------------------->
-        <img src="../InMoovHand.right.png"/>
-        <label>rightHand Activated:</label>
-    </td>
-    <td>
-        <toggle width="70" height="28" ng-model="service.isRightHandActivated" ng-change="!service.isRightHandActivated?msg.stopRightHand():msg.startRightHand()" width="120" height="30" on="ON" off="OFF"/>
+        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
+        And we need to have the button "rightWrist" <br>and the dot to become red and active</p>
+        <a id="rightWristButton" class="dotTorsoButtonsActive"></a>
+        <div id="rightWristDot" class="dotTorsoEnabledActive preventArmDragSelect"></div>
+            <a href="#/service/i01.rightHand.wrist" target="_self">DISPLAY</a>
     </td>
 </tr>
 <tr>
@@ -114,6 +106,371 @@
     </td>
 </tr>
 </table>
-<!------------------------ hand end ------------------------------>
+<!------------------------ rightWrist end ------------------------------>
+<!------------------------ rightThumb begin ------------------------------>
+<table ng-show="showPanel('rightThumb')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.rightHand.thumb</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
+        And we need to have the button "rightThumb" <br>and the dot to become red and active</p>
+        <a id="rightThumbButton" class="dotTorsoButtonsActive"></a>
+        <div id="rightThumbDot" class="dotTorsoEnabledActive preventArmDragSelect"></div>
+            <a href="#/service/i01.rightHand.thumb" target="_self">DISPLAY</a>
+    </td>
+</tr>
+<tr>
+    <td><img width="80" height="55" src="../img/InMoov2/finger-Tip.png"/> 
+        <label>rightThumb Sensor:</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the sensor content,<br> necessary for calibration.<br>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ rightThumb end ------------------------------>
+<!------------------------ rightIndex begin ------------------------------>
+<table ng-show="showPanel('rightIndex')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.rightHand.index</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
+        And we need to have the button "rightIndex" <br>and the dot to become red and active</p>
+        <a id="rightIndexButton" class="dotTorsoButtonsActive"></a>
+        <div id="rightIndexDot" class="dotTorsoEnabledActive preventArmDragSelect"></div>
+            <a href="#/service/i01.rightHand.index" target="_self">DISPLAY</a>
+    </td>
+</tr>
+<tr>
+    <td><img width="80" height="55" src="../img/InMoov2/finger-Tip.png"/> 
+        <label>rightIndex Sensor:</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the sensor content,<br> necessary for calibration.<br>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ rightIndex end ------------------------------>
+<!------------------------ rightMajeure begin ------------------------------>
+<table ng-show="showPanel('rightMajeure')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.rightHand.majeure</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
+        And we need to have the button "rightMajeure" <br>and the dot to become red and active</p>
+        <a id="rightMajeureButton" class="dotTorsoButtonsActive"></a>
+        <div id="rightMajeureDot" class="dotTorsoEnabledActive preventArmDragSelect"></div>
+            <a href="#/service/i01.rightHand.majeure" target="_self">DISPLAY</a>
+    </td>
+</tr>
+<tr>
+    <td><img width="80" height="55" src="../img/InMoov2/finger-Tip.png"/> 
+        <label>rightMajeure Sensor:</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the sensor content,<br> necessary for calibration.<br>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ rightMajeure end ------------------------------>
+<!------------------------ rightRingFinger begin ------------------------------>
+<table ng-show="showPanel('rightRingFinger')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.rightHand.ringFinger</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
+        And we need to have the button "rightRingFinger" <br>and the dot to become red and active</p>
+        <a id="rightRingFingerButton" class="dotTorsoButtonsActive"></a>
+        <div id="rightRingFingerDot" class="dotTorsoEnabledActive preventArmDragSelect"></div>
+            <a href="#/service/i01.rightHand.ringFinger" target="_self">DISPLAY</a>
+    </td>
+</tr>
+<tr>
+    <td><img width="80" height="55" src="../img/InMoov2/finger-Tip.png"/> 
+        <label>rightRingFinger Sensor:</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the sensor content,<br> necessary for calibration.<br>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ rightRingFinger end ------------------------------>
+<!------------------------ rightPinky begin ------------------------------>
+<table ng-show="showPanel('rightPinky')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.rightHand.pinky</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
+        And we need to have the button "rightPinky" <br>and the dot to become red and active</p>
+        <a id="rightPinkyButton" class="dotTorsoButtonsActive"></a>
+        <div id="rightPinkyDot" class="dotTorsoEnabledActive preventArmDragSelect"></div>
+            <a href="#/service/i01.rightHand.pinky" target="_self">DISPLAY</a>
+    </td>
+</tr>
+<tr>
+    <td><img width="80" height="55" src="../img/InMoov2/finger-Tip.png"/> 
+        <label>rightPinky Sensor:</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the sensor content,<br> necessary for calibration.<br>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ rightPinky end ------------------------------>
+
+<!------------- rightHand end ------------------------------>
+
+<!--------------leftHand begin ------------------------------>
+
+<!------------------------ leftWrist begin ------------------------------>
+<table ng-show="showPanel('leftWrist')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.leftHand.wrist</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
+        And we need to have the button "leftWrist" <br>and the dot to become red and active</p>
+        <a id="leftWristButton" class="dotTorsoButtonsActive"></a>
+        <div id="leftWristDot" class="dotTorsoEnabledActive preventArmDragSelect"></div>
+            <a href="#/service/i01.leftHand.wrist" target="_self">DISPLAY</a>
+    </td>
+</tr>
+<tr>
+    <td><img width="80" height="55" src="../img/InMoov2/finger-Tip.png"/> 
+        <label>leftWrist Sensor:</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ leftWrist end ------------------------------>
+<!------------------------ leftThumb begin ------------------------------>
+<table ng-show="showPanel('leftThumb')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.leftHand.thumb</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
+        And we need to have the button "leftThumb" <br>and the dot to become red and active</p>
+        <a id="leftThumbButton" class="dotTorsoButtonsActive"></a>
+        <div id="leftThumbDot" class="dotTorsoEnabledActive preventArmDragSelect"></div>
+            <a href="#/service/i01.leftHand.thumb" target="_self">DISPLAY</a>
+    </td>
+</tr>
+<tr>
+    <td><img width="80" height="55" src="../img/InMoov2/finger-Tip.png"/> 
+        <label>leftThumb Sensor:</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the sensor content,<br> necessary for calibration.<br>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ leftThumb end ------------------------------>
+<!------------------------ leftIndex begin ------------------------------>
+<table ng-show="showPanel('leftIndex')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.leftHand.index</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
+        And we need to have the button "leftIndex" <br>and the dot to become red and active</p>
+        <a id="leftIndexButton" class="dotTorsoButtonsActive"></a>
+        <div id="leftIndexDot" class="dotTorsoEnabledActive preventArmDragSelect"></div>
+            <a href="#/service/i01.leftHand.index" target="_self">DISPLAY</a>
+    </td>
+</tr>
+<tr>
+    <td><img width="80" height="55" src="../img/InMoov2/finger-Tip.png"/> 
+        <label>leftIndex Sensor:</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the sensor content,<br> necessary for calibration.<br>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ leftIndex end ------------------------------>
+<!------------------------ leftMajeure begin ------------------------------>
+<table ng-show="showPanel('leftMajeure')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.leftHand.majeure</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
+        And we need to have the button "leftMajeure" <br>and the dot to become red and active</p>
+        <a id="leftMajeureButton" class="dotTorsoButtonsActive"></a>
+        <div id="leftMajeureDot" class="dotTorsoEnabledActive preventArmDragSelect"></div>
+            <a href="#/service/i01.leftHand.majeure" target="_self">DISPLAY</a>
+    </td>
+</tr>
+<tr>
+    <td><img width="80" height="55" src="../img/InMoov2/finger-Tip.png"/> 
+        <label>leftMajeure Sensor:</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the sensor content,<br> necessary for calibration.<br>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ leftMajeure end ------------------------------>
+<!------------------------ leftRingFinger begin ------------------------------>
+<table ng-show="showPanel('leftRingFinger')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.leftHand.ringFinger</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
+        And we need to have the button "leftRingFinger" <br>and the dot to become red and active</p>
+        <a id="leftRingFingerButton" class="dotTorsoButtonsActive"></a>
+        <div id="leftRingFingerDot" class="dotTorsoEnabledActive preventArmDragSelect"></div>
+            <a href="#/service/i01.leftHand.ringFinger" target="_self">DISPLAY</a>
+    </td>
+</tr>
+<tr>
+    <td><img width="80" height="55" src="../img/InMoov2/finger-Tip.png"/> 
+        <label>leftRingFinger Sensor:</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the sensor content,<br> necessary for calibration.<br>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ leftRingFinger end ------------------------------>
+<!------------------------ leftPinky begin ------------------------------>
+<table ng-show="showPanel('leftPinky')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.leftHand.pinky</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
+        And we need to have the button "leftPinky" <br>and the dot to become red and active</p>
+        <a id="leftPinkyButton" class="dotTorsoButtonsActive"></a>
+        <div id="leftPinkyDot" class="dotTorsoEnabledActive preventArmDragSelect"></div>
+            <a href="#/service/i01.leftHand.pinky" target="_self">DISPLAY</a>
+    </td>
+</tr>
+<tr>
+    <td><img width="80" height="55" src="../img/InMoov2/finger-Tip.png"/> 
+        <label>leftPinky Sensor:</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <p>FIXME Here we need to display the sensor content,<br> necessary for calibration.<br>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ leftPinky end ------------------------------>
+
+<!------------- leftHand end ------------------------------>
 <!-- panels end -->
 </td></tr></table>
