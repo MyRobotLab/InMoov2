@@ -111,7 +111,23 @@ angular.module('mrlapp.service.InMoov2HandGui', []).controller('InMoov2HandGuiCt
 
     $scope.setPanel = function(panelName) {
         $scope.activePanel = panelName
-        buttonOn(panelName)
+
+        // unselect active buttons by removing active class
+        var container = document.querySelector("#containerHand2");
+        if (container!=null) {
+            var matchesItems = container.querySelectorAll(".dotHandActive");
+            for (var i = 0; i < matchesItems.length; i++) { matchesItems[i].classList.remove('dotHandActive'); }
+
+            var matchesItems = container.querySelectorAll(".dotHandButtonsActive");
+            for (var i = 0; i < matchesItems.length; i++) { matchesItems[i].classList.remove('dotHandButtonsActive'); matchesItems[i].classList.add('dotHandButtons');}
+        }     
+
+        // add activ class to dot ans button object
+        if (document.querySelector("#"+panelName+"Dot")!=null) {
+            document.querySelector("#"+panelName+"Dot").classList.add('dotHandActive');
+            document.querySelector("#"+panelName+"Button").classList.add('dotHandButtonsActive');
+        }   
+
     }
 
     $scope.showPanel = function(panelName) {
