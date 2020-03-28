@@ -111,7 +111,23 @@ angular.module('mrlapp.service.InMoov2TorsoGui', []).controller('InMoov2TorsoGui
 
     $scope.setPanel = function(panelName) {
         $scope.activePanel = panelName
-        buttonOn(panelName)
+
+        // unselect active buttons by removing active class
+        var container = document.querySelector("#containerTorso2");
+        if (container!=null) {
+            var matchesItems = container.querySelectorAll(".dotTorsoActive");
+            for (var i = 0; i < matchesItems.length; i++) { matchesItems[i].classList.remove('dotTorsoActive'); }
+
+            var matchesItems = container.querySelectorAll(".dotTorsoButtonsActive");
+            for (var i = 0; i < matchesItems.length; i++) { matchesItems[i].classList.remove('dotTorsoButtonsActive'); matchesItems[i].classList.add('dotTorsoButtons'); }
+        }     
+
+        // add activ class to dot ans button object
+        if (document.querySelector("#"+panelName+"Dot")!=null) {
+            document.querySelector("#"+panelName+"Dot").classList.add('dotTorsoActive');
+            document.querySelector("#"+panelName+"Button").classList.add('dotTorsoButtonsActive');
+        }   
+
     }
 
     $scope.showPanel = function(panelName) {
