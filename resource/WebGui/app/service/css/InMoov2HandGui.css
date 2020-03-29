@@ -1,9 +1,5 @@
 
 
-#containerHand2-cell {
-    width: 620px;
-}
-
 .preventHandDragSelect{
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
