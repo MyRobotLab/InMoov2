@@ -3,17 +3,13 @@ angular.module('mrlapp.service.InMoov2ArmGui', []).controller('InMoov2ArmGuiCtrl
     var _self = this
     var msg = this.msg
 
-
-    $scope.servos = []
-    $scope.sliders = []
-
     $scope.mrl = mrl
+    $scope.panel = mrl.getPanel('runtime')
 
     // text published from InMoov2 service
     $scope.onText = null
     $scope.languageSelected = null
     $scope.speakText = null
-    $scope.toggleValue = true
 
     $scope.activePanel = 'arm'
 
@@ -82,16 +78,6 @@ angular.module('mrlapp.service.InMoov2ArmGui', []).controller('InMoov2ArmGuiCtrl
         return longName.substring(longName.lastIndexOf(".") + 1)
     }
 
-    $scope.toggle = function(servo) {
-        $scope.sliders[servo].tracking = !$scope.sliders[servo].tracking
-    }
-
-    _self.onSliderChange = function(servo) {
-        if (!$scope.sliders[servo].tracking) {
-            msg.sendTo(servo, 'moveTo', $scope.sliders[servo].value)
-        }
-    }
-
     $scope.active = ["btn", "btn-default", "active"]
 
 
@@ -110,7 +96,23 @@ angular.module('mrlapp.service.InMoov2ArmGui', []).controller('InMoov2ArmGuiCtrl
 
     $scope.setPanel = function(panelName) {
         $scope.activePanel = panelName
-        buttonOn(panelName)
+
+        // unselect active buttons by removing active class
+        var container = document.querySelector("#containerArm2");
+        if (container!=null) {
+            var matchesItems = container.querySelectorAll(".dotArmActive");
+            for (var i = 0; i < matchesItems.length; i++) { matchesItems[i].classList.remove('dotArmActive'); }
+
+            var matchesItems = container.querySelectorAll(".dotArmButtonsActive");
+            for (var i = 0; i < matchesItems.length; i++) { matchesItems[i].classList.remove('dotArmButtonsActive'); matchesItems[i].classList.add('dotArmButtons');}
+        }     
+
+        // add activ class to dot ans button object
+        if (document.querySelector("#"+panelName+"Dot")!=null) {
+            document.querySelector("#"+panelName+"Dot").classList.add('dotArmActive');
+            document.querySelector("#"+panelName+"Button").classList.add('dotArmButtonsActive');
+        }   
+
     }
 
     $scope.showPanel = function(panelName) {
