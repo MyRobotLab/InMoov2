@@ -627,42 +627,51 @@
 </table>
 <!------------------------ extra end ------------------------------>
 <!------------------------ sensor begin ------------------------------>
-<table ng-show="showPanel('sensor')" class="inmoov-sub-panel table table-striped">
+<table ng-show="showPanel('sensor')" class="inmoov-sub-panel table table-striped">    
 <tr>
     <td>
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('pir')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../Pir.png"/>
-        <label>PIR:</label>
-    </td>
-    <td>
+        <label>PIR:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <toggle width="70" height="30" ng-model="service.isPirActivated" ng-change="!service.isPirActivated?msg.stopPir():msg.startPir()" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;
         <button class="btn btn-default" ng-click="setPanel('pir')">Settings</button>
-        <!--<img width="20" height="20" ng-click="setPanel('pir')" ng-src="../add.png" src="../add.png">-->
     </td>
 </tr>
-<tr>
-    <td>
-        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ultraSonic')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
-        <!--------------------------------------------------------------->
-        <img src="../UltrasonicSensor.png"/>
-        <label>ultraSonic:</label>
-    </td>
-    <td>
-        <button class="btn btn-default" ng-click="setPanel('ultraSonic')">Settings</button>
-    </td>
-</tr>
+<!----------------------------pir end---------------------------------->
 <tr>
     <td>
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('openNi')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../kinect.png"/>
-        <label>Kinect:</label>
-    </td>
-    <td>
+        <label>Kinect:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <toggle width="70" height="30" ng-model="service.isKinectActivated" ng-change="!service.isKinectActivated?msg.stopOpenNi():msg.startOpenNi()" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;
         <button class="btn btn-default" ng-click="setPanel('kinect')">Settings</button>
+    </td>
+</tr>
+<!----------------------------kinect end---------------------------------->
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ultraSonicRight')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../UltrasonicSensor.png"/>
+        <label>UltraSonic Right:</label>
+        <toggle width="70" height="30" ng-model="service.isUltraSonicRightActivated" ng-change="!service.isUltraSonicRightActivated?msg.stopUltraSonicRight():msg.startUltraSonicRight()" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;
+        <button class="btn btn-default" ng-click="setPanel('ultraSonicRight')">Settings</button>
+    </td>
+</tr>
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ultraSonicLeft')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../UltrasonicSensor.png"/>
+        <label>UltraSonic Left:</label>&nbsp;&nbsp;&nbsp;
+        <toggle width="70" height="30" ng-model="service.isUltraSonicLeftActivated" ng-change="!service.isUltraSonicLeftActivated?msg.stopUltraSonicLeft():msg.startUltraSonicLeft()" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;
+        <button class="btn btn-default" ng-click="setPanel('ultraSonicLeft')">Settings</button>
     </td>
 </tr>
 </table>
@@ -671,35 +680,19 @@
 <table ng-show="showPanel('pir')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
-        <img src="../Pir.png"/>
-        <label>PIR Activated:</label>
-        <td>
-            <toggle width="70" height="30" ng-model="service.isPirActivated" ng-change="!service.isPirActivated?msg.stopPir():msg.startPir()" on="ON" off="OFF"/></toggle>
-        </td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('pir')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
     </td>
 </tr>
 <tr>
-    <td>
-        <label>controller:</label>
-        <td>
-            <toggle width="100" height="30" ng-model="PirControlerArduino" ng-change="PirControlerArduino" on="ON" off="select"/></toggle>
-        </td>
-    </td>
-</tr>
-<tr>
-    <td>
-        <label>pin:</label>
-        <td>
-            <toggle width="100" height="30" ng-model="PirPin" ng-change="PirPin" on="ON" off="23"/></toggle>
-        </td>
-    </td>
+    <td class="tab-content" service-body panel="mrl.getPanel('i01.pir')"></td>
 </tr>
 <tr>    
     <td>
-        <label>custom sounds if detection:</label>
-        <td>
-            <toggle width="100" height="30" ng-model="PlayCurstomSoundIfDetection" ng-change="PlayCurstomSoundIfDetection" on="ON" off="OFF"/></toggle>
-        </td>
+        <p>---FIXME---</p>
+        <label>custom sounds if detection:</label>&nbsp;&nbsp;
+        <toggle width="100" height="30" ng-model="PlayCurstomSoundIfDetection" ng-change="PlayCurstomSoundIfDetection" on="ON" off="OFF"/></toggle>
     </td>
 </tr>
 <tr>
@@ -714,73 +707,17 @@
 </tr>
 </table>
 <!------------------------ pir end ------------------------------>
-<!------------------------ ultraSonic begin ------------------------------>
-<table ng-show="showPanel('ultraSonic')" class="inmoov-sub-panel table table-striped">
+<!------------------------ ultraSonicRight begin ------------------------------>
+<table ng-show="showPanel('ultraSonicRight')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
+        <p>---FIXME---</p>
         <img src="../UltrasonicSensor.png"/>
-        <label>UltraSonic Right Activated:</label>
-        <td>
-            <toggle width="70" height="30" ng-model="service.isUltraSonicRightActivated" ng-change="!service.isUltraSonicRightActivated?msg.stopUltraSonicRight():msg.startUltraSonicRight()" on="ON" off="OFF"/></toggle>
-        </td>
-    </td>
-</tr>
-<tr>  
-    <td>
-        <label>controller:</label>
-        <td>
-            <toggle width="100" height="30" ng-model="FIXME" ng-change="FIXME" on="ON" off="select"/></toggle>
-        </td>
+        <label>UltraSonic Right:</label>
     </td>
 </tr>
 <tr>
-    <td>
-        <label>trigPin:</label>
-        <td>
-            <toggle width="70" height="30" ng-model="FIXME" ng-change="FIXME" on="ON" off="29"/></toggle>
-        </td>
-    </td>
-</tr>
-<tr>
-    <td>
-        <label>echoPin:</label>
-        <td>
-            <toggle width="70" height="30" ng-model="FIXME" ng-change="FIXME" on="ON" off="33"/></toggle>
-        </td>
-    </td>
-</tr>
-<tr>
-    <td>
-        <img src="../UltrasonicSensor.png"/>
-        <label>UltraSonic Left Activated:</label>
-        <td>
-            <toggle width="70" height="30" ng-model="service.isUltraSonicLeftActivated" ng-change="!service.isUltraSonicLeftActivated?msg.stopUltraSonicLeft():msg.startUltraSonicLeft()" on="ON" off="OFF"/></toggle>
-        </td>
-    </td>
-</tr>
-<tr>
-    <td>
-        <label>controller:</label>
-        <td>
-            <toggle width="100" height="30" ng-model="FIXME" ng-change="FIXME" on="ON" off="select"/></toggle>
-        </td>
-    </td>
-</tr>
-<tr>
-    <td>
-        <label>trigPin:</label>
-        <td>
-            <toggle width="70" height="30" ng-model="FIXME" ng-change="FIXME" on="ON" off="29"/></toggle>
-        </td>
-    </td>
-</tr>
-<tr>
-    <td>
-        <label>echoPin:</label>
-        <td>
-            <toggle width="70" height="30" ng-model="FIXME" ng-change="FIXME" on="ON" off="33"/></toggle>
-        </td>
-    </td>
+    <td class="tab-content" service-body panel="mrl.getPanel('i01.UltraSonicRight')"></td>
 </tr>
 <tr>
     <td>
@@ -793,20 +730,45 @@
     </td>
 </tr>
 </table>
-<!------------------------ ultraSonic end ------------------------------>
+<!------------------------ ultraSonicRight end ------------------------------>
+<!------------------------ ultraSonicLeft begin ------------------------------>
+<table ng-show="showPanel('ultraSonicLeft')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <p>---FIXME---</p>
+        <img src="../UltrasonicSensor.png"/>
+        <label>UltraSonic Left:</label>
+    </td>
+</tr>
+<tr>
+    <td class="tab-content" service-body panel="mrl.getPanel('i01.UltraSonicLeft')"></td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img width="50" height="50" ng-click="setPanel('sensor')" ng-src="../img/InMoov2/arrow_blue_left.png" src="../img/InMoov2/arrow_blue_left.png">
+    </td>
+</tr>
+</table>
+<!------------------------ ultraSonicLeft end ------------------------------>
 <!------------------------ kinect begin ------------------------------>
 <table ng-show="showPanel('kinect')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
         <img src="../kinect.png"/>
         <label>kinect:</label>
-        <td>
-            <toggle width="70" height="30" ng-model="service.isKinectActivated" ng-change="!service.isKinectActivated?msg.stopOpenNi():msg.startOpenNi()" on="ON" off="OFF"/></toggle>
-        </td>
     </td>
 </tr>
 <tr>
+    <td class="tab-content" service-body panel="mrl.getPanel('i01.openNi')"></td>
+</tr>
+<tr>
     <td>
+        <p>---FIXME---</p>
         <label>ShouldersOffset:</label>
         <td>
             <toggle width="70" height="30" ng-model="openNiShouldersOffset" ng-change="FIXME" on="ON" off="50"/></toggle>
@@ -815,6 +777,7 @@
 </tr>
 <tr>
     <td>
+        <p>---FIXME---</p>
         <label>LeftShoulderInverted:</label>
         <td>
             <toggle width="70" height="30" ng-model="service.openNiLeftShoulderInverted" ng-change="!service.isOpenNiActivated?msg.openNiLeftShoulderInverted" on="ON" off="OFF"/></toggle>
@@ -823,6 +786,7 @@
 </tr>
 <tr>
     <td>
+        <p>---FIXME---</p>
         <label>RightShoulderInverted:</label>
         <td>
             <toggle width="70" height="30" ng-model="service.openNiRightShoulderInverted" ng-change="!service.isOpenNiActivated?msg.openNiRightShoulderInverted" on="ON" off="OFF"/></toggle>
