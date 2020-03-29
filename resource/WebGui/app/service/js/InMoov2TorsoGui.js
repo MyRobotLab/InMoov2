@@ -3,15 +3,11 @@ angular.module('mrlapp.service.InMoov2TorsoGui', []).controller('InMoov2TorsoGui
     var _self = this
     var msg = this.msg
 
-
-    $scope.servos = []
-    $scope.sliders = []
-
     $scope.mrl = mrl
+    $scope.panel = mrl.getPanel('runtime')
 
     // text published from InMoov2 service
     $scope.onText = null
-    $scope.toggleValue = true
 
     $scope.activePanel = 'settings'
 
@@ -83,16 +79,6 @@ angular.module('mrlapp.service.InMoov2TorsoGui', []).controller('InMoov2TorsoGui
         return longName.substring(longName.lastIndexOf(".") + 1)
     }
 
-    $scope.toggle = function(servo) {
-        $scope.sliders[servo].tracking = !$scope.sliders[servo].tracking
-    }
-
-    _self.onSliderChange = function(servo) {
-        if (!$scope.sliders[servo].tracking) {
-            msg.sendTo(servo, 'moveTo', $scope.sliders[servo].value)
-        }
-    }
-
     $scope.active = ["btn", "btn-default", "active"]
 
 
@@ -161,7 +147,7 @@ angular.module('mrlapp.service.InMoov2TorsoGui', []).controller('InMoov2TorsoGui
     // circular main menu buttons
 
     //---Torso-----------------
-    addButton('torso', 'absolute', 60, 30)
+    //addButton('torso', 'absolute', 60, 30)
 
     //---FIXME with names----------------
 
