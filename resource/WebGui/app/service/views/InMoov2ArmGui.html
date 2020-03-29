@@ -9,10 +9,6 @@
     float: none;
     }
 
-    #containerArm2-cell {
-    width: 620px;
-    }
-
     .inmoov-sub-panel {
         width: auto;
         max-width: auto;
@@ -38,31 +34,31 @@
             <!-- Right -->
             <div id="rightArmIndicator" class="rectangleRightArmIndicator preventDragSelect">right Arm</div>
 
-            <div id="rightBicepButton" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="setPanel('rightArm.bicep')">right bicep</div>   
+            <div id="rightBicepButton" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="setPanel('rightBicep')">right bicep</div>   
             <div id="rightBicepDot" class="dotArmEnabled preventArmDragSelect"></div>
 
-            <div id="rightRotateButton" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="setPanel('rightArm.rotate')">right rotate</div>
+            <div id="rightRotateButton" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="setPanel('rightRotate')">right rotate</div>
             <div id="rightRotateDot" class="dotArmEnabled preventArmDragSelect"></div>
             
-            <div id="rightShoulderButton" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="setPanel('rightArm.shoulder')">right shoulder</div>
+            <div id="rightShoulderButton" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="setPanel('rightShoulder')">right shoulder</div>
             <div id="rightShoulderDot" class="dotArmEnabled preventArmDragSelect"></div>
 
-            <div id="rightOmoplateButton" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="setPanel('rightArm.omoplate')">right omoplate</div>
+            <div id="rightOmoplateButton" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="setPanel('rightOmoplate')">right omoplate</div>
             <div id="rightOmoplateDot" class="dotArmEnabled preventArmDragSelect"></div>
 
             <!-- Left -->
             <div id="leftArmIndicator" class="rectangleLeftArmIndicator preventArmDragSelect">left Arm</div>
 
-            <div id="leftBicepButton" class="dotArmButtons leftArmSide preventArmDragSelect" ng-click="setPanel('leftArm.bicep')">left bicep</div>
+            <div id="leftBicepButton" class="dotArmButtons leftArmSide preventArmDragSelect" ng-click="setPanel('leftBicep')">left bicep</div>
             <div id="leftBicepDot" class="dotArmEnabled preventArmDragSelect"></div>
 
-            <a id="leftRotateButton" class="dotArmButtons leftArmSide preventArmDragSelect" ng-click="setPanel('leftArm.rotate')">left rotate</a>
+            <a id="leftRotateButton" class="dotArmButtons leftArmSide preventArmDragSelect" ng-click="setPanel('leftRotate')">left rotate</a>
             <div id="leftRotateDot" class="dotArmEnabled preventArmDragSelect"></div>
 
-            <div id="leftShoulderButton" class="dotArmButtons leftArmSide preventArmDragSelect"  ng-click="setPanel('leftArm.shoulder')">left shoulder</div>
+            <div id="leftShoulderButton" class="dotArmButtons leftArmSide preventArmDragSelect"  ng-click="setPanel('leftShoulder')">left shoulder</div>
             <div id="leftShoulderDot" class="dotArmEnabled preventArmDragSelect"></div>
 
-            <div id="leftOmoplateButton" class="dotArmButtons leftArmSide preventArmDragSelect" ng-click="setPanel('leftArm.omoplate')">left omoplate</div>
+            <div id="leftOmoplateButton" class="dotArmButtons leftArmSide preventArmDragSelect" ng-click="setPanel('leftOmoplate')">left omoplate</div>
             <div id="leftOmoplateDot" class="dotArmEnabled preventArmDragSelect"></div>
 
             <a id="leftBackArmButton" class="dotArmButtons leftArmSide preventArmDragSelect" href="#/service/i01" target="_self">Back</a>
@@ -75,8 +71,43 @@
 </td>
 <td>
 <!-- panels begin -->
-<!------------------------ rightArm.bicep begin ------------------------------>
-<table ng-show="showPanel('rightArm.bicep')" class="inmoov-sub-panel table table-striped">    
+<!------------------------ arm begin ------------------------------>
+<table ng-show="showPanel('arm')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftArm')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovArm.png"/>
+        <label>leftArm is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-init="!service.isLeftArmActivated" ng-src="{{(!service.isLeftArmActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightArm')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovArm.right.png"/>
+        <label>rightArm is:</label>&nbsp;&nbsp;  
+        <img ng-src="{{(!service.isRightArmActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>
+</table>
+<!------------------------ arm end ------------------------------>
+
+<!------------------------ rightBicep begin ------------------------------>
+<table ng-show="showPanel('rightBicep')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('i01.rightArm.bicep')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovArm.right.png"/>
+        <label>rightArm is:</label>&nbsp;&nbsp;  
+        <img ng-src="{{(!service.isRightArmActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>    
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.rightArm.bicep')"></div>
@@ -88,9 +119,19 @@
     </td>
 </tr>
 </table>
-<!------------------------ rightArm.bicep end ------------------------------> 
-<!------------------------ rightArm.rotate begin ------------------------------>
-<table ng-show="showPanel('rightArm.rotate')" class="inmoov-sub-panel table table-striped">   
+<!------------------------ rightBicep end ------------------------------> 
+<!------------------------ rightRotate begin ------------------------------>
+<table ng-show="showPanel('rightRotate')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('i01.rightArm.rotate')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovArm.right.png"/>
+        <label>rightArm is:</label>&nbsp;&nbsp;  
+        <img ng-src="{{(!service.isRightArmActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>    
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.rightArm.rotate')"></div>
@@ -103,9 +144,19 @@
 </tr>
 </body>
 </table>
-<!------------------------ rightArm.rotate end ------------------------------> 
-<!------------------------ rightArm.shoulder begin ------------------------------>
-<table ng-show="showPanel('rightArm.shoulder')" class="inmoov-sub-panel table table-striped">
+<!------------------------ rightRotate end ------------------------------> 
+<!------------------------ rightShoulder begin ------------------------------>
+<table ng-show="showPanel('rightShoulder')" class="inmoov-sub-panel table table-striped">
+    <tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('i01.rightArm.shoulder')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovArm.right.png"/>
+        <label>rightArm is:</label>&nbsp;&nbsp;  
+        <img ng-src="{{(!service.isRightArmActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr> 
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.rightArm.shoulder')"></div>
@@ -117,9 +168,19 @@
     </td>
 </tr>
 </table>
-<!------------------------ rightArm.shoulder end ------------------------------> 
-<!------------------------ rightArm.omoplate begin ------------------------------>
-<table ng-show="showPanel('rightArm.omoplate')" class="inmoov-sub-panel table table-striped">
+<!------------------------ rightShoulder end ------------------------------> 
+<!------------------------ rightOmoplate begin ------------------------------>
+<table ng-show="showPanel('rightOmoplate')" class="inmoov-sub-panel table table-striped">
+    <tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('i01.rightArm.omoplate')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovArm.right.png"/>
+        <label>rightArm is:</label>&nbsp;&nbsp;  
+        <img ng-src="{{(!service.isRightArmActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr> 
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.rightArm.omoplate')"></div>
@@ -131,12 +192,22 @@
     </td>
 </tr>
 </table>
-<!------------------------ rightArm.omoplate end ---------------------------->
+<!------------------------ rightOmoplate end ---------------------------->
 
 <!-------HERE START THE LEFT ARM--------------------------------------------->
 
-<!------------------------ leftArm.bicep begin ------------------------------>
-<table ng-show="showPanel('leftArm.bicep')" class="inmoov-sub-panel table table-striped">    
+<!------------------------ leftBicep begin ------------------------------>
+<table ng-show="showPanel('leftBicep')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('i01.leftArm.bicep')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovArm.png"/>
+        <label>leftArm is:</label>&nbsp;&nbsp;  
+        <img ng-src="{{(!service.isLeftArmActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>     
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.leftArm.bicep')"></div>
@@ -148,9 +219,19 @@
     </td>
 </tr>
 </table>
-<!------------------------ leftArm.bicep end ------------------------------> 
-<!------------------------ leftArm.rotate begin ------------------------------>
-<table ng-show="showPanel('leftArm.rotate')" class="inmoov-sub-panel table table-striped">   
+<!------------------------ leftBicep end ------------------------------> 
+<!------------------------ leftRotate begin ------------------------------>
+<table ng-show="showPanel('leftRotate')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('i01.leftArm.rotate')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovArm.png"/>
+        <label>leftArm is:</label>&nbsp;&nbsp;  
+        <img ng-src="{{(!service.isLeftArmActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>    
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.leftArm.rotate')"></div>
@@ -163,9 +244,19 @@
 </tr>
 </body>
 </table>
-<!------------------------ leftArm.rotate end ------------------------------> 
-<!------------------------ leftArm.shoulder begin ------------------------------>
-<table ng-show="showPanel('leftArm.shoulder')" class="inmoov-sub-panel table table-striped">
+<!------------------------ leftRotate end ------------------------------> 
+<!------------------------ leftShoulder begin ------------------------------>
+<table ng-show="showPanel('leftShoulder')" class="inmoov-sub-panel table table-striped">
+    <tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('i01.leftArm.shoulder')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovArm.png"/>
+        <label>leftArm is:</label>&nbsp;&nbsp;  
+        <img ng-src="{{(!service.isLeftArmActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr> 
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.leftArm.shoulder')"></div>
@@ -177,9 +268,19 @@
     </td>
 </tr>
 </table>
-<!------------------------ leftArm.shoulder end ------------------------------> 
-<!------------------------ leftArm.omoplate begin ------------------------------>
-<table ng-show="showPanel('leftArm.omoplate')" class="inmoov-sub-panel table table-striped">
+<!------------------------ leftShoulder end ------------------------------> 
+<!------------------------ leftOmoplate begin ------------------------------>
+<table ng-show="showPanel('leftOmoplate')" class="inmoov-sub-panel table table-striped">
+    <tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('i01.leftArm.omoplate')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovArm.png"/>
+        <label>leftArm is:</label>&nbsp;&nbsp;  
+        <img ng-src="{{(!service.isLeftArmActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr> 
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.leftArm.omoplate')"></div>
@@ -191,6 +292,6 @@
     </td>
 </tr>
 </table>
-<!------------------------ leftArm.omoplate end ------------------------------>        
+<!------------------------ leftOmoplate end ------------------------------>        
 <!-- panels end -->
 </td></tr></table>
