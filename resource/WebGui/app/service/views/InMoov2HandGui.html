@@ -73,7 +73,7 @@
             <div id="leftPinkyButton" class="dotHandButtons leftHandSide preventHandDragSelect" ng-click="setPanel('leftPinky')">pinky</div>
             <div id="leftPinkyDot" class="dotHandEnabled preventHandDragSelect"></div>
 
-            <a id="leftBackHandButton" class="dotHandButtons leftHandSide preventHandDragSelect" href="#/service/i01" target="_self">Back</a>
+            <a id="leftBackHandButton" class="dotHandButtons leftHandSide preventHandDragSelect" ng-click="changeTab('i01')>Back</a>
             <!--<p><i class="leftBackArrow"></i></p>-->
             <div id="leftBackHandArrow" class="leftBackHandArrow preventHandDragSelect"></div>
 
@@ -81,11 +81,45 @@
     </td>
 <td>
 <!-- panels begin -->
+<!------------------------ hand begin ------------------------------>
+<table ng-show="showPanel('hand')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightHand')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHand.right.png"/>
+        <label>rightHand is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(!service.isRightHandActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftHand')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHand.png"/>
+        <label>leftHand is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(!service.isLeftHandActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>
+</table>    
+<!------------------------ hand end ------------------------------>
 
 <!--------------rightHand begin ------------------------------>
 
 <!------------------------ rightWrist begin ------------------------------>
-<table ng-show="showPanel('rightWrist')" class="inmoov-sub-panel table table-striped">    
+<table ng-show="showPanel('rightWrist')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightHand.wrist')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHand.right.png"/>
+        <label>rightHand is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(!service.isRightHandActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>   
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.rightHand.wrist')"></div>
@@ -99,7 +133,17 @@
 </table>
 <!------------------------ rightWrist end ------------------------------>
 <!------------------------ rightThumb begin ------------------------------>
-<table ng-show="showPanel('rightThumb')" class="inmoov-sub-panel table table-striped">    
+<table ng-show="showPanel('rightThumb')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightHand.thumb')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHand.right.png"/>
+        <label>rightHand is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(!service.isRightHandActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>   
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.rightHand.thumb')"></div>
@@ -123,7 +167,17 @@
 </table>
 <!------------------------ rightThumb end ------------------------------>
 <!------------------------ rightIndex begin ------------------------------>
-<table ng-show="showPanel('rightIndex')" class="inmoov-sub-panel table table-striped">    
+<table ng-show="showPanel('rightIndex')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightHand.index')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHand.right.png"/>
+        <label>rightHand is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(!service.isRightHandActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr> 
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.rightHand.index')"></div>
@@ -147,7 +201,17 @@
 </table>
 <!------------------------ rightIndex end ------------------------------>
 <!------------------------ rightMajeure begin ------------------------------>
-<table ng-show="showPanel('rightMajeure')" class="inmoov-sub-panel table table-striped">    
+<table ng-show="showPanel('rightMajeure')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightHand.majeure')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHand.right.png"/>
+        <label>rightHand is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(!service.isRightHandActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>    
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.rightHand.majeure')"></div>
@@ -171,7 +235,17 @@
 </table>
 <!------------------------ rightMajeure end ------------------------------>
 <!------------------------ rightRingFinger begin ------------------------------>
-<table ng-show="showPanel('rightRingFinger')" class="inmoov-sub-panel table table-striped">    
+<table ng-show="showPanel('rightRingFinger')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightHand.ringFinger')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHand.right.png"/>
+        <label>rightHand is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(!service.isRightHandActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>    
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.rightHand.ringFinger')"></div>
@@ -195,7 +269,17 @@
 </table>
 <!------------------------ rightRingFinger end ------------------------------>
 <!------------------------ rightPinky begin ------------------------------>
-<table ng-show="showPanel('rightPinky')" class="inmoov-sub-panel table table-striped">    
+<table ng-show="showPanel('rightPinky')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightHand.pinky')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHand.right.png"/>
+        <label>rightHand is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(!service.isRightHandActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>    
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.rightHand.pinky')"></div>
@@ -224,10 +308,20 @@
 <!--------------leftHand begin ------------------------------>
 
 <!------------------------ leftWrist begin ------------------------------>
-<table ng-show="showPanel('leftWrist')" class="inmoov-sub-panel table table-striped">    
+<table ng-show="showPanel('leftWrist')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
-        <div class="tab-content" service-body panel="mrl.getPanel('i01.i01.leftHand.wrist')"></div>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftHand.wrist')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHand.png"/>
+        <label>leftHand is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(!service.isLeftHandActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>    
+<tr>
+    <td>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.leftHand.wrist')"></div>
     </td>
 </tr>
 <tr>
@@ -238,7 +332,17 @@
 </table>
 <!------------------------ leftWrist end ------------------------------>
 <!------------------------ leftThumb begin ------------------------------>
-<table ng-show="showPanel('leftThumb')" class="inmoov-sub-panel table table-striped">    
+<table ng-show="showPanel('leftThumb')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftHand.thumb')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHand.png"/>
+        <label>leftHand is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(!service.isLeftHandActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>    
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.leftHand.thumb')"></div>
@@ -262,7 +366,17 @@
 </table>
 <!------------------------ leftThumb end ------------------------------>
 <!------------------------ leftIndex begin ------------------------------>
-<table ng-show="showPanel('leftIndex')" class="inmoov-sub-panel table table-striped">    
+<table ng-show="showPanel('leftIndex')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftHand.index')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHand.png"/>
+        <label>leftHand is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(!service.isLeftHandActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>    
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.leftHand.index')"></div>
@@ -286,7 +400,17 @@
 </table>
 <!------------------------ leftIndex end ------------------------------>
 <!------------------------ leftMajeure begin ------------------------------>
-<table ng-show="showPanel('leftMajeure')" class="inmoov-sub-panel table table-striped">    
+<table ng-show="showPanel('leftMajeure')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftHand.majeure')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHand.png"/>
+        <label>leftHand is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(!service.isLeftHandActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>    
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.leftHand.majeure')"></div>
@@ -310,7 +434,17 @@
 </table>
 <!------------------------ leftMajeure end ------------------------------>
 <!------------------------ leftRingFinger begin ------------------------------>
-<table ng-show="showPanel('leftRingFinger')" class="inmoov-sub-panel table table-striped">    
+<table ng-show="showPanel('leftRingFinger')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftHand.ringFinger')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHand.png"/>
+        <label>leftHand is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(!service.isLeftHandActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>    
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.leftHand.ringFinger')"></div>
@@ -334,7 +468,17 @@
 </table>
 <!------------------------ leftRingFinger end ------------------------------>
 <!------------------------ leftPinky begin ------------------------------>
-<table ng-show="showPanel('leftPinky')" class="inmoov-sub-panel table table-striped">    
+<table ng-show="showPanel('leftPinky')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftHand.pinky')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovHand.png"/>
+        <label>leftHand is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(!service.isLeftHandActivated)?'../../red.png':'../../green.png'}}"/>
+    </td>
+</tr>    
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.leftHand.pinky')"></div>
@@ -359,6 +503,5 @@
 <!------------------------ leftPinky end ------------------------------>
 
 <!------------- leftHand end ------------------------------>
-
 <!-- panels end -->
 </td></tr></table>
