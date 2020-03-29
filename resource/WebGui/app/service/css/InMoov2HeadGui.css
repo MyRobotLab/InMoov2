@@ -199,7 +199,7 @@
 
 /* -------------------    Left Head DOTs position --------------------*/
 
-#rotHeadDot{
+#rotheadDot{
     position:absolute;
     left:312px;
     top:172px;
@@ -223,11 +223,11 @@
 
 /* -------------------    Left Head Buttons --------------------*/
 
-#rotHeadButton{
+#rotheadButton{
     left: 465px;
     top: 160px;
 }
-#rotHeadButton:hover + #rotHeadDot{
+#rotheadButton:hover + #rotheadDot{
     background-color: #FF0000;
     animation: none;
 }
@@ -282,7 +282,7 @@
 
 /* -------------------    arrow Horizontal position --------------------*/
 
-#rotHeadArrowHorizontal{
+#rotheadArrowHorizontal{
     position:absolute;
     left: 540px;
     top: 155px;
