@@ -39,9 +39,9 @@
 
             <!-- Left -->
 
-            <div id="rotHeadButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('rotHead')">rothead</div>
-            <div id="rotHeadDot" class="dotHeadEnabled preventHeadDragSelect"></div>
-            <div id="rotHeadArrowHorizontal" class="leftHeadSide preventHeadDragSelect"><img src="../img/InMoov2/arrow_horizontal.png"/></div>
+            <div id="rotheadButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('rothead')">rothead</div>
+            <div id="rotheadDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+            <div id="rotheadArrowHorizontal" class="leftHeadSide preventHeadDragSelect"><img src="../img/InMoov2/arrow_horizontal.png"/></div>
 
             <div id="neckButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('neck')">neck</div>
             <div id="neckDot" class="dotHeadEnabled preventHeadDragSelect"></div>
@@ -69,16 +69,21 @@
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('head')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../InMoovHead.png"/>
-        <label>head Activated:</label>
-    </td>
-    <td>
-        <toggle width="70" height="28" ng-model="service.isHeadActivated" ng-change="!service.isHeadActivated?msg.stopHead():msg.startHead()" on="ON" off="OFF"/></toggle>
+        <label>head Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <toggle width="70" height="28" ng-model="service.isHeadActivated" ng-change="!service.isHeadActivated?msg.stopHead():msg.startHead()" on="ON" off="OFF"/>
     </td>
 </tr>
 </table>    
 <!------------------------ headGui end ------------------------------>
 <!------------------------ eyeY begin ------------------------------>
 <table ng-show="showPanel('eyeY')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eyeY')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+    </td>
+</tr>
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.head.eyeY')"></div>
@@ -92,7 +97,14 @@
 </table>
 <!------------------------ eyeY end ------------------------------>
 <!------------------------ eyeX begin ------------------------------>
-<table ng-show="showPanel('eyeX')" class="inmoov-sub-panel table table-striped">    
+<table ng-show="showPanel('eyeX')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eyeX')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+    </td>
+</tr>   
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.head.eyeX')"></div>
@@ -105,8 +117,15 @@
 </tr>
 </table>
 <!------------------------ eyeY end ------------------------------>
-<!------------------------ rotHead begin ------------------------------>
-<table ng-show="showPanel('rotHead')" class="inmoov-sub-panel table table-striped">    
+<!------------------------ rothead begin ------------------------------>
+<table ng-show="showPanel('rothead')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rothead')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+    </td>
+</tr>    
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.head.rothead')"></div>
@@ -118,9 +137,16 @@
     </td>
 </tr>
 </table>
-<!------------------------ rotHead end ------------------------------>
+<!------------------------ rothead end ------------------------------>
 <!------------------------ neck begin ------------------------------>
-<table ng-show="showPanel('neck')" class="inmoov-sub-panel table table-striped">    
+<table ng-show="showPanel('neck')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('neck')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+    </td>
+</tr>    
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.head.neck')"></div>
@@ -134,7 +160,14 @@
 </table>
 <!------------------------ neck end ------------------------------>
 <!------------------------ jaw begin ------------------------------>
-<table ng-show="showPanel('jaw')" class="inmoov-sub-panel table table-striped">    
+<table ng-show="showPanel('jaw')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('jaw')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+    </td>
+</tr>    
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.head.jaw')"></div>
@@ -147,8 +180,15 @@
 </tr>
 </table>
 <!------------------------ jaw end ------------------------------>
-<!------------------------ jaw begin ------------------------------>
-<table ng-show="showPanel('rollNeck')" class="inmoov-sub-panel table table-striped">    
+<!------------------------ rollNeck begin ------------------------------>
+<table ng-show="showPanel('rollNeck')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rollNeck')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+    </td>
+</tr>    
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.head.rollNeck')"></div>
@@ -161,5 +201,26 @@
 </tr>
 </table>
 <!------------------------ rollNeck end ------------------------------>
+<!------------------------ eyeLids begin ------------------------------>
+<table ng-show="showPanel('eyeLids')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eyeLids')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+    </td>
+</tr>    
+<tr>
+    <td>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.head.eyeLids')"></div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ eyeLids end ------------------------------>
 <!-- panels end -->
 </td></tr></table>
