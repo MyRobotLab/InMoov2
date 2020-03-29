@@ -79,19 +79,7 @@
 <table ng-show="showPanel('rightArm.bicep')" class="inmoov-sub-panel table table-striped">    
 <tr>
     <td>
-        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.rightArm.bicep</label>
-    </td>
-</tr>
-<tr>
-    <td>
-        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
-        And we need to have the button "right bicep" <br>and the dot to become red and active</p>
-        <a class="btn pull-left" ng-click="changeTab(panel.name)" href="">
-            <b class="ng-binding">i01.leftArm</b>
-        </a>
-        <a id="rightBicepButton" class="dotArmButtonsActive"></a>
-        <div id="rightBicepDot" class="dotArmEnabledActive preventArmDragSelect"></div>
-            <a href="#/service/i01.rightArm.bicep" target="_self">DISPLAY</a>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.rightArm.bicep')"></div>
     </td>
 </tr>
 <tr>
@@ -105,16 +93,7 @@
 <table ng-show="showPanel('rightArm.rotate')" class="inmoov-sub-panel table table-striped">   
 <tr>
     <td>
-        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.rightArm.rotate</label>
-    </td>
-</tr>
-<tr>
-    <td>
-        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
-        And we need to have the button "right rotate" <br>and the dot to become red and active</p>
-        <a id="rightRotateButton" class="dotArmButtonsActive"></a>
-        <div id="rightRotateDot" class="dotArmEnabledActive preventArmDragSelect"></div>
-        <a href="#/service/i01.rightArm.rotate" target="_self">DISPLAY</a>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.rightArm.rotate')"></div>
     </td>
 </tr>
 <tr>
@@ -129,16 +108,7 @@
 <table ng-show="showPanel('rightArm.shoulder')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
-        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.rightArm.shoulder</label>
-    </td>
-</tr>
-<tr>
-    <td>
-        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
-        And we need to have the button "right shoulder" <br>and the dot to become red and active</p>
-        <a id="rightShoulderButton" class="dotArmButtonsActive"></a>
-        <div id="rightShoulderDot" class="dotArmEnabledActive preventArmDragSelect"></div>
-        <a href="#/service/i01.rightArm.shoulder" target="_self">DISPLAY</a>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.rightArm.shoulder')"></div>
     </td>
 </tr>
 <tr>
@@ -152,16 +122,7 @@
 <table ng-show="showPanel('rightArm.omoplate')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
-        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.rightArm.omoplate</label>
-    </td>
-</tr>
-<tr>
-    <td>
-        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
-        And we need to have the button "right omoplate" <br>and the dot to become red and active</p>
-        <a id="rightOmoplateButton" class="dotArmButtonsActive"></a>
-        <div id="rightOmoplateDot" class="dotArmEnabledActive preventArmDragSelect"></div>
-        <a href="#/service/i01.rightArm.omoplate" target="_self">DISPLAY</a>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.rightArm.omoplate')"></div>
     </td>
 </tr>
 <tr>
@@ -178,16 +139,7 @@
 <table ng-show="showPanel('leftArm.bicep')" class="inmoov-sub-panel table table-striped">    
 <tr>
     <td>
-        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.leftArm.bicep</label>
-    </td>
-</tr>
-<tr>
-    <td>
-        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
-        And we need to have the button "left bicep" <br>and the dot to become red and active</p>
-        <a id="leftBicepButton" class="dotArmButtonsActive"></a>
-        <div id="leftBicepDot" class="dotArmEnabledActive preventArmDragSelect"></div>
-        <a href="#/service/i01.leftArm.bicep" target="_self">DISPLAY</a>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.leftArm.bicep')"></div>
     </td>
 </tr>
 <tr>
@@ -201,16 +153,7 @@
 <table ng-show="showPanel('leftArm.rotate')" class="inmoov-sub-panel table table-striped">   
 <tr>
     <td>
-        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.leftArm.rotate</label>
-    </td>
-</tr>
-<tr>
-    <td>
-        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
-        And we need to have the button "left rotate" <br>and the dot to become red and active</p>
-        <a id="leftRotateButton" class="dotArmButtonsActive"></a>
-        <div id="leftRotateDot" class="dotArmEnabledActive preventArmDragSelect"></div>
-        <a href="#/service/i01.leftArm.rotate" target="_self">DISPLAY</a>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.leftArm.rotate')"></div>
     </td>
 </tr>
 <tr>
@@ -225,16 +168,7 @@
 <table ng-show="showPanel('leftArm.shoulder')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
-        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.leftArm.shoulder</label>
-    </td>
-</tr>
-<tr>
-    <td>
-        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
-        And we need to have the button "left shoulder" <br>and the dot to become red and active</p>
-        <a id="leftShoulderButton" class="dotArmButtonsActive"></a>
-        <div id="leftShoulderDot" class="dotArmEnabledActive preventArmDragSelect"></div>
-        <a href="#/service/i01.leftArm.shoulder" target="_self">DISPLAY</a>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.leftArm.shoulder')"></div>
     </td>
 </tr>
 <tr>
@@ -248,16 +182,7 @@
 <table ng-show="showPanel('leftArm.omoplate')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
-        <img ng-src="Servo.png" alt="" width="40" src="Servo.png">&nbsp;&nbsp;<label>i01.leftArm.omoplate</label>
-    </td>
-</tr>
-<tr>
-    <td>
-        <p>FIXME Here we need to display the servo content,<br> without going out of the MRL environment.<br>
-        And we need to have the button "left omoplate" <br>and the dot to become red and active</p>
-        <a id="leftOmoplateButton" class="dotArmButtonsActive"></a>
-        <div id="leftOmoplateDot" class="dotArmEnabledActive preventArmDragSelect"></div>
-        <a href="#/service/i01.leftArm.omoplate" target="_self">DISPLAY</a>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.leftArm.omoplate')"></div>
     </td>
 </tr>
 <tr>
