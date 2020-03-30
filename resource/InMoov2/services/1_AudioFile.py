@@ -124,7 +124,6 @@ def playRandomMusic():
 def playMusic():
     global musiconoff
     musiconoff = 1
-<<<<<<< HEAD
     #musicpath = (RuningFolder+"/system/sounds/")
     files = os.listdir(musicpath)
     song=random.choice(files)
@@ -132,12 +131,10 @@ def playMusic():
     #i01.speakBlocking("playing song" + str(song))
     AudioPlayer.playFile(musicpath + str(song) , False)
     print("playing song:" + str(song))
-=======
     # Select one of the mp3 files from the list at random
     mp3 = random.choice(fileList(musicpath))
     print mp3
     # Play the file
->>>>>>> 9d60accee04afc9097b57c9dcdca40e24c8fabbd
     sleep(1)
     AudioPlayer.playFile((mp3) , False)
     ear.startListening()
