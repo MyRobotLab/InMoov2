@@ -19,4 +19,4 @@ echo "------------------------------------------------------"
 echo "START MRL & INMOOV"
 echo "------------------------------------------------------"
 # start the inmoov script
-java -jar myrobotlab.jar --service python Python --invoke python execFile ./InMoov/InMoov.py
+java -jar myrobotlab.jar --service python Python --invoke python execFile .resource/InMoov2/InMoov2.py
