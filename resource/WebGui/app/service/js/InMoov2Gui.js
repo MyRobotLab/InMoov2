@@ -14,6 +14,7 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     $scope.sliders = []
 
     $scope.mrl = mrl
+    $scope.panel = mrl.getPanel('runtime')
 
     // text published from InMoov2 service
     $scope.onText = null
