@@ -495,74 +495,24 @@
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('neopixel')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
-        <img src="../NeoPixel.png"/>
-        <label>neopixel Activated:</label>
-    </td>    
-    <td>
+        <label>neopixel is:</label>&nbsp;&nbsp;
         <toggle width="70" height="28" ng-model="service.isNeopixelActivated" ng-change="!service.isNeopixelActivated?msg.stopNeopixel():msg.startNeopixel()" on="ON" off="OFF"/></toggle>
     </td>
 </tr>
 <tr>
+    <td class="tab-content" service-body panel="mrl.getPanel('i01.NeoPixel')"></td>
+</tr>
+<tr>
     <td>
-        <label>NeopixelMaster:</label>
+        <label>NeopixelMaster:</label><p>---FIXME---</p>
         <td>
-            <toggle width="100" height="28" ng-model="service.NeopixelMaster" ng-change="NeopixelMaster" on="ON" off="left"/></toggle>
+            <toggle width="70" height="28" ng-model="service.NeopixelMaster" ng-change="NeopixelMaster" on="ON" off="left"/></toggle>
         </td>
     </td>
 </tr>
 <tr>
     <td>
-        <label>NeopixelMasterPort:</label>
-        <td>
-            <toggle width="100" height="28" ng-model="service.NeopixelMasterPort" ng-change="NeopixelMasterPort" on="ON" off="Serial2"/></toggle>
-        </td>
-    </td>
-</tr>
-<tr>
-    <td>
-        <div class="row">
-          <div class="col-lg-12">
-            <!-- simple dropdown -->
-            <div class="input-group">
-              <span class="input-group-addon" uib-dropdown on-toggle="toggled(open)">
-                <a href id="simple-dropdown" uib-dropdown-toggle ng-disabled="isAttached">controller<span class="caret"></span></a>
-                <ul uib-dropdown-menu>
-                  <li ng-repeat="possibleController in controllers" ng-click="setControllerName(possibleController)"><a href>{{possibleController}}</a></li>
-                </ul>
-              </span>
-          
-              <input type="text" class="form-control" ng-model="controllerName" ng-disabled="isAttached"><!-- FIXME - type-ahead -->  
-
-              <span class="input-group-addon" uib-dropdown on-toggle="toggled(open)">
-                <a href id="simple-dropdown" uib-dropdown-toggle ng-disabled="isAttached">pin<span class="caret"></span></a>
-                <ul uib-dropdown-menu>
-                  <li ng-repeat="newPin in pins" ><a href ng-click="setPin(newPin)">{{newPin}}</a></li>
-                </ul>
-              </span>
-
-              <input type="text" class="form-control" ng-model="pin" ng-disabled="isAttached"><!-- FIXME - type-ahead -->  
-             
-              <span class="input-group-addon" uib-dropdown on-toggle="toggled(open)" >
-                <a href id="simple-dropdown" uib-dropdown-toggle ng-disabled="isAttached">Pixels<span class="caret"></span></a>
-                <ul uib-dropdown-menu>
-                  <li ng-repeat="newPixel in numPixels" ><a href ng-click="setPixel(newPixel)">{{newPixel}}</a></li>
-                </ul>
-              </span>
-
-              <input type="text" class="form-control" ng-model="numPixel" ng-disabled="isAttached"><!-- FIXME - type-ahead -->  
-
-              <span class="input-group-btn">
-                 <button class="btn btn-default" ng-show="isAttached"  ng-click="msg.detach()">detach</button>
-                 <button class="btn btn-default" ng-show="!isAttached"  ng-click="msg.attach(controllerName, pin, numPixel)">attach</button>
-              </span>
-            </div>
-          </div>
-        </div>
-    </td>
-</tr>
-<tr>
-    <td>
-        <label>boot_green:</label>
+        <label>boot_green:</label><p>---FIXME---</p>
         <td>
             <toggle width="70" height="28" ng-model="service.boot_green" ng-change="boot_green" on="ON" off="OFF"/></toggle>
         </td>
@@ -570,7 +520,7 @@
 </tr>
 <tr>
     <td>
-        <label>downloadSomething_blue:</label>
+        <label>downloadSomething_blue:</label><p>---FIXME---</p>
         <td>
             <toggle width="70" height="28" ng-model="service.downloadSomething_blue" ng-change="downloadSomething_blue" on="ON" off="OFF"/></toggle>
         </td>
@@ -578,7 +528,7 @@
 </tr>
 <tr>
     <td>
-        <label>error_red:</label>
+        <label>error_red:</label><p>---FIXME---</p>
         <td>
             <toggle width="70" height="28" ng-model="service.error_red" ng-change="error_red" on="ON" off="OFF"/></toggle>
         </td>
@@ -586,7 +536,7 @@
 </tr>
 <tr>
     <td>
-        <label>flash_when_speak:</label>
+        <label>flash_when_speak:</label><p>---FIXME---</p>
         <td>
             <toggle width="70" height="28" ng-model="service.flash_when_speak" ng-change="flash_when_speak" on="ON" off="OFF"/></toggle>
         </td>
@@ -594,7 +544,7 @@
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
 <tr>
@@ -711,8 +661,9 @@
 <table ng-show="showPanel('ultraSonicRight')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
-        <p>---FIXME---</p>
-        <img src="../UltrasonicSensor.png"/>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('UltraSonicRight')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
         <label>UltraSonic Right:</label>
     </td>
 </tr>
@@ -735,8 +686,9 @@
 <table ng-show="showPanel('ultraSonicLeft')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
-        <p>---FIXME---</p>
-        <img src="../UltrasonicSensor.png"/>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('UltraSonicLeft')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
         <label>UltraSonic Left:</label>
     </td>
 </tr>
