@@ -30,7 +30,6 @@ except:
 # ##############################################################################
 i01.ear=Runtime.start("i01.ear", EarEngine)
 ear=i01.ear
-i01.ear.setAutoListen(setAutoListen) 
 
 # ##############################################################################
 # MRL SERVICE TWEAKS
