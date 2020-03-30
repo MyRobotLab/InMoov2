@@ -378,25 +378,12 @@
 <tr>
     <td>
         <img src="../microcontroller_1.png"/>
-        <label>controller Right:</label>
+        <label>controller i01.right:</label>
     </td>
-    <td>    
-        <div class="form-group">
-            <label for="port">port</label>
-<!-- typeahead            
-            <input class="form-control ng-pristine ng-valid ng-empty ng-touched" type="text" id="port" ng-model="portName" ng-readonly="isConnected" uib-typeahead="portName for portName in possiblePorts | filter:$viewValue" typeahead-min-length="0" title="Serial port to connect to - 
-            clicking on this box should show a list of possible ports. 
-            Typically Windows list serial ports as COM1,COM2 etc and Linux or Mac will have /dev/ttyS1 .. etc 
-            You may create a virtual port just by typing some arbitrary name and making sure the service is in virtual mode, then pressing the connect button" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1021-2471" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1021-2471" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate" style="">
-
-
-        </ul>
-            <label for="rate">rate</label>
-            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" ng-readonly="isConnected" id="rate" ng-model="rate" uib-typeahead="rate for rate in possibleBaud | filter:$viewValue" typeahead-min-length="0" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1022-2440" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1022-2440" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate">
-
-        </ul>
--->        
-        </div>
+</tr>
+<tr>
+    <td>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.right')"></div>
     </td>
 </tr>
 <tr>
@@ -411,23 +398,13 @@
 <tr>
     <td>
         <img src="../microcontroller_1.png"/>
-        <label>controller Left:</label>
+        <label>controller i01.left:</label>
     </td>
-    <td>    
-        <div class="form-group">
-            <label for="port">port</label>
-<!-- typeahead            
-            
-            <input class="form-control ng-pristine ng-valid ng-empty ng-touched" type="text" id="port" ng-model="portName" ng-readonly="isConnected" uib-typeahead="portName for portName in possiblePorts | filter:$viewValue" typeahead-min-length="0" title="Serial port to connect to - 
-            clicking on this box should show a list of possible ports. 
-            Typically Windows list serial ports as COM1,COM2 etc and Linux or Mac will have /dev/ttyS1 .. etc 
-            You may create a virtual port just by typing some arbitrary name and making sure the service is in virtual mode, then pressing the connect button" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1021-2471" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1021-2471" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate" style="">
-        </ul>
-            <label for="rate">rate</label>
-            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" ng-readonly="isConnected" id="rate" ng-model="rate" uib-typeahead="rate for rate in possibleBaud | filter:$viewValue" typeahead-min-length="0" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1022-2440" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1022-2440" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate">
-    <!-- ngRepeat: match in matches track by $index -->
-        </ul>
-    </div>
+</tr>
+<tr>
+    <td>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.left')"></div>
+    </td>
 </tr>
 <tr>
     <td>
@@ -441,22 +418,13 @@
 <tr>
     <td>
         <img src="../microcontroller_1.png"/>
-        <label>controller Extra1:</label>
+        <label>controller i01.Extra1:</label>
     </td>
-    <td>    
-<!-- typeahead            
-        <div class="form-group">
-            <label for="port">port</label>
-            <input class="form-control ng-pristine ng-valid ng-empty ng-touched" type="text" id="port" ng-model="portName" ng-readonly="isConnected" uib-typeahead="portName for portName in possiblePorts | filter:$viewValue" typeahead-min-length="0" title="Serial port to connect to - 
-            clicking on this box should show a list of possible ports. 
-            Typically Windows list serial ports as COM1,COM2 etc and Linux or Mac will have /dev/ttyS1 .. etc 
-            You may create a virtual port just by typing some arbitrary name and making sure the service is in virtual mode, then pressing the connect button" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1021-2471" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1021-2471" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate" style="">
-        </ul>
-            <label for="rate">rate</label>
-            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" ng-readonly="isConnected" id="rate" ng-model="rate" uib-typeahead="rate for rate in possibleBaud | filter:$viewValue" typeahead-min-length="0" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1022-2440" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1022-2440" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate">
-    <!-- ngRepeat: match in matches track by $index -->
-        </ul>
-    </div>
+</tr>
+<tr>
+    <td>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.Extra1')"></div>
+    </td>
 </tr>
 <tr>
     <td>
@@ -470,22 +438,13 @@
 <tr>
     <td>
         <img src="../microcontroller_1.png"/>
-        <label>controller Extra2:</label>
+        <label>controller i01.Extra2:</label>
     </td>
-    <td>    
-<!-- typeahead            
-        <div class="form-group">
-            <label for="port">port</label>
-            <input class="form-control ng-pristine ng-valid ng-empty ng-touched" type="text" id="port" ng-model="portName" ng-readonly="isConnected" uib-typeahead="portName for portName in possiblePorts | filter:$viewValue" typeahead-min-length="0" title="Serial port to connect to - 
-            clicking on this box should show a list of possible ports. 
-            Typically Windows list serial ports as COM1,COM2 etc and Linux or Mac will have /dev/ttyS1 .. etc 
-            You may create a virtual port just by typing some arbitrary name and making sure the service is in virtual mode, then pressing the connect button" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1021-2471" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1021-2471" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate" style="">
-        </ul>
-            <label for="rate">rate</label>
-            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" ng-readonly="isConnected" id="rate" ng-model="rate" uib-typeahead="rate for rate in possibleBaud | filter:$viewValue" typeahead-min-length="0" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-1022-2440" style=""><ul class="dropdown-menu ng-isolate-scope ng-hide" ng-show="isOpen() &amp;&amp; !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="true" uib-typeahead-popup="" id="typeahead-1022-2440" matches="matches" active="activeIdx" select="select(activeIdx, evt)" move-in-progress="moveInProgress" query="query" position="position" assign-is-open="assignIsOpen(isOpen)" debounce="debounceUpdate">
-    <!-- ngRepeat: match in matches track by $index -->
-        </ul>
-        </div>
+</tr>
+<tr>
+    <td>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.Extra2')"></div>
+    </td>
 </tr>
 <tr>
     <td>
@@ -674,7 +633,7 @@
     </td>
 </tr>
 <tr>
-    <td class="tab-content" service-body panel="mrl.getPanel('i01.UltraSonicRight')"></td>
+    <td class="tab-content" service-body panel="mrl.getPanel('i01.ultraSonicRight')"></td>
 </tr>
 <tr>
     <td>
@@ -699,7 +658,7 @@
     </td>
 </tr>
 <tr>
-    <td class="tab-content" service-body panel="mrl.getPanel('i01.UltraSonicLeft')"></td>
+    <td class="tab-content" service-body panel="mrl.getPanel('i01.ultraSonicLeft')"></td>
 </tr>
 <tr>
     <td>
