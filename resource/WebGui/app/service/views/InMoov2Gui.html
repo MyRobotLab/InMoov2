@@ -165,12 +165,12 @@
         <img src="../InMoovTorso.png"/>
         <label>torso Activated:</label>&nbsp;&nbsp;
         <toggle width="70" height="28" ng-model="service.isTorsoActivated" ng-change="!service.isTorsoActivated?msg.stopTorso():msg.startTorso()" width="80" height="30" on="ON" off="OFF"/>&nbsp;&nbsp;
-        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="changeTab(service.name + '.torso')">Settings</button>
+        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="mrl.changeTab(service.name + '.torso')">Settings</button>
     </td>
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="msg.export()">Save Config</button>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
 </table>
@@ -185,7 +185,7 @@
         <img src="../InMoovHand.png"/>
         <label>leftHand Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;
         <toggle width="70" height="28" ng-model="service.isLeftHandActivated" ng-change="!service.isLeftHandActivated?msg.stopLeftHand():msg.startLeftHand()" width="120" height="30" on="ON" off="OFF"/>&nbsp;&nbsp;
-        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="changeTab(service.name + '.leftHand')">Settings</button>
+        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="mrl.changeTab(service.name + '.leftHand')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -196,7 +196,7 @@
         <img src="../InMoovHand.right.png"/>
         <label>rightHand Activated:</label>&nbsp;&nbsp;
         <toggle width="70" height="28" ng-model="service.isRightHandActivated" ng-change="!service.isRightHandActivated?msg.stopRightHand():msg.startRightHand()" width="120" height="30" on="ON" off="OFF"/>&nbsp;&nbsp;
-        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="changeTab(service.name + '.rightHand')">Settings</button>
+        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="mrl.changeTab(service.name + '.rightHand')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -264,7 +264,7 @@
         <img src="../InMoovHead.png"/>
         <label>head Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <toggle width="70" height="28" ng-model="service.isHeadActivated" ng-change="!service.isHeadActivated?msg.stopHead():msg.startHead()" on="ON" off="OFF"/>&nbsp;&nbsp;
-        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="changeTab(service.name + '.head')">Settings</button>
+        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="mrl.changeTab(service.name + '.head')">Settings</button>
     </td>
 </tr>
 <tr>
