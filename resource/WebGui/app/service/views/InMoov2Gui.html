@@ -98,7 +98,7 @@
         <img src="../InMoovArm.png"/>
         <label>leftArm Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;    
         <toggle width="70" height="28" ng-model="service.isLeftArmActivated" ng-change="!service.isLeftArmActivated?msg.stopLeftArm():msg.startLeftArm()" width="120" height="28" on="ON" off="OFF"/>&nbsp;&nbsp;
-        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="changeTab(service.name + '.leftArm')">Settings</button>
+        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="mrl.changeTab(service.name + '.leftArm')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -109,7 +109,7 @@
         <img src="../InMoovArm.right.png"/>
         <label>rightArm Activated:</label>&nbsp;&nbsp;  
         <toggle width="70" height="28" ng-model="service.isRightArmActivated" ng-change="!service.isRightArmActivated?msg.stopRightArm():msg.startRightArm()" width="120" height="28" on="ON" off="OFF"/>&nbsp;&nbsp;
-        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="changeTab(service.name + '.rightArm')">Settings</button>
+        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="mrl.changeTab(service.name + '.rightArm')">Settings</button>
     </td>
 </tr>
 <tr>
