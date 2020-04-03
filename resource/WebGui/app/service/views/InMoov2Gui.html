@@ -30,6 +30,7 @@
         z-index: 10;
     }
 </style>
+<link type="text/css" rel="stylesheet" media="all" href="../service/css/InMoov2Gui.css">
 <table border="1" class="table table-striped">
     <tr>
         <td colspan="2">&nbsp;{{onText}} 
@@ -44,6 +45,10 @@
                 </div>
                 <img class="inmoov-menu-button" ng-src="{{selectedButton.img}}" ng-click="setPanel(selectedButton.name)" style="transform: translate({{selectedButton.translate}})"/>               
             </div>
+
+            <div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="getBatteryLevel(print 'text')"><img src="../img/InMoov2/batteryActiv.png"/></div>
+
+            <div id="homeGuiButton" class="homeGuiButtons preventGuiDragSelect" ng-click="mrl.changeTab('webgui')">Home</div>
 </td>
 <td>
 <!-- panels begin -->
