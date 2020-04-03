@@ -1,0 +1,170 @@
+
+
+.preventGuiDragSelect{
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+.GuiDisplays {
+    position:absolute;
+    width:100px;
+    cursor: pointer;
+    display: inline-block;
+    /* 
+    overflow: hidden;
+    break the glow
+    */
+}
+
+.GuiDisplays:hover {
+    animation: none;
+    -webkit-filter: saturate(400%) drop-shadow(0px 0px 8px rgba(255, 255, 255, 1));
+}
+
+.GuiDisplays:active {
+    -webkit-filter: saturate(400%) drop-shadow(0px 0px 8px rgba(20, 255, 255, 1));
+    cursor:pointer;
+}
+
+.GuiDisplaysActive {
+    position:absolute;
+    color: #f38094;
+    cursor: pointer;
+    display: inline-block;
+    cursor: default;
+}
+
+
+/* -------------------    Left Buttons  --------------------*/
+
+#InMoovGuiDisplay img{
+    position:absolute;
+    left: 157px;
+    top: 150px;
+}
+
+/* ------------------------------------*/
+
+#rightHandGuiDisplay img{
+    position:absolute;
+    left: 141px;
+    top: 199px;
+}
+
+/* ------------------------------------*/
+
+#leftHandGuiDisplay img{
+    position:absolute;
+    left: 392px;
+    top: 199px;
+}
+
+/* ------------------------------------*/
+
+#headGuiDisplay img{
+    position:absolute;
+    left: 284px;
+    top: 145px;
+}
+
+/* ------------------------------------*/
+
+#rightArmGuiDisplay img{
+    position:absolute;
+    left: 191px;
+    top: 183px;
+}
+
+/* ------------------------------------*/
+
+#leftArmGuiDisplay img{
+    position:absolute;   
+    left: 315px;
+    top: 183px;
+}
+
+/* ------------------------------------*/
+
+#torsoGuiDisplay img{
+    position:absolute;
+    left: 278px;
+    top: 216px;
+}
+
+/* ------------------------------------*/
+
+#rightLegGuiDisplay img{
+    position:absolute;   
+    left: 275px;
+    top: 262px;
+}
+
+/* ------------------------------------*/
+
+
+#leftLegGuiDisplay img{
+    position:absolute;
+    left: 304px;
+    top: 262px;
+}
+
+/* ------------------------------------*/
+
+
+#batteryGuiDisplay img{
+    position:absolute;
+    left: 539px;
+    top: 599px;
+}
+
+/* ------------------------------------*/
+
+.homeGuiButtons:hover {
+    color: #FFFFFF;
+}
+
+.homeGuiButtons:active {
+    color: #FFFFFF;
+    text-shadow: 0 0 3px #414b4e, 0 0 10px #FFFFFF, 0 0 10px #FFFFFF, 0 0 10px #FFFFFF;
+}
+
+.homeGuiButtons{
+    position:absolute;
+    font-family: helvetica,sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    color: #29d4ff;
+    cursor: pointer;
+    display: inline-block;
+    /* 
+    overflow: hidden;
+    break the glow
+    */
+    height: 24px;
+    max-height: 24px;
+    text-shadow: 0 0 3px #414b4e, 0 0 7px #76bed3, 0 0 7px #8ddaefd9;
+}
+
+.homeGuiButtonsActive{
+    position:absolute;
+    font-family: helvetica,sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    color: #f38094;
+    cursor: pointer;
+    display: inline-block;
+    height: 24px;
+    max-height: 24px;
+    text-shadow: 0 0 3px #ff1414, 0 0 10px #FFFFFF;
+    cursor: default;
+}
+
+#homeGuiButton{
+    left: 57px;
+    top: 618px;
+}
