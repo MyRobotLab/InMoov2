@@ -118,8 +118,8 @@
 
 #batteryGuiDisplay img{
     position:absolute;
-    left: 539px;
-    top: 599px;
+    left: 514px;
+    top: 511px;
 }
 
 /* ------------------------------------*/
@@ -165,6 +165,6 @@
 }
 
 #homeGuiButton{
-    left: 57px;
-    top: 618px;
+    left: 33px;
+    top: 531px;
 }
