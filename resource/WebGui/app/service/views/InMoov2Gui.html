@@ -43,9 +43,25 @@
                 <div class="inmoov-menu-button" ng-repeat="button in buttons" id="button.name +'Src'" ng-init="imgSrc='../img/InMoov2/'+button.name+'_off.png'" ng-mouseover="imgSrc='../img/InMoov2/'+button.name+'_hover.png'" ng-mouseout="imgSrc='../img/InMoov2/'+button.name+'_off.png'" ng-style="imgStyle='transform:translateX(300px)'">
                     <img class="inmoov-menu-button" ng-src="{{imgSrc}}" ng-click="setPanel(button.name)" style="transform: translate({{button.translate}})"/>
                 </div>
-                <img class="inmoov-menu-button" ng-src="{{selectedButton.img}}" ng-click="setPanel(selectedButton.name)" style="transform: translate({{selectedButton.translate}})"/>               
+                <img class="inmoov-menu-button" ng-src="{{selectedButton.img}}" ng-click="setPanel(selectedButton.name)" style="transform: translate({{selectedButton.translate}})"/>
 
-                <div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="runtime.getBatteryLevel()"><img src="../img/InMoov2/batteryActiv.png"/></div>
+                <div id="rightArmGuiDisplay" ng-show="service.isRightArmActivated" class="GuiDisplays preventGuiDragSelect"><img src="../img/InMoov2/armR_Activ.png"/></div>
+
+                <div id="leftArmGuiDisplay" ng-show="service.isLeftArmActivated" class="GuiDisplays preventGuiDragSelect"><img src="../img/InMoov2/armL_Activ.png"/></div>
+
+                <div id="rightHandGuiDisplay" ng-show="service.isRightHandActivated" class="GuiDisplays preventGuiDragSelect"><img src="../img/InMoov2/handR_Activ.png"/></div>
+
+                <div id="leftHandGuiDisplay" ng-show="service.isLeftHandActivated" class="GuiDisplays preventGuiDragSelect"><img src="../img/InMoov2/handL_Activ.png"/></div>
+
+                <div id="headGuiDisplay" ng-show="service.isHeadActivated" class="GuiDisplays preventGuiDragSelect"><img src="../img/InMoov2/headA_Activ.png"/></div>
+
+                <div id="torsoGuiDisplay" ng-show="service.isTorsoActivated" class="GuiDisplays preventGuiDragSelect"><img src="../img/InMoov2/torsoA_Activ.png"/></div>
+
+                <div id="rightLegGuiDisplay" ng-show="service.isRightLegActivated" class="GuiDisplays preventGuiDragSelect"><img src="../img/InMoov2/legR_Activ.png"/></div>
+
+                <div id="leftLegGuiDisplay" ng-show="service.isLeftLegActivated" class="GuiDisplays preventGuiDragSelect"><img src="../img/InMoov2/legL_Activ.png"/></div>
+
+                <div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="service.getBatteryLevel()"><img src="../img/InMoov2/battery_Activ.png"/></div>
 
                 <div id="homeGuiButton" class="homeGuiButtons preventGuiDragSelect" ng-click="mrl.changeTab('webgui')">Home</div>
             </div>
@@ -102,8 +118,8 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovArm.png"/>
         <label>leftArm Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;    
-        <toggle width="70" height="28" ng-model="service.isLeftArmActivated" ng-change="!service.isLeftArmActivated?msg.stopLeftArm():msg.startLeftArm()" width="120" height="28" on="ON" off="OFF"/>&nbsp;&nbsp;
-        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="mrl.changeTab(service.name + '.leftArm')">Settings</button>
+        <toggle width="70" height="28" ng-model="service.isLeftArmActivated" title="To access settings, the body part must be activated" ng-change="!service.isLeftArmActivated?msg.stopLeftArm():msg.startLeftArm()" width="120" height="28" on="ON" off="OFF"/>&nbsp;&nbsp;
+        <button class="btn btn-default" ng-show="service.isLeftArmActivated" ng-click="mrl.changeTab(service.name + '.leftArm')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -113,8 +129,8 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovArm.right.png"/>
         <label>rightArm Activated:</label>&nbsp;&nbsp;  
-        <toggle width="70" height="28" ng-model="service.isRightArmActivated" ng-change="!service.isRightArmActivated?msg.stopRightArm():msg.startRightArm()" width="120" height="28" on="ON" off="OFF"/>&nbsp;&nbsp;
-        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="mrl.changeTab(service.name + '.rightArm')">Settings</button>
+        <toggle width="70" height="28" ng-model="service.isRightArmActivated"  title="To access settings, the body part must be activated" ng-change="!service.isRightArmActivated?msg.stopRightArm():msg.startRightArm()" width="120" height="28" on="ON" off="OFF"/>&nbsp;&nbsp;
+        <button class="btn btn-default" ng-show="service.isRightArmActivated" ng-click="mrl.changeTab(service.name + '.rightArm')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -170,7 +186,7 @@
         <img src="../InMoovTorso.png"/>
         <label>torso Activated:</label>&nbsp;&nbsp;
         <toggle width="70" height="28" ng-model="service.isTorsoActivated" ng-change="!service.isTorsoActivated?msg.stopTorso():msg.startTorso()" width="80" height="30" on="ON" off="OFF"/>&nbsp;&nbsp;
-        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="mrl.changeTab(service.name + '.torso')">Settings</button>
+        <button class="btn btn-default" ng-show="service.isTorsoActivated" title="To access settings, the body part must be activated" ng-click="mrl.changeTab(service.name + '.torso')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -189,8 +205,8 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovHand.png"/>
         <label>leftHand Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <toggle width="70" height="28" ng-model="service.isLeftHandActivated" ng-change="!service.isLeftHandActivated?msg.stopLeftHand():msg.startLeftHand()" width="120" height="30" on="ON" off="OFF"/>&nbsp;&nbsp;
-        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="mrl.changeTab(service.name + '.leftHand')">Settings</button>
+        <toggle width="70" height="28" ng-model="service.isLeftHandActivated" title="To access settings, the body part must be activated" ng-change="!service.isLeftHandActivated?msg.stopLeftHand():msg.startLeftHand()" width="120" height="30" on="ON" off="OFF"/>&nbsp;&nbsp;
+        <button class="btn btn-default" ng-show="service.isLeftHandActivated" ng-click="mrl.changeTab(service.name + '.leftHand')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -200,8 +216,8 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovHand.right.png"/>
         <label>rightHand Activated:</label>&nbsp;&nbsp;
-        <toggle width="70" height="28" ng-model="service.isRightHandActivated" ng-change="!service.isRightHandActivated?msg.stopRightHand():msg.startRightHand()" width="120" height="30" on="ON" off="OFF"/>&nbsp;&nbsp;
-        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="mrl.changeTab(service.name + '.rightHand')">Settings</button>
+        <toggle width="70" height="28" ng-model="service.isRightHandActivated" title="To access settings, the body part must be activated" ng-change="!service.isRightHandActivated?msg.stopRightHand():msg.startRightHand()" width="120" height="30" on="ON" off="OFF"/>&nbsp;&nbsp;
+        <button class="btn btn-default" ng-show="service.isRightHandActivated" ng-click="mrl.changeTab(service.name + '.rightHand')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -268,8 +284,8 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovHead.png"/>
         <label>head Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <toggle width="70" height="28" ng-model="service.isHeadActivated" ng-change="!service.isHeadActivated?msg.stopHead():msg.startHead()" on="ON" off="OFF"/>&nbsp;&nbsp;
-        <button class="btn btn-default" title="To access settings, the body part must be activated" ng-click="mrl.changeTab(service.name + '.head')">Settings</button>
+        <toggle width="70" height="28" ng-model="service.isHeadActivated" title="To access settings, the body part must be activated" ng-change="!service.isHeadActivated?msg.stopHead():msg.startHead()" on="ON" off="OFF"/>&nbsp;&nbsp;
+        <button class="btn btn-default" ng-show="service.isHeadActivated" ng-click="mrl.changeTab(service.name + '.head')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -279,7 +295,8 @@
         <!--------------------------------------------------------------->
         <img src="../OpenCV.png"/>
         <label>vision Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <toggle width="70" height="28" ng-model="service.isOpenCVActivated" ng-change="!service.isOpenCVActivated?msg.stopOpenCV():msg.startOpenCV()" on="ON" off="OFF"/>
+        <toggle width="70" height="28" ng-model="service.isOpenCVActivated" title="To access settings, the vision must be activated" ng-change="!service.isOpenCVActivated?msg.stopOpenCV():msg.startOpenCV()" on="ON" off="OFF"/>&nbsp;&nbsp;
+        <button class="btn btn-default" ng-show="service.isOpenCVActivated" ng-click="mrl.changeTab(service.name + '.eye')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -297,8 +314,8 @@
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('head.eyelidLeft')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
-        <label>eyeLidsLeft Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <toggle width="70" height="28" ng-model="EyeLidsLeftActivated" ng-change="!EyeLidsLeftActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF">
+        <label>eyeLidLeft Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <toggle width="70" height="28" ng-model="isEyeLidLeftActivated" ng-change="!isEyeLidLeftActivated?msg.stopEyeLidLeft():msg.startEyeLidLeft()" on="ON" off="OFF">
     </td>
 </tr>
 <tr>
@@ -306,8 +323,8 @@
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('head.eyelidRight')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
-        <label>eyeLidsRight Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <toggle class="btn-right" width="70" height="28" ng-model="EyeLidsRightActivated" ng-change="!EyeLidsRightActivated?msg.stopEyeLids():msg.startEyeLids()" on="ON" off="OFF">
+        <label>eyeLidRight Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <toggle class="btn-right" width="70" height="28" ng-model="isEyeLidRightActivated" ng-change="!isEyeLidRightActivated?msg.stopEyeLidRight():msg.startEyeLidRight()" on="ON" off="OFF">
     </td>
 </tr>
 <tr>
@@ -333,7 +350,8 @@
         <!--------------------------------------------------------------->
         <img src="../microcontroller_1.png"/>
         <label>controller Right:</label>&nbsp;
-        <img width="30" height="30" ng-click="setPanel('controller_right')" ng-src="../square_blue_in.png" src="../square_blue_in.png.png">
+        <toggle width="70" height="30" ng-model="service.isRightPortActivated" title="To access settings, the button must be activated" ng-change="!service.isRightPortActivated?msg.stop('i01.right', Arduino):msg.start('i01.right', 'Arduino')" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;  
+        <button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="setPanel('controller_right')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -343,7 +361,8 @@
         <!--------------------------------------------------------------->
         <img src="../microcontroller_1.png"/>
         <label>controller Left:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <img width="30" height="30" ng-click="setPanel('controller_left')" ng-src="../square_blue_in.png" src="../square_blue_in.png.png">
+        <toggle width="70" height="30" ng-model="service.isLeftPortActivated" title="To access settings, the button must be activated" ng-change="!service.isLeftPortActivated?msg.stop('i01.left', Arduino):msg.start('i01.left', 'Arduino')" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;  
+        <button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="setPanel('controller_left')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -353,7 +372,8 @@
         <!--------------------------------------------------------------->
         <img src="../microcontroller_1.png"/>
         <label>controller Extra1:</label>
-        <img width="30" height="30" ng-click="setPanel('controller_extra1')" ng-src="../square_blue_in.png" src="../square_blue_in.png.png">
+        <toggle width="70" height="30" ng-model="service.isExtra1Activated" title="To access settings, the button must be activated" ng-change="!service.isExtra1Activated?msg.stop('i01.extra1', Arduino):msg.start('i01.extra1', 'Arduino')" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;  
+        <button class="btn btn-default" ng-show="service.isExtra1Activated" width="80" height="30" ng-click="setPanel('controller_extra1')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -363,8 +383,8 @@
         <!--------------------------------------------------------------->
         <img src="../microcontroller_1.png"/>
         <label>controller Extra2:</label>
-        <img width="30" height="30" ng-click="setPanel('controller_extra2')" ng-src="../square_blue_in.png" src="../square_blue_in.png.png">
-    </td>
+        <toggle width="70" height="30" ng-model="service.isExtra2Activated" title="To access settings, the button must be activated" ng-change="!service.isExtra2Activated?msg.stop('i01.extra2', Arduino):msg.start('i01.extra2', 'Arduino')" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;  
+        <button class="btn btn-default" ng-show="service.isExtra2Activated" width="80" height="30" ng-click="setPanel('controller_extra2')">Settings</button>
 </tr>
 <tr>
     <td>
@@ -393,6 +413,11 @@
 </tr>
 <tr>
     <td>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
+    </td>
+</tr>
+<tr>
+    <td>
         <img width="50" height="50" ng-click="setPanel('controller')" ng-src="../img/InMoov2/arrow_blue_left.png" src="../img/InMoov2/arrow_blue_left.png">
     </td>
 </tr>
@@ -409,6 +434,11 @@
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.left')"></div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
 <tr>
@@ -433,6 +463,11 @@
 </tr>
 <tr>
     <td>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
+    </td>
+</tr>
+<tr>
+    <td>
         <img width="50" height="50" ng-click="setPanel('controller')" ng-src="../img/InMoov2/arrow_blue_left.png" src="../img/InMoov2/arrow_blue_left.png">
     </td>
 </tr>
@@ -449,6 +484,11 @@
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.Extra2')"></div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
 <tr>
@@ -551,12 +591,12 @@
 <tr>
     <td>
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('pir')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('pir')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/></img>
         <!--------------------------------------------------------------->
-        <img src="../Pir.png"/>
+        <img src="../Pir.png"/>  
         <label>PIR:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <toggle width="70" height="30" ng-model="service.isPirActivated" ng-change="!service.isPirActivated?msg.stopPir():msg.startPir()" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;
-        <button class="btn btn-default" ng-click="setPanel('pir')">Settings</button>
+        <toggle width="70" height="30" ng-model="service.isPirActivated" title="To access settings, the pir must be activated" ng-change="!service.isPirActivated?msg.stopPir():msg.startPir()" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;  
+        <button class="btn btn-default" ng-show="service.isPirActivated" width="80" height="30" ng-click="setPanel('pir')">Settings</button>
     </td>
 </tr>
 <!----------------------------pir end---------------------------------->
@@ -567,8 +607,8 @@
         <!--------------------------------------------------------------->
         <img src="../kinect.png"/>
         <label>Kinect:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <toggle width="70" height="30" ng-model="service.isKinectActivated" ng-change="!service.isKinectActivated?msg.stopOpenNi():msg.startOpenNi()" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;
-        <button class="btn btn-default" ng-click="setPanel('kinect')">Settings</button>
+        <toggle width="70" height="30" ng-model="service.isKinectActivated" title="To access settings, the kinect must be activated" ng-change="!service.isKinectActivated?msg.stopOpenNi():msg.startOpenNi()" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;
+        <button class="btn btn-default" ng-show="service.isKinectActivated" ng-click="setPanel('kinect')">Settings</button>
     </td>
 </tr>
 <!----------------------------kinect end---------------------------------->
@@ -579,8 +619,8 @@
         <!--------------------------------------------------------------->
         <img src="../UltrasonicSensor.png"/>
         <label>UltraSonic Right:</label>
-        <toggle width="70" height="30" ng-model="service.isUltraSonicRightActivated" ng-change="!service.isUltraSonicRightActivated?msg.stopUltraSonicRight():msg.startUltraSonicRight()" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;
-        <button class="btn btn-default" ng-click="setPanel('ultraSonicRight')">Settings</button>
+        <toggle width="70" height="30" ng-model="service.isUltraSonicRightActivated" title="To access settings, UltraSonic Right must be activated" ng-change="!service.isUltraSonicRightActivated?msg.stopUltraSonicRight():msg.startUltraSonicRight()" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;
+        <button class="btn btn-default" ng-show="service.isUltraSonicRightActivated" ng-click="setPanel('ultraSonicRight')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -590,8 +630,8 @@
         <!--------------------------------------------------------------->
         <img src="../UltrasonicSensor.png"/>
         <label>UltraSonic Left:</label>&nbsp;&nbsp;&nbsp;
-        <toggle width="70" height="30" ng-model="service.isUltraSonicLeftActivated" ng-change="!service.isUltraSonicLeftActivated?msg.stopUltraSonicLeft():msg.startUltraSonicLeft()" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;
-        <button class="btn btn-default" ng-click="setPanel('ultraSonicLeft')">Settings</button>
+        <toggle width="70" height="30" ng-model="service.isUltraSonicLeftActivated" title="To access settings, UltraSonic Left must be activated" ng-change="!service.isUltraSonicLeftActivated?msg.stopUltraSonicLeft():msg.startUltraSonicLeft()" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;
+        <button class="btn btn-default" ng-show="service.isUltraSonicLeftActivated" ng-click="setPanel('ultraSonicLeft')">Settings</button>
     </td>
 </tr>
 </table>
