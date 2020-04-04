@@ -185,8 +185,8 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovTorso.png"/>
         <label>torso Activated:</label>&nbsp;&nbsp;
-        <toggle width="70" height="28" ng-model="service.isTorsoActivated" ng-change="!service.isTorsoActivated?msg.stopTorso():msg.startTorso()" width="80" height="30" on="ON" off="OFF"/>&nbsp;&nbsp;
-        <button class="btn btn-default" ng-show="service.isTorsoActivated" title="To access settings, the body part must be activated" ng-click="mrl.changeTab(service.name + '.torso')">Settings</button>
+        <toggle width="70" height="28" ng-model="service.isTorsoActivated" title="To access settings, the body part must be activated" ng-change="!service.isTorsoActivated?msg.stopTorso():msg.startTorso()" width="80" height="30" on="ON" off="OFF"/>&nbsp;&nbsp;
+        <button class="btn btn-default" ng-show="service.isTorsoActivated" ng-click="mrl.changeTab(service.name + '.torso')">Settings</button>
     </td>
 </tr>
 <tr>
