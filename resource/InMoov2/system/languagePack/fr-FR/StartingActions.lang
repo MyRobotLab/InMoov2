@@ -28,6 +28,7 @@ STARTINGULTRASONICRIGHT::démarrage du Capteur à ultrason droit
 STARTINGULTRASONICLEFT::démarrage du Capteur à ultrason gauche
 STARTINGVIRTUAL::Mode inmoov virtuel
 STARTINGSERVOMIXER::démarrage du servo mixer
+STARTINGGESTURES::chargement des gestuelles
 TRACKINGSTARTED::tracking service démarré
 STOPCHATBOT::Arrêt du chatebot
 STOPEAR::Arrêt de la reconnaissance vocale
