@@ -27,6 +27,7 @@ STARTINGTORSO::Attivo il busto
 STARTINGULTRASONIC::Attivo il sensore ultrasonico
 STARTINGVIRTUAL::InMoov virtuale attivato
 STARTINGSERVOMIXER::Attivo il servo mixer
+STARTINGGESTURES::gesti di caricamento
 TRACKINGSTARTED::Attivo la localizzazione
 STOPCHATBOT::Interruzione del chatbot
 STOPEAR::Orecchie di arresto
