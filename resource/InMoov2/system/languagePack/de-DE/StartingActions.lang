@@ -27,6 +27,7 @@ STARTINGTORSO::Torso aktiviert
 STARTINGULTRASONIC::Ultraschallsensor starten
 STARTINGVIRTUAL::virtueller inmoov wird gestartet
 STARTINGSERVOMIXER::servo mixer wird gestartet
+STARTINGGESTURES::gesten laden
 TRACKINGSTARTED::tracking aktiviet
 STOPCHATBOT::Chatbot stoppen
 STOPEAR::Ohren stoppen
