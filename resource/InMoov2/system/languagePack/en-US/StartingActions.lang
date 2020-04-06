@@ -27,6 +27,7 @@ STARTINGTORSO::Starting Torso
 STARTINGULTRASONIC::Starting ultrasonic sensor
 STARTINGVIRTUAL::virtual inmoov activated
 STARTINGSERVOMIXER::servo mixer is started
+STARTINGGESTURES::loading gestures
 TRACKINGSTARTED::starting tracking
 STOPCHATBOT::Stopping brain
 STOPEAR::Stopping ears
