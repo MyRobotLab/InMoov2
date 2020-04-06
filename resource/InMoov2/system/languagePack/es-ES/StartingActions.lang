@@ -27,6 +27,7 @@ STARTINGTORSO::Iniciando el torso
 STARTINGULTRASONIC::Arrancando sensor ultrasónico
 STARTINGVIRTUAL::modo virtual inmoov
 STARTINGSERVOMIXER::Arrancando servo mixer
+STARTINGGESTURES::gestos de carga
 TRACKINGSTARTED::Servicio de seguimiento iniciado
 STOPCHATBOT::Detener chatbot
 STOPEAR::Parando los oídos
