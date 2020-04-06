@@ -27,6 +27,7 @@ STARTINGTORSO::Torso starten
 STARTINGULTRASONIC::to translate Starting ultrasonic sensor
 STARTINGVIRTUAL::Virtuele inmoov geactiveerd
 STARTINGSERVOMIXER::Servo mixer starten
+STARTINGgESTURES::Gebaren laden
 TRACKINGSTARTED::Beginnen met tracking
 STOPCHATBOT::Chatbot stoppen
 STOPEAR::Oren stoppen
