@@ -150,13 +150,9 @@
         <img src="../InMoov_ear.png"/>
         <label>ear Activated:</label>&nbsp;&nbsp;
         <toggle width="70" height="28" ng-model="service.isEarActivated" ng-change="!service.isEarActivated?msg.stopEar():msg.startEar()" width="80" height="30" on="ON" off="OFF"/>
+        <button class="btn btn-default" ng-show="service.isEarActivated" ng-click="setPanel('ear1')">Settings</button>
     </td>
-</tr>
-<tr>
-    <td>
-        <div class="tab-content" ng-show="service.isEarActivated" service-body panel="mrl.getPanel('i01.ear')"></div>
-    </td>
-</tr>
+</tr>    
 <tr>
     <td>
         <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
@@ -164,6 +160,15 @@
 </tr>
 </table>
 <!------------------------ ear end ------------------------------>
+<!------------------------ ear1 begin ------------------------------>
+<table ng-show="showPanel('ear1')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <div class="tab-content" ng-show="service.isEarActivated" service-body panel="mrl.getPanel('i01.ear')"></div>
+    </td>
+</tr>
+</table>
+<!------------------------ ear1 end ------------------------------>
 <!------------------------ torso begin ------------------------------>
 <table ng-show="showPanel('torso')" class="inmoov-sub-panel table table-striped">
 <tr>
