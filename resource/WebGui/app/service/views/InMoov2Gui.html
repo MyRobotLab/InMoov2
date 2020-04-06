@@ -154,19 +154,7 @@
 </tr>
 <tr>
     <td>
-        <select class="form-control" ng-model="selectedLanguage" ng-change="setLanguage()">
-            <option ng-repeat="(key, value) in service.locales" value="{{key}}">{{value.displayLanguage}} - {{value.displayCountry}} </option>
-        </select>
-        {{service.status}}
-    </td>
-</tr>    
-<tr>
-    <td>
-        <button ng-click="changeListeningState()">
-            <span>
-                <img ng-src="../WebkitSpeechRecognition/mic-animate.gif" width="80" src="../WebkitSpeechRecognition/mic-animate.gif">
-            </span>
-        </button>
+        <div class="tab-content" ng-show="service.isEarActivated" service-body panel="mrl.getPanel('i01.ear')"></div>
     </td>
 </tr>
 <tr>
