@@ -78,6 +78,7 @@
         <img src="../Brain.png"/>
         <label>brain Activated:</label>&nbsp;
         <toggle width="70" height="30" ng-model="service.isBrainActivated" ng-change="!service.isBrainActivated?msg.stopBrain():msg.startBrain()" on="ON" off="OFF"/>
+        <button class="btn btn-default" ng-show="service.isBrainActivated" ng-click="setPanel('brain1')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -94,21 +95,26 @@
 </tr>
 <tr>
     <td>
-        <!------START FIXING-------------->
-        <p>---FIXME---</p>
-        <label>user:</label>
-        {{currentUserName}}
-        
-        <!------end FIXING-------------->
-    </td>
-</tr>
-<tr>
-    <td>
         <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
 </table>
 <!------------------------ brain end ------------------------------>
+<!------------------------ brain1 begin ------------------------------>
+<table ng-show="showPanel('brain1')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <img src="../Brain.png"/>
+        <label>brain:</label>
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="tab-content" ng-show="service.isBrainActivated" service-body panel="mrl.getPanel('i01.brain')"></div>
+    </td>
+</tr>
+</table>
+<!------------------------ brain1 end ------------------------------>
 <!------------------------ arm begin ------------------------------>
 <table ng-show="showPanel('arm')" class="inmoov-sub-panel table table-striped">
 <tr>
