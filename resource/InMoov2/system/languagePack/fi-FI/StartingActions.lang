@@ -27,6 +27,7 @@ STARTINGTORSO :: Aloitus Torso
 STARTINGULTRASONIC :: Käynnistys ultraäänianturilla
 STARTINGVIRTUAL :: virtuaalinen inmoov aktivoitu
 STARTINGSERVOMIXER::Aloita servo mixer
+STARTINGGESTURES::Eleiden lataaminen
 TRACKINGSTARTED :: aloittavan seurannan
 STOPCHATBOT :: Pysäytä chatbot
 STOPEAR :: Korvien pysähtyminen
