@@ -27,6 +27,7 @@ STARTINGTORSO::Torso Inicial
 STARTINGULTRASONIC::Começando o sensor ultrassônico
 STARTINGVIRTUAL::virtual emmoov ativado
 STARTINGSERVOMIXER::Servo mixer ativado
+STARTINGGESTURES::gestos de carregamento
 TRACKINGSTARTED::iniciando o rastreamento
 STOPCHATBOT::Parando o chatbot
 STOPEAR::Parando os ouvidos
