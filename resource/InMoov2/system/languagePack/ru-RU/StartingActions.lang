@@ -27,6 +27,7 @@ STARTINGTORSO::Запускаю управление торса
 STARTINGULTRASONIC::to translate Starting ultrasonic sensor
 STARTINGVIRTUAL::Виртуальный инмоов активирован
 STARTINGSERVOMIXER::пусковой сервомиксер
+STARTINGGESTURES::жесты загрузки
 TRACKINGSTARTED::Начинаю отслеживание
 STOPCHATBOT::Остановка чата
 STOPEAR::Остановка ушей
