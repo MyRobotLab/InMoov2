@@ -504,12 +504,28 @@
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('neopixel')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
+        <img src="../NeoPixel.png"/>
         <label>neopixel is:</label>&nbsp;&nbsp;
         <toggle width="70" height="28" ng-model="service.isNeopixelActivated" ng-change="!service.isNeopixelActivated?msg.stopNeopixel():msg.startNeopixel()" on="ON" off="OFF"/></toggle>
+        <button class="btn btn-default" ng-show="service.isNeopixelActivated" ng-click="setPanel('neopixel1')">Settings</button>
     </td>
 </tr>
 <tr>
-    <td class="tab-content" service-body panel="mrl.getPanel('i01.NeoPixel')"></td>
+    <td>
+        <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
+    </td>
+</tr>
+<tr>
+    <td>
+        <img width="50" height="50" ng-click="setPanel('extra')" ng-src="../img/InMoov2/arrow_blue_left.png" src="../img/InMoov2/arrow_blue_left.png">
+    </td>
+</tr>
+</table>
+<!------------------------ neopixel end ------------------------------>
+<!------------------------ neopixel1 begin ------------------------------>
+<table ng-show="showPanel('neopixel1')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td class="tab-content" service-body panel="mrl.getPanel('i01.neopixel')"></td>
 </tr>
 <tr>
     <td>
@@ -556,13 +572,8 @@
         <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
     </td>
 </tr>
-<tr>
-    <td>
-        <img width="50" height="50" ng-click="setPanel('extra')" ng-src="../img/InMoov2/arrow_blue_left.png" src="../img/InMoov2/arrow_blue_left.png">
-    </td>
-</tr>
 </table>
-<!------------------------ neopixel end ------------------------------>
+<!------------------------ neopixel1 end ------------------------------>
 <!------------------------ extra begin ------------------------------>
 <table ng-show="showPanel('extra')" class="inmoov-sub-panel table table-striped">
  <tr>
