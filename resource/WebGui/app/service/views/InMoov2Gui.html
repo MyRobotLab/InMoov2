@@ -40,7 +40,7 @@
     <tr>
         <td id="container-cell">
             <!--inmoov map begin-->
-            <div id="container">            
+            <div id="container">
                 <div class="inmoov-menu-button" ng-repeat="button in buttons" id="button.name +'Src'" ng-init="imgSrc='../img/InMoov2/'+button.name+'_off.png'" ng-mouseover="imgSrc='../img/InMoov2/'+button.name+'_hover.png'" ng-mouseout="imgSrc='../img/InMoov2/'+button.name+'_off.png'" ng-style="imgStyle='transform:translateX(300px)'">
                     <img class="inmoov-menu-button" ng-src="{{imgSrc}}" ng-click="setPanel(button.name)" style="transform: translate({{button.translate}})"/>
                 </div>
@@ -166,7 +166,7 @@
         <toggle width="70" height="28" ng-model="service.isEarActivated" ng-change="!service.isEarActivated?msg.stopEar():msg.startEar()" width="80" height="30" on="ON" off="OFF"/>
         <button class="btn btn-default" ng-show="service.isEarActivated" ng-click="setPanel('ear1')">Settings</button>
     </td>
-</tr>    
+</tr>
 <tr>
     <td>
         <button class="btn btn-default" ng-click="msg.exportAll()">Save Config</button>
@@ -204,10 +204,9 @@
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('torso')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../InMoovTorso.png"/>
-        <label>torso Activated:</label>&nbsp;&nbsp;{{service.isTorsoActivated}}test
+        <label>torso Activated:</label>&nbsp;&nbsp
         <toggle width="70" height="28" ng-model="service.isTorsoActivated" title="To access settings, the body part must be activated" ng-change="!service.isTorsoActivated?msg.stopTorso():msg.startTorso()" width="80" height="30" on="ON" off="OFF"/>&nbsp;&nbsp;
-        <button class="btn btn-default" ng-show="service.isTorsoActivated" ng-click="mrl.changeTab(service.name + '.torso')">Settings</button>{{service.isTorsoActivated}}test
-        {{i01.isLeftArmActivated}}test2
+        <button class="btn btn-default" ng-show="service.isTorsoActivated" ng-click="mrl.changeTab(service.name + '.torso')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -427,7 +426,7 @@
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('right')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
     </td>
-</tr>    
+</tr>
 <tr>
     <td>
         <div class="tab-content" service-body panel="mrl.getPanel('i01.right')"></div>
@@ -443,7 +442,7 @@
         <img width="50" height="50" ng-click="setPanel('controller')" ng-src="../img/InMoov2/arrow_blue_left.png" src="../img/InMoov2/arrow_blue_left.png">
     </td>
 </tr>
-</table>        
+</table>
 <!------------------------ controller setting right end ------------------------------>
 <!------------------------ controller setting left begin ------------------------------>
 <table ng-show="showPanel('controller_left')" class="inmoov-sub-panel table table-striped">
@@ -469,7 +468,7 @@
         <img width="50" height="50" ng-click="setPanel('controller')" ng-src="../img/InMoov2/arrow_blue_left.png" src="../img/InMoov2/arrow_blue_left.png">
     </td>
 </tr>
-</table>        
+</table>
 <!------------------------ controller setting left end ------------------------------>
 <!------------------------ controller setting extra1 begin ------------------------------>
 <table ng-show="showPanel('controller_extra1')" class="inmoov-sub-panel table table-striped">
@@ -495,7 +494,7 @@
         <img width="50" height="50" ng-click="setPanel('controller')" ng-src="../img/InMoov2/arrow_blue_left.png" src="../img/InMoov2/arrow_blue_left.png">
     </td>
 </tr>
-</table>        
+</table>
 <!------------------------ controller setting extra1 end ------------------------------>
 <!------------------------ controller setting extra2 begin ------------------------------>
 <table ng-show="showPanel('controller_extra2')" class="inmoov-sub-panel table table-striped">
@@ -521,7 +520,7 @@
         <img width="50" height="50" ng-click="setPanel('controller')" ng-src="../img/InMoov2/arrow_blue_left.png" src="../img/InMoov2/arrow_blue_left.png">
     </td>
 </tr>
-</table>        
+</table>
 <!------------------------ controller setting extra2 end ------------------------------>
 <!------------------------ neopixel begin ------------------------------>
 <table ng-show="showPanel('neopixel')" class="inmoov-sub-panel table table-striped">
@@ -814,20 +813,6 @@
 </tr>
 </table>
 <!------------------------ kinect end ------------------------------>
-<!------------------------ servomixer begin ------------------------------>
-<table ng-show="showPanel('servomixer')" class="inmoov-sub-panel table table-striped">
-<tr>
-    <td>
-        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('servomixer')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
-        <!--------------------------------------------------------------->
-    </td>
-</tr>
-<tr>
-    <td class="tab-content" service-body panel="mrl.getPanel('servomixer')"></td>
-</tr>  
-</table>
-<!------------------------ servomixer end ------------------------------>
 <!------------------------ InMoov begin ------------------------------>
 <table ng-show="showPanel('InMoov')" class="inmoov-sub-panel table table-striped">
 <tr>
