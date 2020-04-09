@@ -342,3 +342,12 @@
     position:absolute;
     left:29px;
     top:534px;
+ }
+/* -------------------    dna position --------------------*/
+
+#leftDnaButton img{
+    position:absolute;
+    width:200px;
+    left: 389px;
+    top: 505px;
+}      
