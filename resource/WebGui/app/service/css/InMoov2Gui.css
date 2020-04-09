@@ -124,6 +124,16 @@
 
 /* ------------------------------------*/
 
+
+#dnaGuiDisplay img{
+    position:absolute;
+    width:155px;
+    left: 33px;
+    top: 28px;
+}
+
+/* ------------------------------------*/
+
 .homeGuiButtons:hover {
     color: #FFFFFF;
 }
