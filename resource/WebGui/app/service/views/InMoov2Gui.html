@@ -821,7 +821,7 @@
         <img src="../InMoov_Icon.png"/>
         <label>config</label>&nbsp;&nbsp;&nbsp;&nbsp;<img src="../peers.png" height="28" ng-click="filterPeers(null)"/>
         <div class="form-group">
-            <select multiple class="form-control vertical-menu">
+            <select multiple class="form-control vertical-menu" title="FIXME--This is not yet worky">
                 <option>config-01</option>
                 <option>default</option>
                 <option>my-config-01</option>
@@ -834,7 +834,7 @@
         </div>
         <button class="btn btn-default" ng-click="msg.export()">export config</button>
         <button class="btn btn-default" ng-click="msg.exportAll()">export All</button>
-        <button class="btn btn-default" ng-click="msg.load()">load</button>
+        <button class="btn btn-default" title="This will load a predefined config" ng-click="msg.load()">load</button>
     </td>
 </tr>
 <tr>
