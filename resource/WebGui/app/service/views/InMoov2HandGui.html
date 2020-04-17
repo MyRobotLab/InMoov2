@@ -150,7 +150,41 @@
 </tr>
 <tr>
     <td>
-        <p>FIXME Here we need to display the sensor content,<br> necessary for calibration.<br>
+        <div class="row">
+          <div class="col-lg-8">
+            <!-- simple dropdown -->
+            <div class="input-group">
+              <span class="input-group-addon" title="FIXME" uib-dropdown on-toggle="toggled(open)">
+                <a href id="simple-dropdown" uib-dropdown-toggle ng-disabled="isSensorsEnabled">pin<span class="caret"></span></a>
+                <ul uib-dropdown-menu>
+                  <li ng-repeat="sensorPins" ng-click=" msg.getActivePins(sensorPins)"><a href>{{sensorPins}}</a></li>
+                </ul>
+              </span>
+          
+              <input type="text" class="form-control" ng-model="sensorThumb" ng-disabled="isSensorsEnabled"><!-- FIXME - type-ahead -->  
+
+              <span class="input-group-addon" title="FIXME" uib-dropdown on-toggle="toggled(open)">
+                <a href id="simple-dropdown" uib-dropdown-toggle ng-disabled="isSensorsEnabled">threshold<span class="caret"></span></a>
+                <ul uib-dropdown-menu>
+                  <li ng-repeat="newThreshold in sensorThresholds" ><a href ng-click="setThreshold(newThreshold)">{{newThreshold}}</a></li>
+                </ul>
+              </span>
+
+              <input type="text" class="form-control" ng-model="threshold" ng-disabled="isSensorsEnabled">
+              <span class="input-group-btn">
+              <button class="btn btn-default" ng-click="msg.setSensorPins(sensorThumb)">Enable</button>
+            </span>
+        </div>
+        <div>
+            <span class="input-group-btn">
+            <button class="btn btn-default" title="FIXME" ng-click="msg.setSensorPins(sensorThumb)">Test pressure</button>
+            </span>
+            <span class="input-group-btn">
+            <input class="form-control" type="text" id="sensorThumbThreshold" ng-model="sensorThumbThreshold" name="sensorThumbThreshold" placeholder="Result value"/>
+            </span>
+            </div>
+        </div>
+    </div>
     </td>
 </tr>
 <tr>
@@ -184,7 +218,41 @@
 </tr>
 <tr>
     <td>
-        <p>FIXME Here we need to display the sensor content,<br> necessary for calibration.<br>
+        <div class="row">
+          <div class="col-lg-8">
+            <!-- simple dropdown -->
+            <div class="input-group">
+              <span class="input-group-addon" title="FIXME" uib-dropdown on-toggle="toggled(open)">
+                <a href id="simple-dropdown" uib-dropdown-toggle ng-disabled="isSensorsEnabled">pin<span class="caret"></span></a>
+                <ul uib-dropdown-menu>
+                  <li ng-repeat="sensorPins" ng-click=" msg.getActivePins(sensorPins)"><a href>{{sensorPins}}</a></li>
+                </ul>
+              </span>
+          
+              <input type="text" class="form-control" ng-model="sensorIndex" ng-disabled="isSensorsEnabled"><!-- FIXME - type-ahead -->  
+
+              <span class="input-group-addon" title="FIXME" uib-dropdown on-toggle="toggled(open)">
+                <a href id="simple-dropdown" uib-dropdown-toggle ng-disabled="isSensorsEnabled">threshold<span class="caret"></span></a>
+                <ul uib-dropdown-menu>
+                  <li ng-repeat="newThreshold in sensorThresholds" ><a href ng-click="setThreshold(newThreshold)">{{newThreshold}}</a></li>
+                </ul>
+              </span>
+
+              <input type="text" class="form-control" ng-model="threshold" ng-disabled="isSensorsEnabled">
+              <span class="input-group-btn">
+              <button class="btn btn-default" ng-click="msg.setSensorPins(sensorIndex)">Enable</button>
+            </span>
+        </div>
+        <div>
+            <span class="input-group-btn">
+            <button class="btn btn-default" title="FIXME" ng-click="msg.setSensorPins(sensorIndex)">Test pressure</button>
+            </span>
+            <span class="input-group-btn">
+            <input class="form-control" type="text" id="sensorIndexThreshold" ng-model="sensorIndexThreshold" name="sensorIndexThreshold" placeholder="Result value"/>
+            </span>
+            </div>
+        </div>
+    </div>
     </td>
 </tr>
 <tr>
