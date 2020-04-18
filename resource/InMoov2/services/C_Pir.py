@@ -19,9 +19,9 @@ ThisServicePartConfig.read(ThisServicePart+'.config')
 isPirActivated=0
 
 isPirActivated=ThisServicePartConfig.getboolean('MAIN', 'isPirActivated') 
-PirPin=ThisServicePartConfig.getint('MAIN', 'PirPin') 
-if ScriptType=="Virtual":PirPin=2
-PirArduino=ThisServicePartConfig.get('MAIN', 'PirControlerArduino')
+PirPin=ThisServicePartConfig.getint('MAIN', 'pirPin') 
+if ScriptType=="Virtual":pirPin=2
+pirArduino=ThisServicePartConfig.get('MAIN', 'pirControlerArduino')
 PlayCurstomSoundIfDetection=ThisServicePartConfig.getboolean('MAIN', 'PlayCurstomSoundIfDetection')
 
 # ##############################################################################
@@ -43,13 +43,13 @@ def publishPinPir(pins):
       
       #wakeup action
       if i01.RobotIsSleeping:
-        PirControlerArduino.disablePin(PirPin)
+        pirControlerArduino.disablePin(pirPin)
         sleepModeWakeUp()
 
 
 if isPirActivated:
   try:
-    PirControlerArduino=eval(PirArduino)
+    pirControlerArduino=eval(pirArduino)
     i01.speakBlocking(i01.languagePack.get("startingPir"))
         
   except:
