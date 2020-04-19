@@ -84,7 +84,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovHand.right.png"/>
         <label>rightHand is:</label>&nbsp;
-        <img ng-src="{{(!service.isRightHandActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-show="isRightHandActivated" ng-src="{{(!isRightHandActivated)?'../../red.png':'../../green.png'}}"/>
     </td>
 </tr>
 <tr>
