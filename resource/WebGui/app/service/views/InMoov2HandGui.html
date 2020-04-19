@@ -84,7 +84,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovHand.right.png"/>
         <label>rightHand is:</label>&nbsp;
-        <img ng-src="{{(!service.isRightHandActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isRight())?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>
 <tr>
@@ -94,7 +94,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovHand.png"/>
         <label>leftHand is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <img ng-src="{{(!service.isLeftHandActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isLeft())?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>
 </table>    
