@@ -372,6 +372,18 @@
         <img src="../microcontroller_1.png"/>
         <label>controller right:</label>&nbsp;&nbsp;
         <toggle width="70" height="30" ng-model="service.isRightPortActivated" title="To access settings, the button must be activated" ng-change="!service.isRightPortActivated?msg.stop('i01.right', Arduino):msg.start('i01.right', 'Arduino')" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;  
+<!--
+
+        <ui-select ng-model="category.selected" theme="bootstrap" style="width: 3.5em">
+            <ui-select-match placeholder="&nbsp;&nbsp;&nbsp;&nbsp;category&nbsp;&nbsp;&nbsp;&nbsp;." allow-clear="true">
+                 <span><img ng-src="{{'/core/category/' + $select.selected.key + '.png'}}" width="18"/>&nbsp;&nbsp;&nbsp;&nbsp;{{$select.selected.key}}&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            </ui-select-match>
+            <ui-select-choices repeat="category.key as (key, category) in service.serviceData.categoryTypes | filter: $select.search">
+                <span><img ng-src="{{'/core/category/' + category.key + '.png'}}" width="18"/>&nbsp;&nbsp;&nbsp;&nbsp;{{category.value.name}}</span>
+            </ui-select-choices>
+        </ui-select>
+
+-->
         <button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="setPanel('controller_right')">Settings</button>
     </td>
 </tr>

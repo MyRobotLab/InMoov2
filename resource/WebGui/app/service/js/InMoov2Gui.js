@@ -13,6 +13,8 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     $scope.servos = []
     $scope.sliders = []
 
+    $scope.controllerTypes = ['Arduino','AdaFruit','FIXME-morestuff']
+
     $scope.mrl = mrl
     $scope.panel = mrl.getPanel('runtime')
 
