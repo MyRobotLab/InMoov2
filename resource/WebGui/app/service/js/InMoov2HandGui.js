@@ -11,33 +11,6 @@ angular.module('mrlapp.service.InMoov2HandGui', []).controller('InMoov2HandGuiCt
 
     $scope.activePanel = 'hand'
 
-    $scope.selectedButton = {}
-
-    // inmoov "all" buttons
-    $scope.buttons = []
-
-    // add a generalized button
-    let addButton = function(name, type, x, y) {
-
-        let button = {
-            name: name,
-            type: type,
-            translate: "0px,0px",
-            img: "img/InMoov2/" + name + "_off.png",
-            hover: "img/InMoov2/" + name + "_hover.png"
-        }
-
-        if (type == 'absolute') {
-            button.translate = x + "px," + y +"px"
-        }
-
-        if (type == 'circular') {
-            numCircularButtons++
-        }
-
-        $scope.buttons.push(button)
-    }
-
     $scope.isRight = function() {
         if ($scope.service){
             return $scope.service.name.includes("right")
@@ -58,27 +31,6 @@ angular.module('mrlapp.service.InMoov2HandGui', []).controller('InMoov2HandGuiCt
             mrl.search($scope.service.name + '.' + peerName)
         } else {
             mrl.search("")
-        }
-    }
-
-
-    let buttonsOff = function() {
-        for (i = 0; i < $scope.buttons.length; i++) {
-            $scope.selectedButton.name = name
-            $scope.selectedButton.translate = $scope.buttons[i].translate
-            $scope.selectedButton.img = "img/InMoov2/" + name + "_off.png"
-        }
-    }
-
-    let buttonOn = function(name) {
-        buttonsOff()
-        for (i = 0; i < $scope.buttons.length; i++) {
-            if ($scope.buttons[i].name == name) {
-                $scope.selectedButton.name = name
-                $scope.selectedButton.translate = $scope.buttons[i].translate
-                $scope.selectedButton.img = "img/InMoov2/" + name + "_Activ.png"
-                break
-            }
         }
     }
 
@@ -159,30 +111,6 @@ angular.module('mrlapp.service.InMoov2HandGui', []).controller('InMoov2HandGuiCt
         }
     }
 
-    // circular main menu buttons
-
-    //addButton('arm', 'circular')
-
-    //---Hand-----------------
-
-    //---FIXME------------------
-    addButton('rightHand', 'absolute', 60, 30)
-    //----Hand sensor
-    //addButton('leftHandSensor', 'absolute', 60, 30)
-    //addButton('leftThumbSensor', 'absolute', 103, 107)
-    //addButton('leftIndexSensor', 'absolute', 73, 138)
-    //addButton('leftMajeureSensor', 'absolute', 36, 170)
-    //addButton('leftRingFingerSensor', 'absolute', 0, 203)
-    //addButton('leftPinkySensor', 'absolute', -3, 238)
-
-    //addButton('rightHandSensor', 'absolute', 343, 30)
-    //addButton('rightThumbSensor', 'absolute', 293, 107)
-    //addButton('rightIndexSensor', 'absolute', 323, 138)
-    //addButton('rightMajeureSensor', 'absolute', 360, 170)
-    //addButton('rightRingFingerSensor', 'absolute', 393, 203)
-    //addButton('rightPinkySensor', 'absolute', 401, 238)
-
-
     //$scope.setPanel('leftHand')
     //$scope.setPanel('rightHand')
 
@@ -191,7 +119,6 @@ angular.module('mrlapp.service.InMoov2HandGui', []).controller('InMoov2HandGuiCt
     mrl.subscribeToServiceMethod(_self.onMsg, mrl.getRuntime().name, 'getServiceTypeNamesFromInterface');
 
     msg.subscribe('publishText')
-    msg.sendTo(mrl.getRuntime().name, 'getServiceTypeNamesFromInterface', 'SpeechSynthesis')
     msg.subscribe(this)
 }
 ])

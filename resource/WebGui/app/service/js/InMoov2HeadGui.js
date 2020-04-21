@@ -14,7 +14,14 @@ angular.module('mrlapp.service.InMoov2HeadGui', []).controller('InMoov2HeadGuiCt
         } else {
             mrl.search("")
         }
-    }        
+    }
+    
+    $scope.isHead = function() {
+        if ($scope.service){
+            return $scope.service.name.includes("head")
+        }
+        return false
+    }
 
     // GOOD TEMPLATE TO FOLLOW
     this.updateState = function(service) {
@@ -89,7 +96,6 @@ angular.module('mrlapp.service.InMoov2HeadGui', []).controller('InMoov2HeadGuiCt
     msg.subscribe(this)
 
     msg.subscribe('publishText')
-    msg.sendTo(mrl.getRuntime().name, 'getServiceTypeNamesFromInterface', 'SpeechSynthesis')
     msg.subscribe(this)
 }
 ])

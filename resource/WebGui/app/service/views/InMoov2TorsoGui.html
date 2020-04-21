@@ -25,7 +25,7 @@
     <td id="containerTorso2-cell">
         <div id="containerTorso2">
             <!-- Right -->
-            <div id="torsoIndicator" class="rectangleTorsoIndicator preventTorsoDragSelect">Torso</div>
+            <div id="torsoIndicator" class="rectangleTorsoIndicatorActive preventTorsoDragSelect">Torso</div>
 
             <div id="topStomButton" class="dotTorsoButtons rightTorsoSide preventTorsoDragSelect" ng-click="setPanel('topStom')">top Stom</div>
             <div id="topStomDot" class="dotTorsoEnabled preventTorsoDragSelect"></div>
@@ -59,7 +59,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovTorso.png"/>
         <label>torso is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <img ng-src="{{(!service.isTorsoActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isTorso)?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>
 </table>    
@@ -73,7 +73,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovTorso.png"/>
         <label>torso is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <img ng-src="{{(!service.isTorsoActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isTorso)?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>   
 <tr>
@@ -97,7 +97,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovTorso.png"/>
         <label>torso is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <img ng-src="{{(!service.isTorsoActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isTorso)?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>
 <tr>
@@ -121,7 +121,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovTorso.png"/>
         <label>torso is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <img ng-src="{{(!service.isTorsoActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isTorso)?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>    
 <tr>

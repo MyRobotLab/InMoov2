@@ -6,36 +6,7 @@ angular.module('mrlapp.service.InMoov2ArmGui', []).controller('InMoov2ArmGuiCtrl
     $scope.mrl = mrl
     $scope.panel = mrl.getPanel('runtime')
 
-    // text published from InMoov2 service
-    $scope.onText = null
-    $scope.languageSelected = null
-    $scope.speakText = null
-
     $scope.activePanel = 'arm'
-
-    $scope.selectedButton = {}
-
-    // inmoov "all" buttons
-    $scope.buttons = []
-
-    // add a generalized button
-    let addButton = function(name, type, x, y) {
-
-        let button = {
-            name: name,
-            type: type,
-            translate: "0px,0px",
-            img: "img/InMoov2/" + name + "_off.png",
-            hover: "img/InMoov2/" + name + "_hover.png"
-        }
-
-        if (type == 'absolute') {
-            button.translate = x + "px," + y +"px"
-        }
-
-
-        $scope.buttons.push(button)
-    }
 
     $scope.isRight = function() {
         if ($scope.service){
@@ -56,27 +27,6 @@ angular.module('mrlapp.service.InMoov2ArmGui', []).controller('InMoov2ArmGuiCtrl
             mrl.search($scope.service.name + '.' + peerName)
         } else {
             mrl.search("")
-        }
-    }
-
-
-    let buttonsOff = function() {
-        for (i = 0; i < $scope.buttons.length; i++) {
-            $scope.selectedButton.name = name
-            $scope.selectedButton.translate = $scope.buttons[i].translate
-            $scope.selectedButton.img = "img/InMoov2/" + name + "_off.png"
-        }
-    }
-
-    let buttonOn = function(name) {
-        buttonsOff()
-        for (i = 0; i < $scope.buttons.length; i++) {
-            if ($scope.buttons[i].name == name) {
-                $scope.selectedButton.name = name
-                $scope.selectedButton.translate = $scope.buttons[i].translate
-                $scope.selectedButton.img = "img/InMoov2/" + name + "_Activ.png"
-                break
-            }
         }
     }
 
@@ -156,24 +106,6 @@ angular.module('mrlapp.service.InMoov2ArmGui', []).controller('InMoov2ArmGuiCtrl
         }
     }
 
-    // circular main menu buttons
-
-    //addButton('arm', 'circular')
-
-    //---Arm-----------------
-    //addButton('rightArm', 'absolute', 343, 30)
-    //addButton('rightArm.omoplate', 'absolute', 60, 410)
-    //addButton('rightArm.shoulder', 'absolute', 10, 355)
-    //addButton('rightArm.rotate', 'absolute', 60, 105)
-    //addButton('rightArm.bicep', 'absolute', 10, 160)
-
-    //addButton('leftArm', 'absolute', 343, 30)
-    //addButton('leftArm.omoplate', 'absolute', 343, 410)
-    //addButton('leftArm.shoulder', 'absolute', 395, 355)
-    //addButton('leftArm.rotate', 'absolute', 343, 105)
-    //addButton('leftArm.bicep', 'absolute', 395, 160)
-    //addButton('redBlink', 'absolute', 193, 216)
-
 
     $scope.setPanel('arm')
 
@@ -182,7 +114,6 @@ angular.module('mrlapp.service.InMoov2ArmGui', []).controller('InMoov2ArmGuiCtrl
     mrl.subscribeToServiceMethod(_self.onMsg, mrl.getRuntime().name, 'getServiceTypeNamesFromInterface');
 
     msg.subscribe('publishText')
-    msg.sendTo(mrl.getRuntime().name, 'getServiceTypeNamesFromInterface', 'SpeechSynthesis')
     msg.subscribe(this)
 }
 ])

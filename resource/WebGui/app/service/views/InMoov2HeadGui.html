@@ -25,7 +25,7 @@
     <td id="containerHead2-cell">
         <div id="containerHead2">
             <!-- Right -->
-            <div id="headIndicator" class="rectangleHeadIndicator preventHeadDragSelect">Head</div>
+            <div id="headIndicator" class="rectangleHeadIndicatorActive preventHeadDragSelect">Head</div>
 
             <div id="eyeLidsButton" class="dotHeadButtons rightHeadSide preventHeadDragSelect" ng-click="setPanel('eyeLids')">eyeLids</div>
             <div id="eyeLidsDot" class="dotHeadEnabled preventHeadDragSelect"></div>
@@ -72,7 +72,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovHead.png"/>
         <label>head is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <img ng-src="{{(!service.isHeadActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>
 </table>    
@@ -86,7 +86,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovHead.png"/>
         <label>head is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <img ng-src="{{(!service.isHeadActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>
 <tr>
@@ -110,7 +110,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovHead.png"/>
         <label>head is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <img ng-src="{{(!service.isHeadActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>   
 <tr>
@@ -134,7 +134,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovHead.png"/>
         <label>head is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <img ng-src="{{(!service.isHeadActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>    
 <tr>
@@ -158,7 +158,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovHead.png"/>
         <label>head is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <img ng-src="{{(!service.isHeadActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>    
 <tr>
@@ -182,7 +182,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovHead.png"/>
         <label>head is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <img ng-src="{{(!service.isHeadActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>    
 <tr>
@@ -206,7 +206,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovHead.png"/>
         <label>head is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <img ng-src="{{(!service.isHeadActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>    
 <tr>
@@ -230,7 +230,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovEyelids.png"/>
         <label>eyeLids is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <img ng-src="{{(!service.isEyeLidsActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>    
 <tr>
