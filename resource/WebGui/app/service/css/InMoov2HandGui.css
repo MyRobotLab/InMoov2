@@ -71,7 +71,6 @@
     height: 40px;
 }
 
-
 .rectangleHandIndicator{
     position:absolute;
     display: table-cell;
@@ -188,7 +187,9 @@
     left:162px;
     top:324px;
 }
+
 /* -------------------    Right hand LINEs position --------------------*/
+
 .rightHandLine{
     position:absolute;
     border: solid #15d7ed;
@@ -317,7 +318,9 @@
     left:324px;
     top:267px;
 }
+
 /* -------------------    Left hand LINEs position --------------------*/
+
 .leftHandLine{
     position:absolute;
     border: solid #15d7ed;
@@ -419,8 +422,7 @@
     left: 41px;
     top: 528px;
 }
-#leftBackHandButton:#leftBackHandArrow{
-    background-color: #FF0000;
+#leftBackHandButton:hover + #leftBackHandArrow{
     animation: none;
 }
 /* -------------------    Left Back Arrow position --------------------*/

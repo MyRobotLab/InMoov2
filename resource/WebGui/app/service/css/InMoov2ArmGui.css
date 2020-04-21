@@ -58,8 +58,6 @@
 
 
 #rightArmIndicator{
-    display: table-cell;
-    position:absolute;
     left:74px;
     top:36px;
     width: 200px;
@@ -67,81 +65,46 @@
 }
 
 #leftArmIndicator{
-    display: table-cell;
-    position:absolute;
     left:346px;
     top:36px;
     width: 200px;
     height: 40px;
 }
 
-
-.rectangleRightArmIndicator{
+.rectangleArmIndicator{
+    position:absolute;
+    display: table-cell;
     border-radius: 5px;
     background: #73AD21;
-    line-height: 40px;
     font-family: helvetica,sans-serif;
-    font-size: 22;
+    font-size: 18px;
     font-weight: normal;
     color: #17d6ed;
+    line-height: 40px;
     background-image: linear-gradient(#001720, #01424c);
     text-align: center;
     vertical-align: middle;
     text-shadow: 0 0 3px #3e2e2e, 0 0 20px #fff, 0 0 30px #00a5cb, 0 0 40px #74ace6, 0 0 50px #0042a4, 0 0 60px #3582f5, 0 0 70px #4954ff;
-    box-shadow: 0 0px 5px 2px rgb(21, 215, 237);
-    cursor:default;  
+    box-shadow: 0 0px 5px 2px rgb(218, 94, 94);
+    cursor:default;
 }
 
-.rectangleLeftArmIndicator{
+.rectangleArmIndicatorActive{
+    position:absolute;
+    display: table-cell;
     border-radius: 5px;
     background: #73AD21;
-    line-height: 40px;
     font-family: helvetica,sans-serif;
-    font-size: 22;
+    font-size: 18px;
     font-weight: normal;
     color: #17d6ed;
-    background-image: linear-gradient(#001720, #01424c);
-    text-align: center;
-    vertical-align: middle;
-    text-shadow: 0 0 3px #3e2e2e, 0 0 20px #fff, 0 0 30px #00a5cb, 0 0 40px #74ace6, 0 0 50px #0042a4, 0 0 60px #3582f5, 0 0 70px #4954ff;
-    box-shadow: 0 0px 5px 2px rgb(21, 215, 237);
-    cursor:default;  
-}
-
-.rectangleRightArmIndicatorActive{
-    border-radius: 5px;
-    background: #73AD21;
     line-height: 40px;
-    font-family: helvetica,sans-serif;
-    font-size: 22;
-    font-weight: normal;
-    color: #17d6ed;
     background-image: linear-gradient(#001720, #01424c);
     text-align: center;
     vertical-align: middle;
     text-shadow: 0 0 3px #3e2e2e, 0 0 20px #fff, 0 0 30px #00a5cb, 0 0 12px #74ace6, 0 0 50px #0042a4, 0 0 60px #3582f5, 0 0 70px #4954ff;
-
     -webkit-filterg: saturate(200%)  drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
-    box-shadow: 0 0px 4px 3px rgb(21, 215, 237), 0px 0px 10px 1px rgb(255, 255, 255), 0px 0px 9px 3px rgb(255, 0, 0);
-
-}
-
-.rectangleLeftArmIndicatorActive{
-    border-radius: 5px;
-    background: #73AD21;
-    line-height: 40px;
-    font-family: helvetica,sans-serif;
-    font-size: 22;
-    font-weight: normal;
-    color: #17d6ed;
-    background-image: linear-gradient(#001720, #01424c);
-    text-align: center;
-    vertical-align: middle;
-    text-shadow: 0 0 3px #3e2e2e, 0 0 20px #fff, 0 0 30px #00a5cb, 0 0 12px #74ace6, 0 0 50px #0042a4, 0 0 60px #3582f5, 0 0 70px #4954ff;
-
-    -webkit-filterg: saturate(200%)  drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
-    box-shadow: 0 0px 4px 3px rgb(21, 215, 237), 0px 0px 10px 1px rgb(255, 255, 255), 0px 0px 9px 3px rgb(255, 0, 0);
-
+    box-shadow: 0 0px 4px 3px rgb(21, 215, 237), 0px 0px 10px 1px rgb(255, 255, 255), 0px 0px 9px 3px rgb(21, 255, 0);
 }
 
 .dotArmButtons{
@@ -192,7 +155,7 @@
 }
 
 
-/* -------------------    Right hand DOTs position --------------------*/
+/* -------------------    Right arm DOTs position --------------------*/
 
 #rightBicepDot{
     position:absolute;
@@ -218,7 +181,41 @@
     top:280px;
 }
 
-/* -------------------    Right Hand Buttons  --------------------*/
+/* -------------------    Right arm LINEs position --------------------*/
+
+.rightArmLine{
+    position:absolute;
+    border: solid #15d7ed;
+    display: inline-block;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+#rightBicepLine{
+    border-width: 0 3px 0px 0;
+    padding: 21px 0px;
+    left: 171px;
+    top: 231px;
+}
+#rightRotateLine{
+    border-width: 0 3px 0px 0;
+    padding: 34px 0px;
+    left: 223px;
+    top: 180px;
+}
+#rightShoulderLine{
+    border-width: 0 3px 3px 0;
+    padding: 67px 13px;
+    left: 219px;
+    top: 267px;
+}
+#rightOmoplateLine{
+    border-width: 0 3px 3px 0;
+    padding: 89px 15px;
+    left: 239px;
+    top: 284px;
+}
+
+/* -------------------    Right arm Buttons  --------------------*/
 
 #rightBicepButton{
     right: 451px;
@@ -258,7 +255,7 @@
 }
 
 
-/* -------------------    Left Hand DOTs position --------------------*/
+/* -------------------    Left arm DOTs position --------------------*/
 
 #leftBicepDot{
     position:absolute;
@@ -284,7 +281,41 @@
     top:279px;
 }
 
-/* -------------------    Left Hand Buttons --------------------*/
+/* -------------------    Left arm LINEs position --------------------*/
+
+.leftArmLine{
+    position:absolute;
+    border: solid #15d7ed;
+    display: inline-block;
+    transform: rotate(270deg);
+    z-index: -1;
+}
+#leftBicepLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 24px;
+    left: 424px;
+    top: 254px;
+}
+#leftRotateLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 35px;
+    left: 361px;
+    top: 215px;
+}
+#leftShoulderLine{
+    border-width: 0 3px 3px 0;
+    padding: 13px 67px;
+    left: 320px;
+    top: 321px;
+}
+#leftOmoplateLine{
+    border-width: 0 3px 3px 0;
+    padding: 15px 89px;
+    left: 276px;
+    top: 359px;
+}
+
+/* -------------------    Left arm Buttons --------------------*/
 
 #leftBicepButton{
     left: 452px;
@@ -328,10 +359,10 @@
     left: 41px;
     top: 528px;
 }
-#leftBackArmButton:#leftBackArmArrow{
-    background-color: #FF0000;
+#leftBackArmButton:hover + #leftBackArmArrow{
     animation: none;
 }
+
 /* -------------------    Left Back Arrow position --------------------*/
 
 #leftBackArmArrow{

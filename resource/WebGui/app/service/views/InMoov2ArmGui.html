@@ -25,34 +25,44 @@
     <td id="containerArm2-cell">
         <div id="containerArm2">
             <!-- Right -->
-            <div id="rightArmIndicator" class="rectangleRightArmIndicator preventDragSelect">right Arm</div>
+            <div id="rightArmIndicator" ng-show="isRight()" ng-click="setPanel('rightArm')" class="rectangleArmIndicatorActive preventDragSelect">right Arm</div>
+            <div id="rightArmIndicator" ng-show="!isRight()" ng-click="setPanel('rightArm')" class="rectangleArmIndicator preventDragSelect">right Arm</div>
 
-            <div id="rightBicepButton" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="setPanel('rightBicep')">right bicep</div>   
-            <div id="rightBicepDot" class="dotArmEnabled preventArmDragSelect"></div>
+            <div id="rightBicepButton" ng-show="isRight()" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="setPanel('rightBicep')">right bicep</div>   
+            <div id="rightBicepDot" ng-show="isRight()" class="dotArmEnabled preventArmDragSelect"></div>
+            <div id="rightBicepLine" ng-show="isRight()" class="rightArmLine preventHandDragSelect"></div>
 
-            <div id="rightRotateButton" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="setPanel('rightRotate')">right rotate</div>
-            <div id="rightRotateDot" class="dotArmEnabled preventArmDragSelect"></div>
+            <div id="rightRotateButton" ng-show="isRight()" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="setPanel('rightRotate')">right rotate</div>
+            <div id="rightRotateDot" ng-show="isRight()" class="dotArmEnabled preventArmDragSelect"></div>
+            <div id="rightRotateLine" ng-show="isRight()" class="rightArmLine preventHandDragSelect"></div>
             
-            <div id="rightShoulderButton" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="setPanel('rightShoulder')">right shoulder</div>
-            <div id="rightShoulderDot" class="dotArmEnabled preventArmDragSelect"></div>
+            <div id="rightShoulderButton" ng-show="isRight()" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="setPanel('rightShoulder')">right shoulder</div>
+            <div id="rightShoulderDot" ng-show="isRight()" class="dotArmEnabled preventArmDragSelect"></div>
+            <div id="rightShoulderLine" ng-show="isRight()" class="rightArmLine preventHandDragSelect"></div>
 
-            <div id="rightOmoplateButton" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="setPanel('rightOmoplate')">right omoplate</div>
-            <div id="rightOmoplateDot" class="dotArmEnabled preventArmDragSelect"></div>
+            <div id="rightOmoplateButton" ng-show="isRight()" class="dotArmButtons rightArmSide preventArmDragSelect" ng-click="setPanel('rightOmoplate')">right omoplate</div>
+            <div id="rightOmoplateDot" ng-show="isRight()" class="dotArmEnabled preventArmDragSelect"></div>
+            <div id="rightOmoplateLine" ng-show="isRight()" class="rightArmLine preventHandDragSelect"></div>
 
             <!-- Left -->
-            <div id="leftArmIndicator" class="rectangleLeftArmIndicator preventArmDragSelect">left Arm</div>
+            <div id="leftArmIndicator" ng-show="isLeft()" ng-click="setPanel('leftArm')" class="rectangleArmIndicatorActive preventArmDragSelect">left Arm</div>
+            <div id="leftArmIndicator" ng-show="!isLeft()" ng-click="setPanel('leftArm')" class="rectangleArmIndicator preventArmDragSelect">left Arm</div>
 
-            <div id="leftBicepButton" class="dotArmButtons leftArmSide preventArmDragSelect" ng-click="setPanel('leftBicep')">left bicep</div>
-            <div id="leftBicepDot" class="dotArmEnabled preventArmDragSelect"></div>
+            <div id="leftBicepButton" ng-show="isLeft()" class="dotArmButtons leftArmSide preventArmDragSelect" ng-click="setPanel('leftBicep')">left bicep</div>
+            <div id="leftBicepDot" ng-show="isLeft()" class="dotArmEnabled preventArmDragSelect"></div>
+            <div id="leftBicepLine" ng-show="isLeft()" class="leftArmLine preventHandDragSelect"></div>
 
-            <a id="leftRotateButton" class="dotArmButtons leftArmSide preventArmDragSelect" ng-click="setPanel('leftRotate')">left rotate</a>
-            <div id="leftRotateDot" class="dotArmEnabled preventArmDragSelect"></div>
+            <a id="leftRotateButton" ng-show="isLeft()" class="dotArmButtons leftArmSide preventArmDragSelect" ng-click="setPanel('leftRotate')">left rotate</a>
+            <div id="leftRotateDot" ng-show="isLeft()" class="dotArmEnabled preventArmDragSelect"></div>
+            <div id="leftRotateLine" ng-show="isLeft()" class="leftArmLine preventHandDragSelect"></div>
 
-            <div id="leftShoulderButton" class="dotArmButtons leftArmSide preventArmDragSelect"  ng-click="setPanel('leftShoulder')">left shoulder</div>
-            <div id="leftShoulderDot" class="dotArmEnabled preventArmDragSelect"></div>
+            <div id="leftShoulderButton" ng-show="isLeft()" class="dotArmButtons leftArmSide preventArmDragSelect"  ng-click="setPanel('leftShoulder')">left shoulder</div>
+            <div id="leftShoulderDot" ng-show="isLeft()" class="dotArmEnabled preventArmDragSelect"></div>
+            <div id="leftShoulderLine" ng-show="isLeft()" class="leftArmLine preventHandDragSelect"></div>
 
-            <div id="leftOmoplateButton" class="dotArmButtons leftArmSide preventArmDragSelect" ng-click="setPanel('leftOmoplate')">left omoplate</div>
-            <div id="leftOmoplateDot" class="dotArmEnabled preventArmDragSelect"></div>
+            <div id="leftOmoplateButton" ng-show="isLeft()" class="dotArmButtons leftArmSide preventArmDragSelect" ng-click="setPanel('leftOmoplate')">left omoplate</div>
+            <div id="leftOmoplateDot" ng-show="isLeft()" class="dotArmEnabled preventArmDragSelect"></div>
+            <div id="leftOmoplateLine" ng-show="isLeft()" class="leftArmLine preventHandDragSelect"></div>
 
             <div id="leftBackArmButton" class="dotArmButtons leftArmSide preventArmDragSelect" ng-click="mrl.changeTab('i01')">Back</div>
             <div id="leftBackArmArrow" class="leftBackArmArrow preventArmDragSelect"></div>
@@ -63,31 +73,22 @@
 </td>
 <td>
 <!-- panels begin -->
-<!------------------------ arm begin ------------------------------>
-<table ng-show="showPanel('arm')" class="inmoov-sub-panel table table-striped">
-<tr>
-    <td>
-        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftArm')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
-        <!--------------------------------------------------------------->
-        <img src="../InMoovArm.png"/>
-        <label>leftArm is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <img ng-src="{{(!service.isLeftArmActivated)?'../../red.png':'../../green.png'}}"/>
-    </td>
-</tr>
+<!-------HERE START THE RIGHT ARM--------------------------------------------->
+
+<!------------------------ rightArm begin ------------------------------>
+<table ng-show="showPanel('rightArm')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightArm')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
-        <img src="../InMoovArm.right.png"/>
-        <label>rightArm is:</label>&nbsp;&nbsp;  
-        <img ng-src="{{(!service.isRightArmActivated)?'../../red.png':'../../green.png'}}"/>
+        <img src="../InMoovArm.png"/>
+        <label>rightArm is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(isRight())?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>
 </table>
-<!------------------------ arm end ------------------------------>
-
+<!------------------------ rightArm end ------------------------------>
 <!------------------------ rightBicep begin ------------------------------>
 <table ng-show="showPanel('rightBicep')" class="inmoov-sub-panel table table-striped">
 <tr>
@@ -97,7 +98,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovArm.right.png"/>
         <label>rightArm is:</label>&nbsp;&nbsp;  
-        <img ng-src="{{(!service.isRightArmActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isRight())?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>    
 <tr>
@@ -121,7 +122,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovArm.right.png"/>
         <label>rightArm is:</label>&nbsp;&nbsp;  
-        <img ng-src="{{(!service.isRightArmActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isRight())?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>    
 <tr>
@@ -139,14 +140,14 @@
 <!------------------------ rightRotate end ------------------------------> 
 <!------------------------ rightShoulder begin ------------------------------>
 <table ng-show="showPanel('rightShoulder')" class="inmoov-sub-panel table table-striped">
-    <tr>
+<tr>
     <td>
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('i01.rightArm.shoulder')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../InMoovArm.right.png"/>
         <label>rightArm is:</label>&nbsp;&nbsp;  
-        <img ng-src="{{(!service.isRightArmActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isRight())?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr> 
 <tr>
@@ -163,14 +164,14 @@
 <!------------------------ rightShoulder end ------------------------------> 
 <!------------------------ rightOmoplate begin ------------------------------>
 <table ng-show="showPanel('rightOmoplate')" class="inmoov-sub-panel table table-striped">
-    <tr>
+<tr>
     <td>
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('i01.rightArm.omoplate')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../InMoovArm.right.png"/>
         <label>rightArm is:</label>&nbsp;&nbsp;  
-        <img ng-src="{{(!service.isRightArmActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isRight())?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr> 
 <tr>
@@ -188,6 +189,21 @@
 
 <!-------HERE START THE LEFT ARM--------------------------------------------->
 
+<!------------------------ leftArm begin ------------------------------>
+<table ng-show="showPanel('leftArm')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftArm')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoovArm.right.png"/>
+        <label>leftArm is:</label>&nbsp;&nbsp;  
+        <img ng-src="{{(isLeft())?'../../green.png':'../../red.png'}}"/>
+    </td>
+</tr>
+</table>
+<!------------------------ leftArm end ------------------------------>
+
 <!------------------------ leftBicep begin ------------------------------>
 <table ng-show="showPanel('leftBicep')" class="inmoov-sub-panel table table-striped">
 <tr>
@@ -197,7 +213,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovArm.png"/>
         <label>leftArm is:</label>&nbsp;&nbsp;  
-        <img ng-src="{{(!service.isLeftArmActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isLeft())?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>     
 <tr>
@@ -221,7 +237,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovArm.png"/>
         <label>leftArm is:</label>&nbsp;&nbsp;  
-        <img ng-src="{{(!service.isLeftArmActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isLeft())?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr>    
 <tr>
@@ -246,7 +262,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovArm.png"/>
         <label>leftArm is:</label>&nbsp;&nbsp;  
-        <img ng-src="{{(!service.isLeftArmActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isLeft())?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr> 
 <tr>
@@ -270,7 +286,7 @@
         <!--------------------------------------------------------------->
         <img src="../InMoovArm.png"/>
         <label>leftArm is:</label>&nbsp;&nbsp;  
-        <img ng-src="{{(!service.isLeftArmActivated)?'../../red.png':'../../green.png'}}"/>
+        <img ng-src="{{(isLeft())?'../../green.png':'../../red.png'}}"/>
     </td>
 </tr> 
 <tr>
