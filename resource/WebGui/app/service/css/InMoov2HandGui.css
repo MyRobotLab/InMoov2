@@ -58,8 +58,6 @@
 
 
 #rightHandIndicator{
-    display: table-cell;
-    position:absolute;
     left:80px;
     top:36px;
     width: 200px;
@@ -67,8 +65,6 @@
 }
 
 #leftHandIndicator{
-    display: table-cell;
-    position:absolute;
     right:80px;
     top:36px;
     width: 200px;
@@ -77,37 +73,39 @@
 
 
 .rectangleHandIndicator{
+    position:absolute;
+    display: table-cell;
     border-radius: 5px;
     background: #73AD21;
-    line-height: 40px;
     font-family: helvetica,sans-serif;
-    font-size: 22;
+    font-size: 18px;
     font-weight: normal;
     color: #17d6ed;
+    line-height: 40px;
     background-image: linear-gradient(#001720, #01424c);
     text-align: center;
     vertical-align: middle;
     text-shadow: 0 0 3px #3e2e2e, 0 0 20px #fff, 0 0 30px #00a5cb, 0 0 40px #74ace6, 0 0 50px #0042a4, 0 0 60px #3582f5, 0 0 70px #4954ff;
-    box-shadow: 0 0px 5px 2px rgb(21, 215, 237);
-    cursor:default;  
+    box-shadow: 0 0px 5px 2px rgb(218, 94, 94);
+    cursor:default;
 }
 
 .rectangleHandIndicatorActive{
+    position:absolute;
+    display: table-cell;
     border-radius: 5px;
     background: #73AD21;
-    line-height: 40px;
     font-family: helvetica,sans-serif;
-    font-size: 22;
+    font-size: 18px;
     font-weight: normal;
     color: #17d6ed;
+    line-height: 40px;
     background-image: linear-gradient(#001720, #01424c);
     text-align: center;
     vertical-align: middle;
     text-shadow: 0 0 3px #3e2e2e, 0 0 20px #fff, 0 0 30px #00a5cb, 0 0 12px #74ace6, 0 0 50px #0042a4, 0 0 60px #3582f5, 0 0 70px #4954ff;
-
     -webkit-filterg: saturate(200%)  drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
-    box-shadow: 0 0px 4px 3px rgb(21, 215, 237), 0px 0px 10px 1px rgb(255, 255, 255), 0px 0px 9px 3px rgb(255, 0, 0);
-
+    box-shadow: 0 0px 4px 3px rgb(21, 215, 237), 0px 0px 10px 1px rgb(255, 255, 255), 0px 0px 9px 3px rgb(21, 255, 0);
 }
 
 .dotHandButtons{
@@ -189,6 +187,50 @@
     position:absolute;
     left:162px;
     top:324px;
+}
+/* -------------------    Right hand LINEs position --------------------*/
+.rightHandLine{
+    position:absolute;
+    border: solid #15d7ed;
+    display: inline-block;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+#rightWristLine{
+    border-width: 0 3px 3px 0;
+    padding: 112px 39px;
+    left:140px;
+    top:115px;
+}
+#rightThumbLine{
+    border-width: 0 3px 0px 0;
+    padding: 115px 0px;
+    left:278px;
+    top:277px;
+}
+#rightIndexLine{
+    border-width: 0 3px 0px 0;
+    padding: 47px 0px;
+    left:243px;
+    top:383px;
+}
+#rightMajeureLine{
+    border-width: 0 3px 0px 0;
+    padding: 39px 0px;
+    left:218px;
+    top:366px;
+}
+#rightRingFingerLine{
+    border-width: 0 3px 0px 0;
+    padding: 31px 0px;
+    left:192px;
+    top:350px;
+}
+#rightPinkyLine{
+    border-width: 0 3px 0px 0;
+    padding: 23px 0px;
+    left:166px;
+    top:328px;
 }
 
 /* -------------------    Right Hand Buttons  --------------------*/
@@ -275,6 +317,50 @@
     left:324px;
     top:267px;
 }
+/* -------------------    Left hand LINEs position --------------------*/
+.leftHandLine{
+    position:absolute;
+    border: solid #15d7ed;
+    display: inline-block;
+    transform: rotate(270deg);
+    z-index: -1;
+}
+#leftWristLine{
+    border-width: 0 3px 3px 0;
+    padding: 39px 112px;
+    left:316px;
+    top:190px;
+}
+#leftThumbLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 115px;
+    left:216px;
+    top:389px;
+}
+#leftIndexLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 47px;
+    left:319px;
+    top:429px;
+}
+#leftMajeureLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 39px;
+    left:352px;
+    top:403px;
+}
+#leftRingFingerLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 31px;
+    left:385px;
+    top:379px;
+}
+#leftPinkyLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 23px;
+    left:420px;
+    top:350px;
+}
 
 /* -------------------    Left Hand Buttons --------------------*/
 
@@ -355,4 +441,4 @@
     width:155px;
     left: 421px;
     top: 518px;
-}    
+}

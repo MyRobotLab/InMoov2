@@ -9,7 +9,7 @@ angular.module('mrlapp.service.InMoov2HandGui', []).controller('InMoov2HandGuiCt
     // text published from InMoov2 service
     $scope.onText = null
 
-    $scope.activePanel = 'settings'
+    $scope.activePanel = 'hand'
 
     $scope.selectedButton = {}
 
@@ -104,6 +104,7 @@ angular.module('mrlapp.service.InMoov2HandGui', []).controller('InMoov2HandGuiCt
         }
     }
 
+
     $scope.getPeer = function(peerName) {
         let s = mrl.getService($scope.service.name + '.' + peerName + '@' + this.service.id)
         return s
@@ -182,7 +183,8 @@ angular.module('mrlapp.service.InMoov2HandGui', []).controller('InMoov2HandGuiCt
     //addButton('rightPinkySensor', 'absolute', 401, 238)
 
 
-    $scope.setPanel('hand')
+    //$scope.setPanel('leftHand')
+    //$scope.setPanel('rightHand')
 
     // FIXME FIXME FIXME - single simple subscribeTo(name, method) !!!
     mrl.subscribe(mrl.getRuntime().name, 'getServiceTypeNamesFromInterface');

@@ -37,6 +37,20 @@ angular.module('mrlapp.service.InMoov2ArmGui', []).controller('InMoov2ArmGuiCtrl
         $scope.buttons.push(button)
     }
 
+    $scope.isRight = function() {
+        if ($scope.service){
+            return $scope.service.name.includes("right")
+        }
+        return false
+    }
+
+    $scope.isLeft = function() {
+        if ($scope.service){
+            return $scope.service.name.includes("left")
+        }
+        return false
+    }    
+
     $scope.filterPeers = function(peerName) {
         if (peerName) {
             mrl.search($scope.service.name + '.' + peerName)
