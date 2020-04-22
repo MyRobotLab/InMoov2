@@ -25,7 +25,8 @@
     <td id="containerHead2-cell">
         <div id="containerHead2">
             <!-- Right -->
-            <div id="headIndicator" class="rectangleHeadIndicatorActive preventHeadDragSelect">Head</div>
+            <div id="headIndicator" ng-show="isHead()" ng-click="setPanel('head')" class="rectangleHeadIndicatorActive preventHeadDragSelect">Head</div>
+            <div id="headIndicator" ng-show="!isHead()" ng-click="setPanel('head')" class="rectangleHeadIndicator preventHeadDragSelect">Head</div>
 
             <div id="eyeLidsButton" class="dotHeadButtons rightHeadSide preventHeadDragSelect" ng-click="setPanel('eyeLids')">eyeLids</div>
             <div id="eyeLidsDot" class="dotHeadEnabled preventHeadDragSelect"></div>

@@ -25,7 +25,8 @@
     <td id="containerTorso2-cell">
         <div id="containerTorso2">
             <!-- Right -->
-            <div id="torsoIndicator" class="rectangleTorsoIndicatorActive preventTorsoDragSelect">Torso</div>
+            <div id="torsoIndicator" ng-show="isTorso()" ng-click="setPanel('torso')" class="rectangleTorsoIndicatorActive preventTorsoDragSelect">Torso</div>
+            <div id="torsoIndicator" ng-show="!isTorso()" ng-click="setPanel('torso')" class="rectangleTorsoIndicator preventTorsoDragSelect">Torso</div>
 
             <div id="topStomButton" class="dotTorsoButtons rightTorsoSide preventTorsoDragSelect" ng-click="setPanel('topStom')">top Stom</div>
             <div id="topStomDot" class="dotTorsoEnabled preventTorsoDragSelect"></div>
