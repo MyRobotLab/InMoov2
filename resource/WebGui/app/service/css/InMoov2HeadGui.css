@@ -150,10 +150,10 @@
 
 /* -------------------    Right head DOTs position --------------------*/
 
-#eyeLidsDot{
+#eyelidRightDot{
     position:absolute;
     left:262px;
-    top:228px;
+    top: 227px;
 }
 #eyeYDot{
     position:absolute;
@@ -163,22 +163,49 @@
 
 #jawDot{
     position:absolute;
-    left:256px;
+    left: 261px;
     top:355px;
 }
 
+/* -------------------    Right head LINEs position --------------------*/
+
+.rightHeadLine{
+    position:absolute;
+    border: solid #15d7ed;
+    display: inline-block;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+#eyelidRightLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 54px;
+    left: 155px;
+    top: 274px;
+}
+#eyeYLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 55px;
+    left: 156px;
+    top: 233px;
+}
+#jawLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 56px;
+    left: 148px;
+    top: 360px;
+}
 /* -------------------    Right Head Buttons  --------------------*/
 
-#eyeLidsButton{
-    right: 486px;
+#eyelidRightButton{
+    right: 466px;
     top: 217px;
 }
-#eyeLidsButton:hover + #eyeLidsDot{
+#eyelidRightButton:hover + #eyelidRightDot{
     background-color: #FF0000;
     animation: none;
 }
 #eyeYButton{
-    right: 483px;
+    right: 463px;
     top: 257px;
 }
 #eyeYButton:hover + #eyeYDot{
@@ -187,7 +214,7 @@
 }
 
 #jawButton{
-    right: 491px;
+    right: 474px;
     top: 343px;
 }
 #jawButton:hover + #jawDot{
@@ -198,6 +225,12 @@
 
 /* -------------------    Left Head DOTs position --------------------*/
 
+#eyelidLeftDot{
+    position:absolute;
+    left: 361px;
+    top: 227px;
+}
+
 #rotheadDot{
     position:absolute;
     left:312px;
@@ -205,8 +238,8 @@
 }
 #eyeXDot{
     position:absolute;
-    left:383px;
-    top:255px;
+    left: 362px;
+    top:268px;
 }
 #rollNeckDot{
     position:absolute;
@@ -220,7 +253,56 @@
     top:451px;
 }
 
+/* -------------------    Left head LINEs position --------------------*/
+
+.leftHeadLine{
+    position:absolute;
+    border: solid #15d7ed;
+    display: inline-block;
+    transform: rotate(270deg);
+    z-index: -1;
+}
+#eyelidLeftLine{
+    border-width: 0 3px 0px 0;
+    padding: 47px 0px;
+    left: 415px;
+    top: 186px;
+}
+#rotheadLine{
+    border-width: 0 3px 0px 0;
+    padding: 72px 0px;
+    left: 389px;
+    top: 107px;
+}
+#neckLine{
+    border-width: 0 3px 0px 0;
+    padding: 88px 0px;
+    left: 393px;
+    top: 370px;
+}
+#rollNeckLine{
+    border-width: 0 3px 0px 0;
+    padding: 52px 0px;
+    left: 411px;
+    top: 358px;
+}
+#eyeXLine{
+    border-width: 0 3px 0px 0;
+    padding: 47px 0px;
+    left: 418px;
+    top: 227px;
+}
+
 /* -------------------    Left Head Buttons --------------------*/
+
+#eyelidLeftButton{
+    left: 467px;
+    top: 217px;
+}
+#eyelidLeftButton:hover + #eyeLidLeftDot{
+    background-color: #FF0000;
+    animation: none;
+}
 
 #rotheadButton{
     left: 465px;
@@ -250,7 +332,7 @@
 }
 #eyeXButton{
     left: 468px;
-    top: 242px;
+    top: 257px;
 }
 #eyeXButton:hover + #eyeXDot{
     background-color: #FF0000;
@@ -281,27 +363,27 @@
 
 /* -------------------    arrow Horizontal position --------------------*/
 
-#rotheadArrowHorizontal{
+#rotheadArrowHorizontal img{
     position:absolute;
-    left: 540px;
-    top: 155px;
+    left: 538px;
+    top: 158px;
 }
 
-#eyeXArrowHorizontal{
+#eyeXArrowHorizontal img{
     position:absolute;
     left: 515px;
-    top: 238px;
+    top: 253px;
 }
 
 /* -------------------    arrow Vertical position --------------------*/
 
-#eyeYArrowVertical{
+#eyeYArrowVertical img{
     position:absolute;
-    right: 532px;
+    right: 511px;
     top: 245px;
 }
 
-#neckArrowVertical{
+#neckArrowVertical img{
     position:absolute;
     left: 530px;
     top: 426px;

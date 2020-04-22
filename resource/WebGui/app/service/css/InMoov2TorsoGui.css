@@ -156,6 +156,22 @@
     top:325px;
 }
 
+/* -------------------    Right torso LINEs position --------------------*/
+
+.rightTorsoLine{
+    position:absolute;
+    border: solid #15d7ed;
+    display: inline-block;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+#topStomLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 33px;
+    left: 156px;
+    top: 330px;
+}
+
 /* -------------------    Right torso Buttons  --------------------*/
 
 #topStomButton{
@@ -172,7 +188,7 @@
 
 #midStomDot{
     position:absolute;
-    left:358px;
+    left: 308px;
     top:403px;
 }
 
@@ -180,6 +196,28 @@
     position:absolute;
     left:308px;
     top:470px;
+}
+
+/* -------------------    Left torso LINEs position --------------------*/
+
+.leftTorsoLine{
+    position:absolute;
+    border: solid #15d7ed;
+    display: inline-block;
+    transform: rotate(270deg);
+    z-index: -1;
+}
+#lowStomLine{
+    border-width: 0 3px 0px 0;
+    padding: 76px 0px;
+    left: 390px;
+    top: 400px;
+}
+#midStomLine{
+    border-width: 0 3px 0px 0;
+    padding: 75px 0px;
+    left: 389px;
+    top: 334px;
 }
 
 /* -------------------    Left torso Buttons --------------------*/
@@ -228,24 +266,24 @@
 /* -------------------    arrow Horizontal position --------------------*/
 
 
-#midStomArrowHorizontal{
+#midStomArrowHorizontal img{
     position:absolute;
     left: 550px;
-    top: 386px;
+    top: 389px;
 }
 
 /* -------------------    arrow Vertical position --------------------*/
 
-#topStomArrowVertical{
+#topStomArrowVertical img{
     position:absolute;
     right: 548px;
     top: 300px;
 }
 
-#lowStomArrowHorizontal{
+#lowStomArrowHorizontal img{
     position:absolute;
     left: 550px;
-    top: 453px;
+    top: 455px;
 }
 /* -------------------    dna position --------------------*/
 

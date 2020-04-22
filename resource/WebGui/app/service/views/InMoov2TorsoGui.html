@@ -30,16 +30,19 @@
 
             <div id="topStomButton" class="dotTorsoButtons rightTorsoSide preventTorsoDragSelect" ng-click="setPanel('topStom')">top Stom</div>
             <div id="topStomDot" class="dotTorsoEnabled preventTorsoDragSelect"></div>
+            <div id="topStomLine" ng-show="isTorso()" class="rightTorsoLine preventHandDragSelect"></div>
             <div id="topStomArrowVertical" class="rightTorsoSide preventTorsoDragSelect"><img src="../img/InMoov2/arrow_vertical.png"/></div>
 
             <!-- Left -->
 
             <div id="lowStomButton" class="dotTorsoButtons leftTorsoSide preventTorsoDragSelect" ng-click="setPanel('lowStom')">low Stom</div>
             <div id="lowStomDot" class="dotTorsoEnabled preventTorsoDragSelect"></div>
+            <div id="lowStomLine" ng-show="isTorso()" class="leftTorsoLine preventHandDragSelect"></div>
             <div id="lowStomArrowHorizontal" class="leftTorsoSide preventTorsoDragSelect"><img src="../img/InMoov2/arrow_horizontal.png"/></div>
 
             <div id="midStomButton" class="dotTorsoButtons leftTorsoSide preventTorsoDragSelect" ng-click="setPanel('midStom')">mid Stom</div>
             <div id="midStomDot" class="dotTorsoEnabled preventTorsoDragSelect"></div>
+            <div id="midStomLine" ng-show="isTorso()" class="leftTorsoLine preventHandDragSelect"></div>
             <div id="midStomArrowHorizontal" class="leftTorsoSide preventTorsoDragSelect"><img src="../img/InMoov2/arrow_horizontal.png"/></div>
 
             <div id="leftBackTorsoButton" class="dotTorsoButtons leftTorsoSide preventTorsoDragSelect" ng-click="mrl.changeTab('i01')">Back</div>
