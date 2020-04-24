@@ -1,6 +1,7 @@
 CHATBOTACTIVATED::चैटबॉट भरी हुई है, मैं अन्य घटक शुरू कर सकता हूं, कृपया प्रतीक्षा करें
 CHATBOTLOADING::मैं अपने दिमाग को लोड कर रहा हूं, कृपया प्रतीक्षा करें
 OSSYNCED::नियंत्रण केंद्र के साथ सिंक्रनाइज़ किए गए इनमोओव ऑपरेटिंग सिस्टम
+SETLANG::को भाषा सेट करना
 READY::ठीक है, आपका मेरा ध्यान है
 STARTINGEAR::कान शुरू
 STARTINGEYELIDS::पलकें शुरू करना
@@ -26,8 +27,10 @@ STARTINGROLLNECK::रोल गर्दन की शुरुआत
 STARTINGTORSO::टॉरो शुरू करना
 STARTINGULTRASONIC::अल्ट्रासोनिक सेंसर शुरू करना
 STARTINGVIRTUAL::वर्चुअल इनमोओव सक्रिय
+STARTINGVIRTUALHARD::आभासी हार्डवेयर सक्रिय
 STARTINGSERVOMIXER::इमदादी मिक्सर शुरू
 STARTINGGESTURES::लोडिंग इशारों
+STARTINGSEQUENCE::स्टार्टअप अनुक्रम पूरा हुआ
 TRACKINGSTARTED::ट्रैकिंग शुरू करना
 STOPCHATBOT::चैटबॉट को रोकना।
 STOPEAR::कानों को रोकना।

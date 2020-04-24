@@ -833,7 +833,7 @@
         <img src="../InMoov_Icon.png"/>
         <label>config</label>&nbsp;&nbsp;&nbsp;&nbsp;<img src="../peers.png" height="28" ng-click="filterPeers(null)"/>
         <div class="form-group">
-            <select multiple class="form-control vertical-menu" title="FIXME--This is not yet worky">
+            <select multiple class="form-control vertical-menu" ng-model="myConfig" id="myConfig" tittle="---FIXME---">
                 <option>config-01</option>
                 <option>default</option>
                 <option>my-config-01</option>
@@ -844,9 +844,10 @@
                 <option>my-config-06</option>
             </select>
         </div>
-        <button class="btn btn-default" ng-click="msg.export()">export config</button>
-        <button class="btn btn-default" ng-click="msg.exportAll()">export All</button>
-        <button class="btn btn-default" title="This will load a predefined config" ng-click="msg.load()">load</button>
+        <button class="btn btn-default" ng-click="msg.export('myConfig')">export config</button>
+        <button class="btn btn-default" ng-click="msg.exportAll('myConfig')">export All</button>
+        <button class="btn btn-default" title="This will load the exportAll config named export.py" ng-click="msg.loadFile('data/export.py')">load</button>
+        <!--button class="btn btn-default" title="This will load the selected config" ng-click="msg.loadFile('data/InMoov2/config/(myConfig)')">load</button-->
     </td>
 </tr>
 <tr>
@@ -865,12 +866,7 @@
         </span>
         </button>
         <button class="btn btn-default" ng-click="msg.disable()">disable</button>
-    <!-- FIXME-PLEASE------------------------------------------------------>
-    <!--<button class="btn btn-default" type="button" ng-click="msg.setAutoDisable(!service.autoDisable)">autoDisable all 
-        <span class="ng-binding">off
-        </span>
-    </button>-->
-    <!--------------------------------------------------------------------->
+        </button>
     </td>
 </tr>
 <tr>
@@ -888,7 +884,7 @@
         <br/>
         <input class="form-control vertical-menu" type="text" id="gesture" placeholder="Type or select a gesture" ng-model="selectedGesture" ng-readonly="isConnected" press-enter="executeGesture(selectedGesture)" uib-typeahead="gesture for gesture in service.gestures | filter:$viewValue | limitTo:100" typeahead-min-length="0"/>
         <button class="btn btn-default" ng-click="executeGesture(selectedGesture)">execute</button>
-        <button class="btn btn-default" title="be caution with this, it will run all the gestures randomly" ng-click="msg.cycleGestures()">cycle gestures</button>
+        <button class="btn btn-default" title="be cautious with this, it will run all the gestures randomly" ng-click="msg.cycleGestures()">cycle gestures</button>
         <button class="btn btn-default" ng-click="msg.loadGestures()">reload gestures</button>
         <!--loading gestures by default-->
         <div ng-init="msg.loadGestures()"/></div>

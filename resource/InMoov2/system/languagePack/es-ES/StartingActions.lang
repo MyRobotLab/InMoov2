@@ -2,6 +2,7 @@ CHATBOTACTIVATED::Chatbot Activado, Ahora estoy listo
 CHATBOTLOADING::Cargando Inteligencia Artificial, Por favor, espere un momento
 OSSYNCED::to translate inmoov operating system synced with control center
 READY::Muy bien, lo estoy escuchando
+SETLANG::establecer idioma en
 STARTINGEAR::Iniciando oídos
 STARTINGEYELIDS::to translate Starting eyelids
 STARTINGFULL::to translate Full robot arduino chosen from configuration
@@ -26,8 +27,10 @@ STARTINGROLLNECK::Iniciando servo de movimiento del cuello
 STARTINGTORSO::Iniciando el torso
 STARTINGULTRASONIC::Arrancando sensor ultrasónico
 STARTINGVIRTUAL::modo virtual inmoov
+STARTINGVIRTUALHARD::hardware virtual activado
 STARTINGSERVOMIXER::Arrancando servo mixer
 STARTINGGESTURES::gestos de carga
+STARTINGSEQUENCE::secuencia de inicio completada
 TRACKINGSTARTED::Servicio de seguimiento iniciado
 STOPCHATBOT::Detener chatbot
 STOPEAR::Parando los oídos

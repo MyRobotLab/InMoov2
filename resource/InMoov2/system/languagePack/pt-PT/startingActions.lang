@@ -1,6 +1,7 @@
 CHATBOTACTIVATED::Chatbot carregado, posso começar outros componentes, por favor aguarde
 CHATBOTLOADING::Eu estou carregando meu cérebro, por favor aguarde
 OSSYNCED::sistema operacional inmoov sincronizado com o centro de controle
+SETLANG::definindo o idioma para
 READY::Ok, você tem minha atenção
 STARTINGEAR::Começando ouvidos
 STARTINGEYELIDS::Começando pálpebras
@@ -26,8 +27,10 @@ STARTINGROLLNECK::Começando o pescoço do rolo
 STARTINGTORSO::Torso Inicial
 STARTINGULTRASONIC::Começando o sensor ultrassônico
 STARTINGVIRTUAL::virtual emmoov ativado
+STARTINGVIRTUALHARD::hardware virtual ativado
 STARTINGSERVOMIXER::Servo mixer ativado
 STARTINGGESTURES::gestos de carregamento
+STARTINGSEQUENCE::sequência de inicialização concluída
 TRACKINGSTARTED::iniciando o rastreamento
 STOPCHATBOT::Parando o chatbot
 STOPEAR::Parando os ouvidos

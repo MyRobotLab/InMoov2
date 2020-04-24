@@ -2,6 +2,7 @@ CHATBOTACTIVATED::Dialogsystem bereit, jetzt weitere Komponenten starten
 CHATBOTLOADING::Ich aktiviere mein Hirn, das dauert etwas
 OSSYNCED::inmoov operating system mit control center synchronisiert
 READY::Ok, ich bin bereit
+SETLANG::sprache einstellen auf
 STARTINGEAR::Ich öffne meine Ohren
 STARTINGEYELIDS::Augenlieder aktiviert
 STARTINGFULL::Gesamter Roboter wird gestartet
@@ -26,8 +27,10 @@ STARTINGROLLNECK::Rollneck aktiviert
 STARTINGTORSO::Torso aktiviert
 STARTINGULTRASONIC::Ultraschallsensor starten
 STARTINGVIRTUAL::virtueller inmoov wird gestartet
+STARTINGVIRTUALHARD::virtuelle Hardware aktiviert
 STARTINGSERVOMIXER::servo mixer wird gestartet
 STARTINGGESTURES::gesten laden
+STARTINGSEQUENCE::startsequenz abgeschlossen
 TRACKINGSTARTED::tracking aktiviet
 STOPCHATBOT::Chatbot stoppen
 STOPEAR::Ohren stoppen

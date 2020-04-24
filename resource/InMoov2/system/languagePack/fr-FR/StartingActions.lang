@@ -1,6 +1,7 @@
 CHATBOTACTIVATED::Chatebote activé
 CHATBOTLOADING::Je charge les fichiers de mon intelligence artificielle, veuillez patienter
 OSSYNCED::système d'exploitation syncronisé avec le centre de controle
+SETLANG::langue en
 READY::Je suis prêt à fonctionner
 STARTINGEAR::reconnaissance vocale, oké
 STARTINGEYELIDS::démarrage des paupières
@@ -27,8 +28,10 @@ STARTINGTORSO::démarrage du Torse
 STARTINGULTRASONICRIGHT::démarrage du Capteur à ultrason droit
 STARTINGULTRASONICLEFT::démarrage du Capteur à ultrason gauche
 STARTINGVIRTUAL::Mode inmoov virtuel
+STARTINGVIRTUALHARD::matériel virtuel activé
 STARTINGSERVOMIXER::démarrage du servo mixer
 STARTINGGESTURES::chargement des gestuelles
+STARTINGSEQUENCE::séquence de démarrage terminée
 TRACKINGSTARTED::tracking service démarré
 STOPCHATBOT::Arrêt du chatebot
 STOPEAR::Arrêt de la reconnaissance vocale

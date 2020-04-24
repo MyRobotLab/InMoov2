@@ -1,6 +1,7 @@
 CHATBOTACTIVATED:: Ho caricato il programma di conversazione,forse dovrò attivare altri componenti.Aspetta un momento, per favore
 CHATBOTLOADING::Sto caricando il mio cervello, per favore aspetta
 OSSYNCED:: Sistema operativo dell'InMoov sincronizzato con il centro di controllo
+SETLANG::impostare la lingua su
 READY::OK,sono pronto ad eseguire  i tuoi ordini
 STARTINGEAR:: Attivo gli  orecchi
 STARTINGEYELIDS::Attivo le palpebre
@@ -26,8 +27,10 @@ STARTINGROLLNECK:: Attivo i movimenti del collo
 STARTINGTORSO::Attivo il busto
 STARTINGULTRASONIC::Attivo il sensore ultrasonico
 STARTINGVIRTUAL::InMoov virtuale attivato
+STARTINGVIRTUALHARD::hardware virtuale attivato
 STARTINGSERVOMIXER::Attivo il servo mixer
 STARTINGGESTURES::gesti di caricamento
+STARTINGSEQUENCE::sequenza di avvio completata
 TRACKINGSTARTED::Attivo la localizzazione
 STOPCHATBOT::Interruzione del chatbot
 STOPEAR::Orecchie di arresto

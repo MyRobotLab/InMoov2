@@ -1,6 +1,7 @@
 CHATBOTACTIVATED::Чатбот загружен, я запускаю другие компоненты, пожалуйста, подождите
 CHATBOTLOADING::Я загружаю свой мозг, пожалуйста, подождите
 OSSYNCED::Операционная система ИНМООВ синхронизирована с центром управления
+SETLANG::установка языка на
 READY::Хорошо, я весь во внимании
 STARTINGEAR::Запускаю уши
 STARTINGEYELIDS::Запускаю управление глаз
@@ -26,8 +27,10 @@ STARTINGROLLNECK::Запускаю управление шеи
 STARTINGTORSO::Запускаю управление торса
 STARTINGULTRASONIC::to translate Starting ultrasonic sensor
 STARTINGVIRTUAL::Виртуальный инмоов активирован
+STARTINGVIRTUALHARD::виртуальное оборудование активировано
 STARTINGSERVOMIXER::пусковой сервомиксер
 STARTINGGESTURES::жесты загрузки
+STARTINGSEQUENCE::последовательность запуска завершена
 TRACKINGSTARTED::Начинаю отслеживание
 STOPCHATBOT::Остановка чата
 STOPEAR::Остановка ушей

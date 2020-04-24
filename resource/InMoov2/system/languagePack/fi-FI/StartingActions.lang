@@ -2,6 +2,7 @@ CHATBOTACTIVATED :: Chatbot ladattu, voin käynnistää muita komponentteja, odo
 CHATBOTLOADING :: Minä lataan aivoni, odota
 OSSYNCED :: inmoov-käyttöjärjestelmä synkronoidun ohjauskeskuksen kanssa
 READY :: Ok, sinulla on minun huomioni
+SETLANG::kielen asettaminen
 STARTINGEAR :: Korvien aloitus
 STARTINGEYELIDS :: Aloittaminen silmäluomien
 STARTINGFULL :: Täydellinen robotti arduino valittu kokoonpanosta
@@ -26,8 +27,10 @@ STARTINGROLLNECK :: Aloita telan kaula
 STARTINGTORSO :: Aloitus Torso
 STARTINGULTRASONIC :: Käynnistys ultraäänianturilla
 STARTINGVIRTUAL :: virtuaalinen inmoov aktivoitu
-STARTINGSERVOMIXER::Aloita servo mixer
-STARTINGGESTURES::Eleiden lataaminen
+STARTINGVIRTUALHARD :: virtuell hårdvara aktiverad
+STARTINGSERVOMIXER :: Aloita servo mixer
+STARTINGGESTURES :: Eleiden lataaminen
+STARTINGSEQUENCE :: uppstartssekvens slutförd
 TRACKINGSTARTED :: aloittavan seurannan
 STOPCHATBOT :: Pysäytä chatbot
 STOPEAR :: Korvien pysähtyminen

@@ -1,6 +1,7 @@
 CHATBOTACTIVATED::Chatbot geladen, ik kan andere componenten starten, even geduld aub
 CHATBOTLOADING::Ik laad mijn hersenen, wacht alstublieft
 OSSYNCED::Inmoov besturingssysteem gesynchroniseerd met control center
+SETLANG::taal instellen op
 READY::Oké, je hebt mijn aandacht
 STARTINGEAR::Startende oren
 STARTINGEYELIDS::Start oogleden
@@ -26,8 +27,10 @@ STARTINGROLLNECK::Startrol nek
 STARTINGTORSO::Torso starten
 STARTINGULTRASONIC::to translate Starting ultrasonic sensor
 STARTINGVIRTUAL::Virtuele inmoov geactiveerd
+STARTINGVIRTUALHARD::virtuele hardware geactiveerd
 STARTINGSERVOMIXER::Servo mixer starten
 STARTINGGESTURES::Gebaren laden
+STARTINGSEQUENCE::opstartprocedure voltooid
 TRACKINGSTARTED::Beginnen met tracking
 STOPCHATBOT::Chatbot stoppen
 STOPEAR::Oren stoppen
