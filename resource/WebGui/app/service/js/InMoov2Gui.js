@@ -32,6 +32,7 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     $scope.selectedButton = {}
 
     $scope.selectedGesture = null
+    $scope.selectedConfig = null
 
     // inmoov "all" buttons
     $scope.buttons = []
