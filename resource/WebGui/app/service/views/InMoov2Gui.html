@@ -228,6 +228,8 @@
         <label>leftHand Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;
         <toggle width="70" height="28" ng-model="service.isLeftHandActivated" title="To access settings, the body part must be activated" ng-change="!service.isLeftHandActivated?msg.stopLeftHand():msg.startLeftHand()" width="120" height="30" on="ON" off="OFF"/>&nbsp;&nbsp;
         <button class="btn btn-default" ng-show="service.isLeftHandActivated" ng-click="mrl.changeTab(service.name + '.leftHand')">Settings</button>
+        <label ng-show="service.isLeftHandActivated">Sensors:</label>&nbsp;
+        <toggle width="70" height="28" ng-show="service.isLeftHandActivated" ng-model="service.isLeftSensorsEnabled" title="Activate this if you use finger sensors" ng-change="!service.isLeftSensorsEnabled?msg.leftSensorsEnabled(false):msg.leftSensorsEnabled(true)" width="120" height="30" on="ON" off="OFF"/>
     </td>
 </tr>
 <tr>
@@ -239,6 +241,8 @@
         <label>rightHand Activated:</label>&nbsp;&nbsp;
         <toggle width="70" height="28" ng-model="service.isRightHandActivated" title="To access settings, the body part must be activated" ng-change="!service.isRightHandActivated?msg.stopRightHand():msg.startRightHand()" width="120" height="30" on="ON" off="OFF"/>&nbsp;&nbsp;
         <button class="btn btn-default" ng-show="service.isRightHandActivated" ng-click="mrl.changeTab(service.name + '.rightHand')">Settings</button>
+        <label ng-show="service.isRightHandActivated">Sensors:</label>&nbsp;
+        <toggle width="70" height="28" ng-show="service.isRightHandActivated" ng-model="service.isRightSensorsEnabled" title="Activate this if you use finger sensors" ng-change="!service.isRightSensorsEnabled?msg.rightSensorsEnabled(false):msg.rightSensorsEnabled(true)" width="120" height="30" on="ON" off="OFF"/>
     </td>
 </tr>
 <tr>
@@ -312,12 +316,12 @@
 <tr>
     <td>
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('openCV')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eye')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../OpenCV.png"/>
         <label>openCV Activated:</label>&nbsp;
-        <toggle width="70" height="28" ng-model="service.isOpenCVActivated" title="To access settings, the openCV must be activated" ng-change="!service.isOpenCVActivated?msg.stopOpenCV():msg.startOpenCV()" on="ON" off="OFF"/>&nbsp;&nbsp;
-        <button class="btn btn-default" ng-show="service.isOpenCVActivated" ng-click="mrl.changeTab(service.name + '.eye')">Settings</button>
+        <toggle width="70" height="28" ng-model="service.isEyeActivated" title="To access settings, the openCV must be activated" ng-change="!service.isEyeActivated?msg.stopEye():msg.startEye()" on="ON" off="OFF"/>&nbsp;&nbsp;
+        <button class="btn btn-default" ng-show="service.isEyeActivated" ng-click="mrl.changeTab(service.name + '.eye')">Settings</button>
     </td>
 </tr>
 <!--tr>
@@ -347,12 +351,14 @@
         <label>eyeLidRight Activated:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <toggle class="btn-right" width="70" height="28" ng-model="isEyeLidRightActivated" ng-change="!isEyeLidRightActivated?msg.stopEyeLidRight():msg.startEyeLidRight()" on="ON" off="OFF">
     </td>
-</tr>
-<tr-->
+</tr-->
+<tr>
     <td>
         <img src="../Tracking.png"/>
-        <toggle ng-model="service.mute" ng-change="msg.setMute(!service.mute)" width="140" height="30" on="head tracking on" off="head tracking off"></toggle>
-        <toggle ng-model="service.mute" ng-change="msg.setMute(!service.mute)" width="140" height="30" on="eyes tracking on" off="eyes tracking off"></toggle>
+        <!--toggle ng-model="service.mute" ng-change="msg.setMute(!service.mute)" width="140" height="30" on="head tracking on" off="head tracking off"></toggle-->
+        <toggle ng-model="service.mute" ng-change="msg.startHeadTracking()" width="140" height="30" on="head tracking on" off="head tracking off"></toggle>
+        <!--toggle ng-model="service.mute" ng-change="msg.setMute(!service.mute)" width="140" height="30" on="eyes tracking on" off="eyes tracking off"></toggle-->
+        <toggle ng-model="service.mute" ng-change="msg.startEyesTracking()" width="140" height="30" on="eyes tracking on" off="eyes tracking off"></toggle>
     </td>
 </tr>
 <tr>
