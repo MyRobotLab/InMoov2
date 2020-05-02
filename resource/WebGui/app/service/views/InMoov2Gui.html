@@ -70,17 +70,17 @@
 </td>
 <td>
 <!-- panels begin -->
-<!------------------------ brain begin ------------------------------>
-<table ng-show="showPanel('brain')" class="inmoov-sub-panel table table-striped">
+<!------------------------ chatBot begin ------------------------------>
+<table ng-show="showPanel('chatBot')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('brain')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('chatBot')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../Brain.png"/>
-        <label>brain Activated:</label>&nbsp;
-        <toggle width="70" height="30" ng-model="service.isBrainActivated" ng-change="!service.isBrainActivated?msg.stopBrain():msg.startBrain()" on="ON" off="OFF"/>
-        <button class="btn btn-default" ng-show="service.isBrainActivated" ng-click="setPanel('brain1')">Settings</button>
+        <label>chatBot Activated:</label>&nbsp;
+        <toggle width="70" height="30" ng-model="service.isChatBotActivated" ng-change="!service.isChatBotActivated?msg.stopChatBot():msg.startChatBot()" on="ON" off="OFF"/>
+        <button class="btn btn-default" ng-show="service.isChatBotActivated" ng-click="setPanel('chatBot1')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -101,20 +101,20 @@
     </td>
 </tr>
 </table>
-<!------------------------ brain end ------------------------------>
-<!------------------------ brain1 begin ------------------------------>
-<table ng-show="showPanel('brain1')" class="inmoov-sub-panel table table-striped">
+<!------------------------ chatBot end ------------------------------>
+<!------------------------ chatBot1 begin ------------------------------>
+<table ng-show="showPanel('chatBot1')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('brain')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('chatBot')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
     </td>
 </tr>
 <tr>
     <td>
         <p>--FIXME--Need to refresh page or F5 panel should show below</p>
-        <div class="tab-content" service-body panel="mrl.getPanel('i01.brain')"></div>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.chatBot')"></div>
     </td>
 </tr>
 <tr>
@@ -123,7 +123,7 @@
     </td>
 </tr>
 </table>
-<!------------------------ brain1 end ------------------------------>
+<!------------------------ chatBot1 end ------------------------------>
 <!------------------------ arm begin ------------------------------>
 <table ng-show="showPanel('arm')" class="inmoov-sub-panel table table-striped">
 <tr>
@@ -316,12 +316,12 @@
 <tr>
     <td>
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eye')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('opencv')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../OpenCV.png"/>
         <label>openCV Activated:</label>&nbsp;
-        <toggle width="70" height="28" ng-model="service.isEyeActivated" title="To access settings, the openCV must be activated" ng-change="!service.isEyeActivated?msg.stopEye():msg.startEye()" on="ON" off="OFF"/>&nbsp;&nbsp;
-        <button class="btn btn-default" ng-show="service.isEyeActivated" ng-click="mrl.changeTab(service.name + '.eye')">Settings</button>
+        <toggle width="70" height="28" ng-model="service.isOpenCvActivated" title="To access settings, the openCV must be activated" ng-change="!service.isOpenCvActivated?msg.stopOpenCV():msg.startOpenCV()" on="ON" off="OFF"/>&nbsp;&nbsp;
+        <button class="btn btn-default" ng-show="service.isOpenCvActivated" ng-click="mrl.changeTab(service.name + '.opencv')">Settings</button>
     </td>
 </tr>
 <!--tr>
@@ -850,10 +850,11 @@
                 <option>my-config-06</option>
             </select>
         </div>
-        <button class="btn btn-default" ng-click="msg.export('myConfig')">export config</button>
+        <!--button class="btn btn-default" ng-click="msg.export('myConfig')">export config</button-->
         <button class="btn btn-default" title="This will create a file in data/InMoov2/config" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">export All</button>
         <button class="btn btn-default" title="This will load the file named myConfig.py" ng-click="msg.loadFile('data/InMoov2/config/myConfig.py')">load</button>
         <!--button class="btn btn-default" title="This will load the selected config" ng-click="msg.loadFile('data/InMoov2/config/(selectedConfig)')">load</button-->
+        <button class="btn btn-default" title="This will initialize InMoov" ng-click="msg.loadFile('resource/InMoov2/InMoov2.py')">load system</button>
     </td>
 </tr>
 <tr>
@@ -862,7 +863,6 @@
         <label>services</label>
         <br/>
         <button class="btn btn-default" ng-click="msg.startAll()">start all</button>
-        <!--<button class="btn btn-default" ng-click="msg.loadSystem()">load system</button>-->
         <button class="btn btn-default" ng-click="msg.startServos()">start servos</button>
         <button class="btn btn-default" ng-click="msg.fullSpeed()">full speed</button>
         <button class="btn btn-default" ng-click="msg.halfSpeed()">half speed</button>
@@ -893,7 +893,7 @@
         <button class="btn btn-default" title="be cautious with this, it will run all the gestures randomly" ng-click="msg.cycleGestures()">cycle gestures</button>
         <button class="btn btn-default" ng-click="msg.loadGestures()">reload gestures</button>
         <!--loading gestures by default-->
-        <div ng-init="msg.loadGestures()"/></div>
+        <div ng-init="msg.loadGestures()"></div>
     </td>
 </tr>
 </table>
