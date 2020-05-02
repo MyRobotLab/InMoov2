@@ -29,7 +29,7 @@ ThisServicePart=RuningFolder+'config/service_'+os.path.basename(inspect.stack()[
 CheckFileExist(ThisServicePart)
 ThisServicePartConfig = ConfigParser.ConfigParser()
 ThisServicePartConfig.read(ThisServicePart+'.config')
-i01.isNeopixelActivated()=0
+isNeopixelActivated=0
 
 
 
@@ -44,7 +44,7 @@ except:
 
 
 try:
-  i01.isNeopixelActivated()=ThisServicePartConfig.getboolean('MAIN', 'i01.isNeopixelActivated()') 
+  isNeopixelActivated=ThisServicePartConfig.getboolean('MAIN', 'isNeopixelActivated') 
   masterArduinoPort=ThisServicePartConfig.get('MAIN', 'NeopixelMasterPort')
   pin=ThisServicePartConfig.getint('NEOPIXEL', 'pin') 
   numberOfPixel=ThisServicePartConfig.getint('NEOPIXEL', 'numberOfPixel')
@@ -66,7 +66,7 @@ except:
 log.info("NEOPIXEL.config")
 log.info("NeopixelMaster : "+str(ThisServicePartConfig.get('MAIN', 'NeopixelMaster')))
 log.info("masterArduinoPort : "+str(masterArduinoPort))
-log.info("i01.isNeopixelActivated() : "+str(i01.isNeopixelActivated()))
+log.info("isNeopixelActivated : "+str(isNeopixelActivated))
 log.info("pin : "+str(pin))
 log.info("numberOfPixel : "+str(numberOfPixel))
   
@@ -74,7 +74,7 @@ log.info("numberOfPixel : "+str(numberOfPixel))
 #                 SERVICE START
 # ##############################################################################
 
-if i01.isNeopixelActivated()==1:
+if isNeopixelActivated==1:
   neopixelArduino = Runtime.createAndStart("neopixelArduino","Arduino")
   
   #check if connection is serial or usb
@@ -86,22 +86,22 @@ if i01.isNeopixelActivated()==1:
       neopixelArduinoIsConnected=CheckArduinos(neopixelArduino,masterArduinoPort,masterArduino)
     except:
       errorSpokenFunc('BAdrduinoChoosen','Neo pixel')
-      i01.isNeopixelActivated()=0
+      isNeopixelActivated=0
       neopixelArduinoIsConnected=0
       pass  
   
   
   sleep(0.1)
 
-  neopixel = Runtime.createAndStart("neopixel","NeoPixel")
+  neopixel = Runtime.createAndStart("neopixel","Neopixel")
   if neopixelArduinoIsConnected==True:
-    #Starting NeoPixel Service
+    #Starting Neopixel Service
     neopixel.attach(neopixelArduino, pin, numberOfPixel)
     i01.neopixel=neopixel
     i01.neopixelArduino=neopixelArduino
-    i01.speakBlocking(i01.languagePack.get("startingNeoPixel"))
+    i01.speakBlocking(i01.languagePack.get("STARTINGNEOPIXEL"))
   else:
-    i01.isNeopixelActivated()=0
+    isNeopixelActivated=0
     
-if boot_green and i01.isNeopixelActivated():    
+if boot_green and isNeopixelActivated:    
   i01.setNeopixelAnimation("Theater Chase", 0, 255, 50, 1)
