@@ -1,6 +1,6 @@
 ;----------------------------- NEOPIXEL RX/TX CONFIG ----------------------------------------
 [MAIN]
-i01.isNeopixelActivated()=False
+isNeopixelActivated=False
 NeopixelMaster=left
 ;NeopixelMaster= right / left
 NeopixelMasterPort=Serial2
@@ -16,5 +16,3 @@ downloadSomething_blue=True
 error_red=True
 flash_when_speak = True
 ;----------------------------------- END --------------------------------------------------
-
-
