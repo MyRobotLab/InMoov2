@@ -169,6 +169,14 @@
     </td>
 </tr>
 <tr>
+    <td colspan="2">
+        <!-- select class="form-control" id="select_language" ng-model="selectedLanguage" ng-change="setLanguage()" ng-options="name for (name, value) in languages"></select -->
+        <select class="form-control" ng-model="selectedLanguage" ng-change="setLanguage()">
+            <option ng-repeat="(key, value) in service.locales" value="{{key}}">{{value.displayLanguage}} - {{value.displayCountry}} </option>
+        </select>              
+    </td>
+</tr>
+<tr>
     <td>
         <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
     </td>
@@ -390,7 +398,8 @@
         </ui-select>
 
 -->
-        <button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="setPanel('controller_right')">Settings</button>
+        <!--button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="setPanel('controller_right')">Settings</button-->
+        <button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.right')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -401,7 +410,8 @@
         <img src="../microcontroller_1.png"/>
         <label>controller left:</label>&nbsp;&nbsp;&nbsp;
         <toggle width="70" height="30" id="leftPort" ng-model="service.isLeftPortActivated" title="To access settings, the button must be activated" ng-change="!service.isLeftPortActivated?msg.loadFile('resource/InMoov2/system/startScripts/i01_left_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_left_start.py')" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;  
-        <button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="setPanel('controller_left')">Settings</button>
+        <!--button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="setPanel('controller_left')">Settings</button-->
+        <button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.left')">Settings</button>
     </td>
 </tr>
 <tr>
@@ -412,6 +422,7 @@
         <img src="../microcontroller_1.png"/>
         <label>controller 3:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <toggle width="70" height="30" id="controller3" ng-model="service.isController3Activated" title="To access settings, the button must be activated" ng-change="!service.isController3Activated?msg.loadFile('resource/InMoov2/system/startScripts/i01_controller3_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_controller3_start.py')" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;  
+        <!--button class="btn btn-default" ng-show="service.isController3Activated" width="80" height="30" ng-click="setPanel('controller_3')">Settings</button-->
         <button class="btn btn-default" ng-show="service.isController3Activated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller3')">Settings</button>
     </td>
 </tr>
@@ -423,7 +434,8 @@
         <img src="../microcontroller_1.png"/>
         <label>controller 4:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <toggle width="70" height="30" id="controller4" ng-model="service.isController4Activated" title="To access settings, the button must be activated" ng-change="!service.isController4Activated?msg.loadFile('resource/InMoov2/system/startScripts/i01_controller4_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_controller4_start.py')" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;  
-        <button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="setPanel('controller_4')">Settings</button>
+        <!--button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="setPanel('controller_4')">Settings</button-->
+        <button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller4')">Settings</button>
 </tr>
 <tr>
     <td>
@@ -656,7 +668,7 @@
         <!--------------------------------------------------------------->
         <img src="../Pir.png"/>  
         <label>pir:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <toggle width="70" height="30" ng-model="service.isPirActivated" title="To access settings, the pir must be activated" ng-change="!service.isPirActivated?msg.stopPir():msg.startPir()" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;  
+        <toggle width="70" height="30" ng-model="service.isPirActivated" title="To access settings, the pir must be activated" ng-change="!service.isPirActivated?msg.stopPir():msg.loadFile('resource/InMoov2/system/startScripts/i01_pir_start.py')" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;  
         <button class="btn btn-default" ng-show="service.isPirActivated" width="80" height="30" ng-click="setPanel('pir')">Settings</button>
     </td>
 </tr>
