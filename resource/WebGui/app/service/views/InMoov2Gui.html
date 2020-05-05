@@ -680,11 +680,11 @@
         <!--------------------------------------------------------------->
         <img src="../kinect.png"/>
         <label>openNI:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <toggle width="70" height="30" ng-model="service.isKinectActivated" title="To access settings, the kinect must be activated" ng-change="!service.isKinectActivated?msg.stopOpenNi():msg.startOpenNi()" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;
-        <button class="btn btn-default" ng-show="service.isKinectActivated" ng-click="setPanel('kinect')">Settings</button>
+        <toggle width="70" height="30" ng-model="service.isOpenNiActivated" title="To access settings, the openni must be activated" ng-change="!service.isOpenNiActivated?msg.stopOpenNi():msg.loadFile('resource/InMoov2/system/startScripts/i01_openni_start.py')" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;
+        <button class="btn btn-default" ng-show="service.isOpenNiActivated" ng-click="setPanel('openni')">Settings</button>
     </td>
 </tr>
-<!----------------------------kinect end---------------------------------->
+<!----------------------------OpenNI end---------------------------------->
 <tr>
     <td>
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
@@ -793,8 +793,8 @@
 </tr>
 </table>
 <!------------------------ ultraSonicLeft end ------------------------------>
-<!------------------------ kinect begin ------------------------------>
-<table ng-show="showPanel('kinect')" class="inmoov-sub-panel table table-striped">
+<!------------------------ openni begin ------------------------------>
+<table ng-show="showPanel('openni')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
@@ -803,7 +803,7 @@
     </td>
 </tr>
 <tr>
-    <td class="tab-content" service-body panel="mrl.getPanel('i01.openNI')"></td>
+    <td class="tab-content" service-body panel="mrl.getPanel('i01.openni')"></td>
 </tr>
 <tr>
     <td>
@@ -843,7 +843,7 @@
     </td>
 </tr>
 </table>
-<!------------------------ kinect end ------------------------------>
+<!------------------------ openni end ------------------------------>
 <!------------------------ InMoov begin ------------------------------>
 <table ng-show="showPanel('InMoov')" class="inmoov-sub-panel table table-striped">
 <tr>

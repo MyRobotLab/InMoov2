@@ -1,8 +1,0 @@
-lastUsername:default
-tmpname:
-jsenabled:true
-null:
-name:default
-parameterHowDoYouDo:
-topic:default
-questionfirstinit:
