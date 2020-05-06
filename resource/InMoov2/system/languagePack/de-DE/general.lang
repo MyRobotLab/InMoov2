@@ -1,8 +1,0 @@
-MOUTHSYNCRONISATION::Automatische Synchronisierung des Mundes mit dem Audio Signal
-MOUTHSYNCRONISATIONBAD::Kein zuverlässiges Audio Signal erkannt, 
-MOUTHSYNCRONISATIONNOTPERFECT::Schwaches Audio Signal.
-MOUTHSYNCRONISATIONOK::Gut, schau auf meine Lippen, sie bewegen sich
-NEWMRL::Alert ! My robot lab dot jar was updated, I need to reinstall the system now. I will shutdown. please restart me.
-NOSKELETON::Warnung! mein System 1 oder mehr Arduino verwenden, aber es gibt keine Skelettteile aktiviert
-SHUTDOWN::Löschung meines Systems
-WHATISTHISLANGUAGE::Deutsche Sprache aktiviert

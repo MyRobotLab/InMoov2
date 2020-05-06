@@ -1,8 +1,0 @@
-MOUTHSYNCRONISATION :: Suun synkronointi automaattisesti äänisignaalin perusteella
-MOUTHSYNCRONISATIONBAD :: En havaitsi yhtään hyvää äänisignaalia analogisessa portissa,
-MOUTHSYNCRONISATIONNOTPERFECT :: Tunnistan äänisignaalin, mutta se ei ole täydellinen Tarkista aref arduino, älä huoli siitä, että se on työläs
-MOUTHSYNCRONISATIONOK :: Nizza, katso huuliani, he liikkuvat
-NEWMRL :: Alertti, minun robottirobottipistesarja päivitettiin, minun on asennettava järjestelmä uudelleen nyt.
-NOSKELETON :: Hälytys! järjestelmäni käyttää yhtä tai useampaa arduinoa, mutta ei ole olemassa luurankoosia
-SHUTDOWN :: Sammuta järjestelmäni, odota 10 sekuntia
-WHATISTHISLANGUAGE :: Aseta kielipaketti englanniksi
