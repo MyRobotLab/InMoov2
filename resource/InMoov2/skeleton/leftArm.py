@@ -19,7 +19,7 @@ try:
   i01.isLeftArmActivated()=ThisSkeletonPartConfig.getboolean('MAIN', 'i01.isLeftArmActivated()') 
 
 except:
-  errorSpokenFunc('ConfigParserProblem','leftarm.config')
+  errorSpokenFunc('CONFIGPARSERPROBLEM','leftarm.config')
   pass
   
   
@@ -55,7 +55,7 @@ if i01.isLeftArmActivated()==1 and (ScriptType=="LeftSide" or ScriptType=="Full"
       leftArm.rotate.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rotate'))
       leftArm.omoplate.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'omoplate'))
     except:
-      errorSpokenFunc('ConfigParserProblem',ThisSkeletonPart)
+      errorSpokenFunc('CONFIGPARSERPROBLEM',ThisSkeletonPart)
       pass
       
     leftArm.bicep.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'bicep'))

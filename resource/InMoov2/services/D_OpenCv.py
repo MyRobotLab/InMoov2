@@ -52,7 +52,7 @@ if i01.vision.openCVenabled:
   i01.opencv = Runtime.start("i01.opencv", "OpenCV")
   i01.vision.setOpenCVenabled(i01.startOpenCV())
   if not i01.vision.openCVenabled:
-    errorSpokenFunc('OpenCvNoWorky','camera '+str(i01.opencv.getCameraIndex()))
+    errorSpokenFunc('OPENCVNOWORKY','camera '+str(i01.opencv.getCameraIndex()))
   else:
     python.subscribe("i01.opencv", "publishRecognizedFace")
   

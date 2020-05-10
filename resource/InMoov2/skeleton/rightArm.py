@@ -20,7 +20,7 @@ try:
   i01.isRightArmActivated()=ThisSkeletonPartConfig.getboolean('MAIN', 'i01.isRightArmActivated()') 
 
 except:
-  errorSpokenFunc('ConfigParserProblem','rightarm.config')
+  errorSpokenFunc('CONFIGPARSERPROBLEM','rightarm.config')
   pass  
  
 # ##############################################################################

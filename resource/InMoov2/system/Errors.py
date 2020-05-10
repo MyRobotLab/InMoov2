@@ -6,4 +6,4 @@
 def errorSpokenFunc(errorType,param=""):
   global RobotIsErrorMode 
   RobotIsErrorMode=1
-  i01.speakAlert(i01.languagePack.get(errorType)+str(param))
+  i01.speakAlert(i01.localize(errorType)+str(param))

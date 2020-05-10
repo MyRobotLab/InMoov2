@@ -228,7 +228,7 @@ if rightHandSensorActivated:
         pass
     
   except:
-    errorSpokenFunc('BAdrduinoChoosen','right Hand Sensor')
+    errorSpokenFunc('BADRDUINOCHOOSEN','right Hand Sensor')
     rightHandSensorActivated=False
     pass
 
@@ -363,6 +363,6 @@ if leftHandSensorActivated:
         print "=========LeftSensorOFF======="
     
   except:
-    errorSpokenFunc('BAdrduinoChoosen','left Hand Sensor')
+    errorSpokenFunc('BADRDUINOCHOOSEN','left Hand Sensor')
     leftHandSensorActivated=False
     pass

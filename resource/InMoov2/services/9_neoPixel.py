@@ -59,7 +59,7 @@ try:
 
   error_red=ThisServicePartConfig.getboolean('BASIC_REACTIONS', 'error_red')
 except:
-  errorSpokenFunc('ConfigParserProblem','Neopixel.config')
+  errorSpokenFunc('CONFIGPARSERPROBLEM','Neopixel.config')
   pass
   
 #for noworky
@@ -85,7 +85,7 @@ if isNeopixelActivated==1:
       masterArduino=eval(ThisServicePartConfig.get('MAIN', 'NeopixelMaster'))
       neopixelArduinoIsConnected=CheckArduinos(neopixelArduino,masterArduinoPort,masterArduino)
     except:
-      errorSpokenFunc('BAdrduinoChoosen','Neo pixel')
+      errorSpokenFunc('BADRDUINOCHOOSEN','Neo pixel')
       isNeopixelActivated=0
       neopixelArduinoIsConnected=0
       pass  
@@ -99,7 +99,7 @@ if isNeopixelActivated==1:
     neopixel.attach(neopixelArduino, pin, numberOfPixel)
     i01.neopixel=neopixel
     i01.neopixelArduino=neopixelArduino
-    i01.speakBlocking(i01.languagePack.get("STARTINGNEOPIXEL"))
+    i01.speakBlocking(i01.localize("STARTINGNEOPIXEL"))
   else:
     isNeopixelActivated=0
     

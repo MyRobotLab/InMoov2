@@ -29,4 +29,4 @@ def YesName(name):
       i01.opencv.disableFilter("FaceRecognizer")
       i01.chatBot.getResponse("SYSTEM_SAY_HELLO")
     else:
-      errorSpokenFunc('OpenCvNoWorky')
+      errorSpokenFunc('OPENCVNOWORKY')

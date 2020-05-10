@@ -37,9 +37,9 @@ if ScriptType=="LeftSide" or ScriptType=="Full":
   LeftPortIsConnected=CheckArduinos(left,MyLeftPort)
   if LeftPortIsConnected:left.setAref(ArefLeftArduino)
   
-if ScriptType=="LeftSide":i01.speakBlocking(i01.languagePack.get("startingLeftOnly"))
-if ScriptType=="RightSide":i01.speakBlocking(i01.languagePack.get("startingRightOnly"))
-if ScriptType=="Full":i01.speakBlocking(i01.languagePack.get("startingFull"))
-if ScriptType=="NoArduino":i01.speakBlocking(i01.languagePack.get("startingNoArduino"))
+if ScriptType=="LeftSide":i01.speakBlocking(i01.localize("STARTINGLEFTONLY"))
+if ScriptType=="RightSide":i01.speakBlocking(i01.localize("STARTINGRIGHTONLY"))
+if ScriptType=="Full":i01.speakBlocking(i01.localize("STARTINGFULL"))
+if ScriptType=="NoArduino":i01.speakBlocking(i01.localize("STARTINGNOARDUINO"))
 
 

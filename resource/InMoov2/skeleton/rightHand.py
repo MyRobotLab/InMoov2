@@ -20,7 +20,7 @@ try:
   i01.isRightHandActivated()=ThisSkeletonPartConfig.getboolean('MAIN', 'i01.isRightHandActivated()') 
   
 except:
-  errorSpokenFunc('ConfigParserProblem','right hand . config')
+  errorSpokenFunc('CONFIGPARSERPROBLEM','right hand . config')
   pass    
  
 # ##############################################################################

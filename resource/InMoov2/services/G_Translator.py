@@ -242,7 +242,7 @@ def translateText(text,language):
   needAdownloadTalk=1
   if translatorDegraded:
     translatorDegraded=0
-    i01.speakBlocking(i01.languagePack.get("MaryTranslator"))
+    i01.speakBlocking(i01.localize("MARYTRANSLATOR"))
     
   if outputSpeechService=="Polly" or outputSpeechService=="MarySpeech" or outputSpeechService=="NaturalReaderSpeech":
     RealLang="0"
@@ -286,4 +286,4 @@ def translateText(text,language):
         #restore original VoiceName
         mouth.setVoice(VoiceName)        
   else:
-    i01.speakBlocking(i01.languagePack.get("PollyNeeded"))
+    i01.speakBlocking(i01.localize("POLLYNEEDED"))

@@ -44,7 +44,7 @@ def switchOffAllNervo():
 if isNervoboardRelayActivated:
   try:
     NervoboardRelayControlerArduino=eval(ThisServicePartConfig.get('MAIN', 'NervoboardRelayControlerArduino'))
-    i01.speakBlocking(i01.languagePack.get("startingNervoPower"))
+    i01.speakBlocking(i01.localize("STARTINGNERVOPOWER"))
     i01.LeftRelay1=Runtime.createAndStart("i01.LeftRelay1", "Relay")
     i01.LeftRelay1.arduino=NervoboardRelayControlerArduino
     i01.LeftRelay1.pin=PinLeftNervoPower1
@@ -55,7 +55,7 @@ if isNervoboardRelayActivated:
     
     switchOnAllNervo()
   except:
-    errorSpokenFunc('BAdrduinoChoosen','nervo board relay')
+    errorSpokenFunc('BADRDUINOCHOOSEN','nervo board relay')
     isNervoboardRelayActivated=0
     pass
       

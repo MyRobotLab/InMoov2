@@ -21,7 +21,7 @@ try:
   
   
 except:
-  errorSpokenFunc('ConfigParserProblem','lefthand.config')
+  errorSpokenFunc('CONFIGPARSERPROBLEM','lefthand.config')
   pass  
   
   

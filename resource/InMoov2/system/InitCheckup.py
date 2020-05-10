@@ -51,7 +51,7 @@ for filename in sorted(os.listdir(RuningFolder+'services')):
     if DEBUG==1:print filename
 if LoadingPicture:display(RuningFolder+'/system/pictures/loading_1024-600.jpg')
 #mrl too old dude, update it !
-#if actualVersion<int(mrlCompatible):errorSpokenFunc('MrlNeedUpdate')   
+#if actualVersion<int(mrlCompatible):errorSpokenFunc('MRLNEEDUPDATE')   
  
 ################################
 # INIT.4 - skeleton loading & virtual skeleton
@@ -64,7 +64,7 @@ for filename in os.listdir(RuningFolder+'skeleton'):
 
 
 if ((not i01.isEyeLidsActivated() and not i01.isHeadActivated() and not i01.isLeftArmActivated() and not i01.isLeftHandActivated() and not i01.isRightArmActivated() and not i01.isRightHandActivated() and not i01.isTorsoActivated()) and (ScriptType!="Virtual" and ScriptType!="NoArduino")):
-  i01.speakBlocking(i01.languagePack.get("noSkeleton"))
+  i01.speakBlocking(i01.localize("NOSKELETON"))
 
 if virtualInmoovActivated:i01.startVinMoov()
   

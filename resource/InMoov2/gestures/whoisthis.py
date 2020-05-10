@@ -18,5 +18,5 @@ def whoisthis():
       i01.moveHead(90,90,90)
       onRecognizedFace(name)
     else:
-      errorSpokenFunc('OpenCvNoWorky')
+      errorSpokenFunc('OPENCVNOWORKY')
 

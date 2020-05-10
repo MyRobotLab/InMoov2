@@ -24,7 +24,7 @@ try:
     TorsoConnectedToArduino=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino'))
     TorsoConnectedToArduinoPortBoardType=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino').replace("left","BoardTypeMyLeftPort").replace("right","BoardTypeMyRightPort"))
 except:
-  errorSpokenFunc('ConfigParserProblem','torso.config')
+  errorSpokenFunc('CONFIGPARSERPROBLEM','torso.config')
   i01.isTorsoActivated()=0
   TorsoConnectedToArduino=""
   pass

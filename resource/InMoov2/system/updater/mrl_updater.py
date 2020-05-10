@@ -40,7 +40,7 @@ if str(now.year)!=str(runtime.getVersion()[:4]) and str(runtime.getVersion()[:5]
       
     #clean up mrl installation ( tell the .batch launcher to reinstall )
     open("mrlNeedReinstall", 'a').close()
-    errorSpokenFunc('newMRL')
+    errorSpokenFunc('NEWMRL')
     sleep(4)
     runtime.shutdown()
     #killRuntime()

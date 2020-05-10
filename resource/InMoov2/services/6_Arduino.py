@@ -63,12 +63,12 @@ def CheckArduinos(Card,Port,slave=0):
   
     #mrlcomm check
     if Card.isConnected():
-      print "Mrlcomm version : ",Card.getBoardInfo().version," ( requiered ",MRLCOMM_VERSION," )"
-      if Card.getBoardInfo().version!=MRLCOMM_VERSION:errorSpokenFunc('BadMrlcommVersion',Port)
+      print "Mrlcomm version : ",Card.getBoardInfo().version," ( required ",MRLCOMM_VERSION," )"
+      if Card.getBoardInfo().version!=MRLCOMM_VERSION:errorSpokenFunc('BADMRLCOMMVERSION',Port)
       else:
         print "Arduino ",Port," OK"
         return True
     else:
       #bouuuuuhhhh
-      errorSpokenFunc('ArduinoNotConnected',Port)
+      errorSpokenFunc('ARDUINONOTCONNECTED',Port)
       return False

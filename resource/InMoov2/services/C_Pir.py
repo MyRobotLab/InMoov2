@@ -50,9 +50,9 @@ def publishPinPir(pins):
 if isPirActivated:
   try:
     pirControlerArduino=eval(pirArduino)
-    i01.speakBlocking(i01.languagePack.get("startingPir"))
+    i01.speakBlocking(i01.localize("STARTINGPIR"))
         
   except:
-    errorSpokenFunc('BAdrduinoChoosen','pir')
+    errorSpokenFunc('BADRDUINOCHOOSEN','pir')
     isPirActivated=0
     pass

@@ -24,7 +24,7 @@ try:
     EyeLidsConnectedToArduino=eval(ThisSkeletonPartConfig.get('MAIN', 'EyeLidsConnectedToArduino'))
 except:
   i01.isEyeLidsActivated()=0
-  errorSpokenFunc('ConfigParserProblem','eyelids . config')
+  errorSpokenFunc('CONFIGPARSERPROBLEM','eyelids . config')
   pass
 
   

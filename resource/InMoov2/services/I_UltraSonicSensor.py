@@ -31,7 +31,7 @@ if ultraSonicRightActivated:
     # range can also be retreieved in a blocking call
     print "ultrasonicRight test is: ", i01.getUltrasonicSensorDistance()
   except:
-    errorSpokenFunc('BAdrduinoChoosen','ultra Sonic Sensor Right')
+    errorSpokenFunc('BADRDUINOCHOOSEN','ultra Sonic Sensor Right')
     ultraSonicRightActivated=False
     pass
 
@@ -46,6 +46,6 @@ if ultraSonicLeftActivated:
     # range can also be retreieved in a blocking call
     print "ultrasonicLeft test is: ", i01.getUltrasonicSensorDistance()
   except:
-    errorSpokenFunc('BAdrduinoChoosen','ultra Sonic Sensor Left')
+    errorSpokenFunc('BADRDUINOCHOOSEN','ultra Sonic Sensor Left')
     ultraSonicLeftActivated=False
     pass  

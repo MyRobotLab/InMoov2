@@ -46,7 +46,7 @@ except:pass
 if not i01.mouth:
   vocalError=True
   i01.mouth=subconsciousMouth
-  errorSpokenFunc('MyvoiceType')
+  errorSpokenFunc('MYVOICETYPE')
 
 # ##############################################################################
 # MRL SERVICE TWEAKS
@@ -141,7 +141,7 @@ def setRobotLanguage():
 setRobotLanguage()
 
 #set CustomVoice
-if not i01.mouth.setVoice(VoiceName):errorSpokenFunc('MyvoiceType')
+if not i01.mouth.setVoice(VoiceName):errorSpokenFunc('MYVOICETYPE')
 #set english subconsious mouth to user globalised mouth now ( only if we found a language pack )
 mouth=i01.startMouth()
 python.subscribe(i01.mouth.getName(),"publishStartSpeaking")
@@ -152,7 +152,7 @@ try:
 except:
   i01.mouth=subconsciousMouth
   vocalError=True
-  errorSpokenFunc('VoiceRssNoWorky')
+  errorSpokenFunc('VOICERSSNOWORKY')
   pass
   
 isReady=True
@@ -160,7 +160,7 @@ if Speechengine=="Polly" or Speechengine=="VoiceRss" or Speechengine=="IndianTts
 if not isReady:
   i01.mouth=subconsciousMouth
   vocalError=True
-  errorSpokenFunc('VoiceRssNoWorky')
+  errorSpokenFunc('VOICERSSNOWORKY')
 
 ear=i01.startEar()
 if EarEngine=="WebkitSpeechRecognition":
