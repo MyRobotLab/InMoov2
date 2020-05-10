@@ -1,9 +1,0 @@
-lastUsername:unknown
-tmpname:
-jsenabled:true
-null:
-courant:
-parameterHowDoYouDo:
-topic:default
-questionfirstinit:
-articles:
