@@ -7,7 +7,7 @@
 # ##############################################################################
 #               PERSONNAL PARAMETERS
 # ##############################################################################  
-i01.isHeadActivated()=0
+isHeadActivated=0
 
 #read current skeleton part config
 ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
@@ -17,7 +17,7 @@ try:
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
-  i01.isHeadActivated()=ThisSkeletonPartConfig.getboolean('MAIN', 'i01.isHeadActivated()') 
+  isHeadActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isHeadActivated') 
   MouthControlActivated=ThisSkeletonPartConfig.getboolean('MOUTHCONTROL', 'MouthControlActivated')
   AudioSignalProcessing=ThisSkeletonPartConfig.getboolean('AUDIOSIGNALPROCESSING', 'AudioSignalProcessing')
   AnalogPinFromSoundCard=ThisSkeletonPartConfig.getint('AUDIOSIGNALPROCESSING', 'AnalogPin')
@@ -35,7 +35,7 @@ try:
   rotheadRest=ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rothead')
   neckPin=ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck')
 except:
-  i01.isHeadActivated()=0
+  isHeadActivated=0
   errorSpokenFunc('CONFIGPARSERPROBLEM','head.config')
   pass
 
@@ -46,15 +46,15 @@ RollNeckArduino=ThisSkeletonPartConfig.get('ROLLNECKSERVO', 'RollNeckArduino')
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if i01.isHeadActivated()==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or ScriptType=="Virtual":
-  i01.isHeadActivated()=1
+if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or ScriptType=="Virtual":
+  isHeadActivated=1
   if LeftPortIsConnected:
-    head = Runtime.create("i01.head","InMoovHead")
+    head = Runtime.create("i01.head","InMoov2Head")
     head.startPeers()
-    #pffff :) we need to manualy load now to get last position to avoid breaking parts
-    head.neck.load()
-    head.rothead.load()
-    head.rollNeck.load()
+    #pffff :) FIXME? we need to manualy load now to get last position to avoid breaking parts 
+    #head.neck.load()
+    #head.rothead.load()
+    #head.rollNeck.load()
     #end pffff :)
     #map    
     head.jaw.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'jaw'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw')) 
@@ -120,8 +120,8 @@ if i01.isHeadActivated()==1 and (ScriptType=="LeftSide" or ScriptType=="Full") o
 # ##############################################################################    
     
     if MouthControlActivated and AudioSignalProcessing==False:
-      #MouthControl = Runtime.createAndStart("i01.mouthControl","MouthControl")
-      i01.startMouthControl(i01.head.jaw,i01.mouth)
+      i01.mouthControl = Runtime.createAndStart("i01.mouthControl","MouthControl")
+      #i01.startMouthControl(i01.head.jaw,i01.mouth)
       i01.mouthControl.setmouth(MouthControlJawMin,MouthControlJawMax)
       print "software mouthcontrol activation"
       if MouthControlJawTweak:i01.mouthControl.setDelays(MouthControlJawdelaytime, MouthControlJawdelaytimestop, MouthControlJawdelaytimeletter)
@@ -169,7 +169,7 @@ if i01.isHeadActivated()==1 and (ScriptType=="LeftSide" or ScriptType=="Full") o
    
   else:
     #we force parameter if arduino is off
-    i01.isHeadActivated()=0
+    isHeadActivated=0
     MouthControlActivated=0
     
 else:

@@ -7,7 +7,7 @@
 # ##############################################################################
 #               PERSONNAL PARAMETERS
 # ##############################################################################  
-i01.isEyeLidsActivated()=0  
+isEyeLidsActivated=0  
 #read current skeleton part config
 ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
@@ -16,14 +16,14 @@ try:
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
-  i01.isEyeLidsActivated()=ThisSkeletonPartConfig.getboolean('MAIN', 'i01.isEyeLidsActivated()')
+  isEyeLidsActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isEyeLidsActivated')
   EyeLidsLeftActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'EyeLidsLeftActivated') 
   EyeLidsRightActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'EyeLidsRightActivated') 
   
-  if (i01.isEyeLidsActivated() and (ScriptType=="RightSide" or ScriptType=="LeftSide" or ScriptType=="Full")) or ScriptType=="Virtual":
+  if (isEyeLidsActivated and (ScriptType=="RightSide" or ScriptType=="LeftSide" or ScriptType=="Full")) or ScriptType=="Virtual":
     EyeLidsConnectedToArduino=eval(ThisSkeletonPartConfig.get('MAIN', 'EyeLidsConnectedToArduino'))
 except:
-  i01.isEyeLidsActivated()=0
+  isEyeLidsActivated=0
   errorSpokenFunc('CONFIGPARSERPROBLEM','eyelids . config')
   pass
 
@@ -32,9 +32,9 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if (i01.isEyeLidsActivated() and (ScriptType=="RightSide" or ScriptType=="LeftSide" or ScriptType=="Full")):
+if (isEyeLidsActivated and (ScriptType=="RightSide" or ScriptType=="LeftSide" or ScriptType=="Full")):
   if LeftPortIsConnected or RightPortIsConnected:
-    eyelids = Runtime.create("i01.eyelids","InMoovEyelids")
+    eyelids = Runtime.create("i01.eyelids","InMoov2Eyelids")
     eyelids.startPeers()        
     eyelids.eyelidleft.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyelidleft'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyelidleft'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyelidleft'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyelidleft')) 
     eyelids.eyelidright.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyelidright'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyelidright'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyelidright'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyelidright')) 
@@ -50,4 +50,4 @@ if (i01.isEyeLidsActivated() and (ScriptType=="RightSide" or ScriptType=="LeftSi
     eyelids.autoBlink(True)
   else:
     #we force parameter if arduino is off
-    i01.isEyeLidsActivated()=0
+    isEyeLidsActivated=0

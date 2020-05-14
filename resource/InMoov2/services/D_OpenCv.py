@@ -14,8 +14,13 @@ CheckFileExist(ThisServicePart)
 ThisServicePartConfig = ConfigParser.ConfigParser()
 ThisServicePartConfig.read(ThisServicePart+'.config')
 global isOpenCvActivated
-i01.vision.setOpenCVenabled(ThisServicePartConfig.getboolean('MAIN', 'isOpenCvActivated'))
-isOpenCvActivated=i01.vision.openCVenabled
+
+#FIXME
+#i01.vision.setOpenCVenabled(ThisServicePartConfig.getboolean('MAIN', 'isOpenCvActivated'))
+#isOpenCvActivated=i01.vision.openCVenabled
+
+isOpenCvActivated=(ThisServicePartConfig.getboolean('MAIN', 'isOpenCvActivated'))
+
 CameraIndex=ThisServicePartConfig.getint('MAIN', 'CameraIndex') 
 DisplayRender=ThisServicePartConfig.get('MAIN', 'DisplayRender')
 
@@ -39,19 +44,19 @@ log.info("streamerEnabled : "+str(streamerEnabled))
 #i01.opencv.setCameraIndex(1)
 #i01.opencv.setGrabberType("Sarxos")
 
-if flipPicture:i01.vision.addPreFilter("Flip")
 
 # ##############################################################################
 #                 SERVICE START
 # ##############################################################################
 
-if i01.vision.openCVenabled:
+if isOpenCvActivated:
   i01.opencv = Runtime.create("i01.opencv", "OpenCV")
   i01.opencv.setCameraIndex(CameraIndex)
   i01.opencv.setGrabberType(DisplayRender)
   i01.opencv = Runtime.start("i01.opencv", "OpenCV")
-  i01.vision.setOpenCVenabled(i01.startOpenCV())
-  if not i01.vision.openCVenabled:
+  i01.startOpenCV()
+  if flipPicture:i01.opencv.addPreFilter("Flip")
+  if not isOpenCvActivated:
     errorSpokenFunc('OPENCVNOWORKY','camera '+str(i01.opencv.getCameraIndex()))
   else:
     python.subscribe("i01.opencv", "publishRecognizedFace")

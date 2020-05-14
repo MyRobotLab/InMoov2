@@ -11,21 +11,21 @@
 #read current skeleton part config
 ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
-i01.isTorsoActivated()=0
+isTorsoActivated=0
 try:
   CheckFileExist(ThisSkeletonPart)
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
-  i01.isTorsoActivated()=ThisSkeletonPartConfig.getboolean('MAIN', 'i01.isTorsoActivated()') 
+  isTorsoActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isTorsoActivated') 
   
-  if i01.isTorsoActivated() or ScriptType=="Virtual":
+  if isTorsoActivated or ScriptType=="Virtual":
     TorsoConnectedToArduinoPort=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino').replace("left","MyLeftPort").replace("right","MyRightPort"))
     TorsoConnectedToArduino=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino'))
     TorsoConnectedToArduinoPortBoardType=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino').replace("left","BoardTypeMyLeftPort").replace("right","BoardTypeMyRightPort"))
 except:
   errorSpokenFunc('CONFIGPARSERPROBLEM','torso.config')
-  i01.isTorsoActivated()=0
+  isTorsoActivated=0
   TorsoConnectedToArduino=""
   pass
 
@@ -33,14 +33,14 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if i01.isTorsoActivated() or ScriptType=="Virtual":
+if isTorsoActivated or ScriptType=="Virtual":
   if LeftPortIsConnected or RightPortIsConnected  or ScriptType=="Virtual":
-    i01.isTorsoActivated()=1
-    torso = Runtime.create("i01.torso","InMoovTorso")
+    isTorsoActivated=1
+    torso = Runtime.create("i01.torso","InMoov2Torso")
     torso.startPeers()
-    #pffff :) we need to manualy load now to get last position to avoid breaking parts
-    torso.topStom.load()
-    torso.midStom.load()
+    #pffff :) FIXME? we need to manualy load now to get last position to avoid breaking parts
+    #torso.topStom.load()
+    #torso.midStom.load()
     #end pffff :)      
     torso.topStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'topStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'topStom')) 
     torso.midStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'midStom')) 

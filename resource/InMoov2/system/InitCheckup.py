@@ -8,6 +8,7 @@
 #subconscious for diagnose
 subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
 subconsciousMouth.setVoice("Mark")
+subconsciousMouth.setLocale("en")
 log = Runtime.createAndStart("log", "Log")
 runtime.setLogLevel("INFO")
 # libraries import
@@ -24,7 +25,7 @@ execfile(RuningFolder+'/system/Robot_Satus_GlobalsVars.py')
 execfile(RuningFolder+'/system/ConfigParser.py')
 
 # language pack
-execfile(RuningFolder+'/system/languagePack.py')
+execfile(RuningFolder+'/system/Localize.py')
 
 # vocal errors
 execfile(RuningFolder+'/system/Errors.py'.encode('utf8'))
@@ -63,10 +64,10 @@ for filename in os.listdir(RuningFolder+'skeleton'):
   if os.path.splitext(filename)[1] == ".py":execfile(RuningFolder+'skeleton/'+filename.encode('utf8'))
 
 
-if ((not i01.isEyeLidsActivated() and not i01.isHeadActivated() and not i01.isLeftArmActivated() and not i01.isLeftHandActivated() and not i01.isRightArmActivated() and not i01.isRightHandActivated() and not i01.isTorsoActivated()) and (ScriptType!="Virtual" and ScriptType!="NoArduino")):
+if ((not isEyeLidsActivated and not isHeadActivated and not isLeftArmActivated and not isLeftHandActivated and not isRightArmActivated and not isRightHandActivated and not isTorsoActivated) and (ScriptType!="Virtual" and ScriptType!="NoArduino")):
   i01.speakBlocking(i01.localize("NOSKELETON"))
 
-if virtualInmoovActivated:i01.startVinMoov()
+if virtualInmoovActivated:i01.startSimulator()
   
 ################################
 # INIT.5 - ear.addcmmands
@@ -116,7 +117,7 @@ if DEBUG==1:runtime.setLogLevel("INFO")
 else:runtime.setLogLevel("ERROR")
 i01.setMute(False)
 
-if boot_green and i01.isNeopixelActivated():    
+if boot_green and isNeopixelActivated:    
   i01.setNeopixelAnimation("Flash Random", 0, 255, 0, 1)
   sleep(2)
   i01.stopNeopixelAnimation()

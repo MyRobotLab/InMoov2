@@ -1,5 +1,5 @@
 def whataboutstarwars():
-  if i01.isNeopixelActivated():
+  if isNeopixelActivated:
     i01.setNeopixelAnimation("Ironman", 255, 255, 255, 1)
     sleep(3)
     i01.stopNeopixelAnimation()

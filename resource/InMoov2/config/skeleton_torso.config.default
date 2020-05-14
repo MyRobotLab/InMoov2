@@ -1,6 +1,6 @@
 ;----------------------------- TORSO CONFIGURATION ----------------------------------------
 [MAIN]
-i01.isTorsoActivated()=False
+isTorsoActivated=False
 TorsoConnectedToArduino=left
 ;chose left or right existing and connected arduino
 

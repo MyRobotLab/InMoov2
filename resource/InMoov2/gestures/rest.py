@@ -4,27 +4,27 @@
 
 def rest():
   fullspeed()
-  if i01.isRightHandActivated():
+  if isRightHandActivated:
     i01.rightHand.rest()
   
-  if i01.isLeftHandActivated():
+  if isLeftHandActivated:
     i01.leftHand.rest()
   
-  if i01.isRightArmActivated():
+  if isRightArmActivated:
     i01.rightArm.rest()
   
-  if i01.isLeftArmActivated():
+  if isLeftArmActivated:
     i01.leftArm.rest()
     
 # ##############################################################################
 #         ROBOT REST POSITIONS ( full )
 # ##############################################################################    
   
-  if i01.isHeadActivated():
+  if isHeadActivated:
     i01.head.rest()
   
-  if i01.isTorsoActivated():
+  if isTorsoActivated:
     i01.torso.rest()
     
-  if i01.isEyeLidsActivated():
+  if isEyeLidsActivated:
     i01.eyelids.rest()

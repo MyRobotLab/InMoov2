@@ -9,14 +9,14 @@
 # ##############################################################################  
   
 #read current skeleton part config
-i01.isLeftArmActivated()=0
+isLeftArmActivated=0
 ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
 try:
   CheckFileExist(ThisSkeletonPart)
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
-  i01.isLeftArmActivated()=ThisSkeletonPartConfig.getboolean('MAIN', 'i01.isLeftArmActivated()') 
+  isLeftArmActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isLeftArmActivated') 
 
 except:
   errorSpokenFunc('CONFIGPARSERPROBLEM','leftarm.config')
@@ -27,17 +27,17 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if i01.isLeftArmActivated()==1 and (ScriptType=="LeftSide" or ScriptType=="Full" ) or ScriptType=="Virtual":
-  i01.isLeftArmActivated()=1
+if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" ) or ScriptType=="Virtual":
+  isLeftArmActivated=1
   if LeftPortIsConnected==True:
 
-    leftArm = Runtime.create("i01.leftArm", "InMoovArm")
+    leftArm = Runtime.create("i01.leftArm", "InMoov2Arm")
     leftArm.startPeers()
-    #pffff :) we need to manualy load now to get last position to avoid breaking parts
-    leftArm.bicep.load()
-    leftArm.shoulder.load()
-    leftArm.rotate.load()
-    leftArm.omoplate.load()
+    #pffff :) FIXME? we need to manualy load now to get last position to avoid breaking parts
+    #leftArm.bicep.load()
+    #leftArm.shoulder.load()
+    #leftArm.rotate.load()
+    #leftArm.omoplate.load()
     #end pffff :)
     try:      
       leftArm.bicep.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'bicep'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'bicep')) 
@@ -74,4 +74,4 @@ if i01.isLeftArmActivated()==1 and (ScriptType=="LeftSide" or ScriptType=="Full"
 
   else:
     #we force parameter if arduino is off
-    i01.isLeftArmActivated()=0
+    isLeftArmActivated=0

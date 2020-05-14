@@ -12,7 +12,7 @@ DisplayRender=OpenCV
 ;VideoInput
 ;OpenCV
 
-streamerenabled=False
+streamerEnabled=False
 
 ;----------------------------------- END --------------------------------------------------
 

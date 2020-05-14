@@ -32,7 +32,7 @@ def onAudioStart(data):
   except:
     pass
   
-  if AudioSignalProcessing and i01.isHeadActivated():
+  if AudioSignalProcessing and isHeadActivated:
     print "onaudiostart"
     try:
       head.jaw.moveTo(180)
@@ -55,7 +55,7 @@ def onAudioEnd(data):
   except:
     print "onAudioEnd error"
     pass
-  if AudioSignalProcessing and i01.isHeadActivated():
+  if AudioSignalProcessing and isHeadActivated:
     try:
       left.disablePin(AnalogPinFromSoundCard)
       #head.jaw.detach()

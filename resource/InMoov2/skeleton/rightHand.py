@@ -9,7 +9,7 @@
 # ##############################################################################  
   
 #read current skeleton part config
-i01.isRightHandActivated()=0
+isRightHandActivated=0
 ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
 try:
@@ -17,7 +17,7 @@ try:
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
-  i01.isRightHandActivated()=ThisSkeletonPartConfig.getboolean('MAIN', 'i01.isRightHandActivated()') 
+  isRightHandActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isRightHandActivated') 
   
 except:
   errorSpokenFunc('CONFIGPARSERPROBLEM','right hand . config')
@@ -27,10 +27,10 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if i01.isRightHandActivated()==1 and (ScriptType=="RightSide" or ScriptType=="Full") or ScriptType=="Virtual":
-  i01.isRightHandActivated()=1
+if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full") or ScriptType=="Virtual":
+  isRightHandActivated=1
   if RightPortIsConnected:
-    rightHand = Runtime.create("i01.rightHand", "InMoovHand")
+    rightHand = Runtime.create("i01.rightHand", "InMoov2Hand")
     rightHand.startPeers()    
     rightHand.thumb.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'thumb'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'thumb')) 
     rightHand.index.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'index'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'index'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'index'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'index')) 
@@ -76,4 +76,4 @@ if i01.isRightHandActivated()==1 and (ScriptType=="RightSide" or ScriptType=="Fu
     
   else:
     #we force parameter if arduino is off
-    i01.isRightHandActivated()=0
+    isRightHandActivated=0

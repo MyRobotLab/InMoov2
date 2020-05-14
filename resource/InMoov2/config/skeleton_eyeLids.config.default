@@ -1,10 +1,10 @@
 ;----------------------------- EYELID CONFIGURATION ----------------------------------------
 [MAIN]
-i01.isEyeLidsActivated()=False
+isEyeLidsActivated=False
 EyeLidsConnectedToArduino=right
 ;chose left or right existing and connected arduino
 
-EyeLidsLeftActivated=True
+EyeLidsLeftActivated=False
 EyeLidsRightActivated=False
 ;EyeLidsLeftActivated : 1 servo control 2 eyelids
 ;EyeLidsRightActivated+EyeLidsLeftActivated : 1 servo control 1 eyelid

@@ -1,5 +1,5 @@
 def gestureforlondon4():
-  if i01.isNeopixelActivated():
+  if isNeopixelActivated:
     i01.setNeopixelAnimation("Color Wipe", 0, 20, 0, 1)
     sleep(2)
     i01.setNeopixelAnimation("Ironman", 0, 0, 255, 1)

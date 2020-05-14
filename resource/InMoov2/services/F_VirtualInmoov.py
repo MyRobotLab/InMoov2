@@ -13,7 +13,7 @@ CheckFileExist(ThisServicePart)
 ThisServicePartConfig = ConfigParser.ConfigParser()
 ThisServicePartConfig.read(ThisServicePart+'.config')
 
-virtualInmoovAlwaysActivated=ThisServicePartConfig.getboolean('MAIN', 'virtualInmoovAlwaysActivated')
+isSimulatorActivated=ThisServicePartConfig.getboolean('MAIN', 'isSimulatorActivated')
 VinmoovMonitorActivated=ThisServicePartConfig.getboolean('MAIN', 'VinmoovMonitorActivated')
 ForceVinmoovDisable=False
 try:
@@ -23,8 +23,8 @@ except:
 
 global virtualInmoovActivated
 virtualInmoovActivated=False
-if (ScriptType=="Virtual" or virtualInmoovAlwaysActivated) and not ForceVinmoovDisable:
-  if os.path.isdir(RuningFolder+'/jm3') and runtime.is64bit():
+if (ScriptType=="Virtual" or isSimulatorActivated) and not ForceVinmoovDisable:
+  if os.path.isdir(RuningFolder+'/JMonkeyEngine/assets/Models') and runtime.is64bit():
     global virtualInmoovActivated
     virtualInmoovActivated=True
   else:
@@ -32,7 +32,7 @@ if (ScriptType=="Virtual" or virtualInmoovAlwaysActivated) and not ForceVinmoovD
 
 
 #virtual inmoov
-i01.VinmoovMonitorActivated=VinmoovMonitorActivated
-#i01.VinmoovFullScreen=0
-#i01.VinmoovBackGroundColor="Grey"
-#i01.VinmoovWidth=800
+# FIXME i01.VinmoovMonitorActivated=VinmoovMonitorActivated
+# FIXME i01.VinmoovFullScreen=0
+# FIXME i01.VinmoovBackGroundColor="Grey"
+# FIXME i01.VinmoovWidth=800

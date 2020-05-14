@@ -9,7 +9,7 @@
 # ##############################################################################  
   
 #read current skeleton part config
-i01.isRightArmActivated()=0
+isRightArmActivated=0
 ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
 try:
@@ -17,7 +17,7 @@ try:
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
-  i01.isRightArmActivated()=ThisSkeletonPartConfig.getboolean('MAIN', 'i01.isRightArmActivated()') 
+  isRightArmActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isRightArmActivated') 
 
 except:
   errorSpokenFunc('CONFIGPARSERPROBLEM','rightarm.config')
@@ -27,17 +27,17 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if i01.isRightArmActivated()==1 and (ScriptType=="RightSide" or ScriptType=="Full")  or ScriptType=="Virtual":
-  i01.isRightArmActivated()=1
+if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full")  or ScriptType=="Virtual":
+  isRightArmActivated=1
   if RightPortIsConnected:
-    rightArm = Runtime.create("i01.rightArm", "InMoovArm")
+    rightArm = Runtime.create("i01.rightArm", "InMoov2Arm")
     rightArm.startPeers()
-    #pffff :) we need to manualy load now to get last position to avoid breaking parts
-    rightArm.bicep.load()
-    rightArm.shoulder.load()
-    rightArm.rotate.load()
-    rightArm.omoplate.load()
-    rightArm.startPeers()
+    #pffff :) FIXME?we need to manualy load now to get last position to avoid breaking parts
+    #rightArm.bicep.load()
+    #rightArm.shoulder.load()
+    #rightArm.rotate.load()
+    #rightArm.omoplate.load()
+    #rightArm.startPeers()
     #end pffff :)    
     rightArm.bicep.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'bicep'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'bicep')) 
     rightArm.shoulder.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'shoulder'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'shoulder')) 
@@ -72,4 +72,4 @@ if i01.isRightArmActivated()==1 and (ScriptType=="RightSide" or ScriptType=="Ful
 
   else:
     #we force parameter if arduino is off
-    i01.isRightArmActivated()=0
+    isRightArmActivated=0

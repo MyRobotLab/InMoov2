@@ -1,6 +1,6 @@
 ;----------------------------- VIRTUAL INMOOV CONFIGURATION ----------------------------------------
 [MAIN]
-virtualInmoovAlwaysActivated=False
+isSimulatorActivated=True
 ;use real arduino + virtual inmoov
 VinmoovMonitorActivated=False
 ;some kind of control center, unfinished

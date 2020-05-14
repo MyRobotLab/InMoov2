@@ -9,7 +9,7 @@
 # ##############################################################################  
   
 #read current skeleton part config
-i01.isLeftHandActivated()=0
+isLeftHandActivated=0
 ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
 try:
@@ -17,7 +17,7 @@ try:
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
-  i01.isLeftHandActivated()=ThisSkeletonPartConfig.getboolean('MAIN', 'i01.isLeftHandActivated()') 
+  isLeftHandActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isLeftHandActivated') 
   
   
 except:
@@ -29,10 +29,10 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if i01.isLeftHandActivated()==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or ScriptType=="Virtual":
-  i01.isLeftHandActivated()=1
+if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or ScriptType=="Virtual":
+  isLeftHandActivated=1
   if LeftPortIsConnected:
-    leftHand = Runtime.create("i01.leftHand", "InMoovHand")
+    leftHand = Runtime.create("i01.leftHand", "InMoov2Hand")
     leftHand.startPeers()
     leftHand.thumb.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'thumb'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'thumb')) 
     leftHand.index.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'index'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'index'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'index'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'index')) 

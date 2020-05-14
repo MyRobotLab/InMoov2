@@ -1,6 +1,6 @@
 ;----------------------------- LEFT ARM CONFIGURATION ----------------------------------------
 [MAIN]
-i01.isLeftArmActivated()=False
+isLeftArmActivated=False
 
 [SERVO_MINIMUM_MAP_OUTPUT]
 ;your servo minimal limits

@@ -43,9 +43,12 @@ if Language=="fi":Language="fi-FI"
 if Language=="pt":Language="pt-PT"
 
 languageError=False
-if not i01.setLanguage(Language):
+#if not i01.setLanguage(Language):
+  #languageError=True
+  #i01.setLanguage("en-US")
+if not Runtime.setAllLocales('Language'):
   languageError=True
-  i01.setLanguage("en-US")
+  Runtime.setAllLocales('en-US')
 
 DEBUG=BasicConfig.getboolean('MAIN', 'debug')
 IsMute=BasicConfig.getboolean('VOCAL', 'IsMute')

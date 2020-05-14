@@ -1,5 +1,5 @@
 def eyesLidsSequence():
-  if i01.isEyeLidsActivated():
+  if isEyeLidsActivated:
     i01.startedGesture()
     i01.mouth.speak("moving my eyelids randomly")
     x = (random.randint(1, 6))

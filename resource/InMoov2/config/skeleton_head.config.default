@@ -1,10 +1,10 @@
 ;----------------------------- HEAD CONFIGURATION ----------------------------------------
 
 [MAIN]
-i01.isHeadActivated()=False
+isHeadActivated=False
 
 [ROLLNECKSERVO]
-isrollneckactivated = True
+isrollneckactivated = False
 RollNeckArduino=right
 ;RollNeckArduino=left or right
 
