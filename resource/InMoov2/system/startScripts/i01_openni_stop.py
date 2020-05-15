@@ -8,8 +8,7 @@
 
 # release a openni
 Runtime.releaseService("i01.openni")
-
-# i01.isOpenNiActivated = (False)
+isOpenNiActivated = (False)
 
 # we tell to the service what is going on 
 # i01.broadcastState()

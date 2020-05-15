@@ -13,10 +13,7 @@
 # port = "COM10"
 
 # create a controller
-i01.controller3 = Runtime.start("i01.controller3","Arduino")
-
-# we tell to the service what is going on
-i01.broadcastState()
+i01_controller3 = Runtime.start("i01.controller3","Arduino")
 
 # initialize controller
 # linux or macos -> i01.controller3.connect("/dev/ttyUSB0")
