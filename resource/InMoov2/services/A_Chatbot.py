@@ -23,4 +23,4 @@ if isChatbotActivated:
   i01.chatBot.addTextListener(htmlFilter)
   htmlFilter.addListener("publishText", "i01", "speak")
   i01.chatBot.attach(i01.ear)
-  i01.startBrain()
+  i01.startChatBot()

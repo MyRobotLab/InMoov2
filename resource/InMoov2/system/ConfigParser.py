@@ -46,7 +46,7 @@ languageError=False
 #if not i01.setLanguage(Language):
   #languageError=True
   #i01.setLanguage("en-US")
-if not Runtime.setAllLocales('Language'):
+if not Runtime.setAllLocales(Language):
   languageError=True
   Runtime.setAllLocales('en-US')
 
