@@ -31,4 +31,6 @@ language:italian
 favoritecolor:ultra violet
 sign:libra
 logo:<img src="http://inmoov.fr/wp-content/uploads/2012/11/DSC07048.jpg" width="128"/>
-religion:atheiste
+religion:atheist
+description:InMoov chatbot is based on Alice. It was inspired by Joseph Weizenbaum's classical ELIZA program. All of the parts and instructions to build InMoov are on the site (http://www.inmoov.fr/). InMoov is a composite of servos, Arduinos, microphone, camera, kinect and computer. The InMoov service is composed of many other peer services, and allows easy initialization and control of these sub systems.
+shortDescription:InMoov robot was created by Gael Langevin. It's a CC-by-NC 3D printable robot.

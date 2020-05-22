@@ -15,7 +15,7 @@ ThisServicePartConfig.read(ThisServicePart+'.config')
 
 EarEngine=ThisServicePartConfig.get('MAIN', 'EarEngine')
 setContinuous=ThisServicePartConfig.getboolean('MAIN', 'setContinuous')
-setAutoListen=ThisServicePartConfig.getboolean('MAIN', 'setAutoListen')
+#setAutoListen=ThisServicePartConfig.getboolean('MAIN', 'setAutoListen')
 ForceMicroOnIfSleeping=True
 lockPhrase="wake up"
 unlockInsult="forgive me"

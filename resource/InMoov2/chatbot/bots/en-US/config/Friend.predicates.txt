@@ -7,8 +7,6 @@ sign:which
 husband:who
 favoriteicecream:what
 mother:who
-lastUsername:Friend
-tmpname:
 son:who
 favoriteactor:who
 province:which
@@ -36,11 +34,10 @@ girlfriend:who
 she:who
 birthplace:where
 dialnumber:unknown
-null:
 meta:set
 customname:unknown
 name:Friend
-topic:default
+topic:unknown
 favoriteactress:who
 brother:who
 daughter:who
@@ -63,7 +60,6 @@ niece:who
 jsenabled:true
 street:which
 cat:what
-questionfirstinit:
 favoritebook:what
 email:what
 favoritecar:what
@@ -79,7 +75,6 @@ newcontact:unknown
 voicemailnumber:unknown
 there:where
 baby:who
-parameterHowDoYouDo:
 location:where
 he:who
 articles:

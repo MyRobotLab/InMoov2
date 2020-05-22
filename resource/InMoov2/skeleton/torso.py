@@ -33,9 +33,9 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if isTorsoActivated or ScriptType=="Virtual":
-  if LeftPortIsConnected or RightPortIsConnected  or ScriptType=="Virtual":
-    isTorsoActivated=1
+if isTorsoActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" ) or ScriptType=="Virtual":
+  isTorsoActivated=1
+  if LeftPortIsConnected or RightPortIsConnected:
     torso = Runtime.create("i01.torso","InMoov2Torso")
     torso.startPeers()
     #pffff :) FIXME? we need to manualy load now to get last position to avoid breaking parts
