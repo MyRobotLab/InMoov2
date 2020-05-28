@@ -143,5 +143,5 @@ lie:
 likes:
 orientation:
 secret:
-description:InMoov chatbot est basé sur Alice. Ce chatbot a été inspiré par Joseph Weizenbaum à partir du programme ELIZA. Pièces et instructions disponibles sur le site (http://www.inmoov.fr/). InMoov est une composition de servos, Arduinos, microphone, camera, kinect et computer. InMoov service est composé de peer services, et permet une initialisation et controle de sous service.
-shortDescription:InMoov robot créer par Gael Langevin. Robot imprimable en 3D sous licence CC-by-NC.
+description:InMoov robot créer par Gael Langevin. Robot imprimable en 3D sous licence CC-by-NC. Pièces et instructions disponibles sur le site (http://www.inmoov.fr/). InMoov est une composition de servos, Arduinos, microphone, camera, kinect et computer. InMoov service est composé de peer services, et permet une initialisation et controle de sous service.
+shortDescription:InMoov chatbot est basé sur Alice. Ce chatbot a été inspiré par Joseph Weizenbaum à partir du programme ELIZA.
