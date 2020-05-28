@@ -1,11 +1,11 @@
 def daVinci():
   i01.startedGesture()
   # get the current value of auto disable
-  leftPreviousAutoDisableValue = i01.leftArm.omplate.getAutoDisable()
-  rightPreviousAutoDisableValue = i01.rightArm.omplate.getAutoDisable()
+  leftPreviousAutoDisableValue = i01.leftArm.omoplate.getAutoDisable()
+  rightPreviousAutoDisableValue = i01.rightArm.omoplate.getAutoDisable()
   # turn off auto disable for this gesture
-  i01.leftArm.omplate.setAutoDisable(False)
-  i01.rightArm.omplate.setAutoDisable(False)
+  i01.leftArm.omoplate.setAutoDisable(False)
+  i01.rightArm.omoplate.setAutoDisable(False)
   i01.setHandVelocity("left", -1, -1, -1, -1, -1, 22.0)
   i01.setHandVelocity("right", -1, -1, -1, -1, -1, 22.0)
   i01.setArmVelocity("left", 36, 36, 36, 36)
@@ -18,7 +18,7 @@ def daVinci():
   i01.moveHand("right",50,40,30,20,10,137)
   sleep(5)
   # restore the auto disable value after the gesture is done.
-  i01.leftArm.omplate.setAutoDisable(leftPreviousAutoDisableValue)
-  i01.rightArm.omplate.setAutoDisable(rightPreviousAutoDisableValue)
+  i01.leftArm.omoplate.setAutoDisable(leftPreviousAutoDisableValue)
+  i01.rightArm.omoplate.setAutoDisable(rightPreviousAutoDisableValue)
   i01.finishedGesture()
 
