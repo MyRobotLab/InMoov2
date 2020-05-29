@@ -74,6 +74,7 @@ there:where
 them:who
 topic:unknown
 town:which
+userDescription:no personal description
 voicemailnumber:unknown
 we:who
 wife:who
