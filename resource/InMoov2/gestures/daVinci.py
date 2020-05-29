@@ -1,8 +1,8 @@
 def daVinci():
   i01.startedGesture()
   # get the current value of auto disable
-  leftPreviousAutoDisableValue = i01.leftArm.omoplate.getAutoDisable()
-  rightPreviousAutoDisableValue = i01.rightArm.omoplate.getAutoDisable()
+  leftPreviousAutoDisableValue = i01.leftArm.omoplate.isAutoDisable()
+  rightPreviousAutoDisableValue = i01.rightArm.omoplate.isAutoDisable()
   # turn off auto disable for this gesture
   i01.leftArm.omoplate.setAutoDisable(False)
   i01.rightArm.omoplate.setAutoDisable(False)
