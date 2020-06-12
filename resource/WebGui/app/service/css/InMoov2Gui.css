@@ -178,3 +178,43 @@
     left: 41px;
     top: 528px;
 }
+
+.inmoov-menu-button {
+    -webkit-filter: box-shadow: inset 0px 0px 4px 50px rgba(0,0,0,1);
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    cursor:pointer;
+    z-index: 100;
+}
+
+.InMoovDIV{
+    z-index:1 !important;
+    width: 300px !important;
+    height: 301px !important;
+    transform: none !important;
+    left: 157px;
+    top: 150px;
+    margin-top: -1px;
+}
+
+.InMoovIMG{
+    width: 300px !important;
+    height: 301px !important;
+    transform: none !important;
+    margin-top: -1px;
+}
+
+.inMoovButton:hover {
+    -webkit-filter: saturate(200%) drop-shadow(0px 0px 10px rgba(255, 255, 255, 1));
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.inMoovButton:active {
+    -webkit-transition: all 1.2s linear;
+    -o-transition: all 1.2s linear;
+    transition: all 1.2s linear;
+    -webkit-filter: saturate(400%) drop-shadow(0px 0px 15px rgba(255, 255, 255, 1));
+}

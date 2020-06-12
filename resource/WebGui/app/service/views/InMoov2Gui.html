@@ -39,11 +39,19 @@
     <tr>
         <td id="container-cell">
             <!--inmoov map begin-->
-            <div id="container">
-                <div class="inmoov-menu-button" ng-repeat="button in buttons" id="button.name +'Src'" ng-init="imgSrc='../img/InMoov2/'+button.name+'_off.png'" ng-mouseover="imgSrc='../img/InMoov2/'+button.name+'_hover.png'" ng-mouseout="imgSrc='../img/InMoov2/'+button.name+'_off.png'" ng-style="imgStyle='transform:translateX(300px)'">
-                    <img class="inmoov-menu-button" ng-src="{{imgSrc}}" ng-click="setPanel(button.name)" style="transform: translate({{button.translate}})"/>
+            <div id="container"> 
+                <div class="inmoov-menu-button inMoovButton {{button.name}}DIV preventGuiDragSelect" ng-repeat="button in buttons"  ng-init="imgSrc='../img/InMoov2/'+button.name+'_off.png'" ng-style="imgStyle='transform:translateX(300px)'">
+                  <img class="inmoov-menu-button {{button.name}}IMG preventGuiDragSelect" ng-src="{{imgSrc}}" ng-click="setPanel(button.name);" style="transform: translate({{button.translate}})"/>
                 </div>
-                <img class="inmoov-menu-button" ng-src="{{selectedButton.img}}" ng-click="setPanel(selectedButton.name)" style="transform: translate({{selectedButton.translate}})"/>
+            
+                <!-- Activ buttons hidden -->
+                <div class="inmoov-menu-button inMoovButton {{button.name}}DIV preventGuiDragSelect" ng-repeat="button in buttons"  ng-init="imgSrc='../img/InMoov2/'+button.name+'_Activ.png'" ng-style="imgStyle='transform:translateX(300px)'" style="visibility: {{activePanel == button.name ? 'visible':'hidden'}}">
+                  <img class="inmoov-menu-button {{button.name}}IMG preventGuiDragSelect" ng-src="{{imgSrc}}" ng-click="setPanel(button.name);" style="transform: translate({{button.translate}}); visibility: {{activePanel == button.name ? 'visible':'hidden'}}; cursor: default; "/>
+                </div>
+
+                  <!--img class="inmoov-menu-button" ng-src="{{imgSrc}}" ng-click="setPanel(button.name)" style="transform: translate({{button.translate}})"/-->
+                
+                  <!--img class="inmoov-menu-button" ng-src="{{selectedButton.img}}" ng-click="setPanel(selectedButton.name)" style="transform: translate({{selectedButton.translate}})"/-->
 
                 <div id="rightArmGuiDisplay" ng-show="service.isRightArmActivated" class="GuiDisplays preventGuiDragSelect"><img src="../img/InMoov2/armR_Activ.png"/></div>
 
