@@ -61,7 +61,7 @@
 
                 <div id="leftLegGuiDisplay" ng-show="service.isLeftLegActivated" class="GuiDisplays preventGuiDragSelect"><img src="../img/InMoov2/legL_Activ.png"/></div>
 
-                <div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="service.getBatteryLevel()"><img src="../img/InMoov2/battery_Activ.png"/></div>
+                <div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="i01.mouth.speak(str(Runtime.getBatteryLevel())+'percent')"><img src="../img/InMoov2/battery_Activ.png"/></div>
                 
                 <!--div id="dnaGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="service.getBatteryLevel()"><img src="../img/InMoov2/dna_Activ.png"/></div-->
 
@@ -680,7 +680,7 @@
         <!--------------------------------------------------------------->
         <img src="../kinect.png"/>
         <label>openNI:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <toggle width="70" height="30" ng-model="service.isOpenNiActivated" title="To access settings, the openni must be activated" ng-change="!service.isOpenNiActivated?msg.stopOpenNi():msg.loadFile('resource/InMoov2/system/startScripts/i01_openni_start.py')" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;
+        <toggle width="70" height="30" ng-model="service.isOpenNiActivated" title="To access settings, the openni must be activated" ng-change="!service.isOpenNiActivated?msg.loadFile('resource/InMoov2/system/startScripts/i01_openni_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_openni_start.py')" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;
         <button class="btn btn-default" ng-show="service.isOpenNiActivated" ng-click="setPanel('openni')">Settings</button>
     </td>
 </tr>
@@ -851,7 +851,7 @@
         <img src="../InMoov_Icon.png"/>
         <label>config</label>&nbsp;&nbsp;&nbsp;&nbsp;<img src="../peers.png" height="28" ng-click="filterPeers(null)"/>
         <div class="form-group">
-            <select multiple class="form-control vertical-menu" ng-model="selectedConfig" id="selectedConfig" tittle="---FIXME---">
+            <select multiple class="form-control vertical-menu" ng-model="selectedConfig" id="selectedConfig" ng-change="setConfig()" tittle="---FIXME---">
                 <option>config-01</option>
                 <option>default</option>
                 <option>my-config-01</option>
@@ -859,7 +859,7 @@
                 <option>my-config-03</option>
                 <option>my-config-04</option>
                 <option>my-config-05</option>
-                <option>my-config-06</option>
+                <option ng-repeat="config in configs" value="{{config}}">{{config}}</option>
             </select>
         </div>
         <!--button class="btn btn-default" ng-click="msg.export('myConfig')">export config</button-->
