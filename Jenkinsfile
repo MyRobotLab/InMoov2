@@ -40,7 +40,7 @@ node ('master') { // use any node
 
    stage('zip') {
    
-        sh "zip -r inmoov2-${version}.zip resource"
+        sh "zip -r ${artifactId}-${version}.zip resource"
         // archiveArtifacts artifacts: 'test.zip', fingerprint: true    
 	}
 
@@ -50,9 +50,9 @@ node ('master') { // use any node
    stage('install') {
       sh "mkdir -p ${repo}${version}"
 
-      sh "cp inmoov2-${version}.zip ${repo}${version}"
+      sh "cp ${artifactId}-${version}.zip ${repo}${version}"
 
-      // inmoov2-{version}.pom
+      // ${artifactId}-{version}.pom
       def depFileName = repo + version + "/" + artifactId + "-" + version + ".pom"
       echo "writing pom " + depFileName
       File file = new File(depFileName)
@@ -65,6 +65,6 @@ node ('master') { // use any node
       file.append("<url>http://myrobotlab.org</url>")
       file.append("</project>")
 
-      // sh "cp inmoov2-${version}.zip ${repo}latest.release/inmoov2-latest.release.zip"
+      // sh "cp ${artifactId}-${version}.zip ${repo}latest.release/${artifactId}-latest.release.zip"
      }
 }
