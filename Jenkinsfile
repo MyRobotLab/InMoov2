@@ -39,6 +39,13 @@ pipeline {
          }
       }
 
+      stage('check out') {
+         steps {
+            echo '====== check out ======'
+            checkout scm
+         }
+      }
+
       stage('clean') {
          steps {
             echo '====== clean ======'
@@ -55,13 +62,6 @@ pipeline {
                   ''')
                }
             }
-         }
-      }
-
-      stage('check out') {
-         steps {
-            echo '====== check out ======'
-            checkout scm
          }
       }
 
