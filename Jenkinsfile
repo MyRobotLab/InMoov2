@@ -1,6 +1,7 @@
 version = "2.0.${BUILD_NUMBER}"
 groupId = 'fr.inmoov'
 artifactId = 'inmoov2'
+resourceDir = 'InMoov2'
 groupIdPath = groupId.replaceAll('\\.', '/')
 
 pipeline {
@@ -73,13 +74,13 @@ pipeline {
                if (isUnix()) {
                   sh '''
                         echo "building ${JOB_NAME}..."
-                        echo "${VERSION}" > resource/InMoov2/version.txt
+                        echo "${VERSION}" > resource/${RESOURCE_DIR}/version.txt
                         mvn package
                   '''
                } else {
                   bat('''
                         type "building ${JOB_NAME}..."
-                        type '${VERSION}' > 'resource/InMoov2/version.txt'
+                        type '${VERSION}' > 'resource/${RESOURCE_DIR}/version.txt'
                         mvn package
                   ''')
                } // isUnix
