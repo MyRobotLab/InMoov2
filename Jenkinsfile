@@ -103,7 +103,7 @@ pipeline {
          
          sshagent(credentials : ['myrobotlab2.pem']) {
                sh 'ssh -v ubuntu@repo.myrobotlab.org'
-               sh 'scp ./target/inmoov-0.0.1-SNAPSHOT.zip ubuntu@repo.myrobotlab.org:/home/ubuntu'
+               sh 'scp ./target/${ARTIFACT_ID}-0.0.1-SNAPSHOT.zip ubuntu@repo.myrobotlab.org:/home/ubuntu'
                sh '''
                   ssh -o StrictHostKeyChecking=no ubuntu@repo.myrobotlab.org sudo mvn install:install-file  -Dfile=${ARTIFACT_ID}-0.0.1-SNAPSHOT.zip \
                         -DgroupId=${GROUP_ID} \
