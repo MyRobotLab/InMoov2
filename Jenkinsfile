@@ -1,5 +1,5 @@
 version = "2.0.${BUILD_NUMBER}"
-groupId = 'inmoov.fr'
+groupId = 'fr.inmoov'
 artifactId = 'inmoov2'
 groupIdPath = groupId.replaceAll('\\.', '/')
 
