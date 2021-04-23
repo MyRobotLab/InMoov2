@@ -34,7 +34,7 @@ mrlCompatible='1.1.191'
 
 ##############
 # Main inmoov service
-i01 = Runtime.createAndStart("i01", "InMoov")
+i01 = Runtime.createAndStart("i01", "InMoov2")
 
 ##############
 # robot checkup and initialisation ( skeleton & services )
