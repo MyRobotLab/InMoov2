@@ -11,11 +11,11 @@
 wdf=Runtime.createAndStart("wdf", "WikiDataFetcher")
 if Language=="fr-FR":
    WikiFile="WIKIDATA_prop_fr-FR.txt"
-   wdf.setLanguage("fr-FR")
+   wdf.setLanguage("fr")
    wdf.setWebSite("frwiki")
 else:
    WikiFile="WIKIDATA_prop_en-US.txt"
-   wdf.setLanguage("en-US")
+   wdf.setLanguage("en")
    wdf.setWebSite("enwiki")
    
 # ##############################################################################
