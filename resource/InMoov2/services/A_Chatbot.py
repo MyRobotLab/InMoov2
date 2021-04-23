@@ -18,9 +18,9 @@ isChatbotActivated=ThisServicePartConfig.getboolean('MAIN', 'isChatbotActivated'
 # ##############################################################################
 
 if isChatbotActivated:
-  i01.chatBot=Runtime.start("i01.chatBot", "ProgramAB")
+  i01_chatBot=Runtime.start("i01.chatBot", "ProgramAB")
   htmlFilter=Runtime.start("htmlFilter", "HtmlFilter")
-  i01.chatBot.addTextListener(htmlFilter)
+  i01_chatBot.addTextListener(htmlFilter)
   htmlFilter.addListener("publishText", "i01", "speak")
-  i01.chatBot.attach(i01.ear)
+  i01_chatBot.attach(i01_ear)
   i01.startChatBot()
