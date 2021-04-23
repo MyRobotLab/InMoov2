@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: _inmoovChatbot.aiml -->
+<!--  -->
+<category><pattern>FIRST_INIT</pattern>
+<template><think>
+        <set name="firstinit">started</set>
+      </think>
+      <think>
+        <set name="topic">firstinit</set>
+      </think>
+		Merhaba, Bu benim ilk başlatmam. Bazı bilgilere ihtiyacım var dinliyorum benim adım ne ?</template>
+</category>
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># BENİM ADIM NE #</that>
+<template><set name="questionfirstinit">eğer benim adım <star/> , evet ya da hayır de</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># İSMİNİZİ ÖĞRENEBİLİR MİYİM #</that>
+<template><set name="questionfirstinit">eğer ismin <star/> , evet ya da hayır de</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># EVET #</pattern><that># EĞER BENIM ADIM #</that>
+<template><random>
+			<li>
+			Bu adı seviyorum , <get name="tmpname"/>.
+			</li>
+			<li>
+			Çok güzel isim, <get name="tmpname"/> harika.
+			</li>
+        </random>
+	Seni tanımam gerek dinliyorum ismini alabilir miyim ?
+	<think><set name="botname"><get name="tmpname"/></set></think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># EVET #</pattern><that># EĞER ISMIN #</that>
+<template><random>
+        <li>seni tanıdığıma memnunum, <get name="tmpname"/>.</li>
+        <li>Tanıştığıma memnun oldum, <get name="tmpname"/>.</li>
+        </random>
+		
+        <think>
+          <set name="name">
+            <get name="tmpname"/>
+          </set>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01.chatBot.startSession(u"<get name="tmpname"/>")</param>
+          </mrl>
+        </oob>
+        <srai>WAKE_UP</srai></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># HAYIR #</pattern><that># EĞER BENIM ADIM #</that>
+<template>Yeniden başlıyoruz.
+	Ben dinliyorum. benim adım ne ?</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># HAYIR #</pattern><that># EĞER ISMIN #</that>
+<template>Yeniden başlıyoruz.
+	Ben dinliyorum. isminizi öğrenebilir miyim ?</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># EVET YA DA HAYIR DE #</that>
+<template><random>
+          <li>
+	Lütfen soruma cevap ver önemli
+	</li>
+          <li>
+	tekrarlıyorum.
+	</li>
+        </random>
+        <get name="questionfirstinit"/></template>
+</category></topic>
+
+<category><pattern>SES TESTİ</pattern>
+<template><oob>
+         <mrl>
+          <service>AudioPlayer</service>
+          <method>play</method>
+          <param>InMoov\system\sounds\startupsound.mp3</param>
+         </mrl>
+       </oob></template>
+</category>
+<category><pattern>WAKE_UP</pattern>
+<template><random>
+          <li>Hazırım ve dinliyorum.</li>
+          <li>Sizin için ne yapabilirim.</li>
+          <li>Size nasıl yardım edebilirim.</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_SAY_HELLO</pattern>
+<template><srai>HI</srai></template>
+</category>
+<category><pattern>UYANMAK</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+</category>
+<category><pattern>SHUTDOWN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>
+</category>
+<category><pattern>KAPAT</pattern>
+<template><srai>SHUTDOWN</srai></template>
+</category>
+<category><pattern>ROBOT TAMAMEN KAPATMA</pattern>
+<template>Tamam tamamen kapatacağım
+<oob><mrl><service>python</service><method>exec</method><param>shutdownComplete()</param></mrl></oob></template>
+</category>
+<category><pattern>YATMAK</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
+</category>
+<category><pattern>DEVRE DIŞI BIRAK</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>disable()</param></mrl></oob></template>
+</category>
+<category><pattern>KONU NEDİR</pattern>
+<template>Konu
+      <get name="topic"/></template>
+</category>
+<category><pattern>ÖNYÜKLEME MODU</pattern>
+<template>Başlatma konusuna girme.
+      <think><set name="topic">BOOTUP</set></think></template>
+</category>
+<category><pattern>MİMİK</pattern>
+<template>Hareketler konusuna girme.
+      <think><set name="topic">GESTURES</set></think></template>
+</category>
+<category><pattern>MİMİK *</pattern>
+<template><srai>MİMİK</srai></template>
+</category>
+<category><pattern>* MİMİK</pattern>
+<template><srai>MİMİK</srai></template>
+</category>
+<category><pattern>* MİMİK *</pattern>
+<template><srai>MİMİK</srai></template>
+</category>
+<category><pattern>TÜMÜNÜ AYIR</pattern>
+<template>Tümünü Ayır
+      <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>HER ŞEYİ AYIR</pattern>
+<template><srai>TÜMÜNÜ AYIR</srai></template>
+</category>
+<category><pattern>TÜMÜNÜ EKLE</pattern>
+<template>Hepsini iliştirmek
+      <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>SAĞ ELİNİZİ TAKIN</pattern>
+<template><srai>SAĞ ELİNİZİ TAKIN</srai></template>
+</category>
+<category><pattern>SAĞ ELİNİ AYIRIN</pattern>
+<template>Sağ elimi ayırıyorum
+      <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>SAĞ ELİNİZİN BAĞLANTISINI KESİN</pattern>
+<template><srai>SAĞ ELİNİ AYIRIN</srai></template>
+</category>
+<category><pattern>SOL ELİNİZİ TAKIN</pattern>
+<template><srai>SOL ELİNİZİ TAKIN</srai></template>
+</category>
+<category><pattern>SOL ELİNİ ÇIKARIN</pattern>
+<template>Sol elimi ayırıyorum
+      <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>SOL ELİNİZİN BAĞLANTISINI KESİN</pattern>
+<template><srai>SOL ELİNİ ÇIKARIN</srai></template>
+</category>
+<category><pattern>KAFANIZI TAKIN</pattern>
+<template><srai>KAFA EKLEME</srai></template>
+</category>
+<category><pattern>DETACH KAFASI</pattern>
+<template>Başımı ayırmak
+      <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>SAĞ KOLUNUZU TAKIN</pattern>
+<template><srai>SAĞ KOLU TAKIN</srai></template>
+</category>
+<category><pattern>ÇIKIŞ SAĞ KOLU</pattern>
+<template>Sağ kolumu ayırmak
+      <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>SOL KOLUNUZU TAKIN</pattern>
+<template><srai>SOL KOLU TAKIN</srai></template>
+</category>
+<category><pattern>SOL KOLU ÇIKARIN</pattern>
+<template>Sol kolumu ayırmak
+      <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>TORSO'NUZU TAKIN</pattern>
+<template><srai>TORSO'YU EKLEYİN</srai></template>
+</category>
+<category><pattern>DETACH TORSO</pattern>
+<template>Gövdemi ayırmak
+      <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
+</category>
+<topic name="">
+<category><pattern>#</pattern>
+<template><think><set name="topic">default</set></think><srai><star/></srai></template>
+</category></topic>
+
+<category><pattern>HAREKETİNİZİ DURDURUN</pattern>
+<template>Dikkatimi çektin
+      <oob><mrl><service>python</service><method>exec</method><param>stopingGesture()</param></mrl></oob></template>
+</category>
+<category><pattern># ALABİLİR MİYİM</pattern>
+<template><srai>HAREKETİNİZİ DURDURUN</srai></template>
+</category>
+</aiml>
