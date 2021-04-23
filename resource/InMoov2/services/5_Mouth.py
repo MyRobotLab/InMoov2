@@ -143,7 +143,7 @@ setRobotLanguage()
 #set CustomVoice
 if not i01_mouth.setVoice(VoiceName):errorSpokenFunc('MYVOICETYPE')
 #set english subconsious mouth to user globalised mouth now ( only if we found a language pack )
-mouth=i01_startMouth()
+#mouth=i01_startMouth()
 python.subscribe(i01_mouth.getName(),"publishStartSpeaking")
 python.subscribe(i01_mouth.getName(),"publishEndSpeaking")
 
