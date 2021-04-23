@@ -40,12 +40,12 @@ MyvoiceType=VoiceName
 # ##############################################################################
 vocalError=False
 try:
-  i01.mouth=Runtime.start("i01.mouth", Speechengine)
+  i01_mouth=Runtime.start("i01.mouth", Speechengine)
 except:pass
 
-if not i01.mouth:
+if not i01_mouth:
   vocalError=True
-  i01.mouth=subconsciousMouth
+  i01_mouth=subconsciousMouth
   errorSpokenFunc('MYVOICETYPE')
 
 # ##############################################################################
@@ -118,39 +118,39 @@ def onStartSpeaking(text):
 #mouth functions
 def setRobotLanguage():
   try:
-    if Speechengine=="VoiceRss":i01.mouth.setKey(i01.mouth.VOICERSS_API_KEY,apiKey1)
+    if Speechengine=="VoiceRss":i01_mouth.setKey(i01_mouth.VOICERSS_API_KEY,apiKey1)
   except:
     pass
     
   try:  
-    if Speechengine=="Polly":i01.mouth.setKeys(apiKey1,apiKey2)
+    if Speechengine=="Polly":i01_mouth.setKeys(apiKey1,apiKey2)
   except:
     pass
     
   try:  
-    if Speechengine=="IndianTts":i01.mouth.setKeys(apiKey2,apiKey1)
+    if Speechengine=="IndianTts":i01_mouth.setKeys(apiKey2,apiKey1)
   except:
     pass
 
   
   try:
-    if EarEngine=="WebkitSpeechRecognition":i01.ear.setLocale(Language)
-    i01.mouth.setLocale(Language)
+    if EarEngine=="WebkitSpeechRecognition":i01_ear.setLocale(Language)
+    i01_mouth.setLocale(Language)
   except:pass
   
 setRobotLanguage()
 
 #set CustomVoice
-if not i01.mouth.setVoice(VoiceName):errorSpokenFunc('MYVOICETYPE')
+if not i01_mouth.setVoice(VoiceName):errorSpokenFunc('MYVOICETYPE')
 #set english subconsious mouth to user globalised mouth now ( only if we found a language pack )
-mouth=i01.startMouth()
-python.subscribe(i01.mouth.getName(),"publishStartSpeaking")
-python.subscribe(i01.mouth.getName(),"publishEndSpeaking")
+mouth=i01_startMouth()
+python.subscribe(i01_mouth.getName(),"publishStartSpeaking")
+python.subscribe(i01_mouth.getName(),"publishEndSpeaking")
 
 try:
-  i01.mouth.speak(",")
+  i01_mouth.speak(",")
 except:
-  i01.mouth=subconsciousMouth
+  i01_mouth=subconsciousMouth
   vocalError=True
   errorSpokenFunc('VOICERSSNOWORKY')
   pass
@@ -158,19 +158,19 @@ except:
 isReady=True
 if Speechengine=="Polly" or Speechengine=="VoiceRss" or Speechengine=="IndianTts":isReady=mouth.isReady()
 if not isReady:
-  i01.mouth=subconsciousMouth
+  i01_mouth=subconsciousMouth
   vocalError=True
   errorSpokenFunc('VOICERSSNOWORKY')
 
 ear=i01.startEar()
 if EarEngine=="WebkitSpeechRecognition":
-  i01.ear.setContinuous(setContinuous)
+  i01_ear.setContinuous(setContinuous)
   #start the browsers and show the WebkitSpeechRecognition service named i01.ear
   webgui = Runtime.create("webgui","WebGui")
   webgui.autoStartBrowser(False)
   webgui.startService()
-  webgui.startBrowser("http://localhost:8888/#/service/i01.ear")
+  #webgui.startBrowser("http://localhost:8888/#/service/i01.ear")
   
-python.subscribe(i01.ear.getName(),"recognized")
+python.subscribe(i01_ear.getName(),"recognized")
 if not vocalError:subconsciousMouth.releaseService()
 if languageError:errorSpokenFunc('MYLANGUAGE')
