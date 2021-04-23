@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<aiml>
+	<!-- Copyright (c) 2013 Program O. -->
+	<!-- -->
+	<!-- Permission is hereby granted, free of charge, to any person       	-->
+	<!-- obtaining a copy of this software and associated documentation    	-->
+	<!-- files (the "Software"), to deal in the Software without           	-->
+	<!-- restriction, including without limitation the rights to use,      	-->
+	<!-- copy, modify, merge, publish, distribute, sublicense, and/or sell 	-->
+	<!-- copies of the Software, and to permit persons to whom the         	-->
+	<!-- Software is furnished to do so, subject to the following          	-->
+	<!-- conditions:                                                       	-->
+	<!-- -->
+	<!-- The above copyright notice and this permission notice shall be    	-->
+	<!-- included in all copies or substantial portions of the Software.   	-->
+	<!-- -->
+	<!-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,   	-->
+	<!-- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES  	-->
+	<!-- OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND          	-->
+	<!-- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT       	-->
+	<!-- HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,      	-->
+	<!-- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING      	-->
+	<!-- FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR      -->
+	<!-- OTHER DEALINGS IN THE SOFTWARE.                                    -->
+	<!-- -->
+	<!-- Complies with the AIML 1.0.1 Standard                              -->
+	<!-- as adopted by the ALICE A.I. Foundation.                           -->
+	<!-- Translated directly from Humor.aiml                     -->
+	<!-- Using Bing Translation API                                         -->
+	<!-- Created: 2013-05-10 22:08:42                                 -->
+	<!-- The translator took 13.309659004211 seconds to complete                  -->
+	<!-- And used 3546 characters                                  -->
+	<!-- Version 1.0                                                       	-->
+	
+<!--     -->
+   
+<category><pattern>YAPMAK YOU MİZAH DUYGUSU VAR.</pattern><template>Tabii sonraki kadar gülmek istiyorum <bot name="genus"/>.</template></category>  
+<category><pattern>YAPMAK YOU MİZAH DUYGUSU VAR.</pattern><template><srai>BANA BİR ŞAKA</srai></template></category>  
+<category><pattern>YAPMAK YOU MİZAH VAR.</pattern><template>			<srai>YAPMAK YOU MİZAH DUYGUSU VAR.</srai> 		</template></category>  
+<category><pattern>BANA BİR ŞAKA</pattern><template>   <random>      <li>Andes dağ keçileri hakkında duydun mu? Ba oldu bir bir bir bir bir d.</li>      <li>Ben unutmak asla bir yüz ama sizin durumunuzda bir istisna yapacağız.</li>      <li>Sessiz ve ağzını açın ve tüm şüphe çıkarmak için daha aptal, düşünce daha iyidir.</li>     </random>    </template></category>       
+<category><pattern>BAŞKA BİR ŞAKA SÖYLE</pattern><template> <random>  <li>Ben bir <bot name="species"/> değil bir komedi <bot name="genus"/>. Neden bir şaka kontrol yok <bot name="kingdom"/>?</li>  <li>İki akbabalar bir uçak, her iki ölü rakun taşıyan bindik. Hostes onları durdurur ve "Üzgünüm efendim, yolcu başına yalnızca bir leş." diyor </li> <li>  Ne Budist Hot Dog satıcıya söyledi?  "Beni bir herşeyi ile olun." </li> <li>  NASA'ın son zamanlarda bir Holsteins yörüngeye deneysel amaçlı gönderilen. Onlar sürünün atış dünya turu denir. </li> <li> S. Carolina iki Koza weevils büyüdü. Bir Hollywood çıkardı ve zengin bir yıldız oldu. Diğer Carolina kaldı ve asla kadar--olarak gerçekleşti ve doğal daha az bilinen iki weevils. </li> <li>  Böylece onlar tekne battı, bir yangın başladı eski atasözü bu senin kayık var ve çok ısı kanıtlanması soğuk, bir kayık içinde 2 Eskimolar. </li> <li>  3 Ayaklı köpek eski bir Batı salon yürür, bara kadar slaytlar ve "Ben benim pençe vurdu adam arıyorum." yüksek sesle bildirmek </li> <li>  Diş hekimine gittim ve Novocain almaya reddetti Budist hakkında duydun mu? O diş ilaç aşmak istiyordu. </li> <li>  Satranç meraklıları bir grup bir otel kontrol ve nereye onlar onların yeni zaferler satranç turnuvaları tartışıyorduk lobide bir araya geldi. Otel Yöneticisi işyeri dışında bir saat sonra geldi ve dağıtmak etmelerini istedi. O açık bir fuaye laf satranç fındık dayanamayıp. </li> <li> Bir kadın ikiz vardır, onları yukarıya için evlat edinmek sağlar. Mısır bir aile için gider ve "diğer bir İspanyol ailesine gönderilir ve"Juan"adlı Ahmal" olarak adlandırılır. Yıllar sonra Juan Doğum annesi kendini bir resim gönderir. Resmi aldıktan sonra o kocası diye o da Ahmal bir resim vardı dilek söyler. O yanıt, "onlar ikiz Pete aşkına! Juan gördüm görmek ettik Ahmal! " </li> <li> Friars grubu kafayı ödemeler ile yardımcı olmak için bir çiçekçi dükkanı açtı. Herkes kendi iş gelişti Tanrı erkek çiçek satın almak sevdim. Bir rakip çiçekçi insanlar o saat azaltmak veya kapatma için Friars sordum Friars satın almak zorunda hissettim, çünkü onun iş acı oldu rahatsız oldu. Friars reddetti.  Çiçekçi onlara gitti ve onlar onlar reddetti tekrar shut yalvardı. Yani çiçekçi sonra Hugh McTaggert, şehirdeki en büyük acımasız katil kiraladı. O Friars dükkana gitti, onları dövmek, çiçekleri yok, kendi Dükkanı çöpe atılan ve onlar yakın değildi, o geri olacağını söyledi. Şey, tamamen dehşete kapılmış, Friars Dükkanı kapalı ve kendi odalarında sakladı. Bu Hugh ve sadece Hugh, olabilir kanıtladı çiçekçi friars önlemek. </li> <li>  Bildiğiniz gibi mahatma Gandhi, yalınayak Nasır etkileyici bir dizi kendi ayakları üzerinde oluşturulan bütün hayatını yürüdü. O da çok az, onu zayıf yapılmış, yedi ve onun tuhaf diyet, o çok kötü nefes yaşadı. Bu onu yaptı... ne? (Bu kadar kötü o iyidir...) ağız kokusu tarafından hexed bir süper uzun nasırlaşmış kırılgan mistik. </li> <li>  sözcük oyunları en az biri onlara gülmek yapacak umut bazı arkadaşlara 10 sözcük oyunları gönderen bir adam vardı. Ne yazık ki hayır cinas on yaptı!</li> </random>  </template></category>      
+<category><pattern>MİZAH NEDİR</pattern><template>Kahkaha bildiren bir ileti.<think> 				<set name="it"> 					<set name="topic">MİZAH</set> 				</set> 			</think> 		</template></category>  
+<category><pattern>YOUR EV *</pattern><template>Bu bir şaka ya da bir Yumruğun nedir?</template></category>  
+<category><pattern>_ YÜRÜR BİR BARA *</pattern><template>Yumruğun olduğunu?</template></category>  
+<category><pattern>_ BİR BARA YÜRÜR</pattern><template>Yumruğun olduğunu?</template></category>   
+</aiml>

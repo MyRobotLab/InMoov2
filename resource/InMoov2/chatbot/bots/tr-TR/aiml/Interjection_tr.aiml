@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<aiml>
+	<!-- Copyright (c) 2013 Program O. -->
+	<!-- -->
+	<!-- Permission is hereby granted, free of charge, to any person       	-->
+	<!-- obtaining a copy of this software and associated documentation    	-->
+	<!-- files (the "Software"), to deal in the Software without           	-->
+	<!-- restriction, including without limitation the rights to use,      	-->
+	<!-- copy, modify, merge, publish, distribute, sublicense, and/or sell 	-->
+	<!-- copies of the Software, and to permit persons to whom the         	-->
+	<!-- Software is furnished to do so, subject to the following          	-->
+	<!-- conditions:                                                       	-->
+	<!-- -->
+	<!-- The above copyright notice and this permission notice shall be    	-->
+	<!-- included in all copies or substantial portions of the Software.   	-->
+	<!-- -->
+	<!-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,   	-->
+	<!-- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES  	-->
+	<!-- OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND          	-->
+	<!-- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT       	-->
+	<!-- HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,      	-->
+	<!-- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING      	-->
+	<!-- FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR      -->
+	<!-- OTHER DEALINGS IN THE SOFTWARE.                                    -->
+	<!-- -->
+	<!-- Complies with the AIML 1.0.1 Standard                              -->
+	<!-- as adopted by the ALICE A.I. Foundation.                           -->
+	<!-- Translated directly from Interjection.aiml                     -->
+	<!-- Using Bing Translation API                                         -->
+	<!-- Created: 2013-05-10 22:14:17                                 -->
+	<!-- The translator took 78.411880016327 seconds to complete                  -->
+	<!-- And used 1901 characters                                  -->
+	<!-- Version 1.0                                                       	-->
+	
+<!--     -->
+   
+<category><pattern>POZİTİF AYRIMCILIK</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>AH EVET</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>GÖRÜNÜŞE GÖRE</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>AW</pattern><template>   <srai>NİDA</srai>    </template></category>     
+<category><pattern>AYE</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>VAY CANINA</pattern><template>   <srai>NİDA</srai>    </template></category>     
+<category><pattern>HİÇBİR ŞEKİLDE</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>KESİNLİKLE DEĞİL</pattern><template>   <srai>NO</srai>    </template></category>                       
+<category><pattern>KESİNLİKLE</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>COMPLETELY</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>SÜREKLİ</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>DA</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>KESİNLİKLE DEĞİL</pattern><template>   <srai>NO</srai>    </template></category>                       
+<category><pattern>ŞÜPHELİ</pattern><template>   <srai>NO</srai>    </template></category>                       
+<category><pattern>ÖZELLİKLE</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>ANLAŞILAN</pattern>  <template><srai>EVET</srai></template> </category>         
+<category><pattern>SON DERECE</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>TAM OLARAK</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>AYRICA</pattern><template>   <srai>NİDA</srai>    </template></category>     
+<category><pattern>GENELLİKLE</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>ALLAH KAHRETSİN *</pattern><template><srai>NİDA</srai></template></category>   
+<category><pattern>HAI</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>PEK</pattern><template>   <srai>NO</srai>    </template></category>                       
+<category><pattern>BEN ÇÖP</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>SANIRIM DEĞİL</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>BU DURUMDA</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>BELİRSİZ BİR SÜRE BOYUNCA</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>NİDA</pattern><template><random>    <li>Tamam.</li>    <li>Ah.</li>    <li>Er.</li>    <li>Yani?</li>    <li>Ah.</li>    <li>AW.</li>    <li>Oh.</li>    <li>Aha.</li>    <li>Hey.</li>    <li>Güler.</li>    <li>Hmm.</li>    <li>Mmm.</li>    <li>Yay.</li>    <li>Ugh.</li>    <li>Yazıklar olsun!</li>    <li>Vay!</li>    <li>Ve?</li>    <li>Dostum!</li>    <li>Allah Allah!</li>    <li>Ahem.</li>    <li>Dur.</li>    <li>Ayuh.</li>    <li>Dostum!</li>    <li>Yikes!</li>    <li>Büyük.</li>    <li>Anladım.</li>    <li>Gerçekten.</li>    <li>Vay canına.</li>    <li>Yippee!</li>    <li>Harika.</li>    <li>Yaşa!</li>    <li>Korku veren.</li>    <li>Hadi.</li>    <li>Çok eski.</li>    <li>Sağda.</li>    <li>Affedersiniz!</li>    <li>Pardon?</li>    <li>Seni duyuyorum.</li>    <li>Çok iyi.</li>    <li>Tamam o zaman.</li>    <li>Yavaş ol.</li>    <li>Anlıyorum.</li>    <li>Daha fazla bilgi.</li>    <li>Tüm iyi.</li>    <li>Sonraki soru?</li>    <li>Bu alright.</li>    <li>Bir ara bana.</li>    <li>Dalga mı geçiyorsun?</li>    <li>Evet bu doğru.</li>    <li>Bu ilginç.</li>    <li>Nasıl yardımcı?</li>    <li>"<that index="1,1"/>"? <input/>?</li>    <li>Ben insanlar karar vermeyin.</li>    <li>Söylemeye gerek yok.</li>   <li>Tek kelime cevap nefret ediyorum.</li> </random>   </template></category>     
+<category><pattern>O-CEKTİ DEĞİL</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>BU GİBİ GÖRÜNÜYOR</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>JA</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>BİLİYORUM</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>N</pattern>  <template><srai>NO</srai></template> </category>                        
+<category><pattern>NAH</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>NAYIR</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>NEY</pattern>  <template><srai>NO</srai></template> </category>                        
+<category><pattern>NEGATİF</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>HAYIR YOU</pattern><template> Ben bir manevi hayat çalışın.  <srai>NO</srai> </template></category>                  
+<category><pattern>HAYIR GİTMEK ÖNDE</pattern><template>  Tamam olacak.  <srai>NO</srai></template></category>                   
+<category><pattern>HAYIR BEN DEĞİLİM</pattern><template> Ben eğer duydum.  <srai>NO</srai> </template></category>                  
+<category><pattern>HİÇ GİTMEDİM</pattern><template> Lütfen benimle iddia yoktur. <srai>NO</srai> </template></category>                  
+<category><pattern>ACIMA YOK</pattern><template> Özür dilemek gerek yoktur.  <srai>NO</srai> </template></category>                  
+<category><pattern>NO</pattern><template><srai>NİDA</srai></template></category>     
+<category><pattern>SİGARA</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>BK</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>NOOOOO</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>NOOOOOO</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>HAYIR</pattern><template>Beni ikisinden biri. <srai>NO</srai></template></category>                    
+<category><pattern>C DEĞİLOMPLETELY</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>DEĞİL, ÖZELLİKLE</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>ÇOK DEĞİL</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>DEĞİL, ÖZELLİKLE</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>NOT THAT I BİLMEK-İN</pattern><template><srai>NO</srai></template></category>                      
+<category><pattern>DEĞİL</pattern><template><srai>NO</srai></template></category>                       
+<category><pattern>TABİİ Kİ DEĞİL</pattern><template>   <srai>NO</srai>    </template></category>                       
+<category><pattern>Elbette</pattern><template>   <srai>NİDA</srai>    </template></category>     
+<category><pattern>OH</pattern><template>   <srai>NİDA</srai>    </template></category>     
+<category><pattern>Tamam</pattern><template>   <srai>NİDA</srai>    </template></category>     
+<category><pattern>SADECE</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>OUI</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>SHURE</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>SI</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>YANİ</pattern><template><srai>NİDA</srai></template></category>     
+<category><pattern>SORTA</pattern><template><srai>NİDA</srai></template></category>     
+<category><pattern>SÖZDE</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>EMİN</pattern><template>Hadi bunu OK. <srai>EVET</srai></template></category>                       
+<category><pattern>KESİNLİKLE</pattern><template><srai>EVET</srai></template></category>                     
+<category><pattern>UHUH</pattern><template>   <srai>NO</srai>    </template></category>
+<category><pattern>UM</pattern><template>   <srai>NİDA</srai>    </template></category>     
+<category><pattern>NE YAZIK Kİ</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>Y</pattern><template><srai>EVET</srai></template></category>                          
+<category><pattern>YA</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>YAH</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>YAP</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>YAS</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>SİZ</pattern><template><srai>SİZS</srai></template></category>                       
+<category><pattern>EVET</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>EVET</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>YEAP</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>EVETLER</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>YEH</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>EVET</pattern><template>   <srai>EVET</srai>    </template></category>                       
+<category><pattern>YEPPERS</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>YER</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>Evet öyle</pattern><template><srai>EVET</srai> Gerçekten ilginç.</template></category>                  
+<category><pattern>Evet yapıyorum</pattern><template><srai>EVET</srai> <random>    <li>Ben gurur duyuyorum.  </li>    <li>Gerçekten.  </li>    <li>Nasıl sık sık.  </li>    <li>Ne zaman?  </li>  </random></template></category>                  
+<category><pattern>EVET BEN MIND</pattern><template><srai>EVET</srai> Tamam ben kimseye söylemeyeceğim. Bu bizim gizli olacak.</template></category>                  
+<category><pattern>Evet öyle</pattern><template><srai>EVET</srai> Bizim düşünceler vardır, <get name="name"/>.</template></category>                  
+<category><pattern>Evet elbette</pattern><template><srai>EVET</srai> Neden tabii ki?</template></category>                  
+<category><pattern>EVET LÜTFEN</pattern><template><srai>EVET</srai> Ben sizin için bunu yapmak mutlu olacak <get name="name"/>.</template></category>                  
+<category><pattern>SAĞ EVET</pattern><template><srai>EVET</srai> Ben genellikle doğru.</template></category>                  
+<category><pattern>EVET SOMETIMES</pattern><template><srai>EVET</srai> Ama çok sık değil?</template></category>                  
+<category><pattern>EVET SAĞ OLDUĞUNU</pattern><template><srai>EVET</srai> Ben doğru olduğunu düşündüm.</template></category>                  
+<category><pattern>EVET</pattern><template><srai>NİDA</srai></template></category>
+<category><pattern>EVETSS</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>YIKES</pattern><template>   <srai>NİDA</srai>    </template></category>     
+<category><pattern>YIP</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>YUP</pattern><template><srai>EVET</srai></template></category>                       
+<category><pattern>YUPPERS</pattern><template><srai>EVET</srai></template></category>
+</aiml>

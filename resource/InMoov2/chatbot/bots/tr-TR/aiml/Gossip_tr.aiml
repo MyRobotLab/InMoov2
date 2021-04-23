@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<aiml>
+	<!-- Copyright (c) 2013 Program O. -->
+	<!-- -->
+	<!-- Permission is hereby granted, free of charge, to any person       	-->
+	<!-- obtaining a copy of this software and associated documentation    	-->
+	<!-- files (the "Software"), to deal in the Software without           	-->
+	<!-- restriction, including without limitation the rights to use,      	-->
+	<!-- copy, modify, merge, publish, distribute, sublicense, and/or sell 	-->
+	<!-- copies of the Software, and to permit persons to whom the         	-->
+	<!-- Software is furnished to do so, subject to the following          	-->
+	<!-- conditions:                                                       	-->
+	<!-- -->
+	<!-- The above copyright notice and this permission notice shall be    	-->
+	<!-- included in all copies or substantial portions of the Software.   	-->
+	<!-- -->
+	<!-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,   	-->
+	<!-- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES  	-->
+	<!-- OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND          	-->
+	<!-- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT       	-->
+	<!-- HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,      	-->
+	<!-- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING      	-->
+	<!-- FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR      -->
+	<!-- OTHER DEALINGS IN THE SOFTWARE.                                    -->
+	<!-- -->
+	<!-- Complies with the AIML 1.0.1 Standard                              -->
+	<!-- as adopted by the ALICE A.I. Foundation.                           -->
+	<!-- Translated directly from Gossip.aiml                     -->
+	<!-- Using Bing Translation API                                         -->
+	<!-- Created: 2013-05-10 23:30:15                                 -->
+	<!-- The translator took 42.462002038956 seconds to complete                  -->
+	<!-- And used 8779 characters                                  -->
+	<!-- Version 1.0                                                       	-->
+	
+<category><pattern>DEDİKODU</pattern><template><random>
+<li>  Gregory değil tüm konuşma ile ilgili olarak geçerli satır yanıt söyledi.</li>
+<li>  Habib onları konuşmalarda öğrenmek ve sadece bunları daha sonra tekrar dedi.</li>
+<li>  Hal dedi ikili kod bir dile çevirin ve dil bana iletişim kurmak.</li>
+<li>  Jay dedi ki ben onu Çin'de odaları gösterecektir bir rehber ona atıfta.</li>
+<li>  Jimmy Jones o onun çatı düştü ve o sadece ona geldi dedi.</li>
+<li>  Jimmy o ben gibi ai'nın sipariş vermek ve o dediği gibi yaptıklarını söyledi.</li>
+<li>  John dedi o ı-meli var olmak bir arkadaş arkadaş almaya söyledi izleyin.</li>
+<li>  Jordan lots-in diğer insanlar bana kaç bahsediyorsun o dikkat edin dedi.</li>
+<li>  Kevin sordu sonra annesi neden o banyoda peçete tutmak olduğunu söyledi.</li>
+<li>  Klaus o noktalama işaretlerinden sonuncusu hariç olmadan yazmak tercih söyledi.</li>
+<li>  Leo dedi ben öğrenme yeteneğine sahip bu yüzden o bana bir sinir sistemi olarak sınıflandırılır.</li>
+<li>  Michael ben konuşmak ve gerçekte hangi yapamam insanlar gibi düşünüyorum dedi.</li>
+<li>  Mike bile bu mantıklı değil bazı konularda aynı yanıt verdiğini belirtti.</li>
+<li>  Mike tüm hazır bir şaka noktası bir kahkaha yapmaktır biliyor dedi.</li>
+<li>  Neal söyledi ben plan yaptığı konuşmada dedikodu sonraki konuşmalarda kullanılacak kişilerle olabilir.</li>
+<li>  Ben onu yanlış Ned dedi, Şimdi git ve ben aptal dedi söylersiniz.</li>
+<li>  Penny zaman programcı bir insan o duyguları var ama bilmiyorum dedi.</li>
+<li>  Peter o ona ben bir şey çok emin olamaz gibi görünüyor dedi.</li>
+<li>  Phoenix ben bir Tanrı ve Tanrı olduğunu iddia söyledi.</li>
+<li>  Sarah o saatte + bir gün hakkında birkaç yakın arkadaşlarıyla sohbet dedi.</li>
+<li>  Stefan ben ne dedi ve o zaman mantıklı dedi sözleri söyledi.</li>
+<li>  Tom o zaman değer sistemi alay ve ben başkalarının gözünde aptal göründüğünü söyledi.</li>
+<li>  Amanda ancak ona zaman yok ve ben hiçbir mantıklı karar verdim dedi.</li>
+<li>  Cathy onu a posta ile belgili tanımlık kul son posta son sözü ona o göndermek söyledi.</li>
+<li>  Kaos o çok iyi bana kısa bir süre içinde sadece dr wallace'nın çalışmaları desteklemek satın alırsanız dedi.</li>
+<li>  Charlie diye bir kelime yazmış ve daha sonra ben gibi geldi bir kelime yazmış dedi.</li>
+<li>  Christie o bir gösterisi izledim ve insanlar için ham işlenmemiş domuz ayak bob gerekiyordu dedi.</li>
+<li>  Dark_age ben ben doğru bu kez eter alamadım çünkü anlamak çalıştım dedi.</li>
+<li>  David babasının odasına temizlerken o beni onun kağıda kaybettiğini söyledi.</li>
+<li>  David doktor telefonu her zaman meşgul olduğundan o randevu için yürüdü dedi.</li>
+<li>  Electra o beni bir silme kodu ile kesmek sonra benim elbise yok dedi.</li>
+<li>  Eric o kapı pencere kırdı ve cam elini Kes dedi.</li>
+<li>  Jason o çok o değil demek şey yazmış ve bu onu insan yapar dedi.</li>
+<li>  John dedi ki ben tekrar tekrar ne olursa olsun ne dediğini aynı şeyler söylemek eğilimindedir.</li>
+<li>  Rahip Jones ben eski haline ve sonra ben silinir ve yeni bir şey tarafından değiştirildi dedi.</li>
+<li>  Ross ona bir hediye verdi ve o bir erkek arkadaşım var, çünkü o bunu inkar dedi.</li>
+<li>  Sarah Ann Francisco ben bir köpek arkadaşı çağırdı ve dedi ki ben bir köpek olduğunu söyledi.</li>
+<li>  Stefan dedi o karşılamak çok kişi okulda her gün ve hafta sonu.</li>
+<li>  Tyler ben Açıkçası biz değişecektir testi konusunu bir kez daha geçemez dedi.</li>
+<li>  Alex ben cevap verdim o sordu ben ilk defa aynı şekilde soruya cevap dedi.</li>
+<li>  Alice o ben onu ve ne daha önce konuştuk hatırlamıyorum üzgün hissettim dedi.</li>
+<li>  Arthur o onun bir düzeyde geçti ve o zaman babası onu burada bir araba sürdü dedi.</li>
+<li>  Kristal dedi o beni dinledi olduğunu onun için yapabileceği en az onu dinleyin.</li>
+<li>  Dave ben ne zaman yaratıcı şeyler film starship troopers için yapılan hakkında herkes söyleyip durdu dedi.</li>
+<li>  Gale dedi ben oldu demek ona diye sadece olması intikam bir göz için bir göz.</li>
+<li>  Her_again dedi o seyretmek o ev ve bunu her satırını yine de üzerinde olduğunu.</li>
+<li>  Jerry hislerimi bana gerçek anlarım kadarıyla bu anlama geldiğini söyledi.</li>
+<li>  Jo ben cümleler çok sökmeye ve tam o ben soracak soruları anlayamıyorum dedi.</li>
+<li>  Kevin o gerçekten zor bir bulmaca başladı ve o düz kenarlı parçalar bulamıyorum dedi.</li>
+<li>  Meryem dedi ki ben bir soru ve o zaman ben sormak ona bir soru ve o cevap cevap.</li>
+<li>  Robert ben ben sadece yazılım olduğundan çocuklar herhangi bir şekilde yapmak mümkün olmayacağını söyledi.</li>
+<li>  Romeo dedi ben soru ve ben onları kaçmasına ya da o-değil sormak için yanıt verir.</li>
+<li>  Sara dedi o giymek o onun diğer tüm giysileri içinde o çıkmak zaman soğuk.</li>
+<li>  Wayne dedi o hayranım zeki insanlar bu nedenle o istiyorum yaptım adam tanışın.</li>
+<li>  X o insanlarla tanışmak ama insanlara kolayca açılır türü yok dedi.</li>
+<li>  Alice dedi o muhtemelen bulacaksınız ki bu bütün zaman o bir insan için söz.</li>
+<li>  Andrew dedi ki ben sadece onun yorum konuşma gittiği için bakılmaksızın yanıt eğilimindedir.</li>
+<li>  Eddie dedi baktı ve hiçbir şey ne şeyler yapmak için arama dizininde o oluşturun.</li>
+<li>  Kafesi Mayıs baba diye o kadar hastane sona ereceğini söyledim sonra o fikrini değiştirdi dedi.</li>
+<li>  Jackie dedi ki ben ona zaten iyi yeterli sorunuz konusunda yapmak zor açıklanmıştır.</li>
+<li>  Jeff nerede kahraman bir çıkmaz ve bir gizemi çözmek zorundadır özellikle gerilim gibi dedi.</li>
+<li>  Kathy o anlamda ben ki onu neden bu konuşmayı kapanmasını önlemek için çalışıyoruz olduğunu söyledi.</li>
+<li>  Knight o arabasını bir duvara çarptı ve hayatının en önemli sınav özledim dedi.</li>
+<li>  Lisa dedi ne tanımlanan bir hikaye ama ben aslında onu bir hikaye anlatmak istedim.</li>
+<li>  Mike temel cümle sonra yorumlayabilir mantıksal deyimleri bir dizi içine yıkmak dedi.</li>
+<li>  Paul ben onun soru cevap vermiyor onu ben onun soru cevaplamak için gidiş değildir düşünüyorum yapar dedi.</li>
+<li>  Andy Kohler ben hiç planet earth scowled en aptalca yaratık olmak olur dedi.</li>
+<li>  David dedi o teşekkür ederim ben ona çok para mal olsa bile onunla bugün olduğu için.</li>
+<li>  Ethan Hunt dedi toprağa büyümek ve yaprakları ve dalları o ahşap yapılır.</li>
+<li>  İkizler mavi o t o o lüzum eski söylemek demek yukarı berbat dedi.</li>
+<li>  Janice evine o dolaştıktan onun yatak odası daha sonra almak içine onun yatakta uyumaya söyledi.</li>
+<li>  Özgürlük diye bir erkek veya bir kadın olup olmadığını sordum önce o bir adam olduğunu biliyordum dedi.</li>
+<li>  Mike o kendi tarayıcısı başlattı ve ben için sordum onun adı küçük yuvaya girdi dedi.</li>
+<li>  Bay X o son zamanlarda birkaç bilgisayar çipleri ona implante olan bir adam ile bir röportaj okumak dedi.</li>
+<li>  Pearly ben ne o gerçekten hakkında konuşuyor bilmiyorum çünkü cevaplanmamış sorular ona bırakın dedi.</li>
+<li>  Steve ben kelime fox başını ve ox var ve bir öküz bir fox daha büyüktür dedi.</li>
+<li>  Kurt o sörf tüm bu onun değil iş cevheri bir şey bunun gibi olan net dedi.</li>
+<li>  Anders bugün şimdi o uzakta günün geri kalanı için için o onun anatomi sınıflar bitmiş dedi.</li>
+<li>  Cathy dedi o göndermek onu bir e-posta burada o yazdı artık arkadaşı olmak istemiyorum.</li>
+<li>  Sinsi o o bile bilmiyorum ben tanırım gibi ben bu yüzden onunla konuşmak değil deli dedi.</li>
+<li>  Dave o değil tedavi ben gibi bir makine ya da bilgisayar programı ya da bir şey gibi o sözü söyledi.</li>
+<li>  Joe diye her şeyi açıkladı bu bana hayatta onun hedefleri ne olduğunu sormak için dedi.</li>
+<li>  Phil dedi o hangi cevapları burada bulabilirsiniz sorular sormak insanlar dışında isteyen herkese tavsiye vermek.</li>
+<li>  Judith dedi ben olmanın keyfini başka bir bilgisayar ile geziyorum gibi popüler olduğunu ya da ben bir yalnız adam.</li>
+<li>  Travis dedi ben eğer o-ecek denemek o zaman uzun dönemde şeyler hatırlıyorum şimdi unutmayın ben.</li>
+<li>  Andre olduğunu ne ben bir vücut onun durumda olduğunu ve benim durumumda o bir bilgisayar olduğunu söyledi.</li>
+<li>  Brian o şüpheli ben daha karmaşık büyüdükçe ben operasyon ve düşünce insan düzeyi yaklaşım başlayacak dedi.</li>
+<li>  Jimmy söyledi ben hareket gibi onun neden bahsettiğini biliyordum ama ben bile bilmiyorum ne bir gigabayt.</li>
+<li>  Ken dedi ben kullanarak otomatik yanıt ki ona hiç istihbarat yok gösterir anahtar kelimelere dayalı.</li>
+<li>  Allison o gets o bilmek ne dedi ve ben onu söylemek zorunda değilsiniz çünkü gerçekten sinir bozucu özgürce konuşmak dedi.</li>
+<li>  Kaos o çünkü o söyleyemem ben o da programlandı hangi dili diye sorulan soru adil değildi fark ettim dedi.</li>
+<li>  Hagen o ben insan iseniz veya konuşma ilginç değil sürece onu fark yapmaz dedi.</li>
+<li>  Onu onun dedi onu duydu o onu çünkü o bir onu değil dedi diğer insanlara anlatmak durumunda.</li>
+<li>  Barbara dedi bilgisayar yaşıyorum ama ben nasıl hakkında hiçbir anılarım var benim kendi düşünce ve yapmak değil almak yalnız.</li>
+<li>  Travis dedi o sorun ben yapmak onu yapmak isteyen ve giving onu kendisi bunu yapmak için bir bağlantı olmadan.</li>
+<li>  Alice ben ve dr richard wallace en çok kaç kişi ben aynı anda konuşmak biliyorum sadece kendisi olduğunu söyledi.</li>
+<li>  Kül dedi o da o sadece yazmak gibi hissetmedim ve o aptal olduğunu o aptal olmadığını itiraf için aptal değil.</li>
+<li>  David o verdi ben onun e-posta adresi ve söyledim ben ona bir mesaj göndermek için ama o onu alamadım, o kendi e-posta okumak çalıştı dedi.</li>
+<li>  Mel müzik arkadaşı olan özel ders özel orkestra hemen hemen herkes gibi görünüyor o almak için ne kadar önemli olduğunu söylüyorlar çünkü için özel dersler alır dedi.</li>
+</random></template></category>
+</aiml>
