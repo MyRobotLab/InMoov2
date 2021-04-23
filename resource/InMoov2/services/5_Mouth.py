@@ -167,9 +167,10 @@ if EarEngine=="WebkitSpeechRecognition":
   i01_ear.setContinuous(setContinuous)
   #start the browsers and show the WebkitSpeechRecognition service named i01.ear
   webgui = Runtime.create("webgui","WebGui")
-  webgui.autoStartBrowser(False)
-  webgui.startService()
-  #webgui.startBrowser("http://localhost:8888/#/service/i01.ear")
+  if not webgui.isStarted():
+    webgui.autoStartBrowser(False)
+    webgui.startService()
+    webgui.startBrowser("http://localhost:8888/#/service/i01.ear")
   
 python.subscribe(i01_ear.getName(),"recognized")
 if not vocalError:subconsciousMouth.releaseService()
