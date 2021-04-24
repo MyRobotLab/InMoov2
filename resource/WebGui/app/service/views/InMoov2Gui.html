@@ -934,27 +934,19 @@
             <button class="btn btn-default" ng-click="msg.disable()">disable</button>
 </button></td></tr>
 <tr>
-    <td>virtualize</td>
-    <td>
+    <td>virtualize&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <toggle width="30" height="28" ng-model="service.isVirtual" ng-change="!service.isVirtual?msg.setVirtual(false):msg.setVirtual(true)" on=" " off=" "></toggle>
     </td>
-    <td>on</td>
 </tr>
 <tr>
-    <td>simulator </td>
-    <td>
+    <td>simulator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <toggle width="30" height="28" ng-model="service.isSimulatorActivated" ng-change="!service.isSimulatorActivated?msg.stopSimulator():msg.startSimulator()" on=" " off=" "></toggle>
     </td>
-    <td>off</td>
 </tr>
 <tr>
-    <td>servo mixer </td>
-    <td>
-        <toggle width="30" height="28" ng-model="service.isServoMixerActivated" ng-change="!service.isServoMixerActivated?msg.stopServoMixer():msg.startServoMixer()" on=" " off=" "></toggle>
-    </td>
-    <td>
-        on <button class="btn btn-default" ng-show="service.isServoMixerActivated" ng-click="mrl.changeTab(service.name + '.servomixer')">Open</button>
-    </td>
+    <td>servo mixer&nbsp;&nbsp;
+        <toggle width="30" height="28" ng-model="service.isServoMixerActivated" ng-change="!service.isServoMixerActivated?msg.stopServoMixer():msg.startServoMixer()" on=" " off=" "></toggle>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-default" ng-show="service.isServoMixerActivated" ng-click="mrl.changeTab(service.name + '.servomixer')">Open</button></td>
 </tr>
 <tr>
     <td>
