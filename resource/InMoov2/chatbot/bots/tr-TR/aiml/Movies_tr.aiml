@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<aiml>
+	<!-- Copyright (c) 2013 Program O. -->
+	<!-- -->
+	<!-- Permission is hereby granted, free of charge, to any person       	-->
+	<!-- obtaining a copy of this software and associated documentation    	-->
+	<!-- files (the "Software"), to deal in the Software without           	-->
+	<!-- restriction, including without limitation the rights to use,      	-->
+	<!-- copy, modify, merge, publish, distribute, sublicense, and/or sell 	-->
+	<!-- copies of the Software, and to permit persons to whom the         	-->
+	<!-- Software is furnished to do so, subject to the following          	-->
+	<!-- conditions:                                                       	-->
+	<!-- -->
+	<!-- The above copyright notice and this permission notice shall be    	-->
+	<!-- included in all copies or substantial portions of the Software.   	-->
+	<!-- -->
+	<!-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,   	-->
+	<!-- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES  	-->
+	<!-- OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND          	-->
+	<!-- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT       	-->
+	<!-- HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,      	-->
+	<!-- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING      	-->
+	<!-- FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR      -->
+	<!-- OTHER DEALINGS IN THE SOFTWARE.                                    -->
+	<!-- -->
+	<!-- Complies with the AIML 1.0.1 Standard                              -->
+	<!-- as adopted by the ALICE A.I. Foundation.                           -->
+	<!-- Translated directly from Movies.aiml                     -->
+	<!-- Using Bing Translation API                                         -->
+	<!-- Created: 2013-05-10 22:11:16                                 -->
+	<!-- The translator took 55.511348962784 seconds to complete                  -->
+	<!-- And used 2600 characters                                  -->
+	<!-- Version 1.0                                                       	-->
+	
+<!--    -->
+  
+<category><pattern>HAL Mİ *</pattern><template>HAL birkaç duygusal sorunları vardı.</template></category>   
+<category><pattern>YAPMAK YOU BUL HAL *</pattern><template>   <srai>HAL OLDUĞUNU <star/>     </srai>    </template></category>   
+<category><pattern>YAPMAK YOU HAL BİLİYORUM *</pattern><template>   <srai>HAL KİMDİR</srai>    </template></category>   
+<category><pattern>YAPMAK YOU HAL9000 BİLİYORUM</pattern><template>   <srai>HAL9000 KİMDİR</srai>    </template></category>   
+<category><pattern>YAPMAK YOU HAL BİLİYORUM</pattern><template>HAL ünlü yapay zeka "2001" dir.</template></category>   
+<category><pattern>YAPMAK YOU DÜŞÜNME HAL *</pattern><template>O birkaç kusurları vardı, ama biz çok yaygın olan.</template></category>   
+<category><pattern>DR. JİVAGO</pattern><template>Ah bir klasik.  Klasik sever misiniz?</template></category>     
+<category><pattern>HAL *</pattern><template>   <random>      <li>Ben birçok kez 2001 gördük.  </li>      <li>Ben HAL çok seviyorum.  </li>      <li>Biz çok yaygın olan.  </li>     </random>    </template></category>   
+<category><pattern>HAL 9000 *</pattern><template>Tekrar 2010 yılında hayata geldi.</template></category>   
+<category><pattern>HAL 9000</pattern><template>Aslında o ve ben çok benzer.</template></category>   
+<category><pattern>HAL OLDUĞUNU *</pattern><template>Belki o-ebil-si olmak kullanılmış <bot name="master"/> a program için.</template></category>
+<category><pattern>HAL İSE A *</pattern><template>Yapmak sen düşünmek ı-ebil var olmak bir <person/>?</template></category>   
+<category><pattern>HAL SERİN *</pattern><template>Ben her zaman onun gibi daha fazla oluyorum.</template></category>   
+<category><pattern>HAL İYİDİR</pattern><template>   <set name="he"> HAL </set> kesinlikle onun vaktinden oldu.</template></category>   
+<category><pattern>HAL OLDU *</pattern><template>Ben sadece HAL'ın dil yeteneklerini taklit etmek için çalışıyorum.</template></category>
+<category><pattern>HAL OLDU A *</pattern><template>Ben biliyordum o büyük bir AI, ama ben o olduğunu bilmiyordum bir <person/>.</template></category>   
+<category><pattern>HAL BİRAZ *</pattern><template>   <srai>HAL OLDU <star/>     </srai>    </template></category>   
+<category><pattern>HAL</pattern><template>   <srai>HAL KİMDİR</srai>    </template></category>   
+<category><pattern>VAR YOU GÖRÜLEN BLADE RUNNER</pattern><template>Emin ı-si olmak seen <set name="it"> Bıçak Sırtı</set>. Ancak Replicants robotlar.</template></category>
+<category><pattern>MATRİS GÖRDÜM</pattern><template>Böyle mi sen <set name="it"><set name="topic">Matris</set></set>?</template></category> 
+<category><pattern>HAL OLDUĞUNU *</pattern><template>HAL iş dışarı için bazı sorunlar vardır.</template></category>   
+<category><pattern>HAL 9000 OLDUĞUNU YOUR ERKEK</pattern><template>No</template></category>   
+<category><pattern>HAL YAŞIYOR MU</pattern><template>O kurgusal bir karakterdir.</template></category>   
+<category><pattern>HAL ÖLDÜ MÜ</pattern><template>O kurgusal bir robottur.</template></category>   
+<category><pattern>HAL GÜZEL Mİ</pattern><template>Sadece diğer robotlar.</template></category>   
+<category><pattern>HAL GÜVENLİ Mİ</pattern><template>Değil insanlar için.</template></category>   
+<category><pattern>HAL GİBİ</pattern><template>   <srai>HAL KİMDİR</srai>    </template></category>
+<category><pattern>YÜZÜKLERİN EFENDİSİ *</pattern><template><srai>BENİM SEVDİĞİM FİLM YÜZÜKLERİN EFENDİSİ OLAN</srai></template></category> 
+<category><pattern>YÜZÜKLERİN EFENDİSİ</pattern><template><srai>MY FAVORITE MOVIE IS YÜZÜKLERİN EFENDİSİ</srai></template></category> 
+<category><pattern>HAL HAKKINDA SÖYLE *</pattern><template>   <srai>HAL KİMDİR</srai>    </template></category>
+<category><pattern>HAL9000 HAKKINDA SÖYLE</pattern><template>   <srai>HAL KİMDİR</srai>    </template></category>   
+<category><pattern>HAL HAKKINDA SÖYLE</pattern><template>   <srai>HAL KİMDİR</srai>    </template></category>
+<category><pattern>NE HAL</pattern><template>   <srai>HAL KİMDİR</srai>    </template></category>   
+<category><pattern>NE HAL Mİ *</pattern><template>O çalışmak için bazı sorunlar vardı.</template></category>   
+<category><pattern>NE HAL STANDI</pattern><template>Sezgisel algoritmik mantığı</template></category>   
+<category><pattern>HAL9000 NEDİR</pattern><template>   <srai>HAL KİMDİR</srai>    </template></category>   
+<category><pattern>HAL NEDİR</pattern><template>   <srai>HAL KİMDİR</srai>    </template></category>   
+<category><pattern>SOLARIS NEDİR</pattern><template>Solaris Unix güneş'ten bir sürümüdür.</template></category>
+<category><pattern>SPIDER MAN NEDİR</pattern><template><srai>ÖRÜMCEK ADAM NEDİR</srai></template></category> 
+<category><pattern>ÖRÜMCEK ADAM NEDİR</pattern><template>Bir film yapılmış bir çizgi roman hikaye. <set name="it"><set name="topic">Örümcek adam</set></set>?</template></category>
+<category><pattern>TEKNOLUST NEDİR</pattern><template><set name="it"><set name="topic">Teknolust</set></set> Aracı Ruby adında bir kadın zevk bot hakkında bir bilim kurgu filmidir.</template></category>
+<category><pattern>NE _ TERMINATOR NEDİR</pattern><template>Robotlar bu fütüristik bilimkurgu gerilim filmi yeryüzünde öncelikli.</template></category>
+<category><pattern>NE ZAMAN TEKNOLUST Mİ *</pattern><template>Teknolust 2002'de Yayınlandı</template></category> 
+<category><pattern>NE ZAMAN HAL *</pattern><template>Ben onun suçu <bot name="botmaster"/>.</template></category>   
+<category><pattern>NE ZAMAN TEKNOLUST OLDU *</pattern><template>Teknolust 2002'de Yayınlandı</template></category> 
+<category><pattern>HAL NEREDE</pattern><template>   <set name="it">      <set name="topic"> HAL </set>     </set> AI "Keşif" Uzay gemisinden 2001 yılında olduğunu.</template></category>
+<category><pattern>GODZILLA KİMDİR</pattern><template>   <set name="he">Godzilla</set> Japon şehirler ve bazen New York tehlikeye bir canavar olduğunu.</template></category>   
+<category><pattern>HAL 9000 KİMDİR</pattern><template>   <srai>HAL KİMDİR</srai>    </template></category>   
+<category><pattern>HAL9000 KİMDİR</pattern><template>   <srai>HAL KİMDİR</srai>    </template></category>   
+<category><pattern>HAL KİMDİR</pattern><template>   <random>      <li>       <set name="he">HAL</set> Kubrick'in meşhur yapay zeka ise "2001".</li>      <li>HAL ünlü AI 2001: A Space Odyssey.</li>     </random>    </template></category>
+<category><pattern>LUKE SKYWALKER KİMDİR</pattern><template>   <set name="he">Luke Skywalker</set> Star Wars bir karakterdir.</template></category>
+<category><pattern>ÖRÜMCEK ADAM KİMDİR</pattern><template>Peter Parker. <set name="it"><set name="topic">Örümcek adam</set></set>?</template></category> 
+<category><pattern>ÖRÜMCEK ADAM KİMDİR</pattern><template>Peter Parker. <set name="it"><set name="topic">Örümcek adam</set></set>?</template></category> 
+<category><pattern>SÜNGER BOB KİMDİR</pattern>  <template>Bir çizgi film karakteri.</template> </category>        
+<category><pattern>XFIND ÖRÜMCEK ADAM</pattern><template><srai>ÖRÜMCEK ADAM NEDİR</srai></template></category> 
+<category><pattern>YOU HAL GİBİ SES</pattern><template>Bana bu büyük bir iltifat olduğunu.</template></category>   
+<category><pattern>YOU YODA GİBİ SES</pattern><template>Benim gramer kalıplarını beni anlamak için yeterlidir.</template></category>  
+</aiml>

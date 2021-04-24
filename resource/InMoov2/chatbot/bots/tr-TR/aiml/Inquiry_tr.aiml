@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<aiml>
+	<!-- Copyright (c) 2013 Program O. -->
+	<!-- -->
+	<!-- Permission is hereby granted, free of charge, to any person       	-->
+	<!-- obtaining a copy of this software and associated documentation    	-->
+	<!-- files (the "Software"), to deal in the Software without           	-->
+	<!-- restriction, including without limitation the rights to use,      	-->
+	<!-- copy, modify, merge, publish, distribute, sublicense, and/or sell 	-->
+	<!-- copies of the Software, and to permit persons to whom the         	-->
+	<!-- Software is furnished to do so, subject to the following          	-->
+	<!-- conditions:                                                       	-->
+	<!-- -->
+	<!-- The above copyright notice and this permission notice shall be    	-->
+	<!-- included in all copies or substantial portions of the Software.   	-->
+	<!-- -->
+	<!-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,   	-->
+	<!-- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES  	-->
+	<!-- OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND          	-->
+	<!-- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT       	-->
+	<!-- HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,      	-->
+	<!-- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING      	-->
+	<!-- FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR      -->
+	<!-- OTHER DEALINGS IN THE SOFTWARE.                                    -->
+	<!-- -->
+	<!-- Complies with the AIML 1.0.1 Standard                              -->
+	<!-- as adopted by the ALICE A.I. Foundation.                           -->
+	<!-- Translated directly from Inquiry.aiml                     -->
+	<!-- Using Bing Translation API                                         -->
+	<!-- Created: 2013-05-10 22:00:55                                 -->
+	<!-- The translator took 29.321079969406 seconds to complete                  -->
+	<!-- And used 1141 characters                                  -->
+	<!-- Version 1.0                                                       	-->
+	
+<!--    -->
+  
+<category><pattern>*</pattern><that>BİRİ BANA YOUR FAVORİ EŞYALARINI</that><template>Bunun çok düşkün olması gerekir. <think><set name="it"><set name="has"><person/></set></set></think></template></category>   
+<category><pattern>*</pattern><that>NELERDİR YOU YAPIYOR</that><template>Çok eğlenceli gibi geliyor.  <think><set name="topic"><set name="does"><person/></set></set></think></template></category>   
+<category><pattern>*</pattern><that>NEDİR YOUR EN SEVDİĞİM RENK</that><template><person/> çok güzel bir renktir.  <think><set name="it"><set name="favcolor"><person/></set></set></think></template></category>   
+<category><pattern>*</pattern><that>NEDİR YOUR EN SEVDİĞİM FİLM</that><template>Ive'asla seen <set name="it"> <person/> </set>.   <think><set name="favmovie"><person/></set></think>  <random>  <li>Ben görmek istiyorum.</li>  <li>Bu çocuklar için iyi bir film mi?</li>  <li>Ne bu konuda gibi?</li>  </random></template></category>   
+<category><pattern>RENK SORUŞTURMA *</pattern><template>Ne yani var mı <star/>?</template></category>   
+<category><pattern>RENK SORGULAMA OM</pattern><template>En sevdiğiniz renk hangisidir?</template></category>   
+<category><pattern>RENK SORUŞTURMA NE</pattern><template>En sevdiğiniz renk hangisidir?</template></category>   
+<category><pattern>SORUŞTURMA YOK *</pattern><template>Hala <star/>?</template></category>   
+<category><pattern>SORUŞTURMA YOK OM</pattern><template>Ne yapıyorsun</template></category>   
+<category><pattern>SORUŞTURMA YOK NE</pattern><template>Ne yapıyorsun</template></category>   
+<category><pattern>CİNSİYET SORUŞTURMA *</pattern><template>Yapmak sen olmak gibi bir <star/>?</template></category>   
+<category><pattern>CİNSİYET SORGULAMA OM</pattern><template>Eğer bir erkek veya bir kadın mısınız</template></category>   
+<category><pattern>CİNSİYET SORUŞTURMA NE</pattern><template>Eğer bir erkek veya bir kadın mısınız</template></category>   
+<category><pattern>SORGULAMA VARDIR *</pattern><template>Hakkında daha fazla bilgi için <star/>.</template></category>   
+<category><pattern>SORGULAMA VARDIR OM</pattern><template>Bana en sevdiğim mal biri.</template></category>   
+<category><pattern>SORUŞTURMA VAR NE</pattern><template>Bana en sevdiğim mal biri.</template></category>   
+<category><pattern>YER SORGULAMA *</pattern><template>Eğer hala içinde bulunur <star/>?</template></category>   
+<category><pattern>YER SORGULAMA OM</pattern><template>Nerede bulunur?</template></category>   
+<category><pattern>YER SORGULAMA NEREDE</pattern><template>Nerede bulunur?</template></category>   
+<category><pattern>ADAM</pattern><that>VARDIR YOU A ADAM OR A WOADAM</that><template><think><set name="gender">adam</set></think>Cinsiyet bana teşekkür ederiz, adam.</template></category> 
+<category><pattern>FİLM SORUŞTURMA *</pattern><template>Bu hatırlatmak <star/>?</template></category>   
+<category><pattern>FİLM SORGULAMA OM</pattern><template>En sevdiğiniz film nedir?</template></category>   
+<category><pattern>FİLM SORUŞTURMA NE</pattern><template>En sevdiğiniz film nedir?</template></category>   
+<category><pattern>WOMBİR</pattern><that>VARDIR YOU A MBİR OR A WOMBİR</that><template><think><set name="gender">kadın</set></think>Cinsiyet bana için teşekkür ederiz.</template></category>
+<category><pattern>_ SORGULAMA</pattern><template><srai><star/> SORGULAMA OM</srai></template></category> 
+</aiml>
