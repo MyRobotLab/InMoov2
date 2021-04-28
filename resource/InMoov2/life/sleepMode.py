@@ -146,7 +146,7 @@ def sleepModeInsult():
     
 def welcomeMessage():
   
-  if isChatbotActivated:
+  if isChatBotActivated:
     if str(i01.chatBot.getPredicate("default","firstinit"))=="unknown" or str(i01.chatBot.getPredicate("default","firstinit"))=="started":
       i01.chatBot.setPredicate("default","topic","default")
       i01.chatBot.getResponse("FIRST_INIT")
