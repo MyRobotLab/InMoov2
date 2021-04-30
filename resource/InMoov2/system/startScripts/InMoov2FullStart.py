@@ -90,6 +90,8 @@ i01_leftArm = Runtime.start('i01.leftArm', 'InMoov2Arm')
 openWeatherMap = Runtime.start('openWeatherMap', 'OpenWeatherMap')
 i01_ear = Runtime.start('i01.ear', 'WebkitSpeechRecognition')
 i01_head_neck = Runtime.start('i01.head.neck', 'Servo')
+#i01_head_eyelidLeft = Runtime.start('i01.head.eyelidLeft', 'Servo')
+#i01_head_eyelidRight = Runtime.start('i01.head.eyelidRight', 'Servo')
 i01_leftArm_shoulder = Runtime.start('i01.leftArm.shoulder', 'Servo')
 i01_rightHand_wrist = Runtime.start('i01.rightHand.wrist', 'Servo')
 i01_mouth = Runtime.start('i01.mouth', 'MarySpeech')
@@ -101,7 +103,7 @@ i01_pir = Runtime.start('i01.pir', 'Pir')
 #i01_neopixel = Runtime.start('i01.neopixel', 'Neopixel')
 isNeopixelActivated = False
 ##############################################################
-## creating client connections ####
+## creating client connections connections ####
 
 ##############################################################
 ## configuring services ####
@@ -203,6 +205,30 @@ i01_head_eyeX.setSpeed(48.0)
 i01_head_eyeX.setRest(90.0)
 i01_head_eyeX.setPin(22)
 i01_head_eyeX.setAutoDisable(True)
+
+# Servo Config : i01_head_eyelidLeft
+# NEEDS TO BE FIXED
+# sets initial position of servo before moving
+# in theory this is the position of the servo when this file was created
+#i01_head_eyelidLeft.setPosition(90)
+#i01_head_eyelidLeft.map(0.0,180.0,60.0,120.0)
+#i01_head_eyelidLeft.setInverted(False)
+#i01_head_eyelidLeft.setSpeed(48.0)
+#i01_head_eyelidLeft.setRest(0.0)
+#i01_head_eyelidLeft.setPin(22)
+#i01_head_eyelidLeft.setAutoDisable(True)
+
+# Servo Config : i01_head_eyelidRight
+# NEEDS TO BE FIXED
+# sets initial position of servo before moving
+# in theory this is the position of the servo when this file was created
+#i01_head_eyelidRight.setPosition(90)
+#i01_head_eyelidRight.map(0.0,180.0,60.0,120.0)
+#i01_head_eyelidRight.setInverted(False)
+#i01_head_eyelidRight.setSpeed(48.0)
+#i01_head_eyelidRight.setRest(0.0)
+#i01_head_eyelidRight.setPin(24)
+#i01_head_eyelidRight.setAutoDisable(True)
 
 # Servo Config : i01_rightHand_index
 # sets initial position of servo before moving
@@ -530,14 +556,17 @@ i01.startTorso()
 jme = i01.startSimulator()
 i01.loadGestures()
 
+# here we force the gui to be responsive
 isRightHandActivated = True
 isLeftHandActivated = True
 isRightArmActivated = True
 isLeftArmActivated = True
 isHeadActivated = True
 isTorsoActivate = True
-isEyeLidsActivated = True
+isEyeLidsActivated = False
+isServoMixerActivated = True
 
+# This launch the chatbot for the first initialization
 if str(i01_chatBot.getPredicate("Friend","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("Friend","firstinit"))=="started":
   i01_chatBot.setPredicate("default","topic","default")
   i01_chatBot.getResponse("FIRST_INIT")
