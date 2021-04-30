@@ -2,7 +2,7 @@ def No():
   # WE MOVE THE ROTHEAD OR ROLLNECK
   if isHeadActivated==1:
     i01.startedGesture()
-    i01.setHeadVelocity(40,40,40)
+    i01.setHeadSpeed(40,40,40)
     
     if random.randint(0,1)==1:
       i01.moveHeadBlocking(80,130)
