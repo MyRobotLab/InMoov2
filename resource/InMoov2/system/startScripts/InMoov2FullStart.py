@@ -22,8 +22,8 @@ Platform.setVirtual(True)
 # e.g. i01_left = Runtime.create('i01.left', 'Ssc32UsbServoController')
 ##############################################################
 
-runtime.setLocale('en-US')
 runtime = Runtime.getInstance()
+runtime.setLocale('en-US')
 #i01_jme = Runtime.start('i01.jme', 'JMonkeyEngine')
 i01_servomixer = Runtime.start('i01.servomixer', 'ServoMixer')
 i01_leftArm_rotate = Runtime.start('i01.leftArm.rotate', 'Servo')
