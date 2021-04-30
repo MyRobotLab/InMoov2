@@ -562,7 +562,7 @@ isLeftHandActivated = True
 isRightArmActivated = True
 isLeftArmActivated = True
 isHeadActivated = True
-isTorsoActivate = True
+isTorsoActivated = True
 isEyeLidsActivated = False
 isServoMixerActivated = True
 
