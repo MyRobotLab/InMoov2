@@ -248,6 +248,10 @@
 <template>Servos are set to full speed now.
         <oob><mrl><service>python</service><method>exec</method><param>fullspeed()</param></mrl></oob></template>
 </category>
+<category><pattern>HALF SPEED</pattern>
+<template>Servos are set to half speed now.
+        <oob><mrl><service>python</service><method>exec</method><param>halfspeed()</param></mrl></oob></template>
+</category>          
 <category><pattern>GRAB THE BOTTLE</pattern>
 <template>Let me take that bottle.
         <oob><mrl><service>python</service><method>exec</method><param>grabthebottle()</param></mrl></oob></template>
