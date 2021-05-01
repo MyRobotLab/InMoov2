@@ -16,7 +16,7 @@ def fullspeed():
     i01.setArmSpeed("left", 100.0, 100.0, 100.0, 100.0)
   
   if isHeadActivated:
-    i01.setHeadSpeed(100.0, 100.0, 100.0, 100.0, 100.0)
+    i01.setHeadSpeed(100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   
   if isTorsoActivated:
     i01.setTorsoSpeed(100.0, 100.0, 100.0)
