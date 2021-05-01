@@ -23,7 +23,7 @@ Platform.setVirtual(True)
 ##############################################################
 
 runtime = Runtime.getInstance()
-runtime.setLocale('en-US')
+runtime.setAllLocales('en-US')
 #i01_jme = Runtime.start('i01.jme', 'JMonkeyEngine')
 i01_servomixer = Runtime.start('i01.servomixer', 'ServoMixer')
 i01_leftArm_rotate = Runtime.start('i01.leftArm.rotate', 'Servo')
