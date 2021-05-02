@@ -27,4 +27,5 @@ def rest():
     i01.torso.rest()
     
   if isEyeLidsActivated:
-    i01.eyelids.rest()
+    i01.head.eyelidLeft.rest()
+    i01.head.eyelidRight.rest()

@@ -22,5 +22,6 @@ def fullspeed():
     i01.setTorsoSpeed(100.0, 100.0, 100.0)
       
   if isEyeLidsActivated:
-    i01.setEyelidsSpeed(100.0,100.0)
+    i01.head.eyelidLeft.setSpeed(100.0)
+    i01.head.eyelidRight.setSpeed(100.0)
 
