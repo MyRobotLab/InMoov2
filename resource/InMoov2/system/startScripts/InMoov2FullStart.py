@@ -324,7 +324,7 @@ i01_rightArm_shoulder.setAutoDisable(True)
 # in theory this is the position of the servo when this file was created
 i01_leftHand_wrist.setPosition(90)
 i01_leftHand_wrist.map(0.0,180.0,0.0,180.0)
-i01_leftHand_wrist.setInverted(False)
+i01_leftHand_wrist.setInverted(True)
 i01_leftHand_wrist.setSpeed(50.0)
 i01_leftHand_wrist.setRest(90.0)
 i01_leftHand_wrist.setPin(7)
