@@ -95,13 +95,13 @@ i01_head_eyelidRight = Runtime.start('i01.head.eyelidRight', 'Servo')
 i01_leftArm_shoulder = Runtime.start('i01.leftArm.shoulder', 'Servo')
 i01_rightHand_wrist = Runtime.start('i01.rightHand.wrist', 'Servo')
 i01_mouth = Runtime.start('i01.mouth', 'MarySpeech')
-i01_ultraSonicRight = Runtime.start('i01.ultraSonicRight', 'UltrasonicSensor')
-i01_ultraSonicLeft = Runtime.start('i01.ultraSonicLeft', 'UltrasonicSensor')
-i01_pir = Runtime.start('i01.pir', 'Pir')
 #############################################################
-
+## Needs fixing in InMoov2.java
+#i01_pir = Runtime.start('i01.pir', 'Pir')
+#i01_ultraSonicRight = Runtime.start('i01.ultraSonicRight', 'UltrasonicSensor')
+#i01_ultraSonicLeft = Runtime.start('i01.ultraSonicLeft', 'UltrasonicSensor')
 #i01_neopixel = Runtime.start('i01.neopixel', 'Neopixel')
-isNeopixelActivated = False
+
 ##############################################################
 ## creating client connections connections ####
 
@@ -558,6 +558,7 @@ i01.startTorso()
 #i01.startPir()
 #i01.startUltraSonicRightActivated()
 #i01.startUltraSonicLeftActivated()
+#i01.startNeopixel()
 jme = i01.startSimulator()
 i01.loadGestures()
 
@@ -570,9 +571,10 @@ isHeadActivated = True
 isTorsoActivated = True
 isEyeLidsActivated = True
 isServoMixerActivated = True
-isPirActivated = True
-isUltraSonicRightActivated = True
-isUltraSonicLeftActivated = True
+isPirActivated = False
+isUltraSonicRightActivated = False
+isUltraSonicLeftActivated = False
+isNeopixelActivated = False
 
 # This launch the chatbot for the first initialization
 if str(i01_chatBot.getPredicate("Friend","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("Friend","firstinit"))=="started":
