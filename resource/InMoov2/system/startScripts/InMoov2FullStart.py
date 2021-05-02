@@ -90,8 +90,8 @@ i01_leftArm = Runtime.start('i01.leftArm', 'InMoov2Arm')
 openWeatherMap = Runtime.start('openWeatherMap', 'OpenWeatherMap')
 i01_ear = Runtime.start('i01.ear', 'WebkitSpeechRecognition')
 i01_head_neck = Runtime.start('i01.head.neck', 'Servo')
-#i01_head_eyelidLeft = Runtime.start('i01.head.eyelidLeft', 'Servo')
-#i01_head_eyelidRight = Runtime.start('i01.head.eyelidRight', 'Servo')
+i01_head_eyelidLeft = Runtime.start('i01.head.eyelidLeft', 'Servo')
+i01_head_eyelidRight = Runtime.start('i01.head.eyelidRight', 'Servo')
 i01_leftArm_shoulder = Runtime.start('i01.leftArm.shoulder', 'Servo')
 i01_rightHand_wrist = Runtime.start('i01.rightHand.wrist', 'Servo')
 i01_mouth = Runtime.start('i01.mouth', 'MarySpeech')
@@ -210,25 +210,25 @@ i01_head_eyeX.setAutoDisable(True)
 # NEEDS TO BE FIXED
 # sets initial position of servo before moving
 # in theory this is the position of the servo when this file was created
-#i01_head_eyelidLeft.setPosition(90)
-#i01_head_eyelidLeft.map(0.0,180.0,60.0,120.0)
-#i01_head_eyelidLeft.setInverted(False)
-#i01_head_eyelidLeft.setSpeed(48.0)
-#i01_head_eyelidLeft.setRest(0.0)
-#i01_head_eyelidLeft.setPin(22)
-#i01_head_eyelidLeft.setAutoDisable(True)
+i01_head_eyelidLeft.setPosition(90)
+i01_head_eyelidLeft.map(0.0,180.0,60.0,120.0)
+i01_head_eyelidLeft.setInverted(False)
+i01_head_eyelidLeft.setSpeed(50.0)
+i01_head_eyelidLeft.setRest(0.0)
+i01_head_eyelidLeft.setPin(22)
+i01_head_eyelidLeft.setAutoDisable(True)
 
 # Servo Config : i01_head_eyelidRight
 # NEEDS TO BE FIXED
 # sets initial position of servo before moving
 # in theory this is the position of the servo when this file was created
-#i01_head_eyelidRight.setPosition(90)
-#i01_head_eyelidRight.map(0.0,180.0,60.0,120.0)
-#i01_head_eyelidRight.setInverted(False)
-#i01_head_eyelidRight.setSpeed(48.0)
-#i01_head_eyelidRight.setRest(0.0)
-#i01_head_eyelidRight.setPin(24)
-#i01_head_eyelidRight.setAutoDisable(True)
+i01_head_eyelidRight.setPosition(90)
+i01_head_eyelidRight.map(0.0,180.0,60.0,120.0)
+i01_head_eyelidRight.setInverted(False)
+i01_head_eyelidRight.setSpeed50.0)
+i01_head_eyelidRight.setRest(0.0)
+i01_head_eyelidRight.setPin(24)
+i01_head_eyelidRight.setAutoDisable(True)
 
 # Servo Config : i01_rightHand_index
 # sets initial position of servo before moving
@@ -348,6 +348,8 @@ i01_right.attach("i01.rightHand.ringFinger")
 i01_right.attach("i01.rightHand.wrist")
 i01_right.attach("i01.rightArm.bicep")
 i01_right.attach("i01.head.rollNeck")
+i01_right.attach("i01.head.eyelidLeft")
+i01_right.attach("i01.head.eyelidRight")
 i01_right.attach("i01.rightArm.shoulder")
 i01_right.attach("i01.rightHand.index")
 i01_right.attach("i01.rightHand.thumb")
@@ -553,6 +555,9 @@ i01.startRightHand()
 i01.startLeftArm()
 i01.startRightArm()
 i01.startTorso()
+#i01.startPir()
+#i01.startUltraSonicRightActivated()
+#i01.startUltraSonicLeftActivated()
 jme = i01.startSimulator()
 i01.loadGestures()
 
@@ -563,8 +568,11 @@ isRightArmActivated = True
 isLeftArmActivated = True
 isHeadActivated = True
 isTorsoActivated = True
-isEyeLidsActivated = False
+isEyeLidsActivated = True
 isServoMixerActivated = True
+isPirActivated = True
+isUltraSonicRightActivated = True
+isUltraSonicLeftActivated = True
 
 # This launch the chatbot for the first initialization
 if str(i01_chatBot.getPredicate("Friend","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("Friend","firstinit"))=="started":
