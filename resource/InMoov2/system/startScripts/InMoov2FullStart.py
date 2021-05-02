@@ -13,7 +13,10 @@ import time
 import org.myrobotlab.framework.Platform as Platform
 import org.myrobotlab.service.Runtime as Runtime
 
+# InMoov2 Config : i01
 Platform.setVirtual(True)
+i01.setVirtual(True)
+i01.setMute(False)
 ##############################################################
 ## creating 69 services ####
 # Although Runtime.start(name,type) both creates and starts services it might be desirable on creation to
@@ -559,6 +562,7 @@ i01.startTorso()
 #i01.startUltraSonicRightActivated()
 #i01.startUltraSonicLeftActivated()
 #i01.startNeopixel()
+i01.startServoMixer()
 jme = i01.startSimulator()
 i01.loadGestures()
 
