@@ -60,7 +60,7 @@ rotate=False
 shoulder=False
 omoplate=False
 
-[MAX_VELOCITY]
+[MAX_SPEED]
 bicep=100
 rotate=100
 shoulder=100

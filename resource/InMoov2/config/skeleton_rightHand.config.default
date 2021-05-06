@@ -57,7 +57,7 @@ ringFinger=180
 pinky=180
 wrist=180
 
-[MAX_VELOCITY]
+[MAX_SPEED]
 thumb=100
 index=100
 majeure=100

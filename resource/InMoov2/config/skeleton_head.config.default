@@ -86,7 +86,7 @@ neck=180
 rothead=180
 rollneck=180
 
-[MAX_VELOCITY]
+[MAX_SPEED]
 neck=100
 rothead=100
 jaw=100

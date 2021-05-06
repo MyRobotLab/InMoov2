@@ -31,7 +31,7 @@ topStom=False
 midStom=False
 lowStom=False
 
-[MAX_VELOCITY]
+[MAX_SPEED]
 topStom=100
 midStom=100
 lowStom=100

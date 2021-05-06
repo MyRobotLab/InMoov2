@@ -31,7 +31,7 @@ eyelidright=0
 eyelidleft=False
 eyelidright=False
 
-[MAX_VELOCITY]
+[MAX_SPEED]
 eyelidleft=100
 eyelidright=100
 
