@@ -45,10 +45,10 @@ if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" ) or 
       leftArm.rotate.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'rotate'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'rotate'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'rotate'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'rotate')) 
       leftArm.omoplate.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'omoplate'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'omoplate'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'omoplate'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'omoplate')) 
       
-      leftArm.bicep.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'bicep'))
-      leftArm.shoulder.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'shoulder'))
-      leftArm.rotate.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rotate'))
-      leftArm.omoplate.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'omoplate'))
+      leftArm.bicep.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'bicep'))
+      leftArm.shoulder.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'shoulder'))
+      leftArm.rotate.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'rotate'))
+      leftArm.omoplate.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'omoplate'))
       
       leftArm.bicep.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'bicep'))
       leftArm.shoulder.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'shoulder'))

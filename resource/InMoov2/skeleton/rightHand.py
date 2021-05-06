@@ -40,12 +40,12 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full") o
     rightHand.wrist.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'wrist'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'wrist'))
     
   
-    rightHand.thumb.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'thumb'))
-    rightHand.index.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'index'))
-    rightHand.majeure.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'majeure'))
-    rightHand.ringFinger.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'ringFinger'))
-    rightHand.pinky.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'pinky'))
-    rightHand.wrist.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'wrist'))
+    rightHand.thumb.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'thumb'))
+    rightHand.index.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'index'))
+    rightHand.majeure.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'majeure'))
+    rightHand.ringFinger.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'ringFinger'))
+    rightHand.pinky.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'pinky'))
+    rightHand.wrist.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'wrist'))
         
 
         
