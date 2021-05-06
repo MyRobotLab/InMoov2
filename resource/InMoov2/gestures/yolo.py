@@ -13,23 +13,23 @@
 # i01.vision.filteredLabel.add("sample");
 
 def startYoloInventory(duration):
-  i01.speak(i01.chatBot.getPredicate("startupSentence"))
+  i01.speak(i01_chatBot.getPredicate("startupSentence"))
   sleep(5)
   if isNeopixelActivated==1:
     i01.setNeopixelAnimation("Color Wipe", 25, 5, 10, 15)
   enableYoloFor(duration)
   # interpret results ...
   collectionString=""
-  for key, value in i01.vision.collectionCount.iteritems():
+  for key, value in i01_vision_collectionCount.iteritems():
     collectionString=collectionString+str(value)+" "+key+", "
   #check if we have results, return key "none" if no ( aiml will understand the key 'none' )
   if len(collectionString) == 0:collectionString="none"
   # return results
-  i01.chatBot.setPredicate("yoloTotalDetected",str(len(i01.vision.collectionCount)))
+  i01_chatBot.setPredicate("yoloTotalDetected",str(len(i01_vision_collectionCount)))
   return collectionString
 
 def getYoloPosition(label):
-  position=i01.vision.getPosition(label)
+  position=i01_vision.getPosition(label)
   # to not launch gesture, comment showObject :
   print "Position of : ",label,position
   showObject(position)
@@ -42,22 +42,22 @@ global lastPhotoFileName
 #shared function to start & stop yolo filter
 def enableYoloFor(duration):
   global lastPhotoFileName
-  i01.vision.collectionCount.clear()
-  i01.vision.collectionPositions.clear()
+  i01_vision_collectionCount.clear()
+  i01_vision_collectionPositions.clear()
   #start i01.opencv
   i01.cameraOn()
   # yolo filter in the pipeline ( add if no exist + enable + setActive )
-  i01.vision.setActiveFilter("Yolo")
+  i01_vision.setActiveFilter("Yolo")
   try:
-    gui.setActiveTab("i01.opencv")
+    gui.setActiveTab("i01_opencv")
     #os.remove(lastPhotoFileName)
     imagedisplay.closeAll()
   except:
     pass
   # wait for X
   sleep(duration)
-  lastPhotoFileName = i01.opencv.recordFrame()
+  lastPhotoFileName = i01_opencv.recordFrame()
   #print lastPhotoFileName
   imagedisplay.display(lastPhotoFileName)
-  i01.opencv.disableFilter("Yolo")
-  print i01.vision.collectionCount
+  i01_opencv.disableFilter("Yolo")
+  print i01_vision_collectionCount
