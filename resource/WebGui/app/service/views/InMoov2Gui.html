@@ -77,7 +77,7 @@
                     <img src="../img/InMoov2/battery_Activ.png"/>
                 </div>
                 <!--div id="dnaGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="service.getBatteryLevel()"><img src="../img/InMoov2/dna_Activ.png"/></div-->
-                <div id="homeGuiButton" class="homeGuiButtons preventGuiDragSelect" ng-click="mrl.changeTab('intro')">Home</div>
+                <div id="homeGuiButton" class="homeGuiButtons preventGuiDragSelect" ng-click="mrl.changeTab('intro')">Intro</div>
             </div>
         </td>
         <td>
@@ -93,7 +93,7 @@
                         <img src="../Brain.png"/>
                         <label>chatBot Activated:</label>
                         &nbsp;<toggle width="70" height="30" ng-model="service.isChatBotActivated" ng-change="!service.isChatBotActivated?msg.stopChatBot():msg.startChatBot()" on="ON" off="OFF"/>
-                        <button class="btn btn-default" ng-show="service.isChatBotActivated" ng-click="setPanel('chatBot1')">Settings</button>
+                        <button class="btn btn-default" ng-show="service.isChatBotActivated" ng-click="setPanel('chatBot1')">Open</button>
                     </td>
                 </tr>
                 <tr>
@@ -113,7 +113,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_A_Chatbot.py','i01.chatBot')">Save Config</button>
                     </td>
                 </tr>
             </table>
@@ -134,11 +134,11 @@
                         <div class="tab-content" service-body panel="mrl.getPanel('i01.chatBot')"></div>
                     </td>
                 </tr>
-                <tr>
+                <!--<tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/A_Chatbot.py','i01.chatBot')">Save Config</button>
                     </td>
-                </tr>
+                </tr>-->
             </table>
             <!------------------------ chatBot1 end ------------------------------>
             <!------------------------ arm begin ------------------------------>
@@ -155,6 +155,11 @@
                         &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.isLeftArmActivated" ng-click="mrl.changeTab(service.name + '.leftArm')">Settings</button>
                     </td>
                 </tr>
+                <!--<tr>
+                    <td>
+                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/skeleton_leftArm.py','i01.leftArm.omoplate,i01.leftArm.shoulder,i01.leftArm.rotate,i01.leftArm.bicep')">Save Config</button>
+                    </td>
+                </tr>-->                
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
@@ -167,11 +172,11 @@
                         &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.isRightArmActivated" ng-click="mrl.changeTab(service.name + '.rightArm')">Settings</button>
                     </td>
                 </tr>
-                <tr>
+                <!--<tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/skeleton_rightArm.py','i01.rightArm.omoplate,i01.rightArm.shoulder,i01.rightArm.rotate,i01.rightArm.bicep')">Save Config</button>
                     </td>
-                </tr>
+                </tr>-->
             </table>
             <!------------------------ arm end ------------------------------>
             <!------------------------ ear begin ------------------------------>
@@ -185,7 +190,7 @@
                         <img src="../InMoov_ear.png"/>
                         <label>ear Activated:</label>
                         &nbsp;&nbsp;<toggle width="70" height="28" ng-model="service.isEarActivated" ng-change="!service.isEarActivated?msg.stopEar():msg.startEar()" width="80" height="30" on="ON" off="OFF"/>
-                        <button class="btn btn-default" ng-show="service.isEarActivated" ng-click="setPanel('ear1')">Settings</button>
+                        <button class="btn btn-default" ng-show="service.isEarActivated" ng-click="setPanel('ear1')">Open</button>
                     </td>
                 </tr>
                 <tr>
@@ -198,7 +203,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_4_Ear.py','i01.ear')">Save Config</button>
                     </td>
                 </tr>
             </table>
@@ -219,11 +224,11 @@
                         <div class="tab-content" service-body panel="mrl.getPanel('i01.ear')"></div>
                     </td>
                 </tr>
-                <tr>
+                <!--<tr>
                     <td>
                         <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
                     </td>
-                </tr>
+                </tr>-->
             </table>
             <!------------------------ ear1 end ------------------------------>
             <!------------------------ torso begin ------------------------------>
@@ -240,11 +245,11 @@
                         &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.isTorsoActivated" ng-click="mrl.changeTab(service.name + '.torso')">Settings</button>
                     </td>
                 </tr>
-                <tr>
+                <!--<tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/skeleton_torso.py','i01.torso.topStom,i01.torso.midStom,i01.torso.lowStom')">Save Config</button>
                     </td>
-                </tr>
+                </tr>-->
             </table>
             <!------------------------ torso end ------------------------------>
             <!------------------------ hand begin ------------------------------>
@@ -277,11 +282,11 @@
                         &nbsp;<toggle width="70" height="28" ng-show="service.isRightHandActivated" ng-model="service.isRightSensorsEnabled" title="Activate this if you use finger sensors" ng-change="!service.isRightSensorsEnabled?msg.rightSensorsEnabled(false):msg.rightSensorsEnabled(true)" width="120" height="30" on="ON" off="OFF"/>
                     </td>
                 </tr>
-                <tr>
+                <!--<tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/skeleton_rightHand.py','i01.rightHand.thumb,i01.rightHand.index,i01.rightHand.majeure,i01.rightHand.ringFinger,i01.rightHand.pinky,i01.rightHand.wrist')">Save Config</button>
                     </td>
-                </tr>
+                </tr>-->
             </table>
             <!------------------------ hand end ------------------------------>
             <!------------------------ mouth begin ------------------------------>
@@ -328,7 +333,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_5_Mouth.py','i01.mouth')">Save Config</button>
                     </td>
                 </tr>
             </table>
@@ -396,11 +401,11 @@
                         <toggle ng-model="service.mute" ng-change="msg.startEyesTracking()" width="140" height="30" on="eyes tracking on" off="eyes tracking off"></toggle>
                     </td>
                 </tr>
-                <tr>
+                <!--<tr>
                     <td>
                         <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
                     </td>
-                </tr>
+                </tr>-->
             </table>
             <!------------------------ head end ------------------------------>
             <!------------------------ controller begin ------------------------------>
@@ -427,8 +432,8 @@
         </ui-select>
 
 -->
-                        <!--button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="setPanel('controller_right')">Settings</button-->
-                        <button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.right')">Settings</button>
+                        <button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="setPanel('controller_right')">Settings</button>
+                        <!--<button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.right')">Settings</button>-->
                     </td>
                 </tr>
                 <tr>
@@ -441,8 +446,8 @@
                         <label>controller left:</label>
                         &nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="leftPort" ng-model="service.isLeftPortActivated" title="To access settings, the button must be activated" ng-change="!service.isLeftPortActivated?msg.loadFile('resource/InMoov2/system/startScripts/i01_left_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_left_start.py')" on="ON" off="OFF"/></toggle>
                         &nbsp;&nbsp;
-                        <!--button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="setPanel('controller_left')">Settings</button-->
-                        <button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.left')">Settings</button>
+                        <button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="setPanel('controller_left')">Settings</button>
+                        <!--button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.left')">Settings</button-->
                     </td>
                 </tr>
                 <tr>
@@ -455,8 +460,8 @@
                         <label>controller 3:</label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="controller3" ng-model="service.isController3Activated" title="To access settings, the button must be activated" ng-change="!service.isController3Activated?msg.loadFile('resource/InMoov2/system/startScripts/i01_controller3_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_controller3_start.py')" on="ON" off="OFF"/></toggle>
                         &nbsp;&nbsp;
-                        <!--button class="btn btn-default" ng-show="service.isController3Activated" width="80" height="30" ng-click="setPanel('controller_3')">Settings</button-->
-                        <button class="btn btn-default" ng-show="service.isController3Activated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller3')">Settings</button>
+                        <button class="btn btn-default" ng-show="service.isController3Activated" width="80" height="30" ng-click="setPanel('controller_3')">Settings</button>
+                        <!--button class="btn btn-default" ng-show="service.isController3Activated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller3')">Settings</button-->
                     </td>
                 </tr>
                 <tr>
@@ -469,14 +474,14 @@
                         <label>controller 4:</label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="controller4" ng-model="service.isController4Activated" title="To access settings, the button must be activated" ng-change="!service.isController4Activated?msg.loadFile('resource/InMoov2/system/startScripts/i01_controller4_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_controller4_start.py')" on="ON" off="OFF"/></toggle>
                         &nbsp;&nbsp;
-                        <!--button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="setPanel('controller_4')">Settings</button-->
-                        <button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller4')">Settings</button>
+                        <button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="setPanel('controller_4')">Settings</button>
+                        <!--button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller4')">Settings</button-->
                 </tr>
-                <tr>
+                <!--<tr>
                     <td>
                         <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
                     </td>
-                </tr>
+                </tr>-->
                 <tr>
                     <td>
                         <img width="50" height="50" ng-click="setPanel('extra')" ng-src="../img/InMoov2/arrow_blue_left.png" src="../img/InMoov2/arrow_blue_left.png">
@@ -501,7 +506,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_6_Arduino.py','i01.right,i01.left,i01.controller3,i01.controller4')">Save Config</button>
                     </td>
                 </tr>
                 <tr>
@@ -528,7 +533,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_6_Arduino.py','i01.right,i01.left,i01.controller3,i01.controller4')">Save Config</button>
                     </td>
                 </tr>
                 <tr>
@@ -555,7 +560,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_6_Arduino.py','i01.right,i01.left,i01.controller3,i01.controller4')">Save Config</button>
                     </td>
                 </tr>
                 <tr>
@@ -582,7 +587,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_6_Arduino.py','i01.right,i01.left,i01.controller3,i01.controller4')">Save Config</button>
                     </td>
                 </tr>
                 <tr>
@@ -606,11 +611,11 @@
                         <button class="btn btn-default" ng-show="service.isNeopixelActivated" ng-click="setPanel('neopixel1')">Settings</button>
                     </td>
                 </tr>
-                <tr>
+                <!--<tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_9_neoPixel.py','i01.neopixel')">Save Config</button>
                     </td>
-                </tr>
+                </tr>-->
                 <tr>
                     <td>
                         <img width="50" height="50" ng-click="setPanel('extra')" ng-src="../img/InMoov2/arrow_blue_left.png" src="../img/InMoov2/arrow_blue_left.png">
@@ -674,7 +679,7 @@
 </td></tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_9_neoPixel.py','i01.neopixel')">Save Config</button>
     </td>
 </tr>
 </table>
@@ -734,7 +739,9 @@
             <!--------------------------------------------------------------->
             <img src="../UltrasonicSensor.png"/>
             <label>ultraSonic Right:</label>
-            <toggle width="70" height="30" ng-model="service.isUltraSonicRightActivated" title="To access settings, UltraSonic Right must be activated" ng-change="!service.isUltraSonicRightActivated?msg.stopUltraSonicRight():msg.startUltraSonicRight()" on="ON" off="OFF"/></toggle>
+            <!--<toggle width="70" height="30" ng-model="service.isUltraSonicRightActivated" title="To access settings, UltraSonic Right must be activated" ng-change="!service.isUltraSonicRightActivated?msg.stopUltraSonicRight():msg.startUltraSonicRight()" on="ON" off="OFF"/></toggle>-->
+            <toggle width="70" height="30" ng-model="service.isUltraSonicRightActivated" title="To access settings, UltraSonic Right must be activated" ng-change="!service.isUltraSonicRightActivated?msg.loadFile('resource/InMoov2/system/startScripts/i01_UltraSonicRight_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_UltraSonicRight_start.py')" on="ON" off="OFF"/></toggle>
+
             &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.isUltraSonicRightActivated" ng-click="setPanel('ultraSonicRight')">Settings</button>
         </td>
     </tr>
@@ -746,15 +753,18 @@
             <!--------------------------------------------------------------->
             <img src="../UltrasonicSensor.png"/>
             <label>ultraSonic Left:</label>
-            &nbsp;&nbsp;&nbsp;<toggle width="70" height="30" ng-model="service.isUltraSonicLeftActivated" title="To access settings, UltraSonic Left must be activated" ng-change="!service.isUltraSonicLeftActivated?msg.stopUltraSonicLeft():msg.startUltraSonicLeft()" on="ON" off="OFF"/></toggle>
+            &nbsp;&nbsp;&nbsp;<!--<toggle width="70" height="30" ng-model="service.isUltraSonicLeftActivated" title="To access settings, UltraSonic Left must be activated" ng-change="!service.isUltraSonicLeftActivated?msg.stopUltraSonicLeft():msg.startUltraSonicLeft()" on="ON" off="OFF"/></toggle>-->
+            <toggle width="70" height="30" ng-model="service.isUltraSonicLeftActivated" title="To access settings, UltraSonic Left must be activated" ng-change="!service.isUltraSonicLeftActivated?msg.loadFile('resource/InMoov2/system/startScripts/i01_UltraSonicLeft_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_UltraSonicLeft_start.py')" on="ON" off="OFF"/></toggle>
+
+
             &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.isUltraSonicLeftActivated" ng-click="setPanel('ultraSonicLeft')">Settings</button>
         </td>
     </tr>
-    <tr>
+    <!--<tr>
         <td>
             <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
         </td>
-    </tr>
+    </tr>-->
 </table>
 <!------------------------ sensor end ------------------------------>
 <!------------------------ pir begin ------------------------------>
@@ -779,7 +789,7 @@
     </tr>
     <tr>
         <td>
-            <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+            <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_C_Pir.py','i01.pir')">Save Config</button>
         </td>
     </tr>
     <tr>
@@ -804,7 +814,7 @@
     </tr>
     <tr>
         <td>
-            <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+            <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_I_UltraSonicSensor.py','i01.ultraSonicRight')">Save Config</button>
         </td>
     </tr>
     <tr>
@@ -829,7 +839,7 @@
     </tr>
     <tr>
         <td>
-            <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+            <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_I_UltraSonicSensor.py','i01.ultraSonicLeft')">Save Config</button>
         </td>
     </tr>
     <tr>
@@ -878,7 +888,7 @@
 </td></tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_E_OpenNI.py','i01.openni')">Save Config</button>
     </td>
 </tr>
 <tr>
@@ -897,13 +907,13 @@
             &nbsp;&nbsp;&nbsp;&nbsp;<img src="../peers.png" height="28" ng-click="filterPeers(null)"/>
             <div class="form-group">
                 <select multiple class="form-control vertical-menu" ng-model="selectedConfig" id="selectedConfig" ng-change="setConfig()" tittle="---FIXME---">
-                    <option>config-01</option>
+                    <option>myConfig</option>
                     <option>default</option>
-                    <option>my-config-01</option>
+                    <!--<option>my-config-01</option>
                     <option>my-config-02</option>
                     <option>my-config-03</option>
                     <option>my-config-04</option>
-                    <option>my-config-05</option>
+                    <option>my-config-05</option>-->
                     <option ng-repeat="config in configs" value="{{config}}">{{config}}</option>
                 </select>
             </div>
@@ -957,7 +967,7 @@
         <input class="form-control vertical-menu" type="text" id="gesture" placeholder="Type or select a gesture" ng-model="selectedGesture" ng-readonly="isConnected" press-enter="executeGesture(selectedGesture)" uib-typeahead="gesture for gesture in service.gestures | filter:$viewValue | limitTo:100" typeahead-min-length="0"/>
         <button class="btn btn-default" ng-click="executeGesture(selectedGesture)">execute</button>
         <button class="btn btn-default" title="be cautious with this, it will run all the gestures randomly" ng-click="msg.cycleGestures()">cycle gestures</button>
-        <button class="btn btn-default" ng-click="msg.loadGestures()">reload gestures</button>
+        <button class="btn btn-default" ng-click="msg.loadGestures()">load gestures</button>
         <!--loading gestures by default-->
         <!--<div ng-init="msg.loadGestures()"></div>-->
     </td>
