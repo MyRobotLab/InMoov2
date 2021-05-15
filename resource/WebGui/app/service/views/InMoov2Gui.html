@@ -306,7 +306,8 @@
                     <td>
                         <div width="120" height="28">
                             <label ng-show="!service.isMouthActivated">speech service</label>
-                            <select ng-show="!service.isMouthActivated" class="form-control" ng-model="service.speechService" id="language-select" ng-change="msg.setSpeechType(service.speechService)">
+                            {{service.serviceType.peers['mouth'].type}}
+                            <select ng-show="!service.isMouthActivated" class="form-control" ng-model="service.serviceType.peers['mouth'].type" id="language-select" ng-change="msg.setSpeechType(service.serviceType.peers['mouth'].type)">
                                 <option ng-repeat="speechType in speechTypes" value="{{getShortName(speechType)}}">{{getShortName(speechType)}}</option>
                             </select>
                         </div>

@@ -142,11 +142,6 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         return s
     }
 
-    $scope.startMouth = function() {
-        msg.send('setSpeechType', $scope.speechTypeSelected)
-        msg.send('startMouth')
-    }
-
     $scope.speak = function() {
         if ($scope.mouth == null) {
             $scope.startMouth()
