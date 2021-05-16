@@ -29,7 +29,7 @@ if ultraSonicRightActivated:
     i01.ultrasonicSensor=ultrasonicRight
     talkEvent(lang_startingUltraSonicRight)
     # range can also be retreieved in a blocking call
-    print "ultrasonicRight test is: ", i01.getUltrasonicSensorDistance()
+    print "ultrasonicRight test is: ", i01.getUltrasonicRightDistance()
   except:
     errorSpokenFunc('BADRDUINOCHOOSEN','ultra Sonic Sensor Right')
     ultraSonicRightActivated=False
@@ -44,7 +44,7 @@ if ultraSonicLeftActivated:
     i01.ultrasonicSensor=ultrasonicLeft
     talkEvent(lang_startingUltraSonicLeft)
     # range can also be retreieved in a blocking call
-    print "ultrasonicLeft test is: ", i01.getUltrasonicSensorDistance()
+    print "ultrasonicLeft test is: ", i01.getUltrasonicLeftDistance()
   except:
     errorSpokenFunc('BADRDUINOCHOOSEN','ultra Sonic Sensor Left')
     ultraSonicLeftActivated=False
