@@ -1,14 +1,14 @@
 
 def YoloOnUSonic():
   i01.setHeadSpeed(100.0,100.0,100.0,100.0,100.0,100.0)
-  if ultraSonicSensorActivated:
+  if ultraSonicRightActivated:
     distance=200
     timeout=0
     timeoutGetCloser=0
     while (not distance or distance > 100): 
       timeout+=1
       timeoutGetCloser+=1
-      distance=i01.getUltrasonicSensorDistance()
+      distance=i01.getUltrasonicRightDistance()
       print distance
       if timeout > 20:
         i01.chatBot.getResponse("SYSTEM_NO_OBJECT")
