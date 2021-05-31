@@ -602,7 +602,7 @@ I call you <get name="name"/>.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01.chatBot.startSession(u"<star name="name"/>")</param>
+            <param>i01_chatBot.startSession(u"<star name="name"/>")</param>
           </mrl>
         </oob></template>
 </category>
@@ -621,7 +621,7 @@ I call you <get name="name"/>.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01.chatBot.startSession(u"<star name="name"/>")</param>
+            <param>i01_chatBot.startSession(u"<star name="name"/>")</param>
           </mrl>
         </oob></template>
 </category>
@@ -645,7 +645,7 @@ I call you <get name="name"/>.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01.chatBot.startSession(u"<star name="name"/>")</param>
+            <param>i01_chatBot.startSession(u"<star name="name"/>")</param>
           </mrl>
         </oob></template>
 </category>
