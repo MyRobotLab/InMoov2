@@ -568,7 +568,7 @@ i01.startTorso()
 #i01.startOpenCV()
 i01.startServoMixer()
 jme = i01.startSimulator()
-i01.loadGestures()
+i01.loadGestures("resource/InMoov2/gestures")
 
 # here we force the gui to be responsive
 isRightHandActivated = True
@@ -584,6 +584,8 @@ isUltraSonicRightActivated = False
 isUltraSonicLeftActivated = False
 isNeopixelActivated = False
 isOpenCVActivated = False
+isRightHandSensorActivated = False
+isLeftHandSensorActivated = False
 
 # This launch the chatbot for the first initialization
 if str(i01_chatBot.getPredicate("Friend","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("Friend","firstinit"))=="started":
