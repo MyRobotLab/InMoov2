@@ -14,7 +14,7 @@ echo ------------------------------------------------------
 echo LOG CLEAN UP to free space disk and send clean noworky
 echo ------------------------------------------------------
 del myrobotlab.log.1 > NUL
-mv myrobotlab.log myrobotlab.log.1
+move /y myrobotlab.log myrobotlab.log.1
 
 timeout 1 > NUL
 COLOR 2F
@@ -22,15 +22,19 @@ cls
 echo ------------------------------------------------------
 echo          !!!         INMOOV INSTALLER        !!!
 echo          !!!            PLEASE WAIT          !!!
-echo          !!!       IT CAN TAKE A LONG TIME     !!!
+echo          !!!      IT CAN TAKE A LONG TIME    !!!
 echo          !!!            DO NOT CLOSE         !!!
 echo ------------------------------------------------------
+timeout 3 > NUL
+java -Dfile.encoding=UTF-8 -jar myrobotlab.jar --install
 timeout 2 > NUL
-java -Dfile.encoding=UTF-8 -jar myrobotlab.jar --install -dependency fr.inmoov inmoov2 latest zip
-timeout 10 > NUL
 COLOR 3F
 cls
 echo ------------------------------------------------------
-echo You can now close this and run START_INMOOV2.bat
+echo          Launching InMoov2 in your browser
 echo ------------------------------------------------------
-timeout 15 > NUL
+SET script=%cd%\resource\Intro\InMoov01_start.py
+timeout 3 > NUL
+echo Executing file %script%
+java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -m 1024m --service python Python webgui WebGui intro Intro --invoke python execFile %script%
+timeout 2 > NUL
