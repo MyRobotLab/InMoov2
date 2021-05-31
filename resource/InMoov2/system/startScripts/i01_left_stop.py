@@ -14,6 +14,7 @@
 
 # release a servo controller and a servo
 Runtime.releaseService("i01.left")
+isLeftPortActivated=False
 
 # we tell to the service what is going on 
 # i01.broadcastState()
