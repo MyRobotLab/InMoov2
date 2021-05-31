@@ -586,6 +586,10 @@ isNeopixelActivated = False
 isOpenCVActivated = False
 isRightHandSensorActivated = False
 isLeftHandSensorActivated = False
+isRightPortActivated=True
+isLeftPortActivated=True
+isController3Activated=False
+isController4Activated=False
 
 # This launch the chatbot for the first initialization
 if str(i01_chatBot.getPredicate("Friend","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("Friend","firstinit"))=="started":
