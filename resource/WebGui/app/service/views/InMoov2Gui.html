@@ -73,10 +73,15 @@
                 <div id="leftLegGuiDisplay" ng-show="service.isLeftLegActivated" class="GuiDisplays preventGuiDragSelect">
                     <img src="../img/InMoov2/legL_Activ.png"/>
                 </div>
-                <div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="i01.speakBlocking(str(Runtime.getBatteryLevel())+'percent')">
+                <div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="service.python (i01.speakBlocking(str(Runtime.getBatteryLevel())+' %'))">
                     <img src="../img/InMoov2/battery_Activ.png"/>
                 </div>
-                <!--div id="dnaGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="service.getBatteryLevel()"><img src="../img/InMoov2/dna_Activ.png"/></div-->
+
+                <!--<div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="print Runtime.getBatteryLevel()">
+                    <img src="../img/InMoov2/battery_Activ.png"/>
+                </div>-->
+
+                <!--div id="dnaGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="Runtime.getBatteryLevel()"><img src="../img/InMoov2/dna_Activ.png"/></div-->
                 <div id="homeGuiButton" class="homeGuiButtons preventGuiDragSelect" ng-click="mrl.changeTab('intro')">Intro</div>
                 <div id="languageGuiButton" class="languageGuiButtons preventGuiDragSelect" ng-click="setPanel('language')">Language</div>
             </div>
@@ -120,7 +125,7 @@
                     </td>
                 </tr>
             </table>
-            <!------------------------ chatBot end ------------------------------>
+            <!------------------------ language end ------------------------------>
 
             <!------------------------ chatBot begin ------------------------------>
             <table ng-show="showPanel('brain')" class="inmoov-sub-panel table table-striped">
@@ -132,7 +137,9 @@
                         <img src="../Brain.png"/>
                         <label>chatBot Activated:</label>
                         &nbsp;<toggle width="70" height="30" ng-model="service.isChatBotActivated" ng-change="!service.isChatBotActivated?msg.stopChatBot():msg.startChatBot()" on="ON" off="OFF"/>
-                        <button class="btn btn-default" ng-show="service.isChatBotActivated" ng-click="setPanel('chatBot1')">Open</button>
+                        <!--<button class="btn btn-default" ng-show="service.isChatBotActivated" ng-click="setPanel('chatBot1')">Open</button>
+                        Temporary fix-->
+                        <button class="btn btn-default" ng-show="service.isChatBotActivated" ng-click="mrl.changeTab(service.name + '.chatBot')">Open</button>
                     </td>
                 </tr>
                 <tr>
@@ -460,8 +467,8 @@
         </ui-select>
 
 -->
-                        <button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="setPanel('controller_right')">Settings</button>
-                        <!--<button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.right')">Settings</button>-->
+                        <!--<button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="setPanel('controller_right')">Settings</button>-->
+                        <button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.right')">Settings</button>
                     </td>
                 </tr>
                 <tr>
@@ -473,8 +480,8 @@
                         <label>controller left:</label>
                         &nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="leftPort" ng-model="service.isLeftPortActivated" title="To access settings, the button must be activated" ng-change="!service.isLeftPortActivated?msg.loadFile('resource/InMoov2/system/startScripts/i01_left_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_left_start.py')" on="ON" off="OFF"/></toggle>
                         &nbsp;&nbsp;
-                        <button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="setPanel('controller_left')">Settings</button>
-                        <!--button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.left')">Settings</button-->
+                        <!--<button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="setPanel('controller_left')">Settings</button>-->
+                        <button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.left')">Settings</button>
                     </td>
                 </tr>
                 <tr>
@@ -486,8 +493,8 @@
                         <label>controller 3:</label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="controller3" ng-model="service.isController3Activated" title="To access settings, the button must be activated" ng-change="!service.isController3Activated?msg.loadFile('resource/InMoov2/system/startScripts/i01_controller3_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_controller3_start.py')" on="ON" off="OFF"/></toggle>
                         &nbsp;&nbsp;
-                        <button class="btn btn-default" ng-show="service.isController3Activated" width="80" height="30" ng-click="setPanel('controller_3')">Settings</button>
-                        <!--button class="btn btn-default" ng-show="service.isController3Activated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller3')">Settings</button-->
+                        <!--<button class="btn btn-default" ng-show="service.isController3Activated" width="80" height="30" ng-click="setPanel('controller_3')">Settings</button>-->
+                        <button class="btn btn-default" ng-show="service.isController3Activated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller3')">Settings</button>
                     </td>
                 </tr>
                 <tr>
@@ -499,8 +506,8 @@
                         <label>controller 4:</label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="controller4" ng-model="service.isController4Activated" title="To access settings, the button must be activated" ng-change="!service.isController4Activated?msg.loadFile('resource/InMoov2/system/startScripts/i01_controller4_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_controller4_start.py')" on="ON" off="OFF"/></toggle>
                         &nbsp;&nbsp;
-                        <button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="setPanel('controller_4')">Settings</button>
-                        <!--button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller4')">Settings</button-->
+                        <!--<button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="setPanel('controller_4')">Settings</button>-->
+                        <button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller4')">Settings</button>
                 </tr>
                 <!--<tr>
                     <td>
