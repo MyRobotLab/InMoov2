@@ -14,6 +14,7 @@
 
 # create a controller
 i01_right = Runtime.start("i01.right","Arduino")
+isRightPortActivated=True
 
 
 # initialize controller
