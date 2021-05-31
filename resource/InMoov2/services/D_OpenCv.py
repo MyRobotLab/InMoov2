@@ -39,10 +39,10 @@ log.info("isOpenCvActivated : "+str(isOpenCvActivated))
 log.info("DisplayRender : "+str(DisplayRender))
 log.info("streamerEnabled : "+str(streamerEnabled))
 
-#i01.vision.setOpenCVenabled(True)
-#i01.vision.addPreFilter("Flip")
-#i01.opencv.setCameraIndex(1)
-#i01.opencv.setGrabberType("Sarxos")
+#i01_vision.setOpenCVenabled(True)
+#i01_vision.addPreFilter("Flip")
+#i01_opencv.setCameraIndex(1)
+#i01_opencv.setGrabberType("Sarxos")
 
 
 # ##############################################################################
@@ -50,14 +50,14 @@ log.info("streamerEnabled : "+str(streamerEnabled))
 # ##############################################################################
 
 if isOpenCvActivated:
-  i01.opencv = Runtime.create("i01.opencv", "OpenCV")
-  i01.opencv.setCameraIndex(CameraIndex)
-  i01.opencv.setGrabberType(DisplayRender)
-  i01.opencv = Runtime.start("i01.opencv", "OpenCV")
+  i01_opencv = Runtime.create("i01.opencv", "OpenCV")
+  i01_opencv.setCameraIndex(CameraIndex)
+  i01_opencv.setGrabberType(DisplayRender)
+  i01_opencv = Runtime.start("i01.opencv", "OpenCV")
   i01.startOpenCV()
-  if flipPicture:i01.opencv.addPreFilter("Flip")
+  if flipPicture:i01_opencv.addPreFilter("Flip")
   if not isOpenCvActivated:
-    errorSpokenFunc('OPENCVNOWORKY','camera '+str(i01.opencv.getCameraIndex()))
+    errorSpokenFunc('OPENCVNOWORKY','camera '+str(i01_opencv.getCameraIndex()))
   else:
     python.subscribe("i01.opencv", "publishRecognizedFace")
   
@@ -66,6 +66,6 @@ def onRecognizedFace(name):
   print name
   # robot reaction if recognized face ( todo beter reaction... )
   if isChatbotActivated:
-    i01.chatBot.startSession(unicode(name,'utf-8'))
-    i01.opencv.disableFilter("FaceRecognizer")
-    i01.chatBot.getResponse("SYSTEM_SAY_HELLO")
+    i01_chatBot.startSession(unicode(name,'utf-8'))
+    i01_opencv.disableFilter("FaceRecognizer")
+    i01_chatBot.getResponse("SYSTEM_SAY_HELLO")
