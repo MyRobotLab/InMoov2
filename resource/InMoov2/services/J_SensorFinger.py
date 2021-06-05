@@ -200,7 +200,7 @@ if rightHandSensorActivated:
 
     rightHandSensorArduino=eval(ThisServicePartConfig.get('MAIN', 'rightHandSensorArduino'))
     rightHandSensorArduino.addListener("publishPinArray","python","publishRightSensor")
-    talkEvent(lang_startingRightHandSensor)
+    i01.speakBlocking(i01.localize("STARTINGRIGHTHANDSENSOR"))
     
     def rightHandSensorON():
       if rightHandSensorActivated:
@@ -339,7 +339,7 @@ if leftHandSensorActivated:
 
     leftHandSensorArduino=eval(ThisServicePartConfig.get('MAIN', 'leftHandSensorArduino'))
     leftHandSensorArduino.addListener("publishPinArray","python","publishLeftSensor")
-    talkEvent(lang_startingLeftHandSensor)
+    i01.speakBlocking(i01.localize("STARTINGLEFTHANDSENSOR"))
     
     def leftHandSensorON():
       if leftHandSensorActivated:
