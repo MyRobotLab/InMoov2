@@ -39,7 +39,7 @@ if outputSpeechService!="default":
   python.subscribe(AzureTranslatorMouth.getName(),"publishEndSpeaking")
 else:
   # or we map AzureTranslator output to original mouth
-  AzureTranslatorMouth=mouth
+  AzureTranslatorMouth=i01_mouth
   outputSpeechService=Speechengine
 
 if apikey!="":AzureTranslator.setCredentials(apikey)
