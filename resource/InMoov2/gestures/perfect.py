@@ -11,9 +11,9 @@ def perfect():
   i01.moveHand("left",130,160,83,40,0,34)
   i01.moveHand("right",86,51,133,162,153,180)
   sleep(1)
-  i01.mouth.speak("it is perfect")
+  i01_mouth.speak("it is perfect")
   sleep(1)
   i01.finishedGesture()
-  #i01.mouth.speak(u"Это идеально")
+  #i01_mouth.speak(u"Это идеально")
   
 

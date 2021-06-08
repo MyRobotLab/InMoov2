@@ -13,6 +13,6 @@ def takethis():
   i01.moveTorso(110,90,90)
   sleep(2)
   isitaball()
-  i01.mouth.speak("what is it")
-  #i01.mouth.speak(u"что это")
+  i01_mouth.speak("what is it")
+  #i01_mouth.speak(u"что это")
 

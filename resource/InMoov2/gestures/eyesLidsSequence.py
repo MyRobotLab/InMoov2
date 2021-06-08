@@ -1,7 +1,7 @@
 def eyesLidsSequence():
   if isEyeLidsActivated:
     i01.startedGesture()
-    i01.mouth.speak("moving my eyelids randomly")
+    i01_mouth.speak("moving my eyelids randomly")
     x = (random.randint(1, 6))
     if x == 1:
       i01.eyelids.moveTo(180)
@@ -16,7 +16,7 @@ def eyesLidsSequence():
     if x == 6:
       i01.eyelids.moveTo(110)
     sleep(0.5)
-    i01.mouth.speak("now doing a eyelid sequence")
+    i01_mouth.speak("now doing a eyelid sequence")
     i01.eyelids.moveTo(110)
     sleep(0.5)
     i01.eyelids.moveTo(0)
@@ -26,5 +26,5 @@ def eyesLidsSequence():
     i01.eyelids.moveTo(180)
     sleep(0.5)
     i01.eyelids.moveTo(90)
-    i01.mouth.speak("sequence is finished")
+    i01_mouth.speak("sequence is finished")
     i01.finishedGesture()
