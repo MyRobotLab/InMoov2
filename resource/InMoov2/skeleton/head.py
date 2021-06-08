@@ -65,9 +65,9 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
     head.rollNeck.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'rollneck'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'rollneck'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'rollneck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'rollneck'))
   
     #maxvelocity
-    head.neck.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'neck'))
-    head.rothead.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'rothead'))
-    head.rollNeck.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'rollneck'))
+    head.neck.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'neck'))
+    head.rothead.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'rothead'))
+    head.rollNeck.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'rollneck'))
      
     head.jaw.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'jaw'))
     head.eyeX.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyeX'))

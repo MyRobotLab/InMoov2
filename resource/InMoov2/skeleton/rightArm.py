@@ -45,10 +45,10 @@ if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full")  o
     rightArm.omoplate.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'omoplate'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'omoplate'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'omoplate'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'omoplate')) 
     
   
-    rightArm.bicep.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'bicep'))
-    rightArm.shoulder.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'shoulder'))
-    rightArm.rotate.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'rotate'))
-    rightArm.omoplate.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'omoplate'))
+    rightArm.bicep.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'bicep'))
+    rightArm.shoulder.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'shoulder'))
+    rightArm.rotate.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'rotate'))
+    rightArm.omoplate.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'omoplate'))
 
     rightArm.bicep.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'bicep'))
     rightArm.shoulder.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'shoulder'))
