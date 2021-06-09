@@ -21,7 +21,7 @@ else:
 # ##############################################################################
 #                 functions called by the i01.chatBot
 # ##############################################################################
-if isChatbotActivated:
+if isChatBotActivated:
   i01_chatBot.setPredicate("articles","")
   i01_chatBot.setPredicate("courant","")
 def askWiki(articles,query,ReturnOk,ReturnNok): # retourne la description du sujet (query)
