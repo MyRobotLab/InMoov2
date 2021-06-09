@@ -83,14 +83,14 @@
 
                 <!--div id="dnaGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="Runtime.getBatteryLevel()"><img src="../img/InMoov2/dna_Activ.png"/></div-->
                 <div id="homeGuiButton" class="homeGuiButtons preventGuiDragSelect" ng-click="mrl.changeTab('intro')">Intro</div>
-                <div id="languageGuiButton" class="languageGuiButtons preventGuiDragSelect" ng-click="setPanel('language')">Language</div>
+                <div id="languageGuiButton" class="languageGuiButtons preventGuiDragSelect" ng-click="mrl.changeTab('runtime')">Language</div>
             </div>
         </td>
         <td>
             <!-- panels begin -->
 
             <!------------------------ language begin ------------------------------>
-            <table ng-show="showPanel('language')" class="inmoov-sub-panel table table-striped">
+            <!--<table ng-show="showPanel('language')" class="inmoov-sub-panel table table-striped">
                 <tr>
                     <td>
                         <img src="../language.png"/>
@@ -99,9 +99,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <div class="form-group">
+                        <div class="form-group">-->
                             <!-- {{locale}} -->
-                            <select multiple class="form-control vertical-menu" ng-model="localeTag.selected" ng-change="msg.setAllLocales($select.selected.tag)" tittle="---FIXME---">
+                            <!--<select multiple class="form-control vertical-menu" ng-model="localeTag.selected" ng-change="msg.setAllLocales($select.selected.tag)" tittle="---FIXME---">
                                 <option>cn-ZH</option>
                                 <option>de-DE</option>
                                 <option>en-US</option>
@@ -123,7 +123,7 @@
                         <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_B_Language.py','runtime')">Save Config</button>
                     </td>
                 </tr>
-            </table>
+            </table>-->
             <!------------------------ language end ------------------------------>
 
             <!------------------------ chatBot begin ------------------------------>
