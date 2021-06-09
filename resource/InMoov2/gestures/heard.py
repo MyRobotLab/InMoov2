@@ -20,7 +20,7 @@ def heard(data):
     i01.moveHead(90,90,90,180,65)
     sleep(1)
     if x == 1:
-      i01.mouth.speak("i am very, super, mega bored")
+      i01_mouth.speak("i am very, super, mega bored")
       i01.moveArm("left",85,93,42,16)
       i01.moveArm("right",87,93,37,18)
       i01.moveHand("left",124,82,65,81,41,143)
@@ -32,7 +32,7 @@ def heard(data):
       sleep(1)
       relax()
     if x == 2:
-      i01.mouth.speak("I feel like a machine, doing the same thing over and over")
+      i01_mouth.speak("I feel like a machine, doing the same thing over and over")
       i01.moveArm("left",85,93,42,16)
       i01.moveArm("right",87,93,37,18)
       i01.moveHand("left",124,82,65,81,41,143)
@@ -48,16 +48,16 @@ def heard(data):
     perfect()
 
   if (data == "show your back"):
-    i01.mouth.speak("you know I don't like to show my back because it is not finished")
+    i01_mouth.speak("you know I don't like to show my back because it is not finished")
 
   if (data == "not true it's finished"):
     x = (random.randint(1, 3))
-    i01.mouth.speak("oh")
+    i01_mouth.speak("oh")
     forwardServo.attach()
     directionServo.moveTo(45)
     forwardServo.moveTo(60)
     sleep(0.2)
-    i01.mouth.speak("really")
+    i01_mouth.speak("really")
     forwardServo.disable()
     fullspeed()
     i01.moveHead(16,11)
@@ -71,42 +71,42 @@ def heard(data):
     sleep(1)
     relax()
     if x == 1:
-      i01.mouth.speak("okay then, as you please")
+      i01_mouth.speak("okay then, as you please")
       i01.moveHead(90,90)
     if x == 2:
-      i01.mouth.speak("oh, yes I forgot")
+      i01_mouth.speak("oh, yes I forgot")
       i01.moveHead(90,90)
     if x == 3:
-      i01.mouth.speak("oh, I will turn around")
+      i01_mouth.speak("oh, I will turn around")
       i01.moveHead(90,90)
 
   if (data == "it's an object"):
-    i01.mouth.speak("definition of an object, anything that is visible or tangible and relatively stable in form. ")
+    i01_mouth.speak("definition of an object, anything that is visible or tangible and relatively stable in form. ")
 
 
   if (data == "i know but show it anyway"):
     x = (random.randint(1, 3))
     if x == 1:
-      i01.mouth.speak("as you please")
+      i01_mouth.speak("as you please")
     if x == 2:
-      i01.mouth.speak("i don't like that")
+      i01_mouth.speak("i don't like that")
     if x == 3:
-      i01.mouth.speak("alright")
+      i01_mouth.speak("alright")
     unhappy()
 
   if (data == "sorry i forgot"):
     x = (random.randint(1, 2))
     if x == 1:
-      i01.mouth.speak("that's alright")
+      i01_mouth.speak("that's alright")
     if x == 2:
-      i01.mouth.speak("you forget all the time")
+      i01_mouth.speak("you forget all the time")
 
   if (data == "it's okay"):
-    i01.mouth.speak("good")
+    i01_mouth.speak("good")
 
 
   if (data == "very good, thank you"):
-    i01.mouth.speak("okay, good")
+    i01_mouth.speak("okay, good")
 
   if (data == "look at the people"):
     i01.setHeadSpeed(36.0, 36.0)
@@ -152,23 +152,23 @@ def heard(data):
     sleep(1)
     lookinmiddle()
     sleep(3)
-    i01.mouth.speak("nice to meet you all")
+    i01_mouth.speak("nice to meet you all")
 
   if (data == "take a look around"):
     lookaroundyou()
 
   if (data == "good morning"):
-    i01.mouth.speak("good morning")
+    i01_mouth.speak("good morning")
     x = (random.randint(1, 4))
     if x == 1:
-      i01.mouth.speak("i hope you had a good night sleep")
+      i01_mouth.speak("i hope you had a good night sleep")
     if x == 2:
-      i01.mouth.speak("nice to see you again")
+      i01_mouth.speak("nice to see you again")
     if x == 3:
-      i01.mouth.speak("this is going to be a good day")
+      i01_mouth.speak("this is going to be a good day")
 
   if (data == "very good"):
-    i01.mouth.speak("thanks")
+    i01_mouth.speak("thanks")
 
   if (data =="italian hello"):
     italianhello()
@@ -199,7 +199,7 @@ def heard(data):
     relax()
 
   if (data =="do you speak hindi"):
-    i01.mouth.speak("yes, i can speak any language")
+    i01_mouth.speak("yes, i can speak any language")
     i01.moveHead(116,80)
     i01.moveArm("left",85,93,42,16)
     i01.moveArm("right",87,93,37,18)
@@ -216,59 +216,59 @@ def heard(data):
   if (data == "i know"):
     x = (random.randint(1, 3))
     if x == 1:
-      i01.mouth.speak("yes, me too")
+      i01_mouth.speak("yes, me too")
     if x == 2:
-      i01.mouth.speak("I do too")
+      i01_mouth.speak("I do too")
     if x == 3:
-      i01.mouth.speak("sorry about that")
+      i01_mouth.speak("sorry about that")
 
   if (data == "sorry"):
     x = (random.randint(1, 3))
     if x == 1:
-      i01.mouth.speak("no problems")
+      i01_mouth.speak("no problems")
     if x == 2:
-      i01.mouth.speak("it doesn't matter")
+      i01_mouth.speak("it doesn't matter")
     if x == 3:
-      i01.mouth.speak("it's okay")
+      i01_mouth.speak("it's okay")
 
   if (data == "nice"):
     x = (random.randint(1, 3))
     if x == 1:
-      i01.mouth.speak("I know")
+      i01_mouth.speak("I know")
     if x == 2:
-      i01.mouth.speak("yes, indeed")
+      i01_mouth.speak("yes, indeed")
     if x == 3:
-      i01.mouth.speak("you are damn right")
+      i01_mouth.speak("you are damn right")
 
   if (data == "hello"):
     hello()
     relax()
 
   if (data == "bye bye"):
-    i01.mouth.speak("see you soon")
+    i01_mouth.speak("see you soon")
     global helvar
     helvar = 1
     x = (random.randint(1, 2))
     if x == 1:
-      i01.mouth.speak("i'm looking forward to see you again")
+      i01_mouth.speak("i'm looking forward to see you again")
     if x == 2:
-      i01.mouth.speak("goodbye")
+      i01_mouth.speak("goodbye")
 
   if (data == "thank you"):
     x = (random.randint(1, 3))
     if x == 1:
-      i01.mouth.speak("you are welcome")
+      i01_mouth.speak("you are welcome")
     if x == 2:
-      i01.mouth.speak("my pleasure")
+      i01_mouth.speak("my pleasure")
     if x == 3:
-      i01.mouth.speak("it's okay")
+      i01_mouth.speak("it's okay")
 
   if (data == "thanks"):
     x = (random.randint(1, 2))
     if x == 1:
-      i01.mouth.speak("it's okay")
+      i01_mouth.speak("it's okay")
     if x == 2:
-      i01.mouth.speak("sure")
+      i01_mouth.speak("sure")
 
   if (data == "go forward"):
       #forwardServo.moveTo(60)
@@ -355,11 +355,11 @@ def heard(data):
 
   if (data == "how do you do"):
     if helvar <= 2:
-      i01.mouth.speak("I'm fine thank you")
+      i01_mouth.speak("I'm fine thank you")
       global helvar
       helvar += 1
     elif helvar == 3:
-      i01.mouth.speak("you have already said that at least twice")
+      i01_mouth.speak("you have already said that at least twice")
       i01.moveArm("left",43,88,22,10)
       i01.moveArm("right",20,90,30,10)
       i01.moveHand("left",0,0,0,0,0,119)
@@ -369,7 +369,7 @@ def heard(data):
       global helvar
       helvar += 1
     elif helvar == 4:
-      i01.mouth.speak("what is your problem stop saying how do you do all the time")
+      i01_mouth.speak("what is your problem stop saying how do you do all the time")
       i01.moveArm("left",30,83,22,10)
       i01.moveArm("right",40,85,30,10)
       i01.moveHand("left",130,180,180,180,180,119)
@@ -379,7 +379,7 @@ def heard(data):
       global helvar
       helvar += 1
     elif helvar == 5:
-      i01.mouth.speak("i will ignore you if you say how do you do one more time")
+      i01_mouth.speak("i will ignore you if you say how do you do one more time")
       unhappy()
       sleep(4)
       relax()
@@ -387,7 +387,7 @@ def heard(data):
       helvar += 1
 
   if (data == "i love you"):
-    i01.mouth.speak("i love you too")
+    i01_mouth.speak("i love you too")
     i01.moveHead(116,80)
     i01.moveArm("left",85,93,42,16)
     i01.moveArm("right",87,93,37,18)
@@ -401,10 +401,10 @@ def heard(data):
   if (data == "what is the weather"):
     global weathervar
     if weathervar <= 2:
-      i01.mouth.speak("I have no idea, I am not connected to internet")
+      i01_mouth.speak("I have no idea, I am not connected to internet")
       weathervar += 1
     elif weathervar == 3:
-      i01.mouth.speak("Sorry, I told you, I am not connected to internet")
+      i01_mouth.speak("Sorry, I told you, I am not connected to internet")
       i01.moveArm("left",43,88,22,10)
       i01.moveArm("right",20,90,30,10)
       i01.moveHand("left",0,0,0,0,0,119)
@@ -413,7 +413,7 @@ def heard(data):
       relax()
       weathervar += 1
     elif weathervar == 4:
-      i01.mouth.speak("Gael, you are annoying, stop asking me the weather")
+      i01_mouth.speak("Gael, you are annoying, stop asking me the weather")
       i01.moveArm("left",30,83,22,10)
       i01.moveArm("right",40,85,30,10)
       i01.moveHand("left",130,180,180,180,180,119)
@@ -437,7 +437,7 @@ def heard(data):
       i01.setHeadSpeed(59, 59, 50, 50, 100.0)
       i01.moveHead(80,66)
       sleep(1)
-      i01.mouth.speak("Well, well, Humans are worst than robots, they never learn")
+      i01_mouth.speak("Well, well, Humans are worst than robots, they never learn")
       fullspeed()
       i01.moveArm("left",85,106,25,18)
       i01.moveArm("right",87,107,32,18)

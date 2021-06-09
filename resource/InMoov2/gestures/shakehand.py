@@ -30,14 +30,14 @@ def shakehand():
   i01.moveTorso(95,95,90)
   sleep(3)
    ##optional, detect if there is a human ( waiting finger sensor, we use ultrasonic distance as test )
-  if ultraSonicRightActivated:
+  if isUltraSonicRightActivated:
     distanceRight=200
     timeoutRight=0
     timeoutRightGetCloser=0
     while (not distanceRight or distanceRight > 100):
       timeoutRight+=1
       timeoutRightGetCloser+=1
-      distanceRight=i01.getUltrasonicSensorDistance()
+      distanceRight=i01.getUltrasonicRightDistance()
       print "==Ultrasonic=distanceRight=Distance:", distanceRight
       if timeoutRight > 20:
         global noHumanRight
@@ -57,14 +57,14 @@ def shakehand():
       distanceRightOK=1
       goShake()
   
-  elif ultraSonicLeftActivated:
+  elif isUltraSonicLeftActivated:
     distanceLeft=200
     timeoutLeft=0
     timeoutLeftGetCloser=0
     while (not distanceLeft or distanceLeft > 100): 
       timeoutLeft+=1
       timeoutLeftGetCloser+=1
-      distanceLeft=i01.getUltrasonicSensorDistance()
+      distanceLeft=i01.getUltrasonicLeftDistance()
       print "==Ultrasonic=distanceLeft=Distance:", distanceLeft
       if timeoutLeft > 20:
         global noHumanLeft
@@ -84,13 +84,13 @@ def shakehand():
       distanceLeftOK=1
       goShake()
   else:
-    if ultraSonicRightActivated==0 and ultraSonicLeftActivated==0:
+    if isUltraSonicRightActivated==0 and isUltraSonicLeftActivated==0:
       sleep(3)
       shakehandAnimation()
 
 def noHuman():
   if noHumanLeft==1 or noHumanRight==1:
-    chatBot.getResponse("SYSTEM_SHAKE_HAND_NOHUMAN")
+    i01_chatBot.getResponse("SYSTEM_SHAKE_HAND_NOHUMAN")
     timeoutRight=0
     timeoutLeft=0
     sleep(2)
@@ -98,7 +98,7 @@ def noHuman():
 
 def getCloser():
   if getCloserLeft==1 or getCloserRight==1:
-    chatBot.getResponse("SYSTEM_SHAKE_HAND_GET_CLOSER")
+    i01_chatBot.getResponse("SYSTEM_SHAKE_HAND_GET_CLOSER")
     timeoutLeftGetCloser=0
     timeoutRightGetCloser=0
     sleep(2)
@@ -135,7 +135,7 @@ def shakehandAnimation():
   i01.moveArm("right",6,73,55,16)
   i01.moveHand("left",50,50,40,20,20,90)
   i01.moveTorso(95,95,90)
-  if rightHandSensorActivated:
+  if isRightHandSensorActivated:
     rightHandSensorON()
     sleep(1.5)
     rightThumbPressure=1 # Pressure range between 0-3
@@ -177,7 +177,7 @@ def shakehandAnimation():
   i01.moveHand("left",50,50,40,20,20,90)
   i01.moveTorso(95,95,90)
   sleep(0.7)
-  chatBot.getResponse("SYSTEM_SHAKE_HAND")
+  i01_chatBot.getResponse("SYSTEM_SHAKE_HAND")
   ##shake hand down
   i01.setHandSpeed("left", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   i01.setHandSpeed("right", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)

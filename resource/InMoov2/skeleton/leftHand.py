@@ -41,12 +41,12 @@ if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or 
     leftHand.pinky.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'pinky'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'pinky'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'pinky'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'pinky'))
     leftHand.wrist.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'wrist'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'wrist'))
     
-    leftHand.thumb.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'thumb'))
-    leftHand.index.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'index'))
-    leftHand.majeure.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'majeure'))
-    leftHand.ringFinger.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'ringFinger'))
-    leftHand.pinky.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'pinky'))
-    leftHand.wrist.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'wrist'))
+    leftHand.thumb.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'thumb'))
+    leftHand.index.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'index'))
+    leftHand.majeure.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'majeure'))
+    leftHand.ringFinger.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'ringFinger'))
+    leftHand.pinky.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'pinky'))
+    leftHand.wrist.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'wrist'))
      
     leftHand.thumb.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'thumb'))
     leftHand.index.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'index'))

@@ -26,6 +26,6 @@ def isTheSunShiny(townParam="town",period=1):
   curtemperature=openWeatherMap.getDegrees()
   rawCode=openWeatherMap.getWeatherCode()
   if not rawCode==0:
-    i01.chatBot.getResponse("SYSTEM METEO curtemperature " + str(int(curtemperature)) + " Town " + str(townParam.split(',')[0] + " COMMENTAIRE " + str(rawCode)))
+    i01_chatBot.getResponse("SYSTEM METEO curtemperature " + str(int(curtemperature)) + " Town " + str(townParam.split(',')[0] + " COMMENTAIRE " + str(rawCode)))
   else:
-    i01.chatBot.getResponse("SYSTEM openweathermapError")
+    i01_chatBot.getResponse("SYSTEM openweathermapError")

@@ -48,7 +48,7 @@ def comehere():
   i01.moveHead(118,80)
   i01.moveHand("right",180,164,175,160,165,20)
   sleep(1)
-  i01.mouth.speak("come closer")
+  i01_mouth.speak("come closer")
   i01.moveHead(60,80)
   i01.moveHand("right",180,2,175,160,165,20)
   sleep(1)

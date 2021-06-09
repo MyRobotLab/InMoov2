@@ -105,7 +105,7 @@ def wakeUpModeInsult():
       head.neck.setSpeed(50)
       head.neck.moveToBlocking(head.neck.getRest())
   else:
-    if talkToInmoovFrQueue("MRLALIVE")=="OK":talkEvent(lang_OsSynced)
+    if talkToInmoovFrQueue("MRLALIVE")=="OK":i01.speakBlocking(i01.localize("OsSynced"))
     relax()
   i01.RobotIsSleeping=False
   if isNeopixelActivated:i01.stopNeopixelAnimation()
