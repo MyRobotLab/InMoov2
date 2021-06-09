@@ -24,10 +24,4 @@ if isChatBotActivated:
   #htmlFilter.addListener("publishText", "i01", "speak")
   #i01_chatBot.attach(i01_ear)
   i01.startChatBot()
-
-  # This launch the chatbot for the first initialization
-#if str(i01_chatBot.getPredicate("Friend","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("Friend","firstinit"))=="started":
-  #i01_chatBot.setPredicate("default","topic","default")
-  #i01_chatBot.getResponse("FIRST_INIT")
-#else:
-  #i01_chatBot.getResponse("WAKE_UP")
+  #FIXME there is missing things in InMoov2 we had in InMoov
