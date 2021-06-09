@@ -8,7 +8,7 @@
 #subconscious for diagnose
 subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
 subconsciousMouth.setVoice("Mark")
-subconsciousMouth.setLocale("en")
+subconsciousMouth.setLocale("en-US")
 log = Runtime.createAndStart("log", "Log")
 runtime.setLogLevel("INFO")
 # libraries import
