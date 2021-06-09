@@ -40,7 +40,7 @@
         <td id="container-cell">
             <!--inmoov map begin-->
             <div id="container">
-                <div class="inmoov-menu-button inMoovButton {{button.name}}DIV preventGuiDragSelect" ng-repeat="button in buttons" ng-init="imgSrc='../img/InMoov2/'+button.name+'_off.png'" ng-style="imgStyle='transform:translateX(300px)'">
+                <div class="inmoov-menu-button inMoovButton {{button.name}}DIV preventGuiDragSelect"    epeat="button in buttons" ng-init="imgSrc='../img/InMoov2/'+button.name+'_off.png'" ng-style="imgStyle='transform:translateX(300px)'">
                     <img class="inmoov-menu-button {{button.name}}IMG preventGuiDragSelect" ng-src="{{imgSrc}}" ng-click="setPanel(button.name);" style="transform: translate({{button.translate}})"/>
                 </div>
                 <!-- Activ buttons hidden -->
@@ -109,7 +109,6 @@
                                 <option>ru-RU</option>
                                 <option>tr-TR</option>
                                 <option ng-repeat="(tag, localeData) in locales" value="{{localeData.tag}} {{localeData.value.displayLanguage}} {{localeData.value.displayCountry}}"></option>
-                                <option ng-repeat="{{localeData.tag}} {{localeData.value.displayLanguage}} {{localeData.value.displayCountry}}" value="{{localeData.tag}} {{localeData.value.displayLanguage}} {{localeData.value.displayCountry}}"></option>
                             </select>
                         </div>
                     </td>
