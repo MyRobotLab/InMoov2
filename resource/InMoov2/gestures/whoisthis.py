@@ -1,7 +1,7 @@
 def whoisthis():
   if isNeopixelActivated==1:
     i01.setNeopixelAnimation("Color Wipe", 100, 5, 10, 15) 
-  if isChatbotActivated:
+  if isChatBotActivated:
     if isOpenCvActivated==1:
       i01.cameraOn()
       fr=i01.vision.setActiveFilter("FaceRecognizer")

@@ -75,6 +75,13 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
     head.neck.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'neck'))
     head.rothead.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rothead'))
     head.rollNeck.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rollneck'))
+    
+    head.jaw.setRest(ThisSkeletonPartConfig.getint('SERVO_PIN', 'jaw'))
+    head.eyeX.setRest(ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeX'))
+    head.eyeY.setRest(ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeY'))
+    head.neck.setRest(ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'))
+    head.rothead.setRest(ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'))
+    head.rollNeck.setRest(ThisSkeletonPartConfig.getint('SERVO_PIN', 'rollneck'))
   
     if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'jaw'):head.jaw.setInverted(True)
     if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyeX'):head.eyeX.setInverted(True)
@@ -83,7 +90,9 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
     if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rothead'):head.rothead.setInverted(True)
     if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rollneck'):head.rollNeck.setInverted(True)
 
-    i01.startHead(MyLeftPort,BoardTypeMyLeftPort,ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'rollneck'))
+    #i01.startHead(MyLeftPort,BoardTypeMyLeftPort,ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'rollneck'))
+    #FIXME InMoov2 doesn't support 2 args
+    i01.startHead(MyLeftPort)
     rollneck=head.rollNeck
     
     #overide rollneck arduino
@@ -104,7 +113,7 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
     eyeXEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyeX')
     eyeYEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyeY')
     
-    head.jaw.setSpeed(-1)
+    head.jaw.setSpeed(500)
 
     head.rest()
     

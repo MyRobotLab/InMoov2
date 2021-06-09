@@ -6,7 +6,7 @@ def YesName(name):
   print "name confirmed"
   if isNeopixelActivated==1:
     i01.setNeopixelAnimation("Color Wipe", 100, 5, 10, 15) 
-  if isChatbotActivated==1:
+  if isChatBotActivated==1:
     if isOpenCvActivated==1:
       i01.cameraOn()
       i01.startedGesture()

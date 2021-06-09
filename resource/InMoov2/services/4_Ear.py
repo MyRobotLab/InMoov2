@@ -45,7 +45,7 @@ def onRecognized(text):
     global lastRecognized
     lastRecognized=text
     if i01.RobotIsStarted:
-      if isChatbotActivated:
+      if isChatBotActivated:
         if i01.RobotIsSleeping and unicode(text,'utf-8')==lockPhrase:sleepModeWakeUp()
       if not i01.RobotIsSleeping and not unicode(text,'utf-8')==lockPhrase:
         humanDetected()
