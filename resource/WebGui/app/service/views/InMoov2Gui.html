@@ -73,19 +73,19 @@
                 <div id="leftLegGuiDisplay" ng-show="service.isLeftLegActivated" class="GuiDisplays preventGuiDragSelect">
                     <img src="../img/InMoov2/legL_Activ.png"/>
                 </div>
-                <div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="i01.speakBlocking(str(Runtime.getBatteryLevel())+'percent')">
+                <div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="msg.speakBlocking(str(Runtime.getBatteryLevel())+'percent')">
                     <img src="../img/InMoov2/battery_Activ.png"/>
                 </div>
                 <!--div id="dnaGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="service.getBatteryLevel()"><img src="../img/InMoov2/dna_Activ.png"/></div-->
                 <div id="homeGuiButton" class="homeGuiButtons preventGuiDragSelect" ng-click="mrl.changeTab('intro')">Intro</div>
-                <div id="languageGuiButton" class="languageGuiButtons preventGuiDragSelect" ng-click="setPanel('language')">Language</div>
+                <div id="languageGuiButton" class="languageGuiButtons preventGuiDragSelect" ng-click="mrl.changeTab('runtime')">Language</div>
             </div>
         </td>
         <td>
             <!-- panels begin -->
 
             <!------------------------ language begin ------------------------------>
-            <table ng-show="showPanel('language')" class="inmoov-sub-panel table table-striped">
+            <!--<table ng-show="showPanel('language')" class="inmoov-sub-panel table table-striped">
                 <tr>
                     <td>
                         <img src="../language.png"/>
@@ -117,8 +117,8 @@
                         <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_B_Language.py','runtime')">Save Config</button>
                     </td>
                 </tr>
-            </table>
-            <!------------------------ chatBot end ------------------------------>
+            </table>-->
+            <!------------------------ language end ------------------------------>
 
             <!------------------------ chatBot begin ------------------------------>
             <table ng-show="showPanel('brain')" class="inmoov-sub-panel table table-striped">
