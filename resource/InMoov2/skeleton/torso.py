@@ -43,9 +43,9 @@ if isTorsoActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" ) or Sc
     torso.midStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'midStom')) 
     torso.lowStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'lowStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'lowStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'lowStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'lowStom')) 
     
-    torso.topStom.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'topStom'))
-    torso.midStom.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'midStom'))
-    torso.lowStom.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'lowStom'))
+    #torso.topStom.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'topStom'))
+    #torso.midStom.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'midStom'))
+    #torso.lowStom.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'lowStom'))
     
     torso.topStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'topStom'))
     torso.midStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'midStom'))
@@ -57,7 +57,7 @@ if isTorsoActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" ) or Sc
     torso.lowStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'lowStom'))
 
     
-    i01.startTorso(TorsoConnectedToArduinoPort,TorsoConnectedToArduinoPortBoardType)
+    i01.startTorso(TorsoConnectedToArduinoPort)
 
     torso.rest()
     

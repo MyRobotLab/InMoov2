@@ -40,12 +40,12 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full") o
     rightHand.wrist.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'wrist'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'wrist'))
     
   
-    rightHand.thumb.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'thumb'))
-    rightHand.index.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'index'))
-    rightHand.majeure.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'majeure'))
-    rightHand.ringFinger.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'ringFinger'))
-    rightHand.pinky.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'pinky'))
-    rightHand.wrist.setSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'wrist'))
+    #rightHand.thumb.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'thumb'))
+    #rightHand.index.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'index'))
+    #rightHand.majeure.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'majeure'))
+    #rightHand.ringFinger.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'ringFinger'))
+    #rightHand.pinky.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'pinky'))
+    #rightHand.wrist.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'wrist'))
         
 
         
@@ -63,7 +63,7 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full") o
     rightHand.pinky.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'pinky'))
     rightHand.wrist.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'wrist'))
     
-    i01.startRightHand(MyRightPort,BoardTypeMyRightPort)
+    i01.startRightHand(MyRightPort)
 
     rightHand.rest()
     
