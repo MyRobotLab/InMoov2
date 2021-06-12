@@ -50,7 +50,7 @@ index=False
 majeure=False
 ringFinger=False
 pinky=False
-wrist=False
+wrist=True
 
 [MINIMUM_MAP_INPUT]
 thumb=0
