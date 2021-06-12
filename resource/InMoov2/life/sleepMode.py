@@ -8,7 +8,7 @@
 ###############################################################################
 
 def sleepModeWakeUp():
-  i01.ear.clearLock()
+  i01_ear.clearLock()
   WaitXsecondBeforeRelaunchTracking=-10
   ear.setAutoListen(setAutoListen)
   if isPirActivated:
@@ -51,7 +51,7 @@ def sleepModeWakeUp():
 
 def sleepModeSleep():
   if not ForceMicroOnIfSleeping:ear.setAutoListen(False)
-  i01.ear.lockOutAllGrammarExcept(lockPhrase)
+  i01_ear.lockOutAllGrammarExcept(lockPhrase)
   stopTracking()
   imagedisplay.exitFS()
   sleep(1)
@@ -84,7 +84,7 @@ def sleepModeSleep():
 def wakeUpModeInsult():
   WaitXsecondBeforeRelaunchTracking=-10
   ear.setAutoListen(setAutoListen)
-  i01.ear.clearLock()
+  i01_ear.clearLock()
   if isPirActivated:
       PirControlerArduino.enablePin(PirPin,1)
       SleepTimer.startClock(True)
@@ -119,7 +119,7 @@ def sleepModeInsult():
   sleep(1)
   imagedisplay.closeAll()
   #unlockInsult located in ear.py
-  i01.ear.lockOutAllGrammarExcept(unlockInsult)
+  i01_ear.lockOutAllGrammarExcept(unlockInsult)
   i01.halfSpeed()
   rest()
   i01.waitTargetPos()
@@ -168,7 +168,7 @@ def humanDetected():
   if isPirActivated:
     SleepTimer.restartClock(True)
     if (isOpenCvActivated and UsePirToActivateTracking):
-      if (not i01.vision.isTracking() and WaitXsecondBeforeRelaunchTracking>=5):
+      if (not i01_vision.isTracking() and WaitXsecondBeforeRelaunchTracking>=5):
         WaitXsecondBeforeRelaunchTracking=0
         if isNeopixelActivated:i01.setNeopixelAnimation("Larson Scanner", 255, 0, 255, 1)
         autoTrackingStarted=1
@@ -188,7 +188,7 @@ def TrackingTimerRoutine(timedata):
   global autoTrackingStarted
   global WaitXsecondBeforeRelaunchTracking
   print "TrackingTimer stopped"
-  if i01.vision.isTracking():
+  if i01_vision.isTracking():
     WaitXsecondBeforeRelaunchTracking=-5
     if autoTrackingStarted:
       autoTrackingStarted=0
