@@ -67,7 +67,6 @@ for filename in os.listdir(RuningFolder+'skeleton'):
 if ((not isEyeLidsActivated and not isHeadActivated and not isLeftArmActivated and not isLeftHandActivated and not isRightArmActivated and not isRightHandActivated and not isTorsoActivated) and (ScriptType!="Virtual" and ScriptType!="NoArduino")):
   i01.speakBlocking(i01.localize("NOSKELETON"))
 
-if virtualInmoovActivated:i01.startSimulator()
   
 ################################
 # INIT.5 - ear.addcmmands
