@@ -24,11 +24,12 @@ except:
 global virtualInmoovActivated
 virtualInmoovActivated=False
 if (ScriptType=="Virtual" or isSimulatorActivated) and not ForceVinmoovDisable:
-  #if os.path.isdir(RuningFolder+'/JMonkeyEngine/assets/Models') and runtime.is64bit():
-  if os.path.isdir('data/JMonkeyEngine/assets/Models') and runtime.is64bit():
+  if os.path.isdir(RuningFolder+'/JMonkeyEngine/assets/Models') and runtime.is64bit():
+  #if os.path.isdir('data/JMonkeyEngine/assets/Models') and runtime.is64bit():
     global virtualInmoovActivated
     virtualInmoovActivated=True
-    i01.startSimulator()
+    i01.setVirtual(True)
+    jme = i01.startSimulator()
   else:
     errorSpokenFunc("VINMOOVNOWORKY")
 
