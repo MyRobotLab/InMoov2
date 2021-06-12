@@ -87,7 +87,7 @@ for root, subdirs, files in os.walk(RuningFolder+'minimal'):
 ################################
   
 #we launch Inmoov Gestures
-i01.loadGestures("InMoov/gestures")
+i01.loadGestures(RuningFolder+'gestures')
     
 #we launch Inmoov life
 for root, subdirs, files in os.walk(RuningFolder+'life'):
