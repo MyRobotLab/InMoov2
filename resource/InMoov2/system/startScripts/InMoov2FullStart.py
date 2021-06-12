@@ -9,6 +9,7 @@
 
 ##############################################################
 ## imports ####
+from org.myrobotlab.net import BareBonesBrowserLaunch
 import time
 import org.myrobotlab.framework.Platform as Platform
 import org.myrobotlab.service.Runtime as Runtime
