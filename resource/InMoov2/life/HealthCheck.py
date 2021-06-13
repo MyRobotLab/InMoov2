@@ -6,18 +6,21 @@
 # Timer function to autostart webkit microphone every 10seconds
 # only if robot not actualy speaking
 ###############################################################################
-HealthCheck = Runtime.start("HealthCheck","Clock")
-HealthCheck.setInterval(60000)
+if HealthCheckActivated==1:
+  HealthCheck = Runtime.start("HealthCheck","Clock")
+  HealthCheck.setInterval(60000)
 
-batterieLevel=100
-errorBat=1
-try:
-  if Runtime.getBatteryLevel():
-    batterieLevel = Runtime.getBatteryLevel()
-    print "battery :",batterieLevel
-    errorBat=0
-except:
-  pass
+  batterieLevel=100
+  errorBat=1
+  try:
+    if Runtime.getBatteryLevel():
+      batterieLevel = Runtime.getBatteryLevel()
+      print "battery :",batterieLevel
+      errorBat=0
+  except:
+    pass
+  HealthCheck.addListener("pulse", python.name, "HealthCheck_def")    
+  HealthCheck.startClock()
 
 
 def HealthCheck_def(timedata):
@@ -34,8 +37,3 @@ def HealthCheck_def(timedata):
         i01.setNeopixelAnimation("Flash Random", 255, 0, 0, 5)
       
   else:HealthCheck.stopClock()
-  
-
-HealthCheck.addListener("pulse", python.name, "HealthCheck_def")    
-HealthCheck.startClock()
-
