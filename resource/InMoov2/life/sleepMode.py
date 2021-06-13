@@ -35,8 +35,8 @@ def sleepModeWakeUp():
     #optional switchon nervoboard
     switchOnAllNervo()
     if isEyeLidsActivated:
-      eyelids.eyelidleft.moveTo(0)
-      eyelids.eyelidright.moveTo(0)
+      eyelids.eyelidLeft.moveTo(0)
+      eyelids.eyelidRight.moveTo(0)
       eyelids.autoBlink(True)
           #head up
     if isHeadActivated:
