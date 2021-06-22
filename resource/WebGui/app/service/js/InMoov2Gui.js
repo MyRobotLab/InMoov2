@@ -1,4 +1,4 @@
-angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$scope', 'mrl', function($scope, mrl) {
+angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$scope', 'mrl', '$uibModal', 'modalService', function($scope, mrl, $uibModal, modalService) {
     console.info('InMoov2GuiCtrl')
     var _self = this
     var msg = this.msg
@@ -13,7 +13,11 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     $scope.servos = []
     $scope.sliders = []
 
-    $scope.controllerTypes = ['Arduino','AdaFruit','FIXME-morestuff']
+    $scope.controllerTypes = ['Arduino', 'AdaFruit', 'FIXME-morestuff']
+
+    $scope.state = {
+        configDir: "data/config/" + mrl.getShortName(msg.name) + "_config"
+    }
 
     $scope.mrl = mrl
     $scope.panel = mrl.getPanel('runtime')
@@ -34,6 +38,8 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     $scope.selectedGesture = null
     $scope.selectedConfig = null
 
+    $scope.configList = mrl.getService('runtime').configList
+
     // inmoov "all" buttons
     $scope.buttons = []
 
@@ -49,7 +55,7 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         }
 
         if (type == 'absolute') {
-            button.translate = x + "px," + y +"px"
+            button.translate = x + "px," + y + "px"
         }
 
         if (type == 'circular') {
@@ -65,6 +71,31 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         } else {
             mrl.search("")
         }
+    }
+
+    $scope.startConfig = function() {
+        console.info('startConfig')
+        msg.send('startConfig', $scope.selectedConfig)
+    }
+
+    $scope.releaseConfig = function() {
+        console.info('releaseConfig')
+        msg.send('releaseConfig', $scope.selectedConfig)
+    }
+
+    $scope.saveConfig = function() {
+        console.info('saveConfig')
+
+        let onOK = function() {
+            msg.send('export', $scope.state.configDir)
+        }
+
+        let onCancel = function() {
+            console.info('save config cancelled')
+        }
+
+        let ret = modalService.openOkCancel('widget/modal-dialog.view.html', 'Save Configuration', 'Save your current configuration in a directory named', onOK, onCancel, $scope);
+        console.info('ret ' + ret);
     }
 
     let calculatButtonPos = function() {
@@ -174,7 +205,13 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
             $scope.onText = data;
             $scope.$apply()
             break
-            
+        case 'onConfigList':
+            $scope.configList = data
+            $scope.$apply()
+            break
+        case 'onStatus':
+            break
+
         default:
             console.error("ERROR - unhandled method " + $scope.name + " " + inMsg.method)
             break
@@ -236,6 +273,10 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     calculatButtonPos()
 
     $scope.setPanel('InMoov')
+
+    msg.subscribe('publishConfigList')
+
+    runtimeFull = mrl.getRuntime().name
 
     // FIXME FIXME FIXME - single simple subscribeTo(name, method) !!!
     mrl.subscribe(mrl.getRuntime().name, 'getServiceTypeNamesFromInterface');

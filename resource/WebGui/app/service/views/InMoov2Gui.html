@@ -947,22 +947,14 @@
             <label>config</label>
             &nbsp;&nbsp;&nbsp;&nbsp;<img src="../peers.png" height="28" ng-click="filterPeers(null)"/>
             <div class="form-group">
-                <select multiple class="form-control vertical-menu" ng-model="selectedConfig" id="selectedConfig" ng-change="setConfig()" tittle="---FIXME---">
-                    <option>myConfig</option>
-                    <option>default</option>
-                    <!--<option>my-config-01</option>
-                    <option>my-config-02</option>
-                    <option>my-config-03</option>
-                    <option>my-config-04</option>
-                    <option>my-config-05</option>-->
-                    <option ng-repeat="config in configs" value="{{config}}">{{config}}</option>
+                <select multiple class="form-control vertical-menu" ng-model="selectedConfig" id="selectedConfig" title="configurations">
+                    <option ng-repeat="config in configList" ng-value="{{config}}">{{config}}</option>
                 </select>
             </div>
-            <!--button class="btn btn-default" ng-click="msg.export('myConfig')">export config</button-->
-            <button class="btn btn-default" title="This will create a file in data/InMoov2/config/myConfig.py" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">export All</button>
-            <button class="btn btn-default" title="This will load: data/InMoov2/config/myConfig.py" ng-click="msg.loadFile('data/InMoov2/config/myConfig.py')">load</button>
+            <button class="btn btn-default" title="This will save a config module to data/config" ng-click="saveConfig()">save config</button>
+            <button class="btn btn-default" title="This will start a config module" ng-click="startConfig()">start</button>
+            <button class="btn btn-default" title="This will release a config module" ng-click="releaseConfig()">release</button>
             <button class="btn btn-default" title="This will load: resource/InMoov2/system/startScripts/InMoov2FullStart.py" ng-click="msg.loadFile('resource/InMoov2/system/startScripts/InMoov2FullStart.py')">load Full Script</button>
-            <!--button class="btn btn-default" title="This will load the selected config" ng-click="msg.loadFile('data/InMoov2/config/(selectedConfig)')">load</button-->
             <button class="btn btn-default" title="This will load: resource/InMoov2/InMoov2.py" ng-click="msg.loadFile('resource/InMoov2/InMoov2.py')">load system</button>
         </td>
     </tr>
