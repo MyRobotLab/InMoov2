@@ -8,7 +8,7 @@
 #subconscious for diagnose
 subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
 subconsciousMouth.setVoice("Mark")
-subconsciousMouth.setLocale("en")
+subconsciousMouth.setLocale("en-US")
 log = Runtime.createAndStart("log", "Log")
 runtime.setLogLevel("INFO")
 # libraries import
@@ -67,7 +67,6 @@ for filename in os.listdir(RuningFolder+'skeleton'):
 if ((not isEyeLidsActivated and not isHeadActivated and not isLeftArmActivated and not isLeftHandActivated and not isRightArmActivated and not isRightHandActivated and not isTorsoActivated) and (ScriptType!="Virtual" and ScriptType!="NoArduino")):
   i01.speakBlocking(i01.localize("NOSKELETON"))
 
-if virtualInmoovActivated:i01.startSimulator()
   
 ################################
 # INIT.5 - ear.addcmmands
@@ -76,7 +75,7 @@ if virtualInmoovActivated:i01.startSimulator()
 for root, subdirs, files in os.walk(RuningFolder+'minimal'):
   for name in files:
     if name.split(".")[-1] == "py":
-      if (isChatbotActivated and name.split(".")[0][:11] == "earCommands"):
+      if (isChatBotActivated and name.split(".")[0][:11] == "earCommands"):
         print name.split(".")[0]," not loaded because chatbot is activated"
       else:  
         execfile(os.path.join(root, name).encode('utf8'))
@@ -88,7 +87,7 @@ for root, subdirs, files in os.walk(RuningFolder+'minimal'):
 ################################
   
 #we launch Inmoov Gestures
-i01.loadGestures("InMoov/gestures")
+i01.loadGestures(RuningFolder+'gestures')
     
 #we launch Inmoov life
 for root, subdirs, files in os.walk(RuningFolder+'life'):
@@ -108,7 +107,8 @@ for root, subdirs, files in os.walk(RuningFolder):
       os.remove(os.path.join(root, name))
       if DEBUG==1:print "removed .default : ",os.path.join(root, name)
 
-
+# launch custom script
+execfile(RuningFolder+'/custom/InMoov_custom.py')
       
 ################################
 # INIT.8 - yes there is no 7 :) great, inmoov is alive

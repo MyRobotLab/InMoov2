@@ -1,6 +1,6 @@
 def takePicture():
   i01.cameraOn()
-  photoFileName = i01.opencv.recordFrame()
+  photoFileName = i01_opencv.recordFrame()
   print photoFileName
   AudioPlayer.playFile(RuningFolder+'/system/sounds/ShutterClik.mp3')
   imagedisplay.display(photoFileName)

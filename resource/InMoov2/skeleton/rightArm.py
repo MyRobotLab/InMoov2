@@ -32,30 +32,24 @@ if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full")  o
   if RightPortIsConnected:
     rightArm = Runtime.create("i01.rightArm", "InMoov2Arm")
     rightArm.startPeers()
-    #pffff :) FIXME?we need to manualy load now to get last position to avoid breaking parts
-    #rightArm.bicep.load()
-    #rightArm.shoulder.load()
-    #rightArm.rotate.load()
-    #rightArm.omoplate.load()
-    #rightArm.startPeers()
-    #end pffff :)    
+    
     rightArm.bicep.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'bicep'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'bicep')) 
     rightArm.shoulder.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'shoulder'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'shoulder')) 
     rightArm.rotate.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'rotate'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'rotate'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'rotate'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'rotate')) 
     rightArm.omoplate.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'omoplate'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'omoplate'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'omoplate'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'omoplate')) 
     
   
-    rightArm.bicep.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'bicep'))
-    rightArm.shoulder.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'shoulder'))
-    rightArm.rotate.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'rotate'))
-    rightArm.omoplate.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'omoplate'))
+    #rightArm.bicep.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'bicep'))
+    #rightArm.shoulder.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'shoulder'))
+    #rightArm.rotate.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'rotate'))
+    #rightArm.omoplate.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'omoplate'))
 
     rightArm.bicep.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'bicep'))
     rightArm.shoulder.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'shoulder'))
     rightArm.rotate.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rotate'))
     rightArm.omoplate.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'omoplate'))
 
-    i01.startRightArm(MyRightPort,BoardTypeMyRightPort)
+    i01.startRightArm(MyRightPort)
     
     
     rightArm.bicep.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'bicep'))

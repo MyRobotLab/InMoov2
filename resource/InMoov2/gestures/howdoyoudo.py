@@ -23,4 +23,4 @@ def howdoyoudo():
     unhappy()
     sleep(4)
     relax()    
-  i01.chatBot.setPredicate("parameterHowDoYouDo",str(helvar))
+  i01_chatBot.setPredicate("parameterHowDoYouDo",str(helvar))

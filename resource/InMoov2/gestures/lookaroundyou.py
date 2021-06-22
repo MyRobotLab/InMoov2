@@ -1,6 +1,6 @@
 def lookaroundyou():
   i01.setHeadSpeed(80.0, 80.0, 50.0, 50.0, 100.0)
-  i01.mouth.speak("ok you have my attention")
+  i01_mouth.speak("ok you have my attention")
   for x in range(0, 1):
     x = (random.randint(1, 6))
     if x == 1:
@@ -24,11 +24,11 @@ def lookaroundyou():
     sleep(1)
     x = (random.randint(1, 4))
     if x == 1:
-      i01.mouth.speak("looking nice")
+      i01_mouth.speak("looking nice")
     if x == 2:
-      i01.mouth.speak("i like it here")
+      i01_mouth.speak("i like it here")
     if x == 3:
-      i01.mouth.speak("can I help you")
+      i01_mouth.speak("can I help you")
     if x == 4:
-      i01.mouth.speak("what would you like to do")
+      i01_mouth.speak("what would you like to do")
     relax()

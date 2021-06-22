@@ -14,7 +14,7 @@ def missedYou():
   i01.speakBlocking("Oh, I missed you so much")
   sleep(2)
   #close arms
-  i01.chatBot.getResponse("SAY " + "Shall we give a hug")
+  i01_chatBot.getResponse("SAY " + "Shall we give a hug")
   i01.finishedGesture()
  
 def missedYouYes():

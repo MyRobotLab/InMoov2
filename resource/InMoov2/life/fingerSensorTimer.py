@@ -1,13 +1,14 @@
 # ##############################################################################
 #            *** ROBOT FINGER SENSOR TIMER ***
 # ##############################################################################
-sensorTimer = Runtime.createAndStart("sensorTimer","Clock")
-sensorTimer.addListener("pulse", python.name, "sensorTimerRoutine")
-sensorTimer.addListener("clockStarted", python.name, "sensorTimerStart")  
-sensorTimer.addListener("clockStopped", python.name, "sensorTimerStop")
+if rightHandSensorActivated==1 or leftHandSensorActivated==1:
+  sensorTimer = Runtime.createAndStart("sensorTimer","Clock")
+  sensorTimer.addListener("pulse", python.name, "sensorTimerRoutine")
+  sensorTimer.addListener("clockStarted", python.name, "sensorTimerStart")  
+  sensorTimer.addListener("clockStopped", python.name, "sensorTimerStop")
 
-#loop every 1000ms
-sensorTimer.setInterval(1000)
+  #loop every 1000ms
+  sensorTimer.setInterval(1000)
 
 def sensorTimerStart():
   if rightHandSensorActivated:

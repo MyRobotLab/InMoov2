@@ -73,19 +73,24 @@
                 <div id="leftLegGuiDisplay" ng-show="service.isLeftLegActivated" class="GuiDisplays preventGuiDragSelect">
                     <img src="../img/InMoov2/legL_Activ.png"/>
                 </div>
-                <div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="i01.speakBlocking(str(Runtime.getBatteryLevel())+'percent')">
+                <div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="service.python (i01.speakBlocking(str(Runtime.getBatteryLevel())+' %'))">
                     <img src="../img/InMoov2/battery_Activ.png"/>
                 </div>
-                <!--div id="dnaGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="service.getBatteryLevel()"><img src="../img/InMoov2/dna_Activ.png"/></div-->
+
+                <!--<div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="print Runtime.getBatteryLevel()">
+                    <img src="../img/InMoov2/battery_Activ.png"/>
+                </div>-->
+
+                <!--div id="dnaGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="Runtime.getBatteryLevel()"><img src="../img/InMoov2/dna_Activ.png"/></div-->
                 <div id="homeGuiButton" class="homeGuiButtons preventGuiDragSelect" ng-click="mrl.changeTab('intro')">Intro</div>
-                <div id="languageGuiButton" class="languageGuiButtons preventGuiDragSelect" ng-click="setPanel('language')">Language</div>
+                <div id="languageGuiButton" class="languageGuiButtons preventGuiDragSelect" ng-click="mrl.changeTab('runtime')">Language</div>
             </div>
         </td>
         <td>
             <!-- panels begin -->
 
             <!------------------------ language begin ------------------------------>
-            <table ng-show="showPanel('language')" class="inmoov-sub-panel table table-striped">
+            <!--<table ng-show="showPanel('language')" class="inmoov-sub-panel table table-striped">
                 <tr>
                     <td>
                         <img src="../language.png"/>
@@ -94,9 +99,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <div class="form-group">
+                        <div class="form-group">-->
                             <!-- {{locale}} -->
-                            <select multiple class="form-control vertical-menu" ng-model="localeTag.selected" ng-change="msg.setAllLocales($select.selected.tag)" tittle="---FIXME---">
+                            <!--<select multiple class="form-control vertical-menu" ng-model="localeTag.selected" ng-change="msg.setAllLocales($select.selected.tag)" tittle="---FIXME---">
                                 <option>cn-ZH</option>
                                 <option>de-DE</option>
                                 <option>en-US</option>
@@ -109,7 +114,6 @@
                                 <option>ru-RU</option>
                                 <option>tr-TR</option>
                                 <option ng-repeat="(tag, localeData) in locales" value="{{localeData.tag}} {{localeData.value.displayLanguage}} {{localeData.value.displayCountry}}"></option>
-                                <option ng-repeat="{{localeData.tag}} {{localeData.value.displayLanguage}} {{localeData.value.displayCountry}}" value="{{localeData.tag}} {{localeData.value.displayLanguage}} {{localeData.value.displayCountry}}"></option>
                             </select>
                         </div>
                     </td>
@@ -119,21 +123,22 @@
                         <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_B_Language.py','runtime')">Save Config</button>
                     </td>
                 </tr>
-            </table>
-            <!------------------------ chatBot end ------------------------------>
+            </table>-->
+            <!------------------------ language end ------------------------------>
 
             <!------------------------ chatBot begin ------------------------------>
             <table ng-show="showPanel('brain')" class="inmoov-sub-panel table table-striped">
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('chatBot')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('chatBot')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                         <img src="../Brain.png"/>
                         <label>chatBot Activated:</label>
                         &nbsp;<toggle width="70" height="30" ng-model="service.isChatBotActivated" ng-change="!service.isChatBotActivated?msg.stopChatBot():msg.startChatBot()" on="ON" off="OFF"/>
-                        <button class="btn btn-default" ng-show="service.isChatBotActivated" ng-click="setPanel('chatBot1')">Open</button>
+                        <!--<button class="btn btn-default" ng-show="service.isChatBotActivated" ng-click="setPanel('chatBot1')">Open</button>
+                        Temporary fix-->
+                        <button class="btn btn-default" ng-show="service.isChatBotActivated" ng-click="mrl.changeTab(service.name + '.chatBot')">Open</button>
                     </td>
                 </tr>
                 <tr>
@@ -163,8 +168,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('chatBot')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('chatBot')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                     </td>
                 </tr>
@@ -186,8 +190,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftArm')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftArm')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                         <img src="../InMoovArm.png"/>
                         <label>leftArm Activated:</label>
@@ -203,8 +206,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightArm')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightArm')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                         <img src="../InMoovArm.right.png"/>
                         <label>rightArm Activated:</label>
@@ -224,8 +226,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ear')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ear')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                         <img src="../InMoov_ear.png"/>
                         <label>ear Activated:</label>
@@ -253,8 +254,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ear')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ear')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                     </td>
                 </tr>
@@ -276,8 +276,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('torso')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('torso')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                         <img src="../InMoovTorso.png"/>
                         <label>torso Activated:</label>
@@ -297,8 +296,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftHand')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leftHand')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                         <img src="../InMoovHand.png"/>
                         <label>leftHand Activated:</label>
@@ -311,8 +309,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightHand')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('rightHand')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                         <img src="../InMoovHand.right.png"/>
                         <label>rightHand Activated:</label>
@@ -334,8 +331,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('mouth')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('mouth')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                         <img src="../InMoov_mouth.png"/>
                         <label>mouth Activated:</label>
@@ -384,8 +380,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('head')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('head')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                         <img src="../InMoovHead.png"/>
                         <label>head Activated:</label>
@@ -396,8 +391,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('opencv')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('opencv')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                         <img src="../OpenCV.png"/>
                         <label>openCV Activated:</label>
@@ -454,8 +448,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('right')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('right')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                         <img src="../microcontroller_1.png"/>
                         <label>controller right:</label>
@@ -473,56 +466,53 @@
         </ui-select>
 
 -->
-                        <button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="setPanel('controller_right')">Settings</button>
-                        <!--<button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.right')">Settings</button>-->
+                        <!--<button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="setPanel('controller_right')">Settings</button>-->
+                        <button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.right')">Settings</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('left')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('left')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                         <img src="../microcontroller_1.png"/>
                         <label>controller left:</label>
                         &nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="leftPort" ng-model="service.isLeftPortActivated" title="To access settings, the button must be activated" ng-change="!service.isLeftPortActivated?msg.loadFile('resource/InMoov2/system/startScripts/i01_left_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_left_start.py')" on="ON" off="OFF"/></toggle>
                         &nbsp;&nbsp;
-                        <button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="setPanel('controller_left')">Settings</button>
-                        <!--button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.left')">Settings</button-->
+                        <!--<button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="setPanel('controller_left')">Settings</button>-->
+                        <button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.left')">Settings</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('controller3')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('controller3')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                         <img src="../microcontroller_1.png"/>
                         <label>controller 3:</label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="controller3" ng-model="service.isController3Activated" title="To access settings, the button must be activated" ng-change="!service.isController3Activated?msg.loadFile('resource/InMoov2/system/startScripts/i01_controller3_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_controller3_start.py')" on="ON" off="OFF"/></toggle>
                         &nbsp;&nbsp;
-                        <button class="btn btn-default" ng-show="service.isController3Activated" width="80" height="30" ng-click="setPanel('controller_3')">Settings</button>
-                        <!--button class="btn btn-default" ng-show="service.isController3Activated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller3')">Settings</button-->
+                        <!--<button class="btn btn-default" ng-show="service.isController3Activated" width="80" height="30" ng-click="setPanel('controller_3')">Settings</button>-->
+                        <button class="btn btn-default" ng-show="service.isController3Activated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller3')">Settings</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('controller4')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('controller4')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                         <img src="../microcontroller_1.png"/>
                         <label>controller 4:</label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="controller4" ng-model="service.isController4Activated" title="To access settings, the button must be activated" ng-change="!service.isController4Activated?msg.loadFile('resource/InMoov2/system/startScripts/i01_controller4_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_controller4_start.py')" on="ON" off="OFF"/></toggle>
                         &nbsp;&nbsp;
-                        <button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="setPanel('controller_4')">Settings</button>
-                        <!--button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller4')">Settings</button-->
+                        <!--<button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="setPanel('controller_4')">Settings</button>-->
+                        <button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller4')">Settings</button>
                 </tr>
-                <!--<tr>
+                <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_6_Arduino.py','i01.right,i01.left,i01.controller3,i01.controller4')">Save Config</button>
                     </td>
-                </tr>-->
+                </tr>
                 <tr>
                     <td>
                         <img width="50" height="50" ng-click="setPanel('extra')" ng-src="../img/InMoov2/arrow_blue_left.png" src="../img/InMoov2/arrow_blue_left.png">
@@ -535,8 +525,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('right')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('right')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                     </td>
                 </tr>
@@ -562,8 +551,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('left')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('left')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                     </td>
                 </tr>
@@ -589,8 +577,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('controller3')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('controller3')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                     </td>
                 </tr>
@@ -616,8 +603,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('controller4')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('controller4')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                     </td>
                 </tr>
@@ -643,8 +629,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('neopixel')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('neopixel')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                         <img src="../NeoPixel.png"/>
                         <label>neopixel is:</label>
@@ -669,8 +654,7 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('neopixel')"/>
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('neopixel')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                     </td>
                 </tr>
@@ -749,8 +733,7 @@
     <tr>
         <td>
             <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('pir')"/>
-            <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/></img>
+            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('pir')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/></img>
             <!--------------------------------------------------------------->
             <img src="../Pir.png"/>
             <label>pir:</label>
@@ -762,8 +745,7 @@
     <tr>
         <td>
             <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('openNi')"/>
-            <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('openNi')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
             <!--------------------------------------------------------------->
             <img src="../kinect.png"/>
             <label>openNI:</label>
@@ -775,8 +757,7 @@
     <tr>
         <td>
             <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ultraSonicRight')"/>
-            <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ultraSonicRight')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
             <!--------------------------------------------------------------->
             <img src="../UltrasonicSensor.png"/>
             <label>ultraSonic Right:</label>
@@ -789,8 +770,7 @@
     <tr>
         <td>
             <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ultraSonicLeft')"/>
-            <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ultraSonicLeft')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
             <!--------------------------------------------------------------->
             <img src="../UltrasonicSensor.png"/>
             <label>ultraSonic Left:</label>
@@ -813,8 +793,7 @@
     <tr>
         <td>
             <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('pir')"/>
-            <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('pir')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
             <!--------------------------------------------------------------->
         </td>
     </tr>
@@ -845,8 +824,7 @@
     <tr>
         <td>
             <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ultraSonicRight')"/>
-            <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ultraSonicRight')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
             <!--------------------------------------------------------------->
         </td>
     </tr>
@@ -870,8 +848,7 @@
     <tr>
         <td>
             <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ultraSonicLeft')"/>
-            <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ultraSonicLeft')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
             <!--------------------------------------------------------------->
         </td>
     </tr>
@@ -895,8 +872,7 @@
     <tr>
         <td>
             <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('openNI')"/>
-            <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('openNI')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
             <!--------------------------------------------------------------->
         </td>
     </tr>

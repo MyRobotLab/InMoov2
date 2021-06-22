@@ -4,6 +4,8 @@ from org.myrobotlab.arduino.Msg import MRLCOMM_VERSION
 from datetime import datetime
 
 #######################
+import org.myrobotlab.framework.Platform as Platform
+import org.myrobotlab.service.Runtime as Runtime
 import threading
 import thread
 import time

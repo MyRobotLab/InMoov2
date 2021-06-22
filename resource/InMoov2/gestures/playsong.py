@@ -1,11 +1,11 @@
 def playsong(data):
   i01.startedGesture()
   if (data == "can i have your attention"): # Могу ли я привлечь ваше внимание
-    i01.mouth.speak("ok you have my attention")
-    #i01.mouth.speak(u"Хорошо, что я привлёк ваше внимание")
+    i01_mouth.speak("ok you have my attention")
+    #i01_mouth.speak(u"Хорошо, что я привлёк ваше внимание")
     stopit()
-    i01.mouth.speak("electro funk inmoov")
-    #i01.mouth.speak(u"Электо функции Инмоова")
+    i01_mouth.speak("electro funk inmoov")
+    #i01_mouth.speak(u"Электо функции Инмоова")
     i01.setHeadSpeed(100.0,100.0)
     i01.setArmSpeed("left",100.0,100.0,100.0,100.0)
     i01.setArmSpeed("right",100.0,100.0,100.0,100.0)

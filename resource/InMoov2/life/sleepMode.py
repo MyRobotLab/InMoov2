@@ -8,7 +8,7 @@
 ###############################################################################
 
 def sleepModeWakeUp():
-  i01.ear.clearLock()
+  i01_ear.clearLock()
   WaitXsecondBeforeRelaunchTracking=-10
   ear.setAutoListen(setAutoListen)
   if isPirActivated:
@@ -35,8 +35,8 @@ def sleepModeWakeUp():
     #optional switchon nervoboard
     switchOnAllNervo()
     if isEyeLidsActivated:
-      eyelids.eyelidleft.moveTo(0)
-      eyelids.eyelidright.moveTo(0)
+      eyelids.eyelidLeft.moveTo(0)
+      eyelids.eyelidRight.moveTo(0)
       eyelids.autoBlink(True)
           #head up
     if isHeadActivated:
@@ -51,7 +51,7 @@ def sleepModeWakeUp():
 
 def sleepModeSleep():
   if not ForceMicroOnIfSleeping:ear.setAutoListen(False)
-  i01.ear.lockOutAllGrammarExcept(lockPhrase)
+  i01_ear.lockOutAllGrammarExcept(lockPhrase)
   stopTracking()
   imagedisplay.exitFS()
   sleep(1)
@@ -65,8 +65,8 @@ def sleepModeSleep():
   #head down
   if isEyeLidsActivated:
     eyelids.autoBlink(False)
-    eyelids.eyelidleft.moveTo(180)
-    eyelids.eyelidright.moveTo(180)
+    eyelids.eyelidLeft.moveTo(180)
+    eyelids.eyelidRight.moveTo(180)
   if isHeadActivated:
     head.neck.setSpeed(40)
     head.neck.moveTo(10)
@@ -84,7 +84,7 @@ def sleepModeSleep():
 def wakeUpModeInsult():
   WaitXsecondBeforeRelaunchTracking=-10
   ear.setAutoListen(setAutoListen)
-  i01.ear.clearLock()
+  i01_ear.clearLock()
   if isPirActivated:
       PirControlerArduino.enablePin(PirPin,1)
       SleepTimer.startClock(True)
@@ -97,15 +97,15 @@ def wakeUpModeInsult():
     #optional switchon nervoboard
     switchOnAllNervo()
     if isEyeLidsActivated:
-      eyelids.eyelidleft.moveTo(0)
-      eyelids.eyelidright.moveTo(0)
+      eyelids.eyelidLeft.moveTo(0)
+      eyelids.eyelidRight.moveTo(0)
       eyelids.autoBlink(True)
           #head up
     if isHeadActivated:
       head.neck.setSpeed(50)
       head.neck.moveToBlocking(head.neck.getRest())
   else:
-    if talkToInmoovFrQueue("MRLALIVE")=="OK":talkEvent(lang_OsSynced)
+    if talkToInmoovFrQueue("MRLALIVE")=="OK":i01.speakBlocking(i01.localize("OsSynced"))
     relax()
   i01.RobotIsSleeping=False
   if isNeopixelActivated:i01.stopNeopixelAnimation()
@@ -119,7 +119,7 @@ def sleepModeInsult():
   sleep(1)
   imagedisplay.closeAll()
   #unlockInsult located in ear.py
-  i01.ear.lockOutAllGrammarExcept(unlockInsult)
+  i01_ear.lockOutAllGrammarExcept(unlockInsult)
   i01.halfSpeed()
   rest()
   i01.waitTargetPos()
@@ -128,8 +128,8 @@ def sleepModeInsult():
   #head down
   if isEyeLidsActivated:
     eyelids.autoBlink(False)
-    eyelids.eyelidleft.moveTo(180)
-    eyelids.eyelidright.moveTo(180)
+    eyelids.eyelidLeft.moveTo(180)
+    eyelids.eyelidRight.moveTo(180)
   if isHeadActivated:
     head.neck.setSpeed(80)
     head.neck.moveTo(10)
@@ -153,7 +153,7 @@ def welcomeMessage():
     else:
       i01_chatBot.getResponse("WAKE_UP")
   else:
-    i01.speakBlocking(i01.languagePack.get("ready"))
+    i01.speakBlocking(i01.localize("ready"))
   i01.RobotIsStarted=True
 
 global WaitXsecondBeforeRelaunchTracking
@@ -168,7 +168,7 @@ def humanDetected():
   if isPirActivated:
     SleepTimer.restartClock(True)
     if (isOpenCvActivated and UsePirToActivateTracking):
-      if (not i01.vision.isTracking() and WaitXsecondBeforeRelaunchTracking>=5):
+      if (not i01_vision.isTracking() and WaitXsecondBeforeRelaunchTracking>=5):
         WaitXsecondBeforeRelaunchTracking=0
         if isNeopixelActivated:i01.setNeopixelAnimation("Larson Scanner", 255, 0, 255, 1)
         autoTrackingStarted=1
@@ -188,7 +188,7 @@ def TrackingTimerRoutine(timedata):
   global autoTrackingStarted
   global WaitXsecondBeforeRelaunchTracking
   print "TrackingTimer stopped"
-  if i01.vision.isTracking():
+  if i01_vision.isTracking():
     WaitXsecondBeforeRelaunchTracking=-5
     if autoTrackingStarted:
       autoTrackingStarted=0

@@ -39,7 +39,7 @@ if outputSpeechService!="default":
   python.subscribe(AzureTranslatorMouth.getName(),"publishEndSpeaking")
 else:
   # or we map AzureTranslator output to original mouth
-  AzureTranslatorMouth=mouth
+  AzureTranslatorMouth=i01_mouth
   outputSpeechService=Speechengine
 
 if apikey!="":AzureTranslator.setCredentials(apikey)
@@ -250,15 +250,15 @@ def translateText(text,language):
     try:
       RealLang=en_languages[language]
     except:
-      i01.chatBot.setPredicate("topic","default")
-      i01.chatBot.getResponse("AZURE_ERROR_2 "+language)
+      i01_chatBot.setPredicate("topic","default")
+      i01_chatBot.getResponse("AZURE_ERROR_2 "+language)
     print RealLang
     
     try:
       AzureTranslator.detectLanguage(text)
     except:
-      i01.chatBot.setPredicate("topic","default")
-      i01.chatBot.getResponse("AZURE_ERROR_1")
+      i01_chatBot.setPredicate("topic","default")
+      i01_chatBot.getResponse("AZURE_ERROR_1")
       RealLang="0"
     
     if RealLang!="0":
@@ -277,13 +277,13 @@ def translateText(text,language):
       
       
       if 'Cannot find an active Azure Market Place' in t_text:
-        i01.chatBot.setPredicate("topic","default")
-        i01.chatBot.getResponse("AZURE_ERROR_3")
+        i01_chatBot.setPredicate("topic","default")
+        i01_chatBot.getResponse("AZURE_ERROR_3")
       else:
         AzureTranslatorMouth.setVoice(unicode(ttsVoiceGender[RealLang],'utf-8'))  
         print t_text
         AzureTranslatorMouth.speakBlocking(unicode(t_text,'utf-8'))
         #restore original VoiceName
-        mouth.setVoice(VoiceName)        
+        i01_mouth.setVoice(VoiceName)        
   else:
     i01.speakBlocking(i01.localize("POLLYNEEDED"))

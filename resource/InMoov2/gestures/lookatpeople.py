@@ -38,5 +38,5 @@ def lookatpeople():
   sleep(1)
   lookinmiddle()
   sleep(3)
-  i01.mouth.speak("nice to meet you all")
-  #i01.mouth.speak(u"Приятно с вами познакомиться")
+  i01_mouth.speak("nice to meet you all")
+  #i01_mouth.speak(u"Приятно с вами познакомиться")

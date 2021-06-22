@@ -106,8 +106,7 @@
     	<oob><directions><from><star/></from><to><star index="2"/></to></directions></oob></template>
 </category>
 <category><pattern>LAUNCH CAMERA</pattern>
-<template>Launching the camera.  
-    <srai>CAMERA ON</srai></template>
+<template><srai>CAMERA ON</srai></template>
 </category>
 <category><pattern>LAUNCH *</pattern>
 <template>I didn't find <star/> among your installed apps.  Let's try to find it. 

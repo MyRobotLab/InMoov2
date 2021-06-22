@@ -9,8 +9,6 @@
 
 ## warning : yolo publisher is now inside java land to avoid threading issues because of python sleep
 
-# filter, maybe we don't want to inventory every objects, like the table : i01_vision_filteredLabel.add("table");
-# i01_vision_filteredLabel.add("sample");
 
 def startYoloInventory(duration):
   i01.speak(i01_chatBot.getPredicate("startupSentence"))
