@@ -14,11 +14,6 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     $scope.sliders = []
 
     $scope.controllerTypes = ['Arduino', 'AdaFruit', 'FIXME-morestuff']
-
-    $scope.state = {
-        configDir: "data/config/" + mrl.getShortName(msg.name) + "_config"
-    }
-
     $scope.mrl = mrl
     $scope.panel = mrl.getPanel('runtime')
 
@@ -75,19 +70,30 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
 
     $scope.startConfig = function() {
         console.info('startConfig')
-        msg.send('startConfig', $scope.selectedConfig)
+        if ($scope.selectedConfig.length){
+            for (let i = 0; i < $scope.selectedConfig.length; ++i){
+                msg.sendTo('runtime', 'setConfigName', $scope.selectedConfig[i])
+                msg.sendTo('runtime', 'load')
+            }
+        }        
     }
 
     $scope.releaseConfig = function() {
         console.info('releaseConfig')
-        msg.send('releaseConfig', $scope.selectedConfig)
+        if ($scope.selectedConfig && $scope.selectedConfig.length){
+            for (let i = 0; i < $scope.selectedConfig.length; ++i){
+                // msg.sendTo('runtime', 'setConfigName', $scope.selectedConfig[i])
+                msg.sendTo('runtime','releaseConfig', 'data/config/' + $scope.selectedConfig[i] + '/runtime.yml')
+            }
+        }
     }
 
     $scope.saveConfig = function() {
         console.info('saveConfig')
 
         let onOK = function() {
-            msg.send('export', $scope.state.configDir)
+            msg.sendTo('runtime', 'setConfigName', $scope.service.configName)
+            msg.sendTo('runtime', 'save')
         }
 
         let onCancel = function() {
@@ -136,6 +142,7 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     // GOOD TEMPLATE TO FOLLOW
     this.updateState = function(service) {
         $scope.service = service
+        $scope.service.configName = mrl.getService('runtime').configName
         $scope.languageSelected = service.locale.tag
         $scope.mouth = mrl.getService(service.name + '.mouth')
         $scope.$apply()
