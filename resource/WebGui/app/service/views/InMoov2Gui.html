@@ -158,7 +158,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_A_Chatbot.py','i01.chatBot,i01.chatBot.search')">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.chatBot')">Save Config</button>
                     </td>
                 </tr>
             </table>
@@ -244,7 +244,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_4_Ear.py','i01.ear')">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.ear')">Save Config</button>
                     </td>
                 </tr>
             </table>
@@ -370,7 +370,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_5_Mouth.py','i01.mouth')">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export','i01.mouth')">Save Config</button>
                     </td>
                 </tr>
             </table>
@@ -510,7 +510,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_6_Arduino.py','i01.right,i01.left,i01.controller3,i01.controller4')">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.right');mrl.sendTo('runtime', 'export', 'i01.left');mrl.sendTo('runtime', 'export', 'i01.controller3');mrl.sendTo('runtime', 'export', 'i01.controller4');">Save Config</button>
                     </td>
                 </tr>
                 <tr>
@@ -946,9 +946,6 @@
             <button class="btn btn-default" type="button" ng-click="msg.stop()">
                 <span>
                     <img src="../stop.png"/>&nbsp;&nbsp;&nbsp;&nbsp;stop 
-        
-                
-                
                 </span>
             </button>
             <button class="btn btn-default" ng-click="msg.disable()">disable</button>
