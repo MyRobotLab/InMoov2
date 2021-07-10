@@ -145,10 +145,6 @@
                     <td>
                         <label>chatBot</label>
                         {{service.language}}   
-        
-        
-                        
-                        
                         <div class="form-group">
                             <select class="form-control" ng-model="languageSelected" id="language-select" ng-change="msg.setLocale(languageSelected)">
                                 <option ng-repeat="(key, value) in service.locales" value="{{key}}">{{key}} - {{value.displayLanguage}}</option>
@@ -923,7 +919,7 @@
             <label>config</label>
             &nbsp;&nbsp;&nbsp;&nbsp;<img src="../peers.png" height="28" ng-click="filterPeers(null)"/>
             <div class="form-group">
-                <select multiple class="form-control vertical-menu" ng-model="selectedConfig" id="selectedConfig" title="configurations">
+                <select multiple class="form-control vertical-menu" ng-change="setConfigName()" ng-model="selectedConfig" id="selectedConfig" title="configurations">
                     <option ng-repeat="config in configList" ng-value="{{config}}">{{config}}</option>
                 </select>
             </div>

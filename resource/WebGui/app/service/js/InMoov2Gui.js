@@ -225,6 +225,15 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         }
     }
 
+    $scope.setConfigName = function(){
+        console.info('setConfigName')
+        if ($scope.selectedConfig.length > 0){
+            $scope.service.configName = $scope.selectedConfig[0]
+            msg.sendTo('runtime', 'setConfigName', $scope.service.configName)
+        }
+    }
+    
+
     // circular main menu buttons
     addButton('brain', 'circular')
     addButton('mouth', 'circular')
