@@ -1,5 +1,3 @@
-# -- coding: utf-8 --
-
 def story():
   i01.startedGesture()
   sleep(2)
