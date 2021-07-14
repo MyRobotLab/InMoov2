@@ -30,9 +30,9 @@ def MoveHeadStop():
   if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.vision.isTracking():
     if isHeadActivated:
       i01.setHeadSpeed(25,25,25)
-      i01.head.rest()
+      i01_head.rest()
       i01.setHeadSpeed(40,40,40)
-      i01.head.jaw.setSpeed(-1.0)
+      i01_head.jaw.setSpeed(500.0)
       
     
 MoveHeadTimer.addListener("pulse", python.name, "MoveHead")
