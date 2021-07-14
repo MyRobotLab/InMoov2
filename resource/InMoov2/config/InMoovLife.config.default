@@ -4,6 +4,7 @@
 [HEALTHCHECK]
 Activated=True
 TimerValue=60000
+BatteryInSystem=False
 
 ;ramdom move the head
 [MOVEHEADRANDOM]
