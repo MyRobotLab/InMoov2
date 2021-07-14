@@ -25,6 +25,16 @@ i01.setMute(False)
 # e.g. i01 = Runtime.create('i01', 'InMoov') # this will "create" the service and config could be manipulated before starting 
 # e.g. i01_left = Runtime.create('i01.left', 'Ssc32UsbServoController')
 ##############################################################
+RuningFolder="resource/InMoov2"
+# libraries import
+execfile(RuningFolder+'/system/Import_Libraries.py')
+# common functions
+execfile(RuningFolder+'/system/Import_Functions.py')
+
+RuningFolder=os.getcwd().replace("\\", "/")+"/"+RuningFolder+"/"
+# global vars import
+execfile(RuningFolder+'/system/Robot_Satus_GlobalsVars.py')
+##############################################################
 
 runtime = Runtime.getInstance()
 runtime.setAllLocales('en-US')
