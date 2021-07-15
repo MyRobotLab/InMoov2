@@ -4,7 +4,6 @@ Speechengine=MarySpeech
 
 ; you can use : 
 ;MarySpeech : open source TTS : http://myrobotlab.org/service/MarySpeech
-;MimicSpeech : Mycroft AI tts: http://myrobotlab.org/service/MimicSpeech
 ;LocalSpeech : Local operating system TTS : http://myrobotlab.org/service/LocalSpeech
 ;Polly : [NEED API KEY AccessKey (apiKey1) and SecretKey (apiKey2)] http://myrobotlab.org/service/Polly
 ;VoiceRss : [NEED API KEY (apiKey1)] Free cloud service : http://myrobotlab.org/service/VoiceRss
@@ -13,7 +12,6 @@ Speechengine=MarySpeech
 VoiceName=Mark
 
 ; MarySpeech voices -  http://myrobotlab.org/service/MarySpeech ( Mark, etc... ) print mouth.getVoices()
-; MimicSpeech : https://mycroft.ai/blog/available-voices/ ( Henry, etc... ) print mouth.getVoices()
 ; LocalSpeech : use local windows voices/macOs ( Ziza, etc... ) print mouth.getVoices()
 ; amazon polly :  http://docs.aws.amazon.com/polly/latest/dg/voicelist.html
 
