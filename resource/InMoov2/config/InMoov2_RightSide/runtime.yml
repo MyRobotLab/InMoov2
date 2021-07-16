@@ -1,0 +1,35 @@
+!!org.myrobotlab.service.config.RuntimeConfig
+attach:
+- i01
+- i01.rightArm.bicep
+- i01.rightArm.omoplate
+- i01.rightArm.rotate
+- i01.rightArm.shoulder
+- i01.rightHand.index
+- i01.rightHand.majeure
+- i01.rightHand.pinky
+- i01.rightHand.ringFinger
+- i01.rightHand.thumb
+- i01.rightHand.wrist
+- i01.simulator
+locale: en-US
+name: runtime
+registry:
+- runtime
+- i01
+- i01.rightHand
+- i01.rightHand.thumb
+- i01.rightHand.index
+- i01.rightHand.majeure
+- i01.rightHand.ringFinger
+- i01.rightHand.pinky
+- i01.rightHand.wrist
+- i01.rightArm
+- i01.rightArm.bicep
+- i01.rightArm.omoplate
+- i01.rightArm.rotate
+- i01.rightArm.shoulder
+- i01.simulator
+- i01.right
+- i01.right.serial
+type: Runtime

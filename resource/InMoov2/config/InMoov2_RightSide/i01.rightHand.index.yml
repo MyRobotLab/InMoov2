@@ -1,5 +1,6 @@
 !!org.myrobotlab.service.config.ServoConfig
 attach:
+- i01.right
 - i01.simulator
 autoDisable: true
 clip: true
