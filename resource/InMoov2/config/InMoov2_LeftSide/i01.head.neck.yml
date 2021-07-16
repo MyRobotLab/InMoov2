@@ -1,0 +1,21 @@
+!!org.myrobotlab.service.config.ServoConfig
+attach:
+- i01.left
+- i01.simulator
+autoDisable: true
+clip: true
+enabled: false
+idleTimeout: 3000
+inverted: false
+locale: null
+maxIn: 160.0
+maxOut: 160.0
+minIn: 20.0
+minOut: 20.0
+name: i01.head.neck
+pin: '12'
+rest: 90.0
+speed: 45.0
+sweepMax: null
+sweepMin: null
+type: Servo
