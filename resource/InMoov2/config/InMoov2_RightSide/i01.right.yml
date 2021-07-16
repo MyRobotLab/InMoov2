@@ -1,0 +1,8 @@
+!!org.myrobotlab.service.config.ArduinoConfig
+attach:
+- i01.right
+connect: false
+locale: null
+name: i01.right
+port: COM4
+type: Arduino
