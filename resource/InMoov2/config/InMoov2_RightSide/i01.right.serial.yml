@@ -1,0 +1,6 @@
+!!org.myrobotlab.service.config.SerialConfig
+attach: null
+locale: null
+name: i01.right.serial
+port: COM4
+type: Serial

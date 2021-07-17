@@ -1,0 +1,9 @@
+!!org.myrobotlab.service.config.ProgramABConfig
+attach:
+- i01
+- i01.htmlFilter
+currentBotName: en-US
+currentUserName: Friend
+locale: null
+name: i01.chatBot
+type: ProgramAB
