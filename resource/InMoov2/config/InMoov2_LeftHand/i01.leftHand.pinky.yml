@@ -1,0 +1,20 @@
+!!org.myrobotlab.service.config.ServoConfig
+attach:
+- i01.left
+autoDisable: true
+clip: true
+enabled: false
+idleTimeout: 3000
+inverted: false
+locale: null
+maxIn: 180.0
+maxOut: 180.0
+minIn: 0.0
+minOut: 0.0
+name: i01.leftHand.pinky
+pin: '6'
+rest: 2.0
+speed: 45.0
+sweepMax: null
+sweepMin: null
+type: Servo
