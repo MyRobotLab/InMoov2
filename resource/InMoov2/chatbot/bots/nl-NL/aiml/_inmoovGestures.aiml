@@ -284,6 +284,27 @@
       <template>Mijn hand sluiten.
         <oob><mrl><service>python</service><method>exec</method><param>handclose()</param></mrl></oob></template>
     </category>
+  
+  
+    <category>
+      <pattern>SLUIT JE VINGER</pattern>
+      <template>Mijn vinger sluiten.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerclose()</param></mrl></oob></template>
+    </category>
+  
+  
+    <category>
+      <pattern>OPEN JE VINGER</pattern>
+      <template>Oké, ik open mijn vinger.
+        <oob><mrl><service>python</service><method>exec</method><param>fingeropen()</param></mrl></oob></template>
+    </category>
+  
+  
+    <category>
+      <pattern>VINGER NAAR HET MIDDEN</pattern>
+      <template>Nu heb je mijn aandacht.
+        <oob><mrl><service>python</service><method>exec</method><param>fingermiddle()</param></mrl></oob></template>
+    </category>
 
 
     <category>
