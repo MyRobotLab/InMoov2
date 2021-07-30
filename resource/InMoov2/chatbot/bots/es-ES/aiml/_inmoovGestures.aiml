@@ -113,18 +113,35 @@
         <oob><mrl><service>python</service><method>exec</method><param>handclose()</param></mrl></oob></template>
     </category>
     
-        <category>
+    <category>
       <pattern>CLOSE HANDS</pattern>
       <template>Closing my hands.
         <oob><mrl><service>python</service><method>exec</method><param>handsclose()</param></mrl></oob></template>
     </category>
 
-        <category>
+    <category>
       <pattern>OPEN HANDS</pattern>
       <template>Opening my hands.
         <oob><mrl><service>python</service><method>exec</method><param>handsopen()</param></mrl></oob></template>
     </category>
-
+    
+    <category>
+      <pattern>CLOSE YOUR FINGER</pattern>
+      <template>Closing my finger.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerclose()</param></mrl></oob></template>
+    </category>
+  
+    <category>
+      <pattern>OPEN YOUR FINGER</pattern>
+      <template>Ok, I open my finger.
+        <oob><mrl><service>python</service><method>exec</method><param>fingeropen()</param></mrl></oob></template>
+    </category>
+  
+    <category>
+      <pattern>FINGER TO THE MIDDLE</pattern>
+      <template>Now you have my attention.
+        <oob><mrl><service>python</service><method>exec</method><param>fingermiddle()</param></mrl></oob></template>
+    </category>
 
     <category>
       <pattern>CAMERA ON</pattern>
