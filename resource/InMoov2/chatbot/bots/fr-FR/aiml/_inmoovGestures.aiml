@@ -106,6 +106,18 @@
 <template>Mains fermées.
         <oob><mrl><service>python</service><method>exec</method><param>handsclose()</param></mrl></oob></template>
 </category>
+<category><pattern>OUVRE TON DOIGT</pattern>
+<template>J'ouvre mon doigt.
+        <oob><mrl><service>python</service><method>exec</method><param>fingeropen()</param></mrl></oob></template>
+</category>
+<category><pattern>FERME TON DOIGT</pattern>
+<template>Ok, je ferme mon doigt.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerclose()</param></mrl></oob></template>
+</category>
+<category><pattern>DOIGT AU MILIEU</pattern>
+<template>Maintenant tu as mon attention.
+        <oob><mrl><service>python</service><method>exec</method><param>fingermiddle()</param></mrl></oob></template>
+</category>	
 <category><pattern>DÉMARRE LA CAMERA</pattern>
 <template>Je démarre ma caméra.
         <oob><mrl><service>i01</service><method>cameraOn</method></mrl></oob></template>

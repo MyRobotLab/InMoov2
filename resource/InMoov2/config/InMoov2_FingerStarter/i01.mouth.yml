@@ -1,0 +1,9 @@
+!!org.myrobotlab.service.config.AbstractSpeechSynthesisConfig
+attach: null
+blocking: false
+locale: null
+mute: false
+name: i01.mouth
+substitutions: null
+type: MarySpeech
+voice: Mark

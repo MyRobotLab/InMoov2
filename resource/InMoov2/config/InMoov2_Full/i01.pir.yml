@@ -1,0 +1,6 @@
+!!org.myrobotlab.service.config.ServiceConfig
+attach: null
+locale: null
+name: i01.pir
+type: Pir
+#pin: '23'

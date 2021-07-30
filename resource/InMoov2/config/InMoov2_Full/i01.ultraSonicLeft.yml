@@ -1,0 +1,7 @@
+!!org.myrobotlab.service.config.ServiceConfig
+attach: null 
+locale: null
+name: i01.ultraSonicLeft
+type: UltrasonicSensor
+#trigPin: '64'
+#echoPin: '63'
