@@ -85,6 +85,18 @@
 <template>Meine Hand schließen
         <oob><mrl><service>python</service><method>exec</method><param>handclose()</param></mrl></oob></template>
 </category>
+<category><pattern>SCHLIESSEN SIE IHREN FINGER</pattern>
+<template>Schließe meinen Finger.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerclose()</param></mrl></oob></template>
+</category>
+<category><pattern>ÖFFNEN SIE IHREN FINGER</pattern>
+<template>Ok, ich öffne meinen Finger.
+        <oob><mrl><service>python</service><method>exec</method><param>fingeropen()</param></mrl></oob></template>
+</category>
+<category><pattern>FINGER IN DIE MITTE</pattern>
+<template>Jetzt hast du meine Aufmerksamkeit.
+        <oob><mrl><service>python</service><method>exec</method><param>fingermiddle()</param></mrl></oob></template>
+</category>
 <category><pattern>KAMERA AN</pattern>
 <template>Ich schalte meine Kamera ein.
         <oob><mrl><service>i01</service><method>cameraOn</method></mrl></oob></template>
