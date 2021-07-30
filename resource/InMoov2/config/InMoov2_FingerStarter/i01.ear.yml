@@ -1,0 +1,6 @@
+!!org.myrobotlab.service.config.ServiceConfig
+attach:
+- i01.mouth
+locale: null
+name: i01.ear
+type: WebkitSpeechRecognition
