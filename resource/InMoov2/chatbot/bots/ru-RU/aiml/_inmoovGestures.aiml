@@ -324,6 +324,18 @@
 <template>Раскрыл кисти.
         <oob><mrl><service>python</service><method>exec</method><param>handsopen()</param></mrl></oob></template>
 </category>
+<category><pattern>ЗАКРЫТЬ ПАЛЬЦ</pattern>
+<template>Закрываю палец.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerclose()</param></mrl></oob></template>
+</category>
+<category><pattern>ОТКРОЙ СВОЙ ПАЛЬЦ</pattern>
+<template>Хорошо, я открываю палец.
+        <oob><mrl><service>python</service><method>exec</method><param>fingeropen()</param></mrl></oob></template>
+</category>
+<category><pattern>ПАЛЬЦ В СРЕДНЕМ</pattern>
+<template>Теперь ты привлек мое внимание.
+        <oob><mrl><service>python</service><method>exec</method><param>fingermiddle()</param></mrl></oob></template>
+</category>	
 <category><pattern>ВКЛЮЧИТЬ КАМЕРУ</pattern>
 <template>Я включаю камеру.
         <oob><mrl><service>i01</service><method>cameraOn</method></mrl></oob></template>
