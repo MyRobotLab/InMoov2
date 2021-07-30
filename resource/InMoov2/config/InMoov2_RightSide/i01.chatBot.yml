@@ -2,6 +2,8 @@
 attach:
 - i01
 - i01.htmlFilter
+- i01.mouth
+- i01.ear
 currentBotName: en-US
 currentUserName: Friend
 locale: null
