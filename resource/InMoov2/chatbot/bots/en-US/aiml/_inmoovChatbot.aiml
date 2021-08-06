@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!-- File: _inmoovChatbot.aiml -->
+<!-- Author: Greg Perry -->
+<!-- Last modified: August 05, 2021 -->
+<!--  -->
+<!-- This AIML file is part of the EN-US 0.1 chat bot knowledge base. -->
+<!--  -->
+<!-- The EN-US brain is Copyright &copy; 2021 by InMoov Foundation. -->
+<!--  -->
+<!-- The EN-US brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information see http://www.inmoov.fr -->
 <!--  -->
 <category><pattern>FIRST_INIT</pattern>
 <template><think>
@@ -9,7 +23,7 @@
       <think>
         <set name="topic">firstinit</set>
       </think>
-		Hello, This is my first initialisation. I need some informations, I am listening, what is my name ?</template>
+        Hello, This is my first initialisation. I need some informations, I am listening, what is my name ?</template>
 </category>
 <topic name="FIRSTINIT">
 <category><pattern>#</pattern><that># WHAT IS MY NAME #</that>
@@ -34,15 +48,15 @@
 <topic name="FIRSTINIT">
 <category><pattern># YES #</pattern><that># IF MY NAME IS #</that>
 <template><random>
-			<li>
-			I like this name , <get name="tmpname"/>.
-			</li>
-			<li>
-			Very nice name, <get name="tmpname"/> is great.
-			</li>
+            <li>
+            I like this name , <get name="tmpname"/>.
+            </li>
+            <li>
+            Very nice name, <get name="tmpname"/> is great.
+            </li>
         </random>
-	I need to know you, I am listening, may I have your name ?
-	<think><set name="botname"><get name="tmpname"/></set></think></template>
+    I need to know you, I am listening, may I have your name ?
+    <think><set name="botname"><get name="tmpname"/></set></think></template>
 </category></topic>
 
 <topic name="FIRSTINIT">
@@ -51,7 +65,7 @@
         <li>I am glad to know you, <get name="tmpname"/>.</li>
         <li>Nice to meet you, <get name="tmpname"/>.</li>
         </random>
-		
+        
         <think>
           <set name="name">
             <get name="tmpname"/>
@@ -72,24 +86,24 @@
 <topic name="FIRSTINIT">
 <category><pattern># NO #</pattern><that># IF MY NAME IS #</that>
 <template>We restart.
-	I am listening. what is my name ?</template>
+    I am listening. what is my name ?</template>
 </category></topic>
 
 <topic name="FIRSTINIT">
 <category><pattern># NO #</pattern><that># IF YOUR NAME #</that>
 <template>We restart.
-	I am listening. may I have your name ?</template>
+    I am listening. may I have your name ?</template>
 </category></topic>
 
 <topic name="FIRSTINIT">
 <category><pattern>#</pattern><that># SAY YES OR NO #</that>
 <template><random>
           <li>
-	Please, answer my question, it is important
-	</li>
+    Please, answer my question, it is important
+    </li>
           <li>
-	I repeat.
-	</li>
+    I repeat.
+    </li>
         </random>
         <get name="questionfirstinit"/></template>
 </category></topic>
@@ -136,7 +150,7 @@
 <template>The topic is
       <get name="topic"/></template>
 </category>
-<category><pattern>BOOT UP MODE</pattern>
+<!--<category><pattern>BOOT UP MODE</pattern>
 <template>Entering into the boot up topic.
       <think><set name="topic">BOOTUP</set></think></template>
 </category>
@@ -152,7 +166,7 @@
 </category>
 <category><pattern>* GESTURES *</pattern>
 <template><srai>GESTURES</srai></template>
-</category>
+</category>-->
 <category><pattern>DETACH ALL</pattern>
 <template>Detach All
       <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
