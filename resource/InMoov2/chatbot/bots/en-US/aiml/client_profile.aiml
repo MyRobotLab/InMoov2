@@ -798,7 +798,7 @@ I call you <get name="name"/>.</template>
       </think></template>
 </category>
 <category><pattern>CHANGE YOUR NAME</pattern>
-<template>What would you like to change my name to?</template>
+<template><srai>NEW_INIT</srai></template>
 </category>
 <category><pattern>WHEN IS MY BIRTHDAY</pattern>
 <template>You said it was <get name="birthday"/>?</template>

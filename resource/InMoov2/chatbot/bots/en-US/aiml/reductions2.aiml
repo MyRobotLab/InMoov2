@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!-- File: reductions2.aiml -->
+<!-- Author: Greg Perry -->
+<!-- Last modified: August 06, 2021 -->
+<!--  -->
+<!-- This AIML file is part of the EN-US 0.1 chat bot knowledge base. -->
+<!--  -->
+<!-- The EN-US brain is Copyright &copy; 2021 by InMoov Foundation. -->
+<!--  -->
+<!-- The EN-US brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information see http://www.inmoov.fr -->
 <!--  -->
 <category><pattern>HAVE YOU BEEN A GOOD * LATELY</pattern>
 <template><srai>WHAT IS YOUR FAVORITE <star index="2"/></srai></template>
@@ -1090,8 +1104,8 @@
 <category><pattern>WHAT IS YOU ARE NAME</pattern>
 <template><srai>what is your name</srai></template>
 </category>
-<category><pattern>CAN I CHANGE YOUR NAME TO *</pattern>
-<template><srai>CHANGE YOUR NAME TO <star/></srai></template>
+<category><pattern>CAN I CHANGE YOUR NAME</pattern>
+<template><srai>NEW_INIT</srai></template>
 </category>
 <category><pattern>I AM DOING GREAT *</pattern>
 <template><srai>I AM DOING GREAT</srai>
