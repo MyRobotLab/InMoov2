@@ -77,7 +77,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname","<star/>"), i01_chatBot.setPredicate(u"firstname","<star/>"), i01_chatBot.setPredicate(u"name","<star/>"), i01_chatBot.setPredicate(u"default","lastUsername","<star/>")</param>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"firstname","<get name="tmpname"/>"), i01_chatBot.setPredicate(u"name","<get name="tmpname"/>"), i01_chatBot.setPredicate(u"default","lastUsername","<get name="tmpname"/>")</param>
           </mrl>
         </oob>
         <srai>WAKE_UP</srai></template>
