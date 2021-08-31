@@ -14,7 +14,7 @@ def MoveHead(timedata):
       #wait servo last move
       if not head.rothead.isMoving():head.rothead.moveTo(random.uniform(65,115))
       if not head.neck.isMoving():head.neck.moveTo(random.uniform(70,110))
-      if not head.rollNeck.isMoving():head.rollNeck.moveTo(random.uniform(70,110))
+      #if not head.rollNeck.isMoving():head.rollNeck.moveTo(random.uniform(70,110))
     else:
       MoveHeadTimer.stopClock()
   
