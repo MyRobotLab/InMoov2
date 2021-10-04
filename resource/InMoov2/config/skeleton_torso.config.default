@@ -1,0 +1,61 @@
+;----------------------------- TORSO CONFIGURATION ----------------------------------------
+[MAIN]
+isTorsoActivated=False
+TorsoConnectedToArduino=left
+;chose left or right existing and connected arduino
+
+[SERVO_MINIMUM_MAP_OUTPUT]
+;your servo minimal limits
+topStom=60
+midStom=60
+lowStom=0
+
+[SERVO_MAXIMUM_MAP_OUTPUT]
+;your servo maximal limits
+topStom=120
+midStom=120
+lowStom=180
+
+[SERVO_REST_POSITION]
+topStom=90
+midStom=90
+lowStom=90
+
+
+
+
+;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
+
+[SERVO_INVERTED]
+topStom=False
+midStom=False
+lowStom=False
+
+[MAX_SPEED]
+topStom=100
+midStom=100
+lowStom=100
+
+[MINIMUM_MAP_INPUT]
+topStom=60
+midStom=60
+lowStom=0
+
+[MAXIMUM_MAP_INPUT]
+topStom=120
+midStom=120
+lowStom=180
+
+[SERVO_PIN]
+topStom=27
+midStom=28
+lowStom=29
+
+[SERVO_AUTO_DISABLE]
+topStom=True
+midStom=True
+lowStom=True
+
+;----------------------------------- END --------------------------------------------------
+
+

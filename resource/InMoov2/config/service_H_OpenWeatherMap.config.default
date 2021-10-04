@@ -1,0 +1,10 @@
+;----------------------------- OPENWEATHERMAP CONFIGURATION ----------------------------------------
+[MAIN]
+setUnits=metric
+;or imperial
+apikey=
+town=paris,FR
+;Get your KEY : https://home.openweathermap.org
+;----------------------------------- END --------------------------------------------------
+
+

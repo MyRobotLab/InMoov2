@@ -1,0 +1,19 @@
+;----------------------------- OPENCV CONFIGURATION ----------------------------------------
+[MAIN]
+isOpenCvActivated=False
+;Activate OpenCv service...
+faceRecognizerActivated=True
+;Activate faceRecognizer filter if tracking activated ...
+
+CameraIndex=0
+DisplayRender=OpenCV
+;Available DisplayRender :
+;Sarxos
+;VideoInput
+;OpenCV
+
+streamerEnabled=False
+
+;----------------------------------- END --------------------------------------------------
+
+
