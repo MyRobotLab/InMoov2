@@ -2,5 +2,5 @@
 currentBotName: Alice
 currentUserName: Friend
 textListeners:
-- i01.mouth
+- i01.htmlFilter
 type: ProgramAB

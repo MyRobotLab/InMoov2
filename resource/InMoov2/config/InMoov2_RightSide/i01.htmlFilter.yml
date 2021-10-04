@@ -1,2 +1,7 @@
-!!org.myrobotlab.service.config.ServiceConfig
+!!org.myrobotlab.service.config.HtmlFilterConfig
 type: HtmlFilter
+stripHtml: true
+textListeners: 
+  - i01.mouth
+textPublishers:
+  - i01.chatBot
