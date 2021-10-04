@@ -1,8 +1,4 @@
 !!org.myrobotlab.service.config.ArduinoConfig
-attach:
-- i01.controller3
 connect: true
-locale: null
-name: i01.controller3
 port: COM5
 type: Arduino

@@ -1,14 +1,10 @@
 !!org.myrobotlab.service.config.RuntimeConfig
-attach:
-- i01
-- i01.rightHand.index
-locale: en-US
-name: runtime
+locale: null
 registry:
 - runtime
+- i01
 - i01.mouth
 - i01.mouth.audioFile
-- i01
 - i01.right
 - i01.right.serial
 - i01.ear
@@ -16,4 +12,7 @@ registry:
 - i01.chatBot
 - i01.chatBot.search
 - i01.htmlFilter
+- vi01.right
+- vi01.right.uart
 type: Runtime
+# virtual: true

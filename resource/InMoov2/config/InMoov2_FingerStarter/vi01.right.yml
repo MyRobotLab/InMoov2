@@ -1,2 +1,2 @@
 !!org.myrobotlab.service.config.ServiceConfig
-type: GoogleSearch
+type: VirtualArduino

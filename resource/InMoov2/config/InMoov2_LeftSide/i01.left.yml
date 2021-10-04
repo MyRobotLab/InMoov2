@@ -1,25 +1,4 @@
 !!org.myrobotlab.service.config.ArduinoConfig
-attach:
-- i01.leftHand.wrist
-- i01.leftArm.shoulder
-- i01.head.rothead
-- i01.leftHand.majeure
-- i01.head.neck
-- i01.leftHand.index
-- i01.leftHand.thumb
-- i01.leftArm.bicep
-- i01.leftHand.ringFinger
-- i01.head.jaw
-- i01.head.eyeY
-- i01.torso.midStom
-- i01.leftArm.omoplate
-- i01.head.eyeX
-- i01.leftArm.rotate
-- i01.left
-- i01.leftHand.pinky
-- i01.torso.topStom
 connect: true
-locale: null
-name: i01.left
 port: COM3
 type: Arduino

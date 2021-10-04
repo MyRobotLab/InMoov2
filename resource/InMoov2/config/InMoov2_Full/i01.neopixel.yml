@@ -1,6 +1,2 @@
 !!org.myrobotlab.service.config.ServiceConfig
-attach:
-- i01.controller3
-locale: null
-name: i01.neopixel
 type: NeoPixel

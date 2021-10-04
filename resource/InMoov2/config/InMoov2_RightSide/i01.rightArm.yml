@@ -1,5 +1,2 @@
 !!org.myrobotlab.service.config.ServiceConfig
-attach: null
-locale: null
-name: i01.rightArm
 type: InMoov2Arm

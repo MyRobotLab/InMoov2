@@ -1,23 +1,4 @@
 !!org.myrobotlab.service.config.ArduinoConfig
-attach:
-- i01.rightHand.majeure
-- i01.rightHand.ringFinger
-- i01.rightHand.wrist
-- i01.rightArm.bicep
-- i01.right
-- i01.head.rollNeck
-- i01.rightArm.shoulder
-- i01.rightHand.index
-- i01.head.eyelidRight
-- i01.rightHand.thumb
-- i01.head.eyelidLeft
-- i01.rightArm.rotate
-- i01.rightArm.omoplate
-- i01.rightHand.pinky
-- i01.pir
-- i01.ultraSonicRight
 connect: true
-locale: null
-name: i01.right
-port: COM4
+port: COM7
 type: Arduino

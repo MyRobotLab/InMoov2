@@ -1,11 +1,6 @@
 !!org.myrobotlab.service.config.ProgramABConfig
-attach:
-- i01
-- i01.htmlFilter
-- i01.mouth
-- i01.ear
-currentBotName: en-US
+currentBotName: Alice
 currentUserName: Friend
-locale: null
-name: i01.chatBot
+textListeners:
+- i01.mouth
 type: ProgramAB

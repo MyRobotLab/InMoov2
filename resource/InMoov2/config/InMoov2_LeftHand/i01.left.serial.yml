@@ -1,6 +1,3 @@
 !!org.myrobotlab.service.config.SerialConfig
-attach: null
-locale: null
-name: i01.left.serial
 port: null
 type: Serial
