@@ -1,5 +1,5 @@
 !!org.myrobotlab.service.config.ProgramABConfig
-currentBotName: Alice
+currentBotName: en-US
 currentUserName: Friend
 textListeners:
 - i01.htmlFilter
