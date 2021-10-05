@@ -5,21 +5,20 @@ resourceDir = 'InMoov2'
 groupIdPath = groupId.replaceAll('\\.', '/')
 
 pipeline {
-
    // use linux for ssh or switch from ssh-agent to plain ssh
    agent  { label 'linux' }
 
-    environment {
-        VERSION = "${version}"
-        GROUP_ID = "${groupId}"
-        GROUP_ID_PATH = "${groupIdPath}"
-        ARTIFACT_ID = "${artifactId}"
-        RESOURCE_DIR = "${resourceDir}"
-    }
+   environment {
+      VERSION = "${version}"
+      GROUP_ID = "${groupId}"
+      GROUP_ID_PATH = "${groupIdPath}"
+      ARTIFACT_ID = "${artifactId}"
+      RESOURCE_DIR = "${resourceDir}"
+   }
 
    options {
       // This is required if you want to clean before build
-     skipDefaultCheckout(true)
+      skipDefaultCheckout(true)
    }
 
    tools {
@@ -36,7 +35,7 @@ pipeline {
                if (isUnix()) {
                   echo sh(script: 'env|sort', returnStdout: true)
                } else {
-                  bat("set")
+                  bat('set')
                }
             }
          }
@@ -95,31 +94,35 @@ pipeline {
          steps {
             archiveArtifacts 'target/inmoov-'+ version +'.zip'
          }
-      }
-*/      
-
+     }
+*/
    } // stages
 
    post {
-    success {
-         echo "====== installing into repo ======"
-         
-         sshagent(credentials : ['myrobotlab2.pem']) {
-               sh 'scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ./target/${ARTIFACT_ID}-0.0.1-SNAPSHOT.zip ubuntu@repo.myrobotlab.org:/home/ubuntu'
-               sh '''
+      success {
+         script {
+            if (env.BRANCH_NAME == 'master') {
+               echo '====== installing into repo ======'
+
+               sshagent(credentials : ['myrobotlab2.pem']) {
+                  sh 'scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ./target/${ARTIFACT_ID}-0.0.1-SNAPSHOT.zip ubuntu@repo.myrobotlab.org:/home/ubuntu'
+                  sh '''
                   ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@repo.myrobotlab.org sudo mvn install:install-file  -Dfile=${ARTIFACT_ID}-0.0.1-SNAPSHOT.zip \
                         -DgroupId=${GROUP_ID} \
                         -DartifactId=${ARTIFACT_ID} \
                         -Dversion=${VERSION} \
                         -Dpackaging=zip \
                         -DlocalRepositoryPath=/repo/artifactory/myrobotlab/
-                  
+
                   ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@repo.myrobotlab.org sudo mv \
                   /repo/artifactory/myrobotlab/${GROUP_ID_PATH}/${ARTIFACT_ID}/maven-metadata-local.xml \
                          /repo/artifactory/myrobotlab/${GROUP_ID_PATH}/${ARTIFACT_ID}/maven-metadata.xml
 
                '''
-
+               } else {
+                  echo '====== non master build - not installing ======'
+               }
+            }
          } // sshagent
     } // success
   } // post
