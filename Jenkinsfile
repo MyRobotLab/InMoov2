@@ -119,9 +119,9 @@ pipeline {
                          /repo/artifactory/myrobotlab/${GROUP_ID_PATH}/${ARTIFACT_ID}/maven-metadata.xml
 
                '''
-               } else {
-                  echo '====== non master build - not installing ======'
                }
+            } else {
+               echo '====== non master build - not installing ======'
             }
          } // sshagent
     } // success
