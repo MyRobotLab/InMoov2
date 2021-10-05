@@ -103,9 +103,9 @@ pipeline {
    post {
     success {
 
-         when {
-                 expression { env.BRANCH_NAME == 'master' }
-         }
+       script {
+         if (env.BRANCH_NAME == 'master') {
+
          echo "====== installing into repo ======"
          
          sshagent(credentials : ['myrobotlab2.pem']) {
@@ -123,7 +123,8 @@ pipeline {
                          /repo/artifactory/myrobotlab/${GROUP_ID_PATH}/${ARTIFACT_ID}/maven-metadata.xml
 
                '''
-
+               }
+           }
          } // sshagent
     } // success
   } // post
