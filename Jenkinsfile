@@ -102,6 +102,10 @@ pipeline {
 
    post {
     success {
+
+         when {
+                 expression { env.BRANCH_NAME == 'master' }
+         }
          echo "====== installing into repo ======"
          
          sshagent(credentials : ['myrobotlab2.pem']) {
