@@ -1,6 +1,7 @@
-!!org.myrobotlab.service.config.ServiceConfig
-attach:
-- i01.mouth
-locale: null
-name: i01.htmlFilter
+!!org.myrobotlab.service.config.HtmlFilterConfig
 type: HtmlFilter
+stripHtml: true
+textListeners: 
+  - i01.mouth
+textPublishers:
+  - i01.chatBot

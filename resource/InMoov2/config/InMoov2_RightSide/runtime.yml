@@ -1,19 +1,4 @@
 !!org.myrobotlab.service.config.RuntimeConfig
-attach:
-- i01
-- i01.rightArm.bicep
-- i01.rightArm.omoplate
-- i01.rightArm.rotate
-- i01.rightArm.shoulder
-- i01.rightHand.index
-- i01.rightHand.majeure
-- i01.rightHand.pinky
-- i01.rightHand.ringFinger
-- i01.rightHand.thumb
-- i01.rightHand.wrist
-- i01.simulator
-locale: en-US
-name: runtime
 registry:
 - runtime
 - i01
@@ -39,3 +24,4 @@ registry:
 - i01.chatBot.search
 - i01.htmlFilter
 type: Runtime
+# virtual: true

@@ -1,30 +1,4 @@
 !!org.myrobotlab.service.config.RuntimeConfig
-attach:
-- i01
-- i01.head.eyeX
-- i01.head.eyeY
-- i01.head.eyelidLeft
-- i01.head.eyelidRight
-- i01.head.jaw
-- i01.head.neck
-- i01.head.rollNeck
-- i01.head.rothead
-- i01.leftArm.bicep
-- i01.leftArm.omoplate
-- i01.leftArm.rotate
-- i01.leftArm.shoulder
-- i01.leftHand.index
-- i01.leftHand.majeure
-- i01.leftHand.pinky
-- i01.leftHand.ringFinger
-- i01.leftHand.thumb
-- i01.leftHand.wrist
-- i01.simulator
-- i01.torso.lowStom
-- i01.torso.midStom
-- i01.torso.topStom
-locale: en-US
-name: runtime
 registry:
 - runtime
 - i01
@@ -61,3 +35,4 @@ registry:
 - i01.chatBot.search
 - i01.htmlFilter
 type: Runtime
+#virtual: true

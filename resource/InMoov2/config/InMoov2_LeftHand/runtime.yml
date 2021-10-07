@@ -1,14 +1,4 @@
 !!org.myrobotlab.service.config.RuntimeConfig
-attach:
-- i01
-- i01.leftHand.index
-- i01.leftHand.majeure
-- i01.leftHand.pinky
-- i01.leftHand.ringFinger
-- i01.leftHand.thumb
-- i01.leftHand.wrist
-locale: en-US
-name: runtime
 registry:
 - runtime
 - i01
@@ -22,3 +12,4 @@ registry:
 - i01.leftHand.pinky
 - i01.leftHand.wrist
 type: Runtime
+#virtual: true

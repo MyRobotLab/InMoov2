@@ -1,5 +1,2 @@
 !!org.myrobotlab.service.config.ServiceConfig
-attach: null
-locale: en-US
-name: python
 type: Python

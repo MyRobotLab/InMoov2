@@ -1,17 +1,14 @@
 !!org.myrobotlab.service.config.ServoConfig
-attach:
-- i01.right
 autoDisable: true
 clip: true
+controller: i01.right
 enabled: false
 idleTimeout: 3000
 inverted: false
-locale: null
 maxIn: 180.0
 maxOut: 180.0
 minIn: 0.0
 minOut: 0.0
-name: i01.rightHand.index
 pin: '3'
 rest: 0.0
 speed: 46.0
