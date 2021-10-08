@@ -1,14 +1,5 @@
 !!org.myrobotlab.service.config.ArduinoConfig
-attach:
-- i01.leftHand.wrist
-- i01.leftHand.ringFinger
-- i01.left
-- i01.leftHand.pinky
-- i01.leftHand.majeure
-- i01.leftHand.index
-- i01.leftHand.thumb
 connect: true
-locale: null
-name: i01.left
+# for Linux you'd put something like /dev/ttyACM0 for port here
 port: COM3
 type: Arduino

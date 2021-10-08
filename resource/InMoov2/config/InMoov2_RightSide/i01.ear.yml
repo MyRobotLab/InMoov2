@@ -1,6 +1,6 @@
-!!org.myrobotlab.service.config.ServiceConfig
-attach:
-- i01.mouth
-locale: null
-name: i01.ear
+!!org.myrobotlab.service.config.WebkitSpeechRecognitionConfig
+listening: true
+textListeners:
+- i01.chatBot
 type: WebkitSpeechRecognition
+wakeWord: null

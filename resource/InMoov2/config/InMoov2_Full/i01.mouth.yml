@@ -1,11 +1,8 @@
 !!org.myrobotlab.service.config.AbstractSpeechSynthesisConfig
-attach:
-- i01.ear
-- i01.mouthControl
 blocking: false
-locale: null
 mute: false
-name: i01.mouth
+speechRecognizers:
+- i01.ear
 substitutions: null
 type: MarySpeech
 voice: Mark

@@ -1,9 +1,5 @@
 !!org.myrobotlab.service.config.ArduinoConfig
-attach:
-- i01.right
-- i01.rightHand.index
 connect: true
-locale: null
-name: i01.right
+# for Linux you'd put something like /dev/ttyACM0 for port here
 port: COM7
 type: Arduino

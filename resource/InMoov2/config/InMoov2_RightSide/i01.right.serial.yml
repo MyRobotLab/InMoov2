@@ -1,6 +1,4 @@
 !!org.myrobotlab.service.config.SerialConfig
-attach: null
-locale: null
-name: i01.right.serial
-port: COM4
+# for Linux you'd put something like /dev/ttyACM0 for port here
+port: COM7
 type: Serial

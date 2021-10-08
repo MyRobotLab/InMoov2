@@ -1,6 +1,12 @@
-!!org.myrobotlab.service.config.ServiceConfig
-attach:
-- i01.controller3
-locale: null
-name: i01.neopixel
+!!org.myrobotlab.service.config.NeoPixelConfig
+blue: 0
+brightness: 255
+controller: i01.controller3
+currentAnimation: null
+green: 120
+pin: 2
+pixelCount: 16
+pixelDepth: 3
+red: 0
+speed: 10
 type: NeoPixel

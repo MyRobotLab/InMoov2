@@ -1,18 +1,14 @@
 !!org.myrobotlab.service.config.ServoConfig
-attach:
-- i01.right
-- i01.simulator
 autoDisable: true
 clip: true
+controller: i01.right
 enabled: false
 idleTimeout: 3000
 inverted: false
-locale: null
 maxIn: 80.0
 maxOut: 80.0
 minIn: 10.0
 minOut: 10.0
-name: i01.rightArm.omoplate
 pin: '11'
 rest: 10.0
 speed: 20.0

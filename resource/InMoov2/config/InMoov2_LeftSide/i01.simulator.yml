@@ -1,7 +1,5 @@
 !!org.myrobotlab.service.config.JMonkeyEngineConfig
-attach: null
 cameraLookAt: i01.torso.lowStom
-locale: null
 modelPaths:
 - resource\InMoov2\JMonkeyEngine
 multiMapped:
@@ -45,7 +43,6 @@ multiMapped:
   - i01.rightHand.thumb1
   - i01.rightHand.thumb2
   - i01.rightHand.thumb3
-name: i01.simulator
 nodes:
   camera:
     mapper: null

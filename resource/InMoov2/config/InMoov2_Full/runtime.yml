@@ -1,45 +1,4 @@
 !!org.myrobotlab.service.config.RuntimeConfig
-attach:
-- i01
-- i01.head.eyeX
-- i01.head.eyeY
-- i01.head.eyelidLeft
-- i01.head.eyelidRight
-- i01.head.jaw
-- i01.head.neck
-- i01.head.rollNeck
-- i01.head.rothead
-- i01.leftArm.bicep
-- i01.leftArm.omoplate
-- i01.leftArm.rotate
-- i01.leftArm.shoulder
-- i01.leftHand.index
-- i01.leftHand.majeure
-- i01.leftHand.pinky
-- i01.leftHand.ringFinger
-- i01.leftHand.thumb
-- i01.leftHand.wrist
-- i01.rightArm.bicep
-- i01.rightArm.omoplate
-- i01.rightArm.rotate
-- i01.rightArm.shoulder
-- i01.rightHand.index
-- i01.rightHand.majeure
-- i01.rightHand.pinky
-- i01.rightHand.ringFinger
-- i01.rightHand.thumb
-- i01.rightHand.wrist
-- i01.simulator
-- i01.torso.lowStom
-- i01.torso.midStom
-- i01.torso.topStom
-- i01.pir
-- i01.ultraSonicRight
-- i01.ultraSonicLeft
-#- i01.openCV
-#- i01.neopixel
-locale: en-US
-name: runtime
 registry:
 - runtime
 - i01
@@ -97,6 +56,7 @@ registry:
 - i01.pir
 - i01.ultraSonicRight
 - i01.ultraSonicLeft
-#- i01.openCV
-#- i01.neopixel
+- i01.openCV
+- i01.neopixel
 type: Runtime
+# virtual: false
