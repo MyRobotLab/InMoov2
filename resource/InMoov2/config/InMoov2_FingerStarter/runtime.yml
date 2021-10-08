@@ -15,4 +15,4 @@ registry:
 - vi01.right
 - vi01.right.uart
 type: Runtime
-# virtual: true
+# virtual: false
