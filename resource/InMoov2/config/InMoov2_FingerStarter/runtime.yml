@@ -12,7 +12,4 @@ registry:
 - i01.chatBot
 - i01.chatBot.search
 - i01.htmlFilter
-- vi01.right
-- vi01.right.uart
 type: Runtime
-# virtual: false
