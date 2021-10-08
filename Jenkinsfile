@@ -89,13 +89,14 @@ pipeline {
             } // script
          } // steps
       } // stage
-
-     // not necessary to archive files - because the install step will copy the file up
+/*
+     # not necessary to archive files - because the install step will copy the file up
      stage('archive') {
          steps {
             archiveArtifacts 'target/inmoov-'+ version +'.zip'
          }
       }
+*/      
 
    } // stages
 
