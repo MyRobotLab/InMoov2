@@ -27,12 +27,9 @@ registry:
 - i01.torso.lowStom
 - i01.simulator
 - i01.left
-- i01.left.serial
 - i01.mouth
-- i01.mouth.audioFile
 - i01.ear
 - i01.chatBot
-- i01.chatBot.search
 - i01.htmlFilter
 type: Runtime
 #virtual: true

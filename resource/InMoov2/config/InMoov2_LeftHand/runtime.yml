@@ -3,7 +3,6 @@ registry:
 - runtime
 - i01
 - i01.left
-- i01.left.serial
 - i01.leftHand
 - i01.leftHand.thumb
 - i01.leftHand.index
