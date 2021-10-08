@@ -4,12 +4,9 @@
 # more info @: http://myrobotlab.org/service/InMoov
 #########################################
 # uncomment for virtual hardware
-# Platform.setVirtual(True)"
+# Platform.setVirtual(True)
 
 # create a pir
 i01_pir = Runtime.start("i01.pir","Pir")
 i01.speakBlocking(i01.localize("STARTINGPIR"))
 isPirActivated=True
-
-# we tell to the service what is going on
-i01.broadcastState()
