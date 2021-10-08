@@ -181,7 +181,15 @@
 <category><pattern>FINGER TO THE MIDDLE</pattern>
 <template>Now you have my attention.
         <oob><mrl><service>python</service><method>exec</method><param>fingermiddle()</param></mrl></oob></template>
-</category>          
+</category>
+<category><pattern>ACTION YOUR FINGER</pattern>
+<template><random>
+             <li>Sure thing.</li>
+             <li>Do you like it like this?</li>
+             <li>What about that?</li>
+          </random>
+        <oob><mrl><service>python</service><method>exec</method><param>fingeraction()</param></mrl></oob></template>
+</category>
 <category><pattern>CAMERA ON</pattern>
 <template>I turn my camera on.
         <oob><mrl><service>i01</service><method>cameraOn</method></mrl></oob></template>

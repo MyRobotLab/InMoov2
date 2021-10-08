@@ -1,3 +1,4 @@
 !!org.myrobotlab.service.config.SerialConfig
-port: null
+# for Linux you'd put something like /dev/ttyACM0 for port here
+port: COM3
 type: Serial
