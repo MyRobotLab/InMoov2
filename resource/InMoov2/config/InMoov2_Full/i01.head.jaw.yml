@@ -11,7 +11,7 @@ minIn: 10.0
 minOut: 10.0
 pin: '26'
 rest: 10.0
-speed: 100.0
+speed: 500.0
 sweepMax: null
 sweepMin: null
 type: Servo
