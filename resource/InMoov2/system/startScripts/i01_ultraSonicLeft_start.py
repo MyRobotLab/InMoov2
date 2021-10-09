@@ -10,6 +10,3 @@
 i01_ultraSonicLeft = Runtime.start('i01.ultraSonicLeft', 'UltrasonicSensor')
 i01.speakBlocking(i01.localize("STARTINGULTRASONIC"))
 isUltraSonicLeftActivated=True
-
-# we tell to the service what is going on
-i01.broadcastState
