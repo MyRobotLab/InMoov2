@@ -1,0 +1,7 @@
+!!org.myrobotlab.service.config.ProgramABConfig
+currentBotName: en-US
+currentUserName: Friend
+textListeners:
+- i01
+- i01.htmlFilter
+type: ProgramAB
