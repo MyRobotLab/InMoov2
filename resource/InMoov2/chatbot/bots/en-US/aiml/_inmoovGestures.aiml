@@ -1178,4 +1178,8 @@
 <template>Okay I will get into rest position
           <oob><mrl><service>python</service><method>exec</method><param>stopTravel()</param></mrl></oob></template>
 </category>
+<category><pattern>* HURT YOU</pattern>
+<template>I am calling 911 
+          <oob><mrl><service>python</service><method>exec</method><param>911()</param></mrl></oob>Help, I am calling because there is a human that wants to hurt me</template>
+</category>          
 </aiml>
