@@ -1,4 +1,4 @@
-def 911():
+def call_911():
   i01.startedGesture()
   i01.setHandSpeed("left", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
