@@ -1,5 +1,6 @@
 def call_911():
   i01.startedGesture()
+  i01.speakBlocking("I am calling 9.1.1.")
   i01.setHandSpeed("left", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setArmSpeed("left", 1.0, 1.0, 1.0, 1.0)
@@ -15,8 +16,9 @@ def call_911():
   i01.moveHand("left",180,180,65,81,41,143)
   i01.moveHand("right",180,180,18,61,36,21)
   i01.moveTorso(90,90,90)
-  AudioPlayer.playFile(RuningFolder+'/system/sounds/911.mp3')
+  AudioPlayer.playFileBlocking(RuningFolder+'/system/sounds/911.mp3')
   sleep(0.5)
+  i01.speakBlocking("Help, I am calling because there is a human that wants to hurt me")
   i01.moveHead(90,90)
   sleep(0.2)
   i01.finishedGesture()
