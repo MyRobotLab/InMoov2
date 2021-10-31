@@ -14,19 +14,21 @@
 # ##############################################################################  
   
 #read current service part config based on file name
-ThisServicePart=RuningFolder+'config/service_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
+ThisServicePart = str(ScriptType)+'i01.mouth.yml'
 
 CheckFileExist(ThisServicePart)
-ThisServicePartConfig = ConfigParser.ConfigParser()
-ThisServicePartConfig.read(ThisServicePart+'.config')
 
-Speechengine=ThisServicePartConfig.get('TTS', 'Speechengine')
-VoiceName=unicode(ThisServicePartConfig.get('TTS', 'VoiceName'),'utf-8')
-apiKey1=ThisServicePartConfig.get('API_KEY', 'apiKey1')
-apiKey2=ThisServicePartConfig.get('API_KEY', 'apiKey2')
+
+ThisServicePartConfig = CodecUtils.readServiceConfig(ThisServicePart)
+
+Speechengine=ThisServicePartConfig.type
+VoiceName=unicode(ThisServicePartConfig.voice,'utf-8')
+#TO DO: SET IN SECURITY
+#apiKey1=ThisServicePartConfig.get('API_KEY', 'apiKey1')
+#apiKey2=ThisServicePartConfig.get('API_KEY', 'apiKey2')
 
 #for noworky
-log.info("mouth.config")
+log.info("i01.mouth.yml")
 log.info("Speechengine : "+str(Speechengine))
 log.info("VoiceName : "+ VoiceName)
 log.info("Language : "+str(Language))
@@ -164,7 +166,7 @@ if not isReady:
 
 ear=i01.startEar()
 if EarEngine=="WebkitSpeechRecognition":
-  i01_ear.setContinuous(setContinuous)
+  #i01_ear.setContinuous(setContinuous)
   #start the browsers and show the WebkitSpeechRecognition service named i01.ear
   webgui = Runtime.create("webgui","WebGui")
   if not webgui.isStarted():

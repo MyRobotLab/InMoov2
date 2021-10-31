@@ -7,17 +7,19 @@
 # MRL SERVICE CALL
 # ##############################################################################
 #read current service part config based on file name
-ThisServicePart=RuningFolder+'config/service_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
+ThisServicePart = str(ScriptType)+'i01.audioFile.yml'
 
 CheckFileExist(ThisServicePart)
-ThisServicePartConfig = ConfigParser.ConfigParser()
-ThisServicePartConfig.read(ThisServicePart+'.config')
 
-MyMusicPath=ThisServicePartConfig.get('AUDIO', 'MyMusicPath')
+try:
+  ThisServicePartConfig = CodecUtils.readServiceConfig(ThisServicePart)
+  MyMusicPath=ThisServicePartConfig.myMusicPath
+  #for noworky
+  log.info("MyMusicPath : "+str(MyMusicPath))
+  musicpath = MyMusicPath
+except:
+  pass
 
-#for noworky
-log.info("MyMusicPath : "+str(MyMusicPath))
-musicpath = MyMusicPath 
 import os
 
 #startup sound
