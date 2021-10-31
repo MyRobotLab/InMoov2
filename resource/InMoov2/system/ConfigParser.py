@@ -5,62 +5,74 @@
 #shared parse function
 def CheckFileExist(File):
   global RobotIsErrorMode
-  if not os.path.isfile(File+'.config'):
-    shutil.move(File+'.config.default',File+'.config')
-    print "config file created : ",File+'.config'
+  #FIXME
+  try:
+    os.path.isfile(File)
+      #shutil.move(File+'.config.default',File+'.config')
+    #log.info("Reading: "+str(File))
+  except:
+    log.info("File does not exist: "+str(File))
+    pass 
 
+# PARSE THE CONFIG FILE, WE NEED TO GET THE SELECTED CONFIG IN THE UI
+print ("Selected config : "+str(ScriptType))
 
-CheckFileExist(RuningFolder+'config/' + '_InMoov')
-LaunchSwingGui=True
+CheckFileExist(str(ScriptType)+'i01.chatBot.yml')
    
-BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)
-BasicConfig.read(RuningFolder+'config/' + '_InMoov.config')
+ChatBotConfig = CodecUtils.readServiceConfig(str(ScriptType)+'i01.chatBot.yml')
+Language=ChatBotConfig.currentBotName
 
-# PARSE THE CONFIG FILE
-ScriptType=BasicConfig.get('MAIN', 'ScriptType')
-
-try:
-  MyLanguage=BasicConfig.get('TTS', 'MyLanguage')
-  Language=MyLanguage
-
-except:
-  pass
-  
-try:
-  Language=BasicConfig.get('MAIN', 'Language')
-except:
-  pass
-  
-if Language=="fr":Language="fr-FR"
-if Language=="en":Language="en-US"
-if Language=="es":Language="es-ES"
-if Language=="de":Language="de-DE"
-if Language=="nl":Language="nl-NL"
-if Language=="ru":Language="ru-RU"
-if Language=="in":Language="hi-IN"
-if Language=="it":Language="it-IT"
-if Language=="fi":Language="fi-FI"
-if Language=="pt":Language="pt-PT"
-if Language=="tr":Language="tr-TR"
-if Language=="cn":Language="cn-ZH"  
-
-languageError=False
-Runtime.setAllLocales(Language)
+if Language=="fr-FR":
+  languageError=False
+  Runtime.setAllLocales(Language)
+if Language=="en-US":
+  languageError=False
+  Runtime.setAllLocales(Language)
+if Language=="es-ES":
+  languageError=False
+  Runtime.setAllLocales(Language)
+if Language=="de-DE":
+  languageError=False
+  Runtime.setAllLocales(Language)
+if Language=="nl-NL":
+  languageError=False
+  Runtime.setAllLocales(Language)
+if Language=="ru-RU":
+  languageError=False
+  Runtime.setAllLocales(Language)
+if Language=="hi-IN":
+  languageError=False
+  Runtime.setAllLocales(Language)
+if Language=="it-IT":
+  languageError=False
+  Runtime.setAllLocales(Language)
+if Language=="fi-FI":
+  languageError=False
+  Runtime.setAllLocales(Language)
+if Language=="pt-PT":
+  languageError=False
+  Runtime.setAllLocales(Language)
+if Language=="tr-TR":
+  languageError=False
+  Runtime.setAllLocales(Language)
+if Language=="cn-ZH": 
+  languageError=False
+  Runtime.setAllLocales(Language)
 
 #FIXME
-#if not Runtime.setAllLocales(Language):
-  #languageError=True
-  #Runtime.setAllLocales('en-US')
+if Language==None:
+  languageError=True
+  Runtime.setAllLocales('en-US')
+    
 
-DEBUG=BasicConfig.getboolean('MAIN', 'debug')
-IsMute=BasicConfig.getboolean('VOCAL', 'IsMute')
-LoadingPicture=BasicConfig.getboolean('GENERAL', 'LoadingPicture')
-StartupSound=BasicConfig.getboolean('GENERAL', 'StartupSound')
-IuseLinux=BasicConfig.getboolean('GENERAL', 'IuseLinux')
-LaunchSwingGui=BasicConfig.getboolean('GENERAL', 'LaunchSwingGui')
-BetaVersion=BasicConfig.getboolean('GENERAL', 'BetaVersion')
+#Debug=BasicConfig.getboolean('debug')
+#IsMute=BasicConfig.getboolean('IsMute')
+#LoadingPicture=BasicConfig.getboolean('LoadingPicture')
+#StartupSound=BasicConfig.getboolean('StartupSound')
+#LaunchWebGui=BasicConfig.getboolean('LaunchWebGui')
+#BetaVersion=BasicConfig.getboolean('BetaVersion')
 
 #for noworky
-log.info("_inmoov.config")
+log.info("inmoov2.config")
 log.info("ScriptType : "+str(ScriptType))
 log.info("Language : "+str(Language))
