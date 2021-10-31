@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!-- File: sraix.aiml -->
-<!-- Author: Greg Perry -->
-<!-- Last modified: August 06, 2021 -->
-<!--  -->
-<!-- This AIML file is part of the EN-US 0.1 chat bot knowledge base. -->
-<!--  -->
-<!-- The EN-US brain is Copyright &copy; 2021 by InMoov Foundation. -->
-<!--  -->
-<!-- The EN-US brain is released under the terms of the GNU Lesser General -->
-<!-- Public License, as published by the Free Software Foundation. -->
-<!--  -->
-<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
-<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
-<!--  -->
-<!-- For more information see http://www.inmoov.fr -->
 <!--  -->
 <category><pattern>SCHEDULEDESCRIPTION * SCHEDULEREQUEST *</pattern>
 <template><think>
