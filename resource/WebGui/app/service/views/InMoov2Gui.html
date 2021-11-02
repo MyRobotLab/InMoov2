@@ -629,8 +629,8 @@
                         <!--------------------------------------------------------------->
                         <img src="../NeoPixel.png"/>
                         <label>neopixel is:</label>
-                        &nbsp;&nbsp;<toggle width="70" height="28" ng-model="service.isNeopixelActivated" ng-change="!service.isNeopixelActivated?msg.stopNeopixel():msg.startNeopixel()" on="ON" off="OFF"/></toggle>
-                        <button class="btn btn-default" ng-show="service.isNeopixelActivated" ng-click="setPanel('neopixel1')">Settings</button>
+                        &nbsp;&nbsp;<toggle width="70" height="28" ng-model="service.isNeopixelActivated" ng-change="!service.isNeopixelActivated?msg.stopNeopixel():msg.loadFile('resource/InMoov2/system/startScripts/i01_neopixel_start.py')" on="ON" off="OFF"/></toggle>
+                        <button class="btn btn-default" ng-show="service.isNeopixelActivated" ng-click="mrl.changeTab(service.name + '.neopixel')">Settings</button>
                     </td>
                 </tr>
                 <!--<tr>
@@ -925,9 +925,9 @@
             </div>
             <button class="btn btn-default" title="This will save a config module to data/config" ng-click="saveConfig()">save config</button>
             <button class="btn btn-default" title="This will start a config module" ng-click="startConfig()">start</button>
+            <button class="btn btn-default" title="This will start a config module with resource/InMoov2/InMoov2.py" ng-click="msg.loadFile('resource/InMoov2/InMoov2.py')">start + script</button>
             <button class="btn btn-default" title="This will release a config module" ng-click="releaseConfig()">release</button>
             <button class="btn btn-default" title="This will load: resource/InMoov2/system/startScripts/InMoov2FullStart.py" ng-click="msg.loadFile('resource/InMoov2/system/startScripts/InMoov2FullStart.py')">load Full Script</button>
-            <button class="btn btn-default" title="This will load: resource/InMoov2/InMoov2.py" ng-click="msg.loadFile('resource/InMoov2/InMoov2.py')">load system</button>
         </td>
     </tr>
     <tr>
