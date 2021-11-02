@@ -15,57 +15,17 @@ def CheckFileExist(File):
     pass 
 
 # PARSE THE CONFIG FILE, WE NEED TO GET THE SELECTED CONFIG IN THE UI
-print ("Selected config : "+str(ScriptType))
+print ("Selected config : "+str(ConfigType))
 
-CheckFileExist(str(ScriptType)+'i01.chatBot.yml')
+CheckFileExist(str(ConfigType)+'runtime.yml')
    
-ChatBotConfig = CodecUtils.readServiceConfig(str(ScriptType)+'i01.chatBot.yml')
-Language=ChatBotConfig.currentBotName
+RuntimeConfig = CodecUtils.readServiceConfig(str(ConfigType)+'runtime.yml')
+Language=RuntimeConfig.locale
 
-if Language=="fr-FR":
-  languageError=False
-  Runtime.setAllLocales(Language)
-if Language=="en-US":
-  languageError=False
-  Runtime.setAllLocales(Language)
-if Language=="es-ES":
-  languageError=False
-  Runtime.setAllLocales(Language)
-if Language=="de-DE":
-  languageError=False
-  Runtime.setAllLocales(Language)
-if Language=="nl-NL":
-  languageError=False
-  Runtime.setAllLocales(Language)
-if Language=="ru-RU":
-  languageError=False
-  Runtime.setAllLocales(Language)
-if Language=="hi-IN":
-  languageError=False
-  Runtime.setAllLocales(Language)
-if Language=="it-IT":
-  languageError=False
-  Runtime.setAllLocales(Language)
-if Language=="fi-FI":
-  languageError=False
-  Runtime.setAllLocales(Language)
-if Language=="pt-PT":
-  languageError=False
-  Runtime.setAllLocales(Language)
-if Language=="tr-TR":
-  languageError=False
-  Runtime.setAllLocales(Language)
-if Language=="cn-ZH": 
-  languageError=False
-  Runtime.setAllLocales(Language)
-
-#FIXME
-if Language==None:
-  languageError=True
-  Runtime.setAllLocales('en-US')
+#Moved language stuff into localize.py
     
 
-#Debug=BasicConfig.getboolean('debug')
+#DEBUG=BasicConfig.getboolean('debug')
 #IsMute=BasicConfig.getboolean('IsMute')
 #LoadingPicture=BasicConfig.getboolean('LoadingPicture')
 #StartupSound=BasicConfig.getboolean('StartupSound')
@@ -74,5 +34,5 @@ if Language==None:
 
 #for noworky
 log.info("inmoov2.config")
-log.info("ScriptType : "+str(ScriptType))
+log.info("ConfigType : "+str(ConfigType))
 log.info("Language : "+str(Language))

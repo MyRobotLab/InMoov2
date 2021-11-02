@@ -21,6 +21,9 @@ RuningFolder=os.getcwd().replace("\\", "/")+"/"+RuningFolder+"/"
 # global vars import
 execfile(RuningFolder+'/system/Robot_Satus_GlobalsVars.py')
 
+# we load basic parameters
+execfile('data/config/InMoov2_Basic/i01.basic.py')
+
 # we load personal parameters
 execfile(RuningFolder+'/system/ConfigParser.py')
 
@@ -87,7 +90,7 @@ for root, subdirs, files in os.walk(RuningFolder+'minimal'):
 ################################
   
 #we launch Inmoov Gestures
-i01.loadGestures(RuningFolder+'gestures')
+#i01.loadGestures(RuningFolder+'gestures')
     
 #we launch Inmoov life
 for root, subdirs, files in os.walk(RuningFolder+'life'):
