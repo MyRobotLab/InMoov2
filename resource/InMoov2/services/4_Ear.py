@@ -7,7 +7,7 @@
 # ##############################################################################  
   
 #read current service part config based on file name
-ThisServicePart = str(ScriptType)+'i01.ear.yml'
+ThisServicePart = str(ConfigType)+'i01.ear.yml'
 
 CheckFileExist(ThisServicePart)
 
@@ -25,7 +25,11 @@ try:
   lockPhrase=unicode(ThisServicePartConfig.wakeWord,'utf-8')
 except:
   pass
+
+#for noworky
+log.info("4_Ear.py")  
 log.info("lockPhrase : "+str(ThisServicePartConfig.wakeWord))
+log.info("unlockInsult : "+str(unlockInsult))
 
 # ##############################################################################
 # MRL SERVICE CALL

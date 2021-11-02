@@ -14,7 +14,7 @@
 # ##############################################################################  
   
 #read current service part config based on file name
-ThisServicePart = str(ScriptType)+'i01.mouth.yml'
+ThisServicePart = str(ConfigType)+'i01.mouth.yml'
 
 CheckFileExist(ThisServicePart)
 
@@ -23,15 +23,14 @@ ThisServicePartConfig = CodecUtils.readServiceConfig(ThisServicePart)
 
 Speechengine=ThisServicePartConfig.type
 VoiceName=unicode(ThisServicePartConfig.voice,'utf-8')
-#TO DO: SET IN SECURITY
+#TO DO: CREATE AND SET IN service/Security.py
 #apiKey1=ThisServicePartConfig.get('API_KEY', 'apiKey1')
 #apiKey2=ThisServicePartConfig.get('API_KEY', 'apiKey2')
 
 #for noworky
-log.info("i01.mouth.yml")
+log.info("5_Mouth.py")
 log.info("Speechengine : "+str(Speechengine))
 log.info("VoiceName : "+ VoiceName)
-log.info("Language : "+str(Language))
 
 #compatibility
 MyvoiceTTS=Speechengine
