@@ -391,7 +391,7 @@
                         <!--------------------------------------------------------------->
                         <img src="../OpenCV.png"/>
                         <label>openCV Activated:</label>
-                        &nbsp;<toggle width="70" height="28" ng-model="service.isOpenCvActivated" title="To access settings, the openCV must be activated" ng-change="!service.isOpenCvActivated?msg.stopOpenCV():msg.startOpenCV()" on="ON" off="OFF"/>
+                        &nbsp;<toggle width="70" height="28" ng-model="service.isOpenCvActivated" title="To access settings, the openCV must be activated" ng-change="!service.isOpenCvActivated?msg.stopOpenCV():msg.loadFile('resource/InMoov2/system/startScripts/i01_opencv_start.py')" on="ON" off="OFF"/>
                         &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.isOpenCvActivated" ng-click="mrl.changeTab(service.name + '.opencv')">Settings</button>
                     </td>
                 </tr>
