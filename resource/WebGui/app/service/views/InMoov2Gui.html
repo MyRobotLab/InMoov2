@@ -227,7 +227,8 @@
                         <img src="../InMoov2Ear.png"/>
                         <label>ear Activated:</label>
                         &nbsp;&nbsp;<toggle width="70" height="28" ng-model="service.isEarActivated" ng-change="!service.isEarActivated?msg.stopEar():msg.startEar()" width="80" height="30" on="ON" off="OFF"/>
-                        <button class="btn btn-default" ng-show="service.isEarActivated" ng-click="setPanel('ear1')">Open</button>
+                        <!--button class="btn btn-default" ng-show="service.isEarActivated" ng-click="setPanel('ear1')">Open</button-->
+                        <button class="btn btn-default" ng-show="service.isEarActivated" ng-click="mrl.changeTab(service.name + '.ear')">Open</button>
                     </td>
                 </tr>
                 <tr>
