@@ -10,3 +10,4 @@ registry:
 - i01.chatBot
 - i01.htmlFilter
 type: Runtime
+virtual: true
