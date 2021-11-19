@@ -23,4 +23,4 @@ registry:
 - i01.left
 - i01.left.serial
 type: Runtime
-virtual: false
+virtual: true
