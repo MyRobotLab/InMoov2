@@ -1,0 +1,8 @@
+#!!org.myrobotlab.service.config.ServiceConfig
+ScriptType = InMoov2_FingerStarter
+#debug: false
+IsMute: false
+#LoadingPicture: false
+#StartupSound: true
+#LaunchWebGui: true
+#BetaVersion: false
