@@ -1,7 +1,8 @@
-angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$scope', 'mrl', '$uibModal', 'modalService', function($scope, mrl, $uibModal, modalService) {
+angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$scope', 'mrl', '$uibModal', 'modalService', 'peer', function($scope, mrl, $uibModal, modalService, peer) {
     console.info('InMoov2GuiCtrl')
     var _self = this
     var msg = this.msg
+    var init = true
 
     let numCircularButtons = 0
     // this is circle center - it needs to be
@@ -145,6 +146,21 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         $scope.service.configName = mrl.getService('runtime').configName
         $scope.languageSelected = service.locale.tag
         $scope.mouth = mrl.getService(service.name + '.mouth')
+        
+        // state vars needed for enable/disable toggle display and control
+        service.enableAudioPlayer = msg.isPeerStarted('audioPlayer')    
+        service.enableServoMixer = msg.isPeerStarted('servoMixer')    
+        service.enableHead = msg.isPeerStarted('head')
+
+        service.enableLeftArm = msg.isPeerStarted('leftArm')
+        service.enableLeftHand = msg.isPeerStarted('leftHand')
+        service.enableRightArm = msg.isPeerStarted('rightArm')
+        service.enableRightHand = msg.isPeerStarted('rightHand')
+
+        service.enableTorso = msg.isPeerStarted('torso')
+        service.enableOpenCV = msg.isPeerStarted('opencv')
+        service.enableChatBot = msg.isPeerStarted('chatBot')
+
         $scope.$apply()
     }
 
