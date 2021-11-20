@@ -135,10 +135,11 @@
                         <!--------------------------------------------------------------->
                         <img src="../Brain.png"/>
                         <label>chatBot Activated:</label>
-                        &nbsp;<toggle width="70" height="30" ng-model="service.isChatBotActivated" ng-change="!service.isChatBotActivated?msg.stopChatBot():msg.startChatBot()" on="ON" off="OFF"/>
-                        <!--<button class="btn btn-default" ng-show="service.isChatBotActivated" ng-click="setPanel('chatBot1')">Open</button>
-                        Temporary fix-->
-                        <button class="btn btn-default" ng-show="service.isChatBotActivated" ng-click="mrl.changeTab(service.name + '.chatBot')">Open</button>
+                        &nbsp;<!-- toggle width="70" height="30" ng-model="service.isChatBotActivated" ng-change="!service.isChatBotActivated?msg.stopChatBot():msg.startChatBot()" on="ON" off="OFF"/>
+                        <button class="btn btn-default" ng-show="service.isChatBotActivated" ng-click="mrl.changeTab(service.name + '.chatBot')">Open</button -->
+
+                        &nbsp;<toggle width="70" height="30" ng-model="service.enableChatBot" ng-change="service.enableChatBot?msg.startChatBot():msg.stopChatBot()" on="ON" off="OFF"/>
+                        <button class="btn btn-default" ng-show="service.enableChatBot" ng-click="mrl.changeTab(service.name + '.chatBot')">Open</button>
                     </td>
                 </tr>
                 <tr>
@@ -392,7 +393,8 @@
                         <!--------------------------------------------------------------->
                         <img src="../OpenCV.png"/>
                         <label>openCV Activated:</label>
-                        &nbsp;<toggle width="70" height="28" ng-model="service.isOpenCvActivated" title="To access settings, the openCV must be activated" ng-change="!service.isOpenCvActivated?msg.stopOpenCV():msg.loadFile('resource/InMoov2/system/startScripts/i01_opencv_start.py')" on="ON" off="OFF"/>
+                        &nbsp;<!-- toggle width="70" height="28" ng-model="service.isOpenCvActivated" title="To access settings, the openCV must be activated" ng-change="!service.isOpenCvActivated?msg.stopOpenCV():msg.loadFile('resource/InMoov2/system/startScripts/i01_opencv_start.py')" on="ON" off="OFF"/ -->
+                        &nbsp;<toggle width="70" height="28" ng-model="service.isOpenCvActivated" title="To access settings, the openCV must be activated" ng-change="!service.isOpenCvActivated?msg.stopOpenCV():msg.startOpenCV()" on="ON" off="OFF"/>
                         &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.isOpenCvActivated" ng-click="mrl.changeTab(service.name + '.opencv')">Settings</button>
                     </td>
                 </tr>
@@ -933,8 +935,10 @@
     </tr>
     <tr>
         <td>
-            <img src="../InMoov2.png"/>
-            <label>services</label>
+            <!-- img src="../InMoov2.png"/ -->
+            <b>services</b>
+            <br/>
+            <!--
             <br/>
             <button class="btn btn-default" ng-click="msg.startAll()">start all</button>
             <button class="btn btn-default" ng-click="msg.startServos()">start servos</button>
@@ -946,22 +950,127 @@
                 </span>
             </button>
             <button class="btn btn-default" ng-click="msg.disable()">disable</button>
-</button></td></tr>
+        </td>
+    </tr>
+
+<!-- begin -->
+            <!--
 <tr>
-    <td>virtualize&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <toggle width="30" height="28" ng-model="service.isVirtual" ng-change="!service.isVirtual?msg.setAllVirtual(false):msg.setAllVirtual(true)" on=" " off=" "></toggle>
-    </td>
-</tr>
-<tr>
-    <td>simulator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<td>
+<b>enable system</b><br/>
+-->
+            <div id="table-wrapper">
+                <div id="table-scroll">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>virtualize</td>
+                                <td>
+                                <toggle width="30" height="28" ng-model="service.isVirtual" ng-change="!service.isVirtual?msg.setAllVirtual(false):msg.setAllVirtual(true)" on=" " off=" "></toggle>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>head</td>
+                                <td>
+                                    <toggle width="30" height="28" ng-model="service.enableHead" ng-change="service.enableHead?msg.startHead():msg.stopHead()" on=" " off=" "></toggle>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>chat bot</td>
+                                <td>
+                                    <toggle width="30" height="28" ng-model="service.enableChatBot" ng-change="service.enableChatBot?msg.startChatBot():msg.stopChatBot()" on=" " off=" "></toggle>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>left arm</td>
+                                <td>
+                                    <toggle width="30" height="28" ng-model="service.enableLeftArm" ng-change="service.enableLeftArm?msg.startLeftArm():msg.stopLeftArm()" on=" " off=" "></toggle>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>left hand</td>
+                                <td>
+                                    <toggle width="30" height="28" ng-model="service.enableLeftHand" ng-change="service.enableLeftHand?msg.startLeftHand():msg.stopLeftHand()" on=" " off=" "></toggle>
+                                </td>
+                            </tr>
+                            <!-- need more structure
+                            <tr>
+                                <td>left hand sensor</td>
+                                <td>
+                                    <toggle width="30" height="28" ng-model="service.isVirtual" ng-change="!service.isVirtual?msg.setAllVirtual(false):msg.setAllVirtual(true)" on=" " off=" "></toggle>
+                                </td>
+                            </tr>
+                            -->
+                            <tr>
+                                <td>right arm</td>
+                                <td>
+                                    <toggle width="30" height="28" ng-model="service.enableRightArm" ng-change="service.enableRightArm?msg.startRightArm():msg.stopRightArm()" on=" " off=" "></toggle>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>right hand</td>
+                                <td>
+                                    <toggle width="30" height="28" ng-model="service.enableRightHand" ng-change="service.enableRightHand?msg.startRightHand():msg.stopRightHand()" on=" " off=" "></toggle>
+                                </td>
+                            </tr>
+<!--                            
+                            <tr>
+                                <td>right hand sensor</td>
+                                <td>
+                                    <toggle width="30" height="28" ng-model="service.isVirtual" ng-change="!service.isVirtual?msg.setAllVirtual(false):msg.setAllVirtual(true)" on=" " off=" "></toggle>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>left ultrasonic sensor</td>
+                                <td>
+                                    <toggle width="30" height="28" ng-model="service.isVirtual" ng-change="!service.isVirtual?msg.setAllVirtual(false):msg.setAllVirtual(true)" on=" " off=" "></toggle>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>right ultrasonic sensor</td>
+                                <td>
+                                    <toggle width="30" height="28" ng-model="service.isVirtual" ng-change="!service.isVirtual?msg.setAllVirtual(false):msg.setAllVirtual(true)" on=" " off=" "></toggle>
+                                </td>
+                            </tr>
+-->                            
+                            <tr>
+                                <td>torso</td>
+                                <td>
+                                    <toggle width="30" height="28" ng-model="service.enableTorso" ng-change="service.enableTorso?msg.startTorso():msg.stopTorso()" on=" " off=" "></toggle>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>opencv</td>
+                                <td>
+                                    <toggle width="30" height="28" ng-model="service.enableOpenCV" ng-change="service.enableOpenCV?msg.startOpenCV():msg.stopOpenCV()" on=" " off=" "></toggle>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>simulator</td>
+                                <td>
         <toggle width="30" height="28" ng-model="service.isSimulatorActivated" ng-change="!service.isSimulatorActivated?msg.stopSimulator():msg.startSimulator()" on=" " off=" "></toggle>
     </td>
 </tr>
 <tr>
-    <td>servo mixer&nbsp;&nbsp;
-        <toggle width="30" height="28" ng-model="service.isServoMixerActivated" ng-change="!service.isServoMixerActivated?msg.stopServoMixer():msg.startServoMixer()" on=" " off=" "></toggle>&nbsp;&nbsp;&nbsp;&nbsp;
-        <button class="btn btn-default" ng-show="service.isServoMixerActivated" ng-click="mrl.changeTab(service.name + '.servoMixer')">Open</button></td>
+                                <td>audio player</td>
+                                <td>
+                                    <toggle width="30" height="28" ng-model="service.enableAudioPlayer" ng-change="service.enableAudioPlayer?msg.startAudioPlayer():msg.stopAudioPlayer()" on=" " off=" "></toggle>
+                                </td>
 </tr>
+                            <tr>
+                                <td>servo mixer</td>
+                                <td>
+                                    <toggle width="30" height="28" ng-model="service.enableServoMixer" ng-change="service.enableServoMixer?msg.startServoMixer():msg.stopServoMixer()" on=" " off=" "></toggle>
+                                    <button class="btn btn-default" ng-show="service.enableServoMixer" ng-click="mrl.changeTab(service.name + '.servoMixer')">Open</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <!-- end -->
 <tr>
     <td>
         <img src="../InMoov2GestureCreator.png"/>
@@ -974,6 +1083,4 @@
     </td>
 </tr>
 </table>
-<!------------------------ panel end ------------------------------>
-<!-- panels end -->
-</td></tr></table>
+
