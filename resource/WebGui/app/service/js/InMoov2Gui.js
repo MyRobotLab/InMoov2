@@ -148,18 +148,34 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         $scope.mouth = mrl.getService(service.name + '.mouth')
         
         // state vars needed for enable/disable toggle display and control
-        service.enableAudioPlayer = msg.isPeerStarted('audioPlayer')    
+                service.enableAudioPlayer = msg.isPeerStarted('audioPlayer')    
         service.enableServoMixer = msg.isPeerStarted('servoMixer')    
         service.enableHead = msg.isPeerStarted('head')
+        service.enableMouth = msg.isPeerStarted('mouth')
+        service.enableEar = msg.isPeerStarted('ear')
+        service.enableHeadTracking = msg.isPeerStarted('headTracking')
+        service.enableEyesTracking = msg.isPeerStarted('eyesTracking')
 
         service.enableLeftArm = msg.isPeerStarted('leftArm')
         service.enableLeftHand = msg.isPeerStarted('leftHand')
+        service.enableLeftHandSensor = msg.isPeerStarted('leftHandSensor')
         service.enableRightArm = msg.isPeerStarted('rightArm')
         service.enableRightHand = msg.isPeerStarted('rightHand')
+        service.enableRightHandSensor = msg.isPeerStarted('rightHandSensor')
 
         service.enableTorso = msg.isPeerStarted('torso')
         service.enableOpenCV = msg.isPeerStarted('opencv')
+        service.enableOpenNI = msg.isPeerStarted('openni')
         service.enableChatBot = msg.isPeerStarted('chatBot')
+        service.enablePir = msg.isPeerStarted('pir')
+        service.enableNeopixel = msg.isPeerStarted('neopixel')
+        service.enableUltrasonicLeft = msg.isPeerStarted('ultrasonicLeft')
+        service.enableUltrasonicRight = msg.isPeerStarted('ultrasonicRight')
+
+        service.enableLeftPort = msg.isPeerStarted('leftPort')
+        service.enableRightPort = msg.isPeerStarted('rightPort')
+        service.enableController3 = msg.isPeerStarted('controller3')
+        service.enableController4 = msg.isPeerStarted('controller4')
 
         $scope.$apply()
     }
