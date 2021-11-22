@@ -9,4 +9,4 @@
 # create a pir
 i01_pir = Runtime.start("i01.pir","Pir")
 i01.speakBlocking(i01.localize("STARTINGPIR"))
-isPirActivated=True
+enablePir=True

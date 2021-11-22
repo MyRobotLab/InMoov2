@@ -14,7 +14,7 @@
 
 # create a controller
 i01_left = Runtime.start("i01.left","Arduino")
-isLeftPortActivated=True
+enableLeftPort=True
 
 
 # initialize controller

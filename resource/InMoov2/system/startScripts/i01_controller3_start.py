@@ -14,7 +14,7 @@
 
 # create a controller
 i01_controller3 = Runtime.start("i01.controller3","Arduino")
-isController3Activated=True
+enableController3=True
 
 # initialize controller
 # linux or macos -> i01.controller3.connect("/dev/ttyUSB0")

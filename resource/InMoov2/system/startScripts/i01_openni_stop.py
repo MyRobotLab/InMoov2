@@ -9,7 +9,7 @@
 # release a openni
 Runtime.releaseService("i01.openni")
 i01.speakBlocking(i01.localize("STOPOPENNI"))
-isOpenNiActivated=False
+enableOpenNi=False
 
 # we tell to the service what is going on 
 # i01.broadcastState()
