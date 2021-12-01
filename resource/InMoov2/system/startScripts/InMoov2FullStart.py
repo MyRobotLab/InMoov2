@@ -39,7 +39,7 @@ execfile(RuningFolder+'/system/Robot_Satus_GlobalsVars.py')
 runtime = Runtime.getInstance()
 runtime.setAllLocales('en-US')
 #i01_jme = Runtime.start('i01.jme', 'JMonkeyEngine')
-i01_servomixer = Runtime.start('i01.servomixer', 'ServoMixer')
+i01_servoMixer = Runtime.start('i01.servoMixer', 'ServoMixer')
 i01_leftArm_rotate = Runtime.start('i01.leftArm.rotate', 'Servo')
 i01_torso_topStom = Runtime.start('i01.torso.topStom', 'Servo')
 i01_rightArm_bicep = Runtime.start('i01.rightArm.bicep', 'Servo')
@@ -57,7 +57,6 @@ python = Runtime.start('python', 'Python')
 i01_rightHand_index = Runtime.start('i01.rightHand.index', 'Servo')
 i01_rightHand = Runtime.start('i01.rightHand', 'InMoov2Hand')
 i01_leftArm_bicep = Runtime.start('i01.leftArm.bicep', 'Servo')
-AudioPlayer = Runtime.start('AudioPlayer', 'AudioFile')
 MoveBodyTimer = Runtime.start('MoveBodyTimer', 'Clock')
 i01_rightArm_rotate = Runtime.start('i01.rightArm.rotate', 'Servo')
 vi01_left_uart = Runtime.start('vi01.left.uart', 'Serial')
@@ -109,7 +108,7 @@ i01_head_eyelidRight = Runtime.start('i01.head.eyelidRight', 'Servo')
 i01_leftArm_shoulder = Runtime.start('i01.leftArm.shoulder', 'Servo')
 i01_rightHand_wrist = Runtime.start('i01.rightHand.wrist', 'Servo')
 i01_mouth = Runtime.start('i01.mouth', 'MarySpeech')
-AudioPlayer = Runtime.createAndStart("AudioPlayer", "AudioFile")
+i01_audioPlayer = Runtime.start("i01.audioPlayer", "AudioFile")
 #############################################################
 ## Needs fixing in InMoov2.java
 #i01_pir = Runtime.start('i01.pir', 'Pir')
@@ -561,7 +560,7 @@ i01_mouth.setVoice("Mark")
 i01_mouth.setMute(False)
 
 # We launch InMoov startup sound and the rest
-AudioPlayer.playFileBlocking('resource/InMoov2/system/sounds/startupsound.mp3')
+i01_audioPlayer.playFileBlocking('resource/InMoov2/system/sounds/startupsound.mp3')
 i01.startHead()
 i01.startMouth()
 i01.startChatBot()
@@ -577,6 +576,7 @@ i01.startTorso()
 #i01.startUltraSonicLeftActivated()
 #i01.startNeopixel()
 #i01.startOpenCV()
+i01.startAudioPlayer()
 i01.startServoMixer()
 jme = i01.startSimulator()
 i01.loadGestures("resource/InMoov2/gestures")
@@ -597,10 +597,11 @@ isNeopixelActivated = False
 isOpenCVActivated = False
 isRightHandSensorActivated = False
 isLeftHandSensorActivated = False
-isRightPortActivated=True
-isLeftPortActivated=True
-isController3Activated=False
-isController4Activated=False
+isRightPortActivated = True
+isLeftPortActivated = True
+isController3Activated = False
+isController4Activated = False
+isAudioPlayerActivated = True
 
 # This launch the chatbot for the first initialization
 if str(i01_chatBot.getPredicate("Friend","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("Friend","firstinit"))=="started":
