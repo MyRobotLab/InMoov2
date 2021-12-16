@@ -935,8 +935,8 @@
     </tr>
     <tr>
         <td>
-            <!-- img src="../InMoov2.png"/ -->
-            <b>services</b>
+            <img src="../InMoov2.png"/>
+            <label>service control</label>
             <br/>
             <!--
             <br/>
@@ -952,13 +952,7 @@
             <button class="btn btn-default" ng-click="msg.disable()">disable</button>
         </td>
     </tr>
-
-<!-- begin -->
-            <!--
-<tr>
-<td>
-<b>enable system</b><br/>
--->
+    -->
             <div id="table-wrapper">
                 <div id="table-scroll">
                     <table class="table table-striped">
@@ -969,7 +963,7 @@
                                 <toggle width="30" height="28" ng-model="service.isVirtual" ng-change="!service.isVirtual?msg.setAllVirtual(false):msg.setAllVirtual(true)" on=" " off=" "></toggle>
                                 </td>
                             </tr>
-                            <tr>
+                            <!--tr>
                                 <td>head</td>
                                 <td>
                                     <toggle width="30" height="28" ng-model="service.enableHead" ng-change="service.enableHead?msg.startHead():msg.stopHead()" on=" " off=" "></toggle>
@@ -992,15 +986,14 @@
                                 <td>
                                     <toggle width="30" height="28" ng-model="service.enableLeftHand" ng-change="service.enableLeftHand?msg.startLeftHand():msg.stopLeftHand()" on=" " off=" "></toggle>
                                 </td>
-                            </tr>
-                            <!-- need more structure
-                            <tr>
+                            </tr-->
+                            <!-- need more structure-->
+                            <!--tr>
                                 <td>left hand sensor</td>
                                 <td>
                                     <toggle width="30" height="28" ng-model="service.isVirtual" ng-change="!service.isVirtual?msg.setAllVirtual(false):msg.setAllVirtual(true)" on=" " off=" "></toggle>
                                 </td>
                             </tr>
-                            -->
                             <tr>
                                 <td>right arm</td>
                                 <td>
@@ -1013,7 +1006,6 @@
                                     <toggle width="30" height="28" ng-model="service.enableRightHand" ng-change="service.enableRightHand?msg.startRightHand():msg.stopRightHand()" on=" " off=" "></toggle>
                                 </td>
                             </tr>
-<!--                            
                             <tr>
                                 <td>right hand sensor</td>
                                 <td>
@@ -1031,8 +1023,7 @@
                                 <td>
                                     <toggle width="30" height="28" ng-model="service.isVirtual" ng-change="!service.isVirtual?msg.setAllVirtual(false):msg.setAllVirtual(true)" on=" " off=" "></toggle>
                                 </td>
-                            </tr>
--->                            
+                            </tr>                           
                             <tr>
                                 <td>torso</td>
                                 <td>
@@ -1044,24 +1035,32 @@
                                 <td>
                                     <toggle width="30" height="28" ng-model="service.enableOpenCV" ng-change="service.enableOpenCV?msg.startOpenCV():msg.stopOpenCV()" on=" " off=" "></toggle>
                                 </td>
-                            </tr>
+                            </tr-->
                             <tr>
                                 <td>simulator</td>
                                 <td>
-        <toggle width="30" height="28" ng-model="service.isSimulatorActivated" ng-change="!service.isSimulatorActivated?msg.stopSimulator():msg.startSimulator()" on=" " off=" "></toggle>
-    </td>
-</tr>
-<tr>
+                                    <toggle width="30" height="28" ng-model="service.isSimulatorActivated" ng-change="!service.isSimulatorActivated?msg.stopSimulator():msg.startSimulator()" on=" " off=" "></toggle>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td>audio player</td>
                                 <td>
                                     <toggle width="30" height="28" ng-model="service.enableAudioPlayer" ng-change="service.enableAudioPlayer?msg.startAudioPlayer():msg.stopAudioPlayer()" on=" " off=" "></toggle>
+                                    <button class="btn btn-default" ng-show="service.enableAudioPlayer" ng-click="mrl.changeTab(service.name + '.audioPlayer')">Open</button>
                                 </td>
-</tr>
+                            </tr>
                             <tr>
                                 <td>servo mixer</td>
                                 <td>
                                     <toggle width="30" height="28" ng-model="service.enableServoMixer" ng-change="service.enableServoMixer?msg.startServoMixer():msg.stopServoMixer()" on=" " off=" "></toggle>
                                     <button class="btn btn-default" ng-show="service.enableServoMixer" ng-click="mrl.changeTab(service.name + '.servoMixer')">Open</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>random</td>
+                                <td>
+                                    <toggle width="30" height="28" ng-model="service.enableRandom" ng-change="service.enableRandom?msg.startRandom():msg.stopRandom()" on=" " off=" "></toggle>
+                                    <button class="btn btn-default" ng-show="service.enableRandom" ng-click="mrl.changeTab(service.name + '.Random')">Open</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -1083,4 +1082,3 @@
     </td>
 </tr>
 </table>
-
