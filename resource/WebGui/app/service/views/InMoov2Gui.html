@@ -756,28 +756,28 @@
     <tr>
         <td>
             <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ultraSonicRight')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ultrasonicRight')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
             <!--------------------------------------------------------------->
             <img src="../UltrasonicSensor.png"/>
-            <label>ultraSonic Right:</label>
-            <!--<toggle width="70" height="30" ng-model="service.isUltraSonicRightActivated" title="To access settings, UltraSonic Right must be activated" ng-change="!service.isUltraSonicRightActivated?msg.stopUltraSonicRight():msg.startUltraSonicRight()" on="ON" off="OFF"/></toggle>-->
-            <toggle width="70" height="30" ng-model="service.isUltraSonicRightActivated" title="To access settings, UltraSonic Right must be activated" ng-change="!service.isUltraSonicRightActivated?msg.loadFile('resource/InMoov2/system/startScripts/i01_UltraSonicRight_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_UltraSonicRight_start.py')" on="ON" off="OFF"/></toggle>
+            <label>ultrasonic Right:</label>
+            <!--<toggle width="70" height="30" ng-model="service.enableUltrasonicRight" title="To access settings, ultrasonic Right must be activated" ng-change="!service.enableUltrasonicRight?msg.stopUltrasonicRight():msg.startUltrasonicRight()" on="ON" off="OFF"/></toggle>-->
+            <toggle width="70" height="30" ng-model="service.enableUltrasonicRight" title="To access settings, ultrasonic Right must be enabled" ng-change="!service.enableUltrasonicRight?msg.loadFile('resource/InMoov2/system/startScripts/i01_UltrasonicRight_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_UltrasonicRight_start.py')" on="ON" off="OFF"/></toggle>
 
-            &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.isUltraSonicRightActivated" ng-click="setPanel('ultraSonicRight')">Settings</button>
+            &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.enableUltrasonicRight" ng-click="mrl.changeTab(service.name + '.ultrasonicRight')">Settings</button>
         </td>
     </tr>
     <tr>
         <td>
             <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ultraSonicLeft')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ultrasonicLeft')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
             <!--------------------------------------------------------------->
             <img src="../UltrasonicSensor.png"/>
-            <label>ultraSonic Left:</label>
-            &nbsp;&nbsp;&nbsp;<!--<toggle width="70" height="30" ng-model="service.isUltraSonicLeftActivated" title="To access settings, UltraSonic Left must be activated" ng-change="!service.isUltraSonicLeftActivated?msg.stopUltraSonicLeft():msg.startUltraSonicLeft()" on="ON" off="OFF"/></toggle>-->
-            <toggle width="70" height="30" ng-model="service.isUltraSonicLeftActivated" title="To access settings, UltraSonic Left must be activated" ng-change="!service.isUltraSonicLeftActivated?msg.loadFile('resource/InMoov2/system/startScripts/i01_UltraSonicLeft_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_UltraSonicLeft_start.py')" on="ON" off="OFF"/></toggle>
+            <label>ultrasonic Left:</label>
+            &nbsp;&nbsp;&nbsp;<!--<toggle width="70" height="30" ng-model="service.enableUltrasonicLeft" title="To access settings, ultraSonic Left must be activated" ng-change="!service.enableUltrasonicLeft?msg.stopUltrasonicLeft():msg.startUltrasonicLeft()" on="ON" off="OFF"/></toggle>-->
+            <toggle width="70" height="30" ng-model="service.enableUltrasonicLeft" title="To access settings, ultrasonic Left must be enabled" ng-change="!service.enableUltrasonicLeft?msg.loadFile('resource/InMoov2/system/startScripts/i01_UltrasonicLeft_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_UltrasonicLeft_start.py')" on="ON" off="OFF"/></toggle>
 
 
-            &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.isUltraSonicLeftActivated" ng-click="setPanel('ultraSonicLeft')">Settings</button>
+            &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.enableUltrasonicLeft" ng-click="mrl.changeTab(service.name + '.ultrasonicLeft')">Settings</button>
         </td>
     </tr>
     <!--<tr>
