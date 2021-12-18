@@ -1,5 +1,5 @@
 #########################################
-# i01_ultraSonicLeft_stop.py
+# i01_ultrasonicLeft_stop.py
 # categories: inmoov2
 # more info @: http://myrobotlab.org/service/InMoov
 #########################################
@@ -7,6 +7,6 @@
 # Platform.setVirtual(True)"
 
 # stop a UltrasonicSensor
-Runtime.releaseService('i01.ultraSonicLeft')
+Runtime.releaseService('i01.ultrasonicLeft')
 i01.speakBlocking(i01.localize("STOPULTRASONIC"))
-isUltraSonicLeftActivated=False
+enableUltrasonicLeft=False

@@ -1,5 +1,5 @@
 #########################################
-# i01_ultraSonicRight_start.py
+# i01_ultrasonicRight_start.py
 # categories: inmoov2
 # more info @: http://myrobotlab.org/service/InMoov
 #########################################
@@ -7,6 +7,6 @@
 # Platform.setVirtual(True)"
 
 # create a UltrasonicSensor
-i01_ultraSonicRight = Runtime.start('i01.ultraSonicRight', 'UltrasonicSensor')
+i01_ultrasonicRight = Runtime.start('i01.ultrasonicRight', 'UltrasonicSensor')
 i01.speakBlocking(i01.localize("STARTINGULTRASONIC"))
-isUltraSonicRightActivated=True
+enableUltrasonicRight=True
