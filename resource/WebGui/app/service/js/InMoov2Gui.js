@@ -148,18 +148,22 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         $scope.mouth = mrl.getService(service.name + '.mouth')
         
         // state vars needed for enable/disable toggle display and control
-        service.enableAudioPlayer = msg.isPeerStarted('audioPlayer')    
-        service.enableServoMixer = msg.isPeerStarted('servoMixer')    
         service.enableHead = msg.isPeerStarted('head')
-
         service.enableLeftArm = msg.isPeerStarted('leftArm')
         service.enableLeftHand = msg.isPeerStarted('leftHand')
         service.enableRightArm = msg.isPeerStarted('rightArm')
         service.enableRightHand = msg.isPeerStarted('rightHand')
-
         service.enableTorso = msg.isPeerStarted('torso')
+        
         service.enableOpenCV = msg.isPeerStarted('opencv')
+        service.enableKinect = msg.isPeerStarted('kinect')
         service.enableChatBot = msg.isPeerStarted('chatBot')
+
+        service.enableUltrasonicRight = msg.isPeerStarted('ultrasonicRight')
+        service.enableUltrasonicLeft = msg.isPeerStarted('ultrasonicLeft')
+        service.enablePir = msg.isPeerStarted('pir')
+        service.enableAudioPlayer = msg.isPeerStarted('audioPlayer')
+        service.enableServoMixer = msg.isPeerStarted('servoMixer')
 
         $scope.$apply()
     }
