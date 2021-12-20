@@ -112,10 +112,10 @@ i01_audioPlayer = Runtime.start("i01.audioPlayer", "AudioFile")
 #############################################################
 ## Needs fixing in InMoov2.java
 #i01_pir = Runtime.start('i01.pir', 'Pir')
-#i01_ultraSonicRight = Runtime.start('i01.ultraSonicRight', 'UltrasonicSensor')
-#i01_ultraSonicLeft = Runtime.start('i01.ultraSonicLeft', 'UltrasonicSensor')
+i01_ultrasonicRight = Runtime.start('i01.ultrasonicRight', 'UltrasonicSensor')
+i01_ultrasonicLeft = Runtime.start('i01.ultrasonicLeft', 'UltrasonicSensor')
 #i01_neopixel = Runtime.start('i01.neopixel', 'Neopixel')
-#i01_opencv = Runtime.start('i01.opencv', 'OpenCV')
+i01_opencv = Runtime.start('i01.opencv', 'OpenCV')
 ##############################################################
 ## creating client connections connections ####
 
@@ -572,10 +572,15 @@ i01.startLeftArm()
 i01.startRightArm()
 i01.startTorso()
 #i01.startPir()
-#i01.startUltraSonicRightActivated()
-#i01.startUltraSonicLeftActivated()
+#i01.startUltrasonicRight(rightPort,64,63)
+#i01.startUltrasonicLeft(leftPort,64,63)
 #i01.startNeopixel()
-#i01.startOpenCV()
+i01.startOpenCV()
+# We add opencv settings
+i01_opencv.setGrabberType("OpenCV")
+i01_opencv.nativeViewer=False
+i01_opencv.webViewer=True
+
 i01.startAudioPlayer()
 i01.startServoMixer()
 jme = i01.startSimulator()
@@ -591,10 +596,10 @@ isTorsoActivated = True
 isEyeLidsActivated = True
 isServoMixerActivated = True
 isPirActivated = False
-isUltraSonicRightActivated = False
-isUltraSonicLeftActivated = False
+isUltrasonicRightActivated = True
+isUltrasonicLeftActivated = True
 isNeopixelActivated = False
-isOpenCVActivated = False
+isOpenCVActivated = True
 isRightHandSensorActivated = False
 isLeftHandSensorActivated = False
 isRightPortActivated = True
