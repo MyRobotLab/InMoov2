@@ -8,5 +8,6 @@
 
 # create a UltrasonicSensor
 i01_ultrasonicLeft = Runtime.start('i01.ultrasonicLeft', 'UltrasonicSensor')
-i01.speakBlocking(i01.localize("STARTINGULTRASONIC"))
+i01.speakBlocking(i01.localize("STARTINGULTRASONICLEFT"))
 enableUltrasonicLeft=True
+isUltrasonicLeftActivated=True
