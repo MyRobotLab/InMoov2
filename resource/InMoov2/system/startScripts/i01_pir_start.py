@@ -8,5 +8,7 @@
 
 # create a pir
 i01_pir = Runtime.start("i01.pir","Pir")
-i01.speakBlocking(i01.localize("STARTINGPIR"))
+i01_pir.setPin("23")
+i01.startPir()
 isPirActivated=True
+enablePir=True
