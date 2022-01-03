@@ -109,12 +109,13 @@ i01_leftArm_shoulder = Runtime.start('i01.leftArm.shoulder', 'Servo')
 i01_rightHand_wrist = Runtime.start('i01.rightHand.wrist', 'Servo')
 i01_mouth = Runtime.start('i01.mouth', 'MarySpeech')
 i01_audioPlayer = Runtime.start("i01.audioPlayer", "AudioFile")
+i01_controller3 = Runtime.start('i01.controller3', 'Arduino')
 #############################################################
 ## Needs fixing in InMoov2.java
-#i01_pir = Runtime.start('i01.pir', 'Pir')
+i01_pir = Runtime.start('i01.pir', 'Pir')
 i01_ultrasonicRight = Runtime.start('i01.ultrasonicRight', 'UltrasonicSensor')
 i01_ultrasonicLeft = Runtime.start('i01.ultrasonicLeft', 'UltrasonicSensor')
-#i01_neopixel = Runtime.start('i01.neopixel', 'Neopixel')
+i01_neopixel = Runtime.start('i01.neopixel', 'NeoPixel')
 i01_opencv = Runtime.start('i01.opencv', 'OpenCV')
 ##############################################################
 ## creating client connections connections ####
@@ -281,6 +282,7 @@ i01_rightArm_rotate.setAutoDisable(True)
 i01_left.setVirtual(True)
 # we have the following ports : [COM3.UART, COM4.UART, COM4, COM3]
 i01_left.connect("COM3")
+i01_left.setBoardMega()
 # make sure the pins are set before attaching
 i01_leftHand_thumb.setPin("2")
 i01_leftHand_index.setPin("3")
@@ -319,6 +321,23 @@ i01_left.attach("i01.head.eyeX")
 i01_left.attach("i01.leftArm.rotate")
 i01_left.attach("i01.torso.topStom")
 
+i01_ultrasonicLeft.setTriggerPin(64)
+i01_ultrasonicLeft.setEchoPin(63)
+i01_ultrasonicLeft.attach("i01.left")
+
+# Arduino Config : i01_controller3
+i01_controller3.setVirtual(True)
+# we have the following ports : [COM8.UART, COM8]
+i01_controller3.connect("COM8")
+i01_controller3.setBoardNano()
+# make sure the pins are set before attaching
+i01_neopixel.setPin(2)
+i01_neopixel.setPixelCount(16)
+i01_controller3.attach("i01.neopixel")
+i01_pir.setPin("23")
+i01_pir.attach("i01.left")
+
+
 # Servo Config : i01_rightArm_shoulder
 # sets initial position of servo before moving
 # in theory this is the position of the servo when this file was created
@@ -344,7 +363,8 @@ i01_leftHand_wrist.setAutoDisable(True)
 # Arduino Config : i01_right
 i01_right.setVirtual(True)
 # we have the following ports : [COM3.UART, COM4.UART, COM4, COM3]
-i01_right.connect("COM4")
+i01_right.connect("COM7")
+i01_right.setBoardMega()
 # make sure the pins are set before attaching
 i01_rightHand_majeure.setPin("4")
 i01_rightHand_ringFinger.setPin("5")
@@ -370,6 +390,11 @@ i01_right.attach("i01.rightHand.thumb")
 i01_right.attach("i01.rightArm.rotate")
 i01_right.attach("i01.rightArm.omoplate")
 i01_right.attach("i01.rightHand.pinky")
+
+i01_ultrasonicRight.setTriggerPin(64)
+i01_ultrasonicRight.setEchoPin(63)
+i01_ultrasonicRight.attach("i01.right")
+
 # Servo Config : i01_torso_lowStom
 # sets initial position of servo before moving
 # in theory this is the position of the servo when this file was created
@@ -571,10 +596,13 @@ i01.startRightHand()
 i01.startLeftArm()
 i01.startRightArm()
 i01.startTorso()
-#i01.startPir()
-#i01.startUltrasonicRight(rightPort,64,63)
-#i01.startUltrasonicLeft(leftPort,64,63)
-#i01.startNeopixel()
+i01.startPir()
+i01.startUltrasonicRight()
+i01.startUltrasonicLeft()
+i01.startNeopixel()
+i01_neopixel.setColor(0, 40, 220)
+i01_neopixel.setSpeed(30) 
+i01_neopixel.playAnimation("Ironman")
 i01.startOpenCV()
 # We add opencv settings
 i01_opencv.setGrabberType("OpenCV")
@@ -595,16 +623,16 @@ isHeadActivated = True
 isTorsoActivated = True
 isEyeLidsActivated = True
 isServoMixerActivated = True
-isPirActivated = False
+isPirActivated = True
 isUltrasonicRightActivated = True
 isUltrasonicLeftActivated = True
-isNeopixelActivated = False
+isNeopixelActivated = True
 isOpenCVActivated = True
 isRightHandSensorActivated = False
 isLeftHandSensorActivated = False
 isRightPortActivated = True
 isLeftPortActivated = True
-isController3Activated = False
+isController3Activated = True
 isController4Activated = False
 isAudioPlayerActivated = True
 
