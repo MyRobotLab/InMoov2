@@ -20,7 +20,7 @@ HealthCheckActivated=inmoovLifeConfig.getboolean('HEALTHCHECK', 'Activated')
 HealthCheckTimerValue=inmoovLifeConfig.getint('HEALTHCHECK', 'TimerValue')
 BatteryInSystem=inmoovLifeConfig.getboolean('HEALTHCHECK', 'BatteryInSystem')
 
-i01.RobotCanMoveHeadRandom=inmoovLifeConfig.getboolean('MOVEHEADRANDOM', 'RobotCanMoveHeadWhileSpeaking')
+RobotCanMoveHeadWhileSpeaking=inmoovLifeConfig.getboolean('MOVEHEADRANDOM', 'RobotCanMoveHeadWhileSpeaking')
 try:
   SleepTimeout=inmoovLifeConfig.getint('SLEEPMODE', 'SleepTimeout')
 except:
