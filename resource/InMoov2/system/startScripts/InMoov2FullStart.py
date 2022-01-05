@@ -30,6 +30,10 @@ RuningFolder="resource/InMoov2"
 execfile(RuningFolder+'/system/Import_Libraries.py')
 # common functions
 execfile(RuningFolder+'/system/Import_Functions.py')
+execfile(RuningFolder+'/life/MoveRandomize.py')
+execfile(RuningFolder+'/life/MoveHeadRandomize.py')
+execfile(RuningFolder+'/life/MoveEyesRandomize.py')
+execfile(RuningFolder+'/life/MoveBodyRandomize.py')
 
 RuningFolder=os.getcwd().replace("\\", "/")+"/"+RuningFolder+"/"
 # global vars import
@@ -627,7 +631,7 @@ isPirActivated = True
 isUltrasonicRightActivated = True
 isUltrasonicLeftActivated = True
 isNeopixelActivated = True
-isOpenCVActivated = True
+isOpenCvActivated = True
 isRightHandSensorActivated = False
 isLeftHandSensorActivated = False
 isRightPortActivated = True
@@ -636,9 +640,11 @@ isController3Activated = True
 isController4Activated = False
 isAudioPlayerActivated = True
 
+#RobotCanMoveHeadWhileSpeaking = True
+
 # This launch the chatbot for the first initialization
-if str(i01_chatBot.getPredicate("Friend","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("Friend","firstinit"))=="started":
-  i01_chatBot.setPredicate("default","topic","default")
-  i01_chatBot.getResponse("FIRST_INIT")
-else:
-  i01_chatBot.getResponse("WAKE_UP")
+#if str(i01_chatBot.getPredicate("Friend","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("Friend","firstinit"))=="started":
+  #i01_chatBot.setPredicate("default","topic","default")
+  #i01_chatBot.getResponse("FIRST_INIT")
+#else:
+  #i01_chatBot.getResponse("WAKE_UP")
