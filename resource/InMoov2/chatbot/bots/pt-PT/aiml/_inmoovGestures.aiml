@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!-- File: _inmoovGestures.aiml -->
-<!-- Author: Gael Langevin -->
-<!-- Last modified: December 31, 2018 -->
-<!--  -->
-<!-- This AIML file is part of the pt-PT 0.1 chat bot knowledge base. -->
-<!--  -->
-<!-- The pt-PT brain is Copyright &copy; 2018 by InMoov Foundation. -->
-<!--  -->
-<!-- The pt-PT brain is released under the terms of the GNU Lesser General -->
-<!-- Public License, as published by the Free Software Foundation. -->
-<!--  -->
-<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
-<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
-<!--  -->
-<!-- For more information see http://www.inmoov.fr -->
+
 <!--  -->
 <category><pattern>DESCANSAR</pattern>
 <template><random>

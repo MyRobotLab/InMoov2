@@ -22,7 +22,7 @@ isPirActivated=ThisServicePartConfig.getboolean('MAIN', 'isPirActivated')
 PirPin=ThisServicePartConfig.getint('MAIN', 'pirPin') 
 if ScriptType=="Virtual":pirPin=2
 pirArduino=ThisServicePartConfig.get('MAIN', 'pirControlerArduino')
-PlayCurstomSoundIfDetection=ThisServicePartConfig.getboolean('MAIN', 'PlayCurstomSoundIfDetection')
+PlayCustomSoundIfDetection=ThisServicePartConfig.getboolean('MAIN', 'PlayCustomSoundIfDetection')
 
 # ##############################################################################
 #                 SERVICE START

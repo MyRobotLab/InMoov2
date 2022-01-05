@@ -16,7 +16,7 @@ def call_911():
   i01.moveHand("left",180,180,65,81,41,143)
   i01.moveHand("right",180,180,18,61,36,21)
   i01.moveTorso(90,90,90)
-  AudioPlayer.playFileBlocking(RuningFolder+'/system/sounds/911.mp3')
+  i01.audioPlayer.playFileBlocking(RuningFolder+'/system/sounds/911.mp3')
   sleep(0.5)
   i01.speakBlocking("Help, I am calling because there is a human that wants to hurt me")
   i01.moveHead(90,90)

@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <!-- File: chatBot.aiml -->
-  <!-- Author: Gael Langevin, Anthony Gallot-->
-  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
-  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
-  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
-  <!-- Public License, as published by the Free Software Foundation. -->
-  <!--  -->
-  <!-- modified: Anthony Gallot -->
-  <!-- Last modified: 8 27, 2017 -->
-  <!-- This inmoovHindi brain file is distributed withOUT ANY WARRANTY; without even the -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
-  <!-- This file works with ProgramAB service with the software MyRobotLab -->
-  <!-- For more information see http://www.myrobotlab.org -->
-  <!-- For more information see http://www.inmoov.fr -->
   
      <!-- initialisation  -->
 	 <!-- updater  -->
@@ -112,6 +99,16 @@
         <srai>WAKE_UP</srai>
       </template>
     </category>
+
+    <category><pattern>AUDIO TEST</pattern>
+      <template><oob>
+         <mrl>
+          <service>i01.audioPlayer</service>
+          <method>play</method>
+          <param>InMoov\system\sounds\startupsound.mp3</param>
+         </mrl>
+       </oob></template>
+    </category>       
 	
     <category>
       <pattern># नहीं #</pattern>

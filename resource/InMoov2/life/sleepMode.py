@@ -26,7 +26,7 @@ def sleepModeWakeUp():
     rdmWakup=random.randint(1,3)
     if rdmWakup==1:
       sleep(0.5)
-      if PlayCurstomSoundIfDetection:AudioPlayer.playFile(RuningFolder+'/system/sounds/Notifications/'+random.choice(os.listdir(RuningFolder+'/system/sounds/Notifications')),False)
+      if PlayCustomSoundIfDetection:i01.audioPlayer.playFile(RuningFolder+'/system/sounds/Notifications/'+random.choice(os.listdir(RuningFolder+'/system/sounds/Notifications')),False)
     elif rdmWakup==2:
       if isNeopixelActivated:i01.setNeopixelAnimation("Larson Scanner", 255, 255, 0, 1)
       sleep(2)

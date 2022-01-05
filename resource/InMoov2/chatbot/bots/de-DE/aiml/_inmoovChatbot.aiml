@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!-- File: _inmoovChatbot.aiml -->
-<!-- Author: CEO Gael Langevin -->
-<!-- Last modified: February 11, 2019 -->
-<!--  -->
-<!-- This AIML file is part of the DE 0.1 chat bot knowledge base. -->
-<!--  -->
-<!-- The DE brain is Copyright &copy; 2019 by InMoov Foundation. -->
-<!--  -->
-<!-- The DE brain is released under the terms of the GNU Lesser General -->
-<!-- Public License, as published by the Free Software Foundation. -->
-<!--  -->
-<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
-<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
-<!--  -->
-<!-- For more information see http://www.inmoov.fr -->
 <!--  -->
 <category><pattern>SAGEN *</pattern>
 <template><star/></template>
@@ -162,6 +148,15 @@
 <template><li>
        Download ok, ich werde herunterfahren. bitte starte mich neu
       </li></template>
+</category>
+<category><pattern>AUDIO TEST</pattern>
+<template><oob>
+         <mrl>
+          <service>i01.audioPlayer</service>
+          <method>play</method>
+          <param>InMoov\system\sounds\startupsound.mp3</param>
+         </mrl>
+       </oob></template>
 </category>
 <category><pattern>WAKE_UP</pattern>
 <template>

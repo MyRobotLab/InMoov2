@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <!-- File: chatBot.aiml -->
-  <!-- Author: Gael Langevin -->
-  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
-  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
-  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
-  <!-- Public License, as published by the Free Software Foundation. -->
-  <!--  -->
-  <!-- modified: Gael -->
-  <!-- Last modified: henrikmyl 11/06, 2018 -->
-  <!-- This inmoovFinnish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
-  <!-- This file works with ProgramAB service with the software MyRobotLab -->
-  <!-- For more information see http://www.myrobotlab.org -->
-  <!-- For more information see http://www.inmoov.fr -->
-  
    <!-- Finnish language works only Voice RSS speechengine. Change speechengine in service_5_Mouth file.  -->
    <!-- Get free Voice RSS apikey: http://www.voicerss.org/ -->
    
@@ -123,7 +109,7 @@
 <category><pattern>ÄÄNITESTI</pattern>
 <template><oob>
          <mrl>
-          <service>AudioPlayer</service>
+          <service>i01.audioPlayer</service>
           <method>play</method>
           <param>InMoov\system\sounds\startupsound.mp3</param>
          </mrl>

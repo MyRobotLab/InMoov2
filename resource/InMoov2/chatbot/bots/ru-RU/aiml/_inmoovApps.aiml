@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!-- File: gesturesFrench.aiml -->
-  <!-- Author: Gael Langevin, Anthony Gallot -->
-  <!-- Last modified: Jun 6, 2017 -->
-  <!-- by Anthony Gallot : initial -->
-  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the  -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
-  <!-- This file works with ProgramAB service with the software MyRobotLab -->
-  <!-- For more information see http://www.myrobotlab.org -->
-  <!-- For more information see http://www.inmoov.fr -->
-  <!--  -->
-
-  <!-- Файл: gesturesFrench.aiml -->
-   <!-- Автор: Gael Langevin, Anthony Gallot -->
-   <!-- Последнее изменение: 6 июня 2017 г. -->
-   <!-- Anthony Gallot: Инициализировал -->
-     <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
-   <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
-   <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
-   <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
-   <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+  <!-- File: inmoovApps.aiml -->
 
 <!-- 1 - детская игра -->
 <!-- 2 - камень ножницы бумага -->
