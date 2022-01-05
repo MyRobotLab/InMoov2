@@ -170,9 +170,44 @@
 <category><pattern>SHUT DOWN</pattern>
 <template><srai>SHUTDOWN</srai></template>
 </category>
-<category><pattern>ROBOT COMPLETE SHUTDOWN</pattern>
-<template>Okay I will shut down completely
-<oob><mrl><service>python</service><method>exec</method><param>shutdownComplete()</param></mrl></oob></template>
+<category>
+    <pattern>ROBOT COMPLETE SHUTDOWN</pattern>
+    <template>
+      <think>
+        <set name="topic">SHUT_DOWN</set>
+      </think>
+            Do you want me to turn off my computer, say yes or no.
+    </template>
+</category>
+<topic name="SHUT_DOWN">
+    <category>
+    <pattern># YES #</pattern>
+    <that># WANT ME TO TURN OFF MY COMPUTER #</that>
+    <template>
+        <think>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>shutdownComplete()</param>
+          </mrl>
+        </oob>
+    </template>
+    </category>
+    <category>
+    <pattern># NO #</pattern>
+    <that># WANT ME TO TURN OFF MY COMPUTER #</that>
+    <template>Ok, I do not turn off my computer. 
+            <think><set name="topic">default</set></think></template>
+    </category>
+    <category>
+    <pattern>#</pattern>
+    <that># WANT ME TO TURN OFF MY COMPUTER #</that>
+    <template><think><set name="topic">default</set></think>
+        <srai>ROBOT COMPLETE SHUTDOWN</srai>
+    </template>
 </category>
 <category><pattern>GO TO SLEEP</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>

@@ -7,10 +7,11 @@
 ###############################################################################
 
 def shutdown():
-  if isEyeLidsActivated:
-    eyelids.autoBlink(False)
-    eyelids.eyelidleft.moveTo(180)
-    eyelids.eyelidright.moveTo(180)
+  i01.speakBlocking(i01.localize("SHUTDOWN"))
+  #if isEyeLidsActivated:
+    #i01_head.autoBlink(False)
+    #i01_head_eyelidLeft.moveTo(180)
+    #i01_head_eyelidRight.moveTo(180)
   if isNeopixelActivated:  
     i01.stopNeopixelAnimation()
   runtime.shutdown()
