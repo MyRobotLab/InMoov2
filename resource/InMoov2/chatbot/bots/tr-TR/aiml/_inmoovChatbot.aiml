@@ -97,7 +97,7 @@
 <category><pattern>SES TESTİ</pattern>
 <template><oob>
          <mrl>
-          <service>AudioPlayer</service>
+          <service>i01.audioPlayer</service>
           <method>play</method>
           <param>InMoov\system\sounds\startupsound.mp3</param>
          </mrl>
