@@ -21,7 +21,8 @@ musicpath = MyMusicPath
 import os
 
 #startup sound
-AudioPlayer = Runtime.createAndStart("AudioPlayer", "AudioFile")
+i01_audioPlayer = Runtime.start("i01.audioPlayer", "AudioFile")
+i01.startAudioPlayer()
 mouthControlAudiofile=True
 
 def onAudioStart(data):
@@ -69,13 +70,13 @@ def onAudioEnd(data):
     pass
   
 def AudioPlay(file):
-  AudioPlayer.playFile(file,False)
+  i01_audioPlayer.playFile(file,False)
       
 
 
-python.subscribe(AudioPlayer.getName(),"publishAudioStart")
-python.subscribe(AudioPlayer.getName(),"publishAudioEnd")
-if StartupSound:AudioPlayer.playFile(RuningFolder+'/system/sounds/startupsound.mp3', False)
+python.subscribe(i01_audioPlayer.getName(),"publishAudioStart")
+python.subscribe(i01_audioPlayer.getName(),"publishAudioEnd")
+if StartupSound:i01_audioPlayer.playFile(RuningFolder+'/system/sounds/startupsound.mp3', False)
 sleep(2)
 
 global musiconoff
@@ -115,7 +116,7 @@ def playRandomMusic():
       for i in range(0,len(element)+1):
         print(matches[i])
         sleep(1)
-        AudioPlayer.playFile((matches[i]) , False)
+        i01_audioPlayer.playFile((matches[i]) , False)
         ear.startListening()
         sleep(1)
         ear.setAutoListen(setAutoListen)
@@ -129,14 +130,14 @@ def playMusic():
     song=random.choice(files)
     sleep(3)
     #i01.speakBlocking("playing song" + str(song))
-    AudioPlayer.playFile(musicpath + str(song) , False)
+    i01_audioPlayer.playFile(musicpath + str(song) , False)
     print("playing song:" + str(song))
     # Select one of the mp3 files from the list at random
     mp3 = random.choice(fileList(musicpath))
     print mp3
     # Play the file
     sleep(1)
-    AudioPlayer.playFile((mp3) , False)
+    i01_audioPlayer.playFile((mp3) , False)
     ear.startListening()
     sleep(1)
     ear.setAutoListen(setAutoListen)
@@ -146,14 +147,14 @@ def playMusic():
 def pauseMusic():
     global musiconoff
     if musiconoff == 1:
-      AudioPlayer.pause()
+      i01_audioPlayer.pause()
       print "Pause music"
 
 # resume method 
 def resumeMusic():
     global musiconoff
     if musiconoff == 1:
-      AudioPlayer.resume()
+      i01_audioPlayer.resume()
       print "Resume song"
 
 # stop the music
@@ -162,13 +163,13 @@ def stopMusic():
     global cpt
     #print (cpt)
     if musiconoff == 1:
-        AudioPlayer.stop()
+        i01_audioPlayer.stop()
         print "Stop music"
         if cpt > 1:
             i = -2
             while i < cpt :   
                 #print (i)
-                AudioPlayer.stop()
+                i01_audioPlayer.stop()
                 i = i+1
                 sleep(0.2)
                 ear.startListening()
@@ -180,7 +181,7 @@ def stopMusic():
 def nextMusic():
     global musiconoff
     if musiconoff == 1:
-        AudioPlayer.stop()
+        i01_audioPlayer.stop()
         play()
         sleep(1)
         ear.startListening()
