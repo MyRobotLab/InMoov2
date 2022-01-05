@@ -5,7 +5,7 @@ isPirActivated=False
 ;witch arduino control pir :
 pirControlerArduino=right
 pirPin=23
-PlayCurstomSoundIfDetection=True
+PlayCustomSoundIfDetection=True
 
 ;----------------------------------- END --------------------------------------------------
 
