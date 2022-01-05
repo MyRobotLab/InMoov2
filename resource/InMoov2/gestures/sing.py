@@ -17,7 +17,7 @@ def sing():
   i01.moveHead(60,90)
   sleep(1)
   i01.moveHead(118.0,86.0,90.0,90.0,180.0,90.2)
-  AudioPlayer.playFile(RuningFolder+'/system/sounds/LaFluteEnchante1.mp3')
+  i01.audioPlayer.playFile(RuningFolder+'/system/sounds/LaFluteEnchante1.mp3')
   sleep(0.5)
   i01.moveHead(60,90)
   sleep(0.5)
