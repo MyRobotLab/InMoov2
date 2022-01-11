@@ -145,7 +145,6 @@ def setRobotLanguage():
 setRobotLanguage()
 
 #set english subconscious mouth to user globalised mouth now ( only if we found a language pack )
-#i01_mouth=i01.startMouth()
 
 #set CustomVoice
 voiceError=False
@@ -159,7 +158,6 @@ python.subscribe(i01_mouth.getName(),"publishStartSpeaking")
 python.subscribe(i01_mouth.getName(),"publishEndSpeaking")
 
 try:
-  #i01_mouth=i01.startMouth()
   i01_mouth.speak(",")
 except:
   i01_mouth=subconsciousMouth
@@ -187,8 +185,8 @@ if EarEngine=="WebkitSpeechRecognition":
 python.subscribe(i01_ear.getName(),"recognized")
 if not languageError and not voiceError and not vocalError:
   i01_mouth=i01.startMouth()
-  subconsciousMouth.releaseService()
-#if not vocalError:subconsciousMouth.releaseService()
+  #subconsciousMouth.releaseService()
+  
 if languageError:
   i01_mouth=subconsciousMouth
   errorSpokenFunc('MYLANGUAGE')
