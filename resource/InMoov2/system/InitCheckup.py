@@ -7,8 +7,10 @@
 ################################
 #subconscious for diagnose
 subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
-subconsciousMouth.setVoice("Mark")
+subconsciousMouth.setVoice("Obadiah")
 subconsciousMouth.setLocale("en-US")
+
+
 log = Runtime.createAndStart("log", "Log")
 runtime.setLogLevel("INFO")
 # libraries import
@@ -39,7 +41,7 @@ execfile(RuningFolder+'/system/Errors.py'.encode('utf8'))
 # execfile(RuningFolder+'/system/updater/mrl_updater.py')
 
 # mute for starting action vocals
-if IsMute:i01.setMute(True)
+if IsMute==1:i01.setMute(True)
 
 ################################
 # INIT.3 - services call
@@ -65,7 +67,7 @@ for filename in os.listdir(RuningFolder+'skeleton'):
 
 
 if ((not isEyeLidsActivated and not isHeadActivated and not isLeftArmActivated and not isLeftHandActivated and not isRightArmActivated and not isRightHandActivated and not isTorsoActivated) and (ScriptType!="Virtual" and ScriptType!="NoArduino")):
-  i01.speakBlocking(i01.localize("NOSKELETON"))
+  i01_mouth.speakBlocking(i01.localize("NOSKELETON"))
 
   
 ################################

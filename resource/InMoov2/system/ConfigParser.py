@@ -30,27 +30,17 @@ try:
   Language=BasicConfig.get('MAIN', 'Language')
 except:
   pass
-  
-if Language=="fr":Language="fr-FR"
-if Language=="en":Language="en-US"
-if Language=="es":Language="es-ES"
-if Language=="de":Language="de-DE"
-if Language=="nl":Language="nl-NL"
-if Language=="ru":Language="ru-RU"
-if Language=="in":Language="hi-IN"
-if Language=="it":Language="it-IT"
-if Language=="fi":Language="fi-FI"
-if Language=="pt":Language="pt-PT"
-if Language=="tr":Language="tr-TR"
-if Language=="cn":Language="cn-ZH"  
 
-languageError=False
-Runtime.setAllLocales(Language)
-
-#FIXME
-#if not Runtime.setAllLocales(Language):
-  #languageError=True
-  #Runtime.setAllLocales('en-US')
+              
+if Language=="fr-FR" or Language=="en-US" or Language=="nl-NL" or Language=="es-ES" or Language=="de-DE" or Language=="ru-RU" or Language=="hi-IN" or Language=="it-IT" or Language=="fi-FI" or Language=="pt-PT" or Language=="tr-TR" or Language=="cn-ZH":
+  global LanguageError
+  languageError=False
+  print("language in configs: "+str(Language))
+  Runtime.setAllLocales(Language)
+else:
+  languageError=True
+ 
+    
 
 DEBUG=BasicConfig.getboolean('MAIN', 'debug')
 IsMute=BasicConfig.getboolean('VOCAL', 'IsMute')

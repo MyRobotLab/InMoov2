@@ -11,8 +11,8 @@ Speechengine=MarySpeech
 
 VoiceName=Mark
 
-; MarySpeech voices -  http://myrobotlab.org/service/MarySpeech ( Mark, etc... ) print mouth.getVoices()
-; LocalSpeech : use local windows voices/macOs ( Ziza, etc... ) print mouth.getVoices()
+; MarySpeech voices -  http://myrobotlab.org/service/MarySpeech ( Mark, etc... ) print i01_mouth.getVoices()
+; LocalSpeech : use local windows voices/macOs ( Microsoft David Desktop male en-US, etc... ) print i01_mouth.getVoices()
 ; amazon polly :  http://docs.aws.amazon.com/polly/latest/dg/voicelist.html
 
 [API_KEY]
