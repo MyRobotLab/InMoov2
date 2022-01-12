@@ -1,5 +1,4 @@
 !!org.myrobotlab.service.config.ArduinoConfig
 connect: true
-# for Linux you'd put something like /dev/ttyACM0 for port here
-port: COM3
+port: COM7
 type: Arduino
