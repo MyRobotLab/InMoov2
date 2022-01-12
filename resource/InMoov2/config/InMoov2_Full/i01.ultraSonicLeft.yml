@@ -1,4 +1,6 @@
-!!org.myrobotlab.service.config.ServiceConfig
+!!org.myrobotlab.service.config.UltrasonicSensorConfig
+controller: i01.left
+echoPin: 63
+timeout: 500
+triggerPin: 64
 type: UltrasonicSensor
-#trigPin: '64'
-#echoPin: '63'
