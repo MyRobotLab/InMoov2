@@ -367,12 +367,48 @@
                     </td>
                 </tr>
                 <tr>
+                    <td ng-show="service.isHeadActivated">
+                        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('mouthControl')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <!--------------------------------------------------------------->
+                        <img src="../MouthControl.png"/>
+                        <label>mouthControl:</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-default" ng-click="setPanel('mouthControl')">Settings</button>
+                    </td>
+                </tr>
+                <tr>
                     <td>
                         <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export','i01.mouth')">Save Config</button>
                     </td>
                 </tr>
             </table>
             <!------------------------ mouth end ------------------------------>
+            <!------------------------ mouthControl begin ------------------------------>
+            <table ng-show="showPanel('mouthControl')" class="inmoov-sub-panel table table-striped">
+                <tr>
+                    <td>
+                        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('mouthControl')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <!--------------------------------------------------------------->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="tab-content" service-body panel="mrl.getPanel('i01.mouthControl')"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.mouthControl')">Save Config</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img width="50" height="50" ng-click="setPanel('mouth')" ng-src="../img/InMoov2/arrow_blue_left.png" src="../img/InMoov2/arrow_blue_left.png">
+                    </td>
+                </tr>
+            </table>
+            <!------------------------ mouthControl end ------------------------------>
             <!------------------------ head begin ------------------------------>
             <table ng-show="showPanel('head')" class="inmoov-sub-panel table table-striped">
                 <tr>
@@ -451,7 +487,7 @@
                         <!--------------------------------------------------------------->
                         <img src="../microcontroller_1.png"/>
                         <label>controller right:</label>
-                        <toggle width="70" height="30" id="rightPort" ng-model="service.isRightPortActivated" title="To access settings, the button must be activated" ng-change="!service.isRightPortActivated?msg.loadFile('resource/InMoov2/system/startScripts/i01_right_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_right_start.py')" on="ON" off="OFF"/></toggle>
+                        <toggle width="70" height="30" id="rightPort" ng-model="service.enableRightPort" title="To access settings, the button must be activated" ng-change="!service.enableRightPort?msg.loadFile('resource/InMoov2/system/startScripts/i01_right_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_right_start.py')" on="ON" off="OFF"/></toggle>
                         &nbsp;&nbsp;
                         <!--
 
@@ -466,7 +502,7 @@
 
 -->
                         <!--<button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="setPanel('controller_right')">Settings</button>-->
-                        <button class="btn btn-default" ng-show="service.isRightPortActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.right')">Settings</button>
+                        <button class="btn btn-default" ng-show="service.enableRightPort" width="80" height="30" ng-click="mrl.changeTab(service.name + '.right')">Settings</button>
                     </td>
                 </tr>
                 <tr>
@@ -737,7 +773,8 @@
             <img src="../Pir.png"/>
             <label>pir:</label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" ng-model="service.isPirActivated" title="To access settings, the pir must be activated" ng-change="!service.isPirActivated?msg.stopPir():msg.loadFile('resource/InMoov2/system/startScripts/i01_pir_start.py')" on="ON" off="OFF"/></toggle>
-            &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.isPirActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.pir')">Settings</button>
+            &nbsp;&nbsp;<!--button class="btn btn-default" ng-show="service.isPirActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.pir')">Settings</button-->
+            <button class="btn btn-default" ng-show="service.isPirActivated" width="80" height="30" ng-click="setPanel('pir')">Settings</button>
         </td>
     </tr>
     <!----------------------------pir end---------------------------------->
@@ -760,8 +797,8 @@
             <!--------------------------------------------------------------->
             <img src="../UltrasonicSensor.png"/>
             <label>ultrasonic Right:</label>
-            <!--<toggle width="70" height="30" ng-model="service.enableUltrasonicRight" title="To access settings, ultrasonic Right must be activated" ng-change="!service.enableUltrasonicRight?msg.stopUltrasonicRight():msg.startUltrasonicRight()" on="ON" off="OFF"/></toggle>-->
-            <toggle width="70" height="30" ng-model="service.enableUltrasonicRight" title="To access settings, ultrasonic Right must be enabled" ng-change="!service.enableUltrasonicRight?msg.loadFile('resource/InMoov2/system/startScripts/i01_UltrasonicRight_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_UltrasonicRight_start.py')" on="ON" off="OFF"/></toggle>
+            <!--toggle width="70" height="30" ng-model="service.isUltrasonicRightActivated" title="To access settings, ultrasonic Right must be activated" ng-change="!service.isUltrasonicRightActivated?msg.stopUltrasonicRight():msg.startUltrasonicRight()" on="ON" off="OFF"/></toggle-->
+            &nbsp;<toggle width="70" height="30" ng-model="service.isUltrasonicRightActivated" title="To access settings, ultrasonic Right must be activated" ng-change="!service.isUltrasonicRightActivated?msg.loadFile('resource/InMoov2/system/startScripts/i01_UltrasonicRight_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_UltrasonicRight_start.py')" on="ON" off="OFF"/></toggle>
 
             &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.enableUltrasonicRight" ng-click="mrl.changeTab(service.name + '.ultrasonicRight')">Settings</button>
         </td>
@@ -802,13 +839,34 @@
     <tr>
         <td>
             <p>---FIXME---</p>
-            <label>custom sounds if detection:</label>
-            &nbsp;&nbsp;<toggle width="100" height="30" ng-model="PlayCurstomSoundIfDetection" ng-change="PlayCurstomSoundIfDetection" on="ON" off="OFF"/></toggle>
+            <label>custom sounds:</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" title="Plays your custom sounds if Pir detects activity" ng-model="PlayCustomSoundIfDetection" ng-change="PlayCustomSoundIfDetection" on="ON" off="OFF"/></toggle>
         </td>
     </tr>
-    <tr>
+    <tr>    
         <td>
-            <button class="btn btn-default" ng-click="export()">Save Config</button>
+            <p>---FIXME---</p>
+            <label>pirEnableTracking:</label>
+            &nbsp;<toggle width="70" height="30" 
+            ng-model="service.pirEnableTracking" title="Automatically start tracking if Pir detects activity" ng-change="!service.pirEnableTracking?msg.stopPirEnableTracking(false):msg.startPirEnableTracking(true)" on="ON" off="OFF"/></toggle>
+        </td>
+    </tr>
+    <tr>    
+        <td>
+            <p>---FIXME---</p>
+            <label>pirWakeUp:</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" 
+            ng-model="service.pirWakeUp" title="Automatically wakes the robot if Pir detects activity" ng-change="!service.pirWakeUp?msg.stopPirWakeUp(false):msg.startPirWakeUp(true)" on="ON" off="OFF"/></toggle>
+        </td>
+    </tr>
+    <!--tr>
+        <td>
+        <button class="btn btn-default" ng-show="service.isPirActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.pir')">settings</button>
+    </td>
+    </tr-->
+    <tr> 
+        <td>
+            <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.pir')">Save Config</button>
         </td>
     </tr>
     <tr>
