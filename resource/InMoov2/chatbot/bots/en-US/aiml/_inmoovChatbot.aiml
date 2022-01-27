@@ -195,7 +195,7 @@
           </mrl>
         </oob>
     </template>
-    </category>
+    </category></topic>
     <category>
     <pattern># NO #</pattern>
     <that># WANT ME TO TURN OFF MY COMPUTER #</that>
