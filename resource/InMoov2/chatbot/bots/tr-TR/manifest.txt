@@ -1,0 +1,3 @@
+description=InMoov sohbet robotu Alice'e dayanmaktadır. Joseph Weizenbaum'un klasik ELIZA programından esinlenmiştir.
+locale=tr-TR
+image=bot.png
