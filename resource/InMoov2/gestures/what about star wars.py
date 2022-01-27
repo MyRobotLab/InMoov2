@@ -8,7 +8,7 @@ def whataboutstarwars():
   if x == 1:
       fullspeed()
       i01.moveHead(130,149,87,80,100)
-      i01.audioPlayer.playFile(RuningFolder+'/system/sounds/R2D2.mp3')
+      i01_audioPlayer.playFile(RuningFolder+'/system/sounds/R2D2.mp3')
       #i01_mouth.speak("R2D2")
       sleep(1)
       i01.moveHead(155,31,87,80,100)
@@ -23,7 +23,7 @@ def whataboutstarwars():
   if x == 2:
       fullspeed()
       #i01_mouth.speak("Hello sir, I am C3po unicyborg relations")
-      i01.audioPlayer.playFile(RuningFolder+'/system/sounds/Hello sir, I am C3po unicyborg relations.mp3')
+      i01_audioPlayer.playFile(RuningFolder+'/system/sounds/Hello sir, I am C3po unicyborg relations.mp3')
       i01.moveHead(138,80)
       i01.moveArm("left",79,42,23,41)
       i01.moveArm("right",71,40,14,39)
@@ -53,7 +53,7 @@ def whataboutstarwars():
       i01.moveHand("right",180,2,175,160,165,180)
       i01.moveTorso(90,90,90)
       #i01_mouth.speak("mmmmmmh, from the dark side you are")
-      i01.audioPlayer.playFile(RuningFolder+'/system/sounds/mmmmmmh, from the dark side you are.mp3')
+      i01_audioPlayer.playFile(RuningFolder+'/system/sounds/mmmmmmh, from the dark side you are.mp3')
       sleep(4.5)
   i01.finishedGesture()
   relax()

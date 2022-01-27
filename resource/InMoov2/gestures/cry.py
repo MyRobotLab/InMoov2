@@ -3,12 +3,12 @@ def cry():
   x = (random.randint(1, 2))
   if x == 1:
     Yes()
-    i01.audioPlayer.playFile(RuningFolder+'/system/sounds/cryBaby.mp3')  
+    i01_audioPlayer.playFile(RuningFolder+'/system/sounds/cryBaby.mp3')  
     sleep(2)
     ear.setAutoListen(setAutoListen)
   if x == 2:
     No()
-    i01.audioPlayer.playFile(RuningFolder+'/system/sounds/Sad-Robot.mp3')  
+    i01_audioPlayer.playFile(RuningFolder+'/system/sounds/Sad-Robot.mp3')  
     sleep(2)
     ear.setAutoListen(setAutoListen)
   i01.finishedGesture()  
