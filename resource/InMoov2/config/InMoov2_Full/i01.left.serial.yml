@@ -1,3 +1,0 @@
-!!org.myrobotlab.service.config.SerialConfig
-port: COM3
-type: Serial
