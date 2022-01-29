@@ -19,8 +19,6 @@ registry:
 - i01.mouthControl
 - i01.opencv
 - i01.right
-- i01.right.serial
 - i01.left
-- i01.left.serial
 type: Runtime
-virtual: true
+virtual: false

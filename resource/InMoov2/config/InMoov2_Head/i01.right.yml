@@ -1,4 +1,4 @@
 !!org.myrobotlab.service.config.ArduinoConfig
 connect: true
-port: COM7
+port: null
 type: Arduino
