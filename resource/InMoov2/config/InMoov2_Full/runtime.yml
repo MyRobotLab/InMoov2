@@ -54,4 +54,4 @@ registry:
 - i01.openCV
 - i01.neopixel
 type: Runtime
-virtual: true
+virtual: false
