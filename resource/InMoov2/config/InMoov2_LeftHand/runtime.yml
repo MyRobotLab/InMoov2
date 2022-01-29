@@ -11,4 +11,4 @@ registry:
 - i01.leftHand.pinky
 - i01.leftHand.wrist
 type: Runtime
-virtual: true
+virtual: false
