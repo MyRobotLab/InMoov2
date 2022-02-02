@@ -51,7 +51,7 @@ registry:
 - i01.pir
 - i01.ultraSonicRight
 - i01.ultraSonicLeft
-- i01.openCV
+- i01.opencv
 - i01.neopixel
 type: Runtime
 virtual: false
