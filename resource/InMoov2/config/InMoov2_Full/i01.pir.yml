@@ -1,6 +1,6 @@
 !!org.myrobotlab.service.config.PirConfig
 controller: i01.right
-enable: false
+enable: true
 pin: '23'
 rate: 1
 type: Pir
