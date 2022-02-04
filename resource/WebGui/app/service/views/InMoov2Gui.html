@@ -800,7 +800,7 @@
             <img src="../UltrasonicSensor.png"/>
             <label>ultrasonic Right:</label>
             <!--toggle width="70" height="30" ng-model="service.isUltrasonicRightActivated" title="To access settings, ultrasonic Right must be activated" ng-change="!service.isUltrasonicRightActivated?msg.stopUltrasonicRight():msg.startUltrasonicRight()" on="ON" off="OFF"/></toggle-->
-            &nbsp;<toggle width="70" height="30" ng-model="service.isUltrasonicRightActivated" title="To access settings, ultrasonic Right must be activated" ng-change="!service.isUltrasonicRightActivated?msg.loadFile('resource/InMoov2/system/startScripts/i01_UltrasonicRight_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_UltrasonicRight_start.py')" on="ON" off="OFF"/></toggle>
+            &nbsp;<toggle width="70" height="30" ng-model="service.isUltrasonicRightActivated" title="To access settings, ultrasonic Right must be activated" ng-change="!service.isUltrasonicRightActivated?msg.loadFile('resource/InMoov2/system/startScripts/i01_ultrasonicRight_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_ultrasonicRight_start.py')" on="ON" off="OFF"/></toggle>
 
             &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.enableUltrasonicRight" ng-click="mrl.changeTab(service.name + '.ultrasonicRight')">Settings</button>
         </td>
@@ -813,7 +813,7 @@
             <img src="../UltrasonicSensor.png"/>
             <label>ultrasonic Left:</label>
             &nbsp;&nbsp;&nbsp;<!--<toggle width="70" height="30" ng-model="service.enableUltrasonicLeft" title="To access settings, ultraSonic Left must be activated" ng-change="!service.enableUltrasonicLeft?msg.stopUltrasonicLeft():msg.startUltrasonicLeft()" on="ON" off="OFF"/></toggle>-->
-            <toggle width="70" height="30" ng-model="service.enableUltrasonicLeft" title="To access settings, ultrasonic Left must be enabled" ng-change="!service.enableUltrasonicLeft?msg.loadFile('resource/InMoov2/system/startScripts/i01_UltrasonicLeft_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_UltrasonicLeft_start.py')" on="ON" off="OFF"/></toggle>
+            <toggle width="70" height="30" ng-model="service.enableUltrasonicLeft" title="To access settings, ultrasonic Left must be enabled" ng-change="!service.enableUltrasonicLeft?msg.loadFile('resource/InMoov2/system/startScripts/i01_ultrasonicLeft_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_ultrasonicLeft_start.py')" on="ON" off="OFF"/></toggle>
 
 
             &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.enableUltrasonicLeft" ng-click="mrl.changeTab(service.name + '.ultrasonicLeft')">Settings</button>
