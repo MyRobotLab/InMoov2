@@ -1,4 +1,4 @@
-!!org.myrobotlab.service.config.AbstractSpeechSynthesisConfig
+!!org.myrobotlab.service.config.MarySpeechConfig
 blocking: false
 mute: false
 speechRecognizers:
