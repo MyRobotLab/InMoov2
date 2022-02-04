@@ -1,8 +1,9 @@
-!!org.myrobotlab.service.config.AbstractSpeechSynthesisConfig
+!!org.myrobotlab.service.config.MarySpeechConfig
 blocking: false
 mute: false
 speechRecognizers:
 - i01.ear
+- i01.mouthControl
 substitutions: null
 type: MarySpeech
 voice: Mark
