@@ -944,10 +944,19 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>random</td>
-                                <td>
+                                <td>random life</td>
+                                <!--td>
                                     <toggle width="30" height="28" ng-model="service.enableRandom" ng-change="service.enableRandom?msg.startRandom():msg.stopRandom()" on=" " off=" "></toggle>
                                     <button class="btn btn-default" ng-show="service.enableRandom" ng-click="mrl.changeTab(service.name + '.Random')">Open</button>
+                                </td-->
+                                <td>
+                                    <toggle width="30" height="28" ng-model="service.enableRandom" ng-change="!service.enableRandom?msg.loadFile('resource/InMoov2/system/startScripts/i01_random_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_random_start.py')" on=" " off=" "></toggle>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>custom script</td>
+                                <td>
+                                    <toggle width="30" height="28" title="This will load your script located in data/InMoov2/InMoovCustom.py" ng-model="service.enableCustomScript" ng-change="!service.enableCustomScript?msg.stop():msg.loadFile('data/InMoov2/InMoovCustom.py')" on=" " off=" "></toggle>
                                 </td>
                             </tr>
                         </tbody>
