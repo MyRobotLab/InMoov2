@@ -6,4 +6,4 @@
 # uncomment for virtual hardware
 
 # release random timers
-runtime.release("moveHeadTimer")
+runtime.release("moveHeadRandomize")
