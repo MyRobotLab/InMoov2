@@ -415,7 +415,7 @@
                         <!--------------------------------------------------------------->
                         <img src="../microcontroller_1.png"/>
                         <label>controller right:</label>
-                        <toggle width="70" height="30" id="leftPort" ng-model="service.enableRightPort" title="To access settings, the button must be activated" ng-change="!service.enableRightPort?msg.loadFile('resource/InMoov2/system/startScripts/i01_right_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_right_start.py')" on="ON" off="OFF"/></toggle>
+                        <toggle width="70" height="30" id="rightPort" ng-model="service.enableRightPort" title="To access settings, the button must be activated" ng-change="!service.enableRightPort?msg.loadFile('resource/InMoov2/system/startScripts/i01_right_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_right_start.py')" on="ON" off="OFF"/></toggle>
                         <!--toggle width="70" height="30" id="rightPort" ng-model="service.enableRightPort" title="To access settings, the button must be activated" ng-change="service.enableRightPort?msg.start(service.name + '.right','Arduino'):msg.release(service.name + '.right')" on="ON" off="OFF"/></toggle-->
                         &nbsp;&nbsp;
                         <button class="btn btn-default" ng-show="service.enableRightPort" width="80" height="30" ng-click="mrl.changeTab(service.name + '.right')">Settings</button>
