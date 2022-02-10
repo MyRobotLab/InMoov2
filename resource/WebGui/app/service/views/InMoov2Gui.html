@@ -415,7 +415,8 @@
                         <!--------------------------------------------------------------->
                         <img src="../microcontroller_1.png"/>
                         <label>controller right:</label>
-                        <toggle width="70" height="30" id="rightPort" ng-model="service.enableRightPort" title="To access settings, the button must be activated" ng-change="service.enableRightPort?msg.start(service.name + '.right', 'Arduino'):msg.release(service.name + '.right')" on="ON" off="OFF"/></toggle>
+                        <toggle width="70" height="30" id="leftPort" ng-model="service.enableRightPort" title="To access settings, the button must be activated" ng-change="!service.enableRightPort?msg.loadFile('resource/InMoov2/system/startScripts/i01_right_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_right_start.py')" on="ON" off="OFF"/></toggle>
+                        <!--toggle width="70" height="30" id="rightPort" ng-model="service.enableRightPort" title="To access settings, the button must be activated" ng-change="service.enableRightPort?msg.start(service.name + '.right','Arduino'):msg.release(service.name + '.right')" on="ON" off="OFF"/></toggle-->
                         &nbsp;&nbsp;
                         <button class="btn btn-default" ng-show="service.enableRightPort" width="80" height="30" ng-click="mrl.changeTab(service.name + '.right')">Settings</button>
                     </td>
@@ -426,13 +427,13 @@
                         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('left')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <!--------------------------------------------------------------->
                         <img src="../microcontroller_1.png"/>
-                        <label>controller left:</label><!--
-                        &nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="leftPort" ng-model="service.isLeftPortActivated" title="To access settings, the button must be activated" ng-change="!service.isLeftPortActivated?msg.loadFile('resource/InMoov2/system/startScripts/i01_left_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_left_start.py')" on="ON" off="OFF"/></toggle>
-                        &nbsp;&nbsp; -->
-                                                <toggle width="70" height="30" id="leftPort" ng-model="service.enableLeftPort" title="To access settings, the button must be activated" ng-change="service.enableLeftPort?msg.start(service.name + '.left', 'Arduino'):msg.release(service.name + '.left')" on="ON" off="OFF"/></toggle>
+                        <label>controller left:</label>
+                        &nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="leftPort" ng-model="service.enableLeftPort" title="To access settings, the button must be activated" ng-change="!service.enableLeftPort?msg.loadFile('resource/InMoov2/system/startScripts/i01_left_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_left_start.py')" on="ON" off="OFF"/></toggle>
+                        &nbsp;&nbsp;
+                        <!--&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="leftPort" ng-model="service.enableLeftPort" title="To access settings, the button must be started" ng-change="service.enableLeftPort?msg.start(service.name + '.left', 'Arduino'):msg.release(service.name + '.left')" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;-->
 
-                        <!--<button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="setPanel('controller_left')">Settings</button>-->
-                        <button class="btn btn-default" ng-show="service.isLeftPortActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.left')">Settings</button>
+                        <!--<button class="btn btn-default" ng-show="service.enableLeftPort" width="80" height="30" ng-click="setPanel('controller_left')">Settings</button>-->
+                        <button class="btn btn-default" ng-show="service.enableLeftPort" width="80" height="30" ng-click="mrl.changeTab(service.name + '.left')">Settings</button>
                     </td>
                 </tr>
                 <tr>
@@ -442,10 +443,11 @@
                         <!--------------------------------------------------------------->
                         <img src="../microcontroller_1.png"/>
                         <label>controller 3:</label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="controller3" ng-model="service.isController3Activated" title="To access settings, the button must be activated" ng-change="!service.isController3Activated?msg.loadFile('resource/InMoov2/system/startScripts/i01_controller3_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_controller3_start.py')" on="ON" off="OFF"/></toggle>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="controller3" ng-model="service.enableController3" title="To access settings, the button must be activated" ng-change="!service.enableController3?msg.loadFile('resource/InMoov2/system/startScripts/i01_controller3_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_controller3_start.py')" on="ON" off="OFF"/></toggle>
                         &nbsp;&nbsp;
-                        <!--<button class="btn btn-default" ng-show="service.isController3Activated" width="80" height="30" ng-click="setPanel('controller_3')">Settings</button>-->
-                        <button class="btn btn-default" ng-show="service.isController3Activated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller3')">Settings</button>
+                        <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="leftPort" ng-model="service.enableController3" title="To access settings, the button must be started" ng-change="service.enableController3?msg.start(service.name + '.controller3', 'Arduino'):msg.release(service.name + '.controller3')" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;-->
+                        <!--<button class="btn btn-default" ng-show="service.enableController3" width="80" height="30" ng-click="setPanel('controller_3')">Settings</button>-->
+                        <button class="btn btn-default" ng-show="service.enableController3" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller3')">Settings</button>
                     </td>
                 </tr>
                 <tr>
@@ -455,10 +457,11 @@
                         <!--------------------------------------------------------------->
                         <img src="../microcontroller_1.png"/>
                         <label>controller 4:</label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="controller4" ng-model="service.isController4Activated" title="To access settings, the button must be activated" ng-change="!service.isController4Activated?msg.loadFile('resource/InMoov2/system/startScripts/i01_controller4_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_controller4_start.py')" on="ON" off="OFF"/></toggle>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="controller4" ng-model="service.enableController4" title="To access settings, the button must be activated" ng-change="!service.enableController4?msg.loadFile('resource/InMoov2/system/startScripts/i01_controller4_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_controller4_start.py')" on="ON" off="OFF"/></toggle>
                         &nbsp;&nbsp;
-                        <!--<button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="setPanel('controller_4')">Settings</button>-->
-                        <button class="btn btn-default" ng-show="service.isController4Activated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller4')">Settings</button>
+                        <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" id="leftPort" ng-model="service.enableController4" title="To access settings, the button must be started" ng-change="service.enableController4?msg.start(service.name + '.controller4', 'Arduino'):msg.release(service.name + '.controller4')" on="ON" off="OFF"/></toggle>&nbsp;&nbsp;-->
+                        <!--<button class="btn btn-default" ng-show="service.enableController4" width="80" height="30" ng-click="setPanel('controller_4')">Settings</button>-->
+                        <button class="btn btn-default" ng-show="service.enableController4" width="80" height="30" ng-click="mrl.changeTab(service.name + '.controller4')">Settings</button>
                 </tr>
                 <tr>
                     <td>
@@ -947,7 +950,7 @@
                                 <td>random life</td>
                                 <!--td>
                                     <toggle width="30" height="28" ng-model="service.enableRandom" ng-change="service.enableRandom?msg.startRandom():msg.stopRandom()" on=" " off=" "></toggle>
-                                    <button class="btn btn-default" ng-show="service.enableRandom" ng-click="mrl.changeTab(service.name + '.Random')">Open</button>
+                                    <button class="btn btn-default" ng-show="service.enableRandom" ng-click="mrl.changeTab(service.name + '.random')">Open</button>
                                 </td-->
                                 <td>
                                     <toggle width="30" height="28" ng-model="service.enableRandom" ng-change="!service.enableRandom?msg.loadFile('resource/InMoov2/system/startScripts/i01_random_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_random_start.py')" on=" " off=" "></toggle>
