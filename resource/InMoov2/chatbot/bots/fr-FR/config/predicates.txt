@@ -1,2 +1,3 @@
 name:Humain
 userDescription:Pas de fiche personnelle
+firstinit:unknown

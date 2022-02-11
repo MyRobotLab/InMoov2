@@ -616,7 +616,7 @@ I call you <get name="name"/>.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname","<star/>"), i01_chatBot.setPredicate(u"firstname","<star/>"), i01_chatBot.setPredicate(u"name","<star/>"), i01_chatBot.setPredicate(u"default","lastUsername","<star/>")</param>
+            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname","<star/>"), i01_chatBot.setPredicate(u,"<star/>","firstname","<star/>"), i01_chatBot.setPredicate(u"<star/>","name","<star/>"), i01_chatBot.setPredicate(u"default","lastUsername","<star/>")</param>
           </mrl>
         </oob></template>
 </category>
@@ -636,7 +636,7 @@ I call you <get name="name"/>.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname","<star/> <star index="2"/>"), i01_chatBot.setPredicate(u"firstname","<star/>"), i01_chatBot.setPredicate(u"lastname","<star index="2"/>"), i01_chatBot.setPredicate(u"name","<star/> <star index="2"/>"), i01_chatBot.setPredicate(u"default","lastUsername","<star/>")</param>
+            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname","<star/> <star index="2"/>"), i01_chatBot.setPredicate(u"<star/>","firstname","<star/>"), i01_chatBot.setPredicate(u"<star/>","lastname","<star index="2"/>"), i01_chatBot.setPredicate(u"<star/>","name","<star/> <star index="2"/>"), i01_chatBot.setPredicate(u"default","lastUsername","<star/>")</param>
           </mrl>
         </oob></template>
 </category>
@@ -655,7 +655,7 @@ I call you <get name="name"/>.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname","<star/> <star index="2"/> <star index="3"/>"), i01_chatBot.setPredicate(u"firstname","<star/>"), i01_chatBot.setPredicate(u"middlename","<star index="2"/>"), i01_chatBot.setPredicate(u"lastname","<star index="3"/>"), i01_chatBot.setPredicate(u"name","<star/>"), i01_chatBot.setPredicate(u"default","lastUsername","<star/>")</param>
+            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname","<star/> <star index="2"/> <star index="3"/>"), i01_chatBot.setPredicate(u"<star/>","firstname","<star/>"), i01_chatBot.setPredicate(u"<star/>","middlename","<star index="2"/>"), i01_chatBot.setPredicate(u"<star/>","lastname","<star index="3"/>"), i01_chatBot.setPredicate(u"<star/>","name","<star/>"), i01_chatBot.setPredicate(u"default","lastUsername","<star/>")</param>
           </mrl>
         </oob></template>
 </category>
