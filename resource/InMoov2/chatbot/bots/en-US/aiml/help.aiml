@@ -1,19 +1,65 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <!-- File: help.aiml -->
-  <!-- Author: Dr. Richard S. Wallace -->
-  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
-  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
-  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
-  <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
-  <!-- modified: Gael Langevin -->
-  <!-- Last modified: September 16, 2016 -->
-  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
-  <!-- This file works with ProgramAB service with the software MyRobotLab -->
-  <!-- For more information see http://www.myrobotlab.org -->
-  <!-- For more information see http://www.inmoov.fr -->
-  <!--  -->
- 
+<category><pattern>START SERVICE SEARCH</pattern>
+<template>Starting service i01.chatBot.search
+      <oob>
+        <mrl>
+          <service>runtime</service>
+          <method>createAndStart</method>
+          <param>i01.chatBot.search</param>
+          <param>GoogleSearch</param>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>RELEASE SERVICE SEARCH</pattern>
+<template>Releasing service i01.chatBot.search
+      <oob>
+        <mrl>
+          <service>runtime</service>
+          <method>release</method>
+          <param>i01.chatBot.search</param>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>* START SERVICE</pattern>
+<template>Starting service <star/>
+      <oob>
+        <mrl>
+          <service>runtime</service>
+          <method>createAndStart</method>
+          <param><star/></param>
+          <param><star/></param>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>* RELEASE SERVICE</pattern>
+<template>Releasing service <star/>
+      <oob>
+        <mrl>
+          <service>runtime</service>
+          <method>release</method>
+          <param><star/></param>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>START PIR</pattern>
+<template>ok
+      <oob>
+        <mrl>
+          <service>i01</service>
+          <method>startPir</method>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>START ULTRA SONIC RIGHT</pattern>
+<template>ok
+      <oob>
+        <mrl>
+          <service>i01</service>
+          <method>startUltrasonicRight</method>
+        </mrl>
+      </oob></template>
+</category>
 </aiml>
