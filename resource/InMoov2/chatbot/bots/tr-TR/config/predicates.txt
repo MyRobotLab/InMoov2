@@ -33,6 +33,7 @@ favoritesong:what
 favoritesport:what
 favoritetvshow:what
 firstname:what
+firstinit:unknown
 friend:who
 gender:unknown
 girlfriend:who
