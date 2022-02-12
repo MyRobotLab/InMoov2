@@ -7,3 +7,4 @@
 
 # release random timers
 runtime.release("moveHeadRandomize")
+runtime.release("moveBodyRandomize")
