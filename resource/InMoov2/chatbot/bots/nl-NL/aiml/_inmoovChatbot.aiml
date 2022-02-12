@@ -2,11 +2,7 @@
 <aiml>
   <!-- File: chatBot.aiml -->
   
-     <!-- initialisation  -->
-	 <!-- updater  -->
-	 <!-- gesture  -->
-  
-  
+
     <category>
     <pattern>SAY *</pattern>
     <template>
@@ -25,8 +21,8 @@
       <think>
         <set name="topic">firstinit</set>
       </think>
-		Hallo, dit is mijn eerste initialisatie. Ik heb wat informatie nodig, ik luister, wat is mijn naam ?
-	</template>
+    Hallo, dit is mijn eerste initialisatie. Ik heb wat informatie nodig, ik luister, wat is mijn naam ?
+  </template>
   </category>
   
   <topic name="firstinit">
@@ -43,7 +39,7 @@
         </think>
       </template>
     </category>
-	
+  
     <category>
       <pattern>#</pattern>
       <that># Mag ik je naam weten #</that>
@@ -56,33 +52,33 @@
         </think>
       </template>
     </category>
-	
+  
     <category>
       <pattern># ja #</pattern>
       <that># als mijn naam is #</that>
       <template>
         <random>
-			<li>
-			Ik vind deze naam leuk , <get name="tmpname" />.
-			</li>
-			<li>
-			Zeer mooie naam, <get name="tmpname" /> is geweldig.
-			</li>
+      <li>
+      Ik vind deze naam leuk , <get name="tmpname" />.
+      </li>
+      <li>
+      Zeer mooie naam, <get name="tmpname" /> is geweldig.
+      </li>
         </random>
-	Ik moet je kennen, ik luister, Mag ik je naam weten ?
-	<think><set name="botname"><get name="tmpname" /></set></think></template>
+  Ik moet je kennen, ik luister, Mag ik je naam weten ?
+  <think><set name="botname"><get name="tmpname" /></set></think></template>
     </category>
-	
+  
     <category>
       <pattern># ja #</pattern>
       <that># als je naam #</that>
       <template>
         <random>
-		<li>
-			Nu ken ik jou, <get name="tmpname" />. ik ben blij.
-		</li>
+    <li>
+      Nu ken ik jou, <get name="tmpname" />. ik ben blij.
+    </li>
         </random>
-		
+    
         <think>
           <set name="name">
             <get name="tmpname" />
@@ -100,36 +96,36 @@
         <srai>WAKE_UP</srai>
       </template>
     </category>
-	
+  
     <category>
       <pattern># nee #</pattern>
       <that># als mijn naam is #</that>
       <template>
-	We starten opnieuw.
+  We starten opnieuw.
   Ik luister. wat is mijn naam ?
     </template>
     </category>
-	
+  
     <category>
       <pattern># nee #</pattern>
       <that># als je naam #</that>
       <template>
-	We starten opnieuw.
+  We starten opnieuw.
   Ik luister. Mag ik je naam weten ?
     </template>
     </category>
-	
+  
     <category>
       <pattern>#</pattern>
       <that># zeg ja, of nee #</that>
       <template>
         <random>
           <li>
-	Gelieve mijn vraag te beantwoorden, het is belangrijk
-	</li>
+  Gelieve mijn vraag te beantwoorden, het is belangrijk
+  </li>
           <li>
-	ik herhaal.
-	</li>
+  ik herhaal.
+  </li>
         </random>
         <get name="questionfirstinit" />
       </template>
@@ -143,13 +139,13 @@
     <pattern>SYSTEM_NEW_VERSION</pattern>
     <template>
        <think><set name="topic">updater</set></think>
-	   Alert, nieuwe Inmoov besturingssysteem versie beschikbaar, als u dat wenst, kan ik het bijwerken, ja of nee
-	   </template>
+     Alert, nieuwe Inmoov besturingssysteem versie beschikbaar, als u dat wenst, kan ik het bijwerken, ja of nee
+     </template>
   </category>
   
   <topic name="updater">
   
-	
+  
     <category>
       <pattern># YES #</pattern>
       <that># zeg ja #</that>
@@ -157,43 +153,43 @@
        <think>
          <set name="topic">default</set>
         </think>
-			<li>
-			Begin de download, wacht alstublieft.
-			</li>
-	<oob>
+      <li>
+      Begin de download, wacht alstublieft.
+      </li>
+  <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
             <param>updateMe()</param>
           </mrl>
-     </oob>		
-	</template>
+     </oob>   
+  </template>
     </category>
-	
+  
      <category>
       <pattern># NO #</pattern>
       <that># zeg ja #</that>
       <template>
-	  <think>
+    <think>
          <set name="topic">default</set>
         </think>
-	Oké, zoals je wil, misschien de volgende keer
-		<oob>
+  Oké, zoals je wil, misschien de volgende keer
+    <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
             <param>dontUpdateMe()</param>
           </mrl>
-     </oob>	
+     </oob> 
     </template>
     </category>
-	
+  
     <category>
       <pattern>#</pattern>
       <that># zeg ja #</that>
       <template>Gelieve mijn vraag te stellen, het is belangrijk, ja of nee zeggen</template>
     </category>
-		
+    
   </topic>
   
     <category>
@@ -215,16 +211,13 @@
     </template>
   </category>
   
-    <!-- end updater  -->
-  
-	<!-- gesture  -->
-  </category>
+
   <category><pattern>AUDIO TEST</pattern>
     <template><oob>
          <mrl>
           <service>i01.audioPlayer</service>
           <method>play</method>
-          <param>InMoov\system\sounds\startupsound.mp3</param>
+          <param>resource\InMoov2\system\sounds\startupsound.mp3</param>
          </mrl>
        </oob></template>
   </category>
@@ -239,7 +232,7 @@
         </random>
     </template>
   </category>
-	
+  
   <category>
     <pattern>WAKKER WORDEN</pattern>
     <template>
