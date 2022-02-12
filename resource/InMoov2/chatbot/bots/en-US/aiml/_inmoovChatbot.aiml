@@ -51,7 +51,10 @@
         <li>I am glad to know you, <get name="tmpname"/>.</li>
         <li>Nice to meet you, <get name="tmpname"/>.</li>
         </random>
-		
+        <random>
+        <li>Just say HELP if you need me.</li>
+        <li>Say HELP ME PLEASE if you need me.</li>
+		</random>
         <think>
           <set name="name">
             <get name="tmpname"/>
@@ -66,7 +69,7 @@
             <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname","<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name","<get name="tmpname"/>"), i01_chatBot.setPredicate(u"default","lastUsername","<get name="tmpname"/>"), i01_chatBot.setPredicate(u"default","firstinit","ok"), i01_chatBot.savePredicates()</param>
           </mrl>
         </oob>
-        <srai>WAKE_UP</srai></template>
+        </template>
 </category></topic>
 
 <topic name="FIRSTINIT">
@@ -147,7 +150,7 @@
          <mrl>
           <service>i01.audioPlayer</service>
           <method>play</method>
-          <param>InMoov\system\sounds\startupsound.mp3</param>
+          <param>resource/InMoov2\system\sounds\startupsound.mp3</param>
          </mrl>
        </oob></template>
 </category>
