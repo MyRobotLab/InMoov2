@@ -12,7 +12,7 @@
 		Merhaba, Bu benim ilk başlatmam. Bazı bilgilere ihtiyacım var dinliyorum benim adım ne ?</template>
 </category>
 <topic name="FIRSTINIT">
-<category><pattern>#</pattern><that># BENİM ADIM NE #</that>
+<category><pattern>#</pattern><that># BAZI BILGILERE IHTIYACIM VAR DINLIYORUM BENIM ADIM NE #</that>
 <template><set name="questionfirstinit">eğer benim adım <star/> , evet ya da hayır de</set>
         <think>
           <set name="tmpname">
@@ -22,7 +22,7 @@
 </category></topic>
 
 <topic name="FIRSTINIT">
-<category><pattern>#</pattern><that># İSMİNİZİ ÖĞRENEBİLİR MİYİM #</that>
+<category><pattern>#</pattern><that># SENI TANIMAM GEREK DINLIYORUM ISMINI ALABILIR MIYIM #</that>
 <template><set name="questionfirstinit">eğer ismin <star/> , evet ya da hayır de</set>
         <think>
           <set name="tmpname">
@@ -99,7 +99,7 @@
          <mrl>
           <service>i01.audioPlayer</service>
           <method>play</method>
-          <param>InMoov\system\sounds\startupsound.mp3</param>
+          <param>resource\InMoov2\system\sounds\startupsound.mp3</param>
          </mrl>
        </oob></template>
 </category>
