@@ -9,19 +9,19 @@ def MoveHead(timedata):
   MoveHeadTimer.setInterval(random.randint(200,1000))
   #if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01_opencv.isCapturing():
   if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping:
-    if isHeadActivated and RobotCanMoveHeadWhileSpeaking==1:
-      if isOpenCvActivated:
+    if runtime.isStarted('i01.head'): and RobotCanMoveHeadWhileSpeaking==1:
+      if runtime.isStarted('i01.opencv'):
         if not i01_opencv.isCapturing():
           i01.setHeadSpeed(random.randint(8,20),random.randint(8,20),random.randint(8,20))
           #wait servo last move
-          if not i01_head.rothead.isMoving():i01_head.rothead.moveTo(random.uniform(65,115))
-          if not i01_head.neck.isMoving():i01_head.neck.moveTo(random.uniform(70,110))
+          if not i01_head_rothead.isMoving():i01_head_rothead.moveTo(random.uniform(65,115))
+          if not i01_head_neck.isMoving():i01_head_neck.moveTo(random.uniform(70,110))
           #if not i01_head.rollNeck.isMoving():i01_head.rollNeck.moveTo(random.uniform(70,110))
       else:
         i01.setHeadSpeed(random.randint(8,20),random.randint(8,20),random.randint(8,20))
         #wait servo last move
-        if not i01_head.rothead.isMoving():i01_head.rothead.moveTo(random.uniform(65,115))
-        if not i01_head.neck.isMoving():i01_head.neck.moveTo(random.uniform(70,110))
+        if not i01_head_rothead.isMoving():i01_head_rothead.moveTo(random.uniform(65,115))
+        if not i01_head_neck.isMoving():i01_head_neck.moveTo(random.uniform(70,110))
         #if not i01_head.rollNeck.isMoving():i01_head.rollNeck.moveTo(random.uniform(70,110))
     else:
       MoveHeadTimer.stopClock()
@@ -31,17 +31,17 @@ def MoveHeadStart():
   
   print "moveheadstart"
   if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01_opencv.isCapturing():
-    if not isHeadActivated:MoveHeadTimer.stopClock()
+    if not runtime.isStarted('i01.head'):MoveHeadTimer.stopClock()
     #if RobotCanMoveHeadWhileSpeaking==0:MoveHeadTimer.stopClock()
     
 def MoveHeadStop():
   
   if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01_opencv.isCapturing():
-    if isHeadActivated:
+    if runtime.isStarted('i01.head'):
       i01.setHeadSpeed(25,25,25)
       i01_head.rest()
       i01.setHeadSpeed(40,40,40)
-      i01_head.jaw.setSpeed(500.0)
+      i01_head_jaw.setSpeed(500.0)
       
     
 MoveHeadTimer.addListener("pulse", python.name, "MoveHead")
