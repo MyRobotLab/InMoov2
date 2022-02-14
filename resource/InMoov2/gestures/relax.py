@@ -1,5 +1,5 @@
 def relax():
-  if isNeopixelActivated:
+  if runtime.isStarted('i01.neopixel'):
     i01.setNeopixelAnimation("Color Wipe", 0, 0, 20, 1)
     sleep(2)
     i01.setNeopixelAnimation("Ironman", 0, 0, 255, 1)

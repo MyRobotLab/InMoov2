@@ -1,10 +1,10 @@
 def whoisthis():
-  if isNeopixelActivated==1:
+  if runtime.isStarted('i01.neopixel'):
     i01.setNeopixelAnimation("Color Wipe", 100, 5, 10, 15) 
-  if isChatBotActivated:
-    if isOpenCvActivated==1:
+  if runtime.isStarted('i01.chatBot'):
+    if runtime.isStarted('i01.opencv'):
       i01.cameraOn()
-      fr=i01.vision.setActiveFilter("FaceRecognizer")
+      fr=i01.opencv.setActiveFilter("FaceRecognizer")
       # set the name on the filter that will be used for the saved examples
       #fr.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
       fr.train#Name = name

@@ -1,5 +1,5 @@
 def unhappy():
-  if isNeopixelActivated:
+  if runtime.isStarted('i01.neopixel'):
     i01.setNeopixelAnimation("Color Wipe", 20, 0, 0, 1)
     sleep(2)
   i01.startedGesture()

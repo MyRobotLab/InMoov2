@@ -13,7 +13,7 @@
 def startYoloInventory(duration):
   i01.speak(i01_chatBot.getPredicate("startupSentence"))
   sleep(5)
-  if isNeopixelActivated==1:
+  if runtime.isStarted('i01.neopixel'):
     i01.setNeopixelAnimation("Color Wipe", 25, 5, 10, 15)
   enableYoloFor(duration)
   # interpret results ...

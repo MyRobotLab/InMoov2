@@ -1,7 +1,7 @@
 def comehere():
   fullspeed()
   rest()
-  if isNeopixelActivated:
+  if runtime.isStarted('i01.neopixel'):
     i01.setNeopixelAnimation("Larson Scanner", 0, 200, 0, 1)
   i01.startedGesture()
 ##look around
