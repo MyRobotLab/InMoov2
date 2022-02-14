@@ -76,7 +76,7 @@ def onEndSpeaking(text):
     if not MoveRandomTimer.isClockRunning():
       MoveHeadTimer.stopClock()
       MoveEyesTimer.stopClock()
-    if flash_when_speak and isNeopixelActivated:i01.stopNeopixelAnimation()
+    if flash_when_speak and runtime.isStarted('i01.neopixel'):i01.stopNeopixelAnimation()
 
   if AudioSignalProcessing:
     try:
@@ -109,7 +109,7 @@ def onStartSpeaking(text):
       if random.randint(0,1)==1:
         i01.RobotCanMoveEyesRandom=True #FIXME in java
         MoveEyesTimer.startClock()
-    if flash_when_speak and isNeopixelActivated:i01.setNeopixelAnimation("Flash Random", 255, 255, 255, 1)
+    if flash_when_speak and runtime.isStarted('i01.neopixel'):i01.setNeopixelAnimation("Flash Random", 255, 255, 255, 1)
     
 # ##############################################################################
 # MOUTH RELATED FUNCTIONS

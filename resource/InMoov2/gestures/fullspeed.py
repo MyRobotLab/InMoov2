@@ -1,27 +1,28 @@
 def fullspeed():
-  if isNeopixelActivated:
+  if runtime.isStarted('i01.neopixel'):
     i01.setNeopixelAnimation("Color Wipe", 200, 0, 0, 1)
     sleep(1)
     i01.setNeopixelAnimation("Ironman", 0, 0, 255, 1)
-  if isRightHandActivated:
+
+  if runtime.isStarted('i01.rightHand'):  
     i01.setHandSpeed("right", 500.0, 500.0, 500.0, 500.0, 500.0, 500.0)
       
-  if isLeftHandActivated:
+  if runtime.isStarted('i01.leftHand'):
     i01.setHandSpeed("left", 500.0, 500.0, 500.0, 500.0, 500.0, 500.0)
       
-  if isRightArmActivated:
+  if runtime.isStarted('i01.rightArm'):
     i01.setArmSpeed("right", 500.0, 500.0, 500.0, 500.0)
     
-  if isLeftArmActivated:
+  if runtime.isStarted('i01.leftArm'):
     i01.setArmSpeed("left", 500.0, 500.0, 500.0, 500.0)
   
-  if isHeadActivated:
+  if runtime.isStarted('i01.head'):
     i01.setHeadSpeed(500.0, 500.0, 500.0, 500.0, 500.0, 500.0)
   
-  if isTorsoActivated:
+  if runtime.isStarted('i01.torso'):
     i01.setTorsoSpeed(500.0, 500.0, 500.0)
       
-  if isEyeLidsActivated:
+  if runtime.isStarted('i01.eyeLids'):
     i01.head.eyelidLeft.setSpeed(500.0)
     i01.head.eyelidRight.setSpeed(500.0)
 

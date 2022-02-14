@@ -4,13 +4,13 @@ def memorizePerson():
 
 def YesName(name):
   print "name confirmed"
-  if isNeopixelActivated==1:
+  if runtime.isStarted('i01.neopixel'):
     i01.setNeopixelAnimation("Color Wipe", 100, 5, 10, 15) 
-  if isChatBotActivated==1:
-    if isOpenCvActivated==1:
+  if runtime.isStarted('i01.chatBot'):
+    if runtime.isStarted('i01.opencv'):
       i01.cameraOn()
       i01.startedGesture()
-      fr=i01_vision.setActiveFilter("FaceRecognizer")
+      fr=i01_opencv.setActiveFilter("FaceRecognizer")
       # set the name on the filter that will be used for the saved examples
       fr.trainName = name
       # set the filter to be in training mode (Where it learns new images)

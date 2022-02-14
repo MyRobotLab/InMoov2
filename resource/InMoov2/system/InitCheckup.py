@@ -119,7 +119,7 @@ if DEBUG==1:runtime.setLogLevel("INFO")
 else:runtime.setLogLevel("ERROR")
 i01.setMute(False)
 
-if boot_green and isNeopixelActivated:    
+if boot_green and runtime.isStarted('i01.neopixel'):    
   i01.setNeopixelAnimation("Flash Random", 0, 255, 0, 1)
   sleep(2)
   i01.stopNeopixelAnimation()
