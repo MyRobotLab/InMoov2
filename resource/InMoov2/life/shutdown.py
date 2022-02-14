@@ -12,6 +12,6 @@ def shutdown():
     #i01_head.autoBlink(False)
     #i01_head_eyelidLeft.moveTo(180)
     #i01_head_eyelidRight.moveTo(180)
-  if isNeopixelActivated:  
+  if runtime.isStarted('i01.neopixel'):  
     i01.stopNeopixelAnimation()
   runtime.shutdown()
