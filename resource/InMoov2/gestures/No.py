@@ -1,6 +1,6 @@
 def No():
   # WE MOVE THE ROTHEAD OR ROLLNECK
-  if isHeadActivated==1:
+  if runtime.isStarted('i01.head'):
     i01.startedGesture()
     i01.setHeadSpeed(40,40,40)
     
