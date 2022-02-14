@@ -14,8 +14,7 @@
 
 # create a controller
 i01_right = Runtime.start("i01.right","Arduino")
-i01_right.setBoardMega()
-isRightPortActivated=True
+#i01_right.setBoardMega()
 enableRightPort=True
 
 

@@ -14,4 +14,4 @@
 
 # release a servo controller and a servo
 Runtime.releaseService("i01.left")
-isLeftPortActivated=False
+enableLeftPort=False

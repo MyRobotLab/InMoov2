@@ -14,7 +14,7 @@
 
 # release a servo controller and a servo
 Runtime.releaseService("i01.controller3")
-isController3Activated=False
+enableController3=False
 
 # we tell to the service what is going on 
 # i01.broadcastState()

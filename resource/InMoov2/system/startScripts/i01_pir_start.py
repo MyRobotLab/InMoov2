@@ -10,5 +10,4 @@
 i01_pir = Runtime.start("i01.pir","Pir")
 i01_pir.setPin("23")
 i01.startPir()
-isPirActivated=True
 enablePir=True
