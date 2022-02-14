@@ -713,6 +713,18 @@
     <tr>
         <td>
             <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('leap')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+            <!--------------------------------------------------------------->
+            <img src="../LeapMotion.png"/>
+            <label>leapMotion:</label>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" ng-model="service.enableLeapMotion" title="To access settings, the leapMotion must be activated" ng-change="!service.enableLeapMotion?msg.loadFile('resource/InMoov2/system/startScripts/i01_leapMotion_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_leapMotion_start.py')" on="ON" off="OFF"/></toggle>
+            &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.enableLeapMotion" ng-click="mrl.changeTab(service.name + '.leap')">Settings</button>
+        </td>
+    </tr>
+    <!----------------------------LeapMotion end---------------------------------->
+    <tr>
+        <td>
+            <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
             <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('ultrasonicRight')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
             <!--------------------------------------------------------------->
             <img src="../UltrasonicSensor.png"/>
