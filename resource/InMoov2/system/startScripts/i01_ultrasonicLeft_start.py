@@ -15,4 +15,3 @@ i01.startUltrasonicLeft()
 
 
 enableUltrasonicLeft=True
-isUltrasonicLeftActivated=True

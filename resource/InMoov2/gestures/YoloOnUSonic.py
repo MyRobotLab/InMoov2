@@ -1,7 +1,7 @@
 
 def YoloOnUSonic():
   i01.setHeadSpeed(100.0,100.0,100.0,100.0,100.0,100.0)
-  if isUltraSonicRightActivated:
+  if runtime.isStarted('i01.ultrasonicRight'):
     distance=200
     timeout=0
     timeoutGetCloser=0

@@ -12,4 +12,3 @@ i01_opencv.setGrabberType("OpenCV")
 i01_opencv.nativeViewer=False
 i01_opencv.webViewer=True
 i01.speakBlocking(i01.localize("STARTINGOPENCV"))
-isOpenCvActivated=True

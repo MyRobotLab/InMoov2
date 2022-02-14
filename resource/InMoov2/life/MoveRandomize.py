@@ -28,7 +28,7 @@ def MoveRandom(timedata):
   #little pause
   if random.randint(0,4)==4:
     if i01.RobotCanMoveRandom and not i01.RobotIsSleeping:
-      if isOpenCvActivated:
+      if runtime.isStarted('i01.opencv'):
         if not i01_opencv.isCapturing():
           i01.RobotCanMoveHeadRandom=False
           i01.RobotCanMoveBodyRandom=False

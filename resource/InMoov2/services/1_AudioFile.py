@@ -33,7 +33,7 @@ def onAudioStart(data):
   except:
     pass
   
-  if AudioSignalProcessing and isHeadActivated:
+  if AudioSignalProcessing and runtime.isStarted('i01.head'):
     print "onaudiostart"
     try:
       head.jaw.moveTo(180)
@@ -43,7 +43,7 @@ def onAudioStart(data):
       pass
       
   try:
-    if MouthControlActivated and mouthControlAudiofile:i01_mouthControl.onStartSpeaking("This is a fake text, a long fake text, very long.")
+    if runtime.isStarted('i01.mouthControl'): and mouthControlAudiofile:i01_mouthControl.onStartSpeaking("This is a fake text, a long fake text, very long.")
   except:
     pass
     
@@ -56,7 +56,7 @@ def onAudioEnd(data):
   except:
     print "onAudioEnd error"
     pass
-  if AudioSignalProcessing and isHeadActivated:
+  if AudioSignalProcessing and runtime.isStarted('i01.head'):
     try:
       left.disablePin(AnalogPinFromSoundCard)
       #head.jaw.detach()
@@ -65,7 +65,7 @@ def onAudioEnd(data):
       pass
       
   try:
-    if MouthControlActivated and mouthControlAudiofile:i01_mouthControl.onEndSpeaking("This is a fake text, a long fake text, very long.")
+    if runtime.isStarted('i01.mouthControl'): and mouthControlAudiofile:i01_mouthControl.onEndSpeaking("This is a fake text, a long fake text, very long.")
   except:
     pass
   

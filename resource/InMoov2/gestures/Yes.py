@@ -1,5 +1,5 @@
 def Yes():
-  if isHeadActivated==1:
+  if runtime.isStarted('i01.head'):
     i01.startedGesture()
     i01.setHeadSpeed(45,45,45)
     i01.moveHeadBlocking(130,90)

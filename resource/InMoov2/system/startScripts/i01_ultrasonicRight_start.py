@@ -13,5 +13,4 @@ i01_ultrasonicRight.setEchoPin(63)
 #i01_ultrasonicRight.attach("i01.right")
 i01.startUltrasonicRight()
 
-isUltrasonicRightActivated=True
 enableUltrasonicRight=True

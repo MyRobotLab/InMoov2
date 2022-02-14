@@ -30,7 +30,7 @@ def shakehand():
   i01.moveTorso(95,95,90)
   sleep(3)
    ##optional, detect if there is a human ( waiting finger sensor, we use ultrasonic distance as test )
-  if isUltraSonicRightActivated:
+  if runtime.isStarted('i01.ultrasonicRight'):
     distanceRight=200
     timeoutRight=0
     timeoutRightGetCloser=0
@@ -57,7 +57,7 @@ def shakehand():
       distanceRightOK=1
       goShake()
   
-  elif isUltraSonicLeftActivated:
+  elif runtime.isStarted('i01.ultrasonicLeft'):
     distanceLeft=200
     timeoutLeft=0
     timeoutLeftGetCloser=0
@@ -84,7 +84,7 @@ def shakehand():
       distanceLeftOK=1
       goShake()
   else:
-    if isUltraSonicRightActivated==0 and isUltraSonicLeftActivated==0:
+    if not runtime.isStarted('i01.ultrasonicRight'): and not runtime.isStarted('i01.ultrasonicLeft'):
       sleep(3)
       shakehandAnimation()
 
@@ -135,7 +135,7 @@ def shakehandAnimation():
   i01.moveArm("right",6,73,55,16)
   i01.moveHand("left",50,50,40,20,20,90)
   i01.moveTorso(95,95,90)
-  if isRightHandSensorActivated:
+  if runtime.isStarted('i01.rightHandSensor'):
     rightHandSensorON()
     sleep(1.5)
     rightThumbPressure=1 # Pressure range between 0-3

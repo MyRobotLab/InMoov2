@@ -9,4 +9,3 @@
 # create a openni
 i01_openni = Runtime.start("i01.openni","OpenNi")
 i01.speakBlocking(i01.localize("STARTINGOPENNI"))
-isOpenNiActivated=True

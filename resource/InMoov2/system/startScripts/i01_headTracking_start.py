@@ -7,7 +7,7 @@
 # Platform.setVirtual(True)
 
 # create a pid
-i01_headPid = Runtime.createAndStart("i01.headPid","Pid")
+i01_headPid = Runtime.start("i01.headPid","Pid")
 #set Kp, kd, ki kp = gain, how strong it react kd = how fast it react ki= take care of the sum of errors (differences between target and actual value) in the time
 i01_headPid.setPid("i01.head.rothead", 0.035, 0.01, 0.0)
 i01_headPid.setMode("i01.head.rothead", 1)

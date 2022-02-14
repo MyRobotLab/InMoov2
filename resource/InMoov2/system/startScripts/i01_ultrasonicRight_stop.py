@@ -10,4 +10,3 @@
 Runtime.releaseService('i01.ultrasonicRight')
 i01.speakBlocking(i01.localize("STOPULTRASONIC"))
 enableUltrasonicRight=False
-isUltrasonicRightActivated=False
