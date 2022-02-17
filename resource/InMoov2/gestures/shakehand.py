@@ -84,7 +84,7 @@ def shakehand():
       distanceLeftOK=1
       goShake()
   else:
-    if not runtime.isStarted('i01.ultrasonicRight'): and not runtime.isStarted('i01.ultrasonicLeft'):
+    if not runtime.isStarted('i01.ultrasonicRight') and not runtime.isStarted('i01.ultrasonicLeft'):
       sleep(3)
       shakehandAnimation()
 
