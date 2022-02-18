@@ -933,43 +933,50 @@
                     <table class="table table-striped">
                         <tbody>
                             <tr>
-                                <td>virtualize</td>
+                                <td>Virtualize</td>
                                 <td>
                                 <toggle width="30" height="28" ng-model="service.isVirtual" ng-change="!service.isVirtual?msg.setAllVirtual(false):msg.setAllVirtual(true)" on=" " off=" "></toggle>
                                 </td>
                             </tr>
                             <tr>
-                                <td>simulator</td>
+                                <td>Simulator</td>
                                 <td>
                                     <toggle width="30" height="28" ng-model="service.isSimulatorActivated" ng-change="!service.isSimulatorActivated?msg.stopSimulator():msg.startSimulator()" on=" " off=" "></toggle>
                                 </td>
                             </tr>
                             <tr>
-                                <td>audio player</td>
+                                <td>Audio player</td>
                                 <td>
                                     <toggle width="30" height="28" ng-model="service.enableAudioPlayer" ng-change="service.enableAudioPlayer?msg.startAudioPlayer():msg.stopAudioPlayer()" on=" " off=" "></toggle>
                                     <button class="btn btn-default" ng-show="service.enableAudioPlayer" ng-click="mrl.changeTab(service.name + '.audioPlayer')">Open</button>
                                 </td>
                             </tr>
                             <tr>
-                                <td>servo mixer</td>
+                                <td>Servo mixer</td>
                                 <td>
                                     <toggle width="30" height="28" ng-model="service.enableServoMixer" ng-change="service.enableServoMixer?msg.startServoMixer():msg.stopServoMixer()" on=" " off=" "></toggle>
                                     <button class="btn btn-default" ng-show="service.enableServoMixer" ng-click="mrl.changeTab(service.name + '.servoMixer')">Open</button>
                                 </td>
                             </tr>
                             <tr>
-                                <td>random life</td>
+                                <td>Random life</td>
                                 <!--td>
                                     <toggle width="30" height="28" ng-model="service.enableRandom" ng-change="service.enableRandom?msg.startRandom():msg.stopRandom()" on=" " off=" "></toggle>
                                     <button class="btn btn-default" ng-show="service.enableRandom" ng-click="mrl.changeTab(service.name + '.random')">Open</button>
                                 </td-->
                                 <td>
-                                    <toggle width="30" height="28" ng-model="service.enableRandom" ng-change="!service.enableRandom?msg.loadFile('resource/InMoov2/system/startScripts/i01_random_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_random_start.py')" on=" " off=" "></toggle>
+                                    <toggle width="30" height="28" title="Starts random movements on the robot" ng-model="service.enableRandom" ng-change="!service.enableRandom?msg.loadFile('resource/InMoov2/system/startScripts/i01_random_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_random_start.py')" on=" " off=" "></toggle>
                                 </td>
                             </tr>
                             <tr>
-                                <td>custom script</td>
+                                <td>Open weather map</td>
+                                <td>
+                                    <toggle width="30" height="28" title="This is launching option for weather requests via the chatbot" ng-model="service.enableOwm" ng-change="!service.enableOwm?msg.loadFile('resource/InMoov2/system/startScripts/i01_openWeatherMap_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_openWeatherMap_start.py')" on=" " off=" "></toggle>
+                                    <button class="btn btn-default" ng-show="service.enableOwm" ng-click="mrl.changeTab(service.name + '.openWeatherMap')">Open</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Custom script</td>
                                 <td>
                                     <toggle width="30" height="28" title="This will load your script located in data/InMoov2/InMoovCustom.py" ng-model="service.enableCustomScript" ng-change="!service.enableCustomScript?msg.stop():msg.loadFile('data/InMoov2/InMoovCustom.py')" on=" " off=" "></toggle>
                                 </td>
