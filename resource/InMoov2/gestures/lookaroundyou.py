@@ -4,10 +4,10 @@ def lookaroundyou():
   for x in range(0, 1):
     x = (random.randint(1, 6))
     if x == 1:
-      i01.head.neck.moveTo(90)
+      i01_head_neck.moveTo(90)
       eyeslooking()
     if x == 2:
-      i01.head.rothead.moveTo(80)
+      i01_head_rothead.moveTo(80)
       eyeslooking()
     if x == 3:
       headdown()

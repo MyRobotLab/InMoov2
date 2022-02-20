@@ -73,9 +73,9 @@ def studyball():
     leftThumbPressure=1 # Pressure range between 0-3
     leftIndexPressure=1
     leftMajeurePressure=1
-    #i01.leftHand.thumb.moveTo(180)
-    #i01.leftHand.index.moveTo(180)
-    #i01.leftHand.majeure.moveTo(180)
+    #i01_leftHand_thumb.moveTo(180)
+    #i01_leftHand_index.moveTo(180)
+    #i01_leftHand_majeure.moveTo(180)
     i01.moveHand("left",180,180,10,10,10,0)
     sleep(2)
     leftHandSensorOFF()
@@ -108,9 +108,9 @@ def studyball():
     leftThumbPressure=1 # Pressure range between 0-3
     leftIndexPressure=1
     leftMajeurePressure=1
-    #i01.leftHand.thumb.moveTo(180)
-    #i01.leftHand.index.moveTo(180)
-    #i01.leftHand.majeure.moveTo(180)
+    #i01_leftHand_thumb.moveTo(180)
+    #i01_leftHand_index.moveTo(180)
+    #i01_leftHand_majeure.moveTo(180)
     i01.moveHand("left",180,180,180,180,180,164)
     sleep(2)
     leftHandSensorOFF()

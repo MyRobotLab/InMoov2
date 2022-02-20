@@ -23,6 +23,6 @@ def fullspeed():
     i01.setTorsoSpeed(500.0, 500.0, 500.0)
       
   if runtime.isStarted('i01.eyeLids'):
-    i01.head.eyelidLeft.setSpeed(500.0)
-    i01.head.eyelidRight.setSpeed(500.0)
+    i01_head_eyelidLeft.setSpeed(500.0)
+    i01_head_eyelidRight.setSpeed(500.0)
 

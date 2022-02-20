@@ -7,9 +7,9 @@ def eyeslooking():
       stopit()
     x = (random.randint(1, 6))
     if x == 1:
-      i01.head.eyeX.moveTo(80)
+      i01_head_eyeX.moveTo(80)
     if x == 2:
-      i01.head.eyeY.moveTo(80)
+      i01_head_eyeY.moveTo(80)
     if x == 3:
       eyesdown()
     if x == 4:
