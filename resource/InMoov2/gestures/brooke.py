@@ -4,7 +4,7 @@ def brooke():
   sleep(8)
   i01.disable()
   sleep(8)
-  i01.head.enable()
+  i01_head.enable()
   lookrightside()
   sleep(4)
   lookleftside()

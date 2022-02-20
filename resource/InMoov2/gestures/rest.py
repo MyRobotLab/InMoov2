@@ -5,27 +5,27 @@
 def rest():
   fullspeed()
   if runtime.isStarted('i01.rightHand'):
-    i01.rightHand.rest()
+    i01_rightHand.rest()
   
   if runtime.isStarted('i01.leftHand'):
-    i01.leftHand.rest()
+    i01_leftHand.rest()
   
   if runtime.isStarted('i01.rightArm'):
-    i01.rightArm.rest()
+    i01_rightArm.rest()
   
   if runtime.isStarted('i01.leftArm'):
-    i01.leftArm.rest()
+    i01_leftArm.rest()
     
 # ##############################################################################
 #         ROBOT REST POSITIONS ( full )
 # ##############################################################################    
   
   if runtime.isStarted('i01.head'):
-    i01.head.rest()
+    i01_head.rest()
   
   if runtime.isStarted('i01.torso'):
-    i01.torso.rest()
+    i01_torso.rest()
     
   if runtime.isStarted('i01.eyeLids'):
-    i01.head.eyelidLeft.rest()
-    i01.head.eyelidRight.rest()
+    i01_head_eyelidLeft.rest()
+    i01_head_eyelidRight.rest()

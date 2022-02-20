@@ -1,6 +1,6 @@
 def brooke4():
-  i01.head.rothead.enable()
-  i01.head.neck.enable()
+  i01_head_rothead.enable()
+  i01_head_neck.enable()
   lookrightside()
   sleep(4)
   lookleftside()

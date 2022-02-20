@@ -3,14 +3,14 @@ def lookatpeople():
   x = (random.randint(1, 5))
   if x == 1:
     fullspeed()
-    i01.head.rothead.moveTo(100)
+    i01_head_rothead.moveTo(100)
     sleep(2)
     trackHumans()
     sleep(10)
     stopTracking()
   if x == 2:
     fullspeed()
-    i01.head.rothead.moveTo(80)
+    i01_head_rothead.moveTo(80)
     sleep(2)
     trackHumans()
     sleep(10)

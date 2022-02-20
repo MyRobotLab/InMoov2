@@ -1,4 +1,5 @@
 def stopTracking():
-  if (i01.vision.isTracking()):
-    i01.stopTracking()
-    i01.head.rollNeck.setOverrideAutoDisable(False)
+  if runtime.isStarted("i01.opencv")
+    if (i01_opencv.isCapturing()):
+      i01_opencv.stopTracking()
+      i01_head_rollNeck.setAutoDisable(True)

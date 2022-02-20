@@ -22,5 +22,5 @@ def halfspeed():
     i01.setTorsoSpeed(50.0, 50.0, 50.0)
       
   if runtime.isStarted('i01.eyeLids'):
-    i01.head.eyelidLeft.setSpeed(50.0)
-    i01.head.eyelidRight.setSpeed(50.0)
+    i01_head_eyelidLeft.setSpeed(50.0)
+    i01_head_eyelidRight.setSpeed(50.0)

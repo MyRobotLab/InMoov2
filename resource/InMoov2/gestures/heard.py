@@ -114,7 +114,7 @@ def heard(data):
       x = (random.randint(1, 5))
       if x == 1:
         fullspeed()
-        i01.head.neck.moveTo(90)
+        i01_head_neck.moveTo(90)
         eyeslooking(data)
         sleep(2)
         trackHumans()
@@ -122,7 +122,7 @@ def heard(data):
         stopTracking()
       if x == 2:
         fullspeed()
-        i01.head.rothead.moveTo(80)
+        i01_head_rothead.moveTo(80)
         eyeslooking(data)
         sleep(2)
         trackHumans()
