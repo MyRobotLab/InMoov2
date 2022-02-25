@@ -61,6 +61,6 @@ if runtime.isStarted('i01.rightArm'):
     if not i01_rightArm_omoplate.isMoving():moveBodyRandomize.addRandom(1000, 20000, 'i01.rightArm.omoplate','moveTo', moveBodyRandomize.intRange(10, 15))
 if runtime.isStarted('i01.torso'):    
     moveBodyRandomize.addRandom(1000, 20000, 'i01','setTorsoSpeed', moveBodyRandomize.intRange(2, 5), moveBodyRandomize.intRange(2, 5), moveBodyRandomize.intRange(2, 5))
-    if not i01_topStom.isMoving():moveBodyRandomize.addRandom(1000, 20000, 'i01.topStom','moveTo', moveBodyRandomize.intRange(85, 95))
-    if not i01_midStom.isMoving():moveBodyRandomize.addRandom(1000, 20000, 'i01.midStom','moveTo', moveBodyRandomize.intRange(85, 95))
-    if not i01_lowStom.isMoving():moveBodyRandomize.addRandom(1000, 20000, 'i01.lowStom','moveTo', moveBodyRandomize.intRange(85, 95))
+    if not i01_torso_topStom.isMoving():moveBodyRandomize.addRandom(1000, 20000, 'i01.torso.topStom','moveTo', moveBodyRandomize.intRange(85, 95))
+    if not i01_torso_midStom.isMoving():moveBodyRandomize.addRandom(1000, 20000, 'i01.torso.midStom','moveTo', moveBodyRandomize.intRange(85, 95))
+    if not i01_torso_lowStom.isMoving():moveBodyRandomize.addRandom(1000, 20000, 'i01.torso.lowStom','moveTo', moveBodyRandomize.intRange(85, 95))
