@@ -10,7 +10,7 @@ if runtime.isStarted('i01.head'):
         if not runtime.isStarted('i01.headTracking'):
             moveHeadRandomize.addRandom(3000, 8000, 'i01.head.rothead','setSpeed', moveHeadRandomize.intRange(8, 25))
             moveHeadRandomize.addRandom(3000, 8000, 'i01.head.neck','setSpeed', moveHeadRandomize.intRange(8, 25))
-            if not i01_head.rothead.isMoving():moveHeadRandomize.addRandom(1000, 20000, 'i01.head.rothead','moveTo', moveHeadRandomize.intRange(70, 120))
+            if not i01_head_rothead.isMoving():moveHeadRandomize.addRandom(1000, 20000, 'i01.head.rothead','moveTo', moveHeadRandomize.intRange(70, 120))
             if not i01_head_neck.isMoving():moveHeadRandomize.addRandom(1000, 20000, 'i01.head.neck','moveTo', moveHeadRandomize.intRange(80, 100))
         if not runtime.isStarted('i01.eyeTracking'):
             moveHeadRandomize.addRandom(3000, 8000, 'i01.head.eyeX','setSpeed', moveHeadRandomize.intRange(8, 25))
