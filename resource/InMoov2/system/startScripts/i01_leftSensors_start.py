@@ -176,7 +176,7 @@ if runtime.isStarted('i01.left'):
                     print "leftExtraSensorPin:",left_extraPin,"Value:",pinsLeft[pin].value
 
 
-        i01.speakBlocking(i01.localize("STARTINGRIGHTHANDSENSOR"))
+        i01.speakBlocking(i01.localize("STARTINGLEFTHANDSENSOR"))
         i01_left.addListener("publishPinArray","python","publishLeftSensor")
 
         def leftHandSensorON():
