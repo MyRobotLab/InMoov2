@@ -118,7 +118,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.chatBot')">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.chatBot')">Save chatBot Config</button>
                     </td>
                 </tr>
             </table>
@@ -140,7 +140,7 @@
                 </tr>
                 <!--<tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/A_Chatbot.py','i01.chatBot')">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.chatBot')">Save chatBot Config</button>
                     </td>
                 </tr>-->
             </table>
@@ -160,7 +160,7 @@
                 </tr>
                 <!--<tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/skeleton_leftArm.py','i01.leftArm.omoplate,i01.leftArm.shoulder,i01.leftArm.rotate,i01.leftArm.bicep')">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.leftArm')">Save leftArm Config</button>
                     </td>
                 </tr>-->                
                 <tr>
@@ -176,7 +176,7 @@
                 </tr>
                 <!--<tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/skeleton_rightArm.py','i01.rightArm.omoplate,i01.rightArm.shoulder,i01.rightArm.rotate,i01.rightArm.bicep')">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.rightArm')">Save rightArm Config</button>
                     </td>
                 </tr>-->
             </table>
@@ -205,7 +205,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.ear')">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.ear')">Save ear Config</button>
                     </td>
                 </tr>
             </table>
@@ -227,7 +227,7 @@
                 </tr>
                 <!--<tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.ear')">Save ear Config</button>
                     </td>
                 </tr>-->
             </table>
@@ -247,7 +247,7 @@
                 </tr>
                 <!--<tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/skeleton_torso.py','i01.torso.topStom,i01.torso.midStom,i01.torso.lowStom')">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.torso')">Save torso Config</button>
                     </td>
                 </tr>-->
             </table>
@@ -284,7 +284,7 @@
                 </tr>
                 <!--<tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/skeleton_rightHand.py','i01.rightHand.thumb,i01.rightHand.index,i01.rightHand.majeure,i01.rightHand.ringFinger,i01.rightHand.pinky,i01.rightHand.wrist')">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'rightHandSensor')">Save rightHandSensor Config</button>
                     </td>
                 </tr>-->
             </table>
@@ -332,6 +332,12 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export','i01.mouth')">Save mouth Config</button>
+                    </td>
+                </tr>
+            </br>
+                <tr>
                     <td ng-show="service.isHeadActivated">
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
                         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('mouthControl')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
@@ -339,11 +345,6 @@
                         <img src="../MouthControl.png"/>
                         <label>mouthControl:</label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-default" ng-click="setPanel('mouthControl')">Settings</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export','i01.mouthControl')">Save Config</button>
                     </td>
                 </tr>
             </table>
@@ -364,7 +365,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.mouthControl')">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.mouthControl')">Save mouthControl Config</button>
                     </td>
                 </tr>
                 <tr>
@@ -467,11 +468,6 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.right');mrl.sendTo('runtime', 'export', 'i01.left');mrl.sendTo('runtime', 'export', 'i01.controller3');mrl.sendTo('runtime', 'export', 'i01.controller4');">Save Config</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
                         <img width="50" height="50" ng-click="setPanel('extra')" ng-src="../img/InMoov2/arrow_blue_left.png" src="../img/InMoov2/arrow_blue_left.png">
                     </td>
                 </tr>
@@ -493,7 +489,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="export()">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.right')">Save right Config</button>
                     </td>
                 </tr>
                 <tr>
@@ -519,7 +515,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="export()">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.left')">Save left Config</button>
                     </td>
                 </tr>
                 <tr>
@@ -545,7 +541,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="export()">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.controller3')">Save controller3 Config</button>
                     </td>
                 </tr>
                 <tr>
@@ -571,7 +567,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="export()">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.controller4')">Save controller4 Config</button>
                     </td>
                 </tr>
                 <tr>
@@ -596,7 +592,7 @@
                 </tr>
                 <!--<tr>
                     <td>
-                        <button class="btn btn-default" ng-click="msg.export('data/InMoov2/config/service_9_neoPixel.py','i01.neopixel')">Save Config</button>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.neopixel')">Save neopixel Config</button>
                     </td>
                 </tr>-->
                 <tr>
@@ -661,7 +657,7 @@
 </td></tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="export()">Save Config</button>
+        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.neopixel')">Save neopixel Config</button>
     </td>
 </tr>
 </table>
@@ -753,7 +749,7 @@
     </tr>
     <!--<tr>
         <td>
-            <button class="btn btn-default" ng-click="msg.exportAll('data/InMoov2/config/myConfig.py')">Save Config</button>
+            <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.ultrasonicLeft')">Save ultrasonicLeft Config</button>
         </td>
     </tr>-->
 </table>
@@ -800,7 +796,7 @@
     </tr-->
     <tr> 
         <td>
-            <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.pir')">Save Config</button>
+            <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.pir')">Save pir Config</button>
         </td>
     </tr>
     <tr>
@@ -824,7 +820,7 @@
     </tr>
     <tr>
         <td>
-            <button class="btn btn-default" ng-click="export()">Save Config</button>
+            <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.ultraSonicRight')">Save ultraSonicRight Config</button>
         </td>
     </tr>
     <tr>
@@ -848,7 +844,7 @@
     </tr>
     <tr>
         <td>
-            <button class="btn btn-default" ng-click="export()">Save Config</button>
+            <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.ultraSonicLeft')">Save ultraSonicLeft Config</button>
         </td>
     </tr>
     <tr>
@@ -896,7 +892,7 @@
 </td></tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="export()">Save Config</button>
+        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.openni')">Save openni Config</button>
     </td>
 </tr>
 <tr>
