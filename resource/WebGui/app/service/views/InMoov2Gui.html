@@ -264,7 +264,8 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="28" ng-model="service.isLeftHandActivated" title="To access settings, the body part must be activated" ng-change="!service.isLeftHandActivated?msg.stopLeftHand():msg.startLeftHand()" width="120" height="30" on="ON" off="OFF"/>
                         &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.isLeftHandActivated" ng-click="mrl.changeTab(service.name + '.leftHand')">Settings</button>
                         <label ng-show="service.isLeftHandActivated">Sensors:</label>
-                        &nbsp;<toggle width="70" height="28" ng-show="service.isLeftHandActivated" ng-model="service.isLeftSensorsEnabled" title="Activate this if you use finger sensors" ng-change="!service.isLeftSensorsEnabled?msg.leftSensorsEnabled(false):msg.leftSensorsEnabled(true)" width="120" height="30" on="ON" off="OFF"/>
+                        <!--&nbsp;<toggle width="70" height="28" ng-show="service.isLeftHandActivated" ng-model="service.isLeftSensorsEnabled" title="Activate this if you use finger sensors" ng-change="!service.isLeftSensorsEnabled?msg.leftSensorsEnabled(false):msg.leftSensorsEnabled(true)" width="120" height="30" on="ON" off="OFF"/>-->
+                        &nbsp;<toggle width="70" height="28" ng-show="service.isLeftHandActivated" ng-model="service.isLeftSensorsEnabled" title="To configure edit data/config/i01.leftHand.sensor.yml" ng-change="!service.isLeftSensorsEnabled?msg.stopLeftSensors():msg.loadFile('resource/InMoov2/system/startScripts/i01_leftSensors_start.py')" width="120" height="30" on="ON" off="OFF"/>
                     </td>
                 </tr>
                 <tr>
@@ -277,7 +278,8 @@
                         &nbsp;&nbsp;<toggle width="70" height="28" ng-model="service.isRightHandActivated" title="To access settings, the body part must be activated" ng-change="!service.isRightHandActivated?msg.stopRightHand():msg.startRightHand()" width="120" height="30" on="ON" off="OFF"/>
                         &nbsp;&nbsp;<button class="btn btn-default" ng-show="service.isRightHandActivated" ng-click="mrl.changeTab(service.name + '.rightHand')">Settings</button>
                         <label ng-show="service.isRightHandActivated">Sensors:</label>
-                        &nbsp;<toggle width="70" height="28" ng-show="service.isRightHandActivated" ng-model="service.isRightSensorsEnabled" title="Activate this if you use finger sensors" ng-change="!service.isRightSensorsEnabled?msg.rightSensorsEnabled(false):msg.rightSensorsEnabled(true)" width="120" height="30" on="ON" off="OFF"/>
+                        <!--&nbsp;<toggle width="70" height="28" ng-show="service.isRightHandActivated" ng-model="service.isRightSensorsEnabled" title="Activate this if you use finger sensors" ng-change="!service.isRightSensorsEnabled?msg.rightSensorsEnabled(false):msg.rightSensorsEnabled(true)" width="120" height="30" on="ON" off="OFF"/>-->
+                        &nbsp;<toggle width="70" height="28" ng-show="service.isRightHandActivated" ng-model="service.isRightSensorsEnabled" title="To configure edit data/config/i01.rightHand.sensor.yml" ng-change="!service.isRightSensorsEnabled?msg.stopRightSensors():msg.loadFile('resource/InMoov2/system/startScripts/i01_rightSensors_start.py')" width="120" height="30" on="ON" off="OFF"/>
                     </td>
                 </tr>
                 <!--<tr>
