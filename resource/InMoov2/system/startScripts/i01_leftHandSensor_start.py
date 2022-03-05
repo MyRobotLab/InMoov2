@@ -205,7 +205,11 @@ if runtime.isStarted('i01.left'):
                 pass
 
     except:
-        i01.error('i01.left controller not found for left hand sensor')
-        i01.speakBlocking(i01.localize('BADRDUINOCHOOSEN','left Hand Sensor'))
+        i01.error('could not start left hand sensor')
+        i01.speakBlocking(i01.localize('CONFIGPARSERPROBLEM'))
         leftHandSensorActivated = False
         pass
+else:
+    i01.error('i01.left controller not found for left hand sensor')
+    i01.speakBlocking(i01.localize('BADRDUINOCHOOSEN','left Hand Sensor'))
+    leftHandSensorActivated = False
