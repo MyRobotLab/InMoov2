@@ -10,7 +10,7 @@ ThisServicePart = 'data/config/i01.leftHand.sensor.yml'
 
 def CheckFileExistLeft(File):
   if not os.path.isfile(File):
-    execfile('resource/InMoov2/system/startScripts/i01_leftSensors_config.py')
+    execfile('resource/InMoov2/system/startScripts/i01_leftHandSensor_config.py')
     i01.info("config file created : data/config/i01.leftHand.sensor.yml")
 
 CheckFileExistLeft(ThisServicePart)

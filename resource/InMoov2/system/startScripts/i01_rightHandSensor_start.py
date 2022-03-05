@@ -10,7 +10,7 @@ ThisServicePart = 'data/config/i01.rightHand.sensor.yml'
 
 def CheckFileExistRight(File):
   if not os.path.isfile(File):
-    execfile('resource/InMoov2/system/startScripts/i01_rightSensors_config.py')
+    execfile('resource/InMoov2/system/startScripts/i01_rightHandSensor_config.py')
     i01.info("config file created : data/config/i01.rightHand.sensor.yml")
 
 CheckFileExistRight(ThisServicePart)
