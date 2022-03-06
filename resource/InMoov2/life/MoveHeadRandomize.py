@@ -9,7 +9,7 @@ def MoveHead(timedata):
   MoveHeadTimer.setInterval(random.randint(200,1000))
   #if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01_opencv.isCapturing():
   if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping:
-    if runtime.isStarted('i01.head'): and RobotCanMoveHeadWhileSpeaking==1:
+    if runtime.isStarted('i01.head') and RobotCanMoveHeadWhileSpeaking==1:
       if runtime.isStarted('i01.opencv'):
         if not i01_opencv.isCapturing():
           i01.setHeadSpeed(random.randint(8,20),random.randint(8,20),random.randint(8,20))
