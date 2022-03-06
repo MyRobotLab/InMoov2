@@ -43,7 +43,7 @@ def onAudioStart(data):
       pass
       
   try:
-    if runtime.isStarted('i01.mouthControl'): and mouthControlAudiofile:i01_mouthControl.onStartSpeaking("This is a fake text, a long fake text, very long.")
+    if runtime.isStarted('i01.mouthControl') and mouthControlAudiofile:i01_mouthControl.onStartSpeaking("This is a fake text, a long fake text, very long.")
   except:
     pass
     
@@ -65,7 +65,7 @@ def onAudioEnd(data):
       pass
       
   try:
-    if runtime.isStarted('i01.mouthControl'): and mouthControlAudiofile:i01_mouthControl.onEndSpeaking("This is a fake text, a long fake text, very long.")
+    if runtime.isStarted('i01.mouthControl') and mouthControlAudiofile:i01_mouthControl.onEndSpeaking("This is a fake text, a long fake text, very long.")
   except:
     pass
   
