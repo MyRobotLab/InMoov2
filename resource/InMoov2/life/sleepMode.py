@@ -134,7 +134,7 @@ def sleepModeInsult():
     head.neck.setSpeed(80)
     head.neck.moveTo(10)
   i01.waitTargetPos()
-  if runtime.isStarted('i01.rightHand'): or runtime.isStarted('i01.leftHand'):
+  if runtime.isStarted('i01.rightHand') or runtime.isStarted('i01.leftHand'):
     handsclose()
   i01.disable()
   switchOffAllNervo()
@@ -167,7 +167,7 @@ def humanDetected():
   global autoTrackingStarted
   if runtime.isStarted('i01.pir'):
     SleepTimer.restartClock(True)
-    if (runtime.isStarted('i01.pir'): and UsePirToActivateTracking):
+    if (runtime.isStarted('i01.pir') and UsePirToActivateTracking):
       if (not i01_vision.isTracking() and WaitXsecondBeforeRelaunchTracking>=5):
         WaitXsecondBeforeRelaunchTracking=0
         if runtime.isStarted('i01.neopixel'):i01.setNeopixelAnimation("Larson Scanner", 255, 0, 255, 1)
