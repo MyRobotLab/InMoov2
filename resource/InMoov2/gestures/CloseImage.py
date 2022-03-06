@@ -1,2 +1,2 @@
 def CloseImage():
-  imagedisplay.closeAll()
+  imageDisplay.closeAll()

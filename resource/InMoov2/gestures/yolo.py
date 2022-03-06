@@ -49,13 +49,13 @@ def enableYoloFor(duration):
   try:
     gui.setActiveTab("i01_opencv")
     #os.remove(lastPhotoFileName)
-    imagedisplay.closeAll()
+    imageDisplay.closeAll()
   except:
     pass
   # wait for X
   sleep(duration)
   lastPhotoFileName = i01_opencv.recordFrame()
   #print lastPhotoFileName
-  imagedisplay.display(lastPhotoFileName)
+  imageDisplay.display(lastPhotoFileName)
   i01_opencv.disableFilter("Yolo")
   print i01_vision_collectionCount
