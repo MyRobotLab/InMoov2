@@ -17,9 +17,9 @@ def sleepModeWakeUp():
   
   if i01.RobotIsStarted:
     
-    imagedisplay.exitFS()
+    imageDisplay.exitFS()
     sleep(1)
-    imagedisplay.closeAll()
+    imageDisplay.closeAll()
     
     #display(RuningFolder+'/system/pictures/loading_1024-600.jpg')
     
@@ -53,9 +53,9 @@ def sleepModeSleep():
   if not ForceMicroOnIfSleeping:ear.setAutoListen(False)
   i01_ear.lockOutAllGrammarExcept(lockPhrase)
   stopTracking()
-  imagedisplay.exitFS()
+  imageDisplay.exitFS()
   sleep(1)
-  imagedisplay.closeAll()
+  imageDisplay.closeAll()
   i01.RobotIsSleeping=True
   i01.halfSpeed()
   rest()
@@ -90,9 +90,9 @@ def wakeUpModeInsult():
       SleepTimer.startClock(True)
   
   if i01.RobotIsStarted: 
-    imagedisplay.exitFS()
+    imageDisplay.exitFS()
     sleep(1)
-    imagedisplay.closeAll()
+    imageDisplay.closeAll()
     if runtime.isStarted('i01.neopixel'):i01.setNeopixelAnimation("Larson Scanner", 0, 255, 0, 1)
     #optional switchon nervoboard
     switchOnAllNervo()
@@ -115,9 +115,9 @@ def wakeUpModeInsult():
 def sleepModeInsult():
   if not ForceMicroOnIfSleeping:ear.setAutoListen(False)
   stopTracking()
-  imagedisplay.exitFS()
+  imageDisplay.exitFS()
   sleep(1)
-  imagedisplay.closeAll()
+  imageDisplay.closeAll()
   #unlockInsult located in ear.py
   i01_ear.lockOutAllGrammarExcept(unlockInsult)
   i01.halfSpeed()
