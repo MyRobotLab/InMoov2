@@ -3,8 +3,7 @@ def bookcat():
   i01_chatBot.getResponse("SAY " + "Tell me read the book or stop reading")
   #chatBot.getResponse("SAY " + "Скажите мне, прочитайте книгу или перестаньте читать")
   sleep(3)
-  
-  
+  i01.finishedGesture() 
 
 def bookcatYes():
   print "book cat yes"
@@ -14,6 +13,7 @@ def bookcatYes():
   i01.moveHead(20,90,30)
   sleep(2)
   i01.moveHead(90,90,90)
+  i01.finishedGesture()
 
 def bookcatNo():
   print "book cat no"
@@ -23,6 +23,7 @@ def bookcatNo():
   i01.moveHead(120,90,30)
   sleep(2)
   i01.moveHead(90,90,90)
+  i01.finishedGesture()
 
 def turnthepage(): 
   global iReadbookcat
@@ -91,3 +92,4 @@ def turnthepage():
     i01.speakBlocking("The end")
 	# #i01.speakBlocking(u"Конец")
     iReadbookcat += 1
+  i01.finishedGesture()  

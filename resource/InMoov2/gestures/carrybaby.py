@@ -1,5 +1,5 @@
 def carrybaby():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.moveHead(18,111,85,85,5)
   i01.moveArm("left",81,50,45,16)
   i01.moveArm("right",78,44,50,31)

@@ -1,4 +1,5 @@
 def about():
+  #i01.startedGesture()
   i01.startedGesture()
   i01.setArmSpeed("right", 3, 3, 5.0, 5.0)
   i01.setArmSpeed("left", 3, 3, 5.0, 5.0)

@@ -1,5 +1,5 @@
 def call_911():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.speakBlocking("I am calling 9.1.1.")
   i01.setHandSpeed("left", 500.0, 500.0, 500.0, 500.0, 500.0, 500.0)
   i01.setHandSpeed("right", 500.0, 500.0, 500.0, 500.0, 500.0, 500.0)

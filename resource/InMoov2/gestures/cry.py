@@ -1,5 +1,5 @@
 def cry():
-  i01.startedGesture()
+  #i01.startedGesture()
   x = (random.randint(1, 2))
   if x == 1:
     Yes()

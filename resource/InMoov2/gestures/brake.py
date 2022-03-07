@@ -1,6 +1,5 @@
 def brake():
-  #neopixel.write(9)
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.moveHead(80,86)
   i01.moveArm("left",5,90,30,10)
   i01.moveArm("right",5,90,30,10)

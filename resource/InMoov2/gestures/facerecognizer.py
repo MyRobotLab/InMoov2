@@ -5,3 +5,4 @@ def facerecognizer():
   fr.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
   fr.train()# it takes some time to train and be able to recognize face
   fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
+  i01.finishedGesture()

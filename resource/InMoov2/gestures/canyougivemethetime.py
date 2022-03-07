@@ -1,5 +1,5 @@
 def canyougivemethetime():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01_mouth.speak("sure")
   #i01_mouth.speak(u"конечно")
   fullspeed()

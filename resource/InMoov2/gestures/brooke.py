@@ -18,3 +18,4 @@ def brooke():
   gestureforlondon4()
   i01.disable()
   sleep(8)
+  i01.finishedGesture()

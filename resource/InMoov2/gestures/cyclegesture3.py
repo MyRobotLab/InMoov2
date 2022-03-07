@@ -1,7 +1,6 @@
 def cyclegesture3():
-  ##for x in range(3):
   rest()
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHandSpeed("left", 43.0, 43.0, 43.0, 43.0, 43.0, 100.0)
   i01.setHandSpeed("right", 43.0, 43.0, 43.0, 43.0, 43.0, 100.0)
   i01.setArmSpeed("left", 100.0, 100.0, 100.0, 100.0)

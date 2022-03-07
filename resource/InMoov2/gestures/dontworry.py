@@ -1,5 +1,5 @@
 def dontworry():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHandSpeed("left", 50, 50, 50, 50, 50, 59)
   i01.setHandSpeed("right", 50, 50, 50, 50, 50, 59)
   i01.setArmSpeed("left", 100.0, 100.0, 100.0, 100.0)

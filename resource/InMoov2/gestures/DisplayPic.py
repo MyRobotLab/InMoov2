@@ -1,12 +1,13 @@
 def DisplayPic(pic):
   r=0
   try:
-    r=image.displayFullScreen(pic,1)
+    r=imageDisplay.displayFullScreen(pic,1)
   except: 
-    inmoovWebKit.getResponse("PICTUREPROBLEM")
+    i01_chatBot.getResponse("PICTUREPROBLEM")
     pass
   time.sleep(0.1)
   try:
-    r=image.displayFullScreen(pic,1)
+    r=imageDisplay.displayFullScreen(pic,1)
   except:
       pass
+  i01.finishedGesture()
