@@ -312,13 +312,13 @@
         <oob><mrl><service>python</service><method>exec</method><param>studyball()</param></mrl></oob></template>
 </category>
 <category><pattern>MESURE LA DISTANCE</pattern>
-<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonic("En centimètres, je mesure une distance de ")</param></mrl></oob></template>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultrasonic("En centimètres, je mesure une distance de ")</param></mrl></oob></template>
 </category>
 <category><pattern>MESURE LA DISTANCE À GAUCHE</pattern>
-<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicLeft("En centimètres, à gauche, je mesure une distance de ")</param></mrl></oob></template>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultrasonicLeft("En centimètres, à gauche, je mesure une distance de ")</param></mrl></oob></template>
 </category>
 <category><pattern>MESURE LA DISTANCE À DROITE</pattern>
-<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicRight("En centimètres, à droite, je mesure une distance de ")</param></mrl></oob></template>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultrasonicRight("En centimètres, à droite, je mesure une distance de ")</param></mrl></oob></template>
 </category>
 <category><pattern>PARFAIT</pattern>
 <template>Perfect.
