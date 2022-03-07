@@ -1,6 +1,6 @@
 def alessandro():
   fullspeed()
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHeadSpeed(43.0, 36, 50, 50, 100.0)
   i01.moveHead(60,40,7,85,52)
   sleep(1)

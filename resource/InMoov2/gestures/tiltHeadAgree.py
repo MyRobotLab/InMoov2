@@ -1,5 +1,5 @@
 def tiltHeadAgree():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHeadSpeed(60, 60, 70)
   i01.moveHead(80,90,180)
   sleep(0.8)

@@ -1,5 +1,5 @@
 def victory():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.moveHead(114,90)
   i01.moveArm("left",90,91,106,10)
   i01.moveArm("right",0,73,30,17)

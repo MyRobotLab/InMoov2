@@ -24,3 +24,4 @@ def howdoyoudo():
     sleep(4)
     relax()    
   i01_chatBot.setPredicate("parameterHowDoYouDo",str(helvar))
+  i01.finishedGesture()

@@ -1,6 +1,6 @@
 def systemcheck():
   fullspeed()
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHeadSpeed(30,30,70)
   i01.moveHead(90,90,90)
   sleep(1)

@@ -1,4 +1,5 @@
 def halfspeed():
+  #i01.startedGesture()
   if runtime.isStarted('i01.neopixel'):
     i01.setNeopixelAnimation("Color Wipe", 0, 200, 0, 1)
     sleep(1)
@@ -24,3 +25,4 @@ def halfspeed():
   if runtime.isStarted('i01.eyeLids'):
     i01_head_eyelidLeft.setSpeed(50.0)
     i01_head_eyelidRight.setSpeed(50.0)
+  i01.finishedGesture()  

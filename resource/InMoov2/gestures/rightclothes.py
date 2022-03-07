@@ -1,6 +1,6 @@
 def rightclothes():
   fullspeed()
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHandSpeed("left", 43.0, 43.0, 43.0, 43.0, 43.0, 100.0)
   i01.setHandSpeed("right", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   i01.setArmSpeed("right", 59, 59, 59, 43.0)

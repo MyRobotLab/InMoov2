@@ -1,5 +1,5 @@
 def sing():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHeadSpeed(100.0,100.0)
   i01.setArmSpeed("left",100.0,100.0,100.0,100.0)
   i01.setArmSpeed("right",100.0,100.0,100.0,100.0)

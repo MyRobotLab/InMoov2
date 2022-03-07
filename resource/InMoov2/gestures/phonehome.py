@@ -1,6 +1,6 @@
 def phonehome():
   relax()
-  i01.startedGesture()
+  #i01.startedGesture()
   sleep(1)
   i01.setHeadSpeed(100.0,100.0,100.0,100.0,100.0)
   i01.setArmSpeed("left",100.0,100.0,100.0,100.0)

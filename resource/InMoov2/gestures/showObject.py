@@ -14,6 +14,7 @@ def showToCenter():
   i01.moveHand("left",80.00,80.00,80.00,80.00,80.00,14.00)
   i01.moveHand("right",180.00,0.00,180.00,180.00,180.00,180.00)
   i01.moveTorso(90.20,90.20,90.00)
+  i01.finishedGesture()
   
 def showToLeft():
   i01.moveHead(90.00,100.00,90.00,90.00,0.00,90.00)
@@ -22,6 +23,7 @@ def showToLeft():
   i01.moveHand("left",180.00,32.00,180.00,180.00,180.00,0.00)
   i01.moveHand("right",80.00,80.00,80.00,80.00,80.00,180.00)
   i01.moveTorso(95.00,90.00,90.00)
+  i01.finishedGesture()
   
 def showToRight():
   i01.moveHead(41.00,86.00,90.00,90.00,0.00,90.20)
@@ -30,3 +32,4 @@ def showToRight():
   i01.moveHand("left",80.00,80.00,80.00,80.00,80.00,28.00)
   i01.moveHand("right",180.00,0.00,180.00,180.00,180.00,180.00)
   i01.moveTorso(82.00,85.00,91.00)
+  i01.finishedGesture()

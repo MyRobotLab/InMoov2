@@ -1,5 +1,5 @@
 def more():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHandSpeed("right", 31.0, 31.0, 31.0, 31.0, 31.0, 22.0)
   i01.setArmSpeed("left", 43.0, 36, 43.0, 59)
   i01.setArmSpeed("right", 31.0, 22.0, 22.0, 22.0)

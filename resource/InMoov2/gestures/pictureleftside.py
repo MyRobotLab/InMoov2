@@ -1,5 +1,5 @@
 def pictureleftside():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHandSpeed("left", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   i01.setHandSpeed("right", 43.0, 43.0, 43.0, 43.0, 43.0, 43.0)
   i01.setArmSpeed("right", 100.0, 100.0, 100.0, 100.0)

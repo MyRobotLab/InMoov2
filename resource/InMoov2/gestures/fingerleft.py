@@ -11,5 +11,6 @@ def fingerleft():
   i01.moveHand("left",180,2,175,160,165,90)
   i01.moveHand("right",180,180,180,180,180,90)
   i01.moveTorso(120,110,90)
+  i01.finishedGesture()
 
 

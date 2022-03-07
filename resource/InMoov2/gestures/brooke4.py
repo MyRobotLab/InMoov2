@@ -15,4 +15,5 @@ def brooke4():
   sleep(4)
   i01.disable()
   sleep(20)
-  brooke2()   
+  brooke2()
+  i01.finishedGesture()  

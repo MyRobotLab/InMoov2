@@ -1,6 +1,6 @@
 def takeball():
   rest()
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHandSpeed("right", 22.0, 13.0, 22.0, 31.0, 43.0, 31.0)
   i01.setArmSpeed("right", 43.0, 43.0, 43.0, 43.0)
   i01.setHeadSpeed(50.0, 50.0)

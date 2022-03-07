@@ -6,3 +6,4 @@ def brooke2():
   i01.disable()
   sleep(30)
   brooke3()
+  i01.finishedGesture()

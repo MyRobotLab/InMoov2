@@ -7,4 +7,5 @@ def stopit():
   if (data == "pause"):# пауза
     i01_mouth.speak("yes")
 	#i01_mouth.speak(u"да")
+  i01.finishedGesture()
 

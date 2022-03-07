@@ -1,6 +1,6 @@
 #Each gesture correspond to a number showed by the hand
 def oneFinger():
-  i01.startedGesture()
+  #i01.startedGesture()
   rest()
   i01.moveHead(64.00,94.00,76.93,58.72,0.00,129.00)
   i01.moveArm("left",90.00,60.00,83.00,15.00)

@@ -28,3 +28,4 @@ def YoloOnUSonic():
     sleep(1)
     No()
     i01.speakBlocking("I think my Ultrasonic is not activated")
+  i01.finishedGesture()

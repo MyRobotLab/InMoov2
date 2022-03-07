@@ -28,3 +28,4 @@ def notTrue():
     i01_mouth.speak("oh, I will turn around")
     #i01_mouth.speak(u"О, я обернусь")
     i01.moveHead(90,90)
+  i01.finishedGesture()  

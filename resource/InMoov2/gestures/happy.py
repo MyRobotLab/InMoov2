@@ -1,5 +1,5 @@
 def happy():
-  i01.startedGesture()
+  #i01.startedGesture()
   for w in range(0,3):
     sleep(1)
     i01.setHandSpeed("left", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)

@@ -5,3 +5,4 @@ def lookAtThis():
   i01.moveHand("left",92,106,133,127,107,29)
   i01.moveHand("right",86,51,133,162,153,180)
   i01.moveTorso(90,90,90)
+  i01.finishedGesture()

@@ -7,4 +7,5 @@ def iloveyou():
   i01.moveHand("right",59,53,89,61,36,21)
   i01.moveTorso(90,90,90)
   sleep(1)
+  i01.finishedGesture()
   relax()

@@ -1,5 +1,5 @@
 def studyball():
-  i01.startedGesture()
+  #i01.startedGesture()
   ##keepball():
   sleep(3)
   i01.setHandSpeed("left", 22.0, 22.0, 22.0, 22.0, 22.0, 100.0)

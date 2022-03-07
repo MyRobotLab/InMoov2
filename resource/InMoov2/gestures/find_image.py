@@ -1,5 +1,5 @@
 def find_image(image):
-  if isChatBotActivated:
+  if runtime.isStarted('i01.ChatBot'):
     python.subscribe('i01.chatBot', 'publishResults')
     try:
       image = image.decode( 'utf8' )
@@ -7,7 +7,7 @@ def find_image(image):
       pass
     a = i01_chatBot.search(image)
     #a = i01_chatBot.search(+urllib2.quote(image).replace(" ", "%20"))
-    display(a)
+    imageDisplay.display(a)
   else:
     google = Runtime.start('google','GoogleSearch')
     python.subscribe('google', 'publishResults')
@@ -16,4 +16,6 @@ def find_image(image):
     except: 
       pass
     a = google.search(image)  
-    display(a)
+    imageDisplay.display(a)
+    i01.finishedGesture()
+

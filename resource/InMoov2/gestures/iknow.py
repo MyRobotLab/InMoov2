@@ -9,3 +9,4 @@ def iknow():
   if x == 3:
     i01_mouth.speak("sorry about that")
 	#i01_mouth.speak(u"Извини за это")
+  i01.finishedGesture()

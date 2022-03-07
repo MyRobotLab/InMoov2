@@ -1,5 +1,5 @@
 def armsFront():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.moveHead(90,90)
   i01.moveArm("left",13,115,100,50)
   i01.moveArm("right",13,115,100,50)

@@ -40,3 +40,4 @@ def lookatpeople():
   sleep(3)
   i01_mouth.speak("nice to meet you all")
   #i01_mouth.speak(u"Приятно с вами познакомиться")
+  i01.finishedGesture()

@@ -1,5 +1,5 @@
 def cyclegesture1():
-  i01.startedGesture()
+  #i01.startedGesture()
   welcome()
   sleep(1)
   relax()

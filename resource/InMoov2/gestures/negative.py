@@ -11,6 +11,7 @@ def negative():
   i01.moveArm("right",59,60,50,16)
   i01.moveHand("left",140,148,140,10,10,0)
   i01.moveHand("right",140,148,140,10,10,0)
+  i01.finishedGesture()
   sleep(2)
   relax()
 

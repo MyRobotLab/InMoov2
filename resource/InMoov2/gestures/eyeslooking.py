@@ -20,3 +20,4 @@ def eyeslooking():
       eyesright()
     sleep(0.5)
   eyesfront()
+  i01.finishedGesture()

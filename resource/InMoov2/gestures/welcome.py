@@ -14,5 +14,6 @@ def welcome():
   i01.speakBlocking("Welcome to the inmoov nation")
   #i01.speakBlocking(u"Добро пожаловать в страну Инмоов")
   sleep(1)
+  i01.finishedGesture()
 
 

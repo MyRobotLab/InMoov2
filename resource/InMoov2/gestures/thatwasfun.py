@@ -5,5 +5,6 @@ def thatwasfun():
   i01.moveHand("left",110,62,56,88,81,145)
   i01.moveHand("right",78,88,101,95,81,27)
   i01.moveTorso(90,90,90)
+  i01.finishedGesture()
   relax()
 

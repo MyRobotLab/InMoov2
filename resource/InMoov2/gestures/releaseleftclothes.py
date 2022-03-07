@@ -1,5 +1,5 @@
 def releaseleftclothes():
-  i01.startedGesture()
+  #i01.startedGesture()
   ##arms get to middle
   i01.setHandSpeed("left", 100.0, 36, 36, 36, 100.0, 36)
   i01.setHandSpeed("right", 100.0, 26.00, 26.00, 100.0, 100.0, 36)

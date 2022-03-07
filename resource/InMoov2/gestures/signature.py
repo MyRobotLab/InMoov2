@@ -1,5 +1,5 @@
 def signature():
-  i01.startedGesture()
+  #i01.startedGesture()
   ##approach
   i01.setHeadSpeed(31.0,31.0,100.0,100.0,100.0)
   i01.setArmSpeed("left",31.0,31.0,31.0,31.0)

@@ -9,4 +9,5 @@ def showitanyway():
   if x == 3:
     i01.mouth.speak("alright")
 	#i01.mouth.speak(u"хорошо")
+  i01.finishedGesture()
   unhappy()

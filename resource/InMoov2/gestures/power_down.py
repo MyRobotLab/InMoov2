@@ -11,3 +11,4 @@ def power_down():
   ##leftSerialPort.digitalWrite(53, Arduino.LOW)
   ear.lockOutAllGrammarExcept("power up")
   sleep(2)
+  i01.finishedGesture()

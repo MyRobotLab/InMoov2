@@ -1,5 +1,5 @@
 def releasedelicate():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHandSpeed("left", 19, 19, 100.0, 100.0, 100.0, 100.0)
   i01.setHandSpeed("right", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   i01.setArmSpeed("left", 31.0, 31.0, 31.0, 59)

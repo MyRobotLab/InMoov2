@@ -1,5 +1,5 @@
 def armsUp():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHeadSpeed(100.0,100.0)
   i01.moveHead(180,86)
   sleep(1)

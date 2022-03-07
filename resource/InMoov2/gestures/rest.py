@@ -29,3 +29,4 @@ def rest():
   if runtime.isStarted('i01.eyeLids'):
     i01_head_eyelidLeft.rest()
     i01_head_eyelidRight.rest()
+  i01.finishedGesture()  

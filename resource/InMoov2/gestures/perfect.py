@@ -1,5 +1,5 @@
 def perfect():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHandSpeed("left", 36, 36, 100.0, 100.0, 100.0, 100.0)
   i01.setHandSpeed("right", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   i01.setArmSpeed("left", 59, 59, 59, 100.0)

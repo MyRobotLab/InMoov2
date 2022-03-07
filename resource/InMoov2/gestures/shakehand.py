@@ -14,7 +14,7 @@ distanceRightOK=0
 
 def shakehand():
   rest()
-  i01.startedGesture()
+  #i01.startedGesture()
   ##move arm and hand
   i01.setHandSpeed("left", 22.0, 22.0, 22.0, 22.0, 22.0, 100.0)
   i01.setHandSpeed("right", 22.0, 22.0, 22.0, 22.0, 22.0, 100.0)
@@ -135,7 +135,7 @@ def shakehandAnimation():
   i01.moveArm("right",6,73,55,16)
   i01.moveHand("left",50,50,40,20,20,90)
   i01.moveTorso(95,95,90)
-  if runtime.isStarted('i01.rightHandSensor'):
+  if rightHandSensorActivated:
     rightHandSensorON()
     sleep(1.5)
     rightThumbPressure=1 # Pressure range between 0-3
@@ -177,7 +177,8 @@ def shakehandAnimation():
   i01.moveHand("left",50,50,40,20,20,90)
   i01.moveTorso(95,95,90)
   sleep(0.7)
-  i01_chatBot.getResponse("SYSTEM_SHAKE_HAND")
+  if runtime.isStarted('i01.chatBot'):
+    i01_chatBot.getResponse("SYSTEM_SHAKE_HAND")
   ##shake hand down
   i01.setHandSpeed("left", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   i01.setHandSpeed("right", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)

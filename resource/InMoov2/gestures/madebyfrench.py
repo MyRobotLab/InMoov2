@@ -1,6 +1,6 @@
 def madebyfrench():
   relax()
-  i01.startedGesture()
+  #i01.startedGesture()
   sleep(1)
   i01.moveHead(80,86)
   i01.moveArm("left",5,90,30,10)

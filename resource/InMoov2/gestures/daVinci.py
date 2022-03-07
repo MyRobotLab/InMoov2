@@ -1,5 +1,5 @@
 def daVinci():
-  i01.startedGesture()
+  #i01.startedGesture()
   # get the current value of auto disable
   leftPreviousAutoDisableValue = i01_leftArm_omoplate.isAutoDisable()
   rightPreviousAutoDisableValue = i01_rightArm_omoplate.isAutoDisable()

@@ -10,3 +10,4 @@ def power_up():
   relax()
   ear.clearLock()
   sleep(2)
+  i01.finishedGesture()

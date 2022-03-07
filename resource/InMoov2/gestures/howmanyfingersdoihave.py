@@ -1,5 +1,5 @@
 def howmanyfingersdoihave():
-  i01.startedGesture()
+  #i01.startedGesture()
   fullspeed()
   i01.moveHead(49,74)
   i01.moveArm("left",75,83,79,24)

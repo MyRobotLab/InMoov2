@@ -1,5 +1,5 @@
 def fighter():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.moveHead(160,87)
   i01.moveArm("left",31,75,152,10)
   i01.moveArm("right",3,94,33,16)

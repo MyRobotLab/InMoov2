@@ -7,6 +7,6 @@ def speakhindi():
   i01.moveHand("left",124,82,65,81,41,143)
   i01.moveHand("right",59,53,89,61,36,21)
   i01.moveTorso(90,90,90)
-  sleep(0.2)
   sleep(1)
+  i01.finishedGesture()
   relax()
