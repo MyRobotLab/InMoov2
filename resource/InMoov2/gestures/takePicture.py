@@ -19,6 +19,7 @@ def takePicture():
             imageDisplay.displayFullScreen(photoFileName)
             sleep(15)
             imageDisplay.closeAll()
+        i01.finishedGesture()    
     else:
         i01.cameraOn()
         if runtime.isStarted('imageDisplay'):
@@ -34,10 +35,11 @@ def takePicture():
             imageDisplay = runtime.start("imageDisplay", "ImageDisplay")
             sleep(5)
             i01_audioPlayer.playFile('resource/InMoov2/system/sounds/ShutterClik.mp3')
-            sleep(2)
+            sleep(4)
             photoFileName = i01_opencv.recordFrame()
             print photoFileName
             sleep(1)
             #imageDisplay.display(photoFileName)
             imageDisplay.displayFullScreen(photoFileName)
             sleep(15)
+        i01.finishedGesture()        

@@ -1,7 +1,7 @@
 ## A small gesture to test a pinch of the right hand using finger sensors
 def testSensor():
   rest()
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHandSpeed("left", 22.0, 22.0, 22.0, 22.0, 22.0, 100.0)
   i01.setHandSpeed("right", 22.0, 22.0, 22.0, 22.0, 22.0, 100.0)
   i01.setArmSpeed("right", 59, 59, 59, 43.0)
@@ -15,8 +15,7 @@ def testSensor():
   i01.moveTorso(90.0,90.0,90.0)
   ## TODO fix the bug if we don't finish the gesture at this point
   ## the pressure sensors don't work
-  i01.finishedGesture()
-  if rightHandSensorActivated:
+  if rightHandSensorActivated==1:
     rightHandSensorON() # this enable the pins sensors
     sleep(1.5)
     rightThumbPressure=1 # Pressure range between 0-3
@@ -29,3 +28,4 @@ def testSensor():
     rightHandSensorOFF() # this disable the pins sensors
   else:
     i01.moveHand("right",140,160,20,3,0,11)
+  i01.finishedGesture()  

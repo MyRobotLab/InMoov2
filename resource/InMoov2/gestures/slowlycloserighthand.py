@@ -7,4 +7,5 @@ def slowlycloserighthand():
   i01.moveHead(30,60)
   i01.moveArm("right",5,80,30,10)
   i01.moveHand("right",176,173,175,175,2,180)
+  i01.finishedGesture()
 

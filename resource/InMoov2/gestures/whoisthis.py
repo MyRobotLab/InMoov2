@@ -19,4 +19,5 @@ def whoisthis():
       onRecognizedFace(name)
     else:
       errorSpokenFunc('OPENCVNOWORKY')
+    i01.finishedGesture()  
 

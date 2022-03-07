@@ -51,3 +51,4 @@ def whatisthecolor():
     sleep(4)
     relax()
     coloring += 1
+  i01.finishedGesture()  

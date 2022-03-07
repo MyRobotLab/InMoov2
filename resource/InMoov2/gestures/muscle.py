@@ -1,5 +1,5 @@
 def muscle():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHandSpeed("left", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   i01.setHandSpeed("right", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   i01.setArmSpeed("right", 31.0, 43.0, 59, 43.0)

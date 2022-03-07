@@ -6,3 +6,4 @@ def sorryiforgot():
   if x == 2:
     i01_mouth.speak("you forget all the time")
 	#i01_mouth.speak(u"Вы всё время забываете")
+  i01.finishedGesture()

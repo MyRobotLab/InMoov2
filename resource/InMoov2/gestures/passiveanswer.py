@@ -6,5 +6,6 @@ def passiveanswer():
   i01.moveHand("left",180,180,65,81,41,143)
   i01.moveHand("right",180,180,18,61,36,21)
   i01.moveTorso(90,90,90)
+  i01.finishedGesture()
   sleep(0.2)
   relax()

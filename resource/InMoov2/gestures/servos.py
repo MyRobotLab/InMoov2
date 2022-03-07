@@ -1,5 +1,5 @@
 def servos():
-  i01.startedGesture()
+  #i01.startedGesture()
   sleep(2)
   i01.setHandSpeed("left", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   i01.setHandSpeed("right", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)

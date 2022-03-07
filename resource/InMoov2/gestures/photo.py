@@ -1,5 +1,5 @@
 def photo():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.moveHead(87,60)
   i01.moveArm("left",78,48,37,11)
   i01.moveArm("right",46,147,5,75)

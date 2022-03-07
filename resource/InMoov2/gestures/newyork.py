@@ -1,6 +1,6 @@
 def newyork():
   stopTracking()
-  i01.startedGesture()
+  #i01.startedGesture()
   #disable audiofile mouthcontrol
   mouthControlAudiofile=False
   #start the song

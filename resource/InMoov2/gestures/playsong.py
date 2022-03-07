@@ -1,5 +1,5 @@
 def playsong(data):
-  i01.startedGesture()
+  #i01.startedGesture()
   if (data == "can i have your attention"): # Могу ли я привлечь ваше внимание
     i01_mouth.speak("ok you have my attention")
     #i01_mouth.speak(u"Хорошо, что я привлёк ваше внимание")

@@ -1,6 +1,6 @@
 def takethis():
   fullspeed()
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.moveHead(14,90)
   i01.moveArm("left",13,45,95,10)
   i01.moveArm("right",5,90,30,10)

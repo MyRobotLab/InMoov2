@@ -33,5 +33,6 @@ def stoprockpaperscissors():
     power_down()
   ##i01_mouth.speak("ok i'll find something else to do then")
   ##lookaroundyou()
+  i01.finishedGesture()
 
 

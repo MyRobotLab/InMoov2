@@ -2,7 +2,7 @@ def unhappy():
   if runtime.isStarted('i01.neopixel'):
     i01.setNeopixelAnimation("Color Wipe", 20, 0, 0, 1)
     sleep(2)
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHandSpeed("left", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   i01.setHandSpeed("right", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   i01.setArmSpeed("left", 100.0, 100.0, 100.0, 100.0)

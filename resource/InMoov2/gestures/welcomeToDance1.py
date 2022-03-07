@@ -2,7 +2,7 @@
 def welcomeToDance1():
   MoveEyesTimer.startClock()
   MoveEyesTimer.setInterval(random.randint(600,1000))
-  i01.startedGesture()
+  #i01.startedGesture()
   #welcome
   t = (random.randint(1, 2))
   if t == 1:

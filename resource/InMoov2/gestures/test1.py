@@ -13,5 +13,6 @@ def test1():
   i01.moveHand("right",2,2,2,2,2,90)
   i01.moveTorso(90,90,90)
   sleep(2)
+  i01.finishedGesture()
 
 
