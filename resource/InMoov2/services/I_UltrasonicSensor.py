@@ -1,6 +1,6 @@
 # -- coding: utf-8 --
 # ##############################################################################
-#                 ultra Sonic Sensor FILE
+#                 ultrasonic Sensor FILE
 # ##############################################################################
 
 
@@ -12,40 +12,40 @@ ThisServicePartConfig = ConfigParser.ConfigParser()
 ThisServicePartConfig.read(ThisServicePart+'.config')
 trigLeftPin=ThisServicePartConfig.getint('MAIN', 'trigLeftPin')
 echoLeftPin=ThisServicePartConfig.getint('MAIN', 'echoLeftPin')
-ultraSonicLeftArduino=ThisServicePartConfig.get('MAIN', 'ultraSonicLeftArduino')
-ultraSonicLeftActivated=ThisServicePartConfig.getboolean('MAIN', 'ultraSonicLeftActivated')
+ultrasonicLeftArduino=ThisServicePartConfig.get('MAIN', 'ultrasonicLeftArduino')
+ultrasonicLeftActivated=ThisServicePartConfig.getboolean('MAIN', 'ultrasonicLeftActivated')
 
 trigRightPin=ThisServicePartConfig.getint('MAIN', 'trigRightPin')
 echoRightPin=ThisServicePartConfig.getint('MAIN', 'echoRightPin')
-ultraSonicRightArduino=ThisServicePartConfig.get('MAIN', 'ultraSonicRightArduino')
-ultraSonicRightActivated=ThisServicePartConfig.getboolean('MAIN', 'ultraSonicRightActivated')
+ultrasonicRightArduino=ThisServicePartConfig.get('MAIN', 'ultrasonicRightArduino')
+ultrasonicRightActivated=ThisServicePartConfig.getboolean('MAIN', 'ultrasonicRightActivated')
 
-if ultraSonicRightActivated:
+if ultrasonicRightActivated:
   ultrasonicRight = Runtime.start("ultrasonicRight", "UltrasonicSensor")
   
   try:
-    ultraSonicRightArduino=eval(ThisServicePartConfig.get('MAIN', 'ultraSonicRightArduino'))
-    ultrasonicRight.attach(ultraSonicRightArduino, trigRightPin, echoRightPin)
+    ultrasonicRightArduino=eval(ThisServicePartConfig.get('MAIN', 'ultrasonicRightArduino'))
+    ultrasonicRight.attach(ultrasonicRightArduino, trigRightPin, echoRightPin)
     i01.ultrasonicSensor=ultrasonicRight
     i01.speakBlocking(i01.localize("STARTINGULTRASONIC"))
     # range can also be retreieved in a blocking call
-    print "ultrasonicRight test is: ", i01.getUltrasonicRightDistance()
+    print "ultrasonicRight test is: ", i01.getultrasonicRightDistance()
   except:
-    errorSpokenFunc('BADRDUINOCHOOSEN','ultra Sonic Sensor Right')
-    ultraSonicRightActivated=False
+    errorSpokenFunc('BADRDUINOCHOOSEN','ultra sonic Sensor Right')
+    ultrasonicRightActivated=False
     pass
 
-if ultraSonicLeftActivated:
+if ultrasonicLeftActivated:
   ultrasonicLeft = Runtime.start("ultrasonicLeft", "UltrasonicSensor")
   
   try:
-    ultraSonicLeftArduino=eval(ThisServicePartConfig.get('MAIN', 'ultraSonicLeftArduino'))
-    ultrasonicLeft.attach(ultraSonicLeftArduino, trigLeftPin, echoLeftPin)
+    ultrasonicLeftArduino=eval(ThisServicePartConfig.get('MAIN', 'ultrasonicLeftArduino'))
+    ultrasonicLeft.attach(ultrasonicLeftArduino, trigLeftPin, echoLeftPin)
     i01.ultrasonicSensor=ultrasonicLeft
     i01.speakBlocking(i01.localize("STARTINGULTRASONIC"))
     # range can also be retreieved in a blocking call
-    print "ultrasonicLeft test is: ", i01.getUltrasonicLeftDistance()
+    print "ultrasonicLeft test is: ", i01.getultrasonicLeftDistance()
   except:
-    errorSpokenFunc('BADRDUINOCHOOSEN','ultra Sonic Sensor Left')
-    ultraSonicLeftActivated=False
-    pass  
+    errorSpokenFunc('BADRDUINOCHOOSEN','ultra sonic Sensor Left')
+    ultrasonicLeftActivated=False
+    pass

@@ -139,7 +139,7 @@ def sleepModeInsult():
   i01.disable()
   switchOffAllNervo()
   sleep(2)
-  if runtime.isStarted('i01.pir')::
+  if runtime.isStarted('i01.pir'):
     PirControlerArduino.disablePin(PirPin)
   sleep(1)
   if runtime.isStarted('i01.neopixel'):i01.setNeopixelAnimation("Ironman", 255, 0, 0, 1)
