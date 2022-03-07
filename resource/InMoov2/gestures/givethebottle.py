@@ -1,5 +1,5 @@
 def givethebottle():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHandSpeed("left", 19, 19, 19, 19, 19, 31.0)
   i01.setHandSpeed("right", 19, 36, 19, 19, 19, 19)
   i01.setArmSpeed("left", 36, 36, 43.0, 36)

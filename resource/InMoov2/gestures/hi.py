@@ -1,5 +1,5 @@
 def hi():
-    i01.startedGesture()
+    #i01.startedGesture()
     i01.halfSpeed()
     relax()
     i01.startedGesture()

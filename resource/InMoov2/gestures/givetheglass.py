@@ -1,5 +1,5 @@
 def givetheglass():
-  i01.startedGesture()
+  #i01.startedGesture()
   sleep(2)
   i01.setHandSpeed("left", 19, 19, 19, 19, 19, 19)
   i01.setHandSpeed("right", 19, 36, 19, 19, 19, 19)

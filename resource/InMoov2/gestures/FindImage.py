@@ -6,6 +6,7 @@ def FindImage(image):
     pass
   a = Parse("http://www.myai.cloud/bot1.php?type=pic&pic="+urllib2.quote(image).replace(" ", "%20"))
   
-  displayPic(a)
+  imageDisplay.displayPic(a)
   print "http://www.myai.cloud/bot1.php?type=pic&pic="+urllib2.quote(image).replace(" ", "%20")
 #Light(1,1,1)
+  i01.finishedGesture()

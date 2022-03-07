@@ -31,4 +31,5 @@ def lookaroundyou():
       i01_mouth.speak("can I help you")
     if x == 4:
       i01_mouth.speak("what would you like to do")
+    i01.finishedGesture()
     relax()

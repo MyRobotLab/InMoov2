@@ -1,5 +1,5 @@
 def handdown():
-  i01.startedGesture()
+  #i01.startedGesture()
   i01.setHandSpeed("left", 31.0, 31.0, 31.0, 31.0, 31.0, 31.0)
   i01.setHandSpeed("right", 26.00, 26.00, 26.00, 26.00, 26.00, 100.0)
   i01.setArmSpeed("right", 43.0, 22.0, 22.0, 22.0)
