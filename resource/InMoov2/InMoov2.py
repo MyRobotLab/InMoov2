@@ -61,7 +61,7 @@ execfile(RuningFolder+'/system/InitCheckup.py')
 #i01_right = Runtime.start('i01.right', 'Arduino')
 #i01_left = Runtime.start('i01.left', 'Arduino')
 
-#i01_ultraSonicRight = Runtime.start('i01.ultraSonicRight', 'UltrasonicSensor')
-#i01_ultraSonicLeft = Runtime.start('i01.ultraSonicLeft', 'UltrasonicSensor')
+#i01_ultrasonicRight = Runtime.start('i01.ultrasonicRight', 'UltrasonicSensor')
+#i01_ultrasonicLeft = Runtime.start('i01.ultrasonicLeft', 'UltrasonicSensor')
 
 #i01_pir = Runtime.start('i01.pir', 'Pir')
