@@ -967,6 +967,13 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td>Image display</td>
+                                <td>
+                                    <toggle width="30" height="28" title="This is launching option for imageDisplay requests via the chatbot" ng-model="service.imageDisplay" ng-change="!service.imageDisplay?msg.loadFile('resource/InMoov2/system/startScripts/imageDisplay_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/imageDisplay_start.py')" on=" " off=" "></toggle>
+                                    <button class="btn btn-default" ng-show="service.imageDisplay" ng-click="mrl.changeTab(service.name + '.imageDisplay')">Open</button>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td>Open weather map</td>
                                 <td>
                                     <toggle width="30" height="28" title="This is launching option for weather requests via the chatbot" ng-model="service.enableOwm" ng-change="!service.enableOwm?msg.loadFile('resource/InMoov2/system/startScripts/i01_openWeatherMap_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_openWeatherMap_start.py')" on=" " off=" "></toggle>
