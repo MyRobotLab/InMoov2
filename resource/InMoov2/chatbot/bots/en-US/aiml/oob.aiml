@@ -74,7 +74,7 @@
           <mrl>
             <service>webgui</service>
             <method>startBrowser</method>
-            <param>https://encrypted.google.com/maps/search/<star/></param>
+            <param>https://encrypted.google.com/maps/search/weight loss center</param>
           </mrl>
         </oob></template>
 </category>
