@@ -4,7 +4,7 @@ def newyork():
   #disable audiofile mouthcontrol
   mouthControlAudiofile=False
   #start the song
-  i01_audioPlayer.playFile(RuningFolder+'/system/sounds/newYorkSong.mp3', False)
+  i01_audioPlayer.playFile('resource/InMoov2/system/sounds/newYorkSong.mp3', False)
   i01.setHeadSpeed(100.0,100.0,100.0,100.0,100.0)
   i01.setArmSpeed("left",100.0,100.0,100.0,100.0)
   i01.setArmSpeed("right",100.0,100.0,100.0,100.0)
