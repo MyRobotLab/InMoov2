@@ -914,10 +914,12 @@
                     <option ng-repeat="config in configList" ng-value="{{config}}">{{config}}</option>
                 </select>
             </div>
-            <button class="btn btn-default" title="This will save a config module to data/config" ng-click="saveConfig()">save config</button>
-            <button class="btn btn-default" title="This will start a config module" ng-click="startConfig()">start</button>
-            <button class="btn btn-default" title="This will start a config module with resource/InMoov2/InMoov2.py" ng-click="msg.loadFile('resource/InMoov2/InMoov2.py')">start + script</button>
-            <button class="btn btn-default" title="This will release a config module" ng-click="releaseConfig()">release</button>
+            <button class="btn btn-default" title="This will save a config set to data/config" ng-click="saveConfig()">save config</button>
+            <button class="btn btn-default" title="This will load a config set" ng-click="startConfig()">start</button>
+            <button class="btn btn-default" title="This will start a config set" ng-click="startConfig()">start</button>
+            <button class="btn btn-default" title="This will start a config set with resource/InMoov2/InMoov2.py" ng-click="msg.loadFile('resource/InMoov2/InMoov2.py')">start + script</button>
+            <button class="btn btn-default" title="This will unset current config set" ng-click="unsetConfigName()">unset</button>
+            <button class="btn btn-default" title="This will release a config set" ng-click="releaseConfig()">release</button>
             <button class="btn btn-default" title="This will load: resource/InMoov2/system/startScripts/InMoov2FullStart.py" ng-click="msg.loadFile('resource/InMoov2/system/startScripts/InMoov2FullStart.py')">load Full Script</button>
         </td>
     </tr>
