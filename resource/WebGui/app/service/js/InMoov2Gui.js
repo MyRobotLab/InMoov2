@@ -69,14 +69,29 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         }
     }
 
+    $scope.loadConfig = function() {
+        console.info('loadConfig')
+        if ($scope.selectedConfig.length) {
+            for (let i = 0; i < $scope.selectedConfig.length; ++i) {
+                // msg.sendTo('runtime', 'load', 'data/config/' + $scope.selectedConfig[i] + '/runtime.yml')
+                msg.sendTo('runtime', 'setConfigName', $scope.selectedConfig[i])
+                msg.sendTo('runtime', 'load', 'runtime')
+            }
+        }
+    }
+
     $scope.startConfig = function() {
         console.info('startConfig')
         if ($scope.selectedConfig.length){
             for (let i = 0; i < $scope.selectedConfig.length; ++i){
-                msg.sendTo('runtime', 'setConfigName', $scope.selectedConfig[i])
-                msg.sendTo('runtime', 'load')
+                msg.sendTo('runtime', 'startConfigSet', $scope.selectedConfig[i])
             }
         }        
+    }
+
+    $scope.unsetConfigName = function() {
+        console.info('unsetConfigName')
+        msg.sendTo('runtime', 'unsetConfigName')
     }
 
     $scope.releaseConfig = function() {
