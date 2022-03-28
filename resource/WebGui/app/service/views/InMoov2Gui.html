@@ -690,7 +690,7 @@
             <!--------------------------------------------------------------->
             <img src="../Pir.png"/>
             <label>pir:</label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" ng-model="service.isPirActivated" title="To access settings, the pir must be activated" ng-change="!service.isPirActivated?msg.stopPir():msg.loadFile('resource/InMoov2/system/startScripts/i01_pir_start.py')" on="ON" off="OFF"/></toggle>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="70" height="30" ng-model="service.isPirActivated" title="To access settings, the pir must be activated" ng-change="!service.isPirActivated?msg.loadFile('resource/InMoov2/system/startScripts/i01_pir_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_pir_start.py')" on="ON" off="OFF"/></toggle>
             &nbsp;&nbsp;<!--button class="btn btn-default" ng-show="service.isPirActivated" width="80" height="30" ng-click="mrl.changeTab(service.name + '.pir')">Settings</button-->
             <button class="btn btn-default" ng-show="service.isPirActivated" width="80" height="30" ng-click="setPanel('pir')">Settings</button>
         </td>
