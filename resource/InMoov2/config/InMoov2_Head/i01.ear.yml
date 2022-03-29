@@ -1,4 +1,4 @@
-!!org.myrobotlab.service.config.AbstractSpeechRecognizerConfig
+!!org.myrobotlab.service.config.SpeechRecognizerConfig
 listening: true
 textListeners:
 - i01.chatBot
