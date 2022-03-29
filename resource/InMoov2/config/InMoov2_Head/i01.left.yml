@@ -1,4 +1,5 @@
 !!org.myrobotlab.service.config.ArduinoConfig
-connect: true
+connect: false
 port: null
+serial: i01.left.serial
 type: Arduino

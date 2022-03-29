@@ -99,7 +99,7 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         if ($scope.selectedConfig && $scope.selectedConfig.length){
             for (let i = 0; i < $scope.selectedConfig.length; ++i){
                 // msg.sendTo('runtime', 'setConfigName', $scope.selectedConfig[i])
-                msg.sendTo('runtime','releaseConfig', 'data/config/' + $scope.selectedConfig[i] + '/runtime.yml')
+                msg.sendTo('runtime','releaseConfig', $scope.selectedConfig[i])
             }
         }
     }

@@ -1,5 +1,6 @@
 !!org.myrobotlab.service.config.ArduinoConfig
 # for Linux you'd put something like /dev/ttyACM0 for port here
-connect: true
+connect: false
 port: null
+serial: i01.left.serial
 type: Arduino
