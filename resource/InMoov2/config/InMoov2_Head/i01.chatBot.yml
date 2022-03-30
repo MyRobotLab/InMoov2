@@ -4,4 +4,5 @@ currentUserName: Friend
 textListeners:
 - i01
 - i01.htmlFilter
+search: i01.chatBot.search
 type: ProgramAB

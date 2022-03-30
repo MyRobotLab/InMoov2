@@ -3,4 +3,6 @@ currentBotName: en-US
 currentUserName: Friend
 textListeners:
 - i01.htmlFilter
+search: i01.chatBot.search
 type: ProgramAB
+

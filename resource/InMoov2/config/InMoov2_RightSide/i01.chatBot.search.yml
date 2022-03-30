@@ -1,0 +1,6 @@
+!!org.myrobotlab.service.config.GoogleSearchConfig
+autoStartPeers: true
+lowerCase: null
+maxImages: 3
+saveSearchToFile: false
+type: GoogleSearch
