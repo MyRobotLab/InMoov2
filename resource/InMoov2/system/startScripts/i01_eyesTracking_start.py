@@ -10,14 +10,14 @@ if not runtime.isStarted('i01.pid'):
     # create a pid
     i01_pid = Runtime.start("i01.pid","Pid")
     #set Kp, kd, ki kp = gain, how strong it react kd = how fast it react ki= take care of the sum of errors (differences between target and actual value) in the time
-    i01_pid.setPid("i01.head.eyeX", 0.035, 0.01, 0.0)
+    i01_pid.setPid("i01.head.eyeX", 35.0, 1.0, 0.0)
     i01_pid.setMode("i01.head.eyeX", 1)
     #set ControllerDirection means inverted = 1
     i01_pid.setControllerDirection("i01.head.eyeX", 0)
     #set the range of the "correction"
     i01_pid.setOutputRange("i01.head.eyeX", -5, 5)
 
-    i01_pid.setPid("i01.head.eyeY", 0.035, 0.01, 0.0)
+    i01_pid.setPid("i01.head.eyeY", 35.0, 1.0, 0.0)
     i01_pid.setMode("i01.head.eyeY", 1)
     i01_pid.setControllerDirection("i01.head.eyeY", 0)
     #set the range of the "correction"
