@@ -8,7 +8,5 @@
 
 # create a pid
 i01_opencv.removeFilter("FaceDetectDNN")
-runtime.release("i01.headPid")
+runtime.release("i01.pid")
 runtime.release("i01.headTracking")
-runtime.release("i01.eyesPid")
-runtime.release("i01.eyesTracking")
