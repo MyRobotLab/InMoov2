@@ -396,8 +396,8 @@
                 <tr>
                     <td ng-show="service.isOpenCvActivated">
                         <img src="../Tracking.png"/>
-                        <toggle ng-model="service.enableHeadTracking" ng-change="!service.enableHeadTracking?msg.loadFile('resource/InMoov2/system/startScripts/i01_headTracking_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_headTracking_start.py')" width="140" height="30" on="head tracking on" off="head tracking off"></toggle>
-                        <toggle ng-show="service.enableHeadTracking" ng-model="service.enableEyesTracking" ng-change="!service.enableEyesTracking?msg.loadFile('resource/InMoov2/system/startScripts/i01_eyesTracking_stop.py'):msg.loadFile('resource/InMoov2/system/startScripts/i01_eyesTracking_start.py')" width="140" height="30" on="eyes tracking on" off="eyes tracking off"></toggle>
+                        <toggle ng-model="service.enableHeadTracking" ng-change="!service.enableHeadTracking?msg.releasePeer('headTracking'):msg.startPeer('headTracking')" width="140" height="30" on="head tracking on" off="head tracking off"></toggle>
+                        <toggle ng-show="service.enableHeadTracking" ng-model="service.enableEyesTracking" ng-change="!service.enableEyesTracking?msg.releasePeer('eyeTracking'):msg.startPeer('eyeTracking')" width="140" height="30" on="eyes tracking on" off="eyes tracking off"></toggle>
                     </td>
                 </tr>
             </table>
