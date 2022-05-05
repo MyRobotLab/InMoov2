@@ -1,21 +1,15 @@
 def find_image(image):
-  if runtime.isStarted('i01.ChatBot'):
-    python.subscribe('i01.chatBot', 'publishResults')
+  if runtime.isStarted('i01.chatBot.search'):
+    python.subscribe('i01_chatBot_search', 'publishResults')
     try:
       image = image.decode( 'utf8' )
     except: 
       pass
-    a = i01_chatBot.search(image)
-    #a = i01_chatBot.search(+urllib2.quote(image).replace(" ", "%20"))
-    imageDisplay.display(a)
-  else:
-    google = Runtime.start('google','GoogleSearch')
-    python.subscribe('google', 'publishResults')
-    try:
-      image = image.decode( 'utf8' )
-    except: 
-      pass
-    a = google.search(image)  
-    imageDisplay.display(a)
+    images = i01_chatBot_search.imageSearch(image)
+    imageDisplay = Runtime.start('imageDisplay','ImageDisplay')
+    if runtime.isStarted('imageDisplay'):
+      for img in images:
+        imageDisplay.displayFullScreen(img)
+        sleep(3)
+        imageDisplay.closeAll()
     i01.finishedGesture()
-
