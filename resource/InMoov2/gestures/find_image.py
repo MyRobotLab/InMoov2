@@ -6,13 +6,11 @@ def find_image(image):
   # what you do not want to do is use i01 or absolute paths !!!
   # if not i01.isPeerStarted('imageDisplay'):
     
-  imageDisplay = runtime.getService('i01.imageDisplay')
-  search = runtime.start('i01.search','Wikipedia')
-  search.attach(imageDisplay)
-  search.search(image)
-  print('should print picture of', image)
-
-
+  # imageDisplay = runtime.getService('i01.imageDisplay')
+  # search = runtime.start('i01.search','Wikipedia')
+  # search.attach(imageDisplay)
+  # search.search(image)
+  # print('should print picture of', image)
 
   # if runtime.isStarted('i01.ChatBot'):
   #   python.subscribe('i01.chatBot', 'publishResults')
@@ -34,3 +32,17 @@ def find_image(image):
   #   imageDisplay.display(a)
   #   i01.finishedGesture()
 
+  if runtime.isStarted('i01.chatBot.search'):
+    python.subscribe('i01_chatBot_search', 'publishResults')
+    try:
+      image = image.decode( 'utf8' )
+    except: 
+      pass
+    images = i01_chatBot_search.imageSearch(image)
+    imageDisplay = Runtime.start('imageDisplay','ImageDisplay')
+    if runtime.isStarted('imageDisplay'):
+      for img in images:
+        imageDisplay.displayFullScreen(img)
+        sleep(3)
+        imageDisplay.closeAll()
+    i01.finishedGesture()
