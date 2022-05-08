@@ -7,7 +7,7 @@
 # only if robot not actualy speaking
 ###############################################################################
 if HealthCheckActivated==1:
-  HealthCheck = Runtime.start("HealthCheck","Clock")
+  HealthCheck = runtime.start("HealthCheck","Clock")
   HealthCheck.setInterval(60000)
   if BatteryInSystem==1:
     batterieLevel=100

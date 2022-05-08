@@ -14,14 +14,14 @@ rightPort = "COM9"
 #to tweak the default voice
 Voice="Mark" #Male US voice 
 #Voice="Poppy" #Female for MarySpeech
-mouth = Runtime.createAndStart("i01.mouth", "MarySpeech")
+mouth = runtime.start("i01.mouth", "MarySpeech")
 #mouth.installComponentsAcceptLicense(Voice)
 mouth.setVoice(Voice)
 ##############
 # starting InMoov2 service
 i01 = Runtime.create("i01", "InMoov2")
 #Force Arduino to connect (fix Todo)
-right = Runtime.createAndStart("i01.right", "Arduino")
+right = runtime.start("i01.right", "Arduino")
 right.connect(rightPort)
 ##############
 # Starting parts
@@ -43,9 +43,9 @@ i01_rightHand_index.setSpeed(45)
 # Setting port
 i01_rightHand_index.attach(right)
 ##############
-i01 = Runtime.start("i01","InMoov2")
+i01 = runtime.start("i01","InMoov2")
 ##############
-i01_rightHand_index = Runtime.start('i01.rightHand.index', 'Servo')
+i01_rightHand_index = runtime.start('i01.rightHand.index', 'Servo')
 
 # By default InMoov2 servos are autoEnable(True)
 #i01.rightHand.setAutoEnable(False)

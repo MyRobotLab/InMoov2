@@ -13,7 +13,7 @@
 # port = "COM10"
 
 # create a controller
-i01_controller3 = Runtime.start("i01.controller3","Arduino")
+i01_controller3 = runtime.start("i01.controller3","Arduino")
 isController3Activated=True
 enableController3=True
 

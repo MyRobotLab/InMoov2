@@ -34,7 +34,7 @@ mrlCompatible='1.1.191'
 
 ##############
 # Main inmoov service
-i01 = Runtime.createAndStart("i01", "InMoov2")
+i01 = runtime.start("i01", "InMoov2")
 
 ##############
 # robot checkup and initialisation ( skeleton & services )
@@ -58,10 +58,10 @@ execfile(RuningFolder+'/system/InitCheckup.py')
 #Go further !!!! and write some code lines inside custom/InMoov_custom.py
 #execfile(RuningFolder+'/data/export.py')
 
-#i01_right = Runtime.start('i01.right', 'Arduino')
-#i01_left = Runtime.start('i01.left', 'Arduino')
+#i01_right = runtime.start('i01.right', 'Arduino')
+#i01_left = runtime.start('i01.left', 'Arduino')
 
-#i01_ultrasonicRight = Runtime.start('i01.ultrasonicRight', 'UltrasonicSensor')
-#i01_ultrasonicLeft = Runtime.start('i01.ultrasonicLeft', 'UltrasonicSensor')
+#i01_ultrasonicRight = runtime.start('i01.ultrasonicRight', 'UltrasonicSensor')
+#i01_ultrasonicLeft = runtime.start('i01.ultrasonicLeft', 'UltrasonicSensor')
 
-#i01_pir = Runtime.start('i01.pir', 'Pir')
+#i01_pir = runtime.start('i01.pir', 'Pir')

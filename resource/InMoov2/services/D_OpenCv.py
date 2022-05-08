@@ -53,7 +53,7 @@ if isOpenCvActivated:
   i01_opencv = Runtime.create("i01.opencv", "OpenCV")
   i01_opencv.setCameraIndex(CameraIndex)
   i01_opencv.setGrabberType(DisplayRender)
-  i01_opencv = Runtime.start("i01.opencv", "OpenCV")
+  i01_opencv = runtime.start("i01.opencv", "OpenCV")
   i01.startOpenCV()
   if flipPicture:i01_opencv.addPreFilter("Flip")
   if not isOpenCvActivated:

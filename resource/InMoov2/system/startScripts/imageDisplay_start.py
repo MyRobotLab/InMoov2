@@ -6,4 +6,4 @@
 # uncomment for virtual hardware
 # Platform.setVirtual(True)
 
-imageDisplay = Runtime.start('imageDisplay', 'ImageDisplay')
+imageDisplay = runtime.start('imageDisplay', 'ImageDisplay')

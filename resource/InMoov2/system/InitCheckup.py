@@ -6,12 +6,12 @@
 # INIT.1 - system dependencies & language pack
 ################################
 #subconscious for diagnose
-subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
+subconsciousMouth = runtime.start("subconsciousMouth", "MarySpeech")
 subconsciousMouth.setVoice("Obadiah")
 subconsciousMouth.setLocale("en-US")
 
 
-log = Runtime.createAndStart("log", "Log")
+log = runtime.start("log", "Log")
 runtime.setLogLevel("INFO")
 # libraries import
 execfile(RuningFolder+'/system/Import_Libraries.py')

@@ -45,7 +45,7 @@ def openNIInit():
 
 if isKinectActivated:
   try:
-    openni = Runtime.createAndStart("i01.openni", "OpenNi")
+    openni = runtime.start("i01.openni", "OpenNi")
   except:
     isKinectActivated=0
     pass

@@ -11,12 +11,14 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     let centerY = 226
     let radius = 215
 
+    $scope.peer = peer
+
     $scope.servos = []
     $scope.sliders = []
 
-    $scope.controllerTypes = ['Arduino', 'AdaFruit', 'FIXME-morestuff']
     $scope.mrl = mrl
     $scope.panel = mrl.getPanel('runtime')
+    $scope.msg = msg
 
     // text published from InMoov2 service
     $scope.onText = null
@@ -82,11 +84,11 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
 
     $scope.startConfig = function() {
         console.info('startConfig')
-        if ($scope.selectedConfig.length){
-            for (let i = 0; i < $scope.selectedConfig.length; ++i){
+        if ($scope.selectedConfig.length) {
+            for (let i = 0; i < $scope.selectedConfig.length; ++i) {
                 msg.sendTo('runtime', 'startConfigSet', $scope.selectedConfig[i])
             }
-        }        
+        }
     }
 
     $scope.unsetConfigName = function() {
@@ -96,10 +98,10 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
 
     $scope.releaseConfig = function() {
         console.info('releaseConfig')
-        if ($scope.selectedConfig && $scope.selectedConfig.length){
-            for (let i = 0; i < $scope.selectedConfig.length; ++i){
+        if ($scope.selectedConfig && $scope.selectedConfig.length) {
+            for (let i = 0; i < $scope.selectedConfig.length; ++i) {
                 // msg.sendTo('runtime', 'setConfigName', $scope.selectedConfig[i])
-                msg.sendTo('runtime','releaseConfig', $scope.selectedConfig[i])
+                msg.sendTo('runtime', 'releaseConfig', $scope.selectedConfig[i])
             }
         }
     }
@@ -155,30 +157,16 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         }
     }
 
+    $scope.peerState = function(peerKey) {
+        $scope.service.serviceType.peers[peerKey].state
+    }
+
     // GOOD TEMPLATE TO FOLLOW
     this.updateState = function(service) {
         $scope.service = service
         $scope.service.configName = mrl.getService('runtime').configName
         $scope.languageSelected = service.locale.tag
         $scope.mouth = mrl.getService(service.name + '.mouth')
-        
-        // state vars needed for enable/disable toggle display and control
-        service.enableHead = msg.isPeerStarted('head')
-        service.enableLeftArm = msg.isPeerStarted('leftArm')
-        service.enableLeftHand = msg.isPeerStarted('leftHand')
-        service.enableRightArm = msg.isPeerStarted('rightArm')
-        service.enableRightHand = msg.isPeerStarted('rightHand')
-        service.enableTorso = msg.isPeerStarted('torso')
-        
-        service.enableOpenCV = msg.isPeerStarted('opencv')
-        service.enableKinect = msg.isPeerStarted('kinect')
-        service.enableChatBot = msg.isPeerStarted('chatBot')
-
-        service.enableUltrasonicRight = msg.isPeerStarted('ultrasonicRight')
-        service.enableUltrasonicLeft = msg.isPeerStarted('ultrasonicLeft')
-        service.enablePir = msg.isPeerStarted('pir')
-        service.enableAudioPlayer = msg.isPeerStarted('audioPlayer')
-        service.enableServoMixer = msg.isPeerStarted('servoMixer')
 
         $scope.$apply()
     }
@@ -189,6 +177,17 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
 
     $scope.toggle = function(servo) {
         $scope.sliders[servo].tracking = !$scope.sliders[servo].tracking
+    }
+
+    $scope.startPeer = function(peerKey) {
+        console.info(peerKey)
+        console.info($scope.msg)
+        msg.send('startPeer', peerKey)
+    }
+
+    $scope.releasePeer = function(peerKey) {
+        console.info(peerKey)
+        msg.send('releasePeer', peerKey)
     }
 
     _self.onSliderChange = function(servo) {
@@ -247,6 +246,19 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
             $scope.onText = data;
             $scope.$apply()
             break
+        case 'onVoices':
+            $scope.service.voices = data
+            $scope.$apply()
+            break
+        case 'onPeerStarted':
+            if (data == 'mouth') {
+                let actualName = $scope.service.serviceType.peers[data].actualName
+                mrl.subscribe(actualName, 'getVoices')
+                mrl.subscribeToServiceMethod(_self.onMsg, actualName, 'getVoices');
+                msg.sendTo(actualName, 'getVoices')
+            }
+            $scope.$apply()
+            break
         case 'onConfigList':
             $scope.configList = data
             $scope.$apply()
@@ -260,14 +272,13 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         }
     }
 
-    $scope.setConfigName = function(){
+    $scope.setConfigName = function() {
         console.info('setConfigName')
-        if ($scope.selectedConfig.length > 0){
+        if ($scope.selectedConfig.length > 0) {
             $scope.service.configName = $scope.selectedConfig[0]
             msg.sendTo('runtime', 'setConfigName', $scope.service.configName)
         }
     }
-    
 
     // circular main menu buttons
     addButton('brain', 'circular')
@@ -282,44 +293,6 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     addButton('ear', 'circular')
 
     addButton('InMoov', 'absolute', 157, 150)
-    //addButton('battery', 'absolute', 22, 484)
-    //addButton('back', 'absolute', 22, 520)
-    //----Glowing body parts for Activated purpose
-    //addButton('handR', 'absolute', 141, 199)
-    //addButton('handL', 'absolute', 392, 199)
-    //addButton('headA', 'absolute', 284, 145)
-    //addButton('armR', 'absolute', 191, 183)
-    //addButton('armL', 'absolute', 315, 183)
-    //addButton('legL', 'absolute', 304, 262)
-    //addButton('legR', 'absolute', 275, 262)
-    //addButton('torsoA', 'absolute', 278, 216)
-    //---Arm-----------------
-    //addButton('rightArm', 'absolute', 60, 30)
-    //addButton('rightArm.omoplate', 'absolute', 60, 410)
-    //addButton('rightArm.shoulder', 'absolute', 10, 355)
-    //addButton('rightArm.rotate', 'absolute', 60, 105)
-    //addButton('rightArm.bicep', 'absolute', 10, 160)
-
-    //addButton('leftArm', 'absolute', 343, 30)
-    //addButton('leftArm.omoplate', 'absolute', 343, 410)
-    //addButton('leftArm.shoulder', 'absolute', 395, 355)
-    //addButton('leftArm.rotate', 'absolute', 343, 105)
-    //addButton('leftArm.bicep', 'absolute', 395, 160)
-    //addButton('redBlink', 'absolute', 193, 216)
-    //----Hand sensor
-    //addButton('leftHandSensor', 'absolute', 60, 30)
-    //addButton('leftThumbSensor', 'absolute', 103, 107)
-    //addButton('leftIndexSensor', 'absolute', 73, 138)
-    //addButton('leftMajeureSensor', 'absolute', 36, 170)
-    //addButton('leftRingFingerSensor', 'absolute', 0, 203)
-    //addButton('leftPinkySensor', 'absolute', -3, 238)
-
-    //addButton('rightHandSensor', 'absolute', 343, 30)
-    //addButton('rightThumbSensor', 'absolute', 293, 107)
-    //addButton('rightIndexSensor', 'absolute', 323, 138)
-    //addButton('rightMajeureSensor', 'absolute', 360, 170)
-    //addButton('rightRingFingerSensor', 'absolute', 393, 203)
-    //addButton('rightPinkySensor', 'absolute', 401, 238)
 
     calculatButtonPos()
 
@@ -334,6 +307,7 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     mrl.subscribeToServiceMethod(_self.onMsg, mrl.getRuntime().name, 'getServiceTypeNamesFromInterface');
 
     msg.subscribe('publishText')
+    msg.subscribe('publishPeerStarted')
     msg.sendTo(mrl.getRuntime().name, 'getServiceTypeNamesFromInterface', 'SpeechSynthesis')
     msg.sendTo(mrl.getRuntime().name, 'publishConfigList')
     msg.subscribe(this)

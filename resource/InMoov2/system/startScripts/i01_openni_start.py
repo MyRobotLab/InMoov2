@@ -7,5 +7,5 @@
 # Platform.setVirtual(True)"
 
 # create a openni
-i01_openni = Runtime.start("i01.openni","OpenNi")
+i01_openni = runtime.start("i01.openni","OpenNi")
 i01.speakBlocking(i01.localize("STARTINGOPENNI"))

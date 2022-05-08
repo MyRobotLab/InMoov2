@@ -11,28 +11,28 @@ inMoov=i01
 #temporary speed simulation trick ( i2c can compute speed )
 if ScriptType=="Virtual":
   Platform.setVirtual(True)
-  # right = Runtime.createAndStart("i01.right", "Adafruit16CServoDriver")
-  # left = Runtime.createAndStart("i01.left", "Adafruit16CServoDriver")
-  # virtualRaspi = Runtime.start("virtualRaspi","RasPi")
+  # right = runtime.start("i01.right", "Adafruit16CServoDriver")
+  # left = runtime.start("i01.left", "Adafruit16CServoDriver")
+  # virtualRaspi = runtime.start("virtualRaspi","RasPi")
   # virtualRaspi.setWiringPi(False)
   # left.attach(virtualRaspi,"1","0x40")
   # right.attach(virtualRaspi,"1","0x41")
-  right = Runtime.start("i01.right", "Arduino")
-  left = Runtime.start("i01.left", "Arduino")
+  right = runtime.start("i01.right", "Arduino")
+  left = runtime.start("i01.left", "Arduino")
 
   RightPortIsConnected=True
   LeftPortIsConnected=True
 
 #Inmoov Left / right arduino connect
 if ScriptType=="RightSide" or ScriptType=="Full":
-  right = Runtime.createAndStart("i01.right", "Arduino")
+  right = runtime.start("i01.right", "Arduino")
   right.setBoard(BoardTypeMyRightPort)
   RightPortIsConnected=CheckArduinos(right,MyRightPort)
   if RightPortIsConnected:right.setAref(ArefRightArduino)
 
 
 if ScriptType=="LeftSide" or ScriptType=="Full":
-  left = Runtime.createAndStart("i01.left", "Arduino")
+  left = runtime.start("i01.left", "Arduino")
   left.setBoard(BoardTypeMyLeftPort)
   LeftPortIsConnected=CheckArduinos(left,MyLeftPort)
   if LeftPortIsConnected:left.setAref(ArefLeftArduino)

@@ -26,13 +26,13 @@ outputSpeechService=ThisServicePartConfig.get('MAIN', 'outputSpeechService')
 #                 SERVICE START
 # ##############################################################################
 
-AzureTranslator=Runtime.createAndStart("AzureTranslator", "AzureTranslator")
+AzureTranslator=runtime.start("AzureTranslator", "AzureTranslator")
 
 
 
 # we map AzureTranslator output to an other speech service
 if outputSpeechService!="default":
-  AzureTranslatorMouth = Runtime.createAndStart("AzureTranslatorMouth", outputSpeechService)
+  AzureTranslatorMouth = runtime.start("AzureTranslatorMouth", outputSpeechService)
   #maybe
   #AzureTranslatorMouth.setKey(awsaccesskeyid,awssecretkey)
   python.subscribe(AzureTranslatorMouth.getName(),"publishStartSpeaking")

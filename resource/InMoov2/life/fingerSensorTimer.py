@@ -2,7 +2,7 @@
 #            *** ROBOT FINGER SENSOR TIMER ***
 # ##############################################################################
 if rightHandSensorActivated==1 or leftHandSensorActivated==1:
-  sensorTimer = Runtime.createAndStart("sensorTimer","Clock")
+  sensorTimer = runtime.start("sensorTimer","Clock")
   sensorTimer.addListener("pulse", python.name, "sensorTimerRoutine")
   sensorTimer.addListener("clockStarted", python.name, "sensorTimerStart")  
   sensorTimer.addListener("clockStopped", python.name, "sensorTimerStop")
