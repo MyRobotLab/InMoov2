@@ -29,7 +29,7 @@ if str(now.year)!=str(runtime.getVersion()[:4]) and str(runtime.getVersion()[:5]
 
   if actualVersion!=currentMrlVersion and actualVersion!=0:
     try:
-      gui=Runtime.createAndStart("gui", "SwingGui")
+      gui=runtime.start("gui", "SwingGui")
     except:
       pass
 

@@ -7,7 +7,7 @@
 # Platform.setVirtual(True)
 
 # create a opencv
-i01_opencv = Runtime.start("i01.opencv","OpenCV")
+i01_opencv = runtime.start("i01.opencv","OpenCV")
 i01_opencv.setGrabberType("OpenCV")
 i01_opencv.nativeViewer=False
 i01_opencv.webViewer=True

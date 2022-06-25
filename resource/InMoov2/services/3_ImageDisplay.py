@@ -6,7 +6,7 @@
 # MRL SERVICE CALL
 # ##############################################################################
 
-imagedisplay = Runtime.start("imagedisplay","ImageDisplay")
+imagedisplay = runtime.start("imagedisplay","ImageDisplay")
 
 def display(pic):
   imagedisplay.closeAll()

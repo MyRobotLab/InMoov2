@@ -45,11 +45,11 @@ if isNervoboardRelayActivated:
   try:
     NervoboardRelayControlerArduino=eval(ThisServicePartConfig.get('MAIN', 'NervoboardRelayControlerArduino'))
     i01.speakBlocking(i01.localize("STARTINGNERVOPOWER"))
-    i01.LeftRelay1=Runtime.createAndStart("i01.LeftRelay1", "Relay")
+    i01.LeftRelay1=runtime.start("i01.LeftRelay1", "Relay")
     i01.LeftRelay1.arduino=NervoboardRelayControlerArduino
     i01.LeftRelay1.pin=PinLeftNervoPower1
 
-    i01.RightRelay1=Runtime.createAndStart("i01.RightRelay1", "Relay")
+    i01.RightRelay1=runtime.start("i01.RightRelay1", "Relay")
     i01.RightRelay1.arduino=NervoboardRelayControlerArduino
     i01.RightRelay1.pin=PinRightNervoPower1
     

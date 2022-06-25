@@ -14,7 +14,7 @@ setUnits=ThisServicePartConfig.get('MAIN', 'setUnits')
 apikey=ThisServicePartConfig.get('MAIN', 'apikey')
 town=ThisServicePartConfig.get('MAIN', 'town').replace('"',"")
 
-openWeatherMap=Runtime.createAndStart("openWeatherMap", "OpenWeatherMap")
+openWeatherMap=runtime.start("openWeatherMap", "OpenWeatherMap")
 openWeatherMap.setKey(apikey)
 openWeatherMap.setUnits(setUnits)
 

@@ -4,7 +4,7 @@
 # more info @: http://myrobotlab.org/service/InMoov
 #########################################
 
-i01_openWeatherMap = Runtime.start("i01.openWeatherMap","OpenWeatherMap")
+i01_openWeatherMap = runtime.start("i01.openWeatherMap","OpenWeatherMap")
 
 #apikey = XXXXXXXXXX
 # Get your KEY : https://home.openweathermap.org

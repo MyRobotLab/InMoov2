@@ -7,7 +7,7 @@
 # Platform.setVirtual(True)
 
 # create a pir
-i01_pir = Runtime.start("i01.pir","Pir")
+i01_pir = runtime.start("i01.pir","Pir")
 if runtime.isStarted("i01.left") or runtime.isStarted("i01.right"):
     i01_pir.setPin("23")
     try:

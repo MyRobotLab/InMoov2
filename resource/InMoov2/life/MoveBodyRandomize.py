@@ -2,7 +2,7 @@
 #            *** ROBOT MOVE THE BODY ***
 # ##############################################################################
   
-MoveBodyTimer = Runtime.start("MoveBodyTimer","Clock")
+MoveBodyTimer = runtime.start("MoveBodyTimer","Clock")
 
 def MoveBody(timedata):
 

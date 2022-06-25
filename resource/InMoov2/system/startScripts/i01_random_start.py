@@ -4,7 +4,7 @@
 # more info @: http://myrobotlab.org/service/InMoov
 #########################################
 
-moveHeadRandomize = Runtime.start('moveHeadRandomize','Random')
+moveHeadRandomize = runtime.start('moveHeadRandomize','Random')
 if runtime.isStarted('i01.head'):
     if runtime.isStarted('i01.opencv'):
         if not runtime.isStarted('i01.headTracking'):
@@ -30,7 +30,7 @@ if runtime.isStarted('i01.head'):
         if not i01_head_eyeX.isMoving():moveHeadRandomize.addRandom(1000, 20000, 'i01.head.eyeX','moveTo', moveHeadRandomize.intRange(80, 100))
         if not i01_head_eyeY.isMoving():moveHeadRandomize.addRandom(1000, 20000, 'i01.head.eyeY','moveTo', moveHeadRandomize.intRange(80, 100))
     
-moveBodyRandomize = Runtime.start('moveBodyRandomize','Random')
+moveBodyRandomize = runtime.start('moveBodyRandomize','Random')
 if runtime.isStarted('i01.leftHand'):
     moveBodyRandomize.addRandom(3000, 8000, 'i01','setLeftHandSpeed', moveBodyRandomize.intRange(8, 25), moveBodyRandomize.intRange(8, 25), moveBodyRandomize.intRange(8, 25), moveBodyRandomize.intRange(8, 25), moveBodyRandomize.intRange(8, 25), moveBodyRandomize.intRange(8, 25))
     if not i01_leftHand_thumb.isMoving():moveBodyRandomize.addRandom(1000, 20000, 'i01.leftHand.thumb', 'moveTo', moveBodyRandomize.intRange(10, 60))

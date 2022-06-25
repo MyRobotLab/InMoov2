@@ -8,7 +8,7 @@
 #sorry I will translate comments soon
 #TODO : english i01.chatBot integration
 
-wdf=Runtime.createAndStart("wdf", "WikiDataFetcher")
+wdf=runtime.start("wdf", "WikiDataFetcher")
 if Language=="fr-FR":
    WikiFile="WIKIDATA_prop_fr-FR.txt"
    wdf.setLanguage("fr")

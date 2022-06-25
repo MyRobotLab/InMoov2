@@ -4,7 +4,7 @@
 # more info @: http://myrobotlab.org/service/InMoov
 #########################################
 
-i01_leap = Runtime.start("i01.leap","LeapMotion")
+i01_leap = runtime.start("i01.leap","LeapMotion")
 
 if runtime.isStarted('i01.rightHand'):
     i01_leap.addLeapDataListener(i01_rightHand)

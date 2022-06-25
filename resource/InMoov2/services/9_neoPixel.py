@@ -75,7 +75,7 @@ log.info("numberOfPixel : "+str(numberOfPixel))
 # ##############################################################################
 
 if isNeopixelActivated==1:
-  neopixelArduino = Runtime.createAndStart("neopixelArduino","Arduino")
+  neopixelArduino = runtime.start("neopixelArduino","Arduino")
   
   #check if connection is serial or usb
   if masterArduinoPort[:3].lower()=="com" or masterArduinoPort[:4].lower()=="/dev":
@@ -93,7 +93,7 @@ if isNeopixelActivated==1:
   
   sleep(0.1)
 
-  neopixel = Runtime.createAndStart("neopixel","Neopixel")
+  neopixel = runtime.start("neopixel","Neopixel")
   if neopixelArduinoIsConnected==True:
     #Starting Neopixel Service
     neopixel.attach(neopixelArduino, pin, numberOfPixel)

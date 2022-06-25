@@ -21,7 +21,7 @@ ultrasonicRightArduino=ThisServicePartConfig.get('MAIN', 'ultrasonicRightArduino
 ultrasonicRightActivated=ThisServicePartConfig.getboolean('MAIN', 'ultrasonicRightActivated')
 
 if ultrasonicRightActivated:
-  ultrasonicRight = Runtime.start("ultrasonicRight", "UltrasonicSensor")
+  ultrasonicRight = runtime.start("ultrasonicRight", "UltrasonicSensor")
   
   try:
     ultrasonicRightArduino=eval(ThisServicePartConfig.get('MAIN', 'ultrasonicRightArduino'))
@@ -36,7 +36,7 @@ if ultrasonicRightActivated:
     pass
 
 if ultrasonicLeftActivated:
-  ultrasonicLeft = Runtime.start("ultrasonicLeft", "UltrasonicSensor")
+  ultrasonicLeft = runtime.start("ultrasonicLeft", "UltrasonicSensor")
   
   try:
     ultrasonicLeftArduino=eval(ThisServicePartConfig.get('MAIN', 'ultrasonicLeftArduino'))

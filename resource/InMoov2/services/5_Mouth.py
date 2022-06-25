@@ -40,7 +40,7 @@ MyvoiceType=VoiceName
 # ##############################################################################
 vocalError=False
 try:
-  i01_mouth=Runtime.start("i01.mouth", Speechengine)
+  i01_mouth=runtime.start("i01.mouth", Speechengine)
 except:pass
 
 if not i01_mouth:

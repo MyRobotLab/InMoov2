@@ -2,7 +2,7 @@
 #            *** ROBOT MOVE THE HEAD ( ex WHILE SPEAKIN ) ***
 # ##############################################################################
   
-MoveHeadTimer = Runtime.start("MoveHeadTimer","Clock")
+MoveHeadTimer = runtime.start("MoveHeadTimer","Clock")
 
 def MoveHead(timedata):
   #redefine next loop

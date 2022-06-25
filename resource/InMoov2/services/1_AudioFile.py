@@ -21,7 +21,7 @@ musicpath = MyMusicPath
 import os
 
 #startup sound
-i01_audioPlayer = Runtime.start("i01.audioPlayer", "AudioFile")
+i01_audioPlayer = runtime.start("i01.audioPlayer", "AudioFile")
 i01.startAudioPlayer()
 mouthControlAudiofile=True
 

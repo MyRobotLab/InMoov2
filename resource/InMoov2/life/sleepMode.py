@@ -198,10 +198,10 @@ def TrackingTimerRoutine(timedata):
   
 #pir starting  
 if runtime.isStarted('i01.pir'):
-  SleepTimer = Runtime.createAndStart("SleepTimer","Clock")
+  SleepTimer = runtime.start("SleepTimer","Clock")
   SleepTimer.addListener("pulse", python.name, "SleepTimerRoutine")
   SleepTimer.setInterval(SleepTimeout)
-  TrackingTimer = Runtime.createAndStart("TrackingTimer","Clock")
+  TrackingTimer = runtime.start("TrackingTimer","Clock")
   TrackingTimer.addListener("pulse", python.name, "TrackingTimerRoutine")
   TrackingTimer.setInterval(TrackingTimeout)
   PirControlerArduino.addListener("publishPinArray","python","publishPinPir")

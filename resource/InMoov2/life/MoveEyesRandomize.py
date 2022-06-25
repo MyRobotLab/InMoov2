@@ -2,7 +2,7 @@
 #            *** ROBOT MOVE THE EYES ( ex WHILE SPEAKIN ) ***
 # ##############################################################################
   
-MoveEyesTimer = Runtime.start("MoveEyesTimer","Clock")
+MoveEyesTimer = runtime.start("MoveEyesTimer","Clock")
 
 def MoveEyes(timedata):
   #redefine next loop

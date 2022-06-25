@@ -13,7 +13,7 @@
 # port = "COM15"
 
 # create a controller
-i01_right = Runtime.start("i01.right","Arduino")
+i01_right = runtime.start("i01.right","Arduino")
 #i01_right.setBoardMega()
 enableRightPort=True
 

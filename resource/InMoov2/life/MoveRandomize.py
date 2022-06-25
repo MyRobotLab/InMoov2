@@ -2,7 +2,7 @@
 #            *** WHOLE ROBOT MOVE RANDOM ***
 # ##############################################################################
   
-MoveRandomTimer = Runtime.start("MoveRandomTimer","Clock")
+MoveRandomTimer = runtime.start("MoveRandomTimer","Clock")
 
 def MoveRandom(timedata):
 

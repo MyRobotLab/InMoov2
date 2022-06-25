@@ -128,7 +128,7 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
 # ##############################################################################    
     
     if MouthControlActivated and AudioSignalProcessing==False:
-      i01_mouthControl = Runtime.createAndStart("i01.mouthControl","MouthControl")
+      i01_mouthControl = runtime.start("i01.mouthControl","MouthControl")
       #i01.startMouthControl(i01_head.jaw,i01_mouth)
       i01_mouthControl.setmouth(MouthControlJawMin,MouthControlJawMax)
       print "software mouthcontrol activation"
