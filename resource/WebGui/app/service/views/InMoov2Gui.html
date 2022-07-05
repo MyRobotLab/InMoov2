@@ -99,17 +99,8 @@
                 </tr>
                 <tr>
                     <td>
-                        <label>chatBot</label>
+                        <label>chatBot language</label>
                         {{service.language}}
-
-
-
-                        
-                        
-                        
-                        
-                        
-                        
                         <div class="form-group">
                             <select class="form-control" ng-model="languageSelected" id="language-select" ng-change="msg.send('setLocale', languageSelected)">
                                 <option ng-repeat="(key, value) in service.locales" value="{{key}}">{{key}} -
@@ -187,9 +178,13 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <select class="form-control" ng-model="selectedLanguage" ng-change="setLanguage()">
+                        <!--<select class="form-control" ng-model="selectedLanguage" ng-change="setLanguage()">
                             <option ng-repeat="(key, value) in service.locales" value="{{key}}">{{value.displayLanguage}} - {{value.displayCountry}} </option>
-                        </select>
+                        </select>-->
+                        <label ng-show="!service.isEarStarted">select language</label>
+                            <select ng-show="!service.isEarStarted" class="form-control" ng-model="selectedLanguage" ng-change="setLanguage()">
+                                <option ng-repeat="(key, value) in service.locales" value="{{key}}">{{value.displayLanguage}} - {{value.displayCountry}} </option>
+                            </select>
                     </td>
                 </tr>
                 <tr>
@@ -270,9 +265,9 @@
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS--------------------- -->
-                        <label>mouth</label><br/>
                         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('mouth')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <img src="../InMoov2Mouth.png"/>
+                        <label>mouth Activated:</label>
                         <toggle width="30" height="28" ng-model="service.isMouthStarted" ng-change="service.isMouthStarted?startPeer('mouth'):releasePeer('mouth')" on="" off=""/>
                         <span ng-show="service.isMouthStarted">
                             <img src="settings.png" width="30" ng-click="mrl.changeTab(peer.getActualName(service, 'mouth'))"/>
@@ -288,6 +283,12 @@
                                 <option ng-repeat="speechType in speechTypes" value="{{getShortName(speechType)}}">{{getShortName(speechType)}}</option>
                             </select>
                         </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.mouth')">Save mouth
+                            Config</button>
                     </td>
                 </tr>
                 <tr>
