@@ -1,4 +1,5 @@
 !!org.myrobotlab.service.config.OpenCVConfig
+autoStartPeers: true
 cameraIndex: 0
 capturing: false
 filters: {

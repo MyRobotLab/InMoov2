@@ -1,4 +1,5 @@
 !!org.myrobotlab.service.config.PirConfig
+autoStartPeers: true
 controller: i01.right
 enable: true
 pin: '23'

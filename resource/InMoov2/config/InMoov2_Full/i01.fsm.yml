@@ -1,0 +1,33 @@
+!!org.myrobotlab.service.config.FiniteStateMachineConfig
+autoStartPeers: true
+states:
+- init
+- safe_random_movements
+- start
+- detected_face
+- executing_gesture
+- unsafe_random_movements
+- tracking
+- power_down
+- identify_user
+- sleeping
+transitions:
+- begin: start
+  end: init
+  event: first_time
+- begin: init
+  end: identify_user
+  event: first_time
+- begin: detected_face
+  end: identify_user
+  event: first_time
+- begin: start
+  end: init
+  event: first_time
+- begin: init
+  end: identify_user
+  event: first_time
+- begin: detected_face
+  end: identify_user
+  event: first_time
+type: FiniteStateMachine
