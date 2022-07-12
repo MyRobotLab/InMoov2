@@ -19,7 +19,7 @@ bots:
 - C:\MRL\myrobotlab-1.1.851\data\ProgramAB\tr-TR
 currentBotName: en-US
 currentUserName: Friend
-search: i01.chatBot.search
+search: - i01.chatBot.search
 textListeners:
 - i01.htmlFilter
 type: ProgramAB
