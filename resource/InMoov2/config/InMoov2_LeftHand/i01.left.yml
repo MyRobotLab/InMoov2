@@ -1,6 +1,6 @@
 !!org.myrobotlab.service.config.ArduinoConfig
+autoStartPeers: true
 connect: false
-# for Linux you'd put something like /dev/ttyACM0 for port here
 port: null
 serial: i01.left.serial
 type: Arduino
