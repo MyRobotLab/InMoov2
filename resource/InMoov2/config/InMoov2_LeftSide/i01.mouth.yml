@@ -4,6 +4,7 @@ autoStartPeers: true
 blocking: false
 mute: false
 speechRecognizers:
+- i01.ear
 - i01.head.mouthControl
 substitutions: null
 type: MarySpeech
