@@ -1,0 +1,9 @@
+!!org.myrobotlab.service.config.AudioFileConfig
+autoStartPeers: true
+currentPlaylist: null
+currentTrack: null
+mute: false
+playlists: {
+  }
+type: AudioFile
+volume: 1.0

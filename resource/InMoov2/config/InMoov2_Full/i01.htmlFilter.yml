@@ -6,5 +6,5 @@ stripHtml: true
 textListeners:
 - i01.mouth
 textPublishers:
-- i01.mouth
+- i01.chatBot
 type: HtmlFilter

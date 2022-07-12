@@ -12,7 +12,6 @@ registry:
 - i01
 - i01.mouth.audioFile
 - i01.mouth
-- i01.right.serial
 - i01.right
 - i01.ear
 - i01.rightHand.index
