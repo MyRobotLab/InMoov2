@@ -10,7 +10,6 @@ registry:
 - intro
 - python
 - i01
-- i01.left.serial
 - i01.left
 - i01.leftHand.index
 - i01.leftHand.majeure
