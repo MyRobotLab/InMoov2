@@ -64,6 +64,7 @@ registry:
 - i01.audioPlayer
 - i01.imageDisplay
 - i01.neoPixel
+- i01.simulator
 - i01.fsm
 type: Runtime
 virtual: false
