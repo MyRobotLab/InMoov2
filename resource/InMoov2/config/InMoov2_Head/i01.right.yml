@@ -1,4 +1,5 @@
 !!org.myrobotlab.service.config.ArduinoConfig
+autoStartPeers: true
 connect: false
 port: null
 serial: i01.right.serial

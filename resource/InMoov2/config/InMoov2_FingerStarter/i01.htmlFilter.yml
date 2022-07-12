@@ -1,7 +1,10 @@
 !!org.myrobotlab.service.config.HtmlFilterConfig
-type: HtmlFilter
+autoStartPeers: true
+postHtmlTag: </pre>
+preHtmlTag: <pre>
 stripHtml: true
-textListeners: 
-  - i01.mouth
+textListeners:
+- i01.mouth
 textPublishers:
-  - i01.chatBot
+- i01.mouth
+type: HtmlFilter

@@ -1,7 +1,27 @@
 !!org.myrobotlab.service.config.ProgramABConfig
+autoStartPeers: true
+botDir: null
+bots:
+- C:\MRL\myrobotlab-1.1.851\data\ProgramAB\Alice
+- C:\MRL\myrobotlab-1.1.851\data\ProgramAB\Dr.Who
+- C:\MRL\myrobotlab-1.1.851\data\ProgramAB\Ency
+- C:\MRL\myrobotlab-1.1.851\data\ProgramAB\Mr. Turing
+- C:\MRL\myrobotlab-1.1.851\data\ProgramAB\de-DE
+- C:\MRL\myrobotlab-1.1.851\data\ProgramAB\en-US
+- C:\MRL\myrobotlab-1.1.851\data\ProgramAB\es-ES
+- C:\MRL\myrobotlab-1.1.851\data\ProgramAB\fi-FI
+- C:\MRL\myrobotlab-1.1.851\data\ProgramAB\fr-FR
+- C:\MRL\myrobotlab-1.1.851\data\ProgramAB\hi-IN
+- C:\MRL\myrobotlab-1.1.851\data\ProgramAB\it-IT
+- C:\MRL\myrobotlab-1.1.851\data\ProgramAB\nl-NL
+- C:\MRL\myrobotlab-1.1.851\data\ProgramAB\pt-PT
+- C:\MRL\myrobotlab-1.1.851\data\ProgramAB\ru-RU
+- C:\MRL\myrobotlab-1.1.851\data\ProgramAB\tr-TR
 currentBotName: en-US
 currentUserName: Friend
+search: null
 textListeners:
 - i01.htmlFilter
-search: i01.chatBot.search
 type: ProgramAB
+utteranceListeners: [
+  ]

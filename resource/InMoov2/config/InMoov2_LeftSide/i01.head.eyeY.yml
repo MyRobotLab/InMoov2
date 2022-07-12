@@ -1,7 +1,8 @@
 !!org.myrobotlab.service.config.ServoConfig
-controller: i01.left
 autoDisable: true
+autoStartPeers: true
 clip: true
+controller: i01.left
 enabled: false
 idleTimeout: 3000
 inverted: false
