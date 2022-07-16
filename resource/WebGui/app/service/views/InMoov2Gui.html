@@ -890,6 +890,12 @@
             <div id="table-wrapper">
                 <div id="table-scroll">
                     <table class="table table-striped">
+                        <tr>
+                            <td>Virtualize services</td>
+                            <td>
+                            <toggle width="30" height="28" title="This will set services in virtual mode, allowing you to run without hardware connected" ng-model="service.isVirtual" ng-change="!service.isVirtual?msg.setAllVirtual(false):msg.setAllVirtual(true)" on=" " off=" "></toggle>
+                            </td>
+                        </tr>
                         <tr ng-repeat="(key, value) in service.serviceType.peers">
                             <td>
                                 <img ng-src="/{{value.type + '.png'}}" width="16">
