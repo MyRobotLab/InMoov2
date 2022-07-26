@@ -291,14 +291,13 @@
                             Config</button>
                     </td>
                 </tr>
-                <tr>
-                    <td ng-show="service.isHeadStarted">
-                        <!------THIS FOR THE HOVER ICON WITH PEERS--------------------- -->
-                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('mouthControl')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                <tr ng-show="peer.isPeerStarted(service, 'head')">
+                    <td>
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('head.mouthControl')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <img src="../MouthControl.png"/>
-                        <label>mouthControl:</label>
-                        <span ng-show="peer.isPeerStarted(service, 'head')">
-                            <img src="settings.png" width="30" title="Settings" ng-click="mrl.changeTab('i01.head.mouthControl')"/>
+                        <label>mouthControl</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+                            <img src="settings.png" width="30" title="Settings" ng-click="mrl.changeTab( 'i01.head.mouthControl')"/>
                         </span>
                     </td>
                 </tr>
@@ -349,7 +348,7 @@
                         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('head.mouthControl')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <img src="../MouthControl.png"/>
                         <label>mouthControl</label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
                             <img src="settings.png" width="30" title="Settings" ng-click="mrl.changeTab( 'i01.head.mouthControl')"/>
                         </span>
                     </td>
