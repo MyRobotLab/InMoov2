@@ -1,7 +1,7 @@
 !!org.myrobotlab.service.config.UltrasonicSensorConfig
 autoStartPeers: true
-controller: null
-echoPin: null
+controller: i01.left
+echoPin: 63
 timeout: 500
-triggerPin: null
+triggerPin: 64
 type: UltrasonicSensor

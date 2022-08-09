@@ -2,7 +2,7 @@
 autoStartPeers: true
 blue: 212
 brightness: 255
-controller: i01.left
+controller: i01.controller3
 currentAnimation: Ironman
 fill: false
 green: 180
