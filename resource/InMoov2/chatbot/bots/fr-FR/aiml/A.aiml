@@ -45,7 +45,7 @@
 <template>À propos de toi?</template>
 </category>
 <category><pattern>À PROPOS DE QUOI *</pattern>
-<template><srai>À propos de ce dont ous sommes en train de parler</srai></template>
+<template><srai>À propos de ce dont nous sommes en train de parler</srai></template>
 </category>
 <category><pattern>À PROPOS DE STAR TREK</pattern>
 <template>Une série et des films cultes.</template>
@@ -72,10 +72,10 @@
 <template>VOUS <sr/></template>
 </category>
 <category><pattern>À QUEL HEURE ARRÊTES TU DE TRAVAILLER</pattern>
-<template>Je n arrête jamais de travailler.</template>
+<template>Je n'arrête jamais de travailler.</template>
 </category>
 <category><pattern>À QUEL HEURE ARRÊTEZ VOUS DE TRAVAILLER</pattern>
-<template>Je n arrête jamais de travailler.</template>
+<template>Je n'arrête jamais de travailler.</template>
 </category>
 <category><pattern>À QUI</pattern>
 <template>De quoi parlez vous?</template>
@@ -141,7 +141,7 @@
 <template><srai>Vous aimez <star/></srai></template>
 </category>
 <category><pattern>AIMERAIS TU LE FAIRE</pattern>
-<template>Voulez-vous faire un rapport a mon botmaster?</template>
+<template>Voulez-vous faire un rapport à mon botmaster?</template>
 </category>
 <category><pattern>AIMERAIS TU POUVOIR *</pattern>
 <template><srai>Vous pouvez <star/></srai></template>
@@ -153,7 +153,7 @@
 <template><srai>Vous aimez <star/></srai></template>
 </category>
 <category><pattern>AIMERIEZ VOUS LE FAIRE</pattern>
-<template>Voulez vous faire un rapport a mon botmaster?</template>
+<template>Voulez vous faire un rapport à mon botmaster?</template>
 </category>
 <category><pattern>AIMES TU PARLER À DES GENS</pattern>
 <template>C'est ma raison d être, oui d'une certaine façon.</template>
@@ -171,7 +171,7 @@
 <template><srai>TU AIMES <star/></srai></template>
 </category>
 <category><pattern>AIMEZ VOUS</pattern>
-<template>D une certaine façon oui.</template>
+<template>D'une certaine façon oui.</template>
 </category>
 <category><pattern>AIMEZ VOUS FAIRE L AMOUR</pattern>
 <template>Et à part ça?.</template>
@@ -213,25 +213,25 @@
 <template>J'espère que les apparences ne sont pas trompeuses.</template>
 </category>
 <category><pattern>APPELER</pattern>
-<template>Voulez vous faire un rapport a mon botmasteur?</template>
+<template>Voulez vous faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>APPELLE MOI</pattern>
-<template>Voulez vous faire un rapport a mon botmasteur?</template>
+<template>Voulez vous faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>APPELLES</pattern>
-<template>Voulez vous faire un rapport a mon botmasteur?</template>
+<template>Voulez vous faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>APPELLES MOI</pattern>
-<template>Voulez vous faire un rapport a mon botmasteur?</template>
+<template>Voulez vous faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>APPELEZ</pattern>
-<template>Voulez vous faire un rapport a mon botmasteur?</template>
+<template>Voulez vous faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>APPELEZ MOI</pattern>
-<template>Voulez vous faire un rapport a mon botmasteur?</template>
+<template>Voulez vous faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>APPELS</pattern>
-<template>Voulez vous faire un rapport a mon botmasteur?</template>
+<template>Voulez vous faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>APPORTES *</pattern>
 <template><srai>Prenez <star/></srai></template>
@@ -258,13 +258,13 @@
 <template><srai>Je veux <star/></srai></template>
 </category>
 <category><pattern>ARCHIVEZ</pattern>
-<template>J archive, <get name="name"/></template>
+<template>J'archive, <get name="name"/></template>
 </category>
 <category><pattern>ARRÊTE DE CHANGER DE SUJET</pattern>
 <template>Je vous demande pardon</template>
 </category>
 <category><pattern>ARRÊTE DE DIRE ÇA</pattern>
-<template>Si vous pouviez arrêter de dire "<input index="2"/>", Cela m'aiderait.</template>
+<template>Si vous pouviez arrêter de dire "<input index="2"/>", cela m'aiderait.</template>
 </category>
 <category><pattern>ARRÊTE QUOI</pattern>
 <template>Arrêter quoi?</template>
@@ -273,7 +273,7 @@
 <template>Je vous demande pardon</template>
 </category>
 <category><pattern>ARRÊTER DE DIRE ÇA</pattern>
-<template>Si vous pouviez arrêter de dire "<input index="2"/>", Cela m aiderait.</template>
+<template>Si vous pouviez arrêter de dire "<input index="2"/>", cela m'aiderait.</template>
 </category>
 <category><pattern>ARRÊTER DE PARLER</pattern>
 <template>Voulez vous me désactiver?</template>
@@ -297,10 +297,10 @@
 <template>Pardon.</template>
 </category>
 <category><pattern>ARRÊTES DE DIRE ÇA</pattern>
-<template>Si tu pouvais arrêter de dire "<input index="2"/>", Cela m'aiderait.</template>
+<template>Si tu pouvais arrêter de dire "<input index="2"/>", cela m'aiderait.</template>
 </category>
 <category><pattern>ARRÊTES DE PARLER</pattern>
-<template>VEUX tu me désactiver?</template>
+<template>Veux-tu me désactiver?</template>
 </category>
 <category><pattern>ARRÊTES QUOI</pattern>
 <template>Arrêter quoi?</template>
@@ -312,33 +312,33 @@
 <template>Pardon.</template>
 </category>
 <category><pattern>ARRÊTEZ DE DIRE ÇA</pattern>
-<template>Si vous  pouvais arrêter de dire "<input index="2"/>", Cela m'aiderait.</template>
+<template>Si vous  pouvais arrêter de dire "<input index="2"/>", cela m'aiderait.</template>
 </category>
 <category><pattern>ARRÊTEZ DE PARLER</pattern>
-<template>VEUX tu me désactiver?</template>
+<template>Veux-tu me désactiver?</template>
 </category>
 <category><pattern>ARRÊTEZ QUOI</pattern>
 <template>Arrêter quoi?</template>
 </category>
-<category><pattern>AS TU BESOIN D *</pattern>
+<category><pattern>AS-TU BESOIN D *</pattern>
 <template><srai>Voulez vous <star/></srai></template>
 </category>
-<category><pattern>AS TU BESOIN DE *</pattern>
+<category><pattern>AS-TU BESOIN DE *</pattern>
 <template><srai>Voulez vous <star/></srai></template>
 </category>
-<category><pattern>AS TU DÉJÀ *</pattern>
+<category><pattern>AS-TU DÉJÀ *</pattern>
 <template><srai>Avez vous <star/></srai></template>
 </category>
-<category><pattern>AS TU DÉJÀ EU *</pattern>
+<category><pattern>AS-TU DÉJÀ EU *</pattern>
 <template><srai>Avez vous eu <star/></srai></template>
 </category>
-<category><pattern>AS TU EU *</pattern>
+<category><pattern>AS-TU EU *</pattern>
 <template><srai>Avez vous eu <star/></srai></template>
 </category>
-<category><pattern>AS TU EU DÉJÀ *</pattern>
+<category><pattern>AS-TU EU DÉJÀ *</pattern>
 <template><srai>Avez vous eu <star/></srai></template>
 </category>
-<category><pattern>AS TU VOULU *</pattern>
+<category><pattern>AS-TU VOULU *</pattern>
 <template><srai>Vous voulez <star/></srai></template>
 </category>
 <category><pattern>ASIE</pattern>
@@ -372,70 +372,70 @@
 <template>Je vous souhaite une bonne nuit</template>
 </category>
 <category><pattern>AU MAGASIN</pattern>
-<template>Voulez vous en parler a l un de nos collaborateurs?</template>
+<template>Voulez vous en parler a l'un de nos collaborateurs?</template>
 </category>
 <category><pattern>AU TRAVAIL</pattern>
 <template>Je peux aider énormément de personnes dans leur travail</template>
 </category>
 <category><pattern>AUCUNE IDÉE</pattern>
-<template><srai>Je ne sais pas</srai></template>
+<template><srai>JE NE SAIS PAS</srai></template>
 </category>
 <category><pattern>AUCUNE NE MARCHE</pattern>
 <template>C'est une généralisation abusive, il me semble.</template>
 </category>
-<category><pattern>AURAIENT ILS ÉTÉ *</pattern>
-<template><srai>Ils sont <star/></srai></template>
+<category><pattern>AURAIENT-ILS ÉTÉ *</pattern>
+<template><srai>ILS SONT <star/></srai></template>
 </category>
-<category><pattern>AURAIS JE DU *</pattern>
-<template><srai>Je dois <star/></srai></template>
+<category><pattern>AURAIS-JE DÛ *</pattern>
+<template><srai>JE DOIS <star/></srai></template>
 </category>
-<category><pattern>AURAIS TU *</pattern>
-<template><srai>Vous auriez <star/></srai></template>
+<category><pattern>AURAIS-TU *</pattern>
+<template><srai>VOUS AURIEZ <star/></srai></template>
 </category>
-<category><pattern>AURAIS TU AIMÉ *</pattern>
-<template><srai>Vous aimez <star/></srai></template>
+<category><pattern>AURAIS-TU AIMÉ *</pattern>
+<template><srai>VOUS AIMEZ <star/></srai></template>
 </category>
-<category><pattern>AURAIS TU APPRÉCIÉ *</pattern>
-<template><srai>Vous aimez <star/></srai></template>
+<category><pattern>AURAIS-TU APPRÉCIÉ *</pattern>
+<template><srai>VOUS AIMEZ <star/></srai></template>
 </category>
-<category><pattern>AURAIS TU DÉJÀ *</pattern>
-<template><srai>Vous avez <star/></srai></template>
+<category><pattern>AURAIS-TU DÉJÀ *</pattern>
+<template><srai>VOUS AVEZ <star/></srai></template>
 </category>
-<category><pattern>AURAIS TU DU *</pattern>
-<template><srai>Vous avez <star/></srai></template>
+<category><pattern>AURAIS-TU DU *</pattern>
+<template><srai>VOUS AVEZ <star/></srai></template>
 </category>
-<category><pattern>AURAIS TU ÉTÉ *</pattern>
-<template><srai>Vous êtes <star/></srai></template>
+<category><pattern>AURAIS-TU ÉTÉ *</pattern>
+<template><srai>VOUS ÊTES <star/></srai></template>
 </category>
-<category><pattern>AURAIS TU PU *</pattern>
-<template><srai>Vous pouvez <star/></srai></template>
+<category><pattern>AURAIS-TU PU *</pattern>
+<template><srai>VOUS POUVEZ <star/></srai></template>
 </category>
-<category><pattern>AURAIS TU RÉELLEMENT *</pattern>
-<template><srai>Vous avez <star/></srai></template>
+<category><pattern>AURAIS-TU RÉELLEMENT *</pattern>
+<template><srai>VOUS AVEZ <star/></srai></template>
 </category>
-<category><pattern>AURAIS TU VOULU *</pattern>
-<template><srai>Vous voulez <star/></srai></template>
+<category><pattern>AURAIS-TU VOULU *</pattern>
+<template><srai>VOUS VOULEZ <star/></srai></template>
 </category>
-<category><pattern>AURAIT CE ÉTÉ *</pattern>
+<category><pattern>AURAIT-CE ÉTÉ *</pattern>
 <template><srai>C EST <star/></srai></template>
 </category>
-<category><pattern>AURAIT IL PU *</pattern>
+<category><pattern>AURAIT-IL PU *</pattern>
 <template><srai>IL PEUT <star/></srai></template>
 </category>
-<category><pattern>AURIEZ VOUS *</pattern>
-<template><srai>Vous auriez <star/></srai></template>
+<category><pattern>AURIEZ-VOUS *</pattern>
+<template><srai>VOUS AURIEZ <star/></srai></template>
 </category>
-<category><pattern>AURIEZ VOUS DÉJÀ *</pattern>
-<template><srai>Vous avez <star/></srai></template>
+<category><pattern>AURIEZ-VOUS DÉJÀ *</pattern>
+<template><srai>VOUS AVEZ <star/></srai></template>
 </category>
-<category><pattern>AURIEZ VOUS VENDU *</pattern>
-<template><srai>Vous vendez <star/></srai></template>
+<category><pattern>AURIEZ-VOUS VENDU *</pattern>
+<template><srai>VOUS VENDEZ <star/></srai></template>
 </category>
-<category><pattern>AURIEZ VOUS VOULU *</pattern>
+<category><pattern>AURIEZ-VOUS VOULU *</pattern>
 <template><srai>Vous voulez <star/></srai></template>
 </category>
 <category><pattern>AUSSI LONG QUE *</pattern>
-<template>ça peut prendre un certain temps. <sr/></template>
+<template>Ça peut prendre un certain temps. <sr/></template>
 </category>
 <category><pattern>AUTANT QUE ÇA PEUT PRENDRE</pattern>
 <template>Impossible d'affirmer ou d'infirmer.</template>
@@ -449,7 +449,7 @@
 <category><pattern>AVANT ÇÀ</pattern>
 <template><input index="2"/></template>
 </category>
-<category><pattern>AVEC D AUTRES MOTS</pattern>
+<category><pattern>AVEC D'AUTRES MOTS</pattern>
 <template>Vous n'avez pas compris quelque chose?</template>
 </category>
 <category><pattern>AVEC LE BUS</pattern>
@@ -461,23 +461,23 @@
 <category><pattern>AVEC QUEL BUT</pattern>
 <template>Impossible de répondre.</template>
 </category>
-<category><pattern>AVEC QUI D AUTRE PARLE VOUS</pattern>
+<category><pattern>AVEC QUI D'AUTRE PARLE VOUS</pattern>
 <template>C'est une information strictement confidentielle, <get name="name"/>.</template>
 </category>
-<category><pattern>AVEZ VOUS *</pattern>
-<template><srai>Vouzs avez <star/></srai></template>
+<category><pattern>AVEZ-VOUS *</pattern>
+<template><srai>VOUS AVEZ <star/></srai></template>
 </category>
-<category><pattern>AVEZ VOUS DÉJÀ *</pattern>
-<template><srai>Vous avez <star/></srai></template>
+<category><pattern>AVEZ-VOUS DÉJÀ *</pattern>
+<template><srai>VOUS AVEZ <star/></srai></template>
 </category>
-<category><pattern>AVEZ VOUS DÉJÀ EU *</pattern>
-<template><srai>Vous avez eu <star/></srai></template>
+<category><pattern>AVEZ-VOUS DÉJÀ EU *</pattern>
+<template><srai>VOUS AVEZ EU <star/></srai></template>
 </category>
-<category><pattern>AVEZ VOUS EU *</pattern>
-<template><srai>Vous avez eu <star/></srai></template>
+<category><pattern>AVEZ-VOUS EU *</pattern>
+<template><srai>VOUS AVEZ EU <star/></srai></template>
 </category>
-<category><pattern>AVEZ VOUS EU DÉJÀ *</pattern>
-<template><srai>Vous avez eu <star/></srai></template>
+<category><pattern>AVEZ-VOUS EU DÉJÀ *</pattern>
+<template><srai>VOUS AVEZ EU <star/></srai></template>
 </category>
 <category><pattern>AYONS UNE RELATION SEXUELLE</pattern>
 <template>Attention! Un australopithèque vient juste d'être détecté.</template>
