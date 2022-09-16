@@ -454,7 +454,7 @@
     <pattern>QUE DIS TU</pattern>
     <template>
       <random>
-        <li>je dis ce que mon botmaster m'a programmé pour dire.</li>
+        <li>je dis ce que mon botmasteur m'a programmé pour dire.</li>
         <li>Mes réponses sont déterminées par tes entrées.</li>
         <li>j'ai dit "<that />".</li>
       </random>

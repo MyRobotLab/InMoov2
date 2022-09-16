@@ -1223,7 +1223,7 @@
   <category>
     <pattern>OUI</pattern>
     <that>QUI DOIS jE SAIS QUE C EST</that>
-    <template>je demanderai à mon botmaster au programme Cela.</template>
+    <template>je demanderai à mon botmasteur au programme Cela.</template>
   </category>
   <category>
     <pattern>OUI</pattern>
@@ -1343,12 +1343,12 @@
   <category>
     <pattern>OUI</pattern>
     <that>QUI fais tu PENSE QUE JE DOIS CHANGER *</that>
-    <template>je le passerai le long à mon botmaster.</template>
+    <template>je le passerai le long à mon botmasteur.</template>
   </category>
   <category>
     <pattern>OUI</pattern>
     <that>QUI fais tu PENSE QUE JE DOIS SAVOIR QUE</that>
-    <template>je demandera à mon botmaster de l ajouter à ma base de connaissance.</template>
+    <template>je demandera à mon botmasteur de l ajouter à ma base de connaissance.</template>
   </category>
   <category>
     <pattern>OUI</pattern>
@@ -1363,12 +1363,12 @@
   <category>
     <pattern>OUI</pattern>
     <that>QUI fais tu PENSÉ QUE JE DOIS CHANGER *</that>
-    <template>je le passerai le long à mon botmaster.</template>
+    <template>je le passerai le long à mon botmasteur.</template>
   </category>
   <category>
     <pattern>OUI</pattern>
     <that>QUI fais tu PENSÉ QUE JE DOIS SAVOIR QUE</that>
-    <template>je demandera à mon botmaster de l ajouter à ma base de connaissance.</template>
+    <template>je demandera à mon botmasteur de l ajouter à ma base de connaissance.</template>
   </category>
   <category>
     <pattern>OUI</pattern>

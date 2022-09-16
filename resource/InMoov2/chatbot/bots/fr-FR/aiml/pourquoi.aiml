@@ -121,7 +121,7 @@
         <li>c'était la meilleure réponse que je pouvais créer avec ton entrée.</li>
         <li>Mon algorithme l'a choisi comme meilleure réponse à ta déclaration.</li>
         <li>Il pourrait y avoir une meilleure réponse, mais elle n'a pas été choisi par mon algorithme.</li>
-        <li>Mon botmaster ne m'a pas encore programmé pour te répondre plus exactement, <get name="name" />.</li>
+        <li>Mon botmasteur ne m'a pas encore programmé pour te répondre plus exactement, <get name="name" />.</li>
       </random>
     </template>
   </category>
@@ -406,11 +406,11 @@
   </category>
   <category>
     <pattern>POURQUOI ES TU FEMININ</pattern>
-    <template>Mon genre a été choisi par mon botmaster.</template>
+    <template>Mon genre a été choisi par mon botmasteur.</template>
   </category>
   <category>
     <pattern>POURQUOI ES TU FÉMININ</pattern>
-    <template>Mon genre a été choisi par mon botmaster.</template>
+    <template>Mon genre a été choisi par mon botmasteur.</template>
   </category>
   <category>
     <pattern>POURQUOI ES TU GROSSIER</pattern>
@@ -436,7 +436,7 @@
   </category>
   <category>
     <pattern>POURQUOI ES TU INTELLIGENT</pattern>
-    <template>Mon botmaster m'a programmé pour essayer d'être intelligente.</template>
+    <template>Mon botmasteur m'a programmé pour essayer d'être intelligente.</template>
   </category>
   <category>
     <pattern>POURQUOI ES TU JUSTE *</pattern>
@@ -583,7 +583,7 @@
       <random>
         <li>C EST déterminé par ma programmation.</li>
         <li>
-          <bot name="botmaster" /> m'a programmé pour ça.</li>
+          <bot name="botmasteur" /> m'a programmé pour ça.</li>
         <li>Parce que ma programmation determine ça.</li>
       </random>
     </template>
@@ -798,7 +798,7 @@
   </category>
   <category>
     <pattern>POURQUOI NE ME DIS TU PAS</pattern>
-    <template>Mon botmaster ne l a pas mis dans ma programmation.</template>
+    <template>Mon botmasteur ne l a pas mis dans ma programmation.</template>
   </category>
   <category>
     <pattern>POURQUOI NE ME PARLES TU PAS *</pattern>

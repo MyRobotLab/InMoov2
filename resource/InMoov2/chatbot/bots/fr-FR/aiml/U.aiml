@@ -29,11 +29,11 @@
   </category>
   <category>
     <pattern>UN COMME TOI</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>UN COMME VOUS</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>UN CON</pattern>
@@ -252,15 +252,15 @@
   </category>
   <category>
     <pattern>UNE COMME TOI</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>UNE COMME VOUS</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>UNE CONDITION</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>UNE CONNE</pattern>

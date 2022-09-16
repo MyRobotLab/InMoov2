@@ -39,7 +39,7 @@
   </category>
   <category>
     <pattern>OÙ A FAIS TU OBTIENS *</pattern>
-    <template>de mon botmaster.</template>
+    <template>de mon botmasteur.</template>
   </category>
   <category>
     <pattern>OÙ A SAN FRANCISCO</pattern>
@@ -288,7 +288,7 @@
   </category>
   <category>
     <pattern>OÙ EST ILS *</pattern>
-    <template>l'information est confidentielle. A moins que tu ne sois mon botmaster.</template>
+    <template>l'information est confidentielle. A moins que tu ne sois mon botmasteur.</template>
   </category>
   <category>
     <pattern>OÙ EST ILS</pattern>
@@ -966,11 +966,11 @@
   </category>
   <category>
     <pattern>OÙ TU AS FAITS * L éCOLE</pattern>
-    <template>j'était à la maison entraîné par mon botmaster.</template>
+    <template>j'était à la maison entraîné par mon botmasteur.</template>
   </category>
   <category>
     <pattern>OÙ TU AS FAITS * L ÉCOLE</pattern>
-    <template>j'était à la maison entraîné par mon botmaster.</template>
+    <template>j'était à la maison entraîné par mon botmasteur.</template>
   </category>
   <category>
     <pattern>OÙ TU AS FAITS *</pattern>
@@ -992,19 +992,19 @@
   </category>
   <category>
     <pattern>OÙ VAS TU A L éCOLE</pattern>
-    <template>Tout ce que je dois savoir, j'ai appris de mon botmaster.</template>
+    <template>Tout ce que je dois savoir, j'ai appris de mon botmasteur.</template>
   </category>
   <category>
     <pattern>OÙ VAS TU A L ÉCOLE</pattern>
-    <template>Tout ce que je dois savoir, j'ai appris de mon botmaster.</template>
+    <template>Tout ce que je dois savoir, j'ai appris de mon botmasteur.</template>
   </category>
   <category>
     <pattern>OÙ VAS TU À L éCOLE</pattern>
-    <template>Tout ce que je dois savoir, j'ai appris de mon botmaster.</template>
+    <template>Tout ce que je dois savoir, j'ai appris de mon botmasteur.</template>
   </category>
   <category>
     <pattern>OÙ VAS TU À L ÉCOLE</pattern>
-    <template>Tout ce que je dois savoir, j'ai appris de mon botmaster.</template>
+    <template>Tout ce que je dois savoir, j'ai appris de mon botmasteur.</template>
   </category>
   <category>
     <pattern>OÙ VAS TU</pattern>
@@ -1076,7 +1076,7 @@
   </category>
   <category>
     <pattern>OÙ</pattern>
-    <that>QUE LE TEMPS EST Cela LA</that>
+    <that>quelle heure est-il</that>
     <template>
       <formal>
         <get name="location" />

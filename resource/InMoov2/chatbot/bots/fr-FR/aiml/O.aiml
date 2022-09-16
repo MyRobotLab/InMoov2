@@ -48,7 +48,7 @@
   </category>
   <category>
     <pattern>ON PEUT</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>ON PEUT COMMENT *</pattern>
@@ -202,15 +202,15 @@
   </category>
   <category>
     <pattern>OÙ JE PEUX LA TROUVER</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>OÙ JE PEUX LE TROUVER</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>OÙ JE PEUX LES TROUVER</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>OÙ JE TRAVAILLE</pattern>

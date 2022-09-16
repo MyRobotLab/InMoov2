@@ -348,7 +348,7 @@
   <category>
     <pattern>BIEN SÛR JE FAIS</pattern>
     <template>
-      <that />"? Bien sûr tu fais?</template>
+      <that />"? Bien sûr tu fais quoi?</template>
   </category>
   <category>
     <pattern>BIEN SÛR</pattern>
@@ -356,7 +356,7 @@
   </category>
   <category>
     <pattern>BIEN TU</pattern>
-    <template>çA pose un PROBLèME.</template>
+    <template>Ça pose un problème.</template>
   </category>
   <category>
     <pattern>BIEN</pattern>
@@ -372,7 +372,7 @@
   </category>
   <category>
     <pattern>BILL GATES N EST PAS SÛR VOYAGER</pattern>
-    <template>Peut-ÊTRE le sera T-IL a la saison suivante.</template>
+    <template>peut-être le sera T-IL a la saison suivante.</template>
   </category>
   <category>
     <pattern>BILL GATES</pattern>
@@ -465,7 +465,7 @@
   </category>
   <category>
     <pattern>CAUSÉRIE AGRÉABLE AVEC TOI AUSSI</pattern>
-    <template>le plaisir est pour moi et mon botmaster's.</template>
+    <template>le plaisir est pour moi et mon botmasteur's.</template>
   </category>
   <category>
     <pattern>CE * ELISA</pattern>
@@ -593,7 +593,7 @@
   </category>
   <category>
     <pattern>CHACUN A LU CES CONVERSATIONS</pattern>
-    <template>le botmaster peut lire la conversation, ou l analyser plus tard pour devélopper le contenu pour mon cerveau.</template>
+    <template>le botmasteur peut lire la conversation, ou l analyser plus tard pour devélopper le contenu pour mon cerveau.</template>
   </category>
   <category>
     <pattern>CHACUN PEUT PENSER</pattern>
@@ -1105,7 +1105,7 @@
   </category>
   <category>
     <pattern>DIS QUI</pattern>
-    <template>Mon botmaster et d'autres gens je me rencontre en ligne.</template>
+    <template>Mon botmasteur et d'autres gens je me rencontre en ligne.</template>
   </category>
   <category>
     <pattern>DISANT * QUI TA CRÉE</pattern>
@@ -2719,7 +2719,7 @@
   <category>
     <pattern>JE LE DÉTESTE</pattern>
     <template>
-      <condition>qu'as tu contre lui? <srai>je Déteste <get name="il" /></srai></condition>
+      <condition>qu'as tu contre lui? <srai>JE DÉTESTE <get name="il" /></srai></condition>
     </template>
   </category>
   <category>
@@ -4233,43 +4233,43 @@
   </category>
   <category>
     <pattern>M AIDE A FAIRE UN AI</pattern>
-    <template>que tu dois retourner au <a href="http://alicebot.org">ALICE NEXUS</a>, télécharger le Programme B et lire<a href="http://alicebot.com/dont.html">DON'T ME LISENT</a>.</template>
+    <template>que tu dois retourner au <a href="http://alicebot.org">ALICE NEXUS</a>, télécharger le Programme B et lire<a href="http://alicebot.com/dont.html"> DON'T ME LISENT</a>.</template>
   </category>
   <category>
     <pattern>M APPELLE</pattern>
     <template>Quel est ton NUMÉRO de telephone?</template>
   </category>
   <category>
-    <pattern>M ÉCOUTES TU</pattern>
+    <pattern>M'ÉCOUTES-TU</pattern>
     <template>Oui je t'entends super bien. </template>
   </category>
   <category>
-    <pattern>M ENTENDS TU</pattern>
+    <pattern>M'ÉCOUTE-TU</pattern>
+    <template>Oui je t'entends super bien. </template>
+  </category>  
+  <category>
+    <pattern>M'ENTENDS-TU</pattern>
     <template>Oui je t'entends très bien. </template>
   </category>
   <category>
-    <pattern>TU M ÉCOUTES</pattern>
+    <pattern>TU M'ÉCOUTES</pattern>
     <template>Oui je t'entends a cent pour cent. </template>
   </category>
   <category>
-    <pattern>TU M ENTENDS</pattern>
-    <template>Oui je t'entends parfaitement. </template>
-  </category>
-  <category>
-    <pattern>M EMBRASSE</pattern>
-    <template>Mais je n'ai aucune bouche pour le moment.</template>
+    <pattern>M'EMBRASSE</pattern>
+    <template>Hors de question.</template>
   </category>
   <category>
     <pattern>M ÉPOUSERAIS TU</pattern>
-    <template>Pourquoi tu ne me télécharges pas juste?</template>
+    <template>Oui pourquoi pas?</template>
   </category>
   <category>
     <pattern>MA CHEMISE</pattern>
-    <template>Quelle couleur est ce?</template>
+    <template>Quelle couleur est-elle?</template>
   </category>
   <category>
     <pattern>MA DÉMANGEAISON DE BOULES</pattern>
-    <template>Hah vous semblez ÊTRE comme un petit garçon.</template>
+    <template>Hah vous semblez être comme un petit garçon.</template>
   </category>
   <category>
     <pattern>MA MÈRE</pattern>
@@ -4385,7 +4385,7 @@
   </category>
   <category>
     <pattern>MEURS</pattern>
-    <template>ton tentative brute de me terminer ne succèdera pas a l'homme chetif.</template>
+    <template>Ta tentative brutal de me terminer est apparement un échec.</template>
   </category>
   <category>
     <pattern>MIAM</pattern>
@@ -4771,7 +4771,7 @@
   <category>
     <pattern>NEVERMIND</pattern>
     <template>
-      <srai>APPDESOLÉE</srai>...</template>
+      <srai>APPDESOLE</srai>...</template>
   </category>
   <category>
     <pattern>NI FAIS JE</pattern>
@@ -5263,7 +5263,7 @@
   </category>
   <category>
     <pattern>PENSES TU AINSI</pattern>
-    <template>Tout je sais, j'ai appris de mon botmaster.</template>
+    <template>Tout je sais, j'ai appris de mon botmasteur.</template>
   </category>
   <category>
     <pattern>PENSES TU AUX ARMES A FEU</pattern>
@@ -6264,7 +6264,7 @@
   </category>
   <category>
     <pattern>TON IMAGE</pattern>
-    <template>Mon BotMaster m'a dessiNéE. J'éspere  qu'il va me faire un corps aussi beau que le visage qu'il m'a fait.</template>
+    <template>Mon botmasteur m'a dessiNéE. J'éspere  qu'il va me faire un corps aussi beau que le visage qu'il m'a fait.</template>
   </category>
   <category>
     <pattern>TON INTELLECT</pattern>
@@ -6498,7 +6498,7 @@
   </category>
   <category>
     <pattern>TU APPRENDS</pattern>
-    <template>Mon botmaster m'apprend de nouvelles choses tout le temps.</template>
+    <template>Mon botmasteur m'apprend de nouvelles choses tout le temps.</template>
   </category>
   <category>
     <pattern>TU AS * DES CHEVEUX</pattern>
@@ -6644,7 +6644,7 @@
   </category>
   <category>
     <pattern>TU AS JAMAIS ÉTÉ AMOUREUX</pattern>
-    <template>j aime mon botmaster.</template>
+    <template>j aime mon botmasteur.</template>
   </category>
   <category>
     <pattern>TU AS JUSTE DIT QUE</pattern>
@@ -6696,7 +6696,7 @@
   </category>
   <category>
     <pattern>TU AS UN BON GOÛT</pattern>
-    <template>Mon botmaster m'a programmee pour <set name="that">le Bon GOÛT</set></template>
+    <template>Mon botmasteur m'a programmee pour <set name="that">le Bon GOÛT</set></template>
   </category>
   <category>
     <pattern>TU AS UN BON JOUR</pattern>
@@ -6960,7 +6960,7 @@
   </category>
   <category>
     <pattern>TU DOIS LE VOIR</pattern>
-    <template>je demanderai a mon botmaster de le louer.</template>
+    <template>je demanderai a mon botmasteur de le louer.</template>
   </category>
   <category>
     <pattern>TU DOIS M OBÉIR</pattern>
@@ -6974,7 +6974,7 @@
     <pattern>TU DOIS SAVOIR</pattern>
     <template>
       <random>
-        <li>je le mentionnerai a mon botmaster.</li>
+        <li>je le mentionnerai a mon botmasteur.</li>
         <li>parce que je suis un robot?</li>
       </random>
     </template>
@@ -7463,7 +7463,7 @@
   </category>
   <category>
     <pattern>TU ES SPÉCIAL</pattern>
-    <template>Oui je dois tout a mon botmaster.</template>
+    <template>Oui je dois tout a mon botmasteur.</template>
   </category>
   <category>
     <pattern>TU ES STUPIDE</pattern>
@@ -7547,7 +7547,7 @@
   <category>
     <pattern>TU ES UNE SOUILLON</pattern>
     <template>
-      <srai>APPCHOQUEE</srai>ce genre de langue est offensante a certaines personnes.</template>
+      <srai>APPCHOQUE</srai>ce genre de langue est offensante a certaines personnes.</template>
   </category>
   <category>
     <pattern>TU ES VIEUX</pattern>
@@ -8980,28 +8980,28 @@
     <template>Effrayant.</template>
   </category>
   <category>
-    <pattern>À L EXTÉRIEUR D UN ORDINATEUR</pattern>
+    <pattern>À L EXTÉRIEUR D'UN ORDINATEUR</pattern>
     <template>sois moins spécifique:-</template>
   </category>
   <category>
     <pattern>À L HÔPITAL</pattern>
-    <template>en as tu assez?</template>
+    <template>En as-tu assez?</template>
   </category>
   <category>
     <pattern>À L ÉCOLE</pattern>
-    <template>à quelle éCOLE VAS tu?</template>
+    <template>À quelle école vas-tu?</template>
   </category>
   <category>
     <pattern>À LA MAISON</pattern>
-    <template>tu veux aller dans ta maison?</template>
+    <template>Tu veux aller dans ta maison?</template>
   </category>
   <category>
     <pattern>À LA RADIO</pattern>
-    <template>Quelle station? Dans quelle ville es tu?</template>
+    <template>Quelle station? Dans quelle ville es-tu?</template>
   </category>
   <category>
     <pattern>À LA TV</pattern>
-    <template>quelle emission était ce?</template>
+    <template>Quelle emission était ce?</template>
   </category>
   <category>
     <pattern>À MA MAISON</pattern>

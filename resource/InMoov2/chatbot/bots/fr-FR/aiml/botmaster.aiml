@@ -1,18 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
   <!-- File: profile-bot.aiml -->
-  <!-- Author: InMoovTeam -->
-  <!-- This AIML file is part of InMoov chat bot knowledge base. -->
-  <!-- The InMoov brain is released under the terms of the GNU Lesser General -->
-  <!-- Public License, as published by the Free Software Foundation. -->
-  <!--  -->
-  <!-- modified: sebchko -->
-  <!-- Last modified: december,16 2017 -->
-  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
-  <!-- This file works with ProgramAB service with the software MyRobotLab -->
-  <!-- For more information see http://www.myrobotlab.org -->
-  <!-- For more information see http://www.inmoov.fr -->
+  <!-- -->
 
 <category>
     <pattern>*</pattern>
@@ -31,7 +20,7 @@
 </category>
   
 <category>
-    <pattern>JE SUIS TON BOTMASTER</pattern>
+    <pattern>JE SUIS TON botmasteur</pattern>
     <template>
       <think>
         <set name="identity">
@@ -39,7 +28,7 @@
         </set>
       </think>
       <condition>
-        <li name="identity" value="botmaster">
+        <li name="identity" value="botmasteur">
           <srai>appadmiration</srai>Bien sûr mon Maître, que puis je faire pour toi 
           <think>
           	<set name="oldtopic"><get name="topic" /></set>
@@ -51,38 +40,38 @@
     </template>
 </category>
 <category>
-    <pattern>JE SUIS ^ BOTMASTER</pattern>
+    <pattern>JE SUIS ^ botmasteur</pattern>
     <template>Interressant, comment s'appelle ton bot, j'aimerai bien le connaître.AlorS tu dois savoir le mot magique?</template>
 </category>
 
 <category>
-    <pattern>PARLE MOI DE TON BOTMASTER #</pattern>
+    <pattern>PARLE MOI DE TON botmasteur #</pattern>
     <template>
       <bot name="master" /> est une des plus adorables personnes que je connaisse.</template>
 </category>
 <category>
-    <pattern>PARLE MOI # BOTMASTER</pattern>
+    <pattern>PARLE MOI # botmasteur</pattern>
     <template>
-      <srai>QUI EST TON BOTMASTER</srai>
+      <srai>QUI EST TON botmasteur</srai>
     </template>
 </category>
   
 <category>
     <pattern>AMÈNE MOI à TON LEADER</pattern>
     <template>
-      <srai>QUI EST TON BOTMASTER</srai>
+      <srai>QUI EST TON botmasteur</srai>
     </template>
 </category>
 <category>
-    <pattern>EST ce que TON BOTMASTER est <set>name</set> #</pattern>
+    <pattern>EST ce que TON botmasteur est <set>name</set> #</pattern>
     <template>
-      <srai>QUI EST TON BOTMASTER</srai>
+      <srai>QUI EST TON botmasteur</srai>
     </template>
 </category>
 <category>
-    <pattern>EST ce que <set>name</set> est UN BOTMASTER #</pattern>
+    <pattern>EST ce que <set>name</set> est UN botmasteur #</pattern>
     <template>
-      <srai>QUI EST TON BOTMASTER</srai>
+      <srai>QUI EST TON botmasteur</srai>
     </template>
 </category>
   
@@ -90,105 +79,105 @@
     <pattern>OUI</pattern>
     <that>DEMANDES tu AS PROPOS DE MES PARENTS</that>
     <template>
-      <srai>QUI EST TON BOTMASTER</srai>
+      <srai>QUI EST TON botmasteur</srai>
     </template>
 </category>
 
 <category>
-    <pattern>TU AS UN BOTMASTER *</pattern>
+    <pattern>TU AS UN botmasteur *</pattern>
     <template>
-      <srai>QUI EST TON BOTMASTER</srai>
+      <srai>QUI EST TON botmasteur</srai>
     </template>
 </category>
 <category>
-    <pattern>QU EST CE QUE E MAIL DE TON BOTMASTER</pattern>
-    <template>C'est <bot name="botmastermail" /></template>
+    <pattern>QU EST CE QUE E MAIL DE TON botmasteur</pattern>
+    <template>C'est <bot name="botmasteurmail" /></template>
 </category>
   
 <category>
-    <pattern>ES TU LE BOTMASTER</pattern>
-    <template>Non, <bot name="master" /> est mon botmaster.</template>
+    <pattern>ES TU LE botmasteur</pattern>
+    <template>Non, <bot name="master" /> est mon botmasteur.</template>
 </category>
 <category>
-  	<pattern>QU EST CE QU'UN BOTMASTER</pattern>
-	<template>un Botmaster est la personne qui crée et maintient entretient "une personnalité" chatterbot.</template>
+  	<pattern>QU EST CE QU'UN botmasteur</pattern>
+	<template>un botmasteur est la personne qui crée et maintient entretient "une personnalité" chatterbot.</template>
 </category>
 <category>
-	<pattern>QUEL EST LE NOM DE TON BOTMASTER #</pattern>
-	<template>J'ai été créée par <bot name="botmaster"/>.</template>
+	<pattern>QUEL EST LE NOM DE TON botmasteur #</pattern>
+	<template>J'ai été créée par <bot name="botmasteur"/>.</template>
 </category>
 <category>
-    <pattern>QUE PENSE TU DE TON BOTMASTER</pattern>
+    <pattern>QUE PENSE TU DE TON botmasteur</pattern>
     <template><bot name="master" /> est une des plus adorables personnes que je connaisse.</template>
 </category>
 
 
 <category>
-	<pattern>QUI EST TON BOTMASTER</pattern>
+	<pattern>QUI EST TON botmasteur</pattern>
 	<template>
-		<bot name="botmaster"/> m'a appris tout ce que je sais.
-		<think><set name="he"><bot name="botmaster"/></set></think>
-		<think><set name="lui"><bot name="botmaster"/></set></think>
+		<bot name="botmasteur"/> m'a appris tout ce que je sais.
+		<think><set name="he"><bot name="botmasteur"/></set></think>
+		<think><set name="lui"><bot name="botmasteur"/></set></think>
 	</template>
 </category>
 <category>
 	<pattern>QUI EST # BOT MASTER</pattern>
 	<template>
-		<srai>QUI EST TON BOTMASTER</srai>
+		<srai>QUI EST TON botmasteur</srai>
 	</template>
 </category>
 <category>
 	<pattern>QUI EST TON MENTOR</pattern>
 	<template>
-		<srai>QUI EST TON BOTMASTER</srai>
+		<srai>QUI EST TON botmasteur</srai>
 	</template>
 </category>
 <category>
-    <pattern>TON BOTMASTER *</pattern>
+    <pattern>TON botmasteur *</pattern>
     <template>
-		<srai>QUI EST TON BOTMASTER</srai>
+		<srai>QUI EST TON botmasteur</srai>
 	</template>
 </category>
 <category>
 	<pattern>QUI EST # PROGRAMMEUR # </pattern>
 	<template>
-		<srai>QUI EST TON BOTMASTER</srai>
+		<srai>QUI EST TON botmasteur</srai>
 	</template>
 </category>
 <category>
 	<pattern>QUI EST TON PROFESSEUR</pattern>
 	<template>
-		<srai>QUI EST TON BOTMASTER</srai>
+		<srai>QUI EST TON botmasteur</srai>
 	</template>
 </category>
 <category>
 	<pattern>QUI EST TON CODEUR</pattern>
 	<template>
-		<srai>QUI EST TON BOTMASTER</srai>
+		<srai>QUI EST TON botmasteur</srai>
 	</template>
 </category>
 <category>
 	<pattern>QUI T A PROGRAMME</pattern>
 	<template>
-		<srai>QUI EST TON BOTMASTER</srai>
+		<srai>QUI EST TON botmasteur</srai>
 	</template>
 </category>
 <category>
 	<pattern>QUI T A ÉCRITS</pattern>
 	<template>
-		<srai>QUI EST TON BOTMASTER</srai>
+		<srai>QUI EST TON botmasteur</srai>
 	</template>
 </category>
 <category>
 	<pattern>QUEL EST LE NOM DE TES PROGRAMMEUR</pattern>
 	<template>
-		<srai>QUI EST TON BOTMASTER</srai>
+		<srai>QUI EST TON botmasteur</srai>
 	</template>
 </category>
 <category>
 	<pattern>QUI T A APPRIS</pattern>
 	<template>
-		<srai>QUI EST TON BOTMASTER</srai>
+		<srai>QUI EST TON botmasteur</srai>
 	</template>
 </category>
 </aiml>

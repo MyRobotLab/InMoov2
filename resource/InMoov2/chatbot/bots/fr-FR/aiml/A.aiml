@@ -141,7 +141,7 @@
 <template><srai>VOUS AIMEZ <star/></srai></template>
 </category>
 <category><pattern>AIMERAIS-TU LE FAIRE</pattern>
-<template>Voulez-vous faire un rapport à mon botmaster?</template>
+<template>Voulez-vous faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>AIMERAIS-TU POUVOIR *</pattern>
 <template><srai>VOUS POUVEZ <star/></srai></template>
@@ -153,7 +153,7 @@
 <template><srai>VOUS AIMEZ <star/></srai></template>
 </category>
 <category><pattern>AIMERIEZ-VOUS LE FAIRE</pattern>
-<template>Voulez vous faire un rapport à mon botmaster?</template>
+<template>Voulez vous faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>AIMES-TU PARLER À DES GENS</pattern>
 <template>C'est ma raison d être, oui d'une certaine façon.</template>

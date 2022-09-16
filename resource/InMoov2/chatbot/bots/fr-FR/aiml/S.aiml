@@ -302,7 +302,7 @@
   </category>
   <category>
     <pattern>SOIS MON INVITéE</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>SONT QUOI</pattern>
@@ -334,19 +334,19 @@
   </category>
   <category>
     <pattern>SOYEZ MES INVITéES</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>SOYEZ MES INVITéS</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>SOYEZ MON INVITé</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>SOYEZ MON INVITéE</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>SOYEZ PLUS SPéCIFIQUE</pattern>

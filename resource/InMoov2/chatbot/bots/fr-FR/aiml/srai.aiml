@@ -3430,7 +3430,7 @@
       <srai>EST CE QUE JE <star /></srai>
     </template>
   </category>
-  <category>
+  <!--category>
     <pattern>EST CE QUE TU *</pattern>
     <template>
       <random>
@@ -3447,7 +3447,7 @@
         <li>Je ne crois pas que <person2 /></li>
       </random>
     </template>
-  </category>
+  </category-->
   <category>
     <pattern>ET *</pattern>
     <template>

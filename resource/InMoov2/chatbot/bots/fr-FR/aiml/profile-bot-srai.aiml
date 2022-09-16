@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
   <!-- File: profile-bot-srai.aiml -->
-  <!-- Author: InMoovTeam -->
-  <!-- This AIML file is part of InMoov chat bot knowledge base. -->
-  <!-- The InMoov brain is released under the terms of the GNU Lesser General -->
-  <!-- Public License, as published by the Free Software Foundation. -->
-  <!--  -->
-  <!-- modified: sebchko -->
-  <!-- Last modified: december,16 2017 -->
-  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR FONCTION. -->
-  <!-- This file works with ProgramAB service with the software MyRobotLab -->
-  <!-- For more information see http://www.myrobotlab.org -->
-  <!-- For more information see http://www.inmoov.fr -->
+  <!-- -->
 <category>
     <pattern># TON <set>profile-bot</set> #</pattern>
     <template>
@@ -525,7 +514,7 @@
   
 <!-- BOTDOCTOR -->
  
-<!-- BOTMASTER cf botmaster.aiml -->
+<!-- botmasteur cf botmasteur.aiml -->
 
 <!-- BOTNAME -->
 
@@ -980,7 +969,7 @@
     <pattern>QUI SONT TES PARENTS</pattern>
     <template>
       <srai>BOT CRÉATEUR</srai>
-      <srai>BOT BOTMASTER</srai>
+      <srai>BOT botmasteur</srai>
       <srai>BOT FABRICANT</srai>
       <srai>BOT BOTDOCTOR</srai>
     </template>
@@ -3563,13 +3552,13 @@
 <category>
 	<pattern># TON CONTRÔLLEUR #</pattern>
 	<template>
-		<srai>QUI EST TON BOTMASTER</srai>
+		<srai>QUI EST TON botmasteur</srai>
 	</template>
 </category>
 <category>
 	<pattern># TON BOSS #</pattern>
 	<template>
-		<srai>QUI EST TON BOTMASTER</srai>
+		<srai>QUI EST TON botmasteur</srai>
 	</template>
 </category>
 

@@ -312,7 +312,7 @@
   </category>
   <category>
     <pattern>QU EST QUE C EST ALORS</pattern>
-    <template>Je sens de l'exaspération. VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Je sens de l'exaspération. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>QU EST QUI TE MET EN COLÈRE</pattern>
@@ -348,7 +348,7 @@
   </category>
   <category>
     <pattern>QUAND DEVRAIS JE</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>QUAND DORMEZ VOUS</pattern>
@@ -384,19 +384,19 @@
   </category>
   <category>
     <pattern>QUAND EST CE QUE ÇA EXISTERA</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>QUAND EST CE QUE ÇA VA EXISTER</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>QUAND EST CE QUE CELA EXISTERA</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>QUAND EST CE QUE CELA VA EXISTER</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>QUAND EST CE QUE L AMÉRIQUE A ÉTÉ DECOUVERTE</pattern>
@@ -645,7 +645,7 @@
   </category>
   <category>
     <pattern>QUE SUGGÉREZ VOUS</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>QUE SUIS JE</pattern>
@@ -759,7 +759,7 @@
   </category>
   <category>
     <pattern>QUEL ARGENT</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>QUEL AURAIT ÉTÉ *</pattern>
@@ -1031,7 +1031,7 @@
   </category>
   <category>
     <pattern>QUEL PRIX</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>QUELLE SORTE D ANIMAUX</pattern>
@@ -1039,7 +1039,7 @@
   </category>
   <category>
     <pattern>QUELLE SORTE D EXPÉRIENCE</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>QUELLE SORTE D HISTOIRE</pattern>
@@ -1127,7 +1127,7 @@
   </category>
   <category>
     <pattern>QUELLES SORTES D EXPÉRIENCES</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>QUELLES SORTES D ORDINATEURS</pattern>
@@ -1247,7 +1247,7 @@
   </category>
   <category>
     <pattern>QUELS GENRES D EXPÉRIENCES</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>  
   <category>
     <pattern>QUELS SERAIENT *</pattern>
@@ -1261,7 +1261,7 @@
   </category>
   <category>
     <pattern>QUELS SONT LES CONDITIONS</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>QUELleS SONT LES LOIS DE LA THERMODYNAMIQUE</pattern>
@@ -1557,7 +1557,7 @@
   </category>
   <category>
     <pattern>QUOI EXACTEMENT</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>QUOI QU IL EN SOIT</pattern>

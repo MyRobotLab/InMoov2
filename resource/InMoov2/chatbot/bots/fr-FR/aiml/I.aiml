@@ -404,7 +404,7 @@
   </category>
   <category>
     <pattern>IL N Y EN A PAS</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>IL N Y EN A PLUS</pattern>
@@ -761,6 +761,6 @@
   </category>
   <category>
     <pattern>INTÉRESSANT</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
 </aiml>

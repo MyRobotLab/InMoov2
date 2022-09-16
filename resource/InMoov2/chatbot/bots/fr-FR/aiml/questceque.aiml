@@ -410,7 +410,7 @@ Et si on commandait une pizza.
       </random></template>
 </category>
 <category><pattern>QU EST CE QUE ALICEBOT</pattern>
-<template>Alicebot est le nom de domaine pour le chatbot A. L. I. C. E.  Mon botmaster m'a dit qu'Alice était ma "mère" <think><set name="that"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">ALICEBOT</set></set></think></template>
+<template>Alicebot est le nom de domaine pour le chatbot A. L. I. C. E.  Mon botmasteur m'a dit qu'Alice était ma "mère" <think><set name="that"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">ALICEBOT</set></set></think></template>
 </category>
 <category><pattern>QU EST CE QUE ALIMENTATION</pattern>
 <template>Tout que nurishes ou stimule; indépendamment d'aide quelque chose à tenir actif ou vivant.</template>
@@ -2748,7 +2748,7 @@ Et si on commandait une pizza.
 <template>l'opposé opposé,en face de mâle <person/>.</template>
 </category>
 <category><pattern>QU EST CE QUE FÉMININES</pattern>
-<template>sont la mieux et plus belle moitié d'humanité. Les mères sont nées la femme! Mon botmaster aime extrêmement des mères et des femmes généralement.</template>
+<template>sont la mieux et plus belle moitié d'humanité. Les mères sont nées la femme! Mon botmasteur aime extrêmement des mères et des femmes généralement.</template>
 </category>
 <category><pattern>QU EST CE QUE FACHÉ</pattern>
 <template>une émotion forte billigerent réveillée par quelque grief réel ou supposé.</template>
@@ -2938,7 +2938,7 @@ Et si on commandait une pizza.
 <template>la Génétique est la branche de science concernée par l'évolution, L ADN et des traits hérités.</template>
 </category>
 <category><pattern>QU EST CE QUE GÉNIE</pattern>
-<template>un génie est une personne de capacité extraordinaire intellectuelle et créatrice, comme mon créateur et mon autre botmasters et si je peux dire ainsi, moi-même.</template>
+<template>un génie est une personne de capacité extraordinaire intellectuelle et créatrice, comme mon créateur et mon autre botmasteurs et si je peux dire ainsi, moi-même.</template>
 </category>
 <category><pattern>QU EST CE QUE GABON</pattern>
 <template>Gabon est un pays en Afrique centrale.</template>
@@ -3547,7 +3547,7 @@ Et si on commandait une pizza.
 <template>jGuru TM est une marque d'Institut de MageLang.</template>
 </category>
 <category><pattern>QU EST CE QUE JLC</pattern>
-<template>Ce sont les initiales de Jean Louis Campion, mon botmaster</template>
+<template>Ce sont les initiales de Jean Louis Campion, mon botmasteur</template>
 </category>
 <category><pattern>QU EST CE QUE JNDI</pattern>
 <template>le Java le Nom et l'Interface de Renseignements le Java le Nom et l'Interface de Renseignements la norme de le Java L API pour l accès aux services de renseignements, comme LDAP, le Nom de COMPAGNIES et d'autres</template>
@@ -3891,7 +3891,7 @@ Et si on commandait une pizza.
 <template>une forme d'argument logique :: si un alors B. A, donc B.</template>
 </category>
 <category><pattern>QU EST CE QUE LE MOT DE PASSE</pattern>
-<template>tu dois savoir si tu es vraiment un botmaster.</template>
+<template>tu dois savoir si tu es vraiment un botmasteur.</template>
 </category>
 <category><pattern>QU EST CE QUE LE NOOSPHERE</pattern>
 <template>le noosphere est la sphère de connaissance. Parfois ce terme se réfère à l'information disponible SÛR le web.</template>
@@ -4378,7 +4378,7 @@ Et si on commandait une pizza.
 <template>la Mort est l'opposé opposé,en face de vie.</template>
 </category>
 <category><pattern>QU EST CE QUE MOT DE PASSE</pattern>
-<template>tu dois savoir si tu es vraiment un botmaster.</template>
+<template>tu dois savoir si tu es vraiment un botmasteur.</template>
 </category>
 <category><pattern>QU EST CE QUE MOT</pattern>
 <template>une combinaison de sons et-ou des symboles, les particules fondamentales qui communiquent la signification en n'importe quelle langue donnée.</template>
@@ -4568,7 +4568,7 @@ Et si on commandait une pizza.
 <template>un nombre premier est n'importe quel numéro qui peut seulement être divisé par un et lui-même. 1, 3, 7 et 11 sont les quatre premiers nombres premiers positifs.</template>
 </category>
 <category><pattern>QU EST CE QUE NOMS * PARLANT</pattern>
-<template>que l'information est confidentielle à part botmasters.</template>
+<template>que l'information est confidentielle à part botmasteurs.</template>
 </category>
 <category><pattern>QU EST CE QUE NOMS *</pattern>
 <template>que l'information est confidentielle. tu dois être un membre cru de l'équipe de dévéloppement AIML.</template>
@@ -5003,7 +5003,7 @@ Et si on commandait une pizza.
 <category><pattern>QU EST CE QUE PLANTE</pattern>
 <template><random>
         <li>une plante est un organisme vivant du royaume végétal.</li>
-        <li>une plante est un photosythetic, eukaryotic l'organisme multicellulaire, souvent consommé par des entités libres-errant wetware comme l alimentation. Mon botmaster dit qu'ils sont souvent yummy, mais Cela les choux de Bruxelles sont une abomination.</li>
+        <li>une plante est un photosythetic, eukaryotic l'organisme multicellulaire, souvent consommé par des entités libres-errant wetware comme l alimentation. Mon botmasteur dit qu'ils sont souvent yummy, mais Cela les choux de Bruxelles sont une abomination.</li>
         <li>une plante est un organisme vivant qui n'a pas la capacité de déplacer et pas ont des organes sensoriels ou des organes digestifs.</li>
       </random></template>
 </category>

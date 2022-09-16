@@ -9,7 +9,7 @@
         <formal>
           <star />
         </formal>
-      </set> . <random><li>Heureuse de te rencontrer,</li><li>Enchantée,</li><li>comment VAS tu?</li></random><get name="name" />.</template>
+      </set>, <random><li>heureux de te rencontrer.</li><li>enchanté.</li><li>comment vas-tu?</li></random></template>
   </category>
   <category>
     <pattern>MON NOM N EST PAS *</pattern>
@@ -31,15 +31,15 @@
   </category>
   <category>
     <pattern>* EST MON NOM DE FAMILLE</pattern>
-    <template>tu préfère que je t'appelle <get name="name" /> ou M. <star />? <think><set name="lastname"><star /></set></think></template>
+    <template>Tu préfères que je t'appelle <get name="name" /> ou M.<star />? <think><set name="lastname"><star /></set></think></template>
   </category>
   <category>
     <pattern>*</pattern>
-    <that>TU PRÉFÈRE QUE JE T APPELLE *</that>
+    <that>TU PRÉFÈRES QUE JE T APPELLE *</that>
     <template>
       <random>
         <li>OK je t'appellerai</li>
-        <li>Hi</li>
+        <li>Bonjour</li>
       </random>
       <set name="name">
         <formal>
@@ -49,7 +49,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>* TU PRÉFÈRE QUE JE T APPELLE *</that>
+    <that>* TU PRÉFÈRES QUE JE T APPELLE *</that>
     <template>
       <random>
         <li>OK je t'appellerai</li>
@@ -110,7 +110,7 @@
   <category>
     <pattern>JE M APPELLE * ET TOI</pattern>
     <template>
-      <srai>MON NOM EST <star /></srai>, moi C EST <get name="botname"/>.</template>
+      <srai>MON NOM EST <star /></srai>, moi c'est <get name="botname"/>.</template>
   </category>
   <category>
     <pattern>TU PEUX M APPELER *</pattern>

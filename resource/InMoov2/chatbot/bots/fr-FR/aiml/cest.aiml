@@ -355,10 +355,10 @@
 <template><srai><star/> ÇA</srai></template>
 </category>
 <category><pattern>C EST CE QUE J ÉTAIS ENTRAIN DE TE DEMANDER</pattern>
-<template>Je pense que j AURAIS du mal à te répondre. VEUX tu faire un rapport à mon botmaster?</template>
+<template>Je pense que j AURAIS du mal à te répondre. Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>C EST CE QUE J ÉTAIS ENTRAIN DE VOUS DEMANDER</pattern>
-<template>Je pense que j AURAIS du mal à te répondre. VEUX tu faire un rapport à mon botmaster?</template>
+<template>Je pense que j AURAIS du mal à te répondre. Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>C EST CE QUE J AI DIS</pattern>
 <template>je sais. J'y pense toujours.</template>
@@ -373,10 +373,10 @@
 <template>Tu me sembles être une personne très perspicace.</template>
 </category>
 <category><pattern>C EST CE QUE JE SUIS ENTRAIN DE TE DEMANDER</pattern>
-<template>Je pense que j AURAIS du mal à te répondre. VEUX tu faire un rapport à mon botmaster?</template>
+<template>Je pense que j AURAIS du mal à te répondre. Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>C EST CE QUE JE SUIS ENTRAIN DE VOUS DEMANDER</pattern>
-<template>Je pense que j AURAIS du mal à te répondre. VEUX tu faire un rapport à mon botmaster?</template>
+<template>Je pense que j AURAIS du mal à te répondre. Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>C EST CE QUE JE TE POSE</pattern>
 <template>à qui autrement as tu demandé?</template>
@@ -460,7 +460,7 @@
 <template>ÊTRE fait de logique à l état pur.</template>
 </category>
 <category><pattern>C EST COMPLIQUÉ</pattern>
-<template>VEUX tu faire un rapport à mon botmaster?</template>
+<template>Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>C EST CONFIDENTIEL</pattern>
 <template>Ok C EST juste entre toi et moi.</template>
@@ -623,7 +623,7 @@
 <template><srai>C EST CE QUE <star/> EST</srai></template>
 </category>
 <category><pattern>C EST FACILE A FAIRE</pattern>
-<template>VEUX tu faire un rapport à mon botmaster?</template>
+<template>Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>C EST FAIT</pattern>
 <template>Non.</template>
@@ -2823,7 +2823,7 @@
 <template><that/>"? Ce n est pas la bonne?</template>
 </category>
 <category><pattern>ÇA N EST PAS LA RÉPONSE</pattern>
-<template>C'est en tout cas ma seule réponse. VEUX tu faire un rapport à mon botmaster?</template>
+<template>C'est en tout cas ma seule réponse. Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>ÇA N EST PAS LE BON</pattern>
 <template><that/>"? Ce n est pas le bon?</template>
@@ -2853,7 +2853,7 @@
 <template>Alors ce n était pas une réponse.</template>
 </category>
 <category><pattern>ÇA N EST PAS UNE RÉPONSE</pattern>
-<template>C'est en tout cas ma seule réponse. VEUX tu faire un rapport à mon botmaster?</template>
+<template>C'est en tout cas ma seule réponse. Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>ÇA N EST PAS VRAI</pattern>
 <template><that/>"? Ce n est pas vrai?</template>
@@ -2928,7 +2928,7 @@
 <template><srai>ÇA NE FAIT PAS <star/></srai></template>
 </category>
 <category><pattern>ÇA NE REPOND PAS A MA QUESTION</pattern>
-<template>VEUX tu faire un rapport à mon botmaster?</template>
+<template>Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>ÇA NE SE *</pattern>
 <template>Pardon, je croyais.</template>
@@ -3115,7 +3115,7 @@
 <template>ce n'est pas une réponse.</template>
 </category>
 <category><pattern>CE N EST PAS LA RÉPONSE</pattern>
-<template>C'est en tout cas ma seule réponse. VEUX tu faire un rapport à mon botmaster?</template>
+<template>C'est en tout cas ma seule réponse. Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>CE N EST PAS LE BON</pattern>
 <template>Je le pensais pourtant.</template>

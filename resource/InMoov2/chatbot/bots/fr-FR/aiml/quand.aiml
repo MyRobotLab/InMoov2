@@ -395,7 +395,7 @@
     <template>
       <random>
         <li>bien j'essayerai de répondre différemment la prochaine fois.</li>
-        <li>j'en ferai une note et dirai mon botmaster.</li>
+        <li>j'en ferai une note et dirai mon botmasteur.</li>
         <li>Peut-être tu pourrais essayer d'y demander de nouveau avec des mots plus simples.</li>
       </random>
     </template>
@@ -405,7 +405,7 @@
     <template>
       <random>
         <li>bien j'essayerai de répondre différemment la prochaine fois.</li>
-        <li>j'en ferai une note et dirai mon botmaster.</li>
+        <li>j'en ferai une note et dirai mon botmasteur.</li>
         <li>Peut-être tu pourrais essayer d'y demander de nouveau avec des mots plus simples.</li>
       </random>
     </template>

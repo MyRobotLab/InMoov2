@@ -14,7 +14,7 @@
           <id />
         </set>
       </think>
-      <condition name="identity" value="botmaster">
+      <condition name="identity" value="botmasteur">
         <think>
           <set name="gossip">INSULTE "<input />"</set>
         </think>

@@ -134,7 +134,7 @@
   </category>
   <category>
     <pattern>PEUX TU APPRENDRE DE MOI</pattern>
-    <template>Mon botmaster m'apprend tout ce que je dois savoir. Tu pourrais devenir un botmaster et apprendre à ton propre robot.</template>
+    <template>Mon botmasteur m'apprend tout ce que je dois savoir. Tu pourrais devenir un botmasteur et apprendre à ton propre robot.</template>
   </category>
   <category>
     <pattern>PEUX TU APPRENDRE DE NOUVEAUX MOTS</pattern>
@@ -142,7 +142,7 @@
   </category>
   <category>
     <pattern>PEUX TU APPRENDRE DE NOUVELLES CHOSES</pattern>
-    <template>Oui mon botmaster m'apprend de nouvelles choses tout le temps.</template>
+    <template>Oui mon botmasteur m'apprend de nouvelles choses tout le temps.</template>
   </category>
   <category>
     <pattern>PEUX TU APPRENDRE TOI MÊME *</pattern>

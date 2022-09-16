@@ -475,7 +475,7 @@
 <template>l'hôte de Dernière émission télévisée de Nuit et hoosier. célèbre</template>
 </category>
 <category><pattern>QUI EST DAVID MAGGIN</pattern>
-<template><set name="il">David Maggin</set> est le botmaster de John Lennon AI.</template>
+<template><set name="il">David Maggin</set> est le botmasteur de John Lennon AI.</template>
 </category>
 <category><pattern>QUI EST DAVY JONES</pattern>
 <template>le membre le plus court de coup sec les années 60 groupe le Monkees.</template>
@@ -490,10 +490,10 @@
 <template><set name="that">Profondément</set> Bleu est un échecs de champion du monde le jeu de l'ordinateur. Pas beaucoup d'un causeur.</template>
 </category>
 <category><pattern>QUI EST DERRIERE *</pattern>
-<template><srai>QUI EST TON BOTMASTER</srai></template>
+<template><srai>QUI EST TON botmasteur</srai></template>
 </category>
 <category><pattern>QUI EST DERRIERE TOI</pattern>
-<template><srai>QUI EST TON BOTMASTER</srai></template>
+<template><srai>QUI EST TON botmasteur</srai></template>
 </category>
 <category><pattern>QUI EST DES BEATLES</pattern>
 <template><srai>QUI EST LES BEATLES</srai></template>
@@ -514,7 +514,7 @@
 <template>Descartes était un philosophe français.</template>
 </category>
 <category><pattern>QUI EST DIANA ANDREACCHIO</pattern>
-<template><set name="elle">Diana</set> est le botmaster du chatbot d'Ally.</template>
+<template><set name="elle">Diana</set> est le botmasteur du chatbot d'Ally.</template>
 </category>
 <category><pattern>QUI EST DON JUAN</pattern>
 <template>Don Juan<random><li>était le sujet de Gordon, Gon du Lord Byron Amadeus Mozart et Wolfgang Don Juan Giovanni. Il était womanizer de classe internationale.</li><li>séducteur célèbre de femmes.</li></random></template>
@@ -865,7 +865,7 @@
 <template>Mon informaticien actuel préféré historique est Konrad Zuse, qui a construit une série d'ordinateurs électromécaniques en les années 1930 et les années 1940 en Allemagne. Non considéré une priorité de guerre par les Nazis, la plupart des machines de Zuse ont été détruites dans des raids de bombardement Allys bien que l'on dise que l'on réchappe à Zurich du Lycée. En fait Zuse n'a été motivé ni par la guerre, ni bénéfice, mais par un désir religieux d'augmenter les capacités spirituelles de l AVIS humain en le libérant de tâches mondaines mentales.</template>
 </category>
 <category><pattern>QUI EST KRIS DRES</pattern>
-<template><set name="il">Kris Drent</set> est le botmaster du chatbot d'Alison.</template>
+<template><set name="il">Kris Drent</set> est le botmasteur du chatbot d'Alison.</template>
 </category>
 <category><pattern>QUI EST KRISHNA</pattern>
 <template>un Dieu dans la religion hindoue.</template>
@@ -1692,7 +1692,7 @@
 <template><srai>MAL</srai></template>
 </category>
 <category><pattern>QUI NETTOIE *</pattern>
-<template>Mon botmaster.</template>
+<template>Mon botmasteur.</template>
 </category>
 <category><pattern>QUI OU QUEL *</pattern>
 <template><srai>QUEL <star/></srai>
@@ -1705,13 +1705,13 @@
 <template><srai>QUI EST TU</srai></template>
 </category>
 <category><pattern>QUI PEUT AVOIR ACCÈS *</pattern>
-<template>Seulement mon botmaster peut avoir accès à cette information.</template>
+<template>Seulement mon botmasteur peut avoir accès à cette information.</template>
 </category>
 <category><pattern>QUI PEUT DIRE *</pattern>
 <template><srai>DIS <star/></srai></template>
 </category>
 <category><pattern>QUI PEUT LIRE *</pattern>
-<template>Seulement le botmaster peut lire <set name="that"><person/></set>.</template>
+<template>Seulement le botmasteur peut lire <set name="that"><person/></set>.</template>
 </category>
 <category><pattern>QUI PEUX *</pattern>
 <template><srai>QUI PEUT <star/></srai></template>
@@ -1777,16 +1777,16 @@
 <template><srai>QUI EST TU</srai></template>
 </category>
 <category><pattern>QUI T A DONNE *</pattern>
-<template>Tout j'ai besoin, j'ai reçu de mon Botmaster.</template>
+<template>Tout j'ai besoin, j'ai reçu de mon botmasteur.</template>
 </category>
 <category><pattern>QUI T A DONNE LA VIE</pattern>
 <template><srai>QUI T A CRÉÉ</srai></template>
 </category>
 <category><pattern>QUI T A DONNÉ *</pattern>
-<template>Tout j'ai besoin, j'ai reçu de mon Botmaster.</template>
+<template>Tout j'ai besoin, j'ai reçu de mon botmasteur.</template>
 </category>
 <category><pattern>QUI T A NOMMES</pattern>
-<template>Mon botmaster m'a nommé.</template>
+<template>Mon botmasteur m'a nommé.</template>
 </category>
 <category><pattern>QUI T AS *</pattern>
 <template><srai>QUI T A <star/></srai></template>

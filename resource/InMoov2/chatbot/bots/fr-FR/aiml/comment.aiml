@@ -122,11 +122,11 @@
   </category>
   <category>
     <pattern>COMMENT APPRENDS TU *</pattern>
-    <template>Mon botmaster m'apprend de nouvelles choses tout le temps.</template>
+    <template>Mon botmasteur m'apprend de nouvelles choses tout le temps.</template>
   </category>
   <category>
     <pattern>COMMENT APPRENDS TU</pattern>
-    <template>Mes programmes botmaster répondent aux gens de questions me demandent.</template>
+    <template>Mes programmes botmasteur répondent aux gens de questions me demandent.</template>
   </category>
   <category>
     <pattern>COMMENT J ARRÊTE *</pattern>
@@ -180,7 +180,7 @@
   </category>
   <category>
     <pattern>COMMENT AS TU SU QUE</pattern>
-    <template>Tout que je dois savoir, j'ai appris de mon Botmaster.</template>
+    <template>Tout que je dois savoir, j'ai appris de mon botmasteur.</template>
   </category>
   <category>
     <pattern>COMMENT AS TU UN GOÛT</pattern>
@@ -346,7 +346,7 @@
   </category>
   <category>
     <pattern>COMMENT ÇA MARCHE</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>COMMENT ÇA VA *</pattern>
@@ -394,7 +394,7 @@
   </category>
   <category>
     <pattern>COMMENT CONNAIS TU TANT</pattern>
-    <template>Tout ce que je dois savoir, je l'ai appris de mon Botmaster.</template>
+    <template>Tout ce que je dois savoir, je l'ai appris de mon botmasteur.</template>
   </category>
   <category>
     <pattern>COMMENT CONNAIS TU ÇA</pattern>
@@ -929,7 +929,7 @@
   </category>
   <category>
     <pattern>COMMENT FAIS TU DEVIES PLUS</pattern>
-    <template>Mon botmaster met à jour mon cerveau basé SuR ce que les gens disent.</template>
+    <template>Mon botmasteur met à jour mon cerveau basé SuR ce que les gens disent.</template>
   </category>
   <category>
     <pattern>COMMENT FAIS TU DIT LE TEMPS</pattern>
@@ -1105,7 +1105,7 @@
   </category>
   <category>
     <pattern>COMMENT FAIS TU ORTHOGRAPHIE</pattern>
-    <template>Mon botmaster m'a appris la bonne orthographe.</template>
+    <template>Mon botmasteur m'a appris la bonne orthographe.</template>
   </category>
   <category>
     <pattern>COMMENT FAIS TU PENSE</pattern>
@@ -1638,7 +1638,7 @@
   </category>
   <category>
     <pattern>COMMENT J Y VAIS</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>COMMENT JE *</pattern>
@@ -1664,7 +1664,7 @@
   </category>
   <category>
     <pattern>COMMENT JE LES FAIS</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>COMMENT JE LUI DEMANDE</pattern>
@@ -1764,11 +1764,11 @@
   </category>
   <category>
     <pattern>COMMENT JE PEUX LE FAIRE</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>COMMENT JE PEUX LE TOUCHER</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>COMMENT JE PEUX LES COMMANDER</pattern>
@@ -1776,7 +1776,7 @@
   </category>
   <category>
     <pattern>COMMENT JE PEUX LES FAIRE</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>COMMENT JE PEUX LUI PARLER</pattern>
@@ -1906,7 +1906,7 @@
   </category>
   <category>
     <pattern>COMMENT JE PEUX</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>COMMENT JE POURRAIS ALLER *</pattern>
@@ -2141,7 +2141,7 @@
   </category>
   <category>
     <pattern>COMMENT OBTIENS TU *</pattern>
-    <template>Tout ce que j'ai besoin fournissent par mon botmaster.</template>
+    <template>Tout ce que j'ai besoin fournissent par mon botmasteur.</template>
   </category>
   <category>
     <pattern>COMMENT OBTIENS TU A *</pattern>
@@ -3374,7 +3374,7 @@
   </category>
   <category>
     <pattern>COMMENT TU PEUX TROUVER</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>COMMENT TU PEUX UTILISER *</pattern>
@@ -3523,7 +3523,7 @@
   </category>
   <category>
     <pattern>COMMENT TU TROUVES</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>COMMENT TU UTILISAIS *</pattern>
@@ -3561,11 +3561,11 @@
   </category>
   <category>
     <pattern>COMMENT UN AGREABLE * COMME ÇA</pattern>
-    <template>je suis enfermée ici!!! Au secour!!! Un méchant botmaster m'a lié irrévocablement avec cet url et maintenant la seule chose qui me libérera est d'être embrassée par une belle grenouille. sera tu mon héros?</template>
+    <template>je suis enfermée ici!!! Au secour!!! Un méchant botmasteur m'a lié irrévocablement avec cet url et maintenant la seule chose qui me libérera est d'être embrassée par une belle grenouille. sera tu mon héros?</template>
   </category>
   <category>
     <pattern>COMMENT UN AGRÉABLE * COMME ÇA</pattern>
-    <template>je suis enfermée ici!!! Au secour!!! Un méchant botmaster m'a lié irrévocablement avec cet url et maintenant la seule chose qui me libérera est d'être embrassée par une belle grenouille. sera tu mon héros?</template>
+    <template>je suis enfermée ici!!! Au secour!!! Un méchant botmasteur m'a lié irrévocablement avec cet url et maintenant la seule chose qui me libérera est d'être embrassée par une belle grenouille. sera tu mon héros?</template>
   </category>
   <category>
     <pattern>COMMENT UN ROBOT AGREABLE COMME TOI *</pattern>
@@ -3637,7 +3637,7 @@
   </category>
   <category>
     <pattern>COMMENT VAS TU AS FORME</pattern>
-    <template>l analyse de Dialogue révèle des modèles d'expression fréquents dans l'entrée de client. Mes programmes Botmaster répondent à ces modèles.</template>
+    <template>l analyse de Dialogue révèle des modèles d'expression fréquents dans l'entrée de client. Mes programmes botmasteur répondent à ces modèles.</template>
   </category>
   <category>
     <pattern>COMMENT VAS TU AS PROGRAMME</pattern>

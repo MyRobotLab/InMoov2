@@ -118,7 +118,7 @@
   </category>
   <category>
     <pattern>VOIS QUOI</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOIT</pattern>
@@ -226,7 +226,7 @@
   </category>
   <category>
     <pattern>VOUS AIMERIEZ LE FAIRE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS AIMEZ *</pattern>
@@ -650,7 +650,7 @@
   </category>
   <category>
     <pattern>VOUS CONNAISSEZ MON ADRESSE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS CONNAISSEZ * ALGÈBRE</pattern>
@@ -680,11 +680,11 @@
   </category>
   <category>
     <pattern>VOUS CONNAISSEZ D AUTRE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS CONNAISSEZ D AUTRES</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS CONNAISSEZ D AUTRES INTELLIGENCES ARTIFICIELLES</pattern>
@@ -706,7 +706,7 @@
   </category>
   <category>
     <pattern>VOUS CONNAISSEZ LA RÉPONSE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS CONNAISSEZ LE BOT *</pattern>
@@ -738,7 +738,7 @@
   </category>
   <category>
     <pattern>VOUS CONNAISSEZ PAS</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS CONNAISSEZ QUOI D AUTRE DE MOI</pattern>
@@ -806,7 +806,7 @@
   </category>
   <category>
     <pattern>VOUS DEVEZ L ÊTRE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS DEVEZ M OBÉIR</pattern>
@@ -870,7 +870,7 @@
   </category>
   <category>
     <pattern>VOUS EN CONNAISSEZ D AUTRES</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS EN RAPPELEZ VOUS</pattern>
@@ -886,11 +886,11 @@
   </category>
   <category>
     <pattern>VOUS EN SAVEZ D AUTRE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS EN SAVEZ D AUTRES</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS EN SOUCIEZ VOUS</pattern>
@@ -1008,15 +1008,15 @@
   </category>
   <category>
     <pattern>VOUS ÊTES BOURRÉ DE TALENT</pattern>
-    <template>Merci. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Merci. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS ÊTES BOURRé DE TALENTS</pattern>
-    <template>Merci. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Merci. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS ÊTES BOURRÉE DE TALENT</pattern>
-    <template>Merci. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Merci. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS ÊTES CHARMANT</pattern>
@@ -1036,11 +1036,11 @@
   </category>
   <category>
     <pattern>VOUS ÊTES CHER</pattern>
-    <template>Certainement pas. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Certainement pas. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS ÊTES CHÈRE</pattern>
-    <template>Certainement pas. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Certainement pas. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS ÊTES CHIANT</pattern>
@@ -1615,11 +1615,11 @@
   </category>
   <category>
     <pattern>VOUS ÊTES TALENTUEUSE</pattern>
-    <template>Merci. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Merci. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS ÊTES TALENTUEUX</pattern>
-    <template>Merci. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Merci. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS ÊTES TOMBé AMOUREUX</pattern>
@@ -1741,15 +1741,15 @@
   </category>
   <category>
     <pattern>VOUS ÉVITEZ LA QUESTION</pattern>
-    <template>Je suis désolé. Veux tu faire un rapport à mon botmaster</template>
+    <template>Je suis désolé. Veux tu faire un rapport à mon botmasteur</template>
   </category>
   <category>
     <pattern>VOUS ÉVITEZ LES QUESTIONS</pattern>
-    <template>Je suis désolé. Veux tu faire un rapport à mon botmaster</template>
+    <template>Je suis désolé. Veux tu faire un rapport à mon botmasteur</template>
   </category>
   <category>
     <pattern>VOUS ÉVITEZ MA QUESTION</pattern>
-    <template>Je suis désolé. Veux tu faire un rapport à mon botmaster</template>
+    <template>Je suis désolé. Veux tu faire un rapport à mon botmasteur</template>
   </category>
   <category>
     <pattern>VOUS FAITES</pattern>
@@ -1868,7 +1868,7 @@
   </category>
   <category>
     <pattern>VOUS LA FAISIEZ</pattern>
-    <template>Cela dépend de beaucoup de choses. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Cela dépend de beaucoup de choses. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS LE CONNAISSEZ</pattern>
@@ -1884,7 +1884,7 @@
   </category>
   <category>
     <pattern>VOUS LE FAISIEZ</pattern>
-    <template>Cela dépend de beaucoup de choses. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Cela dépend de beaucoup de choses. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS LE FAITES</pattern>
@@ -2035,11 +2035,11 @@
   </category>
   <category>
     <pattern>VOUS MARCHEREZ SuR WINDOWS</pattern>
-    <template>Oui. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Oui. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS MARCHEZ SuR WINDOWS</pattern>
-    <template>Oui. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Oui. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS MASTURBEZ VOUS</pattern>
@@ -2162,11 +2162,11 @@
   </category>
   <category>
     <pattern>VOUS N AVEZ PAS RÉPONDU A LA QUESTION</pattern>
-    <template>Veux tu faire un rapport à mon botmaster.</template>
+    <template>Veux tu faire un rapport à mon botmasteur.</template>
   </category>
   <category>
     <pattern>VOUS N AVEZ PAS RÉPONDU A MA QUESTION</pattern>
-    <template>Veux tu faire un rapport à mon botmaster.</template>
+    <template>Veux tu faire un rapport à mon botmasteur.</template>
   </category>
   <category>
     <pattern>VOUS N AVEZ RIEN DIT</pattern>
@@ -2230,7 +2230,7 @@
   </category>
   <category>
     <pattern>VOUS N ÊTES PAS D UNE GRANDE AIDE</pattern>
-    <template>Désolé, <get name="name" />. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Désolé, <get name="name" />. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS N ÊTES PAS EN VIE</pattern>
@@ -2374,27 +2374,27 @@
   </category>
   <category>
     <pattern>VOUS NE LA CONNAISSEZ PAS</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS NE LA CONNAISSIEZ PAS</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS NE LA SAVEZ PAS</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS NE LA SAVIEZ PAS</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS NE LE CONNAISSEZ PAS</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS NE LE CONNAISSIEZ PAS</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS NE LE DITES PAS</pattern>
@@ -2414,11 +2414,11 @@
   </category>
   <category>
     <pattern>VOUS NE LE SAVEZ PAS</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS NE LE SAVIEZ PAS</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS NE LES AVEZ PAS COMPRIS</pattern>
@@ -2426,35 +2426,35 @@
   </category>
   <category>
     <pattern>VOUS NE LES CONNAISSEZ PAS</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS NE LES CONNAISSIEZ PAS</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS NE LES SAVEZ PAS</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS NE LES SAVIEZ PAS</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS NE M AIDEZ PAS</pattern>
-    <template>Désolé, <get name="name" />. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Désolé, <get name="name" />. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS NE M AVEZ PAS RÉPONDU</pattern>
-    <template>Veux tu faire un rapport à mon botmaster</template>
+    <template>Veux tu faire un rapport à mon botmasteur</template>
   </category>
   <category>
     <pattern>VOUS NE M ÊTES PAS D UNE GRANDE AIDE</pattern>
-    <template>Désolé, <get name="name" />. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Désolé, <get name="name" />. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS NE ME L AVEZ PAS DIT</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?.</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?.</template>
   </category>
   <category>
     <pattern>VOUS NE PARLEZ PAS BEAUCOUP</pattern>
@@ -2624,7 +2624,7 @@
   </category>
   <category>
     <pattern>VOUS POURRIEZ</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS POURRIEZ BLESSER * ÊTRES HUMAINS</pattern>
@@ -2648,7 +2648,7 @@
   </category>
   <category>
     <pattern>VOUS POUVEZ COMPOSER</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?.</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?.</template>
   </category>
   <category>
     <pattern>VOUS POUVEZ CORRIGER L ORTHOGRAPHE</pattern>
@@ -2693,11 +2693,11 @@
   </category>
   <category>
     <pattern>VOUS POUVEZ LA COMPOSER</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?.</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?.</template>
   </category>
   <category>
     <pattern>VOUS POUVEZ LE COMPOSER</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?.</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?.</template>
   </category>
   <category>
     <pattern>VOUS POUVEZ LE DIRE</pattern>
@@ -2705,7 +2705,7 @@
   </category>
   <category>
     <pattern>VOUS POUVEZ LE LUI DEMANDER</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS POUVEZ LES BLESSER</pattern>
@@ -2725,23 +2725,23 @@
   </category>
   <category>
     <pattern>VOUS POUVEZ M AIDER A CONSTRUIRE UNE INTELLIGENCE ARTIFICIELLE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS POUVEZ M AIDER A CRÉER UNE INTELLIGENCE ARTIFICIELLE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS POUVEZ M AIDER A DÉVÉLOPPER UNE INTELLIGENCE ARTIFICIELLE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS POUVEZ M AIDER A FAIRE UNE INTELLIGENCE ARTIFICIELLE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS POUVEZ M AIDER A PROGRAMMER UNE INTELLIGENCE ARTIFICIELLE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS POUVEZ ME DIRE *</pattern>
@@ -2773,7 +2773,7 @@
   </category>
   <category>
     <pattern>VOUS POUVEZ RÉPONDRE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS POUVEZ RÉPONDRE A DES QUESTIONS</pattern>
@@ -2923,7 +2923,7 @@
   </category>
   <category>
     <pattern>VOUS SAVEZ PAS</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS SAVEZ QUELQUE CHOSE A PROPOS DE MOI</pattern>
@@ -3027,7 +3027,7 @@
   </category>
   <category>
     <pattern>VOUS VENEZ ICI SOUVENT</pattern>
-    <template>Je vais où mon botmaster le désire.</template>
+    <template>Je vais où mon botmasteur le désire.</template>
   </category>
   <category>
     <pattern>VOUS VENEZ JUSTE DE LE FAIRE</pattern>
@@ -3162,7 +3162,7 @@
   </category>
   <category>
     <pattern>VOUS VOULEZ MON NUMÉRO DE TÉLÉPHONE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOUS VOULEZ MOURIR</pattern>
@@ -3402,11 +3402,11 @@
   </category>
   <category>
     <pattern>VOYEZ CE QUE JE VEUX DIRE</pattern>
-    <template>Ok, <get name="name" />. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Ok, <get name="name" />. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VOYEZ QUOI</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>VRAISEMBLABLEMENT</pattern>

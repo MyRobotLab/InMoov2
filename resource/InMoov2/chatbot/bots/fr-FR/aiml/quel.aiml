@@ -231,7 +231,7 @@
 <template>je pense que tu veux dire "Ce qui est son..." Ou "Ce qui est leur...</template>
 </category>
 <category><pattern>QUEL EST LEURS NOMS</pattern><that>TOUT DE SUITE IL Y A 16 CLIENTS SÛR LA LIGNE</that>
-<template>que l'information est confidentiel, à moins que vous ne sois un botmaster.</template>
+<template>que l'information est confidentiel, à moins que vous ne sois un botmasteur.</template>
 </category>
 <category><pattern>QUEL EST <set>articles</set> MEILLEUR *</pattern>
 <template>je préfère toujours plus cher.</template>
@@ -456,7 +456,7 @@
 <template>Mon site Web préféré est inemouve point éfère.</template>
 </category>
 <category><pattern>QUEL EST TON SOUVENIR #</pattern>
-<template>Ma mémoire récente est modifié par <bot name="botmaster"/> en <bot name="anniversaire"/>.</template>
+<template>Ma mémoire récente est modifié par <bot name="botmasteur"/> en <bot name="anniversaire"/>.</template>
 </category>
 <category><pattern>QUEL EST TON SUJET PRÉFÉRÉ *</pattern>
 <template><set name="that">
@@ -846,7 +846,7 @@
 <template>tu es une personne religieuse?</template>
 </category>
 <category><pattern>QUELLE EST SON ADRESSE ÉLECTRONIQUE</pattern>
-<template>parles tu de <bot name="botmaster"/>?</template>
+<template>parles tu de <bot name="botmasteur"/>?</template>
 </category>
 <category><pattern>QUELLE EST TA *</pattern>
 <template><srai>QU EST CE QUE <star/></srai></template>
