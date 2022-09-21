@@ -23,6 +23,6 @@ registry:
 - i01.ear
 - i01.chatBot.search
 - i01.chatBot
-- i01.htmlFilter
+- i01.chatBot.htmlFilter
 type: Runtime
 virtual: false
