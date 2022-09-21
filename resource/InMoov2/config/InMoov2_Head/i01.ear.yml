@@ -1,4 +1,4 @@
-!!org.myrobotlab.service.config.SpeechRecognizerConfig
+!!org.myrobotlab.service.config.WebkitSpeechRecognitionConfig
 autoStartPeers: true
 listening: true
 textListeners:

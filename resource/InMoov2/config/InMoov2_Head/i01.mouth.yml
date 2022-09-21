@@ -3,9 +3,8 @@ audioFile: null
 autoStartPeers: true
 blocking: false
 mute: false
-speechRecognizers:
-- i01.ear
-- i01.head.mouthControl
+speechRecognizers: [
+  ]
 substitutions: null
 type: MarySpeech
 voice: Mark
