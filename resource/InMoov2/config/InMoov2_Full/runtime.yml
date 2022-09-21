@@ -15,7 +15,7 @@ registry:
 - i01.ear
 - i01.chatBot.search
 - i01.chatBot
-- i01.htmlFilter
+- i01.chatBot.htmlFilter
 - i01.right
 - i01.left
 - i01.controller3
