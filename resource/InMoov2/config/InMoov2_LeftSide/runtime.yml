@@ -43,6 +43,6 @@ registry:
 - i01.simulator
 - i01.chatBot.search
 - i01.chatBot
-- i01.htmlFilter
+- i01.chatBot.htmlFilter
 type: Runtime
 virtual: false
