@@ -1,6 +1,6 @@
-!!org.myrobotlab.service.config.GoogleSearchConfig
+!!org.myrobotlab.service.config.WikipediaConfig
 autoStartPeers: true
-lowerCase: null
-maxImages: 3
-saveSearchToFile: false
-type: GoogleSearch
+enabled: true
+imagePublishers: [
+  ]
+type: Wikipedia

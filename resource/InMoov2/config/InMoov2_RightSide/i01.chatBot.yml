@@ -6,8 +6,9 @@ currentBotName: en-US
 currentUserName: Friend
 search: i01.chatBot.search
 sleep: false
+textFilters: null
 textListeners:
-- i01.htmlFilter
+- i01.mouth
 type: ProgramAB
 utteranceListeners: [
   ]
