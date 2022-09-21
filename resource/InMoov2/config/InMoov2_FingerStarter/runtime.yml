@@ -17,6 +17,6 @@ registry:
 - i01.rightHand.index
 - i01.chatBot.search
 - i01.chatBot
-- i01.htmlFilter
+- i01.chatBot.htmlFilter
 type: Runtime
 virtual: false
