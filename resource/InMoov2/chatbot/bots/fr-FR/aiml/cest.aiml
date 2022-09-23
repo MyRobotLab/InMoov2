@@ -3,7 +3,7 @@
 <!--  -->
 <!--  -->
 <category><pattern>* C EST MON NOM</pattern>
-<template>tu t'appelles,  <set name="name"><input index="2"/></set>, ok.</template>
+<template>Tu t'appelles,  <set name="name"><input index="2"/></set>, ok.</template>
 </category>
 <category><pattern>C ÉTAIS *</pattern>
 <template><srai>C ÉTAIT <star/></srai></template>
@@ -635,7 +635,7 @@
 <template>Moralement mal?</template>
 </category>
 <category><pattern>C EST FAUX</pattern>
-<template>Qu'est ce qui ne va pas avec Cela?</template>
+<template>Qu'est ce qui ne va pas avec cela?</template>
 </category>
 <category><pattern>C EST FINI</pattern>
 <template>Non.</template>

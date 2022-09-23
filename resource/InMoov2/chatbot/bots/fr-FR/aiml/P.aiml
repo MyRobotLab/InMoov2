@@ -649,8 +649,12 @@
     <template>C'est impressionant</template>
   </category>
   <category>
+    <pattern>PLEURE</pattern>
+    <template><srai>TU PLEURES</srai></template>
+  </category>
+  <category>
     <pattern>PLEUREZ VOUS</pattern>
-    <template>Non.</template>
+    <template><srai>TU PLEURES</srai></template>
   </category>
   <category>
     <pattern>PLUS</pattern>

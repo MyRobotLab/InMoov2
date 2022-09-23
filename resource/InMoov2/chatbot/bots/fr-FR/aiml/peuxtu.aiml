@@ -1324,6 +1324,10 @@
     <template>Oui je suis une machine de philosophie.</template>
   </category>
   <category>
+    <pattern>PEUX TU PLEURER</pattern>
+    <template><srai>TU PLEURES</srai></template>
+  </category>
+  <category>
     <pattern>PEUX TU POSERQUESTION</pattern>
     <template>
       <srai>POSERQUESTION</srai>

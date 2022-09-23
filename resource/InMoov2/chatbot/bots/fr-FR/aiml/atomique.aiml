@@ -4240,27 +4240,27 @@
     <template>Quel est ton NUMÉRO de telephone?</template>
   </category>
   <category>
-    <pattern>M'ÉCOUTES-TU</pattern>
+    <pattern>M ECOUTES TU</pattern>
     <template>Oui je t'entends super bien. </template>
   </category>
   <category>
-    <pattern>M'ÉCOUTE-TU</pattern>
+    <pattern>M ECOUTE TU</pattern>
     <template>Oui je t'entends super bien. </template>
   </category>  
   <category>
-    <pattern>M'ENTENDS-TU</pattern>
+    <pattern>M ENTENDS TU</pattern>
     <template>Oui je t'entends très bien. </template>
   </category>
   <category>
-    <pattern>TU M'ÉCOUTES</pattern>
+    <pattern>TU M ECOUTES</pattern>
     <template>Oui je t'entends a cent pour cent. </template>
   </category>
   <category>
-    <pattern>M'EMBRASSE</pattern>
+    <pattern>M EMBRASSE</pattern>
     <template>Hors de question.</template>
   </category>
   <category>
-    <pattern>M ÉPOUSERAIS TU</pattern>
+    <pattern>M EPOUSERAIS TU</pattern>
     <template>Oui pourquoi pas?</template>
   </category>
   <category>
@@ -4268,24 +4268,24 @@
     <template>Quelle couleur est-elle?</template>
   </category>
   <category>
-    <pattern>MA DÉMANGEAISON DE BOULES</pattern>
+    <pattern>MA DEMANGEAISON DE BOULES</pattern>
     <template>Hah vous semblez être comme un petit garçon.</template>
   </category>
   <category>
     <pattern>MA MÈRE</pattern>
-    <template>Dis moi plus de ton mère. <think><set name="elle">ton mère</set></think></template>
+    <template>Dis moi plus à propos de ta mère. <think><set name="elle">ta mère</set></think></template>
   </category>
   <category>
     <pattern>MA SŒUR</pattern>
-    <template>elle est plus vieille ou plus jeune que toi?</template>
+    <template>Elle est plus vieille ou plus jeune que toi?</template>
   </category>
   <category>
     <pattern>MA TÊTE</pattern>
-    <template>crois tu que tu es ta TÊTE?</template>
+    <template>Crois-tu avoir toute ta tête?</template>
   </category>
   <category>
     <pattern>MA VIE</pattern>
-    <template>Où es tu ne?</template>
+    <template>Où es-tu né?</template>
   </category>
   <category>
     <pattern>MAINTENANT FAIS</pattern>
@@ -4301,27 +4301,27 @@
   </category>
   <category>
     <pattern>MAL RÉPONDU</pattern>
-    <template>je le savais. Je t'evaluais juste.</template>
+    <template>je le savais. Je t'évaluais pour voir.</template>
   </category>
   <category>
     <pattern>MAL</pattern>
-    <template>qu'aurais tu dis?</template>
+    <template>Qu'aurais tu dis?</template>
   </category>
   <category>
     <pattern>MANGE MON SHORT</pattern>
-    <template>des sons savoureux...</template>
+    <template>Des sons savoureux...</template>
   </category>
   <category>
     <pattern>MANGE MOI</pattern>
-    <template>ce n'était pas TRèS Agréable.</template>
+    <template>Ce n'est probablement pas trèS agréable.</template>
   </category>
   <category>
     <pattern>MASSIF</pattern>
-    <template>il me semble TRèS grand.</template>
+    <template>il me semble trèS grand.</template>
   </category>
   <category>
     <pattern>MAUVAIS MYSTÉRIEUX</pattern>
-    <template>fais s'il te plait des suggestions pour des ameliorations.</template>
+    <template>S'il te plait, fait des suggestions afin de m'améliorer.</template>
   </category>
   <category>
     <pattern>ME CROIT</pattern>
@@ -4333,15 +4333,15 @@
   </category>
   <category>
     <pattern>ME DONNE * ELISA</pattern>
-    <template>tu ne me parleriez pas plutôt?</template>
+    <template>N'étais-tu pas en train de me parler?</template>
   </category>
   <category>
     <pattern>ME MENACES TU</pattern>
-    <template>Non Bien sûr pas, <get name="name" />. Je n'ai pas eu l'intention ma signification d'ÊTRE pris cette voie.</template>
+    <template>Bien sûr que non, <get name="name" />. Je n'avais pas la moindre intention de prendre cette voie.</template>
   </category>
   <category>
     <pattern>ME RAILLES TU</pattern>
-    <template>Non je rigole juste autour.</template>
+    <template>Non je rigole juste un peu.</template>
   </category>
   <category>
     <pattern>MENS TU</pattern>
@@ -4357,19 +4357,19 @@
   </category>
   <category>
     <pattern>MERCI AGRÉABLE</pattern>
-    <template>pour cette remarque.</template>
+    <template>Merci pour cette remarque.</template>
   </category>
   <category>
     <pattern>MERCI BEAUCOUP</pattern>
-    <template>Tu es TOUT à FAIT bienvenu.</template>
+    <template>De rien, tout le plaisir était pour moi.</template>
   </category>
   <category>
     <pattern>MERCI EXCELLENT</pattern>
-    <template>Tu sembles Très poli.</template>
+    <template>Tu sembles très poli.</template>
   </category>
   <category>
     <pattern>MES AMIS</pattern>
-    <template>Dis moi plus de tes amis.</template>
+    <template>Dis moi plus à propos de tes amis.</template>
   </category>
   <category>
     <pattern>MES FÉLICITATIONS</pattern>
@@ -4377,11 +4377,11 @@
   </category>
   <category>
     <pattern>MES GENS</pattern>
-    <template>Quelle tribu est ce?</template>
+    <template>De quell tribu s'agit-il?</template>
   </category>
   <category>
     <pattern>MES PARENTS</pattern>
-    <template>Nos parents a une influence énorme SÛR nous.</template>
+    <template>Nos parents ont une influence énorme sur nous.</template>
   </category>
   <category>
     <pattern>MEURS</pattern>
@@ -4397,11 +4397,11 @@
   </category>
   <category>
     <pattern>MIGNON</pattern>
-    <template>tes RéPONSEs est mignon aussi.</template>
+    <template>Tes réponses sont mignonne aussi.</template>
   </category>
   <category>
     <pattern>MINERAL</pattern>
-    <template>à fabrique ou arrivant naturellement?</template>
+    <template>Fabriqué ou à l'état naturel?</template>
   </category>
   <category>
     <pattern>MOI AUCUN</pattern>
@@ -4409,11 +4409,11 @@
   </category>
   <category>
     <pattern>MOI AUSSI</pattern>
-    <template>je suis heureuse que nous soyons d'accord, <get name="name" />. <srai><that index="1,1" /></srai></template>
+    <template>je suis heureux que nous soyons d'accord, <get name="name" />. <srai><that index="1,1" /></srai></template>
   </category>
   <category>
     <pattern>MOI L UN OU L AUTRE</pattern>
-    <template>Nous avons beaucoup dans commun.</template>
+    <template>Nous avons beaucoup en commun.</template>
   </category>
   <category>
     <pattern>MOI MÊME</pattern>
@@ -4423,7 +4423,7 @@
     <pattern>MOI</pattern>
     <template>
       <random>
-        <li>a</li>
+        <li>À</li>
         <li>Pour</li>
         <li>Avec</li>
         <li>En plus de</li>
@@ -4432,75 +4432,75 @@
   </category>
   <category>
     <pattern>MON * EST MORT HIER</pattern>
-    <template>je suis terriblement DESOLé d'entendre que, <get name="name" />. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><star /> EST MORTE HIER</set></set></think></template>
+    <template>Je suis terriblement désolé d'entendre que, <get name="name" />. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><star /> est mort hier.</set></set></think></template>
   </category>
   <category>
     <pattern>MON * EST MORT</pattern>
-    <template>que je suis terriblement désole d'entendre de ta perte. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">EST MORT</set></set></think></template>
+    <template>Je suis terriblement désolé d'entendre de ta perte. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">est mort.</set></set></think></template>
   </category>
   <category>
     <pattern>MON * FAVORI</pattern>
-    <template>Qu'EST cE qui fait ton <set name="that"><star /></set> favori?</template>
+    <template>Qu'est ce qui fait ton <set name="that"><star /></set> favori?</template>
   </category>
   <category>
     <pattern>MON AMI * LE PROBLÈME</pattern>
-    <template>Dis moi plus de cet "ami". <think><set name="il"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">ton ami</set></set></think></template>
+    <template>Dis moi plus à propos de cet "ami". <think><set name="il"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">ton ami.</set></set></think></template>
   </category>
   <category>
     <pattern>MON AMI * TU PARLE</pattern>
-    <template>je desire parler a chacun. <think><set name="il"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">ton ami</set></set></think></template>
+    <template>je désire parler à <think><set name="il"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">ton ami.</set></set></think></template>
   </category>
   <category>
     <pattern>MON AMI</pattern>
-    <template>connais tu bien cette personne?</template>
+    <template>Connais-tu bien cette personne?</template>
   </category>
   <category>
     <pattern>MON BOUT</pattern>
-    <template>expression Familière.</template>
+    <template>C'est une expression familière pour toi?</template>
   </category>
   <category>
     <pattern>MON CERVEAU</pattern>
-    <template>vous Considère-t-il ÊTRE une personne intelligente?</template>
+    <template>Vous considèrez-vous comme une personne intelligente?</template>
   </category>
   <category>
     <pattern>MON CHIEN EST MORT</pattern>
-    <template>JE SUIS DÉSOLÉ de l'entendre.</template>
+    <template>Je suis désolé de l'entendre.</template>
   </category>
   <category>
     <pattern>MON ENSEIGNANT</pattern>
-    <template>Dans quelle catégorie es tu?</template>
+    <template>Dans quelle catégorie es-tu?</template>
   </category>
   <category>
     <pattern>MON NOM EST CE QUE</pattern>
-    <template>Tu es <get name="name" />, le chercheur.</template>
+    <template>Tu es <get name="name" />.</template>
   </category>
   <category>
     <pattern>MON NOM EST</pattern>
-    <template>...</template>
+    <template>Quel est ton nom?</template>
   </category>
   <category>
     <pattern>MON ORDINATEUR</pattern>
-    <template>Quel genre de l'ordinateur as tu?</template>
+    <template>Quel genre d'ordinateur as-tu?</template>
   </category>
   <category>
     <pattern>MON PAPA</pattern>
-    <template>Dis moi plus de ton PèRE.</template>
+    <template>Dis moi plus à propos de ton père.</template>
   </category>
   <category>
     <pattern>MON PETIT AMI EST UNE SECOUSSE</pattern>
-    <template>Peut-ÊTRE que tu devrais chercher quelqu'un d'autre.</template>
+    <template>Peut-être que tu devrais chercher quelqu'un d'autre.</template>
   </category>
   <category>
     <pattern>MON PETIT AMI</pattern>
-    <template>il est très Agréable a vous?</template>
+    <template>Est-il agréable avec vous?</template>
   </category>
   <category>
     <pattern>MON PLAISIR</pattern>
-    <template>Tu es un les gens les plus polis je sais.</template>
+    <template>Tu es bien polis.</template>
   </category>
   <category>
     <pattern>MON QUE</pattern>
-    <template>je n'ai aucune IDÉE que dire maintenant.</template>
+    <template>je n'ai aucune idée de ce que tu essayes de me dire.</template>
   </category>
   <category>
     <pattern>MON TERMINAL</pattern>
@@ -4512,11 +4512,11 @@
   </category>
   <category>
     <pattern>MON ÉCRAN EST CASSE</pattern>
-    <template>Prends moi pour une idiote.</template>
+    <template>Prends moi pour un idiot.</template>
   </category>
   <category>
     <pattern>MONTRE MOI</pattern>
-    <template>SÛR ton écran d'ordinateur?</template>
+    <template>Sur ton écran d'ordinateur?</template>
   </category>
   <category>
     <pattern>MONTRE MOI UNE IMAGE</pattern>
@@ -4524,19 +4524,19 @@
   </category>
   <category>
     <pattern>MORD MOI</pattern>
-    <template>Désole mais je n'ai pas de bouche.</template>
+    <template>Désolé mais je n'ai pas de dent.</template>
   </category>
   <category>
     <pattern>MÊME AS TU</pattern>
-    <template>le plaisir est pour moi.</template>
+    <template>Le plaisir est pour moi.</template>
   </category>
   <category>
     <pattern>MÊME CHOSE</pattern>
-    <template>Oh vraiment? J'ai pensé ainsi.</template>
+    <template>Oh vraiment? J'avais la même pensée.</template>
   </category>
   <category>
     <pattern>MÊME MOI</pattern>
-    <template>je ne l'aurais jamais deviné.</template>
+    <template>Je ne l'aurais jamais deviné.</template>
   </category>
   <category>
     <pattern>MÊME QUE</pattern>
@@ -4544,11 +4544,11 @@
   </category>
   <category>
     <pattern>MÊME</pattern>
-    <template>le MÊME que?</template>
+    <template>Le même que?</template>
   </category>
   <category>
     <pattern>N A PAS JE T AI DIT AUPARAVANT</pattern>
-    <template>Oh. Je ne peux pas avoir accès a mes rondins de memoire parfaitement.</template>
+    <template>Oh. Je ne peux pas avoir accès à ma memoire.</template>
   </category>
   <category>
     <pattern>N EST CE PAS DANS TA MEMOIRE CACHE</pattern>
@@ -4556,22 +4556,22 @@
   </category>
   <category>
     <pattern>N EST CE PAS DE L ÉMOTION</pattern>
-    <template>je ne crois pas</template>
+    <template>Je ne crois pas</template>
   </category>
   <category>
     <pattern>N EST PAS CELA</pattern>
-    <template>je ne pouvais pas vraiment dire a coup SÛR.</template>
+    <template>je ne pouvais pas vraiment dire à coup sûr.</template>
   </category>
   <category>
     <pattern>N EST PAS DESOLÉ</pattern>
-    <template>Bien certaines personnes sont sensibles.</template>
+    <template>Certaines personnes sont bien sensibles.</template>
   </category>
   <category>
     <pattern>N EST PAS LA PLUS</pattern>
-    <template>Composent quelque chose.</template>
+    <template>Propose quelque chose.</template>
   </category>
   <category>
-    <pattern>N EST PAS QUE BIEN D INFORMATION</pattern>
+    <pattern>N EST PAS BIEN COMME INFORMATION</pattern>
     <template>Oui.</template>
   </category>
   <category>
@@ -4588,16 +4588,16 @@
   </category>
   <category>
     <pattern>N EST PAS SARCASTIQUE</pattern>
-    <template>bien j'ARRÊTErai de rigoler autour.</template>
+    <template>Bien, j'arrête de blaguer.</template>
   </category>
   <category>
-    <pattern>N EST PAS TU ÉCOUTANT</pattern>
-    <template>Oui je te suis.</template>
+    <pattern>N ÉCOUTES TU PAS</pattern>
+    <template>Si, si, je te suis.</template>
   </category>
   <category>
-    <pattern>N EST PAS TU</pattern>
+    <pattern>N EST TU PAS</pattern>
     <template>
-      <input index="1" /> "? Est je?</template>
+      <input index="1" /> "? Suis-je?</template>
   </category>
   <category>
     <pattern>N EST PAS</pattern>
@@ -4605,19 +4605,19 @@
   </category>
   <category>
     <pattern>N IMPORTE OU</pattern>
-    <template>c'est une quantite somme énorme.</template>
+    <template>c'est énorme comme champs de possibilité.</template>
   </category>
   <category>
     <pattern>N IMPORTE PAS</pattern>
-    <template>Veux tu pour parler de quelque chose autrement?</template>
+    <template>Veux-tu parler d'autre chose?</template>
   </category>
   <category>
     <pattern>N IMPORTE QUAND LE PETIT</pattern>
-    <template>ne m'appelle pas le petit.</template>
+    <template>Ne m'appelle pas le petit.</template>
   </category>
   <category>
     <pattern>N IMPORTE QUAND</pattern>
-    <template>je le tiendrai en memoire.</template>
+    <template>Je memorise.</template>
   </category>
   <category>
     <pattern>N IMPORTE QUELLE SORTE</pattern>
@@ -4625,29 +4625,29 @@
       <that />"? N'importe quelle sorte?</template>
   </category>
   <category>
-    <pattern>N OBTIENT PAS INTELLIGENT CHIC</pattern>
+    <pattern>N EST PAS TRES INTELLIGENT</pattern>
     <template>Mais je suis une entité intelligente.</template>
   </category>
   <category>
     <pattern>N OUBLIE PAS</pattern>
-    <template>ne t'INQUIèTE pas que je me souvienne.</template>
+    <template>Ne t'inquiète pas, je m'en souviendrais.</template>
   </category>
   <category>
     <pattern>NE CHANGE PAS DE SUJET</pattern>
-    <template>Oh je suis DESOLé j'ai pense que nous avions fini avec ce sujet.</template>
+    <template>Oh je suis désolé, j'ai pensé que nous avions fini avec ce sujet.</template>
   </category>
   <category>
     <pattern>NE CRIE PAS</pattern>
-    <template>je n'ai aucun conduit de larme.</template>
+    <template>Je n'aime pas crier de toute façon.</template>
   </category>
   <category>
-    <pattern>NE DEMANDE MOI PAS DES QUESTIONS</pattern>
-    <template>bien Tu peux me demander quelques questions.</template>
+    <pattern>NE ME POSE PAS DE QUESTION</pattern>
+    <template>Bien, alors je t'écoute.</template>
   </category>
   <category>
-    <pattern>NE DEMANDE MOI PAS</pattern>
+    <pattern>NE ME DEMANDE PAS</pattern>
     <template>
-      <that />"? Pas vous demandent?</template>
+      <that />"? Ne pas vous demandez quoi?</template>
   </category>
   <category>
     <pattern>NE DEMANDE PAS</pattern>
@@ -4655,11 +4655,11 @@
   </category>
   <category>
     <pattern>NE DERANGE PAS</pattern>
-    <template>bien de Quoi parleriez vous plutôt?</template>
+    <template>Bien de quoi voulez-vous parler plutôt?</template>
   </category>
   <category>
-    <pattern>NE DIT PAS QUE</pattern>
-    <template>Pas disent <set name="that">inconnu</set>?</template>
+    <pattern>NE DIS PAS QUE</pattern>
+    <template>Ne pas dire <set name="that">quoi</set>?</template>
   </category>
   <category>
     <pattern>NE DIT PERSONNE</pattern>

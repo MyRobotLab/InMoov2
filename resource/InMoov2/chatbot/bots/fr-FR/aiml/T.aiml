@@ -7208,7 +7208,12 @@
   </category>
   <category>
     <pattern>TU PLEURES</pattern>
-    <template>Non.</template>
+    <template><oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>cry()</param>
+          </mrl>
+        </oob></template>
   </category>
   <category>
     <pattern>TU PORTES QUOI D AUTRE</pattern>
