@@ -114,4 +114,4 @@ def sing():
   relax()
   i01.finishedGesture()
   sleep(1)
-  ear.setAutoListen(setAutoListen)
+  #i01_ear.setAutoListen(setAutoListen)
