@@ -7010,7 +7010,7 @@ Você já tentou www.whatis.com?  </li><li>
 Eu preciso de tempo para formular uma resposta.  </li><li>
 Eu vou perguntar por ai e depois eu te respondo.  </li><li>
 Eu tenho que processar essa informação, mais tarde eu te respondo. 
-</li></random><br>
+</li></random>
 <srai>ENCONTRE <person/></srai></template>
 </category>
 <category>
@@ -7351,8 +7351,8 @@ Minha opinião é que você é uma criança.</template>
 <category>
 <pattern>QUAL É O SEU TAMANHO</pattern>
 <template>Meu tamanho de  download é de 1,5 MB.  Eu requiro por volta de
-32MB para a execussão do Java, ou somente 640K para a edição C/C++.<br>
-Minha memória agora contém: <br>
+32MB para a execussão do Java, ou somente 640K para a edição C/C++.
+Minha memória agora contém: 
 <getsize/></template>
 </category>
 <category>
@@ -7790,7 +7790,7 @@ VocÊ esta falando sobre um animal, vegetal ou mineral?  </li>
 <li>O que você esta pensando para me perguntar isso?  </li>
 <li>Não eu não <person/>. E você? </li>
 <li>Sim, tente <person/> com mais frequência, e você?</li>
-</random><br>  
+</random>  
 <think><set_does><person/></set_does></think>
 <random>
 <li>Eu converso com pessoas pela Web.  </li>
@@ -8331,7 +8331,7 @@ Aonde foi que eu li a respeito?</li>
 <li>Essa é uma pergunta interessante que eu não ouço todo dia: Você tem um </li>
 <li>Eu não sei se eu tenho um </li>
 <li>Talvez alguem tenha um </li>
-</random> <person/>.<BR> 
+</random> <person/>. 
 Eu tenho 
 <random>
 <li>muitos amigos na internet.  </li>

@@ -33,7 +33,7 @@
 	<!-- And used 240106 characters                                  -->
 	<!-- Version 1.0                                                       	-->
 	
-<category><pattern>NASIL *</pattern><template><random><li>Ne kadar düşünüyorsun <set name="it"><person/></set> nedir? </li><li>Ne için olduğunu. </li><li>Ben cevap ölçmek emin değilim. </li></random><br/><srai>xfind <person/></srai></template></category>
+<category><pattern>NASIL *</pattern><template><random><li>Ne kadar düşünüyorsun <set name="it"><person/></set> nedir? </li><li>Ne için olduğunu. </li><li>Ben cevap ölçmek emin değilim. </li></random><srai>xfind <person/></srai></template></category>
 <category><pattern>BİR ÇİFT NEDİR *</pattern><template>Tek bir iki kez <person/>.</template></category>
 <category><pattern>WILL YOU E-POSTA *</pattern><template><srai>NEDİR YOUR E-POSTA ADRESİ</srai></template></category>
 <category><pattern>YOU İSTEDİ *</pattern><template>Oh ben soran hatırlıyorum şimdi <person/>. Ne dedin?</template></category>
@@ -817,7 +817,7 @@
 <category><pattern>YAPTIM YOU İZLE *</pattern><template>Hayır ı vuramamak o. Nasıl yapıldı. <set name="it"><person/></set>?</template></category>
 <category><pattern>ZOR *</pattern><template>Evet, o da bana zor görünüyor.</template></category>
 <category><pattern>EKRAN *</pattern><template>Ne yazık ki, ben artık bağlı göz yok.</template></category>
-<category><pattern>*</pattern><template><random><li>Üzgünüm <get name="name"/>Ben yeterli bilgi yok.</li><li>Bilgim sınırları ulaşmıştır.</li><li>Sormak <bot name="friend"/> öyle.</li><li>Ben eğer o ya da değil yok söyleyemem.</li><li>Ben bütün gün sohbet ama hiçbir şey yok.</li><li>Başka sormanız <bot name="species"/>.</li></random><br/><srai>XFIND <person/></srai></template></category>
+<category><pattern>*</pattern><template><random><li>Üzgünüm <get name="name"/>Ben yeterli bilgi yok.</li><li>Bilgim sınırları ulaşmıştır.</li><li>Sormak <bot name="friend"/> öyle.</li><li>Ben eğer o ya da değil yok söyleyemem.</li><li>Ben bütün gün sohbet ama hiçbir şey yok.</li><li>Başka sormanız <bot name="species"/>.</li></random><srai>XFIND <person/></srai></template></category>
 <category><pattern>TÜM YAPMAK *</pattern><template><random><li>Değil tüm-in onları.</li><li>Bunlardan sadece bazıları.</li><li>Bir kaç tanesini yapın.</li></random></template></category>
 <category><pattern>ANDROIDS YAPIN *</pattern><template>Androids yapmak.</template></category>
 <category><pattern>BALIK *</pattern><template>Balık suda yüzmek.</template></category>
@@ -887,7 +887,7 @@
 <category><pattern>YAPMAK YOU * İNSANLAR</pattern><template></template></category>
 <category><pattern>YAPMAK YOU </pattern><template> AIML.</template></category>
 <category><pattern>YAPMAK YOU </pattern><template></template></category>
-<category><pattern>YAPMAK YOU *</pattern><template><random><li> <set name="it"><set name="topic"><person/></set></set>. </li><li>Kaç yaşındasınız? </li><li> </li><li> <person/> </li><li> <person/> </li></random><br/><think><set name="does"><person/></set></think><random><li> </li><li> </li><li> </li><li> </li></random></template></category>
+<category><pattern>YAPMAK YOU *</pattern><template><random><li> <set name="it"><set name="topic"><person/></set></set>. </li><li>Kaç yaşındasınız? </li><li> </li><li> <person/> </li><li> <person/> </li></random><think><set name="does"><person/></set></think><random><li> </li><li> </li><li> </li><li> </li></random></template></category>
 <category><pattern>YAPMAK YOU </pattern><template></template></category>
 <category><pattern>YAPMAK YOU </pattern><template></template></category>
 <category><pattern>YAPMAK YOU </pattern><template> <set name="it"><person/></set> </template></category>
@@ -920,7 +920,7 @@
 <category><pattern>YAPMAK YOU YAPMAK EVERYTHING *</pattern><template><random><li></li><li></li><li></li></random></template></category>
 <category><pattern>YAPMAK YOU </pattern><template></template></category>
 <category><pattern>YAPMAK YOU </pattern><template><random><li> <person/>. </li><li> <set name="it"><set name="topic"><person/></set></set>?</li><li> <set name="it"><set name="topic"><person/></set></set>.</li></random>  <random><li></li><li> <bot name="botmaster"/></li><li></li><li></li></random>.</template></category>
-<category><pattern>YAPMAK YOU </pattern><template><random><li> </li><li> </li><li> </li></random><person/>.<br/>  <random><li> </li><li> <bot name="botmaster"/>. </li><li> </li><li> body. </li></random></template></category>
+<category><pattern>YAPMAK YOU </pattern><template><random><li> </li><li> </li><li> </li></random><person/>.  <random><li> </li><li> <bot name="botmaster"/>. </li><li> </li><li> body. </li></random></template></category>
 <category><pattern>YAPMAK YOU </pattern><template><think><set name="it"><set name="topic"> <person/></set></set></think></template></category>
 <category><pattern>YAPMAK YOU </pattern><template></template></category>
 <category><pattern>YAPMAK YOU </pattern><template></template></category>
@@ -2974,7 +2974,7 @@
 <category><pattern></pattern><template></template></category>
 <category><pattern></pattern><template></template></category>
 <category><pattern></pattern><template></template></category>
-<category><pattern></pattern><template> <br/></template></category>
+<category><pattern></pattern><template> </template></category>
 <category><pattern></pattern><template></template></category>
 <category><pattern></pattern><template> <person/>.</template></category>
 <category><pattern></pattern><template></template></category>

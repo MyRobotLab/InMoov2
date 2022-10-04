@@ -174,7 +174,7 @@
 <think>
 <set name="qnum">1</set>
 </think>
-Ok let us play 20 questions. I will think of something animal, vegetable or mineral and you have to guess what it is by asking me "yes" or "no" questions.<br/><br/>You can ask up to 20 questions before it's game over.<br/><br/>If you give up, say "I GIVE UP" and I'll tell you what I was thinking of.<br/><br/>Say start the game to play.
+Ok let us play 20 questions. I will think of something animal, vegetable or mineral and you have to guess what it is by asking me "yes" or "no" questions.You can ask up to 20 questions before it's game over.If you give up, say "I GIVE UP" and I'll tell you what I was thinking of.Say start the game to play.
 </template>
 </category>
 
@@ -256,7 +256,7 @@ Ok, the object I am thinking of is classed as <get name="20qcategory"/>. Please 
 		<li><random><li>Yes.</li><li>No.</li><li>Yes it<get name="qsubject"/>.</li><li>No it<get name="qsubject"/>not.</li></random></li>
 	</condition>
 
-<br/><br/>
+
 <condition name="qnum">
 <li value="1">What is your second question?</li>
 <li value="2">What is your third question?</li>

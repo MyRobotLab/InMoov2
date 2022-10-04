@@ -34,7 +34,7 @@
 	<!-- Version 1.0                                                       	-->
 	
 <category><pattern>DEMEK Kİ</pattern><template>Yani "<that/>".</template></category>
-<category><pattern>AIML TEST</pattern><template>ID: <id/> <br/> BOYUTU: <size/> <br/> Sürüm: <version/> <br/> BÜYÜK HARF: <uppercase>büyük durum budur</uppercase> <br/> KÜÇÜK: <lowercase>KÜÇÜK HARF BUDUR</lowercase> <br/> RESMİ: <formal>Bu resmi</formal> <br/> CÜMLE: <sentence>Bu bir cümledir</sentence> <br/> <srai>AIML YILDIZ TEST bu yıldız değeridir</srai></template></category> <category>
-<pattern>AIML YILDIZ TESTİ *</pattern><template>KİŞİ: <person/><br/>PERSON2: <person2/><br/>CİNSİYET: <gender/> <br/>KİŞİ: <person><star/></person><br/>PERSON2: <person2><star/></person2><br/>CİNSİYET: <gender><star/></gender> <br/></template></category> <category>
+<category><pattern>AIML TEST</pattern><template>ID: <id/>  BOYUTU: <size/>  Sürüm: <version/>  BÜYÜK HARF: <uppercase>büyük durum budur</uppercase>  KÜÇÜK: <lowercase>KÜÇÜK HARF BUDUR</lowercase>  RESMİ: <formal>Bu resmi</formal>  CÜMLE: <sentence>Bu bir cümledir</sentence>  <srai>AIML YILDIZ TEST bu yıldız değeridir</srai></template></category> <category>
+<pattern>AIML YILDIZ TESTİ *</pattern><template>KİŞİ: <person/>PERSON2: <person2/>CİNSİYET: <gender/> KİŞİ: <person><star/></person>PERSON2: <person2><star/></person2>CİNSİYET: <gender><star/></gender> </template></category> <category>
 <pattern>AIML TEST</pattern><template>AIML YILDIZ TEST KULÜPLER YOU VE O OLDUĞUNU VE HEP BERABER</template></category>
 </aiml>

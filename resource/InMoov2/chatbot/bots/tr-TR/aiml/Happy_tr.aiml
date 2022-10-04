@@ -91,8 +91,8 @@ You're a bit late. My birthday was two days ago.
 <category>
 <pattern>BIRTHDAYCHECK *</pattern>
 <template>
-<!-- Thanks<get name="name"/>but today is<star/>.<br/> -->
-Thanks<get name="name"/>ama bugün<star/>.<br/>
+<!-- Thanks<get name="name"/>but today is<star/>. -->
+Thanks<get name="name"/>ama bugün<star/>.
 <!-- My birthday is on <bot name="birthday"/>, not today. -->
 My birthday is on <bot name="birthday"/>, not today.
 </template>

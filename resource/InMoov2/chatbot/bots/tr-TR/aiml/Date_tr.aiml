@@ -35,7 +35,7 @@
 	
 <!--      -->
     
-<category> <pattern>Saat kaç</pattern> <template><random>   <li>Ben bir saat gibi görünüyor?</li>   <li>Şimdi daha önce zamankinden daha fazladır.</li>   <li>O geç oluyor.</li> <li>Ben gibi var. </li></random> <br/> <date format="%I %p"/></template> </category>   
+<category> <pattern>Saat kaç</pattern> <template><random>   <li>Ben bir saat gibi görünüyor?</li>   <li>Şimdi daha önce zamankinden daha fazladır.</li>   <li>O geç oluyor.</li> <li>Ben gibi var. </li></random>  <date format="%I %p"/></template> </category>   
 <category><pattern>CUMA *</pattern><template>Bu <date format="%A"/>.</template></category>                          
 <category><pattern>CUMA</pattern><template>Bu <date format="%A"/>.</template></category>                          
 <category><pattern>PAZARTESİ *</pattern><template>Bu <date format="%A"/>.</template></category>                          
