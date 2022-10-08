@@ -240,8 +240,8 @@
                         <span ng-show="peer.isPeerStarted(service, 'leftHand')">
                             <img src="settings.png" width="30" ng-click="mrl.changeTab(peer.getActualName(service, 'leftHand'))"/>
                         </span>
-                        <label ng-show="service.isLeftHandStarted">Sensors:</label>
-                        &nbsp;<toggle width="70" height="28" ng-show="service.isLeftHandStarted" ng-model="service.isLeftHandSensorStarted" title="To configure edit data/config/i01.leftHand.sensor.yml" ng-change="!service.isLeftHandSensorStarted?msg.isLeftHandSensorStarted(false):msg.loadFile('resource/InMoov2/system/startScripts/i01_leftHandSensor_start.py')" width="120" height="30" on="ON" off="OFF"/>
+                        <!--<label ng-show="service.isLeftHandStarted">Sensors:</label>
+                        &nbsp;<toggle width="70" height="28" ng-show="service.isLeftHandStarted" ng-model="service.isLeftHandSensorStarted" title="To configure edit data/config/i01.leftHand.sensor.yml" ng-change="!service.isLeftHandSensorStarted?msg.isLeftHandSensorStarted(false):msg.loadFile('resource/InMoov2/system/startScripts/i01_leftHandSensor_start.py')" width="120" height="30" on="ON" off="OFF"/>-->
                     </td>
                 </tr>
                 <tr>
@@ -254,8 +254,8 @@
                         <span ng-show="peer.isPeerStarted(service, 'rightHand')">
                             <img src="settings.png" width="30" ng-click="mrl.changeTab(peer.getActualName(service, 'rightHand'))"/>
                         </span>
-                        <label ng-show="service.isRightHandStarted">Sensors:</label>
-                        &nbsp;<toggle width="70" height="28" ng-show="service.isRightHandStarted" ng-model="service.isRightHandSensorStarted" title="To configure edit data/config/i01.rightHand.sensor.yml" ng-change="!service.isRightHandSensorStarted?msg.isRightHandSensorStarted(false):msg.loadFile('resource/InMoov2/system/startScripts/i01_rightHandSensor_start.py')" width="120" height="30" on="ON" off="OFF"/>
+                        <!--<label ng-show="service.isRightHandStarted">Sensors:</label>
+                        &nbsp;<toggle width="70" height="28" ng-show="service.isRightHandStarted" ng-model="service.isRightHandSensorStarted" title="To configure edit data/config/i01.rightHand.sensor.yml" ng-change="!service.isRightHandSensorStarted?msg.isRightHandSensorStarted(false):msg.execScript('resource/InMoov2/system/startScripts/i01_rightHandSensor_start.py')" width="120" height="30" on="ON" off="OFF"/>-->
                     </td>
                 </tr>
             </table>
