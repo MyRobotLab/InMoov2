@@ -22,7 +22,6 @@ left_indexPin=ThisServicePartConfig.getint('MAIN', 'left_indexPin')
 left_majeurePin=ThisServicePartConfig.getint('MAIN', 'left_majeurePin')
 left_ringFingerPin=ThisServicePartConfig.getint('MAIN', 'left_ringFingerPin')
 left_pinkyPin=ThisServicePartConfig.getint('MAIN', 'left_pinkyPin')
-left_extraPin=ThisServicePartConfig.getint('MAIN', 'left_extraPin')
 
 left_thumb_Psi_min=ThisServicePartConfig.getint('MAIN', 'left_thumb_Psi_min')
 left_thumb_Psi_low=ThisServicePartConfig.getint('MAIN', 'left_thumb_Psi_low')
@@ -49,11 +48,6 @@ left_pinky_Psi_low=ThisServicePartConfig.getint('MAIN', 'left_pinky_Psi_low')
 left_pinky_Psi_mid=ThisServicePartConfig.getint('MAIN', 'left_pinky_Psi_mid')
 left_pinky_Psi_max=ThisServicePartConfig.getint('MAIN', 'left_pinky_Psi_max')
 
-left_extra_Psi_min=ThisServicePartConfig.getint('MAIN', 'left_extra_Psi_min')
-left_extra_Psi_low=ThisServicePartConfig.getint('MAIN', 'left_extra_Psi_low')
-left_extra_Psi_mid=ThisServicePartConfig.getint('MAIN', 'left_extra_Psi_mid')
-left_extra_Psi_max=ThisServicePartConfig.getint('MAIN', 'left_extra_Psi_max')
-
 # Used by finger sensors
 # Left Hand
 global leftThumbPressure
@@ -66,8 +60,6 @@ global leftRingFingerPressure
 leftRingFingerPressure=0
 global leftPinkyPressure
 leftPinkyPressure=0
-global leftExtraPressure
-leftExtraPressure=0
 
 if runtime.isStarted('i01.left'):
     leftHandSensorActivated = True
@@ -82,12 +74,11 @@ if runtime.isStarted('i01.left'):
             global leftMajeurePressure
             global leftRingFingerPressure
             global leftPinkyPressure
-            global leftExtraPressure
           
 
               
             for pin in range(0, len(pinsLeft)):
-                if pinsLeft[pin].address==(left_thumbPin):
+                if pinsLeft[pin].pin==(left_thumbPin):
                     if pinsLeft[pin].value<=(left_thumb_Psi_min) and pinsLeft[pin].value<(left_thumb_Psi_low):leftThumbPressure = 0 
                     if pinsLeft[pin].value>=(left_thumb_Psi_low)and pinsLeft[pin].value<(left_thumb_Psi_mid):
                         if leftThumbPressure == 1:
@@ -103,7 +94,7 @@ if runtime.isStarted('i01.left'):
                             i01_leftHand_thumb.disable()
                     print "leftThumbSensorPin:",left_thumbPin,"Value:",pinsLeft[pin].value
 
-                if pinsLeft[pin].address==(left_indexPin):
+                if pinsLeft[pin].pin==(left_indexPin):
                     if pinsLeft[pin].value<=(left_index_Psi_min) and pinsLeft[pin].value<(left_index_Psi_low):leftIndexPressure = 0
                     if pinsLeft[pin].value>=(left_index_Psi_low)and pinsLeft[pin].value<(left_index_Psi_mid):
                         if leftIndexPressure == 1:
@@ -119,7 +110,7 @@ if runtime.isStarted('i01.left'):
                             i01_leftHand_index.disable()
                     print "leftIndexSensorPin:",left_indexPin,"Value:",pinsLeft[pin].value
 
-                if pinsLeft[pin].address==(left_majeurePin):
+                if pinsLeft[pin].pin==(left_majeurePin):
                     if pinsLeft[pin].value<=(left_majeure_Psi_min) and pinsLeft[pin].value<(left_majeure_Psi_low):leftMajeurePressure = 0
                     if pinsLeft[pin].value>=(left_majeure_Psi_low)and pinsLeft[pin].value<(left_majeure_Psi_mid):
                         if leftMajeurePressure == 1:
@@ -135,7 +126,7 @@ if runtime.isStarted('i01.left'):
                             i01_leftHand_majeure.disable()
                     print "leftMajeureSensorPin:",left_majeurePin,"Value:",pinsLeft[pin].value
 
-                if pinsLeft[pin].address==(left_ringFingerPin):
+                if pinsLeft[pin].pin==(left_ringFingerPin):
                     if pinsLeft[pin].value<=(left_ringFinger_Psi_min) and pinsLeft[pin].value<(left_ringFinger_Psi_low):leftRingFingerPressure = 0
                     if pinsLeft[pin].value>=(left_ringFinger_Psi_low)and pinsLeft[pin].value<(left_ringFinger_Psi_mid):
                         if leftRingFingerPressure == 1:
@@ -151,7 +142,7 @@ if runtime.isStarted('i01.left'):
                             i01_leftHand_ringFinger.disable()
                     print "leftRingFingerSensorPin:",left_ringFingerPin,"Value:",pinsLeft[pin].value
 
-                if pinsLeft[pin].address==(left_pinkyPin):
+                if pinsLeft[pin].pin==(left_pinkyPin):
                     if pinsLeft[pin].value<=(left_pinky_Psi_min) and pinsLeft[pin].value<(left_pinky_Psi_low):leftPinkyPressure = 0
                     if pinsLeft[pin].value>=(left_pinky_Psi_low)and pinsLeft[pin].value<(left_pinky_Psi_mid):
                         if leftPinkyPressure == 1:
@@ -168,38 +159,29 @@ if runtime.isStarted('i01.left'):
                     print "leftPinkySensorPin:",left_pinkyPin,"Value:",pinsLeft[pin].value
                     print "-----------Left-Finger-Sensors-----------"
 
-                if pinsLeft[pin].address==(left_extraPin):
-                    if pinsLeft[pin].value<=(left_extra_Psi_min) and pinsLeft[pin].value<(left_extra_Psi_low):leftExtraPressure = 0
-                    if pinsLeft[pin].value>=(left_extra_Psi_low)and pinsLeft[pin].value<(left_extra_Psi_mid):leftExtraPressure = 1
-                    if pinsLeft[pin].value>=(left_extra_Psi_mid)and pinsLeft[pin].value<(left_extra_Psi_max):leftExtraPressure = 2
-                    if pinsLeft[pin].value>=(left_extra_Psi_max):leftExtraPressure = 3
-                    print "leftExtraSensorPin:",left_extraPin,"Value:",pinsLeft[pin].value
-
 
         i01.speakBlocking(i01.localize("STARTINGLEFTHANDSENSOR"))
         i01_left.addListener("publishPinArray","python","publishLeftSensor")
 
         def leftHandSensorON():
-            if leftHandSensorActivated:
+            if leftHandSensorActivated==1:
                 print "=========LeftSensorON========" 
                 i01_left.enablePin(left_thumbPin, 2) #2 is the number of polls per seconds
                 i01_left.enablePin(left_indexPin, 2)
                 i01_left.enablePin(left_majeurePin, 2)
                 i01_left.enablePin(left_ringFingerPin, 2)
                 i01_left.enablePin(left_pinkyPin, 2)
-                i01_left.enablePin(left_extraPin, 2)
             else:
                 pass
 
         def leftHandSensorOFF():
             #sleep(5)
-            if leftHandSensorActivated:
+            if leftHandSensorActivated==1:
                 i01_left.disablePin(left_thumbPin)
                 i01_left.disablePin(left_indexPin)
                 i01_left.disablePin(left_majeurePin)
                 i01_left.disablePin(left_ringFingerPin)
                 i01_left.disablePin(left_pinkyPin)
-                i01_left.disablePin(left_extraPin)
                 print "=========LeftSensorOFF======="
             else:
                 pass

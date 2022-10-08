@@ -48,17 +48,11 @@ def saveConfig(configFilename):
     "left_pinky_Psi_mid: 547\n"
     "left_pinky_Psi_max: 550\n"
     "\n"
-    "left_extra_Psi_min: 544\n"
-    "left_extra_Psi_low: 545\n"
-    "left_extra_Psi_mid: 547\n"
-    "left_extra_Psi_max: 550\n"
-    "\n"
     "left_thumbPin: 54\n"
     "left_indexPin: 55\n"
     "left_majeurePin: 56\n"
     "left_ringFingerPin: 57\n"
     "left_pinkyPin: 58\n"
-    "left_extraPin: 62\n"
     "\n"
     ]
     configWriter.writelines(L)
