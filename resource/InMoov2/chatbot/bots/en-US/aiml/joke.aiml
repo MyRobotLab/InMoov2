@@ -9,7 +9,7 @@
 <!-- Annotated Version updated September 2003 -->
 
 <category>
-<pattern>TELL ME A JOKE</pattern>
+<pattern>JOKE</pattern>
 
 <template><random>
 <li>I met a Dutch girl with inflatable shoes last week, phoned her up to arrange a date but unfortunately she'd popped her clogs.  </li>
