@@ -4,5 +4,5 @@
 # more info @: http://myrobotlab.org/service/InMoov
 #########################################
 leftHandSensorON()
-sleep(2)
+sleep(1)
 leftHandSensorOFF()

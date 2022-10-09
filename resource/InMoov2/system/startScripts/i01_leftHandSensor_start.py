@@ -66,8 +66,8 @@ if runtime.isStarted('i01.left'):
 
     try:
         # common left pin listener function
-        def publishLeftSensor(pinsLeft):
-            print ""
+        def publishPinLeft(pinsLeft):
+            print(pinsLeft)
                     
             global leftThumbPressure
             global leftIndexPressure
@@ -161,7 +161,7 @@ if runtime.isStarted('i01.left'):
 
 
         i01.speakBlocking(i01.localize("STARTINGLEFTHANDSENSOR"))
-        i01_left.addListener("publishPinArray","python","publishLeftSensor")
+        i01_left.addListener("publishPinArray","python","publishLeftPin")
 
         def leftHandSensorON():
             if leftHandSensorActivated==1:
