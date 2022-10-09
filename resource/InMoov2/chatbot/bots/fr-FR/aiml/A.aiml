@@ -461,7 +461,7 @@
 <category><pattern>AVEC QUEL BUT</pattern>
 <template>Impossible de répondre.</template>
 </category>
-<category><pattern>AVEC QUI D AUTRE PARLE VOUS</pattern>
+<category><pattern>AVEC QUI D AUTRE PARLEZ VOUS</pattern>
 <template>C'est une information strictement confidentielle, <get name="name"/>.</template>
 </category>
 <category><pattern>AVEZ-VOUS *</pattern>

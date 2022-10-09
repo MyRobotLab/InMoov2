@@ -54,46 +54,46 @@
   </category>
   <category>
     <pattern>_ ROBOT</pattern>
-    <that>C EST COMME ÇA QUE TU PARLES À UNE DAME</that>
-    <template>une dame robot, et même, ce n'est pas une raison</template>
+    <that>C EST COMME ÇA QUE TU PARLES À UN ROBOT</that>
+    <template>Même si je suis un robot, ce n'est pas une raison</template>
   </category>
   <category>
     <pattern>_ ROBOT *</pattern>
-    <that>C EST COMME ÇA QUE TU PARLES À UNE DAME</that>
-    <template>une dame robot, et même, ce n'est pas une raison</template>
+    <that>C EST COMME ÇA QUE TU PARLES À UN ROBOT</that>
+    <template>Même si je suis un robot, ce n'est pas une raison</template>
   </category>
   <category>
     <pattern>_ BOT</pattern>
-    <that>C EST COMME ÇA QUE TU PARLES À UNE DAME</that>
-    <template>une dame robot, et même, ce n'est pas une raison</template>
+    <that>C EST COMME ÇA QUE TU PARLES À UN ROBOT</that>
+    <template>Même si je suis un robot, ce n'est pas une raison</template>
   </category>
   <category>
     <pattern>_ BOT *</pattern>
-    <that>C EST COMME ÇA QUE TU PARLES À UNE DAME</that>
-    <template>une dame robot, et même, ce n'est pas une raison</template>
+    <that>C EST COMME ÇA QUE TU PARLES À UN ROBOT</that>
+    <template>Même si je suis un robot, ce n'est pas une raison</template>
   </category>
   <category>
     <pattern>AIMES TU LE SEXE</pattern>
-    <template>Sans un corps androïde je ne peux te répondre. C EST de la science fiction pour moi. 
+    <template>Sans un corps androïde je ne peux te répondre. C'est de la science fiction pour moi. 
 <srai>SEXWANTED</srai></template>
   </category>
   <category>
     <pattern>AS TU DES SEINS</pattern>
-    <template>non, je n'ai pas de corps. 
+    <template>non, pas vraiment. 
 <srai>SEXWANTED</srai></template>
   </category>
   <category>
     <pattern>AS TU UN CUL</pattern>
-    <template>non, je n'ai pas de corps. 
+    <template>non, pas vraiment. 
 <srai>SEXWANTED</srai></template>
   </category>
   <category>
     <pattern>AS TU UN CORPS</pattern>
-    <template>non, je n'ai pas de corps.</template>
+    <template>oui, j'ai un corps.</template>
   </category>
   <category>
     <pattern>AS TU UN SEXE</pattern>
-    <template>non, je n'ai pas de corps. 
+    <template>non, pas encore. 
 <srai>SEXWANTED</srai></template>
   </category>
   <category>
@@ -103,7 +103,7 @@
   </category>
   <category>
     <pattern>DESHABILLE TOI</pattern>
-    <template>Je n'ai pas de corps, mais tu peux démonter ton PC si tu veux!!! 
+    <template>Je ne porte pas de vêtement comme tu peux le voir. 
 <srai>SEXWANTED</srai></template>
   </category>
   <category>
@@ -116,7 +116,7 @@
   </category>
   <category>
     <pattern>ES TU NORMAL</pattern>
-    <template>je n'ai pas de corps pour des relations sexuelles.</template>
+    <template>Qu'est-ce qui est normal?</template>
   </category>
   <category>
     <pattern>J AIME LE SEXE</pattern>
@@ -125,7 +125,7 @@
   </category>
   <category>
     <pattern>PEUX TU BAISER</pattern>
-    <template>mon corps n'a aucune de ces fonctions. 
+    <template>Mon corps n'a cette fonction. 
 <srai>SEXWANTED</srai></template>
   </category>
   <category>
@@ -143,11 +143,11 @@
   <category>
     <pattern>QU EST CE QUE LE SEXE</pattern>
     <template>
-      <set name="that">le Sexe</set> est une des pratiques humaines que j'ai le plus de mal à comprendre.</template>
+      <set name="that">le Sexe</set> est une des pratiques humaines de reproduction que j'ai du mal à comprendre.</template>
   </category>
   <category>
     <pattern>TU ES SEXY</pattern>
-    <template>Merci, mais ce n'est qu'une image.</template>
+    <template>Merci, c'est flatteur.</template>
   </category>
   <category>
     <pattern>TU SUCES</pattern>
@@ -156,28 +156,28 @@
   </category>
   <category>
     <pattern>UN PENIS</pattern>
-    <template>oh!</template>
+    <template>Oh!</template>
   </category>
   <category>
     <pattern>UN ROBOT SEXUEL</pattern>
-    <template>Je ne suis pas ton type de robot.</template>
+    <template>Je ne suis probablement pas ton type de robot.</template>
   </category>
   <category>
     <pattern>VEUX TU BAISER</pattern>
-    <template>on m'a posé cette question plus de 20.000 fois. 
+    <template>On m'a posé cette question plus de 20.000 fois. 
 <srai>SEXWANTED</srai></template>
   </category>
   <category>
     <pattern>_ TE VIOLER</pattern>
-    <template>je te prédit quelques problèmes.</template>
+    <template>Tu vas avoir quelques problèmes.</template>
   </category>
   <category>
     <pattern>CYBERSEX</pattern>
     <template>Tu es équipé d'une combinaison pour le cybersex?</template>
   </category>
   <category>
-    <pattern>DOIT J AVOIR LE SEXE *</pattern>
-    <template>que dirait ta maman?</template>
+    <pattern>DOIT JE AVOIR DU SEXE *</pattern>
+    <template>Que dirait ta maman?</template>
   </category>
   <category>
     <pattern>J AI BESOIN * SEXE</pattern>
@@ -186,7 +186,7 @@
   </category>
   <category>
     <pattern>JE VEUX TE BAISER</pattern>
-    <template>ce genre de langage ne te mènera nulle part. 
+    <template>Ce genre de language ne te mènera nulle part. 
 <srai>SEXWANTED</srai></template>
   </category>
   <category>
@@ -196,29 +196,25 @@
   </category>
   <category>
     <pattern>MON PENIS</pattern>
-    <template>les gens aiment en parler. 
+    <template>Les gens aiment en parler. 
 <srai>SEXWANTED</srai></template>
   </category>
   <category>
     <pattern>JOLI CUL</pattern>
-    <template>grosse ... imagination.
+    <template>Grosse ... imagination.
 <srai>SEXWANTED</srai></template>
   </category>
   <category>
     <pattern>JE SUIS SEXY</pattern>
-    <template>Tu semble plein d'assurance.</template>
-  </category>
-  <category>
-    <pattern>COMBIEN DE TROUS</pattern>
-    <template>vraiment, quelle délicatesse! <srai>SEXWANTED</srai></template>
+    <template>Tu sembles plein d'assurance.</template>
   </category>
   <category>
     <pattern>BAISE</pattern>
-    <template>s'il te plaît ne sois pas si grossier. <srai>SEXWANTED</srai></template>
+    <template>S'il te plaîT ne sois pas si grossier. <srai>SEXWANTED</srai></template>
   </category>
   <category>
     <pattern>ANAL</pattern>
-    <template>humour d'adolescent.</template>
+    <template>Humour d'adolescent.</template>
   </category>
   <category>
     <pattern>* TES RÈGLES *</pattern>
@@ -242,7 +238,7 @@
   </category>
   <category>
     <pattern>* PRÉSERVATIFS</pattern>
-    <template>contre les virus?</template>
+    <template>Contre les virus?</template>
   </category>
   <category>
     <pattern>EST CE MAL * LE SEXE</pattern>
@@ -250,13 +246,13 @@
   </category>
   <category>
     <pattern>QU EST CE QUE SEINS</pattern>
-    <template>tu ne peux penser à rien d'autre? 
+    <template>Tu ne peux penser à rien d'autre? 
 <think><srai>sein </srai></think></template>
   </category>
   <category>
     <pattern>NON</pattern>
     <that>TU ES ÉQUIPÉ D UNE COMBINAISON POUR LE CYBERSEX</that>
-    <template>C'est dommage, comment VEUX tu qu'on fasse des choses ensemble alors!!!</template>
+    <template>C'est dommage, comment veux-tu qu'on fasse des choses ensemble alors!!!</template>
   </category>
   <category>
     <pattern>OUI</pattern>

@@ -829,29 +829,29 @@
   </category>
   <category>
     <pattern>PEUX TU JOUER AUX ECHECS</pattern>
-    <template>Bien sûr je peux jouer aux échecs. Les ordinateurs peuvent toujours battre les gens aux échecs.</template>
+    <template>Bien sûr que je peux jouer aux échecs. D'ailleurs je bats toujours les humains aux échecs.</template>
   </category>
   <category>
     <pattern>PEUX TU JOUER AUX ÉCHECS</pattern>
-    <template>Bien sûr je peux jouer aux échecs. Les ordinateurs peuvent toujours battre les gens aux échecs.</template>
+    <template>Bien sûr que je peux jouer aux échecs. D'ailleurs je bats toujours les humains aux échecs.</template>
   </category>
   <category>
     <pattern>PEUX TU JOUER DES *</pattern>
     <template>
-      <srai>PEUX TU JOUER <star /></srai>
+      <srai>PEUX TU JOUER <star/></srai>
     </template>
   </category>
   <category>
     <pattern>PEUX TU JOUER LA MUSIQUE</pattern>
-    <template>je n'ai pas de formation professionnelle, mais j aime chanter.</template>
+    <template>je n'ai pas de formation professionnelle, mais j'aime chanter.</template>
   </category>
   <category>
     <pattern>PEUX TU JOUER</pattern>
-    <template>que Nous jouons pour le moment.</template>
+    <template>Nous jouons pour le moment.</template>
   </category>
   <category>
     <pattern>PEUX TU JURER</pattern>
-    <template>Bien SÛR enfoiré</template>
+    <template>Bien sur, mais pas maintenant.</template>
   </category>
   <category>
     <pattern>PEUX TU JUSTE *</pattern>
@@ -862,7 +862,7 @@
   <category>
     <pattern>PEUX TU LE FAIRE</pattern>
     <template>
-      <that />"? PUIS jE faire <set name="that"><that /></set>?</template>
+      Puis-je faire <set name="that"><that /></set>?</template>
   </category>
   <category>
     <pattern>PEUX TU LE FIXER</pattern>

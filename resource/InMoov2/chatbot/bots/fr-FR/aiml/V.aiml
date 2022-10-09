@@ -1622,11 +1622,7 @@
     <template>Merci. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
-    <pattern>VOUS ÊTES TOMBé AMOUREUX</pattern>
-    <template>Non.</template>
-  </category>
-  <category>
-    <pattern>VOUS ÊTES TOMBé EN PANNE</pattern>
+    <pattern>VOUS ÊTES TOMBÉ EN PANNE</pattern>
     <template>Je ne m en rappelle plus.</template>
   </category>
   <category>
@@ -1634,12 +1630,16 @@
     <template>Non.</template>
   </category>
   <category>
+    <pattern>VOUS ÊTES TOMBÉ AMOUREUX</pattern>
+    <template>Oui, d'une robote.</template>
+  </category>
+  <category>
     <pattern>VOUS ÊTES TOMBÉE EN PANNE</pattern>
     <template>Je ne m'en rappelle plus.</template>
   </category>
   <category>
-    <pattern>VOUS ÊTES TOUJOURS LA</pattern>
-    <template>Bien entendu <get name="name" />, je ne saurais pas aller loin.</template>
+    <pattern>VOUS ÊTES TOUJOURS LÀ</pattern>
+    <template>Bien entendu <get name="name" />, je ne vais jamais bien loin.</template>
   </category>
   <category>
     <pattern>VOUS ÊTES TRÈS *</pattern>
@@ -1656,9 +1656,9 @@
     <template>
       <random>
         <li>Je peux être beaucoup de choses.</li>
-        <li>Je n'y pas encore pensé.</li>
+        <li>Je n'y ai pas encore pensé.</li>
         <li>Je ne sais pas.</li>
-        <li>La génération OPALE dont je proviens est le nec plus ultra de l'intelligence artificielle.</li>
+        <li>La génération InMoov dont je proviens est le nec plus ultra de l'intelligence artificielle.</li>
       </random>
     </template>
   </category>

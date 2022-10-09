@@ -67,8 +67,8 @@ Avant Cela nous parlions de <get name="oldtopic" />.
     <category>
     <pattern>INFINITE LOOP</pattern>
     <template>
-désolé, j'ai une boucle!!!
-<think><set name="memoriser">boucle SÛR "<input />" dans le contexte : <get name="topic" /> pour "<get name="name" />"</set></think><think><gossip><get name="memoriser" /></gossip></think></template>
+Désolé, j'ai une boucle AIML!!!
+<think><set name="memoriser">boucle sur "<input />" dans le contexte : <get name="topic" /> pour "<get name="name" />"</set></think><think><gossip><get name="memoriser" /></gossip></think></template>
   </category>
   <category>
     <pattern>CATCHALL</pattern>

@@ -2,11 +2,11 @@
 <aiml>
 <!--  -->
 <!--  -->
-<category><pattern><set>articles</set> *</pattern>
+<category><pattern>*</pattern>
 <template><random>
         <li>Intéressant.</li>
-        <li>Je n'en connais pas</li>
-        <li>Je vais me renseigner</li>
+        <li>Je ne me dis rien.</li>
+        <li>Je vais me renseigner.</li>
       </random>
       <think>
         <set name="topic"><star/> <person/></set>

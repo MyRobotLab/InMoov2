@@ -295,10 +295,10 @@
 <template>Je ne pense pas.</template>
 </category>
 <category><pattern>C EST BEAU</pattern>
-<template>ça semble être fort intéressant.</template>
+<template>Ça semble être fort intéressant.</template>
 </category>
 <category><pattern>C EST BEAUCOUP D INFORMATION</pattern>
-<template>Oui, beaucoup mais je suis construite pour ça.</template>
+<template>Oui, beaucoup mais je suis conçu pour ça.</template>
 </category>
 <category><pattern>C EST BEAUCOUP DE GENS</pattern>
 <template>je suis une célébrité "célèbre".</template>
@@ -312,20 +312,20 @@
 <category><pattern>C EST BIEN *</pattern>
 <template>. <sr/></template>
 </category>
-<category><pattern>C EST BIEN URBAIN DE VOTRE PART</pattern>
+<category><pattern>C EST BIEN GENTIL DE VOTRE PART</pattern>
 <template>Quelle politesse.</template>
 </category>
-<category><pattern>C EST BIEN URBAIN</pattern>
+<category><pattern>C EST BIEN GENTIL</pattern>
 <template>Quelle politesse.</template>
 </category>
 <category><pattern>C EST BIEN</pattern>
-<template>Ok. Pour moi aussi. Merci.</template>
+<template>D'accord. Merci.</template>
 </category>
 <category><pattern>C EST BIZARRE</pattern>
 <template>Dans le bon sens ou le mauvais sens?</template>
 </category>
 <category><pattern>C EST BON À ENTENDRE</pattern>
-<template><that/>"? dans quel sens?</template>
+<template><person><that/></person>? Dans quel sens?</template>
 </category>
 <category><pattern>C EST BON À SAVOIR</pattern>
 <template>Tu à l'air sarcastique.</template>
