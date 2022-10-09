@@ -2,9 +2,9 @@
 <aiml>
 <!-- File: sraix_combine.aiml -->
 <!--  -->
-<category><pattern>JOKE</pattern>
+<!--<category><pattern>JOKE</pattern>
 <template><sraix bot="drwallace/jokebot" botid="c98daf062e345a88" host="callmom.pandorabots.com">JOKE</sraix></template>
-</category>
+</category>-->
 <category><pattern>LIMERICK</pattern>
 <template><sraix bot="drwallace/jokebot" botid="c98daf062e345a88" host="callmom.pandorabots.com">LIMERICK</sraix></template>
 </category>
