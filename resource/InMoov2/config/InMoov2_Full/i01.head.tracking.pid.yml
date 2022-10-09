@@ -1,0 +1,32 @@
+!!org.myrobotlab.service.config.PidConfig
+autoStartPeers: true
+data:
+  i01.head.tracking.tilt:
+    deadband: 0.0
+    enabled: true
+    inAuto: true
+    inverted: false
+    kd: 0.0
+    key: i01.head.tracking.tilt
+    ki: 1.0
+    kp: 30.0
+    outCenter: 0.0
+    outMax: null
+    outMin: null
+    sampleTime: 100
+    setpoint: 0.0
+  i01.head.tracking.pan:
+    deadband: 0.0
+    enabled: true
+    inAuto: true
+    inverted: false
+    kd: 0.0
+    key: i01.head.tracking.pan
+    ki: 1.0
+    kp: 30.0
+    outCenter: 0.0
+    outMax: null
+    outMin: null
+    sampleTime: 100
+    setpoint: 0.0
+type: Pid
