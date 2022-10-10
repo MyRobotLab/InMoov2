@@ -11,7 +11,7 @@ def testSensor():
   i01.moveHead(90.0,90.0,95.0,90.0,0.0,90.0)
   i01.moveArm("left",5.0,90.0,30.0,12.0)
   i01.moveHand("left",0.0,0.0,0.0,0.0,57.0)
-  i01.rightArm.moveToBlocking(40.0,90.0,49.0,12.0)
+  i01_rightArm.moveToBlocking(40.0,90.0,49.0,12.0)
   i01.moveTorso(90.0,90.0,90.0)
   ## TODO fix the bug if we don't finish the gesture at this point
   ## the pressure sensors don't work
@@ -21,11 +21,11 @@ def testSensor():
     rightThumbPressure=1 # Pressure range between 0-3
     rightIndexPressure=1 # It defines how much pressure we want for this gesture
     rightMajeurePressure=1
-    i01.rightHand.thumb.moveTo(180)
-    i01.rightHand.index.moveTo(180)
-    i01.rightHand.majeure.moveTo(180)
+    i01_rightHand_thumb.moveTo(180)
+    i01_rightHand_index.moveTo(180)
+    i01_rightHand_majeure.moveTo(180)
     sleep(2) # the time to give pins sensors to feel something
     rightHandSensorOFF() # this disable the pins sensors
   else:
     i01.moveHand("right",140,160,20,3,0,11)
-  i01.finishedGesture()  
+  i01.finishedGesture()
