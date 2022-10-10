@@ -48,6 +48,11 @@ right_pinky_Psi_low=ThisServicePartConfig.getint('MAIN', 'right_pinky_Psi_low')
 right_pinky_Psi_mid=ThisServicePartConfig.getint('MAIN', 'right_pinky_Psi_mid')
 right_pinky_Psi_max=ThisServicePartConfig.getint('MAIN', 'right_pinky_Psi_max')
 
+A0=right_thumbPin
+A1=right_indexPin
+A2=right_majeurePin
+A3=right_ringFingerPin
+A4=right_pinkyPin
 
 # Used by finger sensors
 # Right Hand
@@ -68,7 +73,7 @@ if runtime.isStarted('i01.right'):
     try:
         # common right pin listener function
         def publishPinRight(pinsRight):
-            print(pinsRight)
+            #print(pinsRight)
                     
             global rightThumbPressure
             global rightIndexPressure
@@ -79,7 +84,7 @@ if runtime.isStarted('i01.right'):
 
               
             for pin in range(0, len(pinsRight)):
-                if pinsRight[pin].pin==(right_thumbPin):
+                if pinsRight[pin].pin==("A0"):
                     if pinsRight[pin].value<=(right_thumb_Psi_min) and pinsRight[pin].value<(right_thumb_Psi_low):rightThumbPressure = 0 
                     if pinsRight[pin].value>=(right_thumb_Psi_low) and pinsRight[pin].value<(right_thumb_Psi_mid):
                         if rightThumbPressure == 1:
@@ -93,25 +98,25 @@ if runtime.isStarted('i01.right'):
                         if rightThumbPressure <= 3:
                             i01_rightHand_thumb.stop()
                             i01_rightHand_thumb.disable()
-                    print "rightThumbSensorPin:",right_thumbPin,"Value:",pinsRight[pin].value
+                    print pinsRight[pin].value,"Value:",right_thumbPin,"rightThumbSensorPin:"
 
-                if pinsRight[pin].pin==(right_indexPin):
+                if pinsRight[pin].pin==("A1"):
                     if pinsRight[pin].value<=(right_index_Psi_min) and pinsRight[pin].value<(right_index_Psi_low):rightIndexPressure = 0
-                    if pinsRight[pin].value>=(right_index_Psi_low) and pinsRight[pin].value<(right_index_Psi_mid):
+                    elif pinsRight[pin].value>=(right_index_Psi_low) and pinsRight[pin].value<(right_index_Psi_mid):
                         if rightIndexPressure == 1:
                             i01_rightHand_index.stop()
                             i01_rightHand_index.disable()
-                    if pinsRight[pin].value>=(right_index_Psi_mid) and pinsRight[pin].value<(right_index_Psi_max):
+                    elif pinsRight[pin].value>=(right_index_Psi_mid) and pinsRight[pin].value<(right_index_Psi_max):
                         if rightIndexPressure <= 2:
                             i01_rightHand_index.stop()
                             i01_rightHand_index.disable()
-                    if pinsRight[pin].value>=(right_index_Psi_max):
+                    elif pinsRight[pin].value>=(right_index_Psi_max):
                         if rightIndexPressure <= 3:
                             i01_rightHand_index.stop()
                             i01_rightHand_index.disable()
-                    print "rightIndexSensorPin:",right_indexPin,"Value:",pinsRight[pin].value
+                    print pinsRight[pin].value,"Value:",right_indexPin,"rightIndexSensorPin:"
 
-                if pinsRight[pin].pin==(right_majeurePin):
+                if pinsRight[pin].pin==("A2"):
                     if pinsRight[pin].value<=(right_majeure_Psi_min) and pinsRight[pin].value<(right_majeure_Psi_low):rightMajeurePressure = 0
                     if pinsRight[pin].value>=(right_majeure_Psi_low) and pinsRight[pin].value<(right_majeure_Psi_mid):
                         if rightMajeurePressure == 1:
@@ -125,9 +130,9 @@ if runtime.isStarted('i01.right'):
                         if rightMajeurePressure <= 3:
                             i01_rightHand_majeure.stop()
                             i01_rightHand_majeure.disable()
-                    print "rightMajeureSensorPin:",right_majeurePin,"Value:",pinsRight[pin].value
+                    print pinsRight[pin].value,"Value:",right_majeurePin,"rightMajeureSensorPin:"
 
-                if pinsRight[pin].pin==(right_ringFingerPin):
+                if pinsRight[pin].pin==("A3"):
                     if pinsRight[pin].value<=(right_ringFinger_Psi_min) and pinsRight[pin].value<(right_ringFinger_Psi_low):rightRingFingerPressure = 0
                     if pinsRight[pin].value>=(right_ringFinger_Psi_low) and pinsRight[pin].value<(right_ringFinger_Psi_mid):
                         if rightRingFingerPressure == 1:
@@ -141,9 +146,9 @@ if runtime.isStarted('i01.right'):
                         if rightRingFingerPressure <= 3:
                             i01_rightHand_ringFinger.stop()
                             i01_rightHand_ringFinger.disable()
-                    print "rightRingFingerSensorPin:",right_ringFingerPin,"Value:",pinsRight[pin].value
+                    print pinsRight[pin].value,"Value:",right_ringFingerPin,"rightRingFingerSensorPin:"
 
-                if pinsRight[pin].pin==(right_pinkyPin):
+                if pinsRight[pin].pin==("A4"):
                     if pinsRight[pin].value<=(right_pinky_Psi_min) and pinsRight[pin].value<(right_pinky_Psi_low):rightPinkyPressure = 0
                     if pinsRight[pin].value>=(right_pinky_Psi_low) and pinsRight[pin].value<(right_pinky_Psi_mid):
                         if rightPinkyPressure == 1:
@@ -157,7 +162,7 @@ if runtime.isStarted('i01.right'):
                         if rightPinkyPressure <= 3:
                             i01_rightHand_pinky.stop()
                             i01_rightHand_pinky.disable()
-                    print "rightPinkySensorPin:",right_pinkyPin,"Value:",pinsRight[pin].value
+                    print pinsRight[pin].value,"Value:",right_pinkyPin,"rightPinkySensorPin:"
                     print "-----------Right-Finger-Sensors-----------"
 
 
