@@ -267,8 +267,8 @@
                         <!------THIS FOR THE HOVER ICON WITH PEERS--------------------- -->
                         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('mouth')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <img src="../InMoov2Mouth.png"/>
-                        <label>mouth Start:</label>
-                        <toggle width="30" height="28" ng-model="service.isMouthStarted" ng-change="service.isMouthStarted?startPeer('mouth'):releasePeer('mouth')" on="" off=""/>
+                        <label>mouth start:</label>
+                        <toggle width="30" height="28" ng-model="service.isMouthStarted" ng-change="service.isMouthStarted?startMouth():stopMouth()" on="" off=""/>
                         <span ng-show="service.isMouthStarted">
                             <img src="settings.png" width="30" ng-click="mrl.changeTab(peer.getActualName(service, 'mouth'))"/>
                         </span>
@@ -277,9 +277,9 @@
                 <tr>
                     <td>
                         <div width="120" height="28">
-                            <label ng-show="!service.isMouthStarted">speech service type</label>
+                            <label>speech service type</label>
                             <!-- {{service.serviceType.peers['mouth'].type}} -->
-                            <select ng-show="!service.isMouthStarted" class="form-control" ng-model="service.serviceType.peers['mouth'].type" id="language-select" ng-change="msg.send('setSpeechType', service.serviceType.peers['mouth'].type)">
+                            <select ng-disabled="service.isMouthStarted" class="form-control" ng-model="service.serviceType.peers['mouth'].type" id="language-select" ng-change="msg.send('setSpeechType', service.serviceType.peers['mouth'].type)">
                                 <option ng-repeat="speechType in speechTypes" value="{{getShortName(speechType)}}">{{getShortName(speechType)}}</option>
                             </select>
                         </div>

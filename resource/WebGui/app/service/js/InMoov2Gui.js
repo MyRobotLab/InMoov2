@@ -185,6 +185,17 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         msg.send('startPeer', peerKey)
     }
 
+    $scope.startMouth = function() {
+        msg.send('startPeer', 'mouth')
+        msg.send('startPeer', 'htmlFilter')
+    }
+
+    $scope.stopMouth = function() {
+        msg.send('releasePeer', 'mouth')
+        msg.send('releasePeer', 'htmlFilter')
+    }
+
+
     $scope.releasePeer = function(peerKey) {
         console.info(peerKey)
         msg.send('releasePeer', peerKey)
