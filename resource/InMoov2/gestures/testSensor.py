@@ -29,6 +29,7 @@ def testSensor():
     i01_rightHand_majeure.moveTo(180)
     sleep(2) # the time to give pins sensors to feel something
     rightHandSensorOFF() # this disable the pins sensors
+    i01.finishedGesture()
   else:
     i01.moveHand("right",140,160,20,3,0,11)
-  i01.finishedGesture()
+    i01.finishedGesture()
