@@ -16,6 +16,9 @@ def testSensor():
   ## TODO fix the bug if we don't finish the gesture at this point
   ## the pressure sensors don't work
   if rightHandSensorActivated==1:
+    global leftThumbPressure
+    global leftIndexPressure
+    global leftMajeurePressure
     rightHandSensorON() # this enable the pins sensors
     sleep(1.5)
     rightThumbPressure=1 # Pressure range between 0-3
