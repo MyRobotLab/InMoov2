@@ -136,6 +136,11 @@ def shakehandAnimation():
   i01.moveHand("left",50,50,40,20,20,90)
   i01.moveTorso(95,95,90)
   if rightHandSensorActivated==1:
+    global rightThumbPressure
+    global rightIndexPressure
+    global rightMajeurePressure
+    global rightRingFingerPressure
+    global rightPinkyPressure
     rightHandSensorON()
     sleep(1.5)
     rightThumbPressure=1 # Pressure range between 0-3
