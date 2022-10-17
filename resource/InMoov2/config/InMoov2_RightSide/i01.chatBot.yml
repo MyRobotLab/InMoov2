@@ -8,7 +8,7 @@ search: i01.chatBot.search
 sleep: false
 textFilters: null
 textListeners:
-- i01.mouth
+- i01.htmlFilter
 type: ProgramAB
-utteranceListeners: [
-  ]
+utteranceListeners:
+- i01.ear

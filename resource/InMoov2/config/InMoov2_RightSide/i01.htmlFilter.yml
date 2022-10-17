@@ -3,6 +3,6 @@ autoStartPeers: true
 postHtmlTag: </pre>
 preHtmlTag: <pre>
 stripHtml: true
-textListeners: [
-  ]
+textListeners:
+- i01.mouth
 type: HtmlFilter
