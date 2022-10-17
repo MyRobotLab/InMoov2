@@ -8,7 +8,7 @@ def MoveEyes(timedata):
   #redefine next loop
   MoveEyesTimer.setInterval(random.randint(500,2000))
   #if i01.RobotCanMoveEyesRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01_opencv.isCapturing():
-  if i01.RobotCanMoveEyesRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping:
+  if RobotCanMoveEyesRandom and RobotCanMoveRandom and not RobotIsSleeping:
     if runtime.isStarted('i01.head'):
       if runtime.isStarted('i01.opencv'):
         if not i01_opencv.isCapturing():
@@ -28,12 +28,12 @@ def MoveEyes(timedata):
 
 #initial function
 def MoveEyesStart():
-  if i01.RobotCanMoveEyesRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01_opencv.isCapturing():
+  if RobotCanMoveEyesRandom and RobotCanMoveRandom and not RobotIsSleeping and not i01_opencv.isCapturing():
     if not runtime.isStarted('i01.head'):MoveEyesTimer.stopClock()
     
 def MoveEyesStop():
   
-  if i01.RobotCanMoveEyesRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01_opencv.isCapturing():
+  if RobotCanMoveEyesRandom and RobotCanMoveRandom and not RobotIsSleeping and not i01_opencv.isCapturing():
     if runtime.isStarted('i01.head'):
       i01_head_eyeX.rest()
       i01_head_eyeY.rest()

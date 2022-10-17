@@ -8,7 +8,7 @@ def MoveHead(timedata):
   #redefine next loop
   MoveHeadTimer.setInterval(random.randint(200,1000))
   #if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01_opencv.isCapturing():
-  if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping:
+  if RobotCanMoveHeadRandom and RobotCanMoveRandom and not RobotIsSleeping:
     if runtime.isStarted('i01.head') and RobotCanMoveHeadWhileSpeaking==1:
       if runtime.isStarted('i01.opencv'):
         if not i01_opencv.isCapturing():
@@ -30,13 +30,13 @@ def MoveHead(timedata):
 def MoveHeadStart():
   
   print "moveheadstart"
-  if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01_opencv.isCapturing():
+  if RobotCanMoveHeadRandom and RobotCanMoveRandom and not RobotIsSleeping and not i01_opencv.isCapturing():
     if not runtime.isStarted('i01.head'):MoveHeadTimer.stopClock()
     #if RobotCanMoveHeadWhileSpeaking==0:MoveHeadTimer.stopClock()
     
 def MoveHeadStop():
   
-  if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01_opencv.isCapturing():
+  if RobotCanMoveHeadRandom and RobotCanMoveRandom and not RobotIsSleeping and not i01_opencv.isCapturing():
     if runtime.isStarted('i01.head'):
       i01.setHeadSpeed(25,25,25)
       i01_head.rest()
