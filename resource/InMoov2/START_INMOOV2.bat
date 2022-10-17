@@ -29,7 +29,8 @@ REM This is the command to start up the agent jar, specify the memory and run th
 
 SET script=%cd%\resource\InMoov2\InMoov2.py
 timeout 2 > NUL
-echo Executing file %script%
-java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -m 1024m --service python Python webgui WebGui i01 InMoov2 --invoke python execFile %script%
-REM If you have trouble launching OpenCV try this:
-REM java -classpath "target/classes;libraries/jar/*;myrobotlab.jar" org.myrobotlab.service.Runtime --from-launcher -s webgui WebGui intro Intro python Python i01 InMoov2 --invoke python execFile %script%
+REM echo Executing file %script%
+REM java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -m 1024m --service python Python webgui WebGui i01 InMoov2 --invoke python execFile %script%
+REM myrobotlab.bat --service python Python webgui WebGui i01 InMoov2 --config rightHand
+myrobotlab.bat --service python Python webgui WebGui i01 InMoov2 --invoke python execFile %script%
+
