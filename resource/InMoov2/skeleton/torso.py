@@ -24,7 +24,7 @@ try:
     TorsoConnectedToArduino=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino'))
     TorsoConnectedToArduinoPortBoardType=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino').replace("left","BoardTypeMyLeftPort").replace("right","BoardTypeMyRightPort"))
 except:
-  errorSpokenFunc('CONFIGPARSERPROBLEM','torso.config')
+  errorSpokenFunc('CONFIGPARSERPROBLEM','i01_torso_config')
   isTorsoActivated=0
   TorsoConnectedToArduino=""
   pass
@@ -36,34 +36,35 @@ except:
 if isTorsoActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" ) or ScriptType=="Virtual":
   isTorsoActivated=1
   if LeftPortIsConnected or RightPortIsConnected:
-    torso = Runtime.create("i01.torso","InMoov2Torso")
-    torso.startPeers()
+    i01_torso = Runtime.create("i01.torso","InMoov2Torso")
+    #i01_torso.startPeers()
         
-    torso.topStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'topStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'topStom')) 
-    torso.midStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'midStom')) 
-    torso.lowStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'lowStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'lowStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'lowStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'lowStom')) 
+    i01_torso_topStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'topStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'topStom')) 
+    i01_torso_midStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'midStom')) 
+    i01_torso_lowStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'lowStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'lowStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'lowStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'lowStom')) 
     
-    #torso.topStom.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'topStom'))
-    #torso.midStom.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'midStom'))
-    #torso.lowStom.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'lowStom'))
+    #i01_torso_topStom.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'topStom'))
+    #i01_torso_midStom.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'midStom'))
+    #i01_torso_lowStom.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'lowStom'))
     
-    torso.topStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'topStom'))
-    torso.midStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'midStom'))
-    torso.lowStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'lowStom'))
+    i01_torso_topStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'topStom'))
+    i01_torso_midStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'midStom'))
+    i01_torso_lowStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'lowStom'))
 
-      
-    torso.topStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'topStom'))
-    torso.midStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'midStom'))
-    torso.lowStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'lowStom'))
+    i01_torso.startService()
+
+    i01_torso_topStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'topStom'))
+    i01_torso_midStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'midStom'))
+    i01_torso_lowStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'lowStom'))
 
     
-    i01.startTorso(TorsoConnectedToArduinoPort)
+    #i01.startTorso(TorsoConnectedToArduinoPort)
 
-    torso.rest()
+    i01_torso.rest()
     
-    torso.topStom.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'topStom'))
-    torso.midStom.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'midStom'))
-    torso.lowStom.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'lowStom'))
+    i01_torso_topStom.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'topStom'))
+    i01_torso_midStom.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'midStom'))
+    i01_torso_lowStom.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'lowStom'))
 
        
   else:
