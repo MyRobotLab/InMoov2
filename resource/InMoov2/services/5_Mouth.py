@@ -40,7 +40,7 @@ MyvoiceType=VoiceName
 # ##############################################################################
 vocalError=False
 try:
-  i01_mouth=runtime.start("i01.mouth", Speechengine)
+  i01_mouth=runtime.create("i01.mouth", Speechengine)
 except:pass
 
 if not i01_mouth:
@@ -72,7 +72,7 @@ def publishMouthcontrolPinLeft(pins):
 #stop autolisten
 def onEndSpeaking(text):
 
-  if i01.RobotIsStarted: #FIXME in java
+  if RobotIsStarted==1: #FIXME in java
     if not MoveRandomTimer.isClockRunning():
       MoveHeadTimer.stopClock()
       MoveEyesTimer.stopClock()
@@ -96,7 +96,7 @@ def onStartSpeaking(text):
     except:
       print "onStartSpeaking error"
       pass
-  if i01.RobotIsStarted: #FIXME in java
+  if RobotIsStarted==1: #FIXME in java
 
     if 'oui ' in text or 'yes ' in text or ' oui' in text or 'ja ' in text or 'sim ' in text or text=="yes" or text=="kyllä":Yes()
     if 'non ' in text or 'no ' in text or 'nicht ' in text or 'neen ' in text or 'não ' in text or text=="no" or text=="ei":No()
@@ -104,10 +104,10 @@ def onStartSpeaking(text):
     #force random move while speaking, to avoid conflict with random life gesture
     if RobotCanMoveHeadWhileSpeaking==1:
       if random.randint(0,1)==1:
-        i01.RobotCanMoveHeadRandom=True #FIXME in java
+        RobotCanMoveHeadRandom=True #FIXME in java
         MoveHeadTimer.startClock()
       if random.randint(0,1)==1:
-        i01.RobotCanMoveEyesRandom=True #FIXME in java
+        RobotCanMoveEyesRandom=True #FIXME in java
         MoveEyesTimer.startClock()
     if flash_when_speak and runtime.isStarted('i01.neopixel'):i01.setNeopixelAnimation("Flash Random", 255, 255, 255, 1)
     

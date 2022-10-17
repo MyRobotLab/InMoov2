@@ -49,50 +49,46 @@ RollNeckArduino=ThisSkeletonPartConfig.get('ROLLNECKSERVO', 'RollNeckArduino')
 if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or ScriptType=="Virtual":
   isHeadActivated=1
   if LeftPortIsConnected:
-    head = Runtime.create("i01.head","InMoov2Head")
-    head.startPeers()
-    #pffff :) FIXME? we need to manualy load now to get last position to avoid breaking parts 
-    #head.neck.load()
-    #head.rothead.load()
-    #head.rollNeck.load()
-    #end pffff :)
+    i01_head = Runtime.create("i01.head","InMoov2Head")
+    #head.startPeers()
     #map    
-    head.jaw.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'jaw'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw')) 
-    head.eyeX.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyeX'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyeX')) 
-    head.eyeY.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyeY'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyeY')) 
-    head.neck.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'neck'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'neck')) 
-    head.rothead.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'rothead'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'rothead'))
-    head.rollNeck.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'rollneck'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'rollneck'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'rollneck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'rollneck'))
+    i01_head_jaw.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'jaw'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw')) 
+    i01_head_eyeX.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyeX'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyeX')) 
+    i01_head_eyeY.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyeY'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyeY')) 
+    i01_head_neck.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'neck'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'neck')) 
+    i01_head_rothead.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'rothead'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'rothead'))
+    i01_head_rollNeck.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'rollneck'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'rollneck'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'rollneck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'rollneck'))
   
     #maxspeed
-    #head.neck.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'neck'))
-    #head.rothead.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'rothead'))
-    #head.rollNeck.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'rollneck'))
+    #i01_head_neck.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'neck'))
+    #i01_head_rothead.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'rothead'))
+    #i01_head_rollNeck.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'rollneck'))
      
-    head.jaw.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'jaw'))
-    head.eyeX.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyeX'))
-    head.eyeY.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyeY'))
-    head.neck.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'neck'))
-    head.rothead.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rothead'))
-    head.rollNeck.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rollneck'))
+    i01_head_jaw.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'jaw'))
+    i01_head_eyeX.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyeX'))
+    i01_head_eyeY.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyeY'))
+    i01_head_neck.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'neck'))
+    i01_head_rothead.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rothead'))
+    i01_head_rollNeck.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rollneck'))
 
-    head.jaw.setPin(ThisSkeletonPartConfig.getint('SERVO_PIN', 'jaw'))
-    head.eyeX.setPin(ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeX'))
-    head.eyeY.setPin(ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeY'))
-    head.neck.setPin(ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'))
-    head.rothead.setPin(ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'))
-    head.rollNeck.setPin(ThisSkeletonPartConfig.getint('SERVO_PIN', 'rollneck'))
+    i01_head_jaw.setPin(ThisSkeletonPartConfig.getint('SERVO_PIN', 'jaw'))
+    i01_head_eyeX.setPin(ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeX'))
+    i01_head_eyeY.setPin(ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeY'))
+    i01_head_neck.setPin(ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'))
+    i01_head_rothead.setPin(ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'))
+    i01_head_rollNeck.setPin(ThisSkeletonPartConfig.getint('SERVO_PIN', 'rollneck'))
   
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'jaw'):head.jaw.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyeX'):head.eyeX.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyeY'):head.eyeY.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'neck'):head.neck.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rothead'):head.rothead.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rollneck'):head.rollNeck.setInverted(True)
+    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'jaw'):i01_head_jaw.setInverted(True)
+    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyeX'):i01_head_eyeX.setInverted(True)
+    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyeY'):i01_head_eyeY.setInverted(True)
+    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'neck'):i01_head_neck.setInverted(True)
+    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rothead'):i01_head_rothead.setInverted(True)
+    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rollneck'):i01_head_rollNeck.setInverted(True)
 
     #i01.startHead(MyLeftPort,BoardTypeMyLeftPort,ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'rollneck'))
-    i01.startHead(MyLeftPort)
-    rollneck=head.rollNeck
+    #i01.startHead(MyLeftPort)
+    i01_head.startService()
+    rollneck=i01_head_rollNeck
     
     #overide rollneck arduino
     try:
@@ -103,8 +99,8 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
       pass  
     
     if isRollNeckActivated:
-      head.rollNeck.detach(left)
-      head.rollNeck.attach(RollNeckArduino,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rollNeck'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rollNeck'))
+      i01_head_rollNeck.detach(left)
+      i01_head_rollNeck.attach(RollNeckArduino,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rollNeck'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rollNeck'))
      
     rotheadEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'rothead')
     neckEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'neck')
@@ -112,22 +108,22 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
     eyeXEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyeX')
     eyeYEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyeY')
     
-    #head.jaw.setMaxSpeed(500)
+    #i01_head.jaw.setMaxSpeed(500)
 
-    head.rest()
+    i01_head.rest()
     
-    head.rothead.setAutoDisable(rotheadEnableAutoDisable)
-    head.neck.setAutoDisable(neckEnableAutoDisable)
-    head.rollNeck.setAutoDisable(rollneckEnableAutoDisable)
-    head.jaw.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'jaw'))
-    head.eyeX.setAutoDisable(eyeXEnableAutoDisable)
-    head.eyeY.setAutoDisable(eyeYEnableAutoDisable)
+    i01_head_rothead.setAutoDisable(rotheadEnableAutoDisable)
+    i01_head_neck.setAutoDisable(neckEnableAutoDisable)
+    i01_head_rollNeck.setAutoDisable(rollneckEnableAutoDisable)
+    i01_head_jaw.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'jaw'))
+    i01_head_eyeX.setAutoDisable(eyeXEnableAutoDisable)
+    i01_head_eyeY.setAutoDisable(eyeYEnableAutoDisable)
     
 # ##############################################################################
 #                 Software mouth control
 # ##############################################################################    
     
-    if MouthControlActivated and AudioSignalProcessing==False:
+    if MouthControlActivated==True and AudioSignalProcessing==False:
       i01_mouthControl = runtime.start("i01.mouthControl","MouthControl")
       #i01.startMouthControl(i01_head.jaw,i01_mouth)
       i01_mouthControl.setmouth(MouthControlJawMin,MouthControlJawMax)
@@ -163,12 +159,12 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
         result=1
       #arduino detect a poor value
       if result==0 and (maxAudioValue-minAudioValue<=255):
-        head.jaw.map(minAudioValue,maxAudioValue,jawMIN,jawMAX)
+        i01_head_jaw.map(minAudioValue,maxAudioValue,jawMIN,jawMAX)
         AudioSignalProcessing=True
         i01.speakBlocking(i01.localize("MOUTHSYNCRONISATIONNOTPERFECT"))
       #arduino detect a good value  
       if result==0 and (maxAudioValue-minAudioValue>255):
-        head.jaw.map(minAudioValue,maxAudioValue,jawMIN,jawMAX)
+        i01_head_jaw.map(minAudioValue,maxAudioValue,jawMIN,jawMAX)
         AudioSignalProcessing=True
         i01.speakBlocking(i01.localize("MOUTHSYNCRONISATIONOK"))
         

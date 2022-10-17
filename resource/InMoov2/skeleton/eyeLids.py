@@ -34,19 +34,19 @@ except:
 
 if (isEyeLidsActivated and (ScriptType=="RightSide" or ScriptType=="LeftSide" or ScriptType=="Full")):
   if LeftPortIsConnected or RightPortIsConnected:
-    eyelids = Runtime.create("i01.eyelids","InMoov2Eyelids")
-    eyelids.startPeers()        
-    eyelids.eyelidLeft.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyelidLeft'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyelidLeft'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyelidLeft'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyelidLeft')) 
-    eyelids.eyelidRight.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyelidRight'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyelidRight'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyelidRight'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyelidRight')) 
-    #eyelids.eyelidLeft.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'eyelidLeft'))
-    #eyelids.eyelidRight.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'eyelidRight'))
-    eyelids.eyelidLeft.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyelidLeft'))
-    eyelids.eyelidRight.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyelidRight'))
-    eyelids.eyelidLeft.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyelidLeft'))
-    eyelids.eyelidRight.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyelidRight'))
+    i01_eyelids = Runtime.create("i01.eyelids","InMoov2Eyelids")
+    #eyelids.startPeers()        
+    i01_eyelids_eyelidLeft.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyelidLeft'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyelidLeft'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyelidLeft'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyelidLeft')) 
+    i01_eyelids_eyelidRight.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyelidRight'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyelidRight'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyelidRight'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyelidRight')) 
+    #i01_eyelids_eyelidLeft.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'eyelidLeft'))
+    #i01_eyelids_eyelidRight.setMaxSpeed(ThisSkeletonPartConfig.getint('MAX_SPEED', 'eyelidRight'))
+    i01_eyelids_eyelidLeft.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyelidLeft'))
+    i01_eyelids_eyelidRight.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyelidRight'))
+    i01_eyelids_eyelidLeft.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyelidLeft'))
+    i01_eyelids_eyelidRight.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyelidRight'))
     i01.startEyelids(EyeLidsConnectedToArduino,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyelidLeft'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyelidRight'))
-    eyelids.eyelidLeft.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidRight'))
-    eyelids.eyelidRight.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidRight'))
+    i01_eyelids_eyelidLeft.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidRight'))
+    i01_eyelids_eyelidRight.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidRight'))
     eyelids.autoBlink(True)
   else:
     #we force parameter if arduino is off

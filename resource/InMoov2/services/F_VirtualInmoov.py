@@ -29,6 +29,7 @@ if (ScriptType=="Virtual" or isSimulatorActivated) and not ForceVinmoovDisable:
     global virtualInmoovActivated
     virtualInmoovActivated=True
     i01.setVirtual(True)
+    sleep(6)#time for chatbot to finish
     jme = i01.startSimulator()
   else:
     errorSpokenFunc("VINMOOVNOWORKY")

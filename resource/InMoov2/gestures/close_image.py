@@ -1,3 +1,5 @@
 def close_image():
-  i01.closeAllImages()
+  i01_imageDisplay.exitFS()
+  sleep(1)
+  i01_imageDisplay.closeAll()
   i01.finishedGesture()

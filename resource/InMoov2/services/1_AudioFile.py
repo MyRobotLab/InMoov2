@@ -22,7 +22,7 @@ import os
 
 #startup sound
 i01_audioPlayer = runtime.start("i01.audioPlayer", "AudioFile")
-i01.startAudioPlayer()
+#i01.startAudioPlayer()
 mouthControlAudiofile=True
 
 def onAudioStart(data):
