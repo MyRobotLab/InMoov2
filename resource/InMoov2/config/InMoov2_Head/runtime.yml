@@ -15,7 +15,7 @@ registry:
 - i01.ear
 - i01.chatBot.search
 - i01.chatBot
-- i01.chatBot.htmlFilter
+- i01.htmlFilter
 - i01.head.eyeX
 - i01.head.eyeY
 - i01.head.eyelidLeft
