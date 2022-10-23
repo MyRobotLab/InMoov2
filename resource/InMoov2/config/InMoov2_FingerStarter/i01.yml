@@ -1,5 +1,5 @@
 !!org.myrobotlab.service.config.InMoov2Config
-autoStartPeers: true
+autoStartPeers: false
 heartbeat: true
 idleTimer: true
 loadGestures: true
