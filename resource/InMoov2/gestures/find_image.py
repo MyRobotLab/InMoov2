@@ -40,7 +40,7 @@ def find_image(image):
       pass
     images = i01_chatBot_search.imageSearch(image)
     i01_imageDisplay = Runtime.start('i01.imageDisplay','ImageDisplay')
-    if runtime.isStarted('i01_imageDisplay'):
+    if runtime.isStarted('i01.imageDisplay'):
       for img in images:
         i01_imageDisplay.displayFullScreen(img)
         sleep(3)
