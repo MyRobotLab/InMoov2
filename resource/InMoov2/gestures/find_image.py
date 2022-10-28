@@ -39,10 +39,10 @@ def find_image(image):
     except: 
       pass
     images = i01_chatBot_search.imageSearch(image)
-    imageDisplay = Runtime.start('imageDisplay','ImageDisplay')
+    i01_imageDisplay = Runtime.start('i01.imageDisplay','ImageDisplay')
     if runtime.isStarted('imageDisplay'):
       for img in images:
-        imageDisplay.displayFullScreen(img)
+        i01_imageDisplay.displayFullScreen(img)
         sleep(3)
-        imageDisplay.closeAll()
+        i01_imageDisplay.closeAll()
     i01.finishedGesture()
