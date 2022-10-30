@@ -1,45 +1,13 @@
 def takePicture():
-    if runtime.isStarted('i01.opencv'):
-        photoFileName = i01_opencv.recordFrame()
-        print photoFileName
-        if runtime.isStarted('imageDisplay'):
-            imageDisplay = runtime.start("imageDisplay", "ImageDisplay")
-            #sleep(3)
-            i01_audioPlayer.playFile('resource/InMoov2/system/sounds/ShutterClik.mp3')
-            #imageDisplay.display(photoFileName)
-            imageDisplay.displayFullScreen(photoFileName)
-            sleep(15)
-            imageDisplay.closeAll()
-        else:
-            imageDisplay = runtime.start("imageDisplay", "ImageDisplay")
-            sleep(3)
-            i01_audioPlayer.playFile('resource/InMoov2/system/sounds/ShutterClik.mp3')
-            sleep(1)
-            #imageDisplay.display(photoFileName)
-            imageDisplay.displayFullScreen(photoFileName)
-            sleep(15)
-            imageDisplay.closeAll()
-        i01.finishedGesture()    
-    else:
-        i01.cameraOn()
-        if runtime.isStarted('imageDisplay'):
-            photoFileName = i01_opencv.recordFrame()
-            print photoFileName
-            i01_audioPlayer.playFile('resource/InMoov2/system/sounds/ShutterClik.mp3')
-            sleep(1)
-            #imageDisplay.display(photoFileName)
-            imageDisplay.displayFullScreen(photoFileName)
-            sleep(15)
-            imageDisplay.closeAll()
-        else:
-            imageDisplay = runtime.start("imageDisplay", "ImageDisplay")
-            sleep(5)
-            i01_audioPlayer.playFile('resource/InMoov2/system/sounds/ShutterClik.mp3')
-            sleep(4)
-            photoFileName = i01_opencv.recordFrame()
-            print photoFileName
-            sleep(1)
-            #imageDisplay.display(photoFileName)
-            imageDisplay.displayFullScreen(photoFileName)
-            sleep(15)
-        i01.finishedGesture()        
+    opencv = runtime.start('i01.opencv', 'OpenCV')
+    opencv.capture()
+    audioPlayer = runtime.start('i01.audioPlayer', 'AudioFile')
+    imageDisplay = runtime.start('i01.imageDisplay', 'ImageDisplay')
+    photoFileName = i01_opencv.recordFrame()
+    print(photoFileName)
+    audioPlayer.playFile('resource/InMoov2/system/sounds/ShutterClik.mp3')
+    sleep(1)
+    imageDisplay.displayFullScreen(photoFileName)
+    sleep(15)
+    imageDisplay.closeAll()
+    i01.finishedGesture()
