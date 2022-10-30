@@ -8,6 +8,7 @@ def takePicture():
     audioPlayer.playFile('resource/InMoov2/system/sounds/ShutterClik.mp3')
     sleep(1)
     imageDisplay.displayFullScreen(photoFileName)
+    opencv.stopCapture()
     sleep(15)
     imageDisplay.closeAll()
     i01.finishedGesture()

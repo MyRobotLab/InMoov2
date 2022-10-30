@@ -192,11 +192,11 @@
 </category>
 <category><pattern>CAMERA ON</pattern>
 <template>I turn my camera on.
-        <oob><mrl><service>i01</service><method>cameraOn</method></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>i01_opencv.capture()</param></mrl></oob></template>
 </category>
 <category><pattern>OFF CAMERA</pattern>
 <template>Turning my camera off.
-        <oob><mrl><service>i01</service><method>cameraOff</method></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>i01_opencv.stopCapture()</param></mrl></oob></template>
 </category>
 <category><pattern>CAMERA OFF</pattern>
 <template><srai>OFF CAMERA</srai></template>
