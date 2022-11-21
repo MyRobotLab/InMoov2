@@ -16,7 +16,8 @@ import org.myrobotlab.service.Runtime as Runtime
 
 # InMoov2 Config : i01
 Platform.setVirtual(True)
-i01.setVirtual(True)
+i01 = runtime.start('i01', 'InMoov2')
+i01.setVirtual(False)
 i01.setMute(False)
 ##############################################################
 ## creating 69 services ####
@@ -79,7 +80,6 @@ HealthCheck = runtime.start('HealthCheck', 'Clock')
 i01_torso_lowStom = runtime.start('i01.torso.lowStom', 'Servo')
 i01_head_jaw = runtime.start('i01.head.jaw', 'Servo')
 i01_leftHand_ringFinger = runtime.start('i01.leftHand.ringFinger', 'Servo')
-sensorTimer = runtime.start('sensorTimer', 'Clock')
 imageDisplay = runtime.start('imageDisplay', 'ImageDisplay')
 i01_leftHand_pinky = runtime.start('i01.leftHand.pinky', 'Servo')
 i01_rightArm = runtime.start('i01.rightArm', 'InMoov2Arm')
@@ -90,7 +90,6 @@ i01_rightHand_pinky = runtime.start('i01.rightHand.pinky', 'Servo')
 htmlFilter = runtime.start('htmlFilter', 'HtmlFilter')
 i01_head_eyeY = runtime.start('i01.head.eyeY', 'Servo')
 i01_leftHand_thumb = runtime.start('i01.leftHand.thumb', 'Servo')
-i01_mouthControl = runtime.start('i01.mouthControl', 'MouthControl')
 MoveRandomTimer = runtime.start('MoveRandomTimer', 'Clock')
 i01_torso = runtime.start('i01.torso', 'InMoov2Torso')
 i01_rightArm_omoplate = runtime.start('i01.rightArm.omoplate', 'Servo')
@@ -590,58 +589,20 @@ i01_mouth.setMute(False)
 
 # We launch InMoov startup sound and the rest
 i01_audioPlayer.playFileBlocking('resource/InMoov2/system/sounds/startupsound.mp3')
-i01.startHead()
-i01.startMouth()
-i01.startChatBot()
-i01.startEar()
-
-i01.startLeftHand()
-i01.startRightHand()
-i01.startLeftArm()
-i01.startRightArm()
-i01.startTorso()
-i01.startPir()
-i01.startUltrasonicRight()
-i01.startUltrasonicLeft()
-i01.startNeopixel()
 i01_neopixel.setColor(0, 40, 220)
 i01_neopixel.setSpeed(30) 
 i01_neopixel.playAnimation("Ironman")
-i01.startOpenCV()
 # We add opencv settings
 i01_opencv.setGrabberType("OpenCV")
 i01_opencv.nativeViewer=False
 i01_opencv.webViewer=True
 
-i01.startAudioPlayer()
-i01.startServoMixer()
 jme = i01.startSimulator()
 i01.loadGestures("resource/InMoov2/gestures")
 
-# here we force the gui to be responsive
-isRightHandActivated = True
-isLeftHandActivated = True
-isRightArmActivated = True
-isLeftArmActivated = True
-isHeadActivated = True
-isTorsoActivated = True
-isEyeLidsActivated = True
-isServoMixerActivated = True
-isPirActivated = True
-isUltrasonicRightActivated = True
-isUltrasonicLeftActivated = True
-isNeopixelActivated = True
-isOpenCvActivated = True
-isRightHandSensorActivated = False
-isLeftHandSensorActivated = False
-isRightPortActivated = True
-isLeftPortActivated = True
-isController3Activated = True
-isController4Activated = False
-isAudioPlayerActivated = True
-
 #RobotCanMoveHeadWhileSpeaking = True
 
+i01.startChatBot()
 # This launch the chatbot for the first initialization
 #if str(i01_chatBot.getPredicate("Friend","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("Friend","firstinit"))=="started":
   #i01_chatBot.setPredicate("default","topic","default")
