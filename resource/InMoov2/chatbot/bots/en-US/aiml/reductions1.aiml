@@ -641,12 +641,10 @@
 <template><srai>JOKE</srai></template>
 </category>
 <category><pattern>CAN YOU TELL PROVERBS</pattern>
-<template>Of course I can tell proverbs.
-     <srai>PROVERB</srai></template>
+<template>Of course I can tell proverbs.<srai>PROVERB</srai></template>
 </category>
 <category><pattern>CAN YOU TELL A PROVERB</pattern>
-<template></template>
-     <srai>CAN YOU TELL PROVERBS</srai></template>
+<template><srai>CAN YOU TELL PROVERBS</srai></template>
 </category>
 <category><pattern>CAN YOU TELL ME A STORY</pattern>
 <template><srai>TELL ME A STORY</srai></template>
