@@ -26,6 +26,12 @@
         <li>The best time to plant a tree was 20 years ago. The second best time is today.</li>
         <li>In a group of many words, there is bound to be a mistake somewhere in them.</li>
         </random>
+        <think><set name="it">
+               <set name="topic">
+                 <person/>
+              </set>
+            </set>
+          </think>
         <oob>
           <mrl>
             <service>python</service>
