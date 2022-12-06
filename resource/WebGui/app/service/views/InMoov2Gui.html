@@ -896,6 +896,12 @@
                             <toggle width="30" height="28" title="This will set services in virtual mode, allowing you to run without hardware connected" ng-model="service.isVirtual" ng-change="!service.isVirtual?msg.setAllVirtual(false):msg.setAllVirtual(true)" on=" " off=" "></toggle>
                             </td>
                         </tr>
+                        <tr>
+                            <td>Custom Script</td>
+                            <td>
+                        <toggle width="30" height="28" ng-model="service.isCustomScript" title="To modify edit data/InMoov2/i01_InMoovCustom_start.py" ng-change="!service.isCustomScript?msg.service.isCustomScript(false):execScript('system/startScripts/i01_InMoovCustom_start.py')" width="120" height="30" on="" off=""/></toggle>
+                        </td>
+                        </tr>
                         <tr ng-repeat="(key, value) in service.serviceType.peers">
                             <td>
                                 <img ng-src="/{{value.type + '.png'}}" width="16">
@@ -929,7 +935,7 @@
             <br/>
             <input class="form-control vertical-menu" type="text" id="gesture" placeholder="Type or select a gesture" ng-model="selectedGesture" ng-readonly="isConnected" press-enter="executeGesture(selectedGesture)" uib-typeahead="gesture for gesture in service.gestures | filter:$viewValue | limitTo:100" typeahead-min-length="0"/>
             <button class="btn btn-default" ng-click="executeGesture(selectedGesture)">execute</button>
-            <button class="btn btn-default" title="be cautious with this, it will run all the gestures randomly" ng-click="msg.cycleGestures()">cycle gestures</button>
+            <!--<button class="btn btn-default" title="be cautious with this, it will run all the gestures randomly" ng-click="msg.cycleGestures()">cycle gestures</button>-->
             <button class="btn btn-default" ng-click="loadGestures()">load gestures</button>
         </td>
     </tr>
