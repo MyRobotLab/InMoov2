@@ -369,7 +369,7 @@
 </category>
 <category><pattern>GIVE ME A PROVERB</pattern>
 <template><srai>PROVERB</srai></template>
-</category
+</category>
 <category><pattern>GIVE ME A LINK *</pattern>
 <template><srai>SEARCH <star/></srai></template>
 </category>
