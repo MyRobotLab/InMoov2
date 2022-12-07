@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml version="1.0">
-  <!-- A.L.I.C.E. is a Free software (c) 2001 ALICE AI Foundation -->
-  <!-- The ProgramD is open source code released under the terms of the GNU General Public License as published by the Free Software Foundation. -->
-  <!-- As This Module   : calendrier.aiml   -   version :   0.3   -   MàJ : 21/11/2017  -->
-  <!-- auteur : Gael Langevin (www.inmoov.fr) d'après les travaux du Dr Richard Wallace - langue : française -->
-  <!-- Complies with AIML 1.0 Tag Set Specification as adopted by the ALICE A.I. Foundation. -->
-  <!-- Modif : sebchko -->
-  <!-- For more information see http://www.alicebot.org -->
+  <!--  -->
   <!--  -->
   <category>
     <pattern>JOUR</pattern>

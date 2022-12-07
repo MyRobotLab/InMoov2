@@ -1,20 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <!-- File: _inmoovTraduction.aiml -->
-  <!-- Author: Gael Langevin -->
-  <!-- Last modified: May 21, 2017 -->
-  <!-- Anthony Gallot -->
-  <!-- This AIML file is part of the INMOOVSUPER 0.0.1 chat bot knowledge base. -->
-  <!--  -->
-  <!-- The INMOOVFRENCH brain is Copyright &copy; 2016 by Inmoov and Myrobotlab community. -->
-  <!--  -->
-  <!-- The INMOOVSUPER brain is released under the terms of the GNU Lesser General -->
-  <!-- Public License, as published by the Free Software Foundation. -->
-  <!--  -->
-  <!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
-  <!--  -->
-  <!-- For more information see http://www.inmoov.fr -->
   <!--  -->
   <topic name="TRADUCTION">
     <category>

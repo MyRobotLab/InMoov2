@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!--  -->
+<!-- File: _inmoovKnowledge.aiml-->
 <!--  -->
 <category><pattern># <set>determinantinterogatif</set> JE NE SAIS PAS</pattern>
 <template><think>

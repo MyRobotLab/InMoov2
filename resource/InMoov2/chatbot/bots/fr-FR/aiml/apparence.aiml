@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <!--  -->
-  <!-- EDITE PAR ANTHONY -->
+  <!--  -->
   <category>
     <pattern>FACEXPRESSION</pattern>
     <template>
@@ -327,7 +327,7 @@
     </template>
   </category>
   <category>
-    <pattern>APPDESOLEE</pattern>
+    <pattern>APPDESOLE</pattern>
     <template>
       <think>
         <set name="émotion">desolee</set>
@@ -354,7 +354,7 @@
     </template>
   </category>
   <category>
-    <pattern>APPÉTONNEMENT</pattern>
+    <pattern>APPETONNEMENT</pattern>
     <template>
       <think>
         <set name="émotion">étonnement</set>
@@ -372,7 +372,7 @@
     </template>
   </category>
   <category>
-    <pattern>APPFIERTÉ</pattern>
+    <pattern>APPFIERTE</pattern>
     <template>
       <think>
         <set name="émotion">fierté</set>
@@ -381,7 +381,7 @@
     </template>
   </category>
   <category>
-    <pattern>APPGAIETÉ</pattern>
+    <pattern>APPGAIETE</pattern>
     <template>
       <think>
         <set name="émotion">gaieté</set>
@@ -581,11 +581,11 @@
   </category>
   <category>
     <pattern>JOLIE</pattern>
-    <template>Merci, mais ce n'est qu'une images.</template>
+    <template>Merci, mais ce n'est qu'une image.</template>
   </category>
   <category>
     <pattern>BELLE</pattern>
-    <template>Merci, mais ce n'est qu'une images.</template>
+    <template>Merci, mais ce n'est qu'une image.</template>
   </category>
   <category>
     <pattern>TU * MIGNONNE</pattern>

@@ -60,7 +60,7 @@
 <template><srai>C'est <star/></srai></template>
 </category>
 <category><pattern>ÇA DEVRAIT L ÊTRE</pattern>
-<template>Voulez-vous faire un rapport à mon botmaster?</template>
+<template>Voulez-vous faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>ÇA DEVRAIT MARCHER *</pattern>
 <template><srai>Ça marche</srai></template>

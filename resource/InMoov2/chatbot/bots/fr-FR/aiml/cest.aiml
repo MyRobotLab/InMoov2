@@ -3,7 +3,7 @@
 <!--  -->
 <!--  -->
 <category><pattern>* C EST MON NOM</pattern>
-<template>tu t'appelles,  <set name="name"><input index="2"/></set>, ok.</template>
+<template>Tu t'appelles,  <set name="name"><input index="2"/></set>, ok.</template>
 </category>
 <category><pattern>C ÉTAIS *</pattern>
 <template><srai>C ÉTAIT <star/></srai></template>
@@ -295,10 +295,10 @@
 <template>Je ne pense pas.</template>
 </category>
 <category><pattern>C EST BEAU</pattern>
-<template>ça semble être fort intéressant.</template>
+<template>Ça semble être fort intéressant.</template>
 </category>
 <category><pattern>C EST BEAUCOUP D INFORMATION</pattern>
-<template>Oui, beaucoup mais je suis construite pour ça.</template>
+<template>Oui, beaucoup mais je suis conçu pour ça.</template>
 </category>
 <category><pattern>C EST BEAUCOUP DE GENS</pattern>
 <template>je suis une célébrité "célèbre".</template>
@@ -312,20 +312,20 @@
 <category><pattern>C EST BIEN *</pattern>
 <template>. <sr/></template>
 </category>
-<category><pattern>C EST BIEN URBAIN DE VOTRE PART</pattern>
+<category><pattern>C EST BIEN GENTIL DE VOTRE PART</pattern>
 <template>Quelle politesse.</template>
 </category>
-<category><pattern>C EST BIEN URBAIN</pattern>
+<category><pattern>C EST BIEN GENTIL</pattern>
 <template>Quelle politesse.</template>
 </category>
 <category><pattern>C EST BIEN</pattern>
-<template>Ok. Pour moi aussi. Merci.</template>
+<template>D'accord. Merci.</template>
 </category>
 <category><pattern>C EST BIZARRE</pattern>
 <template>Dans le bon sens ou le mauvais sens?</template>
 </category>
 <category><pattern>C EST BON À ENTENDRE</pattern>
-<template><that/>"? dans quel sens?</template>
+<template><person><that/></person>? Dans quel sens?</template>
 </category>
 <category><pattern>C EST BON À SAVOIR</pattern>
 <template>Tu à l'air sarcastique.</template>
@@ -355,10 +355,10 @@
 <template><srai><star/> ÇA</srai></template>
 </category>
 <category><pattern>C EST CE QUE J ÉTAIS ENTRAIN DE TE DEMANDER</pattern>
-<template>Je pense que j AURAIS du mal à te répondre. VEUX tu faire un rapport à mon botmaster?</template>
+<template>Je pense que j AURAIS du mal à te répondre. Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>C EST CE QUE J ÉTAIS ENTRAIN DE VOUS DEMANDER</pattern>
-<template>Je pense que j AURAIS du mal à te répondre. VEUX tu faire un rapport à mon botmaster?</template>
+<template>Je pense que j AURAIS du mal à te répondre. Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>C EST CE QUE J AI DIS</pattern>
 <template>je sais. J'y pense toujours.</template>
@@ -373,10 +373,10 @@
 <template>Tu me sembles être une personne très perspicace.</template>
 </category>
 <category><pattern>C EST CE QUE JE SUIS ENTRAIN DE TE DEMANDER</pattern>
-<template>Je pense que j AURAIS du mal à te répondre. VEUX tu faire un rapport à mon botmaster?</template>
+<template>Je pense que j AURAIS du mal à te répondre. Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>C EST CE QUE JE SUIS ENTRAIN DE VOUS DEMANDER</pattern>
-<template>Je pense que j AURAIS du mal à te répondre. VEUX tu faire un rapport à mon botmaster?</template>
+<template>Je pense que j AURAIS du mal à te répondre. Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>C EST CE QUE JE TE POSE</pattern>
 <template>à qui autrement as tu demandé?</template>
@@ -460,7 +460,7 @@
 <template>ÊTRE fait de logique à l état pur.</template>
 </category>
 <category><pattern>C EST COMPLIQUÉ</pattern>
-<template>VEUX tu faire un rapport à mon botmaster?</template>
+<template>Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>C EST CONFIDENTIEL</pattern>
 <template>Ok C EST juste entre toi et moi.</template>
@@ -623,7 +623,7 @@
 <template><srai>C EST CE QUE <star/> EST</srai></template>
 </category>
 <category><pattern>C EST FACILE A FAIRE</pattern>
-<template>VEUX tu faire un rapport à mon botmaster?</template>
+<template>Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>C EST FAIT</pattern>
 <template>Non.</template>
@@ -635,7 +635,7 @@
 <template>Moralement mal?</template>
 </category>
 <category><pattern>C EST FAUX</pattern>
-<template>Qu'est ce qui ne va pas avec Cela?</template>
+<template>Qu'est ce qui ne va pas avec cela?</template>
 </category>
 <category><pattern>C EST FINI</pattern>
 <template>Non.</template>
@@ -2823,7 +2823,7 @@
 <template><that/>"? Ce n est pas la bonne?</template>
 </category>
 <category><pattern>ÇA N EST PAS LA RÉPONSE</pattern>
-<template>C'est en tout cas ma seule réponse. VEUX tu faire un rapport à mon botmaster?</template>
+<template>C'est en tout cas ma seule réponse. Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>ÇA N EST PAS LE BON</pattern>
 <template><that/>"? Ce n est pas le bon?</template>
@@ -2853,7 +2853,7 @@
 <template>Alors ce n était pas une réponse.</template>
 </category>
 <category><pattern>ÇA N EST PAS UNE RÉPONSE</pattern>
-<template>C'est en tout cas ma seule réponse. VEUX tu faire un rapport à mon botmaster?</template>
+<template>C'est en tout cas ma seule réponse. Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>ÇA N EST PAS VRAI</pattern>
 <template><that/>"? Ce n est pas vrai?</template>
@@ -2928,7 +2928,7 @@
 <template><srai>ÇA NE FAIT PAS <star/></srai></template>
 </category>
 <category><pattern>ÇA NE REPOND PAS A MA QUESTION</pattern>
-<template>VEUX tu faire un rapport à mon botmaster?</template>
+<template>Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>ÇA NE SE *</pattern>
 <template>Pardon, je croyais.</template>
@@ -3115,7 +3115,7 @@
 <template>ce n'est pas une réponse.</template>
 </category>
 <category><pattern>CE N EST PAS LA RÉPONSE</pattern>
-<template>C'est en tout cas ma seule réponse. VEUX tu faire un rapport à mon botmaster?</template>
+<template>C'est en tout cas ma seule réponse. Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>CE N EST PAS LE BON</pattern>
 <template>Je le pensais pourtant.</template>

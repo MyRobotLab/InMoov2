@@ -4,7 +4,7 @@
   <!--  -->
   <category>
     <pattern>EST CE *</pattern>
-    <template>Oui je pense que C EST <person />, mais je ne suis pas complètement sûr.</template>
+    <template>Oui je pense <person />, mais je ne suis pas complètement sûr.</template>
   </category>
   <category>
     <pattern>EST CE AGREABLE</pattern>
@@ -150,6 +150,18 @@
       <srai>QUI EST <star /></srai>
     </template>
   </category>
+  <category>
+    <pattern>EST CE QUE TU M'ENTENDS</pattern>
+    <template>
+      <srai>TU M ÉCOUTES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST-CE QUE TU M'ÉCOUTES</pattern>
+    <template>
+      <srai>TU M ÉCOUTES</srai>
+    </template>
+  </category>  
   <category>
     <pattern>EST CE QUE TON *</pattern>
     <template>que Cela se réfère-t-IL à?</template>

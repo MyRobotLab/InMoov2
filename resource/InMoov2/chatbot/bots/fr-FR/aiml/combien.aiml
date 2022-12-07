@@ -1053,7 +1053,7 @@
   </category>
   <category>
     <pattern>COMBIEN IL GAGNE</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>COMBIEN IL Y A *</pattern>
@@ -1063,7 +1063,7 @@
   </category>
   <category>
     <pattern>COMBIEN ILS GAGNENT</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>COMBIEN MANGES TU *</pattern>
