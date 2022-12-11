@@ -1296,11 +1296,11 @@
   </category>
   <category>
     <pattern>EN PLUS DE CELA</pattern>
-    <template>En plus de Cela?</template>
+    <template>En plus de cela?</template>
   </category>
   <category>
     <pattern>EN RETARD POUR</pattern>
-    <template>Beaucoup de rendez vous.</template>
+    <template>Beaucoup de rendez vous?</template>
   </category>
   <category>
     <pattern>EN REALITÉ JE DIS</pattern>
@@ -1308,7 +1308,7 @@
   </category>
   <category>
     <pattern>EN REALITÉ</pattern>
-    <template>Tu ne dis pas.</template>
+    <template>Je ne te le fais pas dire.</template>
   </category>
   <category>
     <pattern>EN TE TUANT</pattern>
@@ -1316,7 +1316,7 @@
   </category>
   <category>
     <pattern>EN VOITURE</pattern>
-    <template>Quel genre de voiture conduis tu?</template>
+    <template>Quel genre de voiture conduis-tu?</template>
   </category>
   <category>
     <pattern>ENFER AUCUN</pattern>
@@ -1328,11 +1328,11 @@
   </category>
   <category>
     <pattern>ENNUYEUX</pattern>
-    <template>tu es ennuyeux?</template>
+    <template>Tu es ennuyeux?</template>
   </category>
   <category>
     <pattern>ÉNORME</pattern>
-    <template>Oui, c'est TRèS grand.</template>
+    <template>Oui, c'est très grand.</template>
   </category>
   <category>
     <pattern>ENSEMBLE</pattern>
@@ -1340,7 +1340,7 @@
   </category>
   <category>
     <pattern>ENVIRON UNE MINUTE</pattern>
-    <template>çA n'est peut pas ÊTRE assez de temps.</template>
+    <template>Ça n'est peut pas assez de temps.</template>
   </category>
   <category>
     <pattern>ERRR</pattern>
@@ -1348,15 +1348,15 @@
   </category>
   <category>
     <pattern>ESSAI AGRÉABLE</pattern>
-    <template>je fais de mon mieux.</template>
+    <template>Je fais de mon mieux.</template>
   </category>
   <category>
-    <pattern>ESSAYE A * QUE</pattern>
-    <template>Essayent de réaliser tes buts.</template>
+    <pattern>ESSAYER À * DE</pattern>
+    <template>Essayes de réaliser tes buts.</template>
   </category>
   <category>
     <pattern>ESSAYE DE DEVINER</pattern>
-    <template>donne moi un indice.</template>
+    <template>Donne moi un indice.</template>
   </category>
   <category>
     <pattern>ESSAYE DE NOUVEAU</pattern>
@@ -1381,7 +1381,7 @@
             </set>
           </set>
         </set>
-      </think>ne t'INQUIèTE pas, je me le rappelle.</template>
+      </think>ne t'inquiète pas, je me le rappelle.</template>
   </category>
   <category>
     <pattern>ESSAYE MOI</pattern>
@@ -1391,15 +1391,11 @@
   </category>
   <category>
     <pattern>ESSAYE</pattern>
-    <template>je n'ai pas le temps pour le moment.</template>
+    <template>Je n'ai pas le temps pour le moment.</template>
   </category>
   <category>
-    <pattern>EST * A ENREGISTRE</pattern>
-    <template>Oui tout est enregistre.</template>
-  </category>
-  <category>
-    <pattern>EST * GAI</pattern>
-    <template>qu'Il ne m'a jamais dit s'il est ou non.</template>
+    <pattern>EST * À ENREGISTRER</pattern>
+    <template>Oui tout est enregistré.</template>
   </category>
   <category>
     <pattern>EST * INTELLIGENT</pattern>
@@ -1414,20 +1410,12 @@
     <template>Non</template>
   </category>
   <category>
-    <pattern>EST CES * AWNSERS</pattern>
-    <template>que je dis dépend SÛR ce que tu dis et aussi un peu SÛR notre dialogue anterieur.</template>
+    <pattern>EST UNE * RÉPONSE</pattern>
+    <template>Ce que je dis dépend de ce que tu dis et également notre dialogue antèrieur.</template>
   </category>
   <category>
-    <pattern>EST DES GENS PARFAIT</pattern>
-    <template>No, les gens sont endommages.</template>
-  </category>
-  <category>
-    <pattern>EST DES JOURS UN * LE TEMPS</pattern>
-    <template>Un jour = 24 heures.</template>
-  </category>
-  <category>
-    <pattern>EST ELVIS GAI</pattern>
-    <template>je pense qu'il est un robot comme moi.</template>
+    <pattern>EST UNE PERSONNE PARFAITE</pattern>
+    <template>Oui, je trouve aussi.</template>
   </category>
   <category>
     <pattern>SONT ILS INTÉRESSANTS</pattern>
@@ -1435,7 +1423,7 @@
   </category>
   <category>
     <pattern>EST LA * TU APPRENNES</pattern>
-    <template>Grand. Si tu veux m'apprendre quelque chose le dit dans une phrase. Dites alors "Se le rappellent."<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
+    <template>Si tu veux m'apprendre quelque chose dit le dans une phrase. Dites alors "Se le rappellent."<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
   </category>
   <category>
     <pattern>EST LE MOT * DANS TON VOCABULAIRE</pattern>
@@ -3624,11 +3612,11 @@
   </category>
   <category>
     <pattern>JE T APPRENDRAI QUELQUE CHOSE</pattern>
-    <template>si tu veux m'apprendre quelque chose le dit dans une phrase. Dites alors "Se le rappellent."<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
+    <template>Si tu veux m apprendre quelque chose, dit le dans une phrase précédé du mot "Memorise".<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
   </category>
   <category>
     <pattern>JE T APPRENDRAI</pattern>
-    <template>Grand. Si tu veux m'apprendre quelque chose le dit dans une phrase. Dites alors "Se le rappellent."<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
+    <template>Si tu veux m'apprendre quelque chose, dit le dans une phrase précédé du mot "Memorise".<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
   </category>
   <category>
     <pattern>JE T EMBRASSE</pattern>

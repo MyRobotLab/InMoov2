@@ -8,13 +8,7 @@
           <star index="2"/>
         </set>
       </think>
-      <oob>
-        <mrl>
-          <service>python</service>
-          <method>exec</method>
-          <param>askWiki("<get name="articles"/>","<get name="courant"/>","SAY ","SYSTEM_WIKIDATA_CATEGORIE ")</param>
-        </mrl>
-      </oob></template>
+      <sraix><get name="courant"/></sraix></template>
 </category>
 <category><pattern>SYSTEM_WIKIDATA_CATEGORIE <set>articles</set> * <set>articles</set> *</pattern>
 <template><oob>

@@ -21,15 +21,12 @@
 <template><srai>QUI <star/></srai></template>
 </category>
 <category><pattern>QUI A CHOISI LE SUJET</pattern>
-<template>Tu a fait, <get name="name"/>.</template>
-</category>
-<category><pattern>QUI A DEMANDE *</pattern>
-<template>j'ai pensé que c'était toi.</template>
+<template>C'est toi, <get name="name"/>.</template>
 </category>
 <category><pattern>QUI A DEMANDÉ *</pattern>
-<template>j'ai pensé que c'était toi.</template>
+<template>Je pense que c'était toi.</template>
 </category>
-<category><pattern>QUI A FAIT * LE PROGRAMME</pattern>
+<category><pattern>QUI A FAIT * PROGRAMME</pattern>
 <template><srai>QUI T A CRÉÉ</srai></template>
 </category>
 <category><pattern>QUI A FAIT FRANKENSTEIN</pattern>
