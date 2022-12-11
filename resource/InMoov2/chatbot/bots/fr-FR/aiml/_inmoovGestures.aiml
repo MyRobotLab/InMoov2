@@ -703,7 +703,7 @@
 <template>Création par
         <oob><mrl><service>python</service><method>exec</method><param>madeby()</param></mrl></oob></template>
 </category>
-<category><pattern>CRÉATION EN FRANÇAIS</pattern>
+<category><pattern>CRÉATION EN FRANçAIS</pattern>
 <template>.
         <oob><mrl><service>python</service><method>exec</method><param>madebyfrench()</param></mrl></oob></template>
 </category>
@@ -1007,9 +1007,9 @@
               <li>Tout va sans à coup.</li>
               <li>je suis bien, merci.</li>
               <li>ça va,</li>
-              <li>C EST cool,</li>
+              <li>C'est cool,</li>
               <li>ça va plutôt pas mal <get name="name"/>, merci,</li>
-              <li>çA VA bien, merci,</li>
+              <li>ça va bien, merci,</li>
             </random>
           </li>
         </condition>
@@ -1024,4 +1024,14 @@
         Suite au prochain épisode...
         <oob><mrl><service>python</service><method>exec</method><param>story()</param></mrl></oob></template>
 </category>
+<category>
+    <pattern>RACONTE UNE AUTRE HISTOIRE</pattern>
+    <template>C'est l'histoire du coup du parapluie, tu la connais? C'est un jeune garçon, un beau garçon d'ailleurs, qui un jour fait la connaissance d'une jeune fille, une belle fille d'ailleurs. Un beau jour d'été ils discutaient dans un jardin quand soudain la fille regarda a droite puis a gauche puis encore une fois a droite. Et sans le regarder lui dit tout bas, j'ai un secret à te dévoiler. Je vais te parler du coup du parapluie japonais. Mais je crois que le moment n'est pas opportun je préfère attendre pour t'en parler. Le lendemain, le garçon avait hâte d'écouter l'histoire du coup du parapluie japonais. Il prit son téléphone et appella la fille pour lui fixer un rendez-vous. Mais hélas, stupéfaction. Il apprit que la jeune fille venait de mourir d'un terrible accident. Bien plus tard, il raconta cette histoire à son camarade de classe. Arrivé au coup du parapluie japonais son camarade l'arrêta net. Écoute tu es mon ami, seulement je ne veux plus te voir a partir d'aujourd'hui. Avant qu'on se quitte définitivement, je te conseille, d'oublier cette histoire du parapluie japonais. Il revint chez lui et décida de savoir tout de cette histoire du parapluie japonais après le dîner. Il posa la question à son père. Papa tu n'as jamais entendu parler du coup du parapluie japonais? Le visage de son père s'assombrit, Mon Dieu. Qui t'a appris ça. Dis moi qui t'as appris ça. Mon fils il m'est pénible de te chasser d'ici mais je dois le faire pour l'intérêt de la famille. Prends tes affaires et ne remets plus les pieds dans cette maison. Le garçon quitta sa maison en sachant qu'il n'y reviendrait jamais. Au bout de 5 ans d'errance, il attrapa une maladie qui le consuma à petit feu. Agonisant affreusement sur son lit dans une salle d'hopital, il exprima son désir de revoir son père une dernière fois. Son père vint à son chevet mais hélas, c'était trop tard. Le beau garçon mourut dans un dernier souffle.
+    On ne saura donc jamais ce qu'est le coup du parapluie Japonais.
+    Tu as aimé cette histoire?
+    <oob><mrl><service>python</service><method>exec</method><param>VieAleatoire()</param></mrl></oob></template>
+  </category>
+<category><pattern>DIS MOI UNE AUTRE HISTOIRE</pattern>
+<template><srai>RACONTE UNE AUTRE HISTOIRE</srai></template>
+</category>  
 </aiml>
