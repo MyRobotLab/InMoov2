@@ -47,4 +47,10 @@ def CheckFileExist(File):
   else:
     execfile('data/InMoov2/InMoovCustom.py')  
 
-CheckFileExist(ThisFilePart)
+
+def CheckDirectoryExist():
+  if not os.path.exists("data/InMoov2"):
+    os.makedirs("data/InMoov2")
+
+CheckDirectoryExist()
+CheckFileExist(ThisFilePart) 
