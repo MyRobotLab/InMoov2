@@ -368,13 +368,13 @@
                 <tr>
                     <td ng-show="service.isOpencvStarted">
                         <img src="../Tracking.png"/>
-                        <toggle ng-model="service.isHeadTrackingStarted" ng-change="service.isHeadTrackingStarted?msg.startPeer('headTracking'):msg.releasePeer('headTracking')" width="140" height="30" on="head tracking on" off="head tracking off"></toggle>
+                        <toggle ng-model="service.isHeadTrackingStarted" ng-change="service.isHeadTrackingStarted?startPeer('headTracking'):releasePeer('headTracking')" width="140" height="30" on="head tracking on" off="head tracking off"></toggle>
                         <span ng-show="service.isHeadTrackingStarted">
                             <img src="settings.png" width="30" ng-click="mrl.changeTab(peer.getActualName(service, 'headTracking'))"/>
                         </span>
 
 
-                        <toggle ng-show="service.isHeadTrackingStarted" ng-model="service.isEyeTrackingStarted" ng-change="service.isEyeTrackingStarted?msg.startPeer('eyeTracking'):msg.releasePeer('eyeTracking')" width="140" height="30" on="eye tracking on" off="eye tracking off"></toggle>
+                        <toggle ng-show="service.isHeadTrackingStarted" ng-model="service.isEyeTrackingStarted" ng-change="service.isEyeTrackingStarted?startPeer('eyeTracking'):releasePeer('eyeTracking')" width="140" height="30" on="eye tracking on" off="eye tracking off"></toggle>
                         <span ng-show="service.isEyeTrackingStarted">
                             <img src="settings.png" width="30" ng-click="mrl.changeTab(peer.getActualName(service, 'eyeTracking'))"/>
                         </span>
