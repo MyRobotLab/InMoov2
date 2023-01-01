@@ -372,12 +372,17 @@
                         <span ng-show="service.isHeadTrackingStarted">
                             <img src="settings.png" width="30" ng-click="mrl.changeTab(peer.getActualName(service, 'headTracking'))"/>
                         </span>
-
-
-                        <toggle ng-show="service.isHeadTrackingStarted" ng-model="service.isEyeTrackingStarted" ng-change="service.isEyeTrackingStarted?startPeer('eyeTracking'):releasePeer('eyeTracking')" width="140" height="30" on="eye tracking on" off="eye tracking off"></toggle>
+                        <toggle width="100" height="28" ng-show="peer.isPeerStarted(service, 'headTracking')" ng-model="service.isHeadTracking" ng-change="!service.isHeadTracking?execScript('system/startScripts/i01_headTracking_stop.py'):execScript('system/startScripts/i01_headTracking_start.py')" on="Disable" off="Enable"/></toggle>
+                    </td>
+                </tr>    
+                <tr>
+                    <td ng-show="service.isOpencvStarted">
+                        <img src="../Tracking.png"/>
+                        <toggle ng-model="service.isEyeTrackingStarted" ng-change="service.isEyeTrackingStarted?startPeer('eyeTracking'):releasePeer('eyeTracking')" width="140" height="30" on="eye tracking on" off="eye tracking off"></toggle>
                         <span ng-show="service.isEyeTrackingStarted">
                             <img src="settings.png" width="30" ng-click="mrl.changeTab(peer.getActualName(service, 'eyeTracking'))"/>
                         </span>
+                        <toggle width="100" height="28" ng-show="peer.isPeerStarted(service, 'eyeTracking')" ng-model="service.isEyeTracking" ng-change="!service.isEyeTracking?execScript('system/startScripts/i01_eyeTracking_stop.py'):execScript('system/startScripts/i01_eyeTracking_start.py')" on="Disable" off="Enable"/></toggle>
                     </td>
                 </tr>
             </table>

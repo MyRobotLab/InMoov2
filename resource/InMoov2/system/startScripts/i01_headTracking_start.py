@@ -1,11 +1,13 @@
 #########################################
-# i01_eyesTracking_stop.py
+# i01_headTracking_start.py
 # categories: inmoov2
 # more info @: http://myrobotlab.org/service/InMoov
 #########################################
 # uncomment for virtual hardware
 # Platform.setVirtual(True)
 
-# create a pid
-#i01_opencv.removeFilter("FaceDetectDNN")
-runtime.release("i01.eyesTracking")
+if runtime.isStarted('i01.opencv'):
+    i01_opencv.removeFilter("FaceDetectDNN")
+    i01_headTracking.enable()
+else:
+    i01_headTracking.enable()   
