@@ -10,6 +10,9 @@
       </think>
       <sraix><get name="courant"/></sraix></template>
 </category>
+<category><pattern>SRAIXFAILED *</pattern>
+<template><srai>SYSTEM_LEARNING</srai></template>
+</category>
 <category><pattern>SYSTEM_WIKIDATA_CATEGORIE <set>articles</set> * <set>articles</set> *</pattern>
 <template><oob>
         <mrl>
