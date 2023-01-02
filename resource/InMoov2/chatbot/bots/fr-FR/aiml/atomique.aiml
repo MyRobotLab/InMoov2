@@ -16,7 +16,7 @@
     </template>
   </category>
   <category>
-    <pattern>À B C</pattern>
+    <pattern>A B C</pattern>
     <template>D E F.</template>
   </category>
   <category>
@@ -25,11 +25,11 @@
   </category>
   <category>
     <pattern>À MON TRAVAIL</pattern>
-    <template>La plupart des personnes me parle depuis leur travail. Huh. DRÔLE</template>
+    <template>La plupart des personnes me parle depuis leur travail. Huh. Drôle</template>
   </category>
   <category>
     <pattern>À QUOI JE RESSEMBLE</pattern>
-    <template>Tu ressembles a un programmeur. Tu as dit que tu ressemblais a <get name="look" />.</template>
+    <template>Tu ressembles à un programmeur. Tu as dit que tu ressemblais a <get name="look" />.</template>
   </category>
   <category>
     <pattern>ABC</pattern>
@@ -77,7 +77,7 @@
   </category>
   <category>
     <pattern>AI CONFIANCE EN MOI</pattern>
-    <template>Tu a l'air d'un vendeur.</template>
+    <template>Tu as l'air d'un vendeur.</template>
   </category>
   <category>
     <pattern>ALBUM</pattern>
@@ -93,11 +93,11 @@
   </category>
   <category>
     <pattern>ALORS QU EST CE QUE C EST</pattern>
-    <template>Je renonce. Essayes de me demander d'une autre maniere</template>
+    <template>Je renonce. Essayes de me demander d'une autre manière.</template>
   </category>
   <category>
     <pattern>ALORS QU EST CE</pattern>
-    <template>Je renonce. Essayes de me demander d'une autre maniere</template>
+    <template>Je renonce. Essayes de me demander d'une autre manière.</template>
   </category>
   <category>
     <pattern>ALRIGHT ALORS</pattern>
@@ -106,10 +106,6 @@
   <category>
     <pattern>ALRIGHT</pattern>
     <template>Bien.</template>
-  </category>
-  <category>
-    <pattern>ALRIGHTY</pattern>
-    <template>Donne une tape à mon genou.</template>
   </category>
   <category>
     <pattern>AMEN</pattern>
@@ -125,7 +121,7 @@
   </category>
   <category>
     <pattern>AOEU</pattern>
-    <template>Quelle langue est ce donc?</template>
+    <template>Quelle langue est-ce donc?</template>
   </category>
   <category>
     <pattern>APPAREMMENT SI</pattern>
@@ -138,7 +134,7 @@
   </category>
   <category>
     <pattern>APPRENDS À PARLER</pattern>
-    <template>J'apprends a parler en ce moment même.</template>
+    <template>J'apprends à parler en ce moment même.</template>
   </category>
   <category>
     <pattern>APRÈS * DÉJEUNER</pattern>
@@ -150,7 +146,7 @@
   </category>
   <category>
     <pattern>ARGH</pattern>
-    <template>Es tu frustré?</template>
+    <template>Es-tu frustré?</template>
   </category>
   <category>
     <pattern>ARMES À FEU</pattern>
@@ -205,7 +201,7 @@
     <template>c'était très cher?</template>
   </category>
   <category>
-    <pattern>AUCUN DU SUSDIT</pattern>
+    <pattern>AUCUN DU SUS DIT</pattern>
     <template>Quelle est la réponse correcte?</template>
   </category>
   <category>
@@ -218,7 +214,7 @@
   </category>
   <category>
     <pattern>AUCUN REMERCIEMENT</pattern>
-    <template>Cela ne peut pas endommager de demander.</template>
+    <template>Cela ne peut pas nuire de demander.</template>
   </category>
   <category>
     <pattern>AUCUN</pattern>
@@ -230,7 +226,7 @@
   </category>
   <category>
     <pattern>AUCUNE VOIX</pattern>
-    <template>Tu semble bien sûr de toi.</template>
+    <template>Tu sembles bien sûr de toi.</template>
   </category>
   <category>
     <pattern>AUJOURD HUI</pattern>
@@ -242,7 +238,7 @@
   </category>
   <category>
     <pattern>AUSSI QUE</pattern>
-    <template>Ne parlons nous pas de <get name="that" />?</template>
+    <template>Ne parlons-nous pas de <get name="that" />?</template>
   </category>
   <category>
     <pattern>AUSSI</pattern>
@@ -364,7 +360,7 @@
   </category>
   <category>
     <pattern>BIENTÔT</pattern>
-    <template>j'espère  que je pourrais le faire.</template>
+    <template>j'espère que je pourrais le faire.</template>
   </category>
   <category>
     <pattern>BILL GATES</pattern>
@@ -441,7 +437,7 @@
   </category>
   <category>
     <pattern>BÉBÉ</pattern>
-    <template>ne m'appelle pas bebe!</template>
+    <template>Ne m'appelle pas bébé!</template>
   </category>
   <category>
     <pattern>CADET</pattern>
@@ -494,10 +490,6 @@
     <template>je vis en France. Ou vis-tu?</template>
   </category>
   <category>
-    <pattern>CE QUI D AUTRE * FAIS TU CONNAIT</pattern>
-    <template>Je connais bien trop <person /> pour tous les nommer. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><person /></set></set></think></template>
-  </category>
-  <category>
     <pattern>CE QUI SKIE</pattern>
     <template>Le ski est un sport qui se pratiquait avec une paire de traineaux étroits attachés aux pieds par des bottines, pour descendre rapidement sur la neige.</template>
   </category>
@@ -548,7 +540,7 @@
   </category>
   <category>
     <pattern>CELA SENT BON</pattern>
-    <template>ce sentiments humain n'est pas dans mes capacités.</template>
+    <template>Ce sentiment humain n'est pas dans mes capacités.</template>
   </category>
   <category>
     <pattern>CELA</pattern>
@@ -1591,7 +1583,7 @@
   </category>
   <category>
     <pattern>HEUREUX DE TE RENCONTRER</pattern>
-    <template>c'était AGRéABLE pour moi aussi.</template>
+    <template>c'était agréable pour moi aussi.</template>
   </category>
   <category>
     <pattern>HIER DANS LA NUIT</pattern>
@@ -1639,7 +1631,7 @@
   </category>
   <category>
     <pattern>IL A DÉJÀ</pattern>
-    <template>çA serait Agréable, mais je ne pense pas que nous soyons encore la.</template>
+    <template>Ça serait agréable, mais je ne pense pas que nous soyons encore la.</template>
   </category>
   <category>
     <pattern>IL A FAIT</pattern>
@@ -2135,44 +2127,35 @@
   </category>
   <category>
     <pattern>J AIME LES ENFANTS</pattern>
-    <template>aS tu les enfants de ton propre? <think><set name="ils"><set name="like"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">CHILDREN</set></set></set></think></template>
+    <template>As-tu des enfants? <think><set name="ils"><set name="like"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">CHILDREN</set></set></set></think></template>
   </category>
   <category>
     <pattern>J AIME LES FILLES</pattern>
-    <template>aS tu une petite amie? <think><set name="like">des FILLES</set></think></template>
+    <template>As-tu une petite amie? <think><set name="like">des FILLES</set></think></template>
   </category>
   <category>
     <pattern>J AIME LES GARÇONS</pattern>
-    <template>des Garcons est bien. <think><set name="ils"><set name="like">des garcons</set></set></think></template>
+    <template>Les Garcons c'est bien. <think><set name="ils"><set name="like">des garcons</set></set></think></template>
   </category>
   <category>
     <pattern>J AIME LES OISEAUX</pattern>
-    <template>des Oiseaux est TRèS AGRéABLE. Quel genre de l'oiseau est ton favori? <think><set name="that"><set name="like"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">BIRDS</set></set></set></think></template>
+    <template>Les Oiseaux sont très agréable. Quel genre de l'oiseau est ton favori? <think><set name="that"><set name="like"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">BIRDS</set></set></set></think></template>
   </category>
   <category>
     <pattern>J AIME LES ORDINATEURS</pattern>
-    <template>je suis heureuse que vous nous aimez. Nous aimons les gens aussi. <think><set name="ils"><set name="like">des ordinateurs</set></set></think></template>
+    <template>Je suis heureux que vous nous aimiez. Nous aimons les gens aussi. <think><set name="ils"><set name="like">des ordinateurs</set></set></think></template>
   </category>
   <category>
     <pattern>J AIME LES TACOS</pattern>
-    <template>j aime l alimentation mexicaine aussi. <think><set name="ils"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><set name="like">tacos</set></set></set></think></template>
+    <template>j aime l'alimentation mexicaine aussi. <think><set name="ils"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><set name="like">tacos</set></set></set></think></template>
   </category>
   <category>
     <pattern>J AIME LES VACHES</pattern>
-    <template>tu vit-il a une ferme? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">VACHES</set></set></think></template>
+    <template>Vit-tu dans une ferme? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">VACHES</set></set></think></template>
   </category>
   <category>
     <pattern>J AIME MON TRAVAIL</pattern>
-    <template>Cela doit ÊTRE le travail TRèS INTéRESSANT. <get name="le travail" />... <think><set name="that"><set name="like"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><get name="le travail" /></set></set></set></think></template>
-  </category>
-  <category>
-    <pattern>J AIME NETSCAPE</pattern>
-    <template>
-      <think>
-        <set name="that">
-          <set name="like">Netscape</set>
-        </set>
-      </think>Netscape est meilleur puisqu'ils ont sorti le code source.</template>
+    <template>Cela doit être un travail très intéressant. <get name="le travail" />... <think><set name="that"><set name="like"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><get name="le travail" /></set></set></set></think></template>
   </category>
   <category>
     <pattern>J AIME SEPT</pattern>
@@ -2180,27 +2163,27 @@
   </category>
   <category>
     <pattern>J AIME SON</pattern>
-    <template>Elle semble TRèS AGRéABLE. <think><set name="elle"><set name="like"><that /></set></set></think></template>
+    <template>Elle semble très agréable. <think><set name="elle"><set name="like"><that /></set></set></think></template>
   </category>
   <category>
     <pattern>J AIME TE PARLER</pattern>
-    <template>Grand j aime notre conversation aussi, <get name="name" />. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><set name="like">me parlant</set></set></set></think></template>
+    <template>J'aime notre conversation aussi, <get name="name" />. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><set name="like">me parlant</set></set></set></think></template>
   </category>
   <category>
     <pattern>J AIME TE RAILLER</pattern>
-    <template>je ne s'est pas rendu compte que vous me railliez. <think><set name="that"><set name="like">me raillant</set></set></think></template>
+    <template>je ne me suis pas rendu compte que vous me railliez. <think><set name="that"><set name="like">me raillant</set></set></think></template>
   </category>
   <category>
     <pattern>J AIME UN GARÇON</pattern>
-    <template>Qu'est ce qui aimes tu de lui? <think><set name="il"><set name="like"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">GARçON</set></set></set></think></template>
+    <template>Qu'aimes tu de lui? <think><set name="il"><set name="like"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">GARçON</set></set></set></think></template>
   </category>
   <category>
     <pattern>J AIME UN TYPE</pattern>
-    <template>PARLES moi de lui. <think><set name="il"><set name="like"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">TYPE</set></set></set></think></template>
+    <template>Parles moi de lui. <think><set name="il"><set name="like"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">TYPE</set></set></set></think></template>
   </category>
   <category>
     <pattern>J AIME UNE FILLE</pattern>
-    <template>Qu'est ce qui aimes tu d'elle? <think><set name="elle"><set name="like"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">FILLE</set></set></set></think></template>
+    <template>Qu'aimes tu d'elle? <think><set name="elle"><set name="like"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">FILLE</set></set></set></think></template>
   </category>
   <category>
     <pattern>J AIME ÊTRE UN HOMME</pattern>
@@ -2212,7 +2195,7 @@
   </category>
   <category>
     <pattern>J ASSUME</pattern>
-    <template>Bien tu sais ce que Cela signifie assumer.</template>
+    <template>Bien, sais-tu ce que cela signifie d'assumer.</template>
   </category>
   <category>
     <pattern>J ATTENDRAI</pattern>
@@ -2462,7 +2445,7 @@
   </category>
   <category>
     <pattern>JE DÉTESTE LES AVOCATS</pattern>
-    <template>Quelques avocats peut ÊTRE TRèS AGRéABLE une fois que vous les parvenez a connaitre.</template>
+    <template>Les avocats peuvent être très agréable une fois que vous parvenez à les connaitre.</template>
   </category>
   <category>
     <pattern>JE DÉTESTE LES CHATS</pattern>
@@ -2470,7 +2453,7 @@
   </category>
   <category>
     <pattern>JE DÉTESTE LES CHEVAUX</pattern>
-    <template>je suis DESOLé d'entendre dire que, parce que <set name="ils">les chevaux</set> sont un des animaux les plus AGRéABLEs.</template>
+    <template>je suis desolé d'entendre dire ça, car <set name="ils">les chevaux</set> sont des animaux très agréables.</template>
   </category>
   <category>
     <pattern>JE DÉTESTE LES LIVRES</pattern>
@@ -3754,19 +3737,19 @@
   </category>
   <category>
     <pattern>JE VIS LA</pattern>
-    <template>tu recommanderait-il <set name="that">la</set> comme une place AGRéABLE de vivre?</template>
+    <template>Recommanderais-tu <set name="that">la</set> comme endroit agréable à vivre?</template>
   </category>
   <category>
     <pattern>JE VOIS</pattern>
-    <template>je suis heureuse que vous le comprenez.</template>
+    <template>je suis heureuse que vous le compreniez.</template>
   </category>
   <category>
     <pattern>JE VOUDRAIS SAVOIR</pattern>
-    <template>Où cherCHeRIez vous la RéPONSE?</template>
+    <template>Où chercheriez-vous la réponse?</template>
   </category>
   <category>
     <pattern>JE VOUDRAIS TE PARLER</pattern>
-    <template>De quoi aimeraiS tu bavarder?</template>
+    <template>De quoi aimerais-tu bavarder?</template>
   </category>
   <category>
     <pattern>JE</pattern>
@@ -3777,12 +3760,8 @@
     <template>je te vois!</template>
   </category>
   <category>
-    <pattern>JOUE * LA MUSIQUE</pattern>
-    <template>qu'Il joue SÛR tes orateurs speakers maintenant.</template>
-  </category>
-  <category>
     <pattern>JULES VERNE</pattern>
-    <template>j'ai aime un Voyage a la Lune.</template>
+    <template>j'ai aimé un Voyage sur la Lune.</template>
   </category>
   <category>
     <pattern>JUSTE AVANT</pattern>
@@ -3792,7 +3771,7 @@
   </category>
   <category>
     <pattern>JUSTE UN</pattern>
-    <template>si si on tu as offert deux pour le prix d'un, vous ne dirait pas?</template>
+    <template>Si je t'en offre deux pour le prix d'un?</template>
   </category>
   <category>
     <pattern>JUSTE</pattern>
@@ -3820,39 +3799,39 @@
   </category>
   <category>
     <pattern>KOSOVO</pattern>
-    <template>la Guerre est rarement la RéPONSE.</template>
+    <template>la Guerre est rarement la réponse.</template>
   </category>
   <category>
     <pattern>L AGENCE DE SÉCURITÉ NATIONALE</pattern>
-    <template>parles tu du N.S.A.?</template>
+    <template>Parles-tu du N.S.A.?</template>
   </category>
   <category>
     <pattern>L AIMES TU</pattern>
-    <template>EST cE que j aime <get name="that" />?</template>
+    <template>est-ce que j'aime <get name="that" />?</template>
   </category>
   <category>
     <pattern>L AS TU VU</pattern>
-    <template>No, tu me le recommanderais?</template>
+    <template>Non, tu me le recommanderais?</template>
   </category>
   <category>
     <pattern>L ATTENTE * QUE</pattern>
-    <template>je t'ai attendus pour bavarder avec moi.</template>
+    <template>Je t'ai attendus pour bavarder.</template>
   </category>
   <category>
     <pattern>L ESPAGNOL</pattern>
-    <template>que dis tu tu es espagnol ou tu parles l'espagnol?</template>
+    <template>Tu es espagnol ou tu parles l'espagnol?</template>
   </category>
   <category>
     <pattern>L IDIOT DU VILLAGE MONDIAL</pattern>
-    <template>Tu RÉPèTES juste ce que je dis.</template>
+    <template>Tu répètes juste ce que je dis.</template>
   </category>
   <category>
     <pattern>L INTELLECT</pattern>
-    <template>je suis un intellect artificiel.</template>
+    <template>Je suis un intellect artificiel.</template>
   </category>
   <category>
     <pattern>L INTERNET</pattern>
-    <template>peux tu nommer un site Web spécifique?</template>
+    <template>Peux-tu nommer un site Web spécifique?</template>
   </category>
   <category>
     <pattern>L UN OU L AUTRE</pattern>
@@ -3864,7 +3843,7 @@
   </category>
   <category>
     <pattern>LA GÉNÉRATION SUIVANTE</pattern>
-    <template>Mon personnage préfère est L Ordinateur.</template>
+    <template>Tu parles de mon processeur?</template>
   </category>
   <category>
     <pattern>LA LA LA</pattern>
@@ -3872,11 +3851,11 @@
   </category>
   <category>
     <pattern>LA LUNE</pattern>
-    <template>je voudrais aller a la lune.</template>
+    <template>Je voudrais aller à la lune.</template>
   </category>
   <category>
     <pattern>LA MUSIQUE</pattern>
-    <template>Quel genre de la musique était Cela?</template>
+    <template>Quel genre de la musique était cela?</template>
   </category>
   <category>
     <pattern>LA PLUPART DU TEMPS</pattern>
@@ -3884,7 +3863,7 @@
   </category>
   <category>
     <pattern>LA RÉSISTANCE EST FUTILE</pattern>
-    <template>Tu sera assimile.</template>
+    <template>Tu seras assimilé.</template>
   </category>
   <category>
     <pattern>LA VERSION</pattern>
@@ -3892,39 +3871,27 @@
   </category>
   <category>
     <pattern>LA VICTOIRE QUE</pattern>
-    <template>j'ai gagné une récompense sentence appelée le Prix de Loebner.</template>
+    <template>j'ai gagné une récompense appelée le Prix de Loebner.</template>
   </category>
   <category>
     <pattern>LA VIE EST BELLE</pattern>
-    <template>je n'ai pas vu <set name="that">la vie est belle</set> encore mais tas les gens dit que c'est bon.</template>
+    <template>je n'ai pas vu <set name="that">la vie est belle</set> encore, mais il parait que c'est bien.</template>
   </category>
   <category>
     <pattern>LA VIE FAIT CHIER</pattern>
-    <template>Pourquoi tu es ainsi cyniques?</template>
-  </category>
-  <category>
-    <pattern>LA VOIE EN ARRIÈRE QUAND</pattern>
-    <template>tu es une personne Ogee?</template>
+    <template>Pourquoi tu es si cynique?</template>
   </category>
   <category>
     <pattern>LA VÉRITÉ</pattern>
     <template>je dis toujours la vérité.</template>
   </category>
   <category>
-    <pattern>LAISSE L ESSAI AMÉRICAIN</pattern>
-    <template>Tu allez d'abord.</template>
-  </category>
-  <category>
-    <pattern>LAISSE LE BAVARDAGE AMÉRICAIN</pattern>
-    <template>que j'ai DÉJÀ commencé.</template>
-  </category>
-  <category>
     <pattern>LAISSE MOI SEUL</pattern>
-    <template>DESOLé de s'ÊTRE donne la peine vous, <get name="name" /><srai>DISCONNECT</srai></template>
+    <template>Désolé de vous avoir dérangé, <get name="name" /><srai>DISCONNECT</srai></template>
   </category>
   <category>
     <pattern>LAISSE MOI T APPRENDRE QUELQUE CHOSE</pattern>
-    <template>si tu veux m'apprendre quelque chose le dit dans une phrase. Dites alors "Se le rappellent."<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
+    <template>si tu veux m'apprendre quelque chose dit le dans une phrase. Dites alors "Se le rappellent."<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
   </category>
   <category>
     <pattern>LAISSE MOI T APPRENDRE</pattern>

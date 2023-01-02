@@ -16,10 +16,20 @@ Et si on commandait une pizza.
 </random><think><set name="topic">nourriture</set></think></template>
 </category>
 <category><pattern>QU EST CE QUE *</pattern>
-<template><sraix><get name="courant"/></sraix></template>
+<template><srai><star/></srai><think>           
+            <set name="topic"><star/></set>
+         </think><sraix><get name="courant"/></sraix></template>
 </category>
 <category><pattern>QU EST CE QU *</pattern>
-<template><sraix><get name="courant"/></sraix></template>
+<template><srai><star/></srai><think>           
+            <set name="topic"><star/></set>
+         </think><sraix><get name="courant"/></sraix></template>
+</category>
+<category><pattern>QU EST CE QUE J AI DIT AVANT</pattern>
+<template><srai>J AI DIT AVANT</srai></template>
+</category>
+<category><pattern>QU EST CE QUE J AI DIT</pattern>
+<template><srai>J AI DIT AVANT</srai></template>
 </category>
 <category><pattern>QU EST CE QUI A DES FEUILLES CADUQUES</pattern>
 <template>Feuilles caduques est un terme se référant aux arbres et les arbustes qui perdent leurs feuilles en hiver.</template>

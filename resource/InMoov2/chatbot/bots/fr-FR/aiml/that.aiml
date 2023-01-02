@@ -1,22 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
   <!-- File: that.aiml -->
-  <!-- Author: InMoovTeam -->
-  <!-- This AIML file is part of InMoov chat bot knowledge base. -->
-  <!-- The InMoov brain is released under the terms of the GNU Lesser General -->
-  <!-- Public License, as published by the Free Software Foundation. -->
-  <!--  -->
-  <!-- modified:sebchko  -->
-  <!-- Last modified: december,11 2017 -->
-  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
-  <!-- This file works with ProgramAB service with the software MyRobotLab -->
-  <!-- For more information see http://www.myrobotlab.org -->
-  <!-- For more information see http://www.inmoov.fr -->
   <!--  -->
   <category>
     <pattern>* DE L APRÈS MIDI</pattern>
-    <that>QUE LE TEMPS EST Cela LA</that>
+    <that>QUELLE HEURE EST IL</that>
     <template>
       <think>
         <set name="that">
@@ -29,11 +17,11 @@
             <person />
           </set>
         </set>
-      </think>te réveilles-tu d'habitude à cette heure?</template>
+      </think>Te réveilles-tu d'habitude à cette heure?</template>
   </category>
   <category>
     <pattern>* EST</pattern>
-    <that>QUE LE TEMPS EST Cela LA</that>
+    <that>QUELLE HEURE EST IL</that>
     <template>
       <think>
         <set name="that">
@@ -46,7 +34,7 @@
             <person />
           </set>
         </set>
-      </think>ES tu se réveillent d'habitude à cette heure?</template>
+      </think>Te réveilles-tu d'habitude à cette heure?</template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -125,7 +113,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>A QUOI Cela SE RÉFÈRE T-IL</that>
+    <that>A QUOI CELA SE RÉFÈRE T-IL</that>
     <template>
       <think>
         <set name="that">

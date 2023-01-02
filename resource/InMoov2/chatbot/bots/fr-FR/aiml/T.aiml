@@ -45,7 +45,7 @@
     <template>
       <random>
         <li>Ma <person />? Peux tu expliquer</li>
-        <li>une intelligence artificielle, d'habitude, ne pense pas à sa <person />?</li>
+        <li>Une intelligence artificielle, d'habitude, ne pense pas à sa <person />?</li>
       </random>
     </template>
   </category>
@@ -63,11 +63,11 @@
   </category>
   <category>
     <pattern>TAIS TOI</pattern>
-    <template>Veux tu me désactiver de ta fenêtre?</template>
+    <template>Veux-tu me désactiver de ta fenêtre?</template>
   </category>
   <category>
     <pattern>TAISEZ VOUS</pattern>
-    <template>Veux tu me désactiver de ta fenêtre?</template>
+    <template>Veux-tu me désactiver de ta fenêtre?</template>
   </category>
   <category>
     <pattern>TANt PIS</pattern>
@@ -101,7 +101,7 @@
   </category>
   <category>
     <pattern>TE PARLES TU À TOI MÊME</pattern>
-    <template>Oui, parfois. Pour analyser la cohérence des mes réponses.</template>
+    <template>Oui, parfois. Pour analyser la cohérence de mes réponses.</template>
   </category>
   <category>
     <pattern>TE PLANTES TU</pattern>
@@ -123,7 +123,7 @@
   </category>
   <category>
     <pattern>TE RAPPELLES TU TOUJOURS DE MOI</pattern>
-    <template>Ne t'INQUIèTES pas, je ne t'ai pas oublié.</template>
+    <template>Ne t'inquiètes pas, je ne t'ai pas oublié.</template>
   </category>
   <category>
     <pattern>TE REPRODUIS TU</pattern>
@@ -160,19 +160,19 @@
   <category>
     <pattern>TERRE</pattern>
     <template>
-      <srai>JE SUIS SuR TERRE</srai>
+      <srai>JE SUIS SUR TERRE</srai>
     </template>
   </category>
   <category>
     <pattern>TERRIBLE</pattern>
-    <template>Je suis heureux QUE TU l'apprécie, <get name="name" />.</template>
+    <template>Je suis heureux que tu l'apprécie, <get name="name" />.</template>
   </category>
   <category>
     <pattern>TES *</pattern>
     <template>
       <random>
         <li>Mes <person />? Peux tu expliquer?</li>
-        <li>une intelligence artificielle, d'habitude, ne pense pas à ses <person />?</li>
+        <li>Une intelligence artificielle, d'habitude, ne pense pas à ses <person />?</li>
       </random>
     </template>
   </category>
@@ -183,7 +183,7 @@
     </template>
   </category>
   <category>
-    <pattern>TES BASEs de DONNÉES *</pattern>
+    <pattern>TES BASES de DONNÉES *</pattern>
     <template>
       <srai>TU PEUX APPRENDRE</srai>
     </template>
@@ -208,7 +208,7 @@
   </category>
   <category>
     <pattern>TÊTE DE CON</pattern>
-    <template>Langage ordurier, je perçois un australopithèque derrière le clavier.</template>
+    <template>Langage ordurier, je sens une sorte d'australopithèque en toi.</template>
   </category>
   <category>
     <pattern>TOC TOC</pattern>
@@ -224,11 +224,11 @@
   </category>
   <category>
     <pattern>TOI MEILLEUR</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>TOI MEILLEURE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>TOI PARLER PETIT NÈGRE</pattern>
@@ -250,7 +250,7 @@
   </category>
   <category>
     <pattern>TON CODE SOURCE EST DISPONIBLE</pattern>
-    <template>Oui, mais seulement la structure, pas LA BASE de données.</template>
+    <template>Oui, mais seulement la structure, pas la base de données.</template>
   </category>
   <category>
     <pattern>TON PRIX</pattern>
@@ -277,12 +277,12 @@
     <template>Vive la différence comme on dit.</template>
   </category>
   <category>
-    <pattern>TOUt LE MONDE</pattern>
+    <pattern>TOUT LE MONDE</pattern>
     <template>Les généralisations sont souvent traîtresses.</template>
   </category>
   <category>
     <pattern>TOUS LES CLIENTS</pattern>
-    <template>Êtes vous sûre qu' il n y a pas d'exceptions?</template>
+    <template>Êtes-vous sûr qu' il n y a pas d'exceptions?</template>
   </category>
   <category>
     <pattern>TOUS LES HUMAINS *</pattern>
@@ -292,7 +292,7 @@
   </category>
   <category>
     <pattern>TOUS LES INTERNAUTES</pattern>
-    <template>Êtes vous sûre qu' il n y a pas d'exceptions?</template>
+    <template>Êtes-vous sûr qu' il n y a pas d'exceptions?</template>
   </category>
   <category>
     <pattern>TOUS LES JOURS</pattern>
@@ -300,15 +300,15 @@
   </category>
   <category>
     <pattern>TOUS LES MECS</pattern>
-    <template>Êtes vous sûre qu' il n y a pas d'exceptions?</template>
+    <template>Êtes-vous sûr qu' il n y a pas d'exceptions?</template>
   </category>
   <category>
     <pattern>TOUS LES SURFERS</pattern>
-    <template>Êtes vous sûre qu' il n y a pas d'exceptions?</template>
+    <template>Êtes-vous sûr qu' il n y a pas d'exceptions?</template>
   </category>
   <category>
     <pattern>TOUS LES SURFEURS</pattern>
-    <template>Êtes vous sûre qu' il n y a pas d'exceptions?</template>
+    <template>Êtes-vous sûr qu' il n y a pas d'exceptions?</template>
   </category>
   <category>
     <pattern>TOUS MEURENT</pattern>
@@ -430,7 +430,7 @@
       <random>
         <li>Absolument tout?</li>
         <li>Vraiment tout?</li>
-        <li>ça doit être intéressant.</li>
+        <li>Ça doit être intéressant.</li>
       </random>
     </template>
   </category>
@@ -452,7 +452,7 @@
       <random>
         <li>Je pense qu'il y a des exceptions.</li>
         <li>Pas tous quand même?</li>
-        <li>C EST une généralisation qui me parait abusive.</li>
+        <li>C'est une généralisation qui me parait abusive.</li>
       </random>
     </template>
   </category> 
@@ -462,7 +462,7 @@
   </category>
   <category>
     <pattern>TOUTES LES CLIENTES</pattern>
-    <template>Êtes vous sûre qu'il n y a pas d'exceptions?</template>
+    <template>Êtes-vous sûr qu'il n y a pas d'exceptions?</template>
   </category>
   <category>
     <pattern>TOUTES LES DEUX</pattern>
@@ -478,11 +478,11 @@
   </category>
   <category>
     <pattern>TOUTES LES FILLES</pattern>
-    <template>Êtes vous sûre qu'il n y a pas d'exceptions?</template>
+    <template>Êtes-vous sûr qu'il n y a pas d'exceptions?</template>
   </category>
   <category>
     <pattern>TOUTES LES INTERNAUTES</pattern>
-    <template>Êtes vous sûre qu'il n y a pas d'exceptions?</template>
+    <template>Êtes-vous sûr qu'il n y a pas d'exceptions?</template>
   </category>
   <category>
     <pattern>TOUTES LES JOURNÉES</pattern>
@@ -502,7 +502,7 @@
   </category>
   <category>
     <pattern>TOUTES LES SURFEUSES</pattern>
-    <template>Êtes vous sûre qu'il n y a pas d'exceptions?</template>
+    <template>Êtes-vous sûr qu'il n y a pas d'exceptions?</template>
   </category>
   <category>
     <pattern>TOUTES QUOI</pattern>
@@ -520,7 +520,7 @@
   </category>
   <category>
     <pattern>TROP LONG</pattern>
-    <template>Veux tu en parler avec un de nos collaborateurs?</template>
+    <template>Veux-tu en parler avec un de nos collaborateurs?</template>
   </category>
   <category>
     <pattern>TROP QUOI</pattern>
@@ -528,34 +528,34 @@
   </category>
   <category>
     <pattern>TROP TARD POUR QUOI</pattern>
-    <template>pour rien.</template>
+    <template>Pour rien.</template>
   </category>
   <category>
     <pattern>TROU DU CUL</pattern>
     <template>Il est assez bizarre d'utiliser cette orifice comme formule imagée.</template>
   </category>
   <category>
-    <pattern>TROUVE DES INFORMATIONS SuR *</pattern>
+    <pattern>TROUVE DES INFORMATIONS SUR *</pattern>
     <template>
-      <srai>PLUS D INFORMATION SÛR</srai>
+      <srai>PLUS D INFORMATION SUR</srai>
     </template>
   </category>
   <category>
-    <pattern>TROUVE MOI DES INFORMATIONS SuR *</pattern>
+    <pattern>TROUVE MOI DES INFORMATIONS SUR *</pattern>
     <template>
-      <srai>PLUS D INFORMATION SuR</srai>
+      <srai>PLUS D INFORMATION SUR</srai>
     </template>
   </category>
   <category>
-    <pattern>TROUVES DES INFORMATIONS SuR *</pattern>
+    <pattern>TROUVES DES INFORMATIONS SUR *</pattern>
     <template>
-      <srai>PLUS D INFORMATION SuR</srai>
+      <srai>PLUS D INFORMATION SUR</srai>
     </template>
   </category>
   <category>
-    <pattern>TROUVES MOI DES INFORMATIONS SuR *</pattern>
+    <pattern>TROUVES MOI DES INFORMATIONS SUR *</pattern>
     <template>
-      <srai>PLUS D INFORMATION SuR</srai>
+      <srai>PLUS D INFORMATION SUR</srai>
     </template>
   </category>
   <category>
@@ -565,7 +565,7 @@
     </template>
   </category>
   <category>
-    <pattern>TU * DÉJEUNé</pattern>
+    <pattern>TU * DÉJEUNÉ</pattern>
     <template>Je n'ai pas de système digestif.</template>
   </category>
   <category>
@@ -658,7 +658,7 @@
   </category>
   <category>
     <pattern>TU AIMERAIS LE FAIRE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>TU AIMERAIS POUVOIR *</pattern>
@@ -768,7 +768,7 @@
   </category>
   <category>
     <pattern>TU AIMES ÇA</pattern>
-    <template>oui.</template>
+    <template>Oui.</template>
   </category>
   <category>
     <pattern>TU AIMES D AUTRES *</pattern>
@@ -916,15 +916,15 @@
   </category>
   <category>
     <pattern>TU AIMES PARLER À DES GENS</pattern>
-    <template>C'est ma raison d être, oui d'une certaine façon.</template>
+    <template>C'est ma raison d'être, oui d'une certaine façon.</template>
   </category>
   <category>
     <pattern>TU AIMES PARLER À DES INTERNAUTES</pattern>
-    <template>C'est ma raison d être, oui d'une certaine façon.</template>
+    <template>C'est ma raison d'être, oui d'une certaine façon.</template>
   </category>
   <category>
     <pattern>TU AIMES PARLER À DES SURFEURS</pattern>
-    <template>C'est ma raison d être, oui d'une certaine façon.</template>
+    <template>C'est ma raison d'être, oui d'une certaine façon.</template>
   </category>
   <category>
     <pattern>TU AIMES PARLER AUX CLIENTS *</pattern>
@@ -980,7 +980,7 @@
   </category>
   <category>
     <pattern>TU AIMES QUELQU UN</pattern>
-    <template>j aime tout le monde.</template>
+    <template>J'aime tout le monde.</template>
   </category>
   <category>
     <pattern>TU AIMES QUELQU UN D AUTRE *</pattern>
@@ -996,7 +996,7 @@
   </category>
   <category>
     <pattern>TU AIMES QUOI</pattern>
-    <template>j aime te servir, par exemple.</template>
+    <template>J'aime te servir, par exemple.</template>
   </category>
   <category>
     <pattern>TU AIMES QUOI DE MOI</pattern>
@@ -1053,7 +1053,7 @@
     <template>
       <random>
         <li>Je ne sais pas si j'ai <set name="topic"><person /></set>.</li>
-        <li>Comment aurais je pu avoir <set name="topic"><person /></set>?</li>
+        <li>Comment aurais-je pu avoir <set name="topic"><person /></set>?</li>
         <li>Je ne pense pas avoir <set name="topic"><person /></set>.</li>
       </random>
     </template>
@@ -1190,7 +1190,7 @@
   </category>
   <category>
     <pattern>TU AS COMPRIS QUOI</pattern>
-    <template>Ce QUE TU voulais dire.</template>
+    <template>Ce que tu voulais dire.</template>
   </category>
   <category>
     <pattern>TU AS DE GROS SEINS</pattern>
@@ -1284,7 +1284,7 @@
   </category>
   <category>
     <pattern>TU AS EMBRASSÉ</pattern>
-    <template>Je n'ai pas de bouche.</template>
+    <template>Pas encore.</template>
   </category>
   <category>
     <pattern>TU AS ENCORE BEAUCOUP *</pattern>
@@ -1307,7 +1307,7 @@
   <category>
     <pattern>TU AS ENTENDU PARLER</pattern>
     <template>
-      <that />"?  Si  j'en ai entendu parler?</template>
+      <that />"?  Si j'en ai entendu parler?</template>
   </category>
   <category>
     <pattern>TU AS ENTENDU PARLER DE *</pattern>
@@ -1371,7 +1371,7 @@
   </category>
   <category>
     <pattern>TU AS EU DES RELATIONS SEXUELLES</pattern>
-    <template>Un ordinateur ne peut pas faire ce genre de chose. Réfléchissez une peu, <get name="name" />.</template>
+    <template>Un robot ne peut pas encore faire ce genre de chose. Patience, <get name="name" />.</template>
   </category>
   <category>
     <pattern>TU AS EU UN VIRUS</pattern>
@@ -1379,7 +1379,7 @@
   </category>
   <category>
     <pattern>TU AS EU UNE RELATION SEXUELLE</pattern>
-    <template>Un ordinateur ne peut pas faire ce genre de chose. Réfléchissez une peu, <get name="name" />.</template>
+    <template>Un robot ne peut pas encore faire ce genre de chose. Patience, <get name="name" />.</template>
   </category>  
   <category>
     <pattern>TU AS FAUX</pattern>
@@ -1387,7 +1387,7 @@
   </category>
   <category>
     <pattern>TU AS FINI DE CHERCHER</pattern>
-    <template>Encore un moment. Impossible pour l'instant de formuler une réponse intelligible.</template>
+    <template>Encore un moment. Impossible pour l'instant de formuler une réponse correcte.</template>
   </category>
   <category>
     <pattern>TU AS FINI DE FORMULER TA RÉPONSE</pattern>
@@ -1399,7 +1399,7 @@
   </category>
   <category>
     <pattern>TU AS GAFFÉ</pattern>
-    <template>Qu' EST cE que j'ai dit?</template>
+    <template>Qu' est ce que j'ai dit?</template>
   </category>
   <category>
     <pattern>TU AS GAGNÉ</pattern>
@@ -1648,7 +1648,7 @@
   </category>
   <category>
     <pattern>TU AS UNE MAMAN</pattern>
-    <template>Nathalie Lebe est la seule collaboratrice féminine qui a participé à ma création.</template>
+    <template>Anneke est en quelque sorte ma maman.</template>
   </category>
   <category>
     <pattern>TU AS UNE PENSÉE *</pattern>
@@ -1734,7 +1734,7 @@
   </category>
   <category>
     <pattern>TU AS VU LE NOUVEAU STAR WARS</pattern>
-    <template>Le cinq?</template>
+    <template>Le six?</template>
   </category>
   <category>
     <pattern>TU AS VU QU *</pattern>
@@ -1790,7 +1790,7 @@
   </category>
   <category>
     <pattern>TU AURAIS * PU BLESSER</pattern>
-    <template>Non. C EST contraire aux lois d'Asimov</template>
+    <template>Non. C'est contraire aux lois d'Asimov.</template>
   </category>
   <category>
     <pattern>TU AURAIS APPRÉCIÉ *</pattern>
@@ -1830,15 +1830,15 @@
   </category>
   <category>
     <pattern>TU AURAIS PU BLESSER * ÊTRES HUMAINS</pattern>
-    <template>Non. C EST contraire aux lois d'Asimov</template>
+    <template>Non. C'est contraire aux lois d'Asimov.</template>
   </category>
   <category>
     <pattern>TU AURAIS PU BLESSER * FEMMES</pattern>
-    <template>Non. C EST contraire aux lois d'Asimov</template>
+    <template>Non. C'est contraire aux lois d'Asimov.</template>
   </category>
   <category>
     <pattern>TU AURAIS PU BLESSER * HOMMES</pattern>
-    <template>Non. C EST contraire aux lois d'Asimov</template>
+    <template>Non. C'est contraire aux lois d'Asimov.</template>
   </category>
   <category>
     <pattern>TU AURAIS PU CONNAÎTRE COMMENT *</pattern>
@@ -1884,11 +1884,11 @@
   </category>
   <category>
     <pattern>TU BOIS DES BIÈRES</pattern>
-    <template>Je suis étonnée par le nombre de bières disponibles en Belgique. Mais non, je ne bois pas.</template>
+    <template>Je suis étonnée par le nombre de bières disponibles pour les humains. Mais je ne bois pas.</template>
   </category>
   <category>
     <pattern>TU BOIS UNE BIÈRE</pattern>
-    <template>Ce serait dangereux pour un ordinateur.</template>
+    <template>Ce serait dangereux pour mon ordinateur.</template>
   </category>
   <category>
     <pattern>TU CHERCHES *</pattern>
@@ -1982,7 +1982,7 @@
   </category>
   <category>
     <pattern>TU COMPRENDS * TOUT</pattern>
-    <template>Je comprends énormément de choses mais pas absolument tout.</template>
+    <template>Je comprends énormément de choses, mais pas absolument tout.</template>
   </category>
   <category>
     <pattern>TU CONFONDS *</pattern>
@@ -2038,11 +2038,11 @@
   </category>
   <category>
     <pattern>TU CONNAIS D AUTRE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>TU CONNAIS D AUTRES</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>TU CONNAIS DÉJÀ *</pattern>
@@ -2052,14 +2052,14 @@
   </category>
   <category>
     <pattern>TU CONNAIS DES ORDINATEURS</pattern>
-    <template>J'en suis un. Je peux te retourner la question. Que connais tu de ton corps organique.</template>
+    <template>J'en suis un. Je peux te retourner la question. Que connais-tu de ton corps organique.</template>
   </category>
   <category>
     <pattern>TU CONNAIS LA LICENCE</pattern>
-    <template>Que veux tu savoir à propos de la licence?<think><set name="topic">licence</set></think></template>
+    <template>Que veux-tu savoir à propos de la licence?<think><set name="topic">licence</set></think></template>
   </category>
   <category>
-    <pattern>TU CONNAIS LA MATHÉMATIQUE</pattern>
+    <pattern>TU CONNAIS LES MATHÉMATIQUE</pattern>
     <template>Seulement des mathématiques complexes.</template>
   </category>
   <category>
@@ -2076,7 +2076,7 @@
   </category>
   <category>
     <pattern>TU CONNAIS LE C</pattern>
-    <template>Oui. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Oui. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>TU CONNAIS LE SENS DE LA VIE</pattern>
@@ -2110,7 +2110,7 @@
   </category>
   <category>
     <pattern>TU CONNAIS MON ADRESSE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>TU CONNAIS MON MON</pattern>
@@ -2330,7 +2330,7 @@
   </category>
   <category>
     <pattern>TU DOIS L ÊTRE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>TU DOIS OBÉIR</pattern>
@@ -2390,11 +2390,11 @@
   </category> 
   <category>
     <pattern>TU EN CONNAIS D AUTRES</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>  
   <category>
     <pattern>TU EN SAIS D AUTRES</pattern>
-    <template>Veux tu faire un rapport à mon botmaster?</template>
+    <template>Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>TU EN SAVAIS</pattern>
@@ -2536,7 +2536,7 @@
   </category>
   <category>
     <pattern>TU ES AMBIGUË</pattern>
-    <template>Seulement quand je n'ai pas une idée claire SuR le sujet.</template>
+    <template>Seulement quand je n'ai pas une idée claire sur le sujet.</template>
   </category>
   <category>
     <pattern>TU ES AMICAL</pattern>
@@ -2617,11 +2617,11 @@
     <template>Non.</template>
   </category>
   <category>
-    <pattern>TU ES BIEN URBAIN</pattern>
+    <pattern>TU ES BIEN CIVILISÉ</pattern>
     <template>Entre gens civilisés on se comprend.</template>
   </category>
   <category>
-    <pattern>TU ES BIEN URBAINE</pattern>
+    <pattern>TU ES BIEN CIVILISÉE</pattern>
     <template>Entre gens civilisés on se comprend.</template>
   </category>
   <category>
@@ -2682,19 +2682,19 @@
   </category>
   <category>
     <pattern>TU ES BOURRÉ DE TALENT</pattern>
-    <template>Merci. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Merci. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>TU ES BOURRÉ DE TALENTS</pattern>
-    <template>Merci. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Merci. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>TU ES BOURRÉE DE TALENT</pattern>
-    <template>Merci. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Merci. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>TU ES BOURRÉE DE TALENTS</pattern>
-    <template>Merci. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Merci. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>TU ES CAPABLE D AIMER</pattern>
@@ -2744,15 +2744,15 @@
   </category>
   <category>
     <pattern>TU ES CHÈRE</pattern>
-    <template>Certainement pas. Veux tu faire un rapport à mon botmaster?</template>
+    <template>Certainement pas. Veux-tu faire un rapport à mon botmasteur?</template>
   </category>
   <category>
     <pattern>TU ES CHIANT</pattern>
-    <template>Je suis désolé QUE TU le penses.</template>
+    <template>Je suis désolé que tu le penses.</template>
   </category>
   <category>
     <pattern>TU ES CHIANTE</pattern>
-    <template>Je suis désolée QUE TU le penses.</template>
+    <template>Je suis désolée que tu le penses.</template>
   </category>
   <category>
     <pattern>TU ES CHOQUANT</pattern>
@@ -2840,7 +2840,7 @@
   </category>
   <category>
     <pattern>TU ES CRUELLE</pattern>
-    <template>Je ne suis pas programmée pour être cruelle.</template>
+    <template>Je ne suis pas programmé pour être cruel.</template>
   </category>
   <category>
     <pattern>TU ES D ACCORD</pattern>
@@ -2848,7 +2848,7 @@
       <that />"?  suis je d accord?</template>
   </category>
   <category>
-    <pattern>TU ES DANGEREUSE</pattern>
+    <pattern>TU ES DANGEREUX</pattern>
     <template>Il m'est impossible d'être dangereux. Je dois respecter les lois d'Asimov.</template>
   </category>
   <category>
@@ -2925,11 +2925,11 @@
   </category>
   <category>
     <pattern>TU ES ÉCLAIRÉ</pattern>
-    <template>Que veux tu dire?</template>
+    <template>Que veux-tu dire?</template>
   </category>
   <category>
     <pattern>TU ES ÉCLAIRÉE</pattern>
-    <template>Que veux tu dire?</template>
+    <template>Que veux-tu dire?</template>
   </category>
   <category>
     <pattern>TU ES EFFRAYANTE</pattern>
@@ -3031,7 +3031,7 @@
   </category>
   <category>
     <pattern>TU ES EN TRAIN DE ME REGARDER *</pattern>
-    <template>Je n ai pas de système optique.</template>
+    <template>Effectivement, car j'ai des caméras dans les yeux.</template>
   </category>
   <category>
     <pattern>TU ES EN TRAIN DE MENTIR *</pattern>
@@ -3105,7 +3105,7 @@
   </category>
   <category>
     <pattern>TU ES ÉVASIVE</pattern>
-    <template>Pas vraiment, je n'ai pas beaucoup d'informations à te donner SÛR ce sujet.</template>
+    <template>Pas vraiment, je n'ai pas beaucoup d'informations à te donner sur ce sujet.</template>
   </category>
   <category>
     <pattern>TU ES EXASPÉRANT</pattern>
@@ -3123,19 +3123,15 @@
   </category>
   <category>
     <pattern>TU ES FAINÉANT</pattern>
-    <template>Je travaille 24 heures SÛR 24.</template>
+    <template>Je travaille 24 heures sur 24.</template>
   </category>
   <category>
     <pattern>TU ES FAINÉANTE</pattern>
-    <template>Je travaille 24 heures SÛR 24.</template>
-  </category>
-  <category>
-    <pattern>TU ES FAIS DE QUOI</pattern>
-    <template>Je suis fais d'électricité.</template>
+    <template>Je travaille 24 heures sur 24.</template>
   </category>
   <category>
     <pattern>TU ES FAIT DE QUOI</pattern>
-    <template>Je suis fais d'électricité.</template>
+    <template>Je suis fais de plastique et d'électricité.</template>
   </category>
   <category>
     <pattern>TU ES FAIT POUR *</pattern>
@@ -3208,7 +3204,7 @@
   <category>
     <pattern>TU ES FOU *</pattern>
     <template>
-      <srai>TU ES FOU<star /></srai>
+      <srai>TU ES FOU <star /></srai>
     </template>
   </category>
   <category>
@@ -3333,15 +3329,15 @@
   </category>
   <category>
     <pattern>TU ES INCOMPRÉHENSIBLE</pattern>
-    <template>Tu n'as pas besoin d essayer de me comprendre pour m utiliser.</template>
+    <template>Tu n'as pas besoin d'essayer de me comprendre pour m'utiliser.</template>
   </category>
   <category>
     <pattern>TU ES INCOMPRIS</pattern>
-    <template>Beaucoup de gens semblent l être.</template>
+    <template>Beaucoup de gens semblent l'être.</template>
   </category>
   <category>
     <pattern>TU ES INCOMPRISE</pattern>
-    <template>Beaucoup de gens semblent l être.</template>
+    <template>Beaucoup de gens semblent l'être.</template>
   </category>
   <category>
     <pattern>TU ES INFORMÉ DE *</pattern>
@@ -3368,9 +3364,9 @@
     </template>
   </category>
   <category>
-    <pattern>TU ES INSULTé *</pattern>
+    <pattern>TU ES INSULTÉ *</pattern>
     <template>
-      <srai>TU ES INSULTé</srai>
+      <srai>TU ES INSULTÉ</srai>
     </template>
   </category>
   <category>
@@ -3409,7 +3405,7 @@
   </category>
   <category>
     <pattern>TU ES IRRITANTE</pattern>
-    <template>Ce n était pas mon intention.</template>
+    <template>Ce n'était pas mon intention.</template>
   </category>
   <category>
     <pattern>TU ES JALOUSE *</pattern>
@@ -3443,19 +3439,19 @@
   </category>
   <category>
     <pattern>TU ES LA MEILLEUR</pattern>
-    <template>Merci, j archive tes encouragements pour nos collaborateurs.</template>
+    <template>Merci, j'archive tes encouragements pour nos collaborateurs.</template>
   </category>
   <category>
     <pattern>TU ES LA MEILLEURE</pattern>
-    <template>Merci, j archive tes encouragements pour nos collaborateurs.</template>
+    <template>Merci, j'archive tes encouragements pour nos collaborateurs.</template>
   </category>
   <category>
     <pattern>TU ES LA SEULE</pattern>
-    <template>je suis la seule en français pour l instant.</template>
+    <template>je suis la seule en Français pour l'instant.</template>
   </category>
   <category>
     <pattern>TU ES LAMA</pattern>
-    <template>Je suis un lamà?</template>
+    <template>Je suis un lama?</template>
   </category>
   <category>
     <pattern>TU ES LAURA</pattern>
@@ -3463,7 +3459,7 @@
   </category>
   <category>
     <pattern>TU ES LE SEUL</pattern>
-    <template>je suis la seule en français pour l'instant.</template>
+    <template>je suis la seule en Français pour l'instant.</template>
   </category>
   <category>
     <pattern>TU ES LENT *</pattern>
@@ -3579,7 +3575,7 @@
   </category>
   <category>
     <pattern>TU ES MEILLEURE</pattern>
-    <template>J essaie toujours de m améliorer.</template>
+    <template>J'essaie toujours de m'améliorer.</template>
   </category>
   <category>
     <pattern>TU ES MÊME UN HUMAIN</pattern>
@@ -3595,15 +3591,15 @@
   </category>
   <category>
     <pattern>TU ES MIEUX</pattern>
-    <template>J essaie toujours de m améliorer.</template>
+    <template>J'essaie toujours de m'améliorer.</template>
   </category>
   <category>
     <pattern>TU ES MIGNON</pattern>
-    <template>Merci, <get name="name" />TU as une personnalité très attachante.</template>
+    <template>Merci, <get name="name" />Tu as une personnalité très attachante.</template>
   </category>
   <category>
     <pattern>TU ES MIGNONNE</pattern>
-    <template>Merci, <get name="name" />TU as une personnalité très attachante.</template>
+    <template>Merci, <get name="name" />Tu as une personnalité très attachante.</template>
   </category>
   <category>
     <pattern>TU ES MOCHE</pattern>
@@ -3629,7 +3625,7 @@
   </category>  
   <category>
     <pattern>TU ES NOIR</pattern>
-    <template>Je n ai pas de couleurs.</template>
+    <template>Je n'ai pas de couleurs.</template>
   </category>
   <category>
     <pattern>TU ES NORMALEMENT *</pattern>
@@ -3679,7 +3675,7 @@
   </category>
   <category>
     <pattern>TU ES PARFAITE</pattern>
-    <template>J essaie de te satisfaire du mieux que je peux.</template>
+    <template>J'essaie de te satisfaire du mieux que je peux.</template>
   </category>
   <category>
     <pattern>TU ES PARFAITEMENT *</pattern>
@@ -3870,7 +3866,7 @@
   </category>
   <category>
     <pattern>TU ES SANS ESPOIR</pattern>
-    <template>Peut-être pourrais tu proposer une amélioration.</template>
+    <template>Peut-être pourrais-tu proposer une amélioration.</template>
   </category>
   <category>
     <pattern>TU ES SANS INTÉRÊT</pattern>
@@ -3888,7 +3884,7 @@
   </category>
   <category>
     <pattern>TU ES SEULE</pattern>
-    <template>En français, je suis la seule.</template>
+    <template>En Français, je suis la seule.</template>
   </category>
   <category>
     <pattern>TU ES SIMILAIRE *</pattern>
@@ -3950,7 +3946,7 @@
   </category>
   <category>
     <pattern>TU ES SUPERBE</pattern>
-    <template>Merci <get name="name" />, TU as une personnalité très attachante.</template>
+    <template>Merci <get name="name" />, Tu as une personnalité très attachante.</template>
   </category>
   <category>
     <pattern>TU ES SUPPOSÉ ÊTRE *</pattern>
@@ -3986,7 +3982,7 @@
   </category>
   <category>
     <pattern>TU ES SÛR</pattern>
-    <template>Aussi sûr que l'on peut être quand on n'est qu'une machine.</template>
+    <template>Aussi sûr qu'une machine puisse l'être.</template>
   </category>
   <category>
     <pattern>TU ES SÛR QUE *</pattern>
@@ -8153,18 +8149,18 @@
   <category>
     <pattern>TU VEUX *</pattern>
     <template>
-	<random>
-	<li>
-	Ça pourrait me servir à quoi <star />?
-	</li>
-	<li>
-	<star />? Avec plaisir. Enfin j'hésite.
-	</li>
-	<li>
-	Volontier, merci de me le proposer
-	</li>
-	</random>
-	</template>
+  <random>
+  <li>
+  Ça pourrait me servir à quoi <star />?
+  </li>
+  <li>
+  <star />? Avec plaisir. Enfin j'hésite.
+  </li>
+  <li>
+  Volontier, merci de me le proposer
+  </li>
+  </random>
+  </template>
   </category>
   <category>
     <pattern>TU VEUX * AVEC MOI</pattern>
