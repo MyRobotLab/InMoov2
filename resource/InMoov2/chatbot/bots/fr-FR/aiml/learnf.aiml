@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>QU EST CE QUE POULE</pattern>
+<template>un volatile descendant du dinosaure.</template>
+</category>
+<category><pattern>QU EST CE QUE LA POULE</pattern>
+<template>un volatile descendant du dinosaure.</template>
+</category>
+<category><pattern>QU EST CE QUE UN VOLATILE DESCENDANT DU DINOSAURE</pattern>
+<template>Cela peut être la poule par exemple.</template>
+</category>
+<category><pattern># EST CE QUE LA POULE EST UN VOLATILE DESCENDANT DU DINOSAURE</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+</aiml>
