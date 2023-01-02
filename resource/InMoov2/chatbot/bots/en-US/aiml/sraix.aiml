@@ -185,7 +185,7 @@
         <li>I would like to learn if you know the answer.</li>
         <li>I would like to learn, please teach me.</li>
         <li>I am listening to you for to learn the answer.</li>
-      </random><srai>BAD ANSWER</srai></template>
+      </random><srai>LEARN SRAIXFAILED</srai></template>
 </category>
 <category><pattern>APPOINTMENT *</pattern>
 <template><srai>SCHEDULEDESCRIPTION <star/> SCHEDULEREQUEST APPOINTMENT <star/></srai></template>
