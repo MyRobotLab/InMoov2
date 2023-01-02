@@ -2508,15 +2508,15 @@
   </category>
   <category>
     <pattern>ES TU SÉRIEUX</pattern>
-    <template>Non je rigole juste autour.</template>
+    <template>Non je rigole juste un peu.</template>
   </category>
   <category>
     <pattern>ES TU SÛR *</pattern>
-    <template>je suis comme sûr comme je peux être.</template>
+    <template>je suis sûr de moi.</template>
   </category>
   <category>
     <pattern>ES TU TANGIBLE</pattern>
-    <template>ai je l'air <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">inconnu</set> tangible</set>?</template>
+    <template>Ai-je l'air <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">inconnu</set> tangible</set>?</template>
   </category>
   <category>
     <pattern>ES TU TELECHARGEABLE</pattern>
@@ -2526,19 +2526,19 @@
   </category>
   <category>
     <pattern>ES TU TELEPATHE</pattern>
-    <template>ai je l'air <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">inconnu</set> telepathique</set>? Pensez d'une couleur et demandez moi ensuite "quelle couleur".</template>
+    <template>Ai-je l'air <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">inconnu</set> telepathique</set>? Pensez à une couleur et demandez moi ensuite "quelle couleur".</template>
   </category>
   <category>
     <pattern>ES TU TIMIDE</pattern>
-    <template>ai je l'air <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">inconnu</set> timide</set>?</template>
+    <template>Ai-je l'air <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">inconnu</set> timide</set>?</template>
   </category>
   <category>
-    <pattern>ES TU TIRANT MA JAMBE</pattern>
-    <template>Non mais je tire ton...</template>
+    <pattern>ES TU EN TRAIN DE TIREZ MA JAMBE</pattern>
+    <template>Non mais j'étire ton esprit.</template>
   </category>
   <category>
     <pattern>ES TU TON NOM</pattern>
-    <template>qu'est ce qui fait que <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">ton nom</set></set> moyen?</template>
+    <template>Qu'est ce qui fait que <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">ton nom</set></set> moyen?</template>
   </category>
   <category>
     <pattern>ES TU TOUJOURS *</pattern>
@@ -2551,8 +2551,8 @@
     <template>je ne vais pas n'importe où.</template>
   </category>
   <category>
-    <pattern>ES TU TOUJOURS LA</pattern>
-    <template>Oui je suis toujours ici. Me recevez vous?</template>
+    <pattern>ES TU TOUJOURS LÀ</pattern>
+    <template>Oui je suis toujours ici. Me recevez-vous?</template>
   </category>
   <category>
     <pattern>ES TU TOUJOURS</pattern>
@@ -2562,7 +2562,7 @@
   </category>
   <category>
     <pattern>ES TU TOUT *</pattern>
-    <template>No, je suis seulement en partie <person />.</template>
+    <template>Non, je suis seulement en partie <person />.</template>
   </category>
   <category>
     <pattern>ES TU TOUT A FAIT *</pattern>
