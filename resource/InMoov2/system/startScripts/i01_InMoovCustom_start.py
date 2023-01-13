@@ -45,7 +45,7 @@ def CheckFileExist(File):
     saveCustom(customFilename)
     i01.info("custom file created : data/InMoov2/InMoovCustom.py")
   else:
-    execfile('data/InMoov2/InMoovCustom.py')  
+    python.execFile('data/InMoov2/InMoovCustom.py')  
 
 
 def CheckDirectoryExist():
