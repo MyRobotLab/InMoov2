@@ -35,6 +35,11 @@ def saveCustom(customFilename):
     "## move the index servo\n"
     "#i01_rightHand_index.moveTo(20)\n"
     "\n"
+    "#def myScript1():\n"
+    "###execfile('data/InMoov2/myScript1.py')\n"
+    "#def myScript2():\n"
+    "###execfile('data/InMoov2/myScript2.py')\n"
+    "\n"
     ]
     customWriter.writelines(L)
     customWriter.close()
