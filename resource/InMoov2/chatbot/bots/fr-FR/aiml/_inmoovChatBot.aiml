@@ -247,7 +247,7 @@
 	        	<mrl> 
 	        		<service>i01.audioPlayer</service>
 	            	<method>play</method> 
-	            	<param>InMoov\system\sounds\startupsound.mp3</param>
+	            	<param>resource\InMoov2\system\sounds\startupsound.mp3</param>
 	         	</mrl>
 	    	</oob>
 	    </template>
