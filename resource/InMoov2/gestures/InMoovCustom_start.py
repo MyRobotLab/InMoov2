@@ -40,7 +40,7 @@ def saveCustom(customFilename):
     "## Another example, this could be executed via aiml:\n"
     "def myScripts():\n"
     "  execfile('data/InMoov2/myScript1.py')\n"
-    "  execfile('data/InMoov2/myScript2.py')\n"
+    "  execfile('myScript2.py')\n"
     "\n"
     "## Another example, that could be executed via aiml:\n"
     "def myScript2():\n"
@@ -56,10 +56,10 @@ def CheckFileExist(File):
     saveCustom(customFilename)
     runtime.info("custom file created : data/InMoov2/InMoovCustom.py")
     python.execFile('data/InMoov2/InMoovCustom.py')
-    execfile('data/InMoov2/InMoovCustom.py')
+    #execfile('data/InMoov2/InMoovCustom.py')
   else:
     python.execFile('data/InMoov2/InMoovCustom.py')
-    execfile('data/InMoov2/InMoovCustom.py')
+    #execfile('data/InMoov2/InMoovCustom.py')
 
 
 def CheckDirectoryExist():
