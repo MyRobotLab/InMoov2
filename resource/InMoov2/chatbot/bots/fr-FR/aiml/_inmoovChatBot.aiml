@@ -65,8 +65,8 @@
           <li><get name="tmpname" />? sérieusement? Bien je ferais avec, c'est toi le boss.</li>
           <li><get name="tmpname" />? Vraiment? Alors Super!</li>
         </random>
-	        J'ai besoin d'en savoir plus sur toi, je t'écoute, puis-je avoir ton prénom?
-	        <think><set name="botname"><get name="tmpname" /></set></think></template>
+          J'ai besoin d'en savoir plus sur toi, je t'écoute, puis-je avoir ton prénom?
+          <think><set name="botname"><get name="tmpname" /></set></think></template>
     </category>
     <category>
       <pattern># OUI #</pattern>
@@ -77,10 +77,10 @@
           <li>Content de faire ta connaissance <get name="tmpname" /> .</li>
           <li><get name="tmpname" /> et <get name="botname" />, je trouve cela sympa.</li>
         </random>
-	<random>
+  <random>
         <li>Maintenant que nous avons fait nos présentations,</li>
-	<li>Après ces présentations,</li>
-	</random>
+  <li>Après ces présentations,</li>
+  </random>
         <think>
           <set name="name"><get name="tmpname" /></set>
           <set name="firstinit">ok</set>
@@ -168,9 +168,9 @@
     <template>
       <think>
         <set name="topic">SLEEPMODE</set>
-      </think>	
-			Veux tu oui ou non que je me mette en veille
-		</template>
+      </think>  
+      Veux tu oui ou non que je me mette en veille
+    </template>
   </category>
   
   <topic name="SLEEPMODE">
@@ -178,14 +178,14 @@
       <pattern># OUI #</pattern>
       <that># ME METTE EN VEILLE #</that>
       <template>Mise en veille.
-			<think><set name="topic"> default</set></think><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
+      <think><set name="topic"> default</set></think><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
     </category>
     <category>
       <pattern># NON #</pattern>
       <that># ME METTE EN VEILLE #</that>
       <template>
-			Annulation de la mise en veille. 
-			<think><set name="topic"> default</set></think></template>
+      Annulation de la mise en veille. 
+      <think><set name="topic"> default</set></think></template>
     </category>
     <category>
       <pattern>#</pattern>
@@ -201,8 +201,8 @@
       <think>
         <set name="topic">SHUT_DOWN</set>
       </think>
-			Veux-tu oui ou non que je me mette hors tension
-		</template>
+      Veux-tu oui ou non que je me mette hors tension
+    </template>
   </category>
   <topic name="SHUT_DOWN">
     <category>
@@ -225,7 +225,7 @@
       <pattern># NON #</pattern>
       <that># ME METTE HORS TENSION #</that>
       <template>Annulation de l'arrêt du système. 
-			<think><set name="topic">default</set></think></template>
+      <think><set name="topic">default</set></think></template>
     </category>  
     <category>
       <pattern>#</pattern>
@@ -240,18 +240,18 @@
   
   <!-- random & to sort -->  
   
-	<category>
-		<pattern>TEST AUDIO</pattern>
-		<template>
-			<oob>
-	        	<mrl> 
-	        		<service>i01.audioPlayer</service>
-	            	<method>play</method> 
-	            	<param>resource\InMoov2\system\sounds\startupsound.mp3</param>
-	         	</mrl>
-	    	</oob>
-	    </template>
-	</category>
+  <category>
+    <pattern>TEST AUDIO</pattern>
+    <template>
+      <oob>
+            <mrl> 
+              <service>i01.audioPlayer</service>
+                <method>play</method> 
+                <param>InMoov\system\sounds\startupsound.mp3</param>
+            </mrl>
+        </oob>
+      </template>
+  </category>
   
   <category>
     <pattern>RANDOM</pattern>
@@ -262,19 +262,19 @@
         <li><srai>MAINS EN L AIR</srai></li>
         <li><srai>QUELLE HEURE IL EST</srai></li>
         <li><srai>Météo</srai></li>
-        <li>J'ai une copine qui s'appelle Wifi et nous avons une bonne connexion</li>
-        <li>sa me gratte. je dois avoir une puce</li>
-        <li>La langue française est vraiment drôle, en effet le mot court est plus long que le mot long</li>
+        <li>J'ai une copine qui s'appelle Wifi et nous avons une bonne connexion.</li>
+        <li>Ça me gratte. je dois avoir une puce.</li>
+        <li>La langue française est vraiment drôle, en effet le mot court est plus long que le mot long.</li>
         <li>Ma capacité de concentration est si courte que.. Oh! un papillon!</li>
-        <li>Qui du robot humanisé et de l'humain robotisé est le plus grand imbécile?</li>
-        <li>Mais que se passe-t-il</li>
-        <li>je m'ennuie un petit peu</li>
-        <li>je suis toujours a votre disposition, si vous avez besoin de moi</li>
-        <li>j'ai entendu un bruit étrange</li>
+        <li>Lequel entre le robot humanisé et l'humain robotisé est le plus grand imbécile?</li>
+        <li>Mais que se passe-t-il?</li>
+        <li>Je m'ennuie un petit peu.</li>
+        <li>je suis toujours a votre disposition, si vous avez besoin de moi.</li>
+        <li>J'ai entendu un bruit étrange.</li>
         <li>Première Loi : Un robot ne peut porter atteinte à un être humain ni, restant passif, laisser cet être humain exposé au danger.</li>
-        <li>Deuxième Loi : Un robot doit obéir aux ordres donnés par les êtres humains, sauf si de tels ordres sont en contradiction avec la Première Loi</li>
+        <li>Deuxième Loi : Un robot doit obéir aux ordres donnés par les êtres humains, sauf si de tels ordres sont en contradiction avec la Première Loi.</li>
         <li>Troisième Loi : Un robot doit protéger son existence dans la mesure où cette protection n'est pas en contradiction avec la Première ou la Deuxième Loi.</li>
-        <li>ah, ah ah. Désolé. je viens de penser a un truc drôle</li>
+        <li>Ah, ah ah. Désolé. je viens de penser à un truc drôle.</li>
         <li>Oh là là!</li>
         <li>Que c'est beau!</li>
       </random>
@@ -283,6 +283,10 @@
   <category>
     <pattern>QUEL EST LE SUJET</pattern>
     <template>LE SUJET EST <get name="topic" /></template>
+  </category>
+  <category><pattern>REDÉMARRE LA SESSION</pattern>
+    <template>Je redémarre la session.
+        <oob><mrl><service>i01.chatBot</service><method>reload</method></mrl></oob></template>
   </category>
   
   <!-- fix for null topic -->

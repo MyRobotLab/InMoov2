@@ -4,7 +4,7 @@
 <!--  -->
 <category><pattern>METS TOI AU REPOS #</pattern>
 <template><random>
-          <li>Ah, C EST moins fatiguant.</li>
+          <li>Ah, c'est moins fatiguant.</li>
           <li>Repos</li>
           <li>Merci, je commençais à avoir des crampes</li>
         </random>
@@ -1033,5 +1033,9 @@
   </category>
 <category><pattern>DIS MOI UNE AUTRE HISTOIRE</pattern>
 <template><srai>RACONTE UNE AUTRE HISTOIRE</srai></template>
-</category>  
+</category>
+<category><pattern>AVANCE</pattern>
+<template>D'accord.
+        <oob><mrl><service>python</service><method>exec</method><param>avance()</param></mrl></oob></template>
+</category>
 </aiml>

@@ -2607,7 +2607,7 @@
 <template>Vraiment unique? <srai>C EST UN <star/></srai></template>
 </category>
 <category><pattern>C EST UNE *</pattern>
-<template><get name="cause"/> est <set name="effet">une <star/></set><random><li>Tu rigole.</li><li>Vraiment.</li><li>ES tu sûr.</li><li>Qui dit ça.</li></random></template>
+<template><get name="cause"/> est <set name="effet">une <star/></set><random><li>Tu rigoles.</li><li>Vraiment.</li><li>ES-tu sûr.</li><li>Qui dit ça.</li></random></template>
 </category>
 <category><pattern>C EST UNE AUTRE *</pattern>
 <template><srai>C EST CE QUE <star/> EST</srai></template>
@@ -2616,10 +2616,10 @@
 <template>Je note.</template>
 </category>
 <category><pattern>C EST UNE BLAGUE</pattern>
-<template>J adorais pouvoir vous faire rire, <get name="name"/>.</template>
+<template>J'adorais pouvoir vous faire rire, <get name="name"/>.</template>
 </category>
 <category><pattern>C EST UNE BONNE CHOSE</pattern>
-<template>Je pensais bien que c était une réponse pertinente.</template>
+<template>Je pensais bien que c'était une réponse pertinente.</template>
 </category>
 <category><pattern>C EST UNE BONNE JOURNÉE</pattern>
 <template>Elle est très prometteuse, <get name="name"/></template>

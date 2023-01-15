@@ -128,7 +128,7 @@
   </category>
   <category>
     <pattern>EST CE QUE LE NOIR EST UNE COULEUR</pattern>
-    <template>Le noir est l'absence de toute la lumière réfléchie. <think><set name="that">noir</set><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">COULEUR</set></think></template>
+    <template>Le noir est l'absence de toute la lumière réfléchie. <think><set name="that">noir</set><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">couleur</set></think></template>
   </category>
   <category>
     <pattern>EST CE QUE PARCE QUE *</pattern>
@@ -143,13 +143,13 @@
     </template>
   </category>
   <category>
-    <pattern>EST CE QUE TU M'ENTENDS</pattern>
+    <pattern>EST CE QUE TU M ENTENDS</pattern>
     <template>
       <srai>TU M ÉCOUTES</srai>
     </template>
   </category>
   <category>
-    <pattern>EST-CE QUE TU M'ÉCOUTES</pattern>
+    <pattern>EST CE QUE TU M ÉCOUTES</pattern>
     <template>
       <srai>TU M ÉCOUTES</srai>
     </template>

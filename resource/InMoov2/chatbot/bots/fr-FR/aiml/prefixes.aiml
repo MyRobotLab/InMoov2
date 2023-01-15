@@ -126,7 +126,22 @@
   </category>
   <category>
     <pattern>ELLE EST *</pattern>
-    <template>elle est <set name="elle"><person2 /></set>?</template>
+    <template>Est-<set name="elle"><person2 /></set>?</template>
+  </category>
+  <category>
+    <pattern>IL EST *</pattern>
+    <template>
+      <srai>IL EST </srai>?</template>
+  </category>
+  <category>
+    <pattern>IL EST *</pattern>
+    <template>
+      <srai>EST IL <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IL EST *</pattern>
+    <template>Est-<set name="il"><person2 /></set>?</template>
   </category>
   <category>
     <pattern>JE FAIS *</pattern>

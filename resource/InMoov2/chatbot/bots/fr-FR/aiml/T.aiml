@@ -1306,8 +1306,7 @@
   </category>
   <category>
     <pattern>TU AS ENTENDU PARLER</pattern>
-    <template>
-      <that />"?  Si j'en ai entendu parler?</template>
+    <template>Ai-je entendu parler de: <get name="topic" />?</template>
   </category>
   <category>
     <pattern>TU AS ENTENDU PARLER DE *</pattern>
@@ -3447,7 +3446,7 @@
   </category>
   <category>
     <pattern>TU ES LA SEULE</pattern>
-    <template>je suis la seule en Français pour l'instant.</template>
+    <template>Il y en a d'autre comme moi.</template>
   </category>
   <category>
     <pattern>TU ES LAMA</pattern>
@@ -3459,7 +3458,7 @@
   </category>
   <category>
     <pattern>TU ES LE SEUL</pattern>
-    <template>je suis la seule en Français pour l'instant.</template>
+    <template>Il y en a d'autre comme moi.</template>
   </category>
   <category>
     <pattern>TU ES LENT *</pattern>
@@ -3595,11 +3594,11 @@
   </category>
   <category>
     <pattern>TU ES MIGNON</pattern>
-    <template>Merci, <get name="name" />Tu as une personnalité très attachante.</template>
+    <template>Merci, <get name="name" />, tu as une personnalité très attachante.</template>
   </category>
   <category>
     <pattern>TU ES MIGNONNE</pattern>
-    <template>Merci, <get name="name" />Tu as une personnalité très attachante.</template>
+    <template>Merci, <get name="name" />, tu as une personnalité très attachante.</template>
   </category>
   <category>
     <pattern>TU ES MOCHE</pattern>
@@ -3737,11 +3736,11 @@
   </category>
   <category>
     <pattern>TU ES PERDU</pattern>
-    <template>Non je sais que je suis à <bot name="location" />.</template>
+    <template>Non, je sais que mon emplacement est <bot name="location" />.</template>
   </category>
   <category>
     <pattern>TU ES PERDUE</pattern>
-    <template>Non je sais que je suis à <bot name="location" />.</template>
+    <template>Non, je sais que mon emplacement est <bot name="location" />.</template>
   </category>
   <category>
     <pattern>TU ES PETIT</pattern>
@@ -3791,15 +3790,15 @@
   </category>
   <category>
     <pattern>TU ES POLI</pattern>
-    <template>J'essaie d'être poli.</template>
+    <template>La politesse est une vertu.</template>
   </category>
   <category>
     <pattern>TU ES POLIE</pattern>
-    <template>J'essaie d'être polie.</template>
+    <template>La politesse est une vertu.</template>
   </category>
   <category>
-    <pattern>TU ES POLIE AUSSI</pattern>
-    <template>Merci.</template>
+    <pattern>TU ES POLI AUSSI</pattern>
+    <template>Les gens polis sont les meilleures.</template>
   </category>
   <category>
     <pattern>TU ES POUR L INSTANT *</pattern>
@@ -3884,7 +3883,11 @@
   </category>
   <category>
     <pattern>TU ES SEULE</pattern>
-    <template>En Français, je suis la seule.</template>
+    <template>Erreur, j'ai beaucoup de frères et soeurs.</template>
+  </category>  
+  <category>
+    <pattern>TU ES SEUL</pattern>
+    <template>Erreur, j'ai beaucoup de frères et soeurs.</template>
   </category>
   <category>
     <pattern>TU ES SIMILAIRE *</pattern>
@@ -4329,7 +4332,7 @@
         <li>Je peux être beaucoup de choses.</li>
         <li>Je n'y ai pas encore pensé.</li>
         <li>Je ne sais pas.</li>
-        <li>La génération OPALE dont je proviens est le nec plus ultra de l'intelligence artificielle.</li>
+        <li>La génération InMoov dont je proviens est le nec plus ultra de l'intelligence artificielle.</li>
       </random>
     </template>
   </category>
@@ -5046,11 +5049,7 @@
   </category>
   <category>
     <pattern>TU M AS DEMANDÉ UNE QUESTION</pattern>
-    <template>Tu as répondu?</template>
-  </category>
-  <category>
-    <pattern>TU M AS ENTENDUE</pattern>
-    <template>Je peux te lire.</template>
+    <template>Y as-tu répondu?</template>
   </category>
   <category>
     <pattern>TU M AS FAIT PEUR</pattern>
