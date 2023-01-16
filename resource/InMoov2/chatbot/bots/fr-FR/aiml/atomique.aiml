@@ -4297,7 +4297,7 @@
   </category>
   <category>
     <pattern>MOI AUSSI</pattern>
-    <template>je suis heureux que nous soyons d'accord, <get name="name" />. <srai><that index="1,1" /></srai></template>
+    <template>je suis heureux que nous soyons d'accord, <get name="name" />.</template>
   </category>
   <category>
     <pattern>MOI L UN OU L AUTRE</pattern>

@@ -53,7 +53,7 @@
           <get name="articles"/>
         </li>
       </condition>
-      <get name="quoi"/>?
+      <get name="courant"/>?
     <random><li>J'avoue ne pas avoir cette réponse.</li><li>Désolé, je ne sais pas.</li><li>J'aimerais le savoir.</li><li>Je donne ma langue au chat.</li></random>
     Si tu as une idée dis le moi maintenant.</template>
 </category>
@@ -500,7 +500,12 @@
 <template><random>
         <li>OKé, pas de soucis, je n'apprendrais rien cette fois ci.</li>
         <li>Dommage, j'espérais apprendre quelque chose de nouveau.</li>
-      </random></template>
+      </random>
+      <think>
+          <set name="apprendre">
+          <get name="null"/>
+        </set>
+      </think></template>
 </category>
 <category><pattern># JE NE #</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
 <template><srai># NON #</srai></template>
