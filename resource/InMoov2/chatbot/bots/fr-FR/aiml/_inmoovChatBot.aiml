@@ -123,6 +123,100 @@
     </category>
   </topic>
   <!-- end initialisaion routine -->
+
+<category><pattern>NEW_INIT</pattern>
+<template><think>
+        <set name="newinit">started</set>
+      </think>
+      <think>
+        <set name="topic">newinit</set>
+      </think>
+        Je t'écoutes. Quel est mon nouveau nom ?</template>
+</category>
+<topic name="NEWINIT">
+<category><pattern>#</pattern><that># QUEL EST MON NOUVEAU NOM #</that>
+<template><set name="questionnewinit">Si mon nouveau nom est <star/> , dit oui ou non ou stop</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="NEWINIT">
+<category><pattern># OUI #</pattern><that># SI MON NOUVEAU NOM EST #</that>
+<template><random>
+            <li>
+            J'aime ce nom , <get name="tmpname"/>.
+            </li>
+            <li>
+            Super, j'aime ce nouveau nom, <get name="tmpname"/>.
+            </li>
+        </random>
+    <think>
+        <set name="botname"><get name="tmpname"/></set>
+        <set name="newinit"></set>
+        <set name="topic">changement nom</set>
+    </think>
+</template>
+</category></topic>
+
+<topic name="NEWINIT">
+<category><pattern># NON #</pattern><that># SI MON NOUVEAU NOM EST #</that>
+<template>Je recommence, je t'écoutes. Quel est mon nouveau nom?</template>
+</category></topic>
+
+<topic name="NEWINIT">
+<category><pattern># STOP #</pattern><that># SI MON NOUVEAU NOM EST #</that>
+<template>Bien je garde <get name="botname"/> comme nom.</template>
+</category></topic>  
+
+
+
+<category><pattern>NEW_INIT_USER</pattern>
+<template><think>
+        <set name="newinituser">started</set>
+      </think>
+      <think>
+        <set name="topic">newinituser</set>
+      </think>
+        Je t'écoutes. Quel est ton nouveau nom?</template>
+</category>
+
+<topic name="NEWINITUSER">
+<category><pattern>#</pattern><that># QUEL EST TON NOUVEAU NOM #</that>
+<template><set name="questionnewinituser">Si ton nouveau nom est <star/> , dit oui ou non ou stop</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="NEWINITUSER">
+<category><pattern># OUI #</pattern><that># SI TON NOUVEAU NOM EST #</that>
+<template><random>
+            <li>Je suis content de faire connaissance, <get name="tmpname"/>.</li>
+            <li>Enchanté, <get name="tmpname"/>.</li>
+        </random>
+    <think>
+        <set name="name"><get name="tmpname"/></set>
+        <set name="newinituser"></set>
+        <set name="topic">changement de nom</set>
+    </think>
+</template>
+</category></topic>
+
+<topic name="NEWINITUSER">
+<category><pattern># NON #</pattern><that># SI TON NOUVEAU NOM EST #</that>
+<template>Je recommence.
+    Je t'écoutes. Quel est ton nouveau nom ?</template>
+</category></topic>
+
+<topic name="NEWINITUSER">
+<category><pattern># STOP #</pattern><that># SI TON NOUVEAU NOM EST #</that>
+<template>Ok, je ne modifie pas ton nom, <get name="name"/></template>
+</category></topic>
   
   <!-- wakeup action ( WAKE_UP is globalized )-->
   <category>
@@ -247,7 +341,7 @@
             <mrl> 
               <service>i01.audioPlayer</service>
                 <method>play</method> 
-                <param>InMoov\system\sounds\startupsound.mp3</param>
+                <param>resource\InMoov2\system\sounds\startupsound.mp3</param>
             </mrl>
         </oob>
       </template>

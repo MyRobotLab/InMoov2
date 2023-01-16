@@ -64,11 +64,11 @@ Avant Cela nous parlions de <get name="oldtopic" />.
         <person /></srai>
     </template>
   </category>
-    <category>
+  <category>
     <pattern>INFINITE LOOP</pattern>
     <template>
 désolé, j'ai une boucle!!!
-<think><set name="memoriser">boucle SÛR "<input />" dans le contexte : <get name="topic" /> pour "<get name="name" />"</set></think><think><gossip><get name="memoriser" /></gossip></think></template>
+<think><set name="memoriser">boucle sur "<input />" dans le contexte : <get name="topic" /> pour "<get name="name" />"</set></think><think><gossip><get name="memoriser" /></gossip></think></template>
   </category>
   <category>
     <pattern>CATCHALL</pattern>
@@ -86,11 +86,11 @@ désolé, j'ai une boucle!!!
         </gossip>
       </think>
       <condition>
-        <li name="apprendre" value="oui">que veut dire <get name="quoi" />?
+        <li name="apprendre" value="oui"><srai>SYSTEM_LEARNING</srai>
 		<think><set name="oldtopic"><topic /></set><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">comprendre</set></think></li>
         <li>
-          <srai>confusion</srai>
-</li>
+          <srai>CONFUSION</srai>
+        </li>
       </condition>
     </template>
   </category>

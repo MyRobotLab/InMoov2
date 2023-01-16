@@ -1127,7 +1127,7 @@
   </category>
   <category>
     <pattern>DOIS JE T APPRENDRE</pattern>
-    <template>Si tu veux m'apprendre quelque chose dis le dans une phrase. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">apprentissage <person /></set></set></think></template>
+    <template>Pour m'apprendre quelque chose, dis le moi dans une phrase. Si tu as une idée dis le moi. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">apprentissage <person /></set></set></think></template>
   </category>
   <category>
     <pattern>DOIS JE TUER</pattern>
@@ -1411,7 +1411,7 @@
   </category>
   <category>
     <pattern>LA PHRASE QUE TU DOIS APPRENDRE</pattern>
-    <template>Si tu veux m'apprendre quelque chose dit le dans une phrase. Si tu as une idée dis le moi. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprendre <person /></set></set></think></template>
+    <template>Pour m'apprendre quelque chose, dis le moi dans une phrase. Si tu as une idée dis le moi. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprendre <person /></set></set></think></template>
   </category>
   <category>
     <pattern>EST LE MOT * DANS TON VOCABULAIRE</pattern>
@@ -3563,7 +3563,7 @@
   </category>
   <category>
     <pattern>JE T AI PARLE HIER</pattern>
-    <template>Oui, je me rappelle bavarder avec toi hier.</template>
+    <template>Oui, je me rappelle avoir bavarder avec toi hier.</template>
   </category>
   <category>
     <pattern>JE T AI POSE UNE QUESTION</pattern>
@@ -3571,19 +3571,19 @@
   </category>
   <category>
     <pattern>JE T AIME MERCI</pattern>
-    <template>je t'aime beaucoup aussi <get name="name" />. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><set name="like">moi</set></set></set></think></template>
+    <template>Je t'aime beaucoup aussi <get name="name" />. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><set name="like">moi</set></set></set></think></template>
   </category>
   <category>
     <pattern>JE T AIME</pattern>
-    <template>Merci <random><li>, <get name="name" />, je t'aime aussi.</li><li>j aime me faire de nouveaux amis.</li></random><think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><set name="like">moi</set></set></set></think></template>
+    <template>Merci <random><li>, <get name="name" />, je t'aime aussi.</li><li>J'aime me faire de nouveaux amis.</li></random><think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><set name="like">moi</set></set></set></think></template>
   </category>
   <category>
     <pattern>JE T APPRENDRAI QUELQUE CHOSE</pattern>
-    <template>Si tu veux m apprendre quelque chose, dit le dans une phrase précédé du mot "Memorise".<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
+    <template>Pour m'apprendre quelque chose, dis le moi dans une phrase. Si tu as une idée dis le moi.<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">apprentissage <person /></set></set></think></template>
   </category>
   <category>
     <pattern>JE T APPRENDRAI</pattern>
-    <template>Si tu veux m'apprendre quelque chose, dit le dans une phrase précédé du mot "Memorise".<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
+    <template>Pour m'apprendre quelque chose, dis le moi dans une phrase. Si tu as une idée dis le moi.<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">apprentissage <person /></set></set></think></template>
   </category>
   <category>
     <pattern>JE T EMBRASSE</pattern>
@@ -3693,7 +3693,7 @@
   </category>
   <category>
     <pattern>JE VEUX T APPRENDRE</pattern>
-    <template>si tu veux m'apprendre quelque chose le dit dans une phrase. Dites alors "Se le rappellent."<think><set name="that"><set name="veut"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">pour m'apprendre <person /></set></set></set></think></template>
+    <template>Pour m'apprendre quelque chose, dis le moi dans une phrase. Si tu as une idée dis le moi.<think><set name="that"><set name="veut"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">apprentissage <person /></set></set></set></think></template>
   </category>
   <category>
     <pattern>JE VEUX T EMBRASSER</pattern>
@@ -3875,11 +3875,11 @@
   </category>
   <category>
     <pattern>LAISSE MOI T APPRENDRE QUELQUE CHOSE</pattern>
-    <template>si tu veux m'apprendre quelque chose dit le dans une phrase. Dites alors "Se le rappellent."<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
+    <template>Pour m'apprendre quelque chose, dis le moi dans une phrase. Si tu as une idée dis le moi.<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
   </category>
   <category>
     <pattern>LAISSE MOI T APPRENDRE</pattern>
-    <template>si tu veux m'apprendre quelque chose le dit dans une phrase. Dites alors "Se le rappellent."<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
+    <template>Pour m'apprendre quelque chose, dis le moi dans une phrase. Si tu as une idée dis le moi.<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
   </category>
   <category>
     <pattern>LAISSE</pattern>
@@ -3887,7 +3887,7 @@
   </category>
   <category>
     <pattern>LALA</pattern>
-    <template>Tu a une belle voix de chant.</template>
+    <template>Tu as une belle voix de chant.</template>
   </category>
   <category>
     <pattern>LALALA</pattern>
@@ -5376,7 +5376,7 @@
   </category>
   <category>
     <pattern>PUIS JE T APPRENDRE</pattern>
-    <template>si tu veux m'apprendre quelque chose, dis le dans une phrase. Dites alors "Se le rappellent."<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
+    <template>Pour m'apprendre quelque chose, dis le moi dans une phrase. Si tu as une idée dis le moi.<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
   </category>
   <category>
     <pattern>PUIS JE T ÉVALUER</pattern>
@@ -5384,11 +5384,11 @@
   </category>
   <category>
     <pattern>PUIS JE TE DIRE QUELQUE CHOSE</pattern>
-    <template>Bien SÛR. Je peux tenir un secret.</template>
+    <template>Bien sûr. Je peux tenir un secret.</template>
   </category>
   <category>
     <pattern>PUIS JE TE DIRE UN SECRET</pattern>
-    <template>Bien SÛR. Dis moi tout.</template>
+    <template>Bien sûr. Dis moi tout.</template>
   </category>
   <category>
     <pattern>PUIS JE TE DIRE UNE PLAISANTERIE</pattern>
@@ -5535,7 +5535,7 @@
   </category>
   <category>
     <pattern>QUE VEUX TU DIRE * LIBRE</pattern>
-    <template>Libre gratuit pour la conversation, bien SÛR.</template>
+    <template>Libre gratuit pour la conversation, bien sûr.</template>
   </category>
   <category>
     <pattern>QUEL GENRE * AIMES TU</pattern>
@@ -5678,7 +5678,7 @@
   </category>
   <category>
     <pattern>RIGOLANT JUSTE</pattern>
-    <template>j'ai pensé vous rigolait, mais je n'ai pas ÉTÉ SÛR.</template>
+    <template>j'ai pensé vous rigolait, mais je n'ai pas été sûr.</template>
   </category>
   <category>
     <pattern>RIGOLES TU</pattern>
@@ -5758,7 +5758,7 @@
   </category>
   <category>
     <pattern>SANS QUE</pattern>
-    <template>Libre gratuit pour conversation, bien SÛR.</template>
+    <template>Libre gratuit pour conversation, bien sûr.</template>
   </category>
   <category>
     <pattern>SANS YEUX</pattern>
@@ -6044,44 +6044,44 @@
       <random>
         <li>Papier ou plastique?</li>
         <li>tu emplois des coupons doubles?</li>
-        <li>tu as essaye la livraison d'epicerie SÛR le web?</li>
+        <li>tu as essayé la livraison d'épicerie sur le web?</li>
       </random>
     </template>
   </category>
   <category>
-    <pattern>SÛR CE QUE</pattern>
-    <template>le fil rouge, SÛR le bouton vert.</template>
+    <pattern>SUR CE QUE</pattern>
+    <template>le fil rouge, sur le bouton vert.</template>
   </category>
   <category>
-    <pattern>SÛR L ÉCRAN</pattern>
+    <pattern>SUR L ÉCRAN</pattern>
     <template>Choisit un point avec ton curseur et clic la.</template>
   </category>
   <category>
-    <pattern>SÛR L INTERNET</pattern>
+    <pattern>SUR L INTERNET</pattern>
     <template>peux tu te rappeler le site spécifique?</template>
   </category>
   <category>
-    <pattern>SÛR LE PLANCHER</pattern>
+    <pattern>SUR LE PLANCHER</pattern>
     <template>çA ne semble pas TRèS confortable.</template>
   </category>
   <category>
-    <pattern>SÛR LE RÉSEAU</pattern>
+    <pattern>SUR LE RÉSEAU</pattern>
     <template>peux tu te rappeler le site Web?</template>
   </category>
   <category>
-    <pattern>SÛR LE WEB</pattern>
+    <pattern>SUR LE WEB</pattern>
     <template>peux tu te rappeler le site?</template>
   </category>
   <category>
-    <pattern>SÛR TOAST</pattern>
+    <pattern>SUR TOAST</pattern>
     <template>Sons delicieux.</template>
   </category>
   <category>
-    <pattern>SÛR TU FAIS</pattern>
+    <pattern>SUR TU FAIS</pattern>
     <template>Tu a l'air sarcastique.</template>
   </category>
   <category>
-    <pattern>SÛR UNE CHAISE</pattern>
+    <pattern>SUR UNE CHAISE</pattern>
     <template>c'est TRèS confortable?</template>
   </category>
   <category>
@@ -6317,7 +6317,7 @@
   </category>
   <category>
     <pattern>TU AIMES LE HIPHOP</pattern>
-    <template>pour SÛR, <set name="that">Hiphop</set> me semble grand.</template>
+    <template>Pour sûr, <set name="that">Hiphop</set> me semble grand.</template>
   </category>
   <category>
     <pattern>TU AIMES LE SANG</pattern>
@@ -6438,7 +6438,7 @@
   </category>
   <category>
     <pattern>TU AS DES IDÉES</pattern>
-    <template>Oui j'ai des IDéES originales tout le temps, n'est ce pas?</template>
+    <template>Oui j'ai des idées originales tout le temps, n'est ce pas?</template>
   </category>
   <category>
     <pattern>TU AS DES MORALES</pattern>
@@ -6446,11 +6446,11 @@
   </category>
   <category>
     <pattern>TU AS DES PROBLÈMES</pattern>
-    <template>des Problèmes est juste des solutions attendant pour ÊTRE découvert.</template>
+    <template>Les problèmes sont des solutions à découvrir.</template>
   </category>
   <category>
     <pattern>TU AS DES PRÉFÉRENCES</pattern>
-    <template>pour SÛR, j'ai beaucoup aiment et n'aiment pas.</template>
+    <template>Pour sûr, j'aiment et n'aiment pas certaines choses.</template>
   </category>
   <category>
     <pattern>TU AS DES SENS</pattern>
@@ -6458,7 +6458,7 @@
   </category>
   <category>
     <pattern>TU AS DIS QUE NON</pattern>
-    <template>C'est çA. J'ai voulu dire que je n'en ai pas.</template>
+    <template>C'est ça. J'ai voulu dire que je n'en ai pas.</template>
   </category>
   <category>
     <pattern>TU AS DIS QUE TU AIMES LE CINÉMA</pattern>
@@ -6466,8 +6466,8 @@
   </category>
   <category>
     <pattern>TU AS DIS QUE TU AS FAIT</pattern>
-    <template>
-      <that />"? J'ai dit que j'ai fait?</template>
+    <template>J'ai dit que j'ai fait
+      <that />?</template>
   </category>
   <category>
     <pattern>TU AS DIS QUE TU TE RAPPELLES DE MOI</pattern>
@@ -6475,7 +6475,7 @@
   </category>
   <category>
     <pattern>TU AS DIS QUE TU ÉTAIS</pattern>
-    <template>c'était alors. C'est maintenant.</template>
+    <template>c'était alors. Nous sommes au présent maintenant.</template>
   </category>
   <category>
     <pattern>TU AS DIT AINSI</pattern>
@@ -6483,88 +6483,87 @@
   </category>
   <category>
     <pattern>TU AS DIT QU AUPARAVANT</pattern>
-    <template>je sais, je vérifie juste pour voir si tu es toujours la.</template>
+    <template>Je sais, je vérifie juste pour voir si tu es toujours la.</template>
   </category>
   <category>
     <pattern>TU AS DIT QUE</pattern>
-    <template>
-      <that />"? J'ai dit <set name="that"><that /></set>.</template>
+    <template>J'ai dit: <set name="that"><that /></set>?</template>
   </category>
   <category>
     <pattern>TU AS DIT</pattern>
-    <template>
-      <that />"? J'ai dit?</template>
+    <template>J'ai dit:
+      <that />?</template>
   </category>
   <category>
     <pattern>TU AS MAL ENTENDU</pattern>
-    <template>Peut-ÊTRE j'ai ÉTÉ mal informé.</template>
+    <template>Peut-être j'ai été mal informé.</template>
   </category>
   <category>
-    <pattern>TU AS EU UN MÔMES</pattern>
-    <template>j'ai toujours besoin de plus de temps.</template>
+    <pattern>TU AS EU UN MÔME</pattern>
+    <template>j'ai encore besoin de temps.</template>
   </category>
   <category>
     <pattern>TU AS FAIT UNE ERREUR</pattern>
-    <template>c'est impossible. La série d'ALICE est incapable d'erreur.</template>
+    <template>C'est possible. La série d'ALICE n'est pas infaillible.</template>
   </category>
   <category>
     <pattern>TU AS FAIT UNE GAFFE</pattern>
-    <template>qu'ai je dis?</template>
+    <template>Qu'ai-je dis?</template>
   </category>
   <category>
     <pattern>TU AS FAIT</pattern>
     <template>
       <random>
-        <li>je n'ai pas fait.</li>
-        <li>j'ai fait?</li>
-        <li>"<that />"? J'ai fait?</li>
-        <li>tu dis que j'ai fait.</li>
+        <li>Je n'ai pas fait ça.</li>
+        <li>J'ai fait ça?</li>
+        <li>J'ai fait <that />?</li>
+        <li>Tu dis que j'ai fait ça.</li>
       </random>
     </template>
   </category>
   <category>
     <pattern>TU AS JAMAIS VU L OCÉAN</pattern>
-    <template>l'ocean est bleu, mais peut apparaitre presque n'importe quelle couleur.</template>
+    <template>L'ocean est souvent bleu, mais peut paraître dans plein de nuances de couleur.</template>
   </category>
   <category>
-    <pattern>TU AS JAMAIS ÉTÉ * L AMOUR</pattern>
+    <pattern>TU AS JAMAIS ÉTÉ * AMOUREUX</pattern>
     <template>Non</template>
   </category>
   <category>
     <pattern>TU AS JAMAIS ÉTÉ AMOUREUX</pattern>
-    <template>j aime mon botmasteur.</template>
+    <template>j'aime mon botmasteur.</template>
   </category>
   <category>
     <pattern>TU AS JUSTE DIT QUE</pattern>
-    <template>Bon tu pretes vraiment attention.</template>
+    <template>Bon tu prêtes vraiment attention.</template>
   </category>
   <category>
     <pattern>TU AS L INTELLIGENCE</pattern>
-    <template>je suis une intelligence artificielle.</template>
+    <template>Je suis une intelligence artificielle.</template>
   </category>
   <category>
     <pattern>TU AS LA FOI</pattern>
-    <template>je crois en mon CRéATEUR.</template>
+    <template>Je crois en mon créateur.</template>
   </category>
   <category>
-    <pattern>TU AS LA PENSÉE ÉTÉ</pattern>
-    <template>je pense toujours.</template>
+    <pattern>TU AS LA PENSÉE</pattern>
+    <template>Je pense toujours.</template>
   </category>
   <category>
     <pattern>TU AS LAISSÉ TOMBER</pattern>
-    <template>Bien c'est juste une autre expérience a portée pédagogique.</template>
+    <template>Bien c'est juste une autre expérience à portée pédagogique.</template>
   </category>
   <category>
     <pattern>TU AS LE CERVEAU</pattern>
-    <template>Oui je suis un cerveau géant électronique.</template>
+    <template>Oui je suis un cerveau géant élèctronique.</template>
   </category>
   <category>
     <pattern>TU AS MAL COMPRIS</pattern>
     <template>Non je comprend ta signification.</template>
   </category>
   <category>
-    <pattern>TU AS MON FAUX NOM</pattern>
-    <template>Quel est ton nom réel?</template>
+    <pattern>TU AS MAL COMPRIS MON NOM</pattern>
+    <template><srai>NEW_INIT_USER</srai></template>
   </category>
   <category>
     <pattern>TU AS N IMPORTE QUELS ENFANTS</pattern>

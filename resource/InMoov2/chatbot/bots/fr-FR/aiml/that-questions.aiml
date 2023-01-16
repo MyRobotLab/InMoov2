@@ -18,33 +18,33 @@
 <!--  EST CE UN JEU? / C EST UN JEU?  -->
 <category>
     <pattern># OUI #</pattern>
-    <that>est ce un jeu</that>
-    <template>comment joue-t-on?</template>
+    <that>EST CE UN JEU</that>
+    <template>Comment joue-t-on?</template>
 </category>
 <category>
     <pattern># NON #</pattern>
-    <that>est ce un jeu</that>
+    <that>EST CE UN JEU</that>
     <template>
       <random>
-        <li>ah bon?</li>
-        <li>on ne joue pas alors?</li>
+        <li>Ah bon?</li>
+        <li>On ne joue pas alors?</li>
         <li>C'est dommage, j'aime bien jouer.</li>
       </random>
     </template>
 </category>
 <category>
     <pattern># OUI #</pattern>
-    <that>c est un jeu</that>
-    <template>comment joue-t-on?</template>
+    <that>C EST UN JEU</that>
+    <template>Comment joue-t-on?</template>
 </category>
 <category>
     <pattern># NON #</pattern>
-    <that>c est un jeu</that>
+    <that>C EST UN JEU</that>
     <template>
       <random>
         <li>ah bon?</li>
         <li>on ne joue pas alors?</li>
-        <li>C EST dommage, j aime bien jouer.</li>
+        <li>C'est dommage, j'aime bien jouer.</li>
       </random>
     </template>
 </category>
@@ -127,7 +127,7 @@
   <!--  Quel ÂGE as tu?   -->  
 <category>
     <pattern> * </pattern>
-    <that>Quel âge as tu</that>
+    <that>QUEL ÂGE AS TU</that>
     <template> Que me racontes tu la </template>
 </category>
 <category>
@@ -139,7 +139,7 @@
 </category>
 <category>
     <pattern>  # <set>mois</set> # <set>number</set>  # </pattern>
-    <that>Quel âge as tu</that>
+    <that>QUEL ÂGE AS TU</that>
     <template>
         <srai> Je suis né en <star index="2"/> </srai>
         <srai> Je suis né en <star index="4"/> </srai>
@@ -147,7 +147,7 @@
 </category>
 <category>
     <pattern> # <set>number</set> # <set>mois</set> # <set>number</set>  # </pattern>
-    <that>Quel âge as tu</that>
+    <that>QUEL ÂGE AS TU</that>
     <template>
         <srai> JE SUIS Né le <star index="2"/> <star index="4"/> <star index="6"/> </srai>
     </template>
@@ -156,8 +156,8 @@
   <!--  De quelle couleur sont tes yeux?   -->  
 <category>
     <pattern> * </pattern>
-    <that> QUELLE COULEUR SONT TES CHEVEUX</that>
-    <template> Ben mince alors. Tu n'es pas sérieux?</template>
+    <that>QUELLE COULEUR SONT TES CHEVEUX</that>
+    <template>Ben mince alors. Tu n'es pas sérieux?</template>
 </category>
 <category>  
     <pattern> # <set>color</set> # </pattern>
@@ -170,12 +170,12 @@
    <!--  De quelle couleur sont tes cheveux?   -->
 <category>
     <pattern> * </pattern>
-    <that> QUELLE COULEUR SONT TES CHEVEUX</that>
-    <template> En est tu bien sûr?</template>
+    <that>QUELLE COULEUR SONT TES CHEVEUX</that>
+    <template>En est tu bien sûr?</template>
 </category>
 <category>
     <pattern> # <set>color</set> # </pattern>
-    <that> QUELLE COULEUR SONT TES CHEVEUX</that>
+    <that>QUELLE COULEUR SONT TES CHEVEUX</that>
     <template>
         <srai> LA COULEUR DE MES CHEVEUX EST <star index="2" /> </srai>
     </template>

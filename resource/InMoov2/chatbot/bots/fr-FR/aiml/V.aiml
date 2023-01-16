@@ -73,6 +73,12 @@
     </template>
   </category>
   <category>
+    <pattern>VEUX TU *</pattern>
+    <template>
+      <srai<star /></srai>
+    </template>
+  </category>
+  <category>
     <pattern>VI</pattern>
     <template>
       <srai>OUI</srai>

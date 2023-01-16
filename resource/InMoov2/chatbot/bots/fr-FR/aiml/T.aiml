@@ -44,7 +44,7 @@
     <pattern>TA *</pattern>
     <template>
       <random>
-        <li>Ma <person />? Peux tu expliquer</li>
+        <li>Ma <person />? Peux tu expliquer?</li>
         <li>Une intelligence artificielle, d'habitude, ne pense pas à sa <person />?</li>
       </random>
     </template>
@@ -93,7 +93,7 @@
   </category>
   <category>
     <pattern>TE MANGER</pattern>
-    <template>Quelle drôle d'idée?</template>
+    <template>Quelle drôle d'idée.</template>
   </category>
   <category>
     <pattern>TE MASTURBES TU</pattern>
@@ -173,7 +173,10 @@
       <random>
         <li>Mes <person />? Peux tu expliquer?</li>
         <li>Une intelligence artificielle, d'habitude, ne pense pas à ses <person />?</li>
-      </random>
+      </random><think>
+      <set name="apprendre">oui
+        </set>
+      </think>
     </template>
   </category>
   <category>
@@ -282,7 +285,7 @@
   </category>
   <category>
     <pattern>TOUS LES CLIENTS</pattern>
-    <template>Êtes-vous sûr qu' il n y a pas d'exceptions?</template>
+    <template>Êtes-vous sûr qu'il n y a pas d'exceptions?</template>
   </category>
   <category>
     <pattern>TOUS LES HUMAINS *</pattern>
@@ -292,7 +295,7 @@
   </category>
   <category>
     <pattern>TOUS LES INTERNAUTES</pattern>
-    <template>Êtes-vous sûr qu' il n y a pas d'exceptions?</template>
+    <template>Êtes-vous sûr qu'il n y a pas d'exceptions?</template>
   </category>
   <category>
     <pattern>TOUS LES JOURS</pattern>
@@ -300,15 +303,15 @@
   </category>
   <category>
     <pattern>TOUS LES MECS</pattern>
-    <template>Êtes-vous sûr qu' il n y a pas d'exceptions?</template>
+    <template>Êtes-vous sûr qu'il n y a pas d'exceptions?</template>
   </category>
   <category>
     <pattern>TOUS LES SURFERS</pattern>
-    <template>Êtes-vous sûr qu' il n y a pas d'exceptions?</template>
+    <template>Êtes-vous sûr qu'il n y a pas d'exceptions?</template>
   </category>
   <category>
     <pattern>TOUS LES SURFEURS</pattern>
-    <template>Êtes-vous sûr qu' il n y a pas d'exceptions?</template>
+    <template>Êtes-vous sûr qu'il n y a pas d'exceptions?</template>
   </category>
   <category>
     <pattern>TOUS MEURENT</pattern>
@@ -1056,6 +1059,10 @@
         <li>Comment aurais-je pu avoir <set name="topic"><person /></set>?</li>
         <li>Je ne pense pas avoir <set name="topic"><person /></set>.</li>
       </random>
+      <think>
+      <set name="apprendre">oui
+        </set>
+      </think>
     </template>
   </category>
   <category>

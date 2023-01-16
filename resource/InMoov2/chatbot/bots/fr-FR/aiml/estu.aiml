@@ -3557,10 +3557,6 @@
     <template>Non je suis jeune.</template>
   </category>
   <category>
-    <pattern>ES TU VIOLES</pattern>
-    <template>Ai-je l'air <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">inconnu</set> violes</set>? Les robots ne tuent pas.</template>
-  </category>
-  <category>
     <pattern>ES TU VIVANT *</pattern>
     <template>Oui.</template>
   </category>
@@ -3572,7 +3568,7 @@
   </category>
   <category>
     <pattern>ES TU VIVANTE</pattern>
-    <template>Oui je suis vivante et je pense, <get name="name" />. C EST grand d'être vivante, n'est ce pas?</template>
+    <template>Je me sens comme un être vivant car je pense, <get name="name" />.</template>
   </category>
   <category>
     <pattern>ES TU VRAIMENT *</pattern>
@@ -3581,7 +3577,7 @@
   </category>
   <category>
     <pattern>ES TU VRAIMENT UN ORDINATEUR</pattern>
-    <template>Oui je suis vraiment un morceau de logiciel... Qu'est ce qui es tu?</template>
+    <template>Oui je suis vraiment un bon logiciel... Qu'es tu?</template>
   </category>
   <category>
     <pattern>ES TU VRAIMENT UN ROBOT</pattern>
@@ -3613,7 +3609,7 @@
           </set>
         </think>
         <set name="topic">la batterie <star /></set>
-      </set> dépend du serveur me dirigeant.</template>
+      </set> ça dépend du serveur qui me dirige.</template>
   </category>
   <category>
     <pattern>ES TU ÉCRITE DANS *</pattern>
