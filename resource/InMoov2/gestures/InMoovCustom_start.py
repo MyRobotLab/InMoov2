@@ -39,7 +39,7 @@ def saveCustom(customFilename):
     "\n"
     "## Another example, this could be executed via aiml:\n"
     "def myScripts():\n"
-    "  execfile('data/InMoov2/myScript1.py')\n"
+    "  #execfile('data/InMoov2/myScript1.py')\n"
     "  execfile('myScript2.py')\n"
     "\n"
     "## Another example, that could be executed via aiml:\n"
