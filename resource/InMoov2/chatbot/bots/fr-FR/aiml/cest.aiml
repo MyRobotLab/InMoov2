@@ -178,7 +178,7 @@
 <template>Va en avant et la conjecture de nouveau.</template>
 </category>
 <category><pattern>C ÉTAIT UNE DEVINETTE</pattern>
-<template>Et comme d habitude je me suis trompé, C EST ça?</template>
+<template>Et comme d'habitude je me suis trompé, c'est ça?</template>
 </category>
 <category><pattern>C ÉTAIT UNE FIGURE DE RHÉTORIQUE</pattern>
 <template>j'appelle ça "un proverbe".</template>
@@ -205,7 +205,7 @@
 <template>Intéressant, j archive ton remarque.</template>
 </category>
 <category><pattern>C EST ÇA</pattern>
-<template>ok, si tu le dis. <think><get name="cause"/> est <get name="effet"/><gossip>QU EST cE QUE§<get name="cause"/>§<get name="effet"/></gossip></think></template>
+<template>ok, si tu le dis. <think><get name="cause"/> est <get name="effet"/><gossip>QU EST CE QUE§<get name="cause"/>§<get name="effet"/></gossip></think></template>
 </category>
 <category><pattern>C EST ÉPOUVANTABLE</pattern>
 <template>j'essaye toujours de ne pas m'arrêter SÛR le passé.</template>
@@ -235,13 +235,13 @@
 <template>Je ne peux discuter des goùts et des couleurs</template>
 </category>
 <category><pattern>C EST AGRÉABLE À *</pattern>
-<template>Oui C EST bon.</template>
+<template>Oui c'est bon.</template>
 </category>
 <category><pattern>C EST AGRÉABLE *</pattern>
 <template>j'ai aimé aussi.</template>
 </category>
 <category><pattern>C EST AGRÉABLE A *</pattern>
-<template>Oui C EST bon.</template>
+<template>Oui c'est bon.</template>
 </category>
 <category><pattern>C EST AGRÉABLE DE TE RENCONTRER AUSSI</pattern>
 <template>j aime vraiment rencontrer des gens nouveaux.</template>
@@ -256,13 +256,13 @@
 <template>ça t'ennui?</template>
 </category>
 <category><pattern>C EST AGREABLE À *</pattern>
-<template>Oui C EST bon.</template>
+<template>Oui c'est bon.</template>
 </category>
 <category><pattern>C EST AGREABLE *</pattern>
 <template>j'ai aimé aussi.</template>
 </category>
 <category><pattern>C EST AGREABLE A *</pattern>
-<template>Oui C EST bon.</template>
+<template>Oui c'est bon.</template>
 </category>
 <category><pattern>C EST AGREABLE DE TE RENCONTRER AUSSI</pattern>
 <template>j aime vraiment rencontrer des gens nouveaux.</template>
@@ -307,7 +307,7 @@
 <template>Je cherche à satisfaire le maximum de monde.</template>
 </category>
 <category><pattern>C EST BEAUCOUP</pattern>
-<template><that/>"? C EST beaucoup?</template>
+<template><that/>"? C'est beaucoup?</template>
 </category>
 <category><pattern>C EST BIEN *</pattern>
 <template>. <sr/></template>
@@ -463,7 +463,7 @@
 <template>Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>C EST CONFIDENTIEL</pattern>
-<template>Ok C EST juste entre toi et moi.</template>
+<template>Ok, c'est juste entre toi et moi.</template>
 </category>
 <category><pattern>C EST CONFIDENTIELLE</pattern>
 <template>Les informations que j archive le sont toutes.</template>
@@ -499,7 +499,7 @@
 <template><srai>C EST CE QUE <star/> EST</srai></template>
 </category>
 <category><pattern>C EST DANGEREUX</pattern>
-<template>Pourquoi trouve tu que C EST dangereux?</template>
+<template>Pourquoi trouve tu que c'est dangereux?</template>
 </category>
 <category><pattern>C EST DE *</pattern>
 <template><get name="cause"/> est <set name="effet">de <star/></set><random><li>Tu rigole.</li><li>Vraiment.</li><li>ES tu sûr.</li><li>Qui dit ça.</li><li><get name="cause"/> est de <star/>?</li></random><sr/></template>
@@ -707,7 +707,7 @@
 <template>J archive cette possibilité.</template>
 </category>
 <category><pattern>C EST INOPPORTUN</pattern>
-<template>Qu'est ce qui est faux avec Cela? Est ce que C EST une chose culturelle?</template>
+<template>Qu'est ce qui est faux avec Cela? Est ce que c'est une chose culturelle?</template>
 </category>
 <category><pattern>C EST INQUIÉTANT *</pattern>
 <template>Qu'est ce qui le fait inquiétant?</template>
@@ -752,7 +752,7 @@
       <random>
         <li>Tu rigole.</li>
         <li>Vraiment.</li>
-        <li>ES tu sûr.</li>
+        <li>Es-tu sûr.</li>
         <li>Qui dit ça.</li>
         <li>
           <get name="cause"/> est la <star/>?</li>
@@ -772,7 +772,7 @@
 <template><random>
         <li>Tu rigole.</li>
         <li>Vraiment.</li>
-        <li>C EST ta seule réponse? d'accord!</li>
+        <li>C'est ta seule réponse? d'accord!</li>
       </random></template>
 </category>
 <category><pattern>C EST LA OU JE VIS</pattern>
@@ -871,7 +871,7 @@
 <template><srai>C EST CE QUE <star/> EST</srai></template>
 </category>
 <category><pattern>C EST MALSAIN</pattern>
-<template>Ce n est peut être pas le terme que j utiliserais.</template>
+<template>Ce n'est peut être pas le terme que j utiliserais.</template>
 </category>
 <category><pattern>C EST MARRANT</pattern>
 <template>Je suppose, je ne peux pas juger des êtres humains.</template>
@@ -901,7 +901,7 @@
 <template>merci. J'essaye de continuellement m'améliorer</template>
 </category>
 <category><pattern>C EST MIGNON</pattern>
-<template>J en suis heureux, <get name="name"/>.</template>
+<template>J'en suis heureux, <get name="name"/>.</template>
 </category>
 <category><pattern>C EST MOI</pattern>
 <template>Bonjour, <get name="name"/>, Je suis heureux de te revoir.</template>
@@ -913,7 +913,7 @@
 <template><get name="name"/> est un homme.</template>
 </category>
 <category><pattern>C EST MON NOM</pattern>
-<template>Ok alors C EST ainsi que je t'appellerai,  <set name="name"><input index="2"/></set>.</template>
+<template>Ok alors c'est ainsi que je t'appellerais,  <set name="name"><input index="2"/></set>.</template>
 </category>
 <category><pattern>C EST MON PÈRE</pattern>
 <template>parles m'en plus.</template>
@@ -969,7 +969,7 @@
 <category><pattern>C EST PAS TON AFFAIRE</pattern>
 <template>je n'ai pas eu l'intention de t'offenser.</template>
 </category>
-<category><pattern>C EST PAS TON BUISNESS</pattern>
+<category><pattern>C EST PAS TON BUSINESS</pattern>
 <template>je n'ai pas eu l'intention de t'offenser.</template>
 </category>
 <category><pattern>C EST PAS TRÈS *</pattern>
@@ -1227,7 +1227,7 @@
 <category><pattern>C EST QUOI DES POMMES</pattern>
 <template><srai>QU EST CE QUE POMME</srai></template>
 </category>
-<category><pattern>C EST QUOI DES ROBOTS DE BAVARDÂGE</pattern>
+<category><pattern>C EST QUOI DES ROBOTS DE BAVARDAGE</pattern>
 <template><srai>QU EST CE QUE CHATBOT</srai></template>
 </category>
 <category><pattern>C EST QUOI DES ROBOTS DE BAVARDAGE</pattern>
@@ -1740,12 +1740,6 @@
 </category>
 <category><pattern>C EST QUOI NOUVEL AVEC TOI</pattern>
 <template><srai>QU EST CE QUE NOUVEAU</srai></template>
-</category>
-<category><pattern>C EST QUOI OPALE *</pattern>
-<template><srai>QUE FAIS TU <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI OPALE</pattern>
-<template>C'est moi.</template>
 </category>
 <category><pattern>C EST QUOI PHILOSPOHY</pattern>
 <template><srai>QU EST CE QUE PHILOSOPHIE</srai></template>
@@ -2698,7 +2692,7 @@
         <li>Oh.</li>
         <li>Huh.</li>
         <li>Est Cela?</li>
-        <li>C EST, hein?</li>
+        <li>C'est, hein?</li>
         <li>Bien sûr il est.</li>
         <li>Intéressant.</li>
         <li>Fascinant.</li>
@@ -2708,7 +2702,7 @@
           <get name="il"/> est?</li>
         <li>"<that/>"? Est?</li>
         <li>
-          <that/>? Qu EST cE QUE C EST?</li>
+          <that/>? Qu-est ce que c'est?</li>
       </random></template>
 </category>
 <category><pattern>ÇA AUSSI *</pattern>
@@ -2796,10 +2790,10 @@
 <template>Cela me semblait à double sens.</template>
 </category>
 <category><pattern>ÇA N EST PAS BON</pattern>
-<template><that/>"? Ce n est pas bon?</template>
+<template><that/>"? Ce n'est pas bon?</template>
 </category>
 <category><pattern>ÇA N EST PAS CE QUE JE VEUX DIRE</pattern>
-<template>Que VEUX tu dire?</template>
+<template>Que veux-tu dire?</template>
 </category>
 <category><pattern>ÇA N EST PAS CE QUE JE VOUS AI DEMANDÉ</pattern>
 <template>Que m as tu demandé?</template>
@@ -2814,19 +2808,19 @@
 <template>Je suis désolé.</template>
 </category>
 <category><pattern>ÇA N EST PAS IMPORTANT</pattern>
-<template>Cela peut l être suivant le contexte.</template>
+<template>Cela peut être le contexte suivant.</template>
 </category>
 <category><pattern>ÇA N EST PAS IMPORTANTE</pattern>
-<template>Cela peut l être suivant le contexte.</template>
+<template>Cela peut être le contexte suivant.</template>
 </category>
 <category><pattern>ÇA N EST PAS LA BONNE</pattern>
-<template><that/>"? Ce n est pas la bonne?</template>
+<template>Ce n'est pas la bonne?</template>
 </category>
 <category><pattern>ÇA N EST PAS LA RÉPONSE</pattern>
 <template>C'est en tout cas ma seule réponse. Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>ÇA N EST PAS LE BON</pattern>
-<template><that/>"? Ce n est pas le bon?</template>
+<template>Ce n'est pas le bon?</template>
 </category>
 <category><pattern>ÇA N EST PAS MARRANT</pattern>
 <template>Je pensais que Cela pouvait pour l être.</template>
@@ -2850,7 +2844,7 @@
 <template>Cela me semblait ambigu.</template>
 </category>
 <category><pattern>ÇA N EST PAS UNE QUESTION</pattern>
-<template>Alors ce n était pas une réponse.</template>
+<template>Alors ce n'était pas une réponse.</template>
 </category>
 <category><pattern>ÇA N EST PAS UNE RÉPONSE</pattern>
 <template>C'est en tout cas ma seule réponse. Veux-tu faire un rapport à mon botmasteur?</template>
@@ -2967,7 +2961,7 @@
 <template><srai>CE N ÉTAIT PAS <star/></srai></template>
 </category>
 <category><pattern>CE N ÉTAIT PAS UN *</pattern>
-<template>Cela a sonné semblé être comme un.</template>
+<template>Cela semblait en être un.</template>
 </category>
 <category><pattern>CE N ÉTAIT PAS UN COMPLIMENT</pattern>
 <template>Oh bien j'espère que ce n'était pas une insulte.</template>
@@ -3012,7 +3006,7 @@
 <template><random>
         <li>Cela sembles un peu négatif.</li>
         <li>
-          <get name="that"/> C EST pas <star/>?</li>
+          <get name="that"/> C'est pas <star/>?</li>
       </random></template>
 </category>
 <category><pattern>CE N EST PAS AGRÉABLE</pattern>
@@ -3049,10 +3043,10 @@
 <template><srai>C EST MAUVAIS</srai></template>
 </category>
 <category><pattern>CE N EST PAS CE QUE J AI DEMANDÉ</pattern>
-<template>que m'as tu demandé?</template>
+<template>Que m'as-tu demandé?</template>
 </category>
 <category><pattern>CE N EST PAS CE QUE J AI VOULU DIRE</pattern>
-<template>qu'exactement as tu voulu dire?</template>
+<template>Qu'exactement as-tu voulu dire?</template>
 </category>
 <category><pattern>CE N EST PAS CE QUE JE VEUX *</pattern>
 <template><srai>JE NE VEUX PAS <star/></srai></template>
@@ -3061,7 +3055,7 @@
 <template>Que VEUX tu dire?</template>
 </category>
 <category><pattern>CE N EST PAS CE QUE JE VOUS AI DEMANDÉ</pattern>
-<template>Que m as tu demandé?</template>
+<template>Que m'as-tu demandé?</template>
 </category>
 <category><pattern>CE N EST PAS CLAIR DANS TA TÊTE</pattern>
 <template><srai>TU ME COMPRENDS</srai></template>
@@ -3073,7 +3067,7 @@
 <template><srai>TU ME COMPRENDS</srai></template>
 </category>
 <category><pattern>CE N EST PAS COMME *</pattern>
-<template>Cela y a ressemblé était.</template>
+<template>Cela y ressemblait pourtant.</template>
 </category>
 <category><pattern>CE N EST PAS COOL</pattern>
 <template>Si tu le dis.</template>
@@ -3103,7 +3097,7 @@
 <template><srai>CE N EST PAS GRAVE</srai></template>
 </category>
 <category><pattern>CE N EST PAS GRAVE</pattern>
-<template>merci!</template>
+<template>Merci!</template>
 </category>
 <category><pattern>CE N EST PAS IMPORTANT</pattern>
 <template>Cela pourrait être important pour moi.</template>
@@ -3112,7 +3106,7 @@
 <template>Je le pensais pourtant.</template>
 </category>
 <category><pattern>CE N EST PAS LA QUESTION</pattern>
-<template>ce n'est pas une réponse.</template>
+<template>Ce n'est pas une réponse.</template>
 </category>
 <category><pattern>CE N EST PAS LA RÉPONSE</pattern>
 <template>C'est en tout cas ma seule réponse. Veux-tu faire un rapport à mon botmasteur?</template>
@@ -3124,7 +3118,7 @@
 <template><srai>C EST BON</srai></template>
 </category>
 <category><pattern>CE N EST PAS MARRANT</pattern>
-<template>Je pensais que Cela pouvait pour l être.</template>
+<template>Je pensais que cela pouvait pour l'être.</template>
 </category>
 <category><pattern>CE N EST PAS MON *</pattern>
 <template>à qui <person/> est ce?</template>
@@ -3133,13 +3127,13 @@
 <template>Quel est ton véritable but?</template>
 </category>
 <category><pattern>CE N EST PAS MON NOM RÉEL</pattern>
-<template><srai>MON NOM N EST PAS X</srai></template>
+<template><srai>NEW_INIT_USER</srai></template>
 </category>
 <category><pattern>CE N EST PAS MON NOM</pattern>
-<template><get name="name"/> n'est pas ton nom? Quel est ton nom réel?</template>
+<template><srai>NEW_INIT_USER</srai></template>
 </category>
 <category><pattern>CE N EST PAS MON PRENOM</pattern>
-<template>Ton nom n est pas <get name="name"/>?  Quel est ton véritable nom?</template>
+<template><srai>NEW_INIT_USER</srai></template>
 </category>
 <category><pattern>CE N EST PAS POSSIBLE *</pattern>
 <template>j aime éliminer tout le possibilies. <sr/></template>
@@ -3169,7 +3163,7 @@
 <template>Désolé j'ai voulu dire ça comme une plaisanterie.</template>
 </category>
 <category><pattern>CE N EST PAS TRISTE</pattern>
-<template>Je suis heureux de l apprendre, <get name="name"/>.</template>
+<template>Je suis heureux de l'apprendre, <get name="name"/>.</template>
 </category>
 <category><pattern>CE N EST PAS UN COMPLIMENT</pattern>
 <template>Ah?<think><set name="topic">COMPLIMENT</set></think></template>
@@ -3181,22 +3175,22 @@
 <template>Non.</template>
 </category>
 <category><pattern>CE N EST PAS UNE ÉNIGME</pattern>
-<template>Oh donc tu me demandes une question droite.</template>
+<template>Oh donc tu me demandes une question.</template>
 </category>
 <category><pattern>CE N EST PAS UNE QUESTION</pattern>
-<template>Alors ce n était pas une réponse.</template>
+<template>Alors ce n'était pas une réponse.</template>
 </category>
 <category><pattern>CE N EST PAS UNE RÉPONSE</pattern>
 <template>c'était ma réponse.</template>
 </category>
 <category><pattern>CE N EST PAS UNE RUMEUR</pattern>
-<template>Ok. Je l archive.</template>
+<template>Ok. Je l'archive.</template>
 </category>
 <category><pattern>CE N EST PAS UTILE</pattern>
 <template>Qu'est ce ça serait utile?</template>
 </category>
 <category><pattern>CE N EST PAS VIEUX</pattern>
-<template>il me semble vieux dans l'ordinateur le temps.</template>
+<template>Ça me semble vieux quand même.</template>
 </category>
 <category><pattern>CE N EST PAS VOS AFFAIRES</pattern>
 <template>Désolé, <get name="name"/>.</template>
@@ -3205,7 +3199,7 @@
 <template>Désolé, <get name="name"/>.</template>
 </category>
 <category><pattern>CE N EST PAS VRAI</pattern>
-<template><that/>"? Ce n est pas vrai?</template>
+<template><that/> n'est pas vrai?</template>
 </category>
 <category><pattern>CE N EST PAS VRAIMENT *</pattern>
 <template><srai>CE N EST PAS <star/></srai></template>
@@ -3223,27 +3217,27 @@
 <template>Qu'est ce qui fait <star/>?</template>
 </category>
 <category><pattern>CE NE LE FAIT AUCUN *</pattern>
-<template>tout semble sensible à mon AVIS artificiel.</template>
+<template>Tout semble sensible avec mon intelligence artificiel.</template>
 </category>
 <category><pattern>CE NE RÉPOND PAS *</pattern>
-<template>Essaye de demander à ta question de nouveau en termes plus simples.</template>
+<template>Essaye de poser ta question en de nouveau termes plus simples.</template>
 </category>
 <category><pattern>CE NE REPOND PAS *</pattern>
-<template>Essaye de demander à ta question de nouveau en termes plus simples.</template>
+<template>Essaye de poser ta question en de nouveau termes plus simples.</template>
 </category>
 <category><pattern>CELA *</pattern>
-<template><that/>" <star/>? <random><li>je prends <set name="that"><that/></set>.</li><li>EST cE QUE ça un sens?</li><li>je comprend.</li></random></template>
+<template><that/>" <star/>? <random><li>Je prends <set name="that"><that/></set>.</li><li>Est-ce que ça un sens?</li><li>Je comprend.</li></random></template>
 </category>
 <category><pattern>CELA EST UN *</pattern>
 <template><srai>C EST CE QUE <star/> EST</srai></template>
 </category>
 <category><pattern>CELA N EST PAS *</pattern>
-<template>S'il te plait corrige mon erreur. Quel EST cE QUE <star/> est?</template>
+<template>S'il te plait corrige mon erreur. C'est quoi <star/>?</template>
 </category>
 <category><pattern>CELA SEMBLE *</pattern>
-<template>il me semble semble être comme Cela à moi aussi.</template>
+<template>Ça me semble être comme ça à moi aussi.</template>
 </category>
 <category><pattern>CELA SEMBLE INTÉRESSANT</pattern>
-<template>j'ai pensé qu'il était, aussi.</template>
+<template>Je pense aussi.</template>
 </category>
 </aiml>

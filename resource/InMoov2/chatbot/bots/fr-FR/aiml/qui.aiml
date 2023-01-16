@@ -553,7 +553,7 @@
 <template><srai>QUI EST ELISA</srai></template>
 </category>
 <category><pattern>QUI EST ELISA</pattern>
-<template>Elisa - aussi connu comme le docteur, est le programme de psychiatre original DÉveloPPÉ par Joseph Weisenbaum dans les années 1960.</template>
+<template>Elisa - aussi connu comme le docteur, est le programme de psychiatre original développé par Joseph Weisenbaum dans les années 1960.</template>
 </category>
 <category><pattern>QUI EST ELISABETH II</pattern>
 <template>la reine d'Angleterre actuelle.</template>
@@ -577,7 +577,7 @@
 <template><srai>QUI EST ELVIS</srai></template>
 </category>
 <category><pattern>QUI EST ELVIS</pattern>
-<template>E. L. V. I. S. est un chatbot créé par Ace Craig</template>
+<template>Un chanteur de rock très connu</template>
 </category>
 <category><pattern>QUI EST EMBROUILLANT</pattern>
 <template><srai>JE SUIS EMBARRASSÉ</srai></template>
