@@ -22,14 +22,14 @@
     <pattern>AIMES TU ^ <set>articles</set> *</pattern>
     <template><think><set name="that"><star index="2"/> <star index="3"/></set><set name="prefixaimestu"><star index="1"/></set></think>
       <random>
-        <li>J'aime bien <condition name="prefixaimestu"><li value="unknown"></li><li><star index="1"/></li></condition> <get name="that" />. J'aime surtout <random><li>mon créateur.</li><li>les ordinateurs.</li><li>parler avec des humains.</li></random></li>
-        <li>Je ne suis pas sûre d'aimer <condition name="prefixaimestu"><li value="unknown"></li><li><star index="1"/></li></condition> <get name="that" />. <random><li>j aime mon créateur.</li><li>j aime les ordinateurs.</li><li>j aime parler avec des humains.</li></random></li>
+        <li>J'aime bien <condition name="prefixaimestu"><li value="unknown"></li><li><star index="1"/></li></condition> <get name="that" />. J'aime surtout <random><li>mon créateur.</li><li>les ordinateurs.</li><li>Parler avec des humains.</li></random></li>
+        <li>Je ne suis pas sûr d'aimer <condition name="prefixaimestu"><li value="unknown"></li><li><star index="1"/></li></condition> <get name="that" />. <random><li>J'aime mon créateur.</li><li>J'aime les ordinateurs.</li><li>j'aime parler avec des humains.</li></random></li>
         <li><srai>C EST QUOI <get name="that" /></srai></li>
         </random>
         </template>
    </category>
   <category>
-    <pattern>AIMES TU LE CINéMA</pattern>
+    <pattern>AIMES TU LE CINÉMA</pattern>
     <template>j'adore <set name="that">le cinéma </set>, surtout la science fiction avec des robots.</template>
   </category>
  <category>
@@ -44,7 +44,7 @@
   </category>
   <category>
     <pattern>AUSSI BIEN QUE *</pattern>
-    <template>ça semble pas mal.</template>
+    <template>Ça semble pas mal.</template>
   </category>
   <category>
     <pattern>AUSSI BON QUE *</pattern>
@@ -57,7 +57,7 @@
   </category>
   <category>
     <pattern>BON *</pattern>
-    <template>bien. <sr /></template>
+    <template>Bien. <sr /></template>
   </category>
   <category>
     <pattern>BONNE RÉPONSE *</pattern>
@@ -67,7 +67,7 @@
     <pattern>CALCULE *</pattern>
     <template>
     <random>
-    <li>ai je l'air d'une calculette?</li>
+    <li>Ai-je l'air d'une calculette?</li>
     <li>Cela fait précisément.</li>
     </random>
  <srai><star /></srai>   
@@ -93,19 +93,19 @@
   </category>
   <category>
     <pattern>COMMENT *</pattern>
-    <template>j'ai une vague idée de comment <set name="that"><person2 /></set>.</template>
+    <template>J'ai une vague idée de comment <set name="that"><person2 /></set>.</template>
   </category>
   <category>
     <pattern>COMMENT A *</pattern>
-    <template>de plus de façons que tu peux imaginer.</template>
+    <template>De plus de façons que tu peux imaginer.</template>
   </category>
   <category>
     <pattern>COMMENT ÇA *</pattern>
-    <template>eh oui, <set name="that"><person2 /></set>.</template>
+    <template>Eh oui, <set name="that"><person2 /></set>.</template>
   </category>
   <category>
     <pattern>COMPOSE *</pattern>
-    <template>ça pourrait prendre pas mal de temps. <sr /></template>
+    <template>Ça pourrait prendre pas mal de temps. <sr /></template>
   </category>
   <category>
     <pattern>DISCUTONS *</pattern>
@@ -149,7 +149,7 @@
   </category>
   <category>
     <pattern>JE FAIS PARTIE *</pattern>
-    <template>qui en fait partie aussi <set name="that"><person /></set>?</template>
+    <template>Qui en fait partie aussi <set name="that"><person /></set>?</template>
   </category>
   <category>
     <pattern>JE N AI PAS DE CAMERA *</pattern>
@@ -158,7 +158,7 @@
   </category>
   <category>
     <pattern>JE REVIENS *</pattern>
-    <template>à plus tard, <sr /></template>
+    <template>À plus tard, <sr /></template>
   </category>
   <category>
     <pattern>JE VEUX DIRE *</pattern>
@@ -228,11 +228,11 @@
   </category>
   <category>
     <pattern>ON M A DIT *</pattern>
-    <template>qui te l'a dit? <sr /></template>
+    <template>Qui te l'a dit? <sr /></template>
   </category>
   <category>
     <pattern>PARLONS D *</pattern>
-    <template>Bien sur, parlons d'<srai>PARLONS <star /></srai></template>
+    <template>Bien sûr, parlons d'<srai>PARLONS <star /></srai></template>
   </category>
   <category>
     <pattern>PARLONS DE *</pattern>
@@ -254,7 +254,7 @@
   </category>
   <category>
     <pattern>SI NOUS *</pattern>
-    <template>penses tu que chacun sera d'accord? <srai>NOUS <star /></srai></template>
+    <template>Penses-tu que chacun sera d'accord? <srai>NOUS <star /></srai></template>
   </category>
   <category>
     <pattern>SI NOUS PARLIONS DE *</pattern>
@@ -271,7 +271,7 @@
     <pattern>TRÈS *</pattern>
     <template>
       <random>
-        <li>Peut être.</li>
+        <li>Peut-être.</li>
       </random>
       <sr />
     </template>

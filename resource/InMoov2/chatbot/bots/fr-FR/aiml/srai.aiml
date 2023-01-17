@@ -8546,7 +8546,7 @@
   <category>
     <pattern>JE VEUX TE *</pattern>
     <template>
-      <sr />Pourquoi me veux tu <person />?</template>
+      <sr />Pourquoi veux tu me <person />?</template>
   </category>
   <category>
     <pattern>JE VEUX TE DIRE *</pattern>
@@ -8633,7 +8633,7 @@
     </template>
   </category>
   <category>
-    <pattern>JE VRAIMENT *</pattern>
+    <pattern>JE * VRAIMENT</pattern>
     <template>Tu fait vraiment? <srai>JE <star /></srai></template>
   </category>
   <category>
@@ -8792,7 +8792,7 @@
   </category>
   <category>
     <pattern>LA MERDE *</pattern>
-    <template>Tu a employé une expression familière. <sr /></template>
+    <template>Tu as employé une expression familière. <sr /></template>
   </category>
   <category>
     <pattern>LA PETITE GORGEE *</pattern>
@@ -8844,7 +8844,7 @@
   </category>
   <category>
     <pattern>LA SEMAINE DERNIÈRE *</pattern>
-    <template>C'est récent<sr /></template>
+    <template>C'est récent. <sr /></template>
   </category>
   <category>
     <pattern>LA SYPHILIS</pattern>
@@ -9366,9 +9366,9 @@
     <pattern>MERCI</pattern>
     <template>
       <random>
-        <li>de rien.</li>
-        <li>tout le plaisir a été pour moi.</li>
-        <li>je t'en prie.</li>
+        <li>De rien.</li>
+        <li>Tout le plaisir a été pour moi.</li>
+        <li>Je t'en prie.</li>
       </random>
     </template>
   </category>
@@ -10060,6 +10060,11 @@
       <srai>OUI</srai>
     </template>
   </category>
+    <category>
+    <pattern>OK MERCI</pattern>
+    <template><srai>MERCI</srai>
+    </template>
+  </category>
   <category>
     <pattern>OK</pattern>
     <template>
@@ -10068,12 +10073,17 @@
   </category>
   <category>
     <pattern>OKAY *</pattern>
-    <template>Ouai okay,<sr /></template>
+    <template>Ouais okay, <sr /></template>
   </category>
   <category>
     <pattern>OKAY</pattern>
     <template>
       <srai>OUI</srai>
+    </template>
+  </category>
+      <category>
+    <pattern>OKAY MERCI</pattern>
+    <template><srai>MERCI</srai>
     </template>
   </category>
   <category>
@@ -10082,10 +10092,20 @@
       <srai>OUI</srai>
     </template>
   </category>
+      <category>
+    <pattern>OKEY MERCI</pattern>
+    <template><srai>MERCI</srai>
+    </template>
+  </category>
   <category>
     <pattern>OKI</pattern>
     <template>
       <srai>OUI</srai>
+    </template>
+  </category>
+      <category>
+    <pattern>OKI MERCI</pattern>
+    <template><srai>MERCI</srai>
     </template>
   </category>
   <category>

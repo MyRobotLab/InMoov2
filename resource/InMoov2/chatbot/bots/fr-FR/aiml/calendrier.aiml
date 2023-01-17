@@ -4,7 +4,7 @@
   <!--  -->
   <category>
     <pattern>JOUR</pattern>
-    <template>Aujourd'hui C EST <date format="%A" jformat="EEEEEEEEEE" /></template>
+    <template>Aujourd'hui c'est <date format="%A" jformat="EEEEEEEEEE" /></template>
   </category>
   <category>
     <pattern>ANNÉE</pattern>
@@ -42,7 +42,7 @@
         <li name="heurequestion" value="19">C'est l'heure de l'apéro, ou sont les morito.</li>
         <li name="heurequestion" value="20">Il serait peut etre temps de passer à table.</li>
         <li name="heurequestion" value="21">T'a encore loupé le film, il est déja commencé.</li>
-        <li name="heurequestion" value="22">fais toi un petit café, vu ta tête tu en as besoin.</li>
+        <li name="heurequestion" value="22">Fais toi un petit café, vu ta tête tu en as besoin.</li>
         <li name="heurequestion" value="23">demain tu va encore avoir du mal à te lever.</li>
         </condition>
           <random>
