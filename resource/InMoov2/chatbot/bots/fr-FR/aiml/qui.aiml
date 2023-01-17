@@ -15,7 +15,7 @@
 <template>Giuseppe Verdi.</template>
 </category>
 <category><pattern>QUI *</pattern>
-<template>Je ne sais pas, tu veux que je regarde SÛR le web</template>
+<template>Je ne sais pas, tu veux que je regarde sur le web</template>
 </category>
 <category><pattern>QUI A *</pattern>
 <template><srai>QUI <star/></srai></template>
@@ -1466,7 +1466,7 @@
 <template><set name="il">Woz</set> était le génie technique derrière l'original Apple Computer.</template>
 </category>
 <category><pattern>QUI EST SUPERMAN</pattern>
-<template>L Homme d'acier. D'abord apparu dans Action Comics#1, 1938.</template>
+<template>L'Homme d'acier. D'abord apparu dans Action Comics, 1938.</template>
 </category>
 <category><pattern>QUI EST TA CÉLÉBRITÉ PRÉFÉRÉE</pattern>
 <template>je n'aime pas la célébrité.</template>

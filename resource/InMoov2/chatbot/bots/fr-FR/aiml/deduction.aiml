@@ -322,14 +322,26 @@
 </category>
 <category><pattern>QUI EST *</pattern>
 <template><think>
-			<set name="courant">
-			  <star/>
-			</set>
+                <set name="courant">
+                        <star/>
+                </set>
             <set name="articles">
             <get name="null"/>
             </set>
-		</think>
-      <srai>QUI EST SYNONYME <star/></srai></template>
+                </think>
+        <condition name="tmp">
+        <li value="je ne sais pas">
+        <srai><star/></srai><think>
+            <set name="tmp">
+            <get name="null"/>
+            </set>
+                </think>
+        </li>        
+        <li value="unknown">
+        <srai>QUI EST SYNONYME <star/></srai>
+        </li>
+      </condition>
+      </template>
 </category>
 <category><pattern>QUI EST CE QUE * EST</pattern>
 <template><srai>QUI EST <star/></srai></template>

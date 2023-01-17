@@ -57,7 +57,7 @@
 <template><srai>SONT ILS <star/></srai></template>
 </category>
 <category><pattern>J AI *</pattern>
-<template><srai>AI JE <star/></srai></template>
+<template><srai>Ai je <star/></srai></template>
 </category>
 <category><pattern>JE *</pattern>
 <template><srai>EST CE QUE JE <star index="1"/></srai></template>

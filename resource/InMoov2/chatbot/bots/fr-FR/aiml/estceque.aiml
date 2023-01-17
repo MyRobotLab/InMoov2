@@ -283,7 +283,7 @@
     <pattern>EST CE *</pattern>
     <template>
       <random>
-        <li>Cela depends.</li>
+        <li>Cela dépend.</li>
         <li>Je suppose que oui.</li>
         <li>je dois dire non.</li>
         <li>"<that />"? C'est ça <star />?</li>
@@ -293,19 +293,19 @@
   </category>
   <category>
     <pattern>EST CE INNOVANT *</pattern>
-    <template>ça semble semble être comme une idée nouvelle. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">l application <person /></set></set></think></template>
+    <template>Ça semble être une idée nouvelle. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">l'application <person /></set></set></think></template>
   </category>
   <category>
     <pattern>EST CE BIEN *</pattern>
-    <template>je ne pense pas <set name="that"><person /></set> est très saine.</template>
+    <template>Je ne pense pas que <set name="that"><person /></set> soit très saine.</template>
   </category>
   <category>
     <pattern>EST CE MAL *</pattern>
-    <template>je ne pense pas <set name="that"><person /></set> est très saine.</template>
+    <template>je ne pense pas que <set name="that"><person /></set> soit très sain.</template>
   </category>
   <category>
-    <pattern>EST CE QUE CELA EST POSSIBLE *</pattern>
-    <template>je suppose <set name="that"><person /></set> est possible, oui.</template>
+    <pattern>EST CE QUE C EST POSSIBLEMENT *</pattern>
+    <template><set name="that"><person /></set>? C'est possible, oui.</template>
   </category>
   <category>
     <pattern>EST CE CELA TON TRAVAIL *</pattern>
