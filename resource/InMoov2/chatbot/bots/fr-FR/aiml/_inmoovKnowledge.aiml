@@ -59,17 +59,26 @@
 </category>
 <category><pattern>$C EST _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
 <template><srai>
-        <get name="articles"/>
+        <condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>
         <get name="courant"/> EST <star index="1"/></srai></template>
 </category>
 <category><pattern>C ÉTAIT _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
 <template><srai>
-        <get name="articles"/>
+        <condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>
         <get name="courant"/> ETAIT <star index="1"/></srai></template>
 </category>
 <category><pattern>ÇA SIGNIFIE _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
 <template><srai>
-        <get name="articles"/>
+        <condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>
         <get name="courant"/> EST <star index="1"/></srai></template>
 </category>
 <category><pattern><set>articles</set> _ $EST <set>articles</set> _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
@@ -498,7 +507,7 @@
 </category>
 <category><pattern># NON #</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
 <template><random>
-        <li>OKé, pas de soucis, je n'apprendrais rien cette fois ci.</li>
+        <li>Oké, pas de soucis, je n'apprendrais rien cette fois ci.</li>
         <li>Dommage, j'espérais apprendre quelque chose de nouveau.</li>
       </random>
       <think>
