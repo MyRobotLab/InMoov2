@@ -262,7 +262,7 @@
 </category>
 <category><pattern>ПРЕКРАТИ ПОИСК</pattern>
 <template>Я остановил поиск.
-        <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
 </category>
 <category><pattern>СЛЕДИ</pattern>
 <template>Слежу за точкой.
@@ -270,7 +270,7 @@
 </category>
 <category><pattern>ЗАБЛОКИРОВАТЬ СЛЕЖЕНИЕ</pattern>
 <template>Остановка моего отслеживания.
-        <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
 </category>
 <category><pattern>ОСТАНОВИ ОТСЛЕЖИВАНИЕ</pattern>
 <template>

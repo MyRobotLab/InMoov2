@@ -128,7 +128,7 @@
 </category>
 <category><pattern>SAIR DA PESQUISA</pattern>
 <template>Parando minha pesquisa.
-        <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
 </category>
 <category><pattern>RASTREAMENTO</pattern>
 <template>Seguindo o ponto.
@@ -136,7 +136,7 @@
 </category>
 <category><pattern>RASTREIO DE RASTREAMENTO</pattern>
 <template>Parando meu rastreamento
-        <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
 </category>
 <category><pattern>ANEXAR SENSOR</pattern>
 <template>Iniciando o sensor P.I.R.

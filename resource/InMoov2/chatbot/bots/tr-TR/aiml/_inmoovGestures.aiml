@@ -133,7 +133,7 @@
 </category>
 <category><pattern>QUIT SEARCH</pattern>
 <template>Stopping my search.
-        <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
 </category>
 <category><pattern>TRACK</pattern>
 <template>Following the point.
@@ -141,7 +141,7 @@
 </category>
 <category><pattern>FREEZE TRACK</pattern>
 <template>Stopping my tracking
-        <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
 </category>
 <category><pattern>STOP YOUR TRACKING</pattern>
 <template><srai>FREEZE TRACK</srai></template>
