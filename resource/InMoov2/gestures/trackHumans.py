@@ -1,10 +1,11 @@
-def trackHumans(noFaceRecognizerOverride=True):
-  i01.cameraOn()
-  i01.trackHumans()
-  try:gui.setActiveTab("i01.opencv")
-  except:pass
-  i01_head_rollNeck.setAutoDisable(False)
-  i01_head_rollNeck.moveToBlocking(90)
-  i01.setHeadSpeed(100.0,100.0,100.0,100.0,100.0)
-  #i01_headPid.setPID("x",12,5,0.1)
-  #i01_headPid.setPID("y",12,5,0.1)
+def trackHumans():
+  if runtime.isStarted('i01.opencv'):
+    i01_head_rollNeck.setAutoDisable(False)
+    i01_head_rollNeck.moveToBlocking(90)
+    i01.setHeadSpeed(500.0,500.0,500.0,500.0,500.0)
+    i01_opencv.removeFilters()
+    i01_headTracking.enable()
+  else:
+    i01.warn("i01.opencv needs to be started to start tracking!")
+
+#def trackHumans(noFaceRecognizerOverride=True):
