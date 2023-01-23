@@ -220,7 +220,7 @@
     <category>
       <pattern>QUIT ZOEKEN</pattern>
       <template>Mijn zoekopdracht stopzetten.
-        <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
     </category>
 
 
@@ -234,7 +234,7 @@
     <category>
       <pattern>FREEZE TRACK</pattern>
       <template>Mijn opsporing stopzetten
-        <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
     </category>
 
 
