@@ -88,7 +88,7 @@
 </category>
 <category><pattern>ARRÊTE DE CHERCHER #</pattern>
 <template>J'arrête le scanner.
-        <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
 </category>
 <category><pattern>SUIS LE POINT</pattern>
 <template>Je suis le point du regard.
@@ -96,7 +96,7 @@
 </category>
 <category><pattern>ARRÊTE LE TRACKING</pattern>
 <template>J'arrête mon tracking
-        <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
 </category>
 <category><pattern>OUVRE TES MAINS</pattern>
 <template>Main ouvertes.
