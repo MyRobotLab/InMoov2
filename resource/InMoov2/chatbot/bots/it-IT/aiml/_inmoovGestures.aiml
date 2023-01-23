@@ -123,7 +123,7 @@
 </category>
 <category><pattern>TERMINA LA RICERCA</pattern>
 <template>Sto terminando la ricerca.
-        <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
 </category>
 <category><pattern>SEGUI LA TRACCIA</pattern>
 <template>Sto seguendo la traccia.
@@ -131,7 +131,7 @@
 </category>
 <category><pattern>SMETTI DI SEGUIRE LA TRACCIA</pattern>
 <template>Mi Sto fermando
-        <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
 </category>
 <category><pattern>FERMA LA TUA AZIONE</pattern>
 <template><srai>SMETTI DI SEGUIRE LA TRACCIA</srai></template>
