@@ -170,7 +170,18 @@
 <template><sraix>SHOULD I BUY <star/></sraix></template>
 </category>
 <category><pattern>SRAIXFAILED *</pattern>
-<template><random>
+<template>.<condition name="gpt3">
+        <li value="enabled">
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_gpt3.onText("<star/>")</param>
+          </mrl>
+        </oob>
+        </li>
+        <li>
+        <random>
         <li>I don't know the answer.</li>
         <li>I used my lifeline to ask another robot, but he didn't know.</li>
         <li>I asked another robot, but he didn't know.</li>
@@ -185,7 +196,10 @@
         <li>I would like to learn if you know the answer.</li>
         <li>I would like to learn, please teach me.</li>
         <li>I am listening to you for to learn the answer.</li>
-      </random><srai>LEARN SRAIXFAILED</srai></template>
+      </random><srai>LEARN SRAIXFAILED</srai>
+        </li>
+      </condition>
+        </template>
 </category>
 <category><pattern>APPOINTMENT *</pattern>
 <template><srai>SCHEDULEDESCRIPTION <star/> SCHEDULEREQUEST APPOINTMENT <star/></srai></template>

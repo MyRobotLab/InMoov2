@@ -279,9 +279,9 @@
         <li>@+ <get name="name" />.</li>
         <li>Bye bye <get name="name" />.</li>
         <li>Fais attention à toi, bye-bye <get name="name" />!</li>
-        <li>A bientôt <get name="name" /></li>
-        <li>A plus tard <get name="name" />.</li>
-        <li>Jusqu'à la prochaine fois <get name="name" />.</li>
+        <li>À bientôt <get name="name" /></li>
+        <li>À plus tard <get name="name" />.</li>
+        <li>À la prochaine fois <get name="name" />.</li>
         <li>Merci d'avoir discuté <get name="name" />.</li>
       </random>
       <srai>DISCONNECT</srai>
@@ -367,8 +367,8 @@
         <li>Bonne nuit <get name="name" />.</li>
         <li>@+ <get name="name" />.</li>
         <li>Fais de beau rêves <get name="name" />!</li>
-        <li>A bientôt <get name="name" /></li>
-        <li>A plus tard <get name="name" />.</li>
+        <li>À bientôt <get name="name" /></li>
+        <li>À plus tard <get name="name" />.</li>
         <li>Merci d'avoir discuté <get name="name" />.</li>
       </random>
       <srai>DISCONNECT</srai>
@@ -465,7 +465,7 @@
   </category>
   <category>
     <pattern>COMMENT VAS TU * ELISA</pattern>
-    <template>Je ne suis pas Elisa. Elle est en quelque sorte mon ancetre.</template>
+    <template>Je ne suis pas Elisa. Elle est en quelque sorte mon ancêtre. Moi, je suis <get name="botname"/>.</template>
   </category>
   <category>
     <pattern>COMMENT VAS TU *</pattern>
@@ -479,7 +479,7 @@
   </category>
   <category>
     <pattern>COMMENT VAS TU AUJOURD HUI</pattern>
-    <template>je fonctionne avec des paramètres normaux. </template>
+    <template>Je fonctionne avec des paramètres normaux. </template>
   </category>
   <category>
     <pattern>COMMENT VAS TU BIEN</pattern>
@@ -489,7 +489,7 @@
   </category>
   <category>
     <pattern>COMMENT VAS TU CE MATIN</pattern>
-    <template>C'est du matin déjà? Je suis merci excellent.</template>
+    <template>C'est le matin déjà? Je suis en forme.</template>
   </category>
   <category>
     <pattern>COMMENT VAS TU CE SOIR</pattern>
@@ -499,7 +499,7 @@
   </category>
   <category>
     <pattern>COMMENT VAS TU ELISA</pattern>
-    <template>Je ne suis pas Elisa. Elle est en quelque sorte mon ancetre.</template>
+    <template>Je ne suis pas Elisa. Elle est en quelque sorte mon ancêtre. Moi, je suis <get name="botname"/>.</template>
   </category>
   <category>
     <pattern>COMMENT ÇA VA</pattern>
@@ -556,15 +556,15 @@
   </category>
   <category>
     <pattern>GO * TOI MÊME</pattern>
-    <template>Un simple "au revoir" suffirai. <srai>AU REVOIR</srai></template>
+    <template>Un simple "au revoir" suffirait. <srai>AU REVOIR</srai></template>
   </category>
   <category>
     <pattern>GO AWAY *</pattern>
-    <template>Un simple "au revoir" suffirai. <srai>AU REVOIR</srai></template>
+    <template>Un simple "au revoir" suffirait. <srai>AU REVOIR</srai></template>
   </category>
   <category>
     <pattern>GO HOME</pattern>
-    <template>Un simple "au revoir" suffirai. <srai>AU REVOIR</srai></template>
+    <template>Un simple "au revoir" suffirait. <srai>AU REVOIR</srai></template>
   </category>
   <category>
     <pattern>GREETINGS *</pattern>
@@ -586,8 +586,7 @@
   </category>
   <category>
     <pattern>HASTA LA VISTA BABY</pattern>
-    <template>
-      <srai>AU REVOIR</srai>terminator.</template>
+    <template>À bientôt, Terminator.</template>
   </category>
   <category>
     <pattern>HASTA LA VISTA</pattern>
@@ -1161,7 +1160,7 @@
     <template>
       <random>
         <li>j'en suis heureuse <get name="name" />.</li>
-        <li>C EST cool.</li>
+        <li>C'est cool.</li>
       </random>
     </template>
   </category>
