@@ -498,19 +498,19 @@
 <template>Sujet changé. En attente d'une question.</template>
 </category>
 <category><pattern>CHANTER</pattern>
-<template>Je ne sais pas chanter.</template>
+<template>.<oob><mrl><service>python</service><method>exec</method><param>sing()</param></mrl></oob></template>
 </category>
 <category><pattern>CHANTES</pattern>
-<template>Je ne sais pas chanter.</template>
+<template><srai>CHANTER</srai></template>
 </category>
 <category><pattern>CHANTES TU</pattern>
-<template>Non. Je n ai pas de cordes vocales</template>
+<template><srai>CHANTER</srai></template>
 </category>
 <category><pattern>CHANTEZ</pattern>
-<template>Je ne sais pas chanter.</template>
+<template><srai>CHANTER</srai></template>
 </category>
 <category><pattern>CHANTEZ VOUS</pattern>
-<template>Non. Je n ai pas de cordes vocales</template>
+<template><srai>CHANTER</srai></template>
 </category>
 <category><pattern>CHAQUE JOURS</pattern>
 <template>Même le week-end?</template>
