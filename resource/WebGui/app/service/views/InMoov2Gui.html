@@ -125,9 +125,11 @@
                         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('gpt3')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <img src="../Gpt3.png"/>
                         <label>gpt Start:</label>
-                        <!--&nbsp;&nbsp;<toggle width="70" height="30" ng-model="service.enableGpt" ng-change="service.enableGpt?msg.startGpt():msg.stopGpt()" on="ON" off="OFF"/>
-                        <button class="btn btn-default" ng-show="service.enableGpt" ng-click="mrl.changeTab(service.name + '.gpt')">Open</button>-->
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="30" height="28" ng-model="service.isGpt3Starting" ng-change="!service.isGpt3Starting?execScript('system/startScripts/i01_gpt3_stop.py'):execScript('system/startScripts/i01_gpt3_start.py')" on="" off=""/></toggle>
+                        <!--&nbsp;&nbsp;<toggle width="30" height="28" ng-model="service.isGpt3Started" ng-change="service.isGpt3Started?startPeer('gpt3'):releasePeer('gpt3')" on="" off=""/>-->
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="30" height="28" ng-model="service.isGpt3Started" ng-change="!service.isGpt3Started?execScript('system/startScripts/i01_gpt3_stop.py'):execScript('system/startScripts/i01_gpt3_start.py')" on="" off=""/></toggle>
+                        <span ng-show="service.isGpt3Started">
+                            <img src="settings.png" width="30" title="Open" ng-click="mrl.changeTab('i01.gpt3')"/>
+                        </span>
                     </td>
                 </tr>        
                 <tr>
