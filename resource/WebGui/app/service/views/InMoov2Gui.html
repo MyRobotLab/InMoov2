@@ -120,7 +120,7 @@
                         &nbsp;
                     </td>
                 </tr>
-                <tr>
+                <tr ng-show="service.isChatBotStarted">
                     <td>
                         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('gpt3')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <img src="../Gpt3.png"/>
@@ -132,7 +132,7 @@
                         </span>
                     </td>
                 </tr>        
-                <tr>
+                <tr ng-show="service.isChatBotStarted">
                     <td>
                         <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.gpt3')">Save
                             gpt3 Config</button>
