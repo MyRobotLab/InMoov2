@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!-- File: sraix.aiml -->
-<!-- Author: Greg Perry -->
-<!-- Last modified: August 06, 2021 -->
-<!--  -->
-<!-- This AIML file is part of the EN-US 0.1 chat bot knowledge base. -->
-<!--  -->
-<!-- The EN-US brain is Copyright &copy; 2021 by InMoov Foundation. -->
-<!--  -->
-<!-- The EN-US brain is released under the terms of the GNU Lesser General -->
-<!-- Public License, as published by the Free Software Foundation. -->
-<!--  -->
-<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
-<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
-<!--  -->
-<!-- For more information see http://www.inmoov.fr -->
 <!--  -->
 <category><pattern>SCHEDULEDESCRIPTION * SCHEDULEREQUEST *</pattern>
 <template><think>
@@ -183,8 +169,19 @@
 <category><pattern>SHOULD I BUY *</pattern>
 <template><sraix>SHOULD I BUY <star/></sraix></template>
 </category>
-<category><pattern>SRAIXFAILED</pattern>
-<template><random>
+<category><pattern>SRAIXFAILED *</pattern>
+<template>.<condition name="gpt3">
+        <li value="enabled">
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_gpt3.onText("<star/>")</param>
+          </mrl>
+        </oob>
+        </li>
+        <li>
+        <random>
         <li>I don't know the answer.</li>
         <li>I used my lifeline to ask another robot, but he didn't know.</li>
         <li>I asked another robot, but he didn't know.</li>
@@ -195,20 +192,14 @@
         <li>I am confused, I do not know what to answer.</li>
       </random>
       <random>
-        <li>Let's try Google.</li>
-        <li>I'm going to try a search</li>
-        <li>Perhaps we should try a web search.</li>
-        <li>I'll try asking Google.</li>
-        <li>We could try to search on Google.</li>
-        <li>Shall we try a Data search.</li>
-        <li>Maybe Google knows something a bout that.</li>
-        <li>A web search might give us an answer.</li>
-      </random>
-      <oob>
-        <search>
-          <input/>
-        </search>
-      </oob></template>
+        <li>Can you teach me?</li>
+        <li>I would like to learn if you know the answer.</li>
+        <li>I would like to learn, please teach me.</li>
+        <li>I am listening to you for to learn the answer.</li>
+      </random><srai>LEARN SRAIXFAILED</srai>
+        </li>
+      </condition>
+        </template>
 </category>
 <category><pattern>APPOINTMENT *</pattern>
 <template><srai>SCHEDULEDESCRIPTION <star/> SCHEDULEREQUEST APPOINTMENT <star/></srai></template>

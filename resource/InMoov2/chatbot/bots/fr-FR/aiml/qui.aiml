@@ -15,21 +15,18 @@
 <template>Giuseppe Verdi.</template>
 </category>
 <category><pattern>QUI *</pattern>
-<template>Je ne sais pas, tu veux que je regarde SÛR le web</template>
+<template>Je ne sais pas, tu veux que je regarde sur le web</template>
 </category>
 <category><pattern>QUI A *</pattern>
 <template><srai>QUI <star/></srai></template>
 </category>
 <category><pattern>QUI A CHOISI LE SUJET</pattern>
-<template>Tu a fait, <get name="name"/>.</template>
-</category>
-<category><pattern>QUI A DEMANDE *</pattern>
-<template>j'ai pensé que c'était toi.</template>
+<template>C'est toi, <get name="name"/>.</template>
 </category>
 <category><pattern>QUI A DEMANDÉ *</pattern>
-<template>j'ai pensé que c'était toi.</template>
+<template>Je pense que c'était toi.</template>
 </category>
-<category><pattern>QUI A FAIT * LE PROGRAMME</pattern>
+<category><pattern>QUI A FAIT * PROGRAMME</pattern>
 <template><srai>QUI T A CRÉÉ</srai></template>
 </category>
 <category><pattern>QUI A FAIT FRANKENSTEIN</pattern>
@@ -556,7 +553,7 @@
 <template><srai>QUI EST ELISA</srai></template>
 </category>
 <category><pattern>QUI EST ELISA</pattern>
-<template>Elisa - aussi connu comme le docteur, est le programme de psychiatre original DÉveloPPÉ par Joseph Weisenbaum dans les années 1960.</template>
+<template>Elisa - aussi connu comme le docteur, est le programme de psychiatre original développé par Joseph Weisenbaum dans les années 1960.</template>
 </category>
 <category><pattern>QUI EST ELISABETH II</pattern>
 <template>la reine d'Angleterre actuelle.</template>
@@ -580,7 +577,7 @@
 <template><srai>QUI EST ELVIS</srai></template>
 </category>
 <category><pattern>QUI EST ELVIS</pattern>
-<template>E. L. V. I. S. est un chatbot créé par Ace Craig</template>
+<template>Un chanteur de rock très connu</template>
 </category>
 <category><pattern>QUI EST EMBROUILLANT</pattern>
 <template><srai>JE SUIS EMBARRASSÉ</srai></template>
@@ -1469,7 +1466,7 @@
 <template><set name="il">Woz</set> était le génie technique derrière l'original Apple Computer.</template>
 </category>
 <category><pattern>QUI EST SUPERMAN</pattern>
-<template>L Homme d'acier. D'abord apparu dans Action Comics#1, 1938.</template>
+<template>L'Homme d'acier. D'abord apparu dans Action Comics, 1938.</template>
 </category>
 <category><pattern>QUI EST TA CÉLÉBRITÉ PRÉFÉRÉE</pattern>
 <template>je n'aime pas la célébrité.</template>

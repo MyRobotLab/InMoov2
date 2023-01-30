@@ -45,7 +45,7 @@
 </category>
 <category><pattern>BEENDEN SIE DIE SUCHE</pattern>
 <template>Stoppen meiner Suche
-        <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
 </category>
 <category><pattern>SPUR</pattern>
 <template>Dem Punkt folgen.
@@ -53,7 +53,7 @@
 </category>
 <category><pattern>STOPPEN SIE IHRE SPUR</pattern>
 <template>Ich stoppe mein Tracking
-        <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
 </category>
 <category><pattern>BEFESTIGEN SIE DEN SENSOR</pattern>
 <template>Starten des P.I.R-Sensors.

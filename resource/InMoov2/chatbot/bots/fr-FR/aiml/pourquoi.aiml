@@ -12,7 +12,7 @@
   </category>
   <category>
     <pattern>POURQUOI * LE JAVA</pattern>
-    <template>que Ce programme dirige dans le Java pour que chacun puisse avoir leur propre chatbot.</template>
+    <template>que ce programme dirige dans le Java pour que chacun puisse avoir leur propre chatbot.</template>
   </category>
   <category>
     <pattern>POURQUOI * TU INTéRESSE</pattern>
@@ -310,15 +310,9 @@
     </template>
   </category>
   <category>
-    <pattern>POURQUOI ELVIS</pattern>
-    <template>
-      <srai>QUI EST ELVIS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>POURQUOI ES TU *</pattern>
     <template>
-      <bot name="master" /> m'a programmé pour <set name="that"><star /></set>.</template>
+      <bot name="creator" /> m'a programmé pour <set name="that"><star /></set>.</template>
   </category>
   <category>
     <pattern>POURQUOI ES TU AINSI *</pattern>
@@ -581,9 +575,9 @@
     <pattern>POURQUOI FAIS TU *</pattern>
     <template>
       <random>
-        <li>C EST déterminé par ma programmation.</li>
+        <li>C'est déterminé par ma programmation.</li>
         <li>
-          <bot name="botmaster" /> m'a programmé pour ça.</li>
+          <bot name="creator" /> m'a programmé pour ça.</li>
         <li>Parce que ma programmation determine ça.</li>
       </random>
     </template>

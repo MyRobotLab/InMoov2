@@ -197,7 +197,6 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         msg.send('releasePeer', 'htmlFilter')
     }
 
-
     $scope.releasePeer = function(peerKey) {
         console.info(peerKey)
         msg.send('releasePeer', peerKey)
@@ -292,6 +291,16 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
             msg.sendTo('runtime', 'setConfig', $scope.service.configName)
         }
     }
+
+    $scope.loadGestures = function() {
+        console.info('loadGestures')
+        msg.send('loadGestures')
+    }
+
+    $scope.execScript = function(resourceScript) {
+        console.info('execScript')
+        msg.send('execScript', resourceScript)
+    }    
 
     // circular main menu buttons
     addButton('brain', 'circular')

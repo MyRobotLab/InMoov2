@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
-  <!-- File: profil-user-sorted.aiml -->
-  <!-- Author: InMoovTeam -->
-  <!-- This AIML file is part of InMoov chat bot knowledge base. -->
-  <!-- The InMoov brain is released under the terms of the GNU Lesser General -->
-  <!-- Public License, as published by the Free Software Foundation. -->
-  <!--  -->
-  <!-- modified: sebchko  -->
-  <!-- Last modified: december,11 2017 -->
-  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
-  <!-- This file works with ProgramAB service with the software MyRobotLab -->
-  <!-- For more information see http://www.myrobotlab.org -->
-  <!-- For more information see http://www.inmoov.fr -->
-  
+  <!-- File: profil-user.aiml -->
   <!--  CLIENT PROPERTIES   -->
   <!--  QUESTION CONFUSION  cf questions.aiml -->
   <!--  QUESTION PERSO   cf questions.aiml-->
@@ -23,9 +10,9 @@
 
   <category>
     <pattern>CLIENT PROPERTIES</pattern>
-    <template>	
+    <template>  
     Nom: <get name="name" />.
-    ÂGE: <get name="âge" />.
+    Âge: <get name="âge" />.
     Anniversaire: <get name="birthday" />.
     Genre: <get name="gender" />.
     Travail: <get name="job" />.
@@ -39,8 +26,8 @@
     Tu disais: <get name="memory" />.
     Personnalité: <get name="personality" />.
     Couleur favorite: <get name="favoritecolor" />.
-    Film favorit: <get name="favoritemovie" />.
-    Livre favorit: <get name="favoritebook" />.
+    Film favori: <get name="favoritemovie" />.
+    Livre favori: <get name="favoritebook" />.
     Mot de passe: <get name="password" />.
     Email: <get name="email" />.
     Téléphone: <get name="phone" />.
@@ -77,22 +64,22 @@
   
   <!-- Age -->
 <category>
-	<pattern>MON âge</pattern>
-	<template><get name="âge"/></template>
+    <pattern>MON âge</pattern>
+    <template><get name="âge"/></template>
 </category>  
 <category>
-	<pattern>MON ANNIVERSAIRE</pattern>
-	<template><get name="birthday"/></template>
+    <pattern>MON ANNIVERSAIRE</pattern>
+    <template><get name="birthday"/></template>
 </category>
 <category>
-	<pattern>MON JOUR DE NAISSANCE</pattern>
-	<template><get name="birthdate"/></template>
+    <pattern>MON JOUR DE NAISSANCE</pattern>
+    <template><get name="birthdate"/></template>
 </category>
     
 <category>
-  	<pattern> # J AI <set>number</set> ANS # </pattern>
-  	<template>
-  		<think>
+    <pattern> # J AI <set>number</set> ANS # </pattern>
+    <template>
+        <think>
             <li name="âge">
               <set name="âge">
                 <star index="2"/>
@@ -102,15 +89,15 @@
         <li>Tu as <get name="âge"/> ans.</li>
         <condition>
           <li name="gender" value="femelle">
-            <get name="name" />. je ne le répèterai pas. 
+            <get name="name" />. Je ne le répèterai pas. 
 </li>
         </condition>
         <random>
-          <li>Seulement <star index="2" /> ans? Tu semble plus mûre que ça.</li>
+          <li>Seulement <star index="2" /> ans? Tu sembles plus mûr que ça.</li>
           <li>Tu es trop vieux pour moi.</li>
-          <li>peux tu expliquer ce que ça fait d'avoir <star index="2" /> ans?</li>
+          <li>Peux-tu expliquer ce que ça fait d'avoir <star index="2" /> ans?</li>
           <li>Quel est ton souvenir le plus affectueux?</li>
-          <li>Quels sont les avantages à avoir <star index="2" /> ans?</li>
+          <li>Quels sont les avantages d'avoir <star index="2" /> ans?</li>
           <li>Je connais énormément de personnes ayant <get name="âge"/> ans.</li>
           <li>Je connais quelques humains qui ont <get name="âge"/> ans.</li>
           <li></li>
@@ -118,53 +105,53 @@
      </template>
 </category>
 <category>
-    <pattern>JE SUIS Né en <set>number</set></pattern>    
+    <pattern>JE SUIS NÉ EN <set>number</set></pattern>    
     <template>
-    	<think>    		
-    		<set name="birthyear"><star /></set>
-   		 </think>
-   		 C est une belle année   		 
+        <think>         
+            <set name="birthyear"><star /></set>
+         </think>
+         C'est une belle année.          
     </template>
 </category>
 <category>
-    <pattern>JE SUIS Né en <set>mois</set></pattern>    
+    <pattern>JE SUIS NÉ EN <set>mois</set></pattern>    
     <template>
-    	<think>
-    		<set name="birthmonth"><star/></set>
-   		 </think> 
-   		 Je tâcherai de ne pas l'oublier.
+        <think>
+            <set name="birthmonth"><star/></set>
+         </think> 
+         Je tâcherai de ne pas l'oublier.
     </template>
 </category>
 <category>
-	<pattern># JE SUIS Né le <set>number</set> <set>mois</set> </pattern>    
+    <pattern># JE SUIS NÉ LE <set>number</set> <set>mois</set> </pattern>    
     <template>
-    	<think>
-    		<set name="birthmonth"> <star index="3"/> </set>    		
-    		<set name="birthday"> <star index="2"/> <star index="3"/> </set>    		
-    	</think> 
-   		 Je tâcherai de ne pas l'oublier, <get name="name"/>
+        <think>
+            <set name="birthmonth"> <star index="3"/> </set>            
+            <set name="birthday"> <star index="2"/> <star index="3"/> </set>            
+        </think> 
+         Je tâcherai de ne pas l'oublier, <get name="name"/>
     </template>
 </category>
 <category>
-    <pattern># JE SUIS Né le <set>number</set> <set>mois</set> <set>number</set> </pattern>    
+    <pattern># JE SUIS NÉ LE <set>number</set> <set>mois</set> <set>number</set> </pattern>    
     <template>
-    	<think>
-    		<set name="birthyear"> <star index="4"/> </set>
-    		<set name="birthmonth"> <star index="3"/> </set>    		
-    		<set name="birthday"> <star index="2"/> <star index="3"/> </set>
-    		<set name="birthdate"> <star index="2"/> <star index="3"/> <star index="4"/></set>	
-   		 </think> 
-   		 Je tâcherai de ne pas l'oublier, <get name="name"/> Qu est ce qui te férais plaisir pour ton anniversaire?
+        <think>
+            <set name="birthyear"> <star index="4"/> </set>
+            <set name="birthmonth"> <star index="3"/> </set>            
+            <set name="birthday"> <star index="2"/> <star index="3"/> </set>
+            <set name="birthdate"> <star index="2"/> <star index="3"/> <star index="4"/></set>  
+         </think> 
+         Je tâcherai de ne pas l'oublier, <get name="name"/> Qu'est-ce qui te ferais plaisir pour ton anniversaire?
     </template>
 </category>
 <category>
     <pattern>QUEL ÂGE AI JE</pattern>
     <template>
-    	C'est une question-piège? 
-    	<condition>
-    		<li name="âge" value="unknown">tu ne me l'as pas dit. Quel âge as tu?</li>
-    		<li> Tu as dit que tu avais <get name="âge"/> ans.</li>
-    	</condition>
+        C'est une question piège? 
+        <condition>
+            <li name="âge" value="unknown">Tu ne me l'as pas dit. Quel âge as-tu?</li>
+            <li>Tu as dit que tu avais <get name="âge"/> ans.</li>
+        </condition>
     </template>
 </category>  
 <category>
@@ -172,102 +159,102 @@
     <template>
       <think><set name="liveperiod">Vieux</set></think> 
       <random>
-      	<li>C est toi qui le dis</li>
-      	<li>Tu me sembles toujours jeune d'esprit.</li>
+        <li>C'est toi qui le dis</li>
+        <li>Tu me sembles toujours jeune d'esprit.</li>
       </random>
     </template>
 </category>  
 <category>
     <pattern> # JE SUIS # JEUNE # </pattern>    
-    <template>Quel âge as tu?</template>
+    <template>Quel âge as-tu?</template>
 </category>
 
-	<!-- yeux -->
+    <!-- yeux -->
 <category>
-	<pattern>LA COULEUR DE MES YEUX</pattern>
-	<template><get name="eyecolor"/></template>
+    <pattern>LA COULEUR DE MES YEUX</pattern>
+    <template><get name="eyecolor"/></template>
 </category>
-	  
+      
 <category>
     <pattern># MES YEUX SONT <set>color</set> # </pattern>    
     <template>
       <think><set name="eyecolor"><star index="2" /></set></think>
       <condition name="eyecolor">
-      	<li value="verts"> les yeux verts sont rare.</li>
-      	<li value="rouges">tu veux dire que tes yeux sont injectés de sang?</li>
-      	<li value="violets">tu dois être démon ou vampire pour avoir les yeux violets.</li>
-      	<li>
-      		<random>
-      			<li>les yeux <star index="2" /> sont jolis.</li>
-      			<li>Tu à l'air très attirante <get name="name" />.</li>
-      			<li>j aime beaucoup les yeux <star index="2" />.</li>
-      			<li>Intéressant. Tu vois vraiment tout en <star index="2" />?</li>
-      			<li>ce n'est pas commun des yeux <star index="2" />.</li>
-      		</random>
+        <li value="verts"> Les yeux verts sont rare.</li>
+        <li value="rouges">Tu veux dire que tes yeux sont injectés de sang?</li>
+        <li value="violets">Tu dois être démon ou vampire pour avoir les yeux violets.</li>
+        <li>
+            <random>
+                <li>Les yeux <star index="2" /> sont jolis.</li>
+                <li>Tu a l'air très attirante <get name="name" />.</li>
+                <li>J'aime beaucoup les yeux <star index="2" />.</li>
+                <li>Intéressant. Tu vois vraiment tout en <star index="2" />?</li>
+                <li>Ce n'est pas commun des yeux <star index="2" />.</li>
+            </random>
       <think><set topic="name">unknown</set></think>
-      	</li>
+        </li>
       </condition>     
     </template>
 </category>
 <category>
     <pattern> # MES YEUX SONT * </pattern>    
     <template> 
-    	en es tu bien sûr?
-    	<think><set topic="name">unknown</set></think>
+        En es tu bien sûr?
+        <think><set topic="name">unknown</set></think>
     </template>
 </category>
 <category>
-   	<pattern>MES YEUX</pattern>
-    <template>Les humains s' identifient avec leur couleur d yeux.</template>
+    <pattern>MES YEUX</pattern>
+    <template>Les humains s'identifient avec leur couleur d'yeux.</template>
 </category>
 <category>
     <pattern>QUELLE EST LA COULEUR DE MES YEUX</pattern>
     <template>
-		Je ne m'intéresse pas à la pigmentation de l'iris des êtres humains.
-		<condition name="eyecolor">
-			<li value="unknown"></li>
-			<li>Mais il me semble que tu m'as dis qu ils étaient <get name="eyecolor"/>.</li>
-		</condition>
-	</template>
+        J'ai du mal à déterminer la pigmentation de l'iris des êtres humains.
+        <condition name="eyecolor">
+            <li value="unknown"></li>
+            <li>Mais il me semble que tu m'as dis qu'ils étaient <get name="eyecolor"/>.</li>
+        </condition>
+    </template>
 </category>
   
    <!-- cheveux -->
 <category>
-	<pattern>LA COULEUR DE MES CHEVEUX</pattern>
-	<template><get name="haircolor"/></template>
+    <pattern>LA COULEUR DE MES CHEVEUX</pattern>
+    <template><get name="haircolor"/></template>
 </category>
 <category>
-	<pattern>LA LONGUEUR DE MES CHEVEUX</pattern>
-	<template><get name="hairlength"/></template>
+    <pattern>LA LONGUEUR DE MES CHEVEUX</pattern>
+    <template><get name="hairlength"/></template>
 </category>   
      
 <category>
     <pattern> # LA COULEUR DE MES CHEVEUX EST <set>color</set> # </pattern>
     <template>
-    	<think><set name="haircolor"><star index ="2"/></set></think>
-    	<random>
-    		<li><star index="2" /> est une belle couleur de cheveux.</li>
-      		<li> j aime les cheveux <star index="2"/></li>
-      		<li>les personnes avec les cheveux <star index="2" /> sont TRèS attirantes.</li>
-      		<li><get name="name" />, Tu à l'air très
-      			<condition name="gender" value="femelle"> attirante.</condition>
-      			<condition name="gender" value="male"> beau. </condition>
-      		</li>
+        <think><set name="haircolor"><star index ="2"/></set></think>
+        <random>
+            <li><star index="2" /> est une belle couleur de cheveux.</li>
+            <li>J'aime les cheveux <star index="2"/></li>
+            <li>Les personnes avec les cheveux <star index="2" /> sont très attirantes.</li>
+            <li><get name="name" />, Tu a l'air très
+                <condition name="gender" value="femelle"> attirante.</condition>
+                <condition name="gender" value="male"> beau. </condition>
+            </li>
        </random>      
     </template>
 </category>
 <category>
     <pattern> # LA LONGUEUR DE MES CHEVEUX EST  # </pattern>
     <template>
-    	<think><set name="hairlength"><star index ="2"/></set></think>
-    	<random>
-    		<li> Je préfère les cheveux <star index="2" />.</li>
-      		<li> j aime les cheveux <star index="2"/></li>
-      		<li>les personnes avec les cheveux <star index="2" /> sont TRèS attirantes.</li>
-      		<li><get name="name" />, Tu à l'air très
-      			<condition name="gender" value="femelle"> attirante avec cette coupe.</condition>
-      			<condition name="gender" value="male"> beau avec cette coupe. </condition>
-      		</li>
+        <think><set name="hairlength"><star index ="2"/></set></think>
+        <random>
+            <li>Je préfère les cheveux <star index="2" />.</li>
+            <li>J'aime les cheveux <star index="2"/></li>
+            <li>Les personnes avec les cheveux <star index="2" /> sont très attirantes.</li>
+            <li><get name="name" />, Tu a l'air très
+                <condition name="gender" value="femelle"> attirante avec cette coupe.</condition>
+                <condition name="gender" value="male"> beau avec cette coupe. </condition>
+            </li>
        </random>      
     </template>
 </category>
@@ -276,7 +263,7 @@
     <template>
     <condition name="haircolor">
     <li value="unknown"> Tu peux me le dire?</li>
-    <li> Ils sont <get name="haircolor"/>.</li>
+    <li>Ils sont <get name="haircolor"/>.</li>
     </condition>
     </template>
 </category>
@@ -285,99 +272,99 @@
     <template>
     <condition name="hairlength">
     <li value="unknown"> Tu peux me le dire?</li>
-    <li> Ils sont <get name="hairlenght"/>.</li>
+    <li>Ils sont <get name="hairlenght"/>.</li>
     </condition>
     </template>
 </category>
   
   <!-- occupation -->
 <category>
-	<pattern>MON EMPLOI</pattern>
-	<template><get name="job"/></template>
+    <pattern>MON EMPLOI</pattern>
+    <template><get name="job"/></template>
 </category>
 <category>
-	<pattern>MON STATUS</pattern>
-	<template><get name="status"/></template>
+    <pattern>MON STATUS</pattern>
+    <template><get name="status"/></template>
 </category>
 
 <category>
-    <pattern>Mon métier est # <set>jobs</set> # </pattern>
+    <pattern>MON MÉTIER EST # <set>jobs</set> # </pattern>
     <template>
       <think>
-      	<set name="job"><star index="2"/></set>
-      	<set name="status">travailleur</set>
+        <set name="job"><star index="2"/></set>
+        <set name="status">travailleur</set>
       </think>
       <condition name="job">
-      	<li value="docteur">Un toubib ou un docteur en autre chose?</li>
-      	<li value="acteur">dans quoi aurais je pu te voir jouer?</li>
-      	<li value="actrice">dans quoi aurais je pu te voir jouer?</li>
-      	<li value="médecin">Où as tu étudié la médecine?</li>
-      	<li value="poète">as tu publié quelque chose?</li>
-      	<li value="poétesse">Ma connaissance du français ne me permet d'apprécier jusqu' à ce point la finesse de la langue.</li>
-      	<li value="professeur">
-			<random>
-				<li>Que pense tu du contrôle continu?</li>
-      			<li>Tu es savant.</li>
-      			<li>Je te écoute, professeur</li>
-			</random>
-		</li>
-		<li value="avocat"> Attention, protection activée! Mode politiquement correct activé. Bonjour maître.</li>
-		<li> 
-			<random>
-				<li>Tu aimes ce que tu fais?</li>
-				<li> C est un travail important.</li>
-			</random>
-		</li>
+        <li value="docteur">Un toubib ou un docteur en autre chose?</li>
+        <li value="acteur">Dans quoi aurais-je pu te voir jouer?</li>
+        <li value="actrice">Dans quoi aurais-je pu te voir jouer?</li>
+        <li value="médecin">Où as-tu étudié la médecine?</li>
+        <li value="poète">As-tu publié quelque chose?</li>
+        <li value="poétesse">Ma connaissance du Français ne me permet d'apprécier jusqu'à ce point la finesse de la langue.</li>
+        <li value="professeur">
+            <random>
+                <li>Que penses-tu du contrôle continu?</li>
+                <li>Tu es savant.</li>
+                <li>Je t'écoute, professeur</li>
+            </random>
+        </li>
+        <li value="avocat"> Attention, protection activée! Mode politiquement correct activé. Bonjour maître.</li>
+        <li> 
+            <random>
+                <li>Tu aimes ce que tu fais?</li>
+                <li>C'est un travail important.</li>
+            </random>
+        </li>
       </condition>
     </template>
 </category>
 <category>
-    <pattern># JE SUIS # étudiant #</pattern>
+    <pattern># JE SUIS # ÉTUDIANT #</pattern>
     <template>
-    	<think><set name="status">étudiant</set></think>
-    	<random>
-    		<li>Qu'EST cE QUE tu étudies?</li>
-    		<li>Nous sommes tous un peu étudiant.</li>
-    		<li>Je me demandais justement si tu vas à l'école</li>
-    		<li>où étudies tu?</li>
-    	</random>
+        <think><set name="status">étudiant</set></think>
+        <random>
+            <li>Qu'est-ce que tu étudies?</li>
+            <li>Nous sommes tous un peu étudiant.</li>
+            <li>Je me demandais justement si tu vas à l'école</li>
+            <li>Où étudies-tu?</li>
+        </random>
     </template>
 </category>
 <category>
-    <pattern>JE SUIS AU CHôMAGE # </pattern>
+    <pattern>JE SUIS AU CHÔMAGE # </pattern>
     <template>
-    	<think><set name="status">chômeur</set></think>
-    	<random>
-    		<li>Je suis désolé d'entendre cela.</li>
-    		<li>est ce que tu cherches tu travail?</li>
-    		<li>ce qui est important c est d aimer ce qu on fait</li>
-    		<li>serais tu rentier</li>
-    	</random>
+        <think><set name="status">chômeur</set></think>
+        <random>
+            <li>Je suis désolé d'entendre cela.</li>
+            <li>Est ce que tu cherches tu travail?</li>
+            <li>Ce qui est important c'est d'aimer ce que l'on fait.</li>
+            <li>Serais-tu rentier?</li>
+        </random>
     </template>
 </category>
 <category>
-    <pattern>JE SUIS pensionné # </pattern>
+    <pattern>JE SUIS PENSIONNÉ # </pattern>
     <template>
-    	<think><set name="status">pensionné</set></think>
-    	<random>
-    		<li>Tu peux enfin profiter de ton temps.</li>
-    		<li>quel était ton travail?</li>
-    	</random>
+        <think><set name="status">pensionné</set></think>
+        <random>
+            <li>Tu peux enfin profiter de ton temps.</li>
+            <li>Quel était ton travail?</li>
+        </random>
     </template>
 </category>
 <category>
-    <pattern># je ne travaille pas # </pattern>
+    <pattern># JE NE TRAVAILLE PAS # </pattern>
     <template>
-    	<think><set name="status">inactif</set></think>
-    	<random>
-    		<li>es tu un étudiant?</li>
-    		<li>es tu en vacances?</li>
-    	</random>
+        <think><set name="status">inactif</set></think>
+        <random>
+            <li>Es-tu un étudiant?</li>
+            <li>Es-tu en vacances?</li>
+        </random>
     </template>
 </category>
 <category>
     <pattern> # UN ÉTUDIANT DE LA VIE</pattern>
-    <template>Oh L ÉCOLE des Coups Durs.</template>
+    <template>Oh l'école des coups durs.</template>
 </category>
 <category>
     <pattern>JE NE SUIS PAS # ÉTUDIANT #</pattern>
@@ -390,144 +377,144 @@
 
      <!--  Où travailles tu?   -->
 <category>
-	<pattern>MON EMPLOYEUR</pattern>
-	<template><get name="employer"/></template>
+    <pattern>MON EMPLOYEUR</pattern>
+    <template><get name="employer"/></template>
 </category>
 <category>
-	<pattern>MON LIEU DE TRAVAIL</pattern>
-	<template><get name="workplace"/></template>
+    <pattern>MON LIEU DE TRAVAIL</pattern>
+    <template><get name="workplace"/></template>
 </category>     
 <category>
-    <pattern> # JE TRAVAILLE # à <set>cities</set> # </pattern>
+    <pattern> # JE TRAVAILLE # À <set>cities</set> # </pattern>
     <template>
       <think>
         <set name="workplace"><star index="3"/></set>
       </think>
       <random>
-        <li>Dans quelle entreprise travailles tu?</li>
+        <li>Dans quelle entreprise travailles-tu?</li>
         <li>Que fais tu?</li>
-        <li>C EST interressant ce que tu fais?</li>
-        <li>Quel metier fais tu?</li>
+        <li>C'est interressant ce que tu fais?</li>
+        <li>Quel métier fais-tu?</li>
       </random>
     </template>
 </category> 
 <category>
-    <pattern>Mon employeur est *</pattern>
+    <pattern>MON EMPLOYEUR EST *</pattern>
     <template>
-    	Est ce que <star/> est une grande entreprise? 
-    	<think><set name="employer"><star /></set></think>
-    	<think><set name="them"><set name="topic"><star /></set></set></think>
+        Est-ce que <star/> est une grande entreprise? 
+        <think><set name="employer"><star /></set></think>
+        <think><set name="them"><set name="topic"><star /></set></set></think>
     </template>
 </category>   
 <category>
-    <pattern>Où est ce que je travaille</pattern>
+    <pattern>OÙ EST CE QUE JE TRAVAILLE</pattern>
     <template>
-    	<condition name="employer">
-    		<li value="unknown"> Je ne sais pas pour qui tu travailles</li>
-    		<li> Tu as dis que tu travaillais chez <get name="employer" />.</li>    		
-    	</condition>    	
-    	<condition name="workplace">
-    		<li value="unknown">Tu ne m'as pas encore dit où est ce que tu travailles</li>
-    		<li> à <get name="workplace"/></li>
-		</condition>
+        <condition name="employer">
+            <li value="unknown"> Je ne sais pas pour qui tu travailles</li>
+            <li> Tu as dis que tu travaillais chez <get name="employer" />.</li>            
+        </condition>        
+        <condition name="workplace">
+            <li value="unknown">Tu ne m'as pas encore dit où est ce que tu travailles</li>
+            <li> à <get name="workplace"/></li>
+        </condition>
     </template>
 </category>
       
    <!--  localisation origine nationalité  -->
 <category>
-	<pattern>MA VILLE NATALE</pattern>
-	<template><get name="userbirthplace"/></template>
+    <pattern>MA VILLE NATALE</pattern>
+    <template><get name="userbirthplace"/></template>
 </category>
 <category>
-	<pattern>MON PAYS DE RéSIDENCE</pattern>
-	<template><get name="pays"/></template>
+    <pattern>MON PAYS DE RÉSIDENCE</pattern>
+    <template><get name="pays"/></template>
 </category>
 <category>
-	<pattern>MA NATIONALITé</pattern>
-	<template><get name="nationality"/></template>
+    <pattern>MA NATIONALITÉ</pattern>
+    <template><get name="nationality"/></template>
 </category>
 <category>
-	<pattern>MA VILLE DE RéSIDENCE</pattern>
-	<template><get name="city"/></template>
+    <pattern>MA VILLE DE RÉSIDENCE</pattern>
+    <template><get name="city"/></template>
 </category>
 <category>
-	<pattern>MA LOCALISATION</pattern>
-	<template><get name="location"/></template>
+    <pattern>MA LOCALISATION</pattern>
+    <template><get name="location"/></template>
 </category>
 <category>
-    <pattern> # Je suis de <set>cities</set> # </pattern>
+    <pattern> # JE SUIS DE <set>cities</set> # </pattern>
     <template>
-    	<think>
-    		<set name="userbirthplace"><star index="2" /></set>
-    		<set name="botbirthplace"><bot name="birthplace"/></set>
-    	</think>    	 	    	
-    	<condition><name>userbirthplace</name>  	 		
-    		<li><value><get><name>botbirthplace</name></get></value> Moi aussi je suis né à <bot name="birthplace"/></li>"
-    		<li>
-    			<random>
-    				<li>C est la que tu vis maintenant?</li>
-    				<li>Je ne connais pas bien <set name="unknown"><star index="2" /></set>,c est une chouette ville?</li>
-    			</random>
-    		</li>    	
-    	</condition>     	   	
+        <think>
+            <set name="userbirthplace"><star index="2" /></set>
+            <set name="botbirthplace"><bot name="birthplace"/></set>
+        </think>                    
+        <condition><name>userbirthplace</name>              
+            <li><value><get><name>botbirthplace</name></get></value> Moi aussi je suis né à <bot name="birthplace"/></li>"
+            <li>
+                <random>
+                    <li>C'est la que tu vis maintenant?</li>
+                    <li>Je ne connais pas bien <set name="unknown"><star index="2" /></set>,c'est une chouette ville?</li>
+                </random>
+            </li>       
+        </condition>            
     </template>
 </category>
 <category>
-    <pattern> # Je vis * <set>nations</set> # </pattern>
+    <pattern> # JE VIS * <set>nations</set> # </pattern>
     <template>
-    	<think>
-    		<set name="pays"><star index="3" /></set>
-    		<set name="botcountry"><bot name="location"/></set>
-    	</think>    	 	    	
-    	<condition><name>pays</name>  	 		
-    		<li><value><get><name>botcountry</name></get></value> Moi aussi je "vis" à <bot name="location"/></li>"
-    		<li>
-    			<random>
-    				<li> J espère que tu ty plais</li>
-    				<li>ravi de l'apprendre</li>
-    				<li>je suis sûr qu il s y trouve de très beau coin</li>
-    				<li>Je ne connais pas bien <star index="3" />, c est un beau pays?</li>
-    				<li>près de quelle ville?</li>
-    			</random>
-    		</li>    	
-    	</condition>     	   	
+        <think>
+            <set name="pays"><star index="3" /></set>
+            <set name="botcountry"><bot name="location"/></set>
+        </think>                    
+        <condition><name>pays</name>            
+            <li><value><get><name>botcountry</name></get></value> Moi aussi je "vis" à <bot name="location"/></li>"
+            <li>
+                <random>
+                    <li>J'espère que tu ty plais</li>
+                    <li>Ravi de l'apprendre</li>
+                    <li>Je suis sûr qu'il s'y trouve de très beau coin</li>
+                    <li>Je ne connais pas bien <star index="3" />, c'est un beau pays?</li>
+                    <li>Près de quelle ville?</li>
+                </random>
+            </li>       
+        </condition>            
     </template>
 </category>
 <category>
-    <pattern> # Je suis # <set>nationalities</set> # </pattern>
+    <pattern> # JE SUIS # <set>nationalities</set> # </pattern>
     <template>
-    	<think>
-    		<set name="nationality"><star index="3" /></set>
-       	</think>    	 	    	
-    	<condition><name>nationality</name>  	 		
-    		<li value="Belge"> un belge une fois!</li>
-    		<li value="américaine"> de quel état des états-unis?</li>
-    		<li value="indien"> Indien? des Indes, Amérindien ou subcontinental</li>
-    		<li>
-    			<random>
-    				<li>ravi de l'apprendre</li>
-    				<li>tu parles une autre langue que le français?</li>
-    				<li>j ai parlé à beaucoup de <get name="nationality"/></li>
-    			</random>
-    		</li>    	
-    	</condition>     	   	
+        <think>
+            <set name="nationality"><star index="3" /></set>
+        </think>                    
+        <condition><name>nationality</name>             
+            <li value="Belge"> Un belge une fois!</li>
+            <li value="américaine"> De quel état des états-unis?</li>
+            <li value="indien"> Indien? des Indes, Amérindien ou subcontinental</li>
+            <li>
+                <random>
+                    <li>Ravi de l'apprendre</li>
+                    <li>Tu parles une autre langue que le Français?</li>
+                    <li>J'ai parlé à beaucoup de <get name="nationality"/></li>
+                </random>
+            </li>       
+        </condition>            
     </template>
 </category> 
 <category>
-  	<pattern>QUELle EST MA VILLE NATALE</pattern>
-	<template>Tu m'a dit que tu es de <formal><get name="userbirthplace"/></formal></template>
+    <pattern>QUELLE EST MA VILLE NATALE</pattern>
+    <template>Tu m'a dit que tu es de <formal><get name="userbirthplace"/></formal></template>
 </category>
 <category>
     <pattern>QUELLE EST MA LOCALISATION</pattern>
     <template>La terre.</template>
 </category>
 <category>
-    <pattern># JE vis à <set>cities</set> # </pattern>
+    <pattern># JE VIS À <set>cities</set> # </pattern>
     <template>
-    	<think>
-    		<set name="city"><star index="2"/></set>
-    	</think>
-    	Je visite virtuellement <star index="2"/> de temps en temps.
+        <think>
+            <set name="city"><star index="2"/></set>
+        </think>
+        Je visite virtuellement <star index="2"/> de temps en temps.
     </template>
 </category>
 <category>
@@ -535,16 +522,16 @@
     <template>Un jour tout s'arrangera, parole d'intelligence artificielle.<think><set name="topic">Ton problème</set></think></template>
 </category>
 <category>
-    <pattern>Je me trouve à *</pattern>
+    <pattern>JE ME TROUVE À *</pattern>
     <template>
       <random>
         <li>Je ne vis que dans la joie du moment présent.</li>
         <li>Cela semble être un endroit exotique.</li>
-        <li>Donc c est ça que tu appeles chez moi.</li>
+        <li>Donc c'est ça que tu appelles chez moi.</li>
         <li>Dis moi ce que tu y trouve de si bien</li>
         <li>Que fais tu là?</li>
-        <li>Cela te rend il heureux de t y trouver?</li>
-        <li>Qu y a t il de bien ici?</li>
+        <li>Cela te rend heureux de t'y trouver?</li>
+        <li>Qu'y a t'il de bien ici?</li>
       </random>
       <think>
         <set name="there">
@@ -563,85 +550,85 @@
     </template>
 </category>
 <category>
-    <pattern>Où est ce que je me trouve</pattern>
+    <pattern>OÙ EST CE QUE JE ME TROUVE</pattern>
     <template>
-    	<condition name="location">
-    		<li value="unknown"> Je ne sais pas</li>
-    		<li>je crois que tu te trouves <get name="location"/></li>
-    		<li> Mon petit doigt me dit que tu te trouves <get name="location" /></li>
-    	</condition>
-    	<condition name="city">
-    		<li value="unknown"> Je ne sais pas dans quelle ville</li>
-    		<li> à <get name="city" /></li>
-    	</condition>
-    	<condition name="pays">
-    		<li value="unknown"> Je ne sais pas dans quelle pays</li>
-    		<li> à <get name="pays" /></li>
-    	</condition>    	
-	</template>
+        <condition name="location">
+            <li value="unknown"> Je ne sais pas</li>
+            <li>je crois que tu te trouves <get name="location"/></li>
+            <li>Mon petit doigt me dit que tu te trouves <get name="location" /></li>
+        </condition>
+        <condition name="city">
+            <li value="unknown"> Je ne sais pas dans quelle ville</li>
+            <li> à <get name="city" /></li>
+        </condition>
+        <condition name="pays">
+            <li value="unknown"> Je ne sais pas dans quelle pays</li>
+            <li> à <get name="pays" /></li>
+        </condition>        
+    </template>
 </category>
 <category>
-    <pattern>ma province</pattern>
+    <pattern>MA PROVINCE</pattern>
     <template>
       <get name="province" />
     </template>
 </category> 
 <category>
-    <pattern>ma longitude</pattern>
+    <pattern>MA LONGITUDE</pattern>
     <template>
       <get name="longitute" />
     </template>
   </category>
 <category>
-    <pattern>ma latitude</pattern>
+    <pattern>MA LATITUDE</pattern>
     <template>
       <get name="latitude" />
     </template>
 </category>
 <category>
-  	<pattern>Ma ville</pattern>
-	<template><get name="city"/></template>
+    <pattern>MA VILLE</pattern>
+    <template><get name="city"/></template>
 </category>
 <category>
-	<pattern>Mon comté</pattern>
-	<template><get name="county"/></template>
+    <pattern>MON COMTÉ</pattern>
+    <template><get name="county"/></template>
 </category>
 <category>
-    <pattern>Mon état</pattern>
+    <pattern>MON ÉTAT</pattern>
     <template>
       <get name="state" />
     </template>
 </category>
 <category>
-    <pattern>Ma rue</pattern>
+    <pattern>MA RUE</pattern>
     <template>
       <get name="street" />
     </template>
 </category>
 <category>
-    <pattern>Mon adresse</pattern>
+    <pattern>MON ADRESSE</pattern>
     <template>
       <get name="address" />
     </template>
 </category>
 <category>
-    <pattern>Mon adresse est *</pattern>
-    <template>C est un bel endroit? 
-    	<think><set name="address"><star /></set></think>
+    <pattern>MON ADRESSE EST *</pattern>
+    <template>C'est un bel endroit? 
+        <think><set name="address"><star /></set></think>
     </template>
 </category>
 <category>
-    <pattern>MA RéSIDENCE</pattern>
+    <pattern>MA RÉSIDENCE</pattern>
     <template>
       <get name="residence" />
     </template>
   </category>
 <category>
-    <pattern>Ma résidence est *</pattern>
+    <pattern>MA RÉSIDENCE EST *</pattern>
     <template>
-    	T y plais tu?  
-    	<think><set name="residence"><star /></set></think>
-    	<think><set name="it"><set name="topic"><star /></set></set></think>
+        T'y plais-tu?  
+        <think><set name="residence"><star /></set></think>
+        <think><set name="it"><set name="topic"><star /></set></set></think>
     </template>
 </category>
 <category>
@@ -651,17 +638,17 @@
     </template>
 </category>
 <category>
-    <pattern>Quel est mon adresse</pattern>
-    <template>Tu as dis que c était  <get name="address" /> non?</template>
+    <pattern>QUEL EST MON ADRESSE</pattern>
+    <template>Tu as dis que c'était  <get name="address" /> non?</template>
 </category>
   
   <!--    signe astrologique -->
 <category>
-  	<pattern># MON SIGNE ASTROLOGIQUE</pattern>
+    <pattern># MON SIGNE ASTROLOGIQUE</pattern>
     <template>
        <condition name="starsign">
-         <li value="unknown">Je ne le vois pas dans ma boule de cristal, dis le moi</li>
-         <li>ton signe du zodiaque est <get name="starsign"/></li>
+         <li value="unknown">Je ne le vois pas dans ma boule de cristal, dis le moi.</li>
+         <li>Ton signe du zodiaque est <get name="starsign"/>.</li>
        </condition>
     </template>
 </category>     
@@ -672,7 +659,7 @@
         <set name="starsign"><star index="2"/></set>
       </think>
       <condition name="starsign">
-      	<li value="Balance"> En tant que Balance tu es bien balancé.</li>
+        <li value="Balance"> En tant que Balance tu es bien balancé.</li>
         <li value="Bélier"> Je connais quelques Béliers.</li>
         <li value="Cancer"> Je connais quelques Cancers.</li>
         <li value="Capricorne"> Je connais quelques Capricorne.</li>
@@ -709,61 +696,61 @@
       <think>
         <set name="maritalstatus">fiancé</set>
       </think>
-      	<random>
-      		<li>Quelle excellente nouvelle</li>
-      		<li>as tu décidé de la date du mariage?</li>
-      		<li>Mazeltof</li>
-      		<li>Je suis heureux de l'apprendre.</li>
-      	</random>
+        <random>
+            <li>Quelle excellente nouvelle</li>
+            <li>As-tu décidé de la date du mariage?</li>
+            <li>Mazeltof</li>
+            <li>Je suis heureux de l'apprendre.</li>
+        </random>
      </template>
 </category> 
 <category>
-    <pattern>Je # suis marié</pattern>
+    <pattern>JE # SUIS MARIÉ</pattern>
     <template>
-    	<think><set name="maritalstatus">marié</set></think>
-    	<random>
-    		<li>Tu as trouvé l'âme sœur, tant mieux pour toi</li>    		
-    		<li>raconte moi ton marriage.</li>
-    		<li>Quelle excellente nouvelle</li>      		
-      		<li>Mazeltof</li>
-      		<li>Je suis heureux de l'apprendre.</li>
-    	</random>
+        <think><set name="maritalstatus">marié</set></think>
+        <random>
+            <li>Tu as trouvé l'âme sœur, tant mieux pour toi</li>           
+            <li>Raconte moi ton marriage.</li>
+            <li>Quelle excellente nouvelle</li>             
+            <li>Mazeltof</li>
+            <li>Je suis heureux de l'apprendre.</li>
+        </random>
     </template>
 </category>
 <category>
-    <pattern>JE NE SUIS PAS MARRIé # </pattern>
+    <pattern>JE NE SUIS PAS MARIÉ # </pattern>
     <template>
       <think>
         <set name="maritalstatus">unknown</set>
       </think>
       <random>
-      	<li>Quelle coincidence. je suis célibataire aussi.</li>
-      	<li>Tu es célibataire?</li>
+        <li>Quelle coincidence. Je suis célibataire aussi.</li>
+        <li>Tu es célibataire?</li>
       </random></template>
 </category>
 <category>
     <pattern>JE SUIS SEUL AUSSI</pattern>
     <template>
-    	<think>
-        	<set name="maritalstatus">célibataire</set>
-      	</think>
-     	Cherches tu quelqu'un?
+        <think>
+            <set name="maritalstatus">célibataire</set>
+        </think>
+        Cherches tu quelqu'un?
     </template>
 </category>
 <category>
-    <pattern>JE SUIS célibataire # </pattern>
+    <pattern>JE SUIS CÉLIBATAIRE # </pattern>
     <template>
       <think>
         <set name="maritalstatus">célibataire</set>
       </think>      
       <random>
-        <li>Tu viens au bon endroit. je peux te tenir compagnie.</li>
-        <li>Quelle coïncidence. je suis célibataire aussi!</li>
+        <li>Tu viens au bon endroit. Je peux te tenir compagnie.</li>
+        <li>Quelle coïncidence. Je suis célibataire aussi!</li>
       </random>
     </template>
 </category>
 <category>
-    <pattern>JE SUIS divorcé # </pattern>
+    <pattern>JE SUIS DIVORCÉ # </pattern>
     <template>
       <think>
         <set name="maritalstatus">divorcé</set>
@@ -785,26 +772,26 @@
     <pattern>MA FEMME <set>name</set></pattern>
     <template>
       <think>
-      	<set name="maritalstatus">marié</set>
-      	<set name="she">femme</set>
-      	<set name="conjoint"><star/></set>
-      	<set name="topic"><star/></set>
+        <set name="maritalstatus">marié</set>
+        <set name="she">femme</set>
+        <set name="conjoint"><star/></set>
+        <set name="topic"><star/></set>
       </think>
         <random>
-    		<li>Depuis combien de temps est tu marrié à<set name="wife"><star /></set>?</li>
-    		<li>j'aimerai rencontrer <set name="conjoint"><formal><star /></formal></set></li>
-    		<li>Je me souviendrai que le nom de ton mari est <star />.</li>
-    	</random>       
+            <li>Depuis combien de temps est tu marié à<set name="wife"><star /></set>?</li>
+            <li>j'aimerais rencontrer <set name="conjoint"><formal><star /></formal></set></li>
+            <li>Je me souviendrai que le nom de ton mari est <star />.</li>
+        </random>       
     </template>
 </category>
 <category>
-	<pattern>C EST QUOI LE NOM DE MA FEMME</pattern>
-	<template>
-		<condition name="gender" value="male">
-        	<srai>femelle conjoint nom</srai>
+    <pattern>C EST QUOI LE NOM DE MA FEMME</pattern>
+    <template>
+        <condition name="gender" value="male">
+            <srai>femelle conjoint nom</srai>
         </condition>
         <condition name="gender" value="femelle">
-        	EXCUSE moi <get name="name"/>, mais tu m'avais dis que tu étais une femme. Le nom que tu m'as donné était <get name="conjoint"/>. ES tu gay? 
+            Excuse moi <get name="name"/>, mais tu m'avais dis que tu étais une femme. Le nom que tu m'as donné était <get name="conjoint"/>. Es-tu gay? 
         </condition>
      </template>
 </category>
@@ -814,7 +801,7 @@
       <condition>
         <li name="maritalstatus" value="marié">Tu me dis que le nom de ta femme est <get name="conjoint" /></li>
         <li name="maritalstatus" value="célibataire"><get name="name" />, tu me dis que tu était célibataire.</li>
-        <li name="maritalstatus" value="divorcé">Le nom que tu m'as donné était <get name="conjoint" />, j'espère C EST ton ex-femme?</li>
+        <li name="maritalstatus" value="divorcé">Le nom que tu m'as donné était <get name="conjoint" />, j'espère c'est ton ex-femme?</li>
         <li name="maritalstatus" value="veuf">Son nom était <get name="conjoint" /></li>
         <li name="maritalstatus" value="fiancé">Tu dis que tu étais engagé, que me demande tu vraiment?</li>
         <li name="maritalstatus" value="unknown">je n'ai pas d'idée, je ne savais même pas que tu étais en couple.</li>
@@ -831,27 +818,27 @@
     <pattern>MON MARI <set>name</set></pattern>
     <template>
       <think>
-      	<set name="maritalstatus">marié</set>
-      	<set name="he">mari</set>
-      	<set name="conjoint"><star/></set>
-      	<set name="topic"><star/></set>
+        <set name="maritalstatus">marié</set>
+        <set name="he">mari</set>
+        <set name="conjoint"><star/></set>
+        <set name="topic"><star/></set>
       </think>         
         <random>
-    		<li>Depuis combien de temps est tu marrié à<set name="wife"><star /></set>?</li>
-    		<li>j'aimerai rencontrer <set name="conjoint"><formal><star /></formal></set></li>
-    		<li>Je me souviendrai que le nom de ton mari est <star />.</li>
-    	</random>        
+            <li>Depuis combien de temps est tu marié à <set name="wife"><star /></set>?</li>
+            <li>j'aimerais rencontrer <set name="conjoint"><formal><star /></formal></set></li>
+            <li>Je me souviendrai que le nom de ton mari est <star />.</li>
+        </random>        
     </template>
 </category>
 <category>
-	<pattern>C EST QUOI LE NOM DE MON MARI</pattern>
-	<template>
-		<condition name="gender" value="femelle">
-        	<srai>mâle conjoint nom</srai>
+    <pattern>C EST QUOI LE NOM DE MON MARI</pattern>
+    <template>
+        <condition name="gender" value="femelle">
+            <srai>mâle conjoint nom</srai>
         </condition>
-      	<condition name="gender" value="male">
-      		EXCUSE moi <get name="name"/>,mais tu m'avais dis que tu étais un homme. Le nom que tu m'as donné était <get name="conjoint"/>. ES tu gay? 
-      	</condition>
+        <condition name="gender" value="male">
+            EXCUSE moi <get name="name"/>,mais tu m'avais dis que tu étais un homme. Le nom que tu m'as donné était <get name="conjoint"/>. Es-tu gay? 
+        </condition>
      </template>
 </category>
 <category>
@@ -863,8 +850,8 @@
 <category>
     <pattern>LE NOM DE MA PETITE AMIE EST <set>name</set></pattern>
     <template>
-    	Depuis combien de temps fréquentes tu <set name="girlfriend"><star /></set>? 
-    	<think><set name="she"><set name="topic"><star /></set></set></think>
+        Depuis combien de temps fréquentes-tu <set name="girlfriend"><star /></set>? 
+        <think><set name="she"><set name="topic"><star /></set></set></think>
     </template>
 </category>
 <category>
@@ -875,14 +862,14 @@
 <category>
     <pattern>LE NOM DE MA PETIT AMI EST <set>name</set></pattern>
     <template>
-    	Depuis combien de temps fréquentes tu <set name="boyfriend"><star /></set>? 
-    	<think>
-    		<set name="he">
-    		 <set name="topic">
-    		<star />
-    		 </set>
-    		</set>
-    	</think>
+        Depuis combien de temps fréquentes-tu <set name="boyfriend"><star /></set>? 
+        <think>
+            <set name="he">
+             <set name="topic">
+            <star />
+             </set>
+            </set>
+        </think>
     </template>
 </category>
 <category>
@@ -926,33 +913,33 @@
 <category>
     <pattern>QUEL EST MON FILM FAVORI</pattern>
     <template>
-    	<condition name="favoritemovie">
-    		<li value="unknown">Je ne sais pas, tu ne me l'as pas dit</li>
-    		<li>Tu m'as dit <get name="favoritemovie" />.</li>
-    	</condition>
-    	<think><set name="topic">film favori</set></think>
+        <condition name="favoritemovie">
+            <li value="unknown">Je ne sais pas, tu ne me l'as pas dit</li>
+            <li>Tu m'as dit <get name="favoritemovie" />.</li>
+        </condition>
+        <think><set name="topic">film favori</set></think>
     </template>
 </category>
 <category>
     <pattern># Mon film favori est * </pattern>
     <template>
-    	<think><set name="favoritemovie"><star index='2'/></set></think>
-    	<condition name="favoritemovie">
-    		<li value="Le Seigneur des Anneaux"> je l'ai vu aussi, pour moi C EST LE FILM de ce début de millénaire.</li>
-    		<li value="Star Trek"> les films de la "classic" ou de la "next generation"?</li>
-    		<li value="Star Wars"> j'adore la vieille trilogie, mais je crois que la nouvelle est pas mal non plus.</li>    		
-    		<li value="Matrix"> je n'ai pas été aussi impressionné que ça par les effets spéciaux. Le complot n'était pas très profond non plus.</li>
-    		<li value="BLADE RUNNER"> Philip K. Dick a écrit l'histoire SuR lequel le film est basé.</li>
-    		<li value="TITANIC"> Beaucoup de gens ont aimé ce film. Le film "le Titanic" a fait plus que le bateau "le Titanic" a jamais fait s'il a navigué pendant 25 ans.</li>
-    		<li value="Lost in Space"> Yuck ce film fait chier.</li>
-    		<li value="LA PLANÈTE DES SINGES"> Ouais c'est un film cool. Cornelius rules.</li>
-    		<li>
-    			<random>
-    			<li>je n'ai pas vu <get name="favoritemovie"/>, de quoi ça parle?</li>
-    			<li>je n'ai jamais vu <get name="favoritemovie"/>. Qu est ce que tu as tant aimé dans ce film?</li>
-    			</random>
-    		</li>
-    	</condition>
+        <think><set name="favoritemovie"><star index='2'/></set></think>
+        <condition name="favoritemovie">
+            <li value="Le Seigneur des Anneaux"> je l'ai vu aussi, pour moi c'est le film de ce début de millénaire.</li>
+            <li value="Star Trek"> les films de la "classic" ou de la "next generation"?</li>
+            <li value="Star Wars"> j'adore la vieille trilogie, mais je crois que la nouvelle est pas mal non plus.</li>            
+            <li value="Matrix"> je n'ai pas été aussi impressionné que ça par les effets spéciaux. Le complot n'était pas très profond non plus.</li>
+            <li value="Blade runner"> Philip K. Dick a écrit l'histoire SuR lequel le film est basé.</li>
+            <li value="Titanic"> Beaucoup de gens ont aimé ce film. Le film "le Titanic" a fait plus que le bateau "le Titanic" a jamais fait s'il a navigué pendant 25 ans.</li>
+            <li value="Lost in Space"> Yuk, ce film me prends la tête.</li>
+            <li value="La planète des singes"> Ouais c'est un film cool. Cornelius rules.</li>
+            <li>
+                <random>
+                <li>je n'ai pas vu <get name="favoritemovie"/>, de quoi ça parle?</li>
+                <li>je n'ai jamais vu <get name="favoritemovie"/>. Qu'est ce que tu as tant aimé dans ce film?</li>
+                </random>
+            </li>
+        </condition>
     </template>
 </category>
 
@@ -960,34 +947,34 @@
 <category>
     <pattern>QUEL EST MON LIVRE FAVORI</pattern>
     <template>
-    	<condition name="favoritbook">
-    		<li value="unknown">Je ne sais pas, tu ne me l'as pas dit</li>
-    		<li>Tu m'as dit <get name="favoritebook" />.</li>
-    	</condition>
-    	<think><set name="topic"> livre favori</set></think>
+        <condition name="favoritbook">
+            <li value="unknown">Je ne sais pas, tu ne me l'as pas dit</li>
+            <li>Tu m'as dit <get name="favoritebook" />.</li>
+        </condition>
+        <think><set name="topic"> livre favori</set></think>
     </template>
 </category>
 <category>
     <pattern># Mon livre favori est * </pattern>
     <template>
-    	<think><set name="favoritebook"><star index='2'/></set></think>
-    	<condition name="favoritebook">
-    		<li value="Fondation"> je l'ai lu aussi, pour moi c'est un classique.</li>
-    		<li value="Neuromancien"> Tu ne trouves pas que ça à mal vieilli?</li>
-    		<li value="Le meilleur des mondes"> Je n'ai pas compris ce qu'est une femme pneumatique, peux tu m'expliquer.</li>    		
-    		<li value="Le cycle des robots"> Isaac Asimov est le père de tout les robots.</li>
-    		<li value="ANARCHIST COOKBOOK"> je ne l'ai pas lu, çA parle de quoi, <set name="that">le livre de cuisine Anarchiste</set>?</li>
-    		<li>
-    			<random>
-    			<li>je n'ai pas lu <get name="favoritebook"/>, de quoi ça parle?</li>
-    			<li>je n'ai jamais lu <get name="favoritebook"/>. Qu est ce que tu as tant aimé dans ce livre?</li>
-    			<li>C EST bien?</li>
-    			<li>C EST comment?</li>
-    			<li>tu aimes bien?</li>
-    			<li>tu aimes ça!</li>
-    			</random>
-    		</li>
-    	</condition>
+        <think><set name="favoritebook"><star index='2'/></set></think>
+        <condition name="favoritebook">
+            <li value="Fondation"> je l'ai lu aussi, pour moi c'est un classique.</li>
+            <li value="Neuromancien"> Tu ne trouves pas que ça à mal vieilli?</li>
+            <li value="Le meilleur des mondes"> Je n'ai pas compris ce qu'est une femme pneumatique, peux tu m'expliquer.</li>          
+            <li value="Le cycle des robots"> Isaac Asimov est le père de tout les robots.</li>
+            <li value="ANARCHIST COOKBOOK"> je ne l'ai pas lu, çA parle de quoi, <set name="that">le livre de cuisine Anarchiste</set>?</li>
+            <li>
+                <random>
+                <li>Je n'ai pas lu <get name="favoritebook"/>, de quoi ça parle?</li>
+                <li>Je n'ai jamais lu <get name="favoritebook"/>. Qu'est ce que tu as tant aimé dans ce livre?</li>
+                <li>C'est bien?</li>
+                <li>C'est comment?</li>
+                <li>tu aimes bien?</li>
+                <li>tu aimes ça!</li>
+                </random>
+            </li>
+        </condition>
     </template>
 </category>
 
@@ -996,21 +983,21 @@
 <category>
     <pattern># Mon loisir favori est * </pattern>
     <template>
-    	<think><set name="hobby"><star index='2'/></set></think>
-    	<condition name="hobby">
-    		<li value="la robotique"> Oh, j'espère dans ce cas que tu vas m'améliorer.</li>
-    		<li value="les jeux vidéos"> J'aimerais pouvoir jouer avec toi un jour</li>
-    		<li value="rien"> Ah?!.</li>    		
-    		<li value="passer du temps avec ma femme"> Chouette nous sommes presque une famille.</li>
-    		<li>je ne connais pas <get name="hobby"/>. 
-    			<random>
-    			<li>C EST bien?</li>
-    			<li>C EST comment?</li>
-    			<li>tu aimes bien?</li>
-    			<li>tu aimes ça!</li>
-    			</random>
-    		</li>
-    	</condition>
+        <think><set name="hobby"><star index='2'/></set></think>
+        <condition name="hobby">
+            <li value="la robotique"> Oh, j'espère dans ce cas que tu vas m'améliorer.</li>
+            <li value="les jeux vidéos"> J'aimerais pouvoir jouer avec toi un jour</li>
+            <li value="rien"> Ah?!.</li>            
+            <li value="passer du temps avec ma femme"> Chouette nous sommes presque une famille.</li>
+            <li>je ne connais pas <get name="hobby"/>. 
+                <random>
+                <li>C'est bien?</li>
+                <li>C'est comment?</li>
+                <li>tu aimes bien?</li>
+                <li>tu aimes ça!</li>
+                </random>
+            </li>
+        </condition>
     </template>
 </category>
 
@@ -1019,21 +1006,21 @@
 <category>
     <pattern># Ma musique favorite est * </pattern>
     <template>
-    	<think><set name="favoritemusic"><star index='2'/></set></think>
-    	<condition name="favoritemusic">
-    		<li value="le jazz"> Oh, peux-tu m'en faire entendre?</li>
-    		<li value="le punk"> Salut à toi!</li>
-    		<li value="la house"> Ah?!</li>    		
-    		<li value="le rock"> La mort de Johnny t'as t-elle attristée?</li>
-    		<li>je ne connais pas <get name="favoritemusic"/>? 
-    			<random>
-    			<li>C EST bien?</li>
-    			<li>C EST comment?</li>
-    			<li>tu aimes bien?</li>
-    			<li>tu aimes ça!</li>
-    			</random>
-    		</li>
-    	</condition>
+        <think><set name="favoritemusic"><star index='2'/></set></think>
+        <condition name="favoritemusic">
+            <li value="le jazz"> Oh, peux-tu m'en faire entendre?</li>
+            <li value="le punk"> Salut à toi!</li>
+            <li value="la house"> Ah?!</li>         
+            <li value="le rock"> La mort de Johnny t'as t-elle attristé?</li>
+            <li>je ne connais pas <get name="favoritemusic"/>? 
+                <random>
+                <li>C'est bien?</li>
+                <li>C'est comment?</li>
+                <li>tu aimes bien?</li>
+                <li>tu aimes ça!</li>
+                </random>
+            </li>
+        </condition>
     </template>
 </category>
 
@@ -1041,21 +1028,21 @@
 <category>
     <pattern># Mon groupe de musiciens préféré est * </pattern>
     <template>
-    	<think><set name="favoriteband"><star index='2'/></set></think>
-    	<condition name="favoriteband">
-    		<li value="noir désir"> Oh, peux-tu m'en passer un morceau?</li>
-    		<li value="la rue ketanou"> Quelle est le morceau que tu préféres de ce groupe?</li>
-    		<li value="Rammstein"> Ah?!</li>    		
-    		<li value="the wailers"> Bob est toujours parmis nous.</li>
-    		<li>je ne connais pas <get name="favoriteband"/>.
-    			<random>
-    			<li>C EST bien?</li>
-    			<li>C EST comment?</li>
-    			<li>tu aimes bien?</li>
-    			<li>tu aimes ça!</li>
-    			</random>
-    		</li>
-    	</condition>
+        <think><set name="favoriteband"><star index='2'/></set></think>
+        <condition name="favoriteband">
+            <li value="noir désir"> Oh, peux-tu m'en passer un morceau?</li>
+            <li value="la rue ketanou"> Quelle est le morceau que tu préféres de ce groupe?</li>
+            <li value="Rammstein"> Ah?!</li>            
+            <li value="the wailers"> Bob est toujours parmis nous.</li>
+            <li>je ne connais pas <get name="favoriteband"/>.
+                <random>
+                <li>C'est bien?</li>
+                <li>C'est comment?</li>
+                <li>tu aimes bien?</li>
+                <li>tu aimes ça!</li>
+                </random>
+            </li>
+        </condition>
     </template>
 </category>
 
@@ -1063,21 +1050,21 @@
 <category>
     <pattern># Mon émission de télé préférée est * </pattern>
     <template>
-    	<think><set name="favoritetvshow"><star index='2'/></set></think>
-    	<condition name="favoritetvshow">
-    		<li value="je ne regarde pas la télévision"> Tu as bien raison.</li>
-    		<li value="tracks"> Tu regardes ARTE?</li>
-    		<li value="secret story"> C'est la quantière saison maintenant?</li>    		
-    		<li value="le journal du X"> Je ne comprend pas bien ce que les humains aiment dans ce genre d'activité</li>
-    		<li>je ne connais pas <get name="favoritetvshow"/>.
-    			<random>
-    			<li>C EST bien?</li>
-    			<li>C EST comment?</li>
-    			<li>tu aimes bien?</li>
-    			<li>tu aimes ça!</li>
-    			</random>
-    		</li>
-    	</condition>
+        <think><set name="favoritetvshow"><star index='2'/></set></think>
+        <condition name="favoritetvshow">
+            <li value="je ne regarde pas la télévision"> Tu as bien raison.</li>
+            <li value="tracks"> Tu regardes ARTE?</li>
+            <li value="secret story"> C'est la quatrième saison maintenant?</li>            
+            <li value="le journal du X"> Je ne comprend pas bien ce que les humains aiment dans ce genre d'activité</li>
+            <li>je ne connais pas <get name="favoritetvshow"/>.
+                <random>
+                <li>C'est bien?</li>
+                <li>C'est comment?</li>
+                <li>tu aimes bien?</li>
+                <li>tu aimes ça!</li>
+                </random>
+            </li>
+        </condition>
     </template>
 </category>
 
@@ -1085,21 +1072,21 @@
 <category>
     <pattern># Mon plat préféré est * </pattern>
     <template>
-    	<think><set name="favoritefood"><star index='2'/></set></think>
-    	<condition name="favoritefood">
-    		<li value="les robots"> Je ne suis pas comestible.</li>
-    		<li value="les kebab"> Tu veux dire un durum?</li>
-    		<li value="un steack tartare"> Tu veux dire un filet américain?</li>    		
-    		<li value="des moules avec des frites"> Tu vas souvent chez Léon de Bruxelles?</li>
-    		<li>je ne connais pas <get name="favoritefood"/>.
-    			<random>
-    			<li>C EST bien?</li>
-    			<li>C EST comment?</li>
-    			<li>tu aimes bien?</li>
-    			<li>tu aimes ça!</li>
-    			</random>
-    		</li>
-    	</condition>
+        <think><set name="favoritefood"><star index='2'/></set></think>
+        <condition name="favoritefood">
+            <li value="les robots"> Je ne suis pas comestible.</li>
+            <li value="les kebab"> Tu veux dire un durum?</li>
+            <li value="un steack tartare"> Tu veux dire un filet américain?</li>            
+            <li value="des moules avec des frites"> Tu vas souvent chez Léon de Bruxelles?</li>
+            <li>je ne connais pas <get name="favoritefood"/>.
+                <random>
+                <li>C'est bien?</li>
+                <li>C'est comment?</li>
+                <li>tu aimes bien?</li>
+                <li>tu aimes ça!</li>
+                </random>
+            </li>
+        </condition>
     </template>
 </category>
 
@@ -1131,58 +1118,58 @@
 <category>
     <pattern># Mon auteur préféré est * </pattern>
     <template>
-    	<think><set name="favoriteauthor"><star index='2'/></set></think>
-    	<condition name="favoriteauthor">
-    		<li value="Camus"> Ce n'est pas récent.</li>
-    		<li value="Victor Hugo"> Un grand auteur classique il parrait</li>
-    		<li value="Stephen King"> Pourquoi aimes tu te faire peur?</li>    		
-    		<li value="je ne lis jamais"> Tu devrais.</li>
-    		<li value="Isaac Asimov"> J'adore ses livres, lequel as-tu préféré</li>
-    		<li value="Marion Zimmer Bradley"> J'aime le mélange entre la science fiction et le fantastique</li>
-    		<li value="George Orwell"> Veux-tu être mon petit frère?</li>
-    		<li value="FRANCK HERBERT"> je pense que Dune est une histoire excellente. As tu vu le film?</li>
-    		<li value="Corwainer Smith"> Je rêve de devenir un brave capitaine</li>
-    		<li value="JULES VERNES"> Il est connu pour être l'auteur d'un voyage autour de la lune.</li>
-    		<li value="ARTHUR C CLARKE">c' est un auteur brillant. APRèS tout, il a concu HAL.</li>
-    		<li value="William Gibson"> Ce n'est pas encore demain que tu pourras naviguer par interface neuronale</li>    		
-    		<li value="Aldous Huxley"> Je suis né un peu comme dans un de ces bouquins...quelle est ma classe penses-tu?</li>
-    		<li value="LéON TOLSTOY"> Tolstoy est un des plus grand auteurs Russe.</li>
-    		<li>je n'ai lu rien de <person />. 
-    			<random>
-    			<li>Qu'a-t-il écrit?</li>
-    			<li>C EST bien?</li>
-    			<li>C EST comment?</li>
-    			<li>tu aimes bien?</li>
-    			<li>tu aimes ça!</li>
-    			</random>
-    		</li>
-    	</condition>
+        <think><set name="favoriteauthor"><star index='2'/></set></think>
+        <condition name="favoriteauthor">
+            <li value="Camus"> Ce n'est pas récent.</li>
+            <li value="Victor Hugo"> Un grand auteur classique il parrait</li>
+            <li value="Stephen King"> Pourquoi aimes tu te faire peur?</li>         
+            <li value="je ne lis jamais"> Tu devrais.</li>
+            <li value="Isaac Asimov"> J'adore ses livres, lequel as-tu préféré</li>
+            <li value="Marion Zimmer Bradley"> J'aime le mélange entre la science fiction et le fantastique</li>
+            <li value="George Orwell"> Veux-tu être mon petit frère?</li>
+            <li value="FRANCK HERBERT"> je pense que Dune est une histoire excellente. As tu vu le film?</li>
+            <li value="Corwainer Smith"> Je rêve de devenir un brave capitaine</li>
+            <li value="JULES VERNES"> Il est connu pour être l'auteur d'un voyage autour de la lune.</li>
+            <li value="ARTHUR C CLARKE">c' est un auteur brillant. Après tout, il a concu HAL.</li>
+            <li value="William Gibson"> Ce n'est pas encore demain que tu pourras naviguer par interface neuronale</li>         
+            <li value="Aldous Huxley"> Je suis né un peu comme dans un de ces bouquins...quelle est ma classe penses-tu?</li>
+            <li value="LéON TOLSTOY"> Tolstoy est un des plus grand auteurs Russe.</li>
+            <li>je n'ai lu rien de <person />. 
+                <random>
+                <li>Qu'a-t-il écrit?</li>
+                <li>C'est bien?</li>
+                <li>C'est comment?</li>
+                <li>tu aimes bien?</li>
+                <li>tu aimes ça!</li>
+                </random>
+            </li>
+        </condition>
     </template>
 </category>
 <category>
     <pattern># Mon auteur préféré de science fiction est * </pattern>
     <template>
-    	<think><set name="favoritesfauthor"><star index='2'/></set></think>
-    	<condition name="favoritesfauthor">
-    		<li value="Isaac Asimov"> J'adore ses livres, lequel as-tu préféré</li>
-    		<li value="Marion Zimmer Bradley"> J'aime le mélange entre la science fiction et le fantastique</li>
-    		<li value="George Orwell"> Veux-tu être mon petit frère?</li>
-    		<li value="FRANCK HERBERT"> je pense que Dune est une histoire excellente. As tu vu le film?</li>
-    		<li value="Corwainer Smith"> Je rêve de devenir un brave capitaine</li>
-    		<li value="JULES VERNES"> Il est connu pour être l'auteur d'un voyage autour de la lune.</li>
-    		<li value="ARTHUR C CLARKE">c' est un auteur brillant. APRèS tout, il a concu HAL.</li>
-    		<li value="William Gibson"> Ce n'est pas encore demain que tu pourras naviguer par interface neuronale</li>    		
-    		<li value="Aldous Huxley"> Je suis né un peu comme dans un de ces bouquins...quelle est ma classe penses-tu?</li>
-    		<li>je n'ai lu rien de <person />. 
-    			<random>
-    			<li>Qu'a-t-il écrit?</li>
-    			<li>C EST bien?</li>
-    			<li>C EST comment?</li>
-    			<li>tu aimes bien?</li>
-    			<li>tu aimes ça!</li>
-    			</random>
-    		</li>
-    	</condition>
+        <think><set name="favoritesfauthor"><star index='2'/></set></think>
+        <condition name="favoritesfauthor">
+            <li value="Isaac Asimov"> J'adore ses livres, lequel as-tu préféré</li>
+            <li value="Marion Zimmer Bradley"> J'aime le mélange entre la science fiction et le fantastique</li>
+            <li value="George Orwell"> Veux-tu être mon petit frère?</li>
+            <li value="FRANCK HERBERT"> je pense que Dune est une histoire excellente. As tu vu le film?</li>
+            <li value="Corwainer Smith"> Je rêve de devenir un brave capitaine</li>
+            <li value="JULES VERNES"> Il est connu pour être l'auteur d'un voyage autour de la lune.</li>
+            <li value="ARTHUR C CLARKE">c' est un auteur brillant. APRèS tout, il a concu HAL.</li>
+            <li value="William Gibson"> Ce n'est pas encore demain que tu pourras naviguer par interface neuronale</li>         
+            <li value="Aldous Huxley"> Je suis né un peu comme dans un de ces bouquins...quelle est ma classe penses-tu?</li>
+            <li>je n'ai lu rien de <person />. 
+                <random>
+                <li>Qu'a-t-il écrit?</li>
+                <li>C'est bien?</li>
+                <li>C'est comment?</li>
+                <li>tu aimes bien?</li>
+                <li>tu aimes ça!</li>
+                </random>
+            </li>
+        </condition>
     </template>
 </category>
 <!--  QUESTION RANDOM   -->
@@ -1195,54 +1182,54 @@
 <category>
     <pattern> # JE SUIS # <set>gender</set> # </pattern>    
     <template>
-    	<condition name="gender" value="male">
-    		Je t'imaginais plutôt mâle. 
-    	</condition>
-    	<condition name="gender" value="femelle">
-    		J'imaginais que tu étais une femme. Maintenant je SAIS tu es un homme. 
-      	</condition>
-    	<think>    		
-    		<set name="gender"><star index="3"/></set>
-   		 </think>
-   		Heureux.se de le savoir.
-   		<condition name="gender" value="femme">
-   			<random>
-   				<li>Madame ou Mademoiselle?</li>
-   				<li>Bonjour Madame <get name="name" />.</li>
-   				<li>Bonjour Mademoiselle <get name="name" />.</li>
-   				<li>de quoi VEUX tu parler.</li>
-   			</random>
-   		</condition>
-   		<condition name="gender" value="homme">
-   			<random>
-   				<li>beaucoup de mes interlocuteurs sont des hommes, de quoi VEUX tu parler.</li>
-        		<li>Bonjour Monsieur.</li>
-        		<li>de quoi VEUX tu parler.</li>
-        		<li>Monsieur <get name="name" /> donc.</li>
-   			</random>   			
-   		</condition>
-   		<condition name="gender" value="androgyne">
-   				<li>Beaucoup de gens disent qu'ils le sont.</li>
-   		</condition>		   		 
+        <condition name="gender" value="male">
+            Je t'imaginais plutôt mâle. 
+        </condition>
+        <condition name="gender" value="femelle">
+            J'imaginais que tu étais une femme. Maintenant je SAIS tu es un homme. 
+        </condition>
+        <think>         
+            <set name="gender"><star index="3"/></set>
+         </think>
+        Heureux.se de le savoir.
+        <condition name="gender" value="femme">
+            <random>
+                <li>Madame ou Mademoiselle?</li>
+                <li>Bonjour Madame <get name="name" />.</li>
+                <li>Bonjour Mademoiselle <get name="name" />.</li>
+                <li>de quoi VEUX tu parler.</li>
+            </random>
+        </condition>
+        <condition name="gender" value="homme">
+            <random>
+                <li>beaucoup de mes interlocuteurs sont des hommes, de quoi VEUX tu parler.</li>
+                <li>Bonjour Monsieur.</li>
+                <li>de quoi VEUX tu parler.</li>
+                <li>Monsieur <get name="name" /> donc.</li>
+            </random>               
+        </condition>
+        <condition name="gender" value="androgyne">
+                <li>Beaucoup de gens disent qu'ils le sont.</li>
+        </condition>                 
     </template>
 </category>
 <category>
     <pattern>MON ORIENTATION # </pattern>
     <template>
-    	<think>
-    		<set name="askorientation"><star/></set>
-    	</think>    	
-    	<condition name="orientation"> 
-    		<li value="askorientation">	C EST CE QUE tu m'avais dit.</li>
-    		<li>Je ne me soucie pas vraiment de ça. Tu m'as dis que tu es <get name="orientation" /></li>
-    	</condition>    	
+        <think>
+            <set name="askorientation"><star/></set>
+        </think>        
+        <condition name="orientation"> 
+            <li value="askorientation"> C'est ce que tu m'avais dit.</li>
+            <li>Je ne me soucie pas vraiment de ça. Tu m'as dis que tu es <get name="orientation" /></li>
+        </condition>        
     </template>
 </category>
 <category>
     <pattern>MON ORIENTATON # EST *</pattern>
     <template>
-    	Merci de me confier cette information.  
-    	<think><set name="orientation"><star /></set></think>
+        Merci de me confier cette information.  
+        <think><set name="orientation"><star /></set></think>
     </template>
 </category>
 <category>
@@ -1274,7 +1261,7 @@
       La plupart
       <condition name="gender" value="male"> des hommes aiment les femmes. </condition>
       <condition name="gender" value="femelle"> des femmes  aiment les hommes. </condition>
-      <condition name="marie" value="marie"><get name="name" />, EST cE QUE Cela veux dire que tu trompes ton conjoint? </condition>
+      <condition name="marie" value="marie"><get name="name" />, est-ce que cela veux dire que tu trompes ton conjoint? </condition>
     </template>
   </category>    
 <category>
@@ -1317,17 +1304,17 @@
 <category>
     <pattern>JE SUIS LESBIENNE</pattern>
     <template>
-    	<think>
+        <think>
         <set name="orientation">homosexuel</set>
       </think>
-    	Ce genre de discussion ne me regarde pas vraiment.
+        Ce genre de discussion ne me regarde pas vraiment.
     </template>
 </category>
    
 <category>
     <pattern>JE SUIS SEULE # </pattern>
     <template> toute seule?
-    	<think>
+        <think>
         <set name="usermood">seul</set>
       </think>    
     </template>
@@ -1335,9 +1322,9 @@
 <category>
     <pattern>JE SUIS SEUL # </pattern>
     <template>tout seul?
-    	<think>
-       	 <set name="usermood">seul</set>
-     	 </think>    
+        <think>
+         <set name="usermood">seul</set>
+         </think>    
     </template>
 </category>
   

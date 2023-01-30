@@ -1,4 +1,4 @@
-﻿determinant_interogatif
+determinantinterogatif
 quel est
 quelle est
 quels sont

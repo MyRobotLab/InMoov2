@@ -57,7 +57,7 @@
 <template>Que voulez-vous dire?</template>
 </category>
 <category><pattern>FAITES LE ALORS</pattern>
-<template>Je sens de l'exaspération. Veux tu faire un rapport à mon botmaster?</template>
+<template>Je sens de l'exaspération. Veux-tu faire un rapport à mon botmasteur?</template>
 </category>
 <category><pattern>FAITES LE COMME ÇA</pattern>
 <template>Je vais essayer.</template>

@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!--  -->
+<!-- File: _inmoovKnowledge.aiml-->
 <!--  -->
 <category><pattern># <set>determinantinterogatif</set> JE NE SAIS PAS</pattern>
 <template><think>
         <set name="determinantinterogatif">
           <star index="2"/>
         </set>
+        <set name="apprendre">oui
+        </set>
       </think>
-      <oob>
-        <mrl>
-          <service>python</service>
-          <method>exec</method>
-          <param>askWiki("<get name="articles"/>","<get name="courant"/>","SAY ","SYSTEM_WIKIDATA_CATEGORIE ")</param>
-        </mrl>
-      </oob></template>
+      <sraix><get name="courant"/></sraix>
+        </template>
+</category>
+<category><pattern>SRAIXFAILED *</pattern>
+<template><think>
+        <set name="determinantinterogatif">
+          <star index="2"/>
+        </set>
+      </think>
+      <condition name="apprendre">
+        <li value="unknown">
+        </li>
+        <li>
+          <srai>SYSTEM_LEARNING</srai>
+        </li>
+      </condition></template>
 </category>
 <category><pattern>SYSTEM_WIKIDATA_CATEGORIE <set>articles</set> * <set>articles</set> *</pattern>
 <template><oob>
@@ -29,24 +40,39 @@
 <template><srai>SYSTEM_LEARNING</srai></template>
 </category>
 <category><pattern>SYSTEM_LEARNING</pattern>
-<template><get name="articles"/>
-      <get name="courant"/>?
+<template><condition name="articles">
+        <li value="unknown">
+        </li>
+        <li>
+          <get name="articles"/>
+        </li>
+      </condition>
+       <get name="courant"/>?
     <random><li>J'avoue ne pas avoir cette réponse.</li><li>Désolé, je ne sais pas.</li><li>J'aimerais le savoir.</li><li>Je donne ma langue au chat.</li></random>
     Si tu as une idée dis le moi maintenant.</template>
 </category>
 <category><pattern>$C EST _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
 <template><srai>
-        <get name="articles"/>
+        <condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>
         <get name="courant"/> EST <star index="1"/></srai></template>
 </category>
 <category><pattern>C ÉTAIT _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
 <template><srai>
-        <get name="articles"/>
+        <condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>
         <get name="courant"/> ETAIT <star index="1"/></srai></template>
 </category>
 <category><pattern>ÇA SIGNIFIE _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
 <template><srai>
-        <get name="articles"/>
+        <condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>
         <get name="courant"/> EST <star index="1"/></srai></template>
 </category>
 <category><pattern><set>articles</set> _ $EST <set>articles</set> _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
@@ -60,7 +86,11 @@
         <star index="2"/> EST <star index="4"/></srai></template>
 </category>
 <category><pattern>_ EST _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
-<template><condition name="articles2">
+<template><condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>
+      <condition name="articles2">
         <li value="unknown">
           <think>
             <set name="courant2">
@@ -135,10 +165,20 @@
         <set name="articles2">
           <get name="null"/>
         </set>
+        <set name="apprendre">
+          <get name="null"/>
+        </set>
+        <set name="tmp">
+          <get name="null"/>
+         </set>   
       </think></template>
 </category>
 <category><pattern>_ ETAIT _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
-<template><condition name="articles2">
+<template><condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>
+      <condition name="articles2">
         <li value="unknown">
           <think>
             <set name="courant2">
@@ -213,11 +253,21 @@
         <set name="articles2">
           <get name="null"/>
         </set>
+        <set name="apprendre">
+          <get name="null"/>
+        </set>
+        <set name="tmp">
+          <get name="null"/>
+        </set>
       </think></template>
 </category>
 
 <category><pattern>_ SONT _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
-<template><condition name="articles2">
+<template><condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>
+      <condition name="articles2">
         <li value="unknown">
           <think>
             <set name="courant2">
@@ -292,19 +342,211 @@
         <set name="articles2">
           <get name="null"/>
         </set>
+        <set name="apprendre">
+          <get name="null"/>
+        </set>
+        <set name="tmp">
+          <get name="null"/>
+        </set>
+      </think></template>
+</category>
+
+<category><pattern>_ ÇA _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
+<template><condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>
+      <condition name="articles2">
+        <li value="unknown">
+          <think>
+            <set name="courant2">
+              <star index="2"/>
+            </set>
+          </think>
+        </li>
+        <li>
+          <think>
+            <set name="courant2">
+              <get name="articles2"/>
+              <star index="2"/>
+            </set>
+          </think>
+        </li>
+      </condition>
+      <condition name="topic">
+        <li value="unknown">
+          <think>
+            <set name="topic">
+              <get name="courant"/>
+            </set>
+          </think>
+        </li>
+      </condition>
+      <random>
+        <li>Désormais je saurais que <star index="1"/> ça <get name="courant2"/>.</li>
+        <li>Je suis content de savoir que <star index="1"/> ça <get name="courant2"/>.</li>
+      </random>
+      <learnf>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif"/>
+              <get name="courant"/>
+            </eval>
+          </pattern>
+          <template><eval><get name="courant2"/></eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif"/>
+              <star index="1"/>
+            </eval>
+          </pattern>
+          <template><eval><get name="courant2"/></eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif"/>
+              <star index="2"/>
+            </eval>
+          </pattern>
+          <template>Cela peut être <eval><star index="1"/></eval> par exemple.</template>
+        </category>
+        <category>
+          <pattern># EST CE QU <eval><star index="1"/></eval> ÇA <eval><get name="courant2"/></eval></pattern>
+          <template>Oui, <random><li>bien sûr</li><li>évidement</li><li>je pense</li></random>.</template>
+        </category>
+      </learnf>
+      <think>
+        <set name="articles">
+          <get name="null"/>
+        </set>
+        <set name="courant2">
+          <get name="null"/>
+        </set>
+        <set name="articles2">
+          <get name="null"/>
+        </set>
+        <set name="apprendre">
+          <get name="null"/>
+        </set>
+        <set name="tmp">
+          <get name="null"/>
+        </set>
+      </think></template>
+</category>
+
+<category><pattern>_ C EST _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
+<template><condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>
+      <condition name="articles2">
+        <li value="unknown">
+          <think>
+            <set name="courant2">
+              <star index="2"/>
+            </set>
+          </think>
+        </li>
+        <li>
+          <think>
+            <set name="courant2">
+              <get name="articles2"/>
+              <star index="2"/>
+            </set>
+          </think>
+        </li>
+      </condition>
+      <condition name="topic">
+        <li value="unknown">
+          <think>
+            <set name="topic">
+              <get name="courant"/>
+            </set>
+          </think>
+        </li>
+      </condition>
+      <random>
+        <li>Désormais je saurais que <star index="1"/> c'est <get name="courant2"/>.</li>
+        <li>Je suis content de savoir que <star index="1"/> c'est <get name="courant2"/>.</li>
+      </random>
+      <learnf>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif"/>
+              <get name="courant"/>
+            </eval>
+          </pattern>
+          <template><eval><get name="courant2"/></eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif"/>
+              <star index="1"/>
+            </eval>
+          </pattern>
+          <template><eval><get name="courant2"/></eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif"/>
+              <star index="2"/>
+            </eval>
+          </pattern>
+          <template>Cela peut être <eval><star index="1"/></eval> par exemple.</template>
+        </category>
+        <category>
+          <pattern># EST CE QU <eval><star index="1"/></eval> C EST <eval><get name="courant2"/></eval></pattern>
+          <template>Oui, <random><li>bien sûr</li><li>évidement</li><li>je pense</li></random>.</template>
+        </category>
+      </learnf>
+      <think>
+        <set name="articles">
+          <get name="null"/>
+        </set>
+        <set name="courant2">
+          <get name="null"/>
+        </set>
+        <set name="articles2">
+          <get name="null"/>
+        </set>
+        <set name="apprendre">
+          <get name="null"/>
+        </set>
+        <set name="tmp">
+          <get name="null"/>
+        </set>
       </think></template>
 </category>
 
 <category><pattern>_</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
 <template><srai>
-        <get name="articles"/>
+        <condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>
         <get name="courant"/> EST <star index="1"/></srai></template>
 </category>
 <category><pattern># NON #</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
 <template><random>
-        <li>OKé, pas de soucis, je n'apprendrais rien cette fois ci.</li>
+        <li>Oké, pas de soucis, je n'apprendrais rien cette fois ci.</li>
         <li>Dommage, j'espérais apprendre quelque chose de nouveau.</li>
-      </random></template>
+      </random>
+      <think>
+          <set name="apprendre">
+          <get name="null"/>
+        </set>
+      </think></template>
 </category>
 <category><pattern># JE NE #</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
 <template><srai># NON #</srai></template>

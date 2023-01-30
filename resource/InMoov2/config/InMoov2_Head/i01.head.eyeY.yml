@@ -1,6 +1,5 @@
 !!org.myrobotlab.service.config.ServoConfig
 autoDisable: true
-autoStartPeers: true
 clip: true
 controller: i01.left
 enabled: false
@@ -10,9 +9,11 @@ maxIn: 120.0
 maxOut: 120.0
 minIn: 60.0
 minOut: 60.0
+peers: null
 pin: '24'
 rest: 90.0
 speed: null
 sweepMax: null
 sweepMin: null
+synced: null
 type: Servo

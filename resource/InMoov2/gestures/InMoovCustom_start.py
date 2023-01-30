@@ -21,19 +21,30 @@ def saveCustom(customFilename):
     "# #############################################################################\n"
     "# YOUR INMOOV CUSTOM SCRIPT\n"
     "# Here you can add your own commands to play and test with InMoov\n"
+    "# This python script is located in the directory data/InMoov2/\n"
     "# Those commands are safe, you can copy them to your other MRL versions\n"
     "# ##############################################################################\n"
-
-
-    "## sample:\n"
-    "## play a neopixel animation while the robot speaking\n"
+    "\n"
+    "\n"
+    "## These samples would be executed when starting i01:\n"
+    "\n"
+    "## Play a neopixel animation while the robot speaking\n"
     "#PlayNeopixelAnimation('Flash Random', 255, 255, 255, 1)\n"
-    "## talk something\n"
+    "## Talk something\n"
     "#i01_mouth.speakBlocking('he is a replicant, or not?')\n"
-    "## stop neopixel\n"
+    "## Stop neopixel\n"
     "#StopNeopixelAnimation()\n"
-    "## move the index servo\n"
+    "## Move the index servo\n"
     "#i01_rightHand_index.moveTo(20)\n"
+    "\n"
+    "## Another example, this could be executed via aiml:\n"
+    "def myScripts():\n"
+    "  #execfile('data/InMoov2/myScript1.py')\n"
+    "  execfile('myScript2.py')\n"
+    "\n"
+    "## Another example, that could be executed via aiml:\n"
+    "def myScript2():\n"
+    "  print('I feel good')\n"
     "\n"
     ]
     customWriter.writelines(L)
@@ -43,8 +54,17 @@ def saveCustom(customFilename):
 def CheckFileExist(File):
   if not os.path.isfile(File):
     saveCustom(customFilename)
-    i01.info("custom file created : data/InMoov2/InMoovCustom.py")
+    runtime.info("custom file created : data/InMoov2/InMoovCustom.py")
+    python.execFile('data/InMoov2/InMoovCustom.py')
+    #execfile('data/InMoov2/InMoovCustom.py')
   else:
-    execfile('data/InMoov2/InMoovCustom.py')  
+    python.execFile('data/InMoov2/InMoovCustom.py')
+    #execfile('data/InMoov2/InMoovCustom.py')
 
-CheckFileExist(ThisFilePart)
+
+def CheckDirectoryExist():
+  if not os.path.exists("data/InMoov2"):
+    os.makedirs("data/InMoov2")
+
+CheckDirectoryExist()
+CheckFileExist(ThisFilePart) 

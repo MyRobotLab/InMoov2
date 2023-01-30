@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!-- File translate from horoscope.aiml by Square Bear from Free software (c)2008 Square Bear. -->
-<!-- http://www.square-bear.co.uk --> 
-<!-- This program is open source code released under the terms of the GNU General Public License -->
-<!-- as published by the Free Software Foundation. -->
-<!-- Complies with AIML 2 Tag Set Specification as adopted by the ALICE A.I. Foundation. -->
 <!--  -->
-<!-- File: horoscope.aiml -->
-<!-- Author: InMoovTeam -->
-<!-- modified: sebchko -->
-<!-- Last modified: december,11 2017 -->
-<!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
-<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
-<!-- This file works with ProgramAB service with the software MyRobotLab -->
-<!-- For more information see http://www.myrobotlab.org -->
-<!-- For more information see http://www.inmoov.fr -->
 <!--  -->
 
 <category>
