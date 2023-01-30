@@ -11,6 +11,8 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     let centerY = 226
     let radius = 215
 
+    let firstTime = true
+
     $scope.peer = peer
     $scope.mrl = mrl
 
@@ -170,6 +172,11 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         $scope.languageSelected = service.locale.tag
         $scope.mouth = mrl.getService(service.name + '.mouth')
 
+        if (firstTime){
+            mrl.changeTab(service.name)
+            firstTime = false
+        }
+        
         $scope.$apply()
     }
 
@@ -333,5 +340,6 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     msg.sendTo(mrl.getRuntime().name, 'getServiceTypeNamesFromInterface', 'SpeechSynthesis')
     msg.sendTo(mrl.getRuntime().name, 'publishConfigList')
     msg.subscribe(this)
+    
 }
 ])
