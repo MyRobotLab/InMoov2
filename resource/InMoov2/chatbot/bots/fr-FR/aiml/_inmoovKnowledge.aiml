@@ -4,16 +4,38 @@
 <!--  -->
 <category><pattern># <set>determinantinterogatif</set> JE NE SAIS PAS</pattern>
 <template><think>
-        <set name="determinantinterogatif">
+          <set name="determinantinterogatif">
           <star index="2"/>
-        </set>
-        <set name="apprendre">oui
         </set>
       </think>
       <sraix><get name="courant"/></sraix>
         </template>
 </category>
+
 <category><pattern>SRAIXFAILED *</pattern>
+<template>
+      <condition name="gpt3">
+        <li value="enabled">
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_gpt3.onText("<condition name="askGpt3">
+        <li value="unknown"><get name="quoi" /></li><li><get name="askGpt3" /> <get name="courant" /></li></condition>")</param>
+          </mrl>
+        </oob>
+        <think><set name="askGpt3">
+          <get name="null"/>
+         </set></think>
+        </li>
+        <li>
+          <srai>SYSTEM_LEARNING</srai>
+        </li>
+      </condition>
+        </template>
+</category>
+
+<!--<category><pattern>SRAIXFAILED *</pattern>
 <template><think>
         <set name="determinantinterogatif">
           <star index="2"/>
@@ -26,7 +48,7 @@
           <srai>SYSTEM_LEARNING</srai>
         </li>
       </condition></template>
-</category>
+</category>-->
 <category><pattern>SYSTEM_WIKIDATA_CATEGORIE <set>articles</set> * <set>articles</set> *</pattern>
 <template><oob>
         <mrl>

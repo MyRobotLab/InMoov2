@@ -15069,7 +15069,7 @@ Ouais je vois ce que tu veux dire. <srai>OUI</srai><srai><get name="tmp" /></sra
   </category>
   <category>
     <pattern>TU N AS PAS *</pattern>
-    <template>je fait ainsi ayez <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><person /></set></set>. <srai>TU AS <star /></srai></template>
+    <template><think><set name="oldtopic"><get name="topic" /></set><set name="topic"><person /></set></think><srai>TU AS <star /></srai></template>
   </category>
   <category>
     <pattern>TU N AS PAS BEAUCOUP POUR DIT DE *</pattern>
