@@ -16,14 +16,18 @@ Et si on commandait une pizza.
 </random><think><set name="topic">nourriture</set></think></template>
 </category>
 <category><pattern>QU EST CE QUE *</pattern>
-<template><srai><star/></srai><think>           
+<template><srai>#</srai><think>
+            <set name="courant"><star/></set>
             <set name="topic"><star/></set>
-         </think><sraix><get name="courant"/></sraix></template>
+            <set name="askGpt3">Qu'est ce que</set>
+         </think></template>
 </category>
 <category><pattern>QU EST CE QU *</pattern>
-<template><srai><star/></srai><think>           
+<template><srai>#</srai><think>
+            <set name="courant"><star/></set>
             <set name="topic"><star/></set>
-         </think><sraix><get name="courant"/></sraix></template>
+            <set name="askGpt3">Qu'est ce qu</set>
+         </think></template>
 </category>
 <category><pattern>QU EST CE QUE J AI DIT AVANT</pattern>
 <template><srai>J AI DIT AVANT</srai></template>

@@ -8,10 +8,6 @@
   <category>
     <pattern>CONFUSION</pattern>
     <template>
-      <think>
-      <set name="apprendre">oui
-        </set>
-      </think>
       <random>
         <li>Est-ce un jeu?</li>
         <li>C'est un jeu?</li>

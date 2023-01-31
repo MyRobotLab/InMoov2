@@ -85,13 +85,8 @@ désolé, j'ai une boucle!!!
           <get name="memoriser" />
         </gossip>
       </think>
-      <condition>
-        <li name="apprendre" value="oui"><srai>SYSTEM_LEARNING</srai>
-		<think><set name="oldtopic"><topic /></set><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">comprendre</set></think></li>
-        <li>
-          <srai>CONFUSION</srai>
-        </li>
-      </condition>
+        <srai># <set>determinantinterogatif</set> JE NE SAIS PAS</srai>
+		<think><set name="determinantinterogatif"><star index="2"/></set></think><think><set name="oldtopic"><topic /></set><think><set name="oldtopic"><get name="topic" /></set></think></think>
     </template>
   </category>
 </aiml>

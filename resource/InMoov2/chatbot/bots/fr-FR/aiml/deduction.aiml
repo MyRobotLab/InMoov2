@@ -328,9 +328,12 @@
             <set name="articles">
             <get name="null"/>
             </set>
+            <set name="courant"><star/></set>
+            <set name="topic"><star/></set>
+            <set name="askGpt3">Qui est</set>
                 </think>
         <condition name="tmp">
-        <li value="je ne sais pas">
+        <li>
         <srai><star/></srai><think>
             <set name="tmp">
             <get name="null"/>

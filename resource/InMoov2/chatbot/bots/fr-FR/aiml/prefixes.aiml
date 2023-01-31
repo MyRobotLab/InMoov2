@@ -13,7 +13,7 @@
     <template><think><set name="that"><star index="1"/></set></think>
       <random>
         <li>J'aime bien <star index="1"/></li>
-        <li>Je ne suis pas sûre d'aimer <star index="1"/></li>
+        <li>Je ne suis pas sûr d'aimer <star index="1"/></li>
         <li><srai>C EST QUOI <get name="that" /></srai></li>
         </random>
         </template>
