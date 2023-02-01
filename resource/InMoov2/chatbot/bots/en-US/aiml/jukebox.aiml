@@ -70,4 +70,14 @@
 <category><pattern>VOLUME MUSIC LOWER</pattern>
 <template><oob><mrl><service>i01_audioPlayer</service><method>setVolume(0.5)</method></mrl></oob></template>
 </category>
+        <category><pattern>PLAY RADIO</pattern>
+<template>Lets stream FIP radio.  
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>http://direct.fipradio.fr/live/fip-midfi.mp3</param>
+          </mrl>
+        </oob></template>
+</category>
 </aiml>
