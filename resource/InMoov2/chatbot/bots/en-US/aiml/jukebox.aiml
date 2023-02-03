@@ -80,4 +80,14 @@
 <category><pattern>VOLUME MUSIC MORE LOW</pattern>
 <template>Setting music lower.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.8)</param></mrl></oob></template>
 </category>
+        <category><pattern>PLAY RADIO</pattern>
+<template>Lets stream FIP radio.  
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>http://direct.fipradio.fr/live/fip-midfi.mp3</param>
+          </mrl>
+        </oob></template>
+</category>
 </aiml>
