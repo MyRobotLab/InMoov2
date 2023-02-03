@@ -8,7 +8,7 @@
         <li>Playing music now</li>
         <li>OK!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.play(currentTrack)</param></mrl></oob></template>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.play()</param></mrl></oob></template>
 </category>
 <category><pattern>START PLAYLIST</pattern>
 <template><random>
@@ -16,6 +16,13 @@
         <li>Great!</li>
       </random>
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist()</param></mrl></oob></template>
+</category>
+<category><pattern>START PLAYLIST *</pattern>
+<template><random>
+        <li>Starting playlist <star/> now.</li>
+        <li>Launching <star/> playlist.</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist('<star/>')</param></mrl></oob></template>
 </category>
 <category><pattern>PLAY RANDOM MUSIC</pattern>
 <template><random>
@@ -31,7 +38,7 @@
         <li>Stopping music now</li>
         <li>OK!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob></template>
+      <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob></template>
 </category>
 <category><pattern>STOP PLAYLIST</pattern>
 <template><random>
@@ -39,7 +46,7 @@
         <li>Stopping playlist now</li>
         <li>OK!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stopPlaylist()</param></mrl></oob></template>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stopPlaylist(), i01_audioPlayer.stop()</param></mrl></oob></template>
 </category>
 <category><pattern>PLAY NEXT MUSIC</pattern>
 <template><random>
@@ -47,7 +54,7 @@
         <li>Playing next music now</li>
         <li>OK!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>nextMusic()</param></mrl></oob></template>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob></template>
 </category>
 <category><pattern>PAUSE MUSIC</pattern>
 <template><random>
@@ -65,19 +72,12 @@
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.resume()</param></mrl></oob></template>
 </category>
 <category><pattern>VOLUME MUSIC LOUDER</pattern>
-<template><oob><mrl><service>i01_audioPlayer</service><method>exec</method><param>setVolume(1.0)</param></mrl></oob></template>
+<template>Setting music louder.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(1.0)</param></mrl></oob></template>
 </category>
 <category><pattern>VOLUME MUSIC LOWER</pattern>
-<template><oob><mrl><service>i01_audioPlayer</service><method>setVolume(0.5)</method></mrl></oob></template>
+<template>Setting music lower.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.9)</param></mrl></oob></template>
 </category>
-        <category><pattern>PLAY RADIO</pattern>
-<template>Lets stream FIP radio.  
-        <oob>
-          <mrl>
-            <service>webgui</service>
-            <method>startBrowser</method>
-            <param>http://direct.fipradio.fr/live/fip-midfi.mp3</param>
-          </mrl>
-        </oob></template>
+<category><pattern>VOLUME MUSIC MORE LOW</pattern>
+<template>Setting music lower.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.8)</param></mrl></oob></template>
 </category>
 </aiml>
