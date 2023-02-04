@@ -14,4 +14,5 @@ rest: 90.0
 speed: 45.0
 sweepMax: null
 sweepMin: null
+synced: null
 type: Servo
