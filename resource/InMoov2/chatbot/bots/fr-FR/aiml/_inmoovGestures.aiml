@@ -451,7 +451,7 @@
 <template>Je penche ma TÊTE à droite.
         <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob></template>
 </category>
-<category><pattern>PENCHE TA TÊTE À GAUCHE</pattern>
+<category><pattern>PENCHE LA TÊTE À GAUCHE</pattern>
 <template>je penche ma TÊTE à gauche.
         <oob><mrl><service>python</service><method>exec</method><param>tiltHeadLeftSide()</param></mrl></oob></template>
 </category>
