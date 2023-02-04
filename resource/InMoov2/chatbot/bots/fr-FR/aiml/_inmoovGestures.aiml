@@ -455,6 +455,10 @@
 <template>je penche ma TÊTE à gauche.
         <oob><mrl><service>python</service><method>exec</method><param>tiltHeadLeftSide()</param></mrl></oob></template>
 </category>
+<category><pattern>VÉRIFIE TA NUQUE</pattern>
+<template>Merci, ça va mieux. docteur.
+        <oob><mrl><service>python</service><method>exec</method><param>rollHead()</param></mrl></oob></template>
+</category>	
 <category><pattern>BEFORE HAPPY</pattern>
 <template>BEFORE HAPPY
         <oob><mrl><service>python</service><method>exec</method><param>beforehappy()</param></mrl></oob></template>
