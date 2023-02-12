@@ -3,11 +3,11 @@
 <!-- File: _inmoovKnowledge.aiml-->
 <!--  -->
 <category><pattern># <set>determinantinterogatif</set> JE NE SAIS PAS</pattern>
-<template><think>
+<template><!--<think>
           <set name="determinantinterogatif">
-          <star index="2"/>
+          <star index="1"/>
         </set>
-      </think>
+      </think>-->
       <sraix><get name="courant"/></sraix>
         </template>
 </category>
@@ -15,7 +15,7 @@
 <category><pattern>SRAIXFAILED *</pattern>
 <template>
       <condition name="gpt3">
-        <li value="enabled">
+        <li value="enabled"><img src="../Gpt3.png"/>
         <oob>
           <mrl>
             <service>python</service>
@@ -28,10 +28,14 @@
           <get name="null"/>
          </set></think>
         </li>
-        <li>
+        <li><condition name="learn">
+          <li value="enabled">
           <srai>SYSTEM_LEARNING</srai>
+          </li>
+          <li><srai>CONFUSION</srai></li>
+        </condition>
         </li>
-      </condition>
+        </condition>
         </template>
 </category>
 
@@ -146,7 +150,6 @@
         <category>
           <pattern>
             <eval>
-              <get name="determinantinterogatif"/>
               <get name="courant"/>
             </eval>
           </pattern>
@@ -181,13 +184,16 @@
         <set name="articles">
           <get name="null"/>
         </set>
+        <set name="courant">
+          <get name="null"/>
+        </set>
         <set name="courant2">
           <get name="null"/>
         </set>
         <set name="articles2">
           <get name="null"/>
         </set>
-        <set name="apprendre">
+        <set name="learn">
           <get name="null"/>
         </set>
         <set name="tmp">
@@ -234,7 +240,6 @@
         <category>
           <pattern>
             <eval>
-              <get name="determinantinterogatif"/>
               <get name="courant"/>
             </eval>
           </pattern>
@@ -269,13 +274,16 @@
         <set name="articles">
           <get name="null"/>
         </set>
+        <set name="courant">
+          <get name="null"/>
+        </set>
         <set name="courant2">
           <get name="null"/>
         </set>
         <set name="articles2">
           <get name="null"/>
         </set>
-        <set name="apprendre">
+        <set name="learn">
           <get name="null"/>
         </set>
         <set name="tmp">
@@ -323,7 +331,6 @@
         <category>
           <pattern>
             <eval>
-              <get name="determinantinterogatif"/>
               <get name="courant"/>
             </eval>
           </pattern>
@@ -358,13 +365,16 @@
         <set name="articles">
           <get name="null"/>
         </set>
+        <set name="courant">
+          <get name="null"/>
+        </set>
         <set name="courant2">
           <get name="null"/>
         </set>
         <set name="articles2">
           <get name="null"/>
         </set>
-        <set name="apprendre">
+        <set name="learn">
           <get name="null"/>
         </set>
         <set name="tmp">
@@ -412,7 +422,6 @@
         <category>
           <pattern>
             <eval>
-              <get name="determinantinterogatif"/>
               <get name="courant"/>
             </eval>
           </pattern>
@@ -447,13 +456,16 @@
         <set name="articles">
           <get name="null"/>
         </set>
+        <set name="courant">
+          <get name="null"/>
+        </set>
         <set name="courant2">
           <get name="null"/>
         </set>
         <set name="articles2">
           <get name="null"/>
         </set>
-        <set name="apprendre">
+        <set name="learn">
           <get name="null"/>
         </set>
         <set name="tmp">
@@ -501,7 +513,6 @@
         <category>
           <pattern>
             <eval>
-              <get name="determinantinterogatif"/>
               <get name="courant"/>
             </eval>
           </pattern>
@@ -536,13 +547,16 @@
         <set name="articles">
           <get name="null"/>
         </set>
+        <set name="courant">
+          <get name="null"/>
+        </set>
         <set name="courant2">
           <get name="null"/>
         </set>
         <set name="articles2">
           <get name="null"/>
         </set>
-        <set name="apprendre">
+        <set name="learn">
           <get name="null"/>
         </set>
         <set name="tmp">
@@ -565,7 +579,22 @@
         <li>Dommage, j'espérais apprendre quelque chose de nouveau.</li>
       </random>
       <think>
-          <set name="apprendre">
+          <set name="articles">
+          <get name="null"/>
+        </set>
+        <set name="courant">
+          <get name="null"/>
+        </set>
+        <set name="courant2">
+          <get name="null"/>
+        </set>
+        <set name="articles2">
+          <get name="null"/>
+        </set>
+        <set name="learn">
+          <get name="null"/>
+        </set>
+        <set name="tmp">
           <get name="null"/>
         </set>
       </think></template>
