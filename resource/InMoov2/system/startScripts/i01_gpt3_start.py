@@ -11,7 +11,7 @@ i01.warn("gpt3 needs an api key from OpenAI.com!")
 
 if runtime.isStarted('i01.chatBot'):
     ## we need to run the session
-    i01_chatBot.getResponse("")
+    i01_chatBot.getResponse("STARTINGGPT3")
     i01_chatBot.setPredicate("gpt3", "enabled")
     i01_chatBot.savePredicates()
     if runtime.isStarted('i01.mouth'):
