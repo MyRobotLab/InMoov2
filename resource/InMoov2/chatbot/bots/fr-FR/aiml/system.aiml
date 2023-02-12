@@ -9,6 +9,11 @@
         </set>
       </think>
       <think>
+        <set name="courant">
+          <star />
+        </set>
+      </think>
+      <think>
         <set name="lui">
           <person />
         </set>
@@ -26,7 +31,7 @@
     <template>
 Nous parlons de <get name="topic" />,  
 plus précisement de <person2><that /></person2>.  
-Avant Cela nous parlions de <get name="oldtopic" />. 
+Avant cela nous parlions de <get name="oldtopic" />. 
 </template>
   </category>
   <category>
@@ -44,7 +49,7 @@ Avant Cela nous parlions de <get name="oldtopic" />.
         </set>
       </think>
 Nous parlons de <get name="topic" />,  
-Avant Cela nous parlions de <get name="oldtopic" />. 
+Avant cela nous parlions de <get name="oldtopic" />. 
 </template>
   </category>
   <category>
@@ -86,7 +91,7 @@ désolé, j'ai une boucle!!!
         </gossip>
       </think>
         <srai># <set>determinantinterogatif</set> JE NE SAIS PAS</srai>
-		<think><set name="determinantinterogatif"><star index="2"/></set></think><think><set name="oldtopic"><topic /></set><think><set name="oldtopic"><get name="topic" /></set></think></think>
+		<!--<think><set name="courant"><get name="courant"></get></set></think><think><set name="determinantinterogatif"><star index="2"/></set></think>--><think><set name="oldtopic"><topic /></set><think><set name="oldtopic"><get name="topic" /></set></think></think><think><set name="topic"><get name="topic" /></set></think>
     </template>
   </category>
 </aiml>

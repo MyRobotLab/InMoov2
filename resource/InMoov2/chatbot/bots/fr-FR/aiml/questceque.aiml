@@ -17,17 +17,21 @@ Et si on commandait une pizza.
 </category>
 <category><pattern>QU EST CE QUE *</pattern>
 <template><think>
-            <set name="courant"><star/></set>
-            <set name="topic"><star/></set>
+            <!--<set name="courant"><star/></set>
+            <set name="topic"><star/></set>-->
+            <set name="determinantinterogatif">Qu'est ce que</set>
             <set name="askGpt3">Qu'est ce que</set>
-         </think><srai>#</srai></template>
+            <set name="learn">enabled</set>
+         </think><srai><star/></srai></template>
 </category>
 <category><pattern>QU EST CE QU *</pattern>
 <template><think>
-            <set name="courant"><star/></set>
-            <set name="topic"><star/></set>
+            <!--<set name="courant"><star/></set>
+            <set name="topic"><star/></set>-->
+            <set name="determinantinterogatif">Qu'est ce que</set>
             <set name="askGpt3">Qu'est ce qu</set>
-         </think><srai>#</srai></template>
+            <set name="learn">enabled</set>
+         </think><srai><star/></srai></template>
 </category>
 <category><pattern>QU EST CE QUE J AI DIT AVANT</pattern>
 <template><srai>J AI DIT AVANT</srai></template>

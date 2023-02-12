@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: localization.aiml-->
+<!--  -->
+<category><pattern>STARTINGGPT3</pattern>
+<template>Starting GPT3</template>
+</category>
+
+<category><pattern>STOPPINGGPT3</pattern>
+<template>Stopping GPT3</template>
+</category>
+</aiml>

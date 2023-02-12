@@ -181,7 +181,7 @@
 <category><pattern>QU EST CE QUE ÇA</pattern>
 <template><srai>QU EST CE QUE <that index="1,1"/></srai></template>
 </category>
-<category><pattern>QU EST CE QUE *</pattern>
+<!--<category><pattern>QU EST CE QUE *</pattern>
 <template><think><set name="courant"><star/></set></think>
       <srai>QU EST CE QUE <srai>SYNONYME <star/></srai></srai></template>
 </category>
@@ -190,7 +190,7 @@
         <set name="search">quoi</set>
       </think>
       <srai>QU EST CE QUE <star/></srai></template>
-</category>
+</category>-->
 <category><pattern>QU EST CE QUI A *</pattern>
 <template><srai>QUI A <star/></srai></template>
 </category>
@@ -331,6 +331,8 @@
             <set name="courant"><star/></set>
             <set name="topic"><star/></set>
             <set name="askGpt3">Qui est</set>
+            <set name="determinantinterogatif">Qui est</set>
+            <set name="learn">enabled</set>
                 </think>
         <condition name="tmp">
         <li>

@@ -401,7 +401,7 @@
 <category><pattern>MY _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
 <template><srai>LEARN NEW RESPONSE My <star/></srai></template>
 </category>
-<category><pattern>MY _</pattern><that>WHAT SHOULD I SAY ANSWER</that>
+<category><pattern>MY _</pattern><that>WHAT SHOULD I ANSWER</that>
 <template><srai>LEARN NEW RESPONSE My <star/></srai></template>
 </category>
 <category><pattern>LEARN NEW RESPONSE *</pattern>
