@@ -8,15 +8,23 @@
         <li>Je mets de la musique</li>
         <li>Oké!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>playMusic()</param></mrl></oob></template>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.play()</param></mrl></oob></template>
 </category>
-<category><pattern>DÉMARRE LA MUSIQUE ALÉATOIRE</pattern>
+<category><pattern>DÉMARRE LA PLAYLIST</pattern>
 <template><random>
         <li>Bien sur!</li>
         <li>Je mets de la musique</li>
         <li>Oké!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>playRandomMusic()</param></mrl></oob></template>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist()</param></mrl></oob></template>
+</category>
+<category><pattern>START PLAYLIST *</pattern>
+<template><random>
+        <li>Bien sur!</li>
+        <li>Je mets de la musique</li>
+        <li>Oké!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist('<star/>')</param></mrl></oob></template>
 </category>
 <category><pattern>ARRÊTE LA MUSIQUE</pattern>
 <template><random>
@@ -24,7 +32,7 @@
         <li>J'arrête la musique</li>
         <li>Oké!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>stopMusic()</param></mrl></oob></template>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob></template>
 </category>
 <category><pattern>METS LE MORCEAU SUIVANT</pattern>
 <template><random>
@@ -32,7 +40,7 @@
         <li>Je met le morceau suivant</li>
         <li>Oké!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>nextMusic()</param></mrl></oob></template>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob></template>
 </category>
 <category><pattern>METS LA MUSIQUE EN PAUSE</pattern>
 <template><random>
@@ -40,24 +48,27 @@
         <li>Je mets la musique en pause</li>
         <li>Oké!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>pauseMusic()</param></mrl></oob></template>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.pause()</param></mrl></oob></template>
 </category>
 <category><pattern>REMETS LA MUSIQUE</pattern>
 <template><random>
         <li>Je remets la musique</li>
         <li>Bien sur!</li>
       </random>
-    <oob><mrl><service>python</service><method>exec</method><param>resumeMusic()</param></mrl></oob>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.resume()</param></mrl></oob>
 </template>
 </category>
 <category><pattern>BAISSE LE SON</pattern>
-<template>
-    <oob><mrl><service>AudioFile</service><method>exec</method><param>setVolume(0.5)</param></mrl></oob>
+<template><oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.9)</param></mrl></oob>
 </template>
+<category><pattern>BAISSE ENCORE LE SON</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.8)</param></mrl></oob></template>
+</category>
 </category>
 <category><pattern>AUGMENTE LE SON</pattern>
 <template>
-    <oob><mrl><service>AudioFile</service><method>exec</method><param>setVolume(1.0)</param></mrl></oob>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(1.0)</param></mrl></oob>
 </template>
 </category>
 </aiml>
+
