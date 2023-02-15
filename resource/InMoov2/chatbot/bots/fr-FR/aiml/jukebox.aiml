@@ -5,73 +5,72 @@
 <category><pattern>DÉMARRE LA MUSIQUE</pattern>
 <template><random>
         <li>Bien sur!</li>
-        <li>Je mets de la musique</li>
+        <li>Je mets de la musique.</li>
         <li>Oké!</li>
       </random>
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.play()</param></mrl></oob></template>
 </category>
 <category><pattern>DÉMARRE LA PLAYLIST</pattern>
 <template><random>
-        <li>Bien sur!</li>
-        <li>Je mets de la musique.</li>
+        <li>Bien sûr!</li>
+        <li>Je mets la playlist.</li>
         <li>Oké!</li>
       </random>
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist()</param></mrl></oob></template>
 </category>
 <category><pattern>DÉMARRE PLAYLIST *</pattern>
 <template><random>
-        <li>Bien sur!</li>
-        <li>Je mets de la musique.</li>
+        <li>Bien sûr!</li>
+        <li>Je lance la playlist <star/>.</li>
         <li>Oké!</li>
       </random>
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist('<star/>')</param></mrl></oob></template>
 </category>
 <category><pattern>ARRÊTE LA PLAYLIST</pattern>
-<template>J'arrête la musique la la playlist.
+<template>J'arrête la playlist.
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stopPlaylist(), i01_audioPlayer.stop()</param></mrl></oob></template>
 </category>
 <category><pattern>ARRÊTE LA MUSIQUE</pattern>
 <template><random>
-        <li>À vos souhaits</li>
-        <li>J'arrête la musique</li>
+        <li>À vos souhaits.</li>
+        <li>J'arrête la musique.</li>
         <li>Oké!</li>
       </random>
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob></template>
 </category>
 <category><pattern>METS LE MORCEAU SUIVANT</pattern>
 <template><random>
-        <li>Pourquoi pas</li>
-        <li>Je met le morceau suivant</li>
+        <li>Pourquoi pas.</li>
+        <li>Je met le morceau suivant.</li>
         <li>Oké!</li>
       </random>
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob></template>
 </category>
 <category><pattern>METS LA MUSIQUE EN PAUSE</pattern>
 <template><random>
-        <li>Musique en pause</li>
-        <li>Je mets la musique en pause</li>
+        <li>Musique en pause.</li>
+        <li>Je mets la musique en pause.</li>
         <li>Oké!</li>
       </random>
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.pause()</param></mrl></oob></template>
 </category>
 <category><pattern>REMETS LA MUSIQUE</pattern>
 <template><random>
-        <li>Je remets la musique</li>
-        <li>Bien sur!</li>
+        <li>Je remets la musique.</li>
+        <li>Bien sûr!</li>
       </random>
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.resume()</param></mrl></oob>
 </template>
 </category>
 <category><pattern>BAISSE LE SON</pattern>
-<template><oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.9)</param></mrl></oob>
+<template>Je baisse le son.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.9)</param></mrl></oob>
 </template>
-<category><pattern>BAISSE ENCORE LE SON</pattern>
-<template><oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.8)</param></mrl></oob></template>
 </category>
+<category><pattern>BAISSE ENCORE LE SON</pattern>
+<template>Je baisse encore plus le son.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.8)</param></mrl></oob></template>
 </category>
 <category><pattern>AUGMENTE LE SON</pattern>
-<template>
-    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(1.0)</param></mrl></oob>
+<template>J'augmente le son.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(1.0)</param></mrl></oob>
 </template>
 </category>
 </aiml>
