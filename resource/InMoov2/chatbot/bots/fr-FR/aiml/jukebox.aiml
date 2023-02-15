@@ -13,18 +13,22 @@
 <category><pattern>DÉMARRE LA PLAYLIST</pattern>
 <template><random>
         <li>Bien sur!</li>
-        <li>Je mets de la musique</li>
+        <li>Je mets de la musique.</li>
         <li>Oké!</li>
       </random>
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist()</param></mrl></oob></template>
 </category>
-<category><pattern>START PLAYLIST *</pattern>
+<category><pattern>DÉMARRE PLAYLIST *</pattern>
 <template><random>
         <li>Bien sur!</li>
-        <li>Je mets de la musique</li>
+        <li>Je mets de la musique.</li>
         <li>Oké!</li>
       </random>
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist('<star/>')</param></mrl></oob></template>
+</category>
+<category><pattern>ARRÊTE LA PLAYLIST</pattern>
+<template>J'arrête la musique la la playlist.
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stopPlaylist(), i01_audioPlayer.stop()</param></mrl></oob></template>
 </category>
 <category><pattern>ARRÊTE LA MUSIQUE</pattern>
 <template><random>
