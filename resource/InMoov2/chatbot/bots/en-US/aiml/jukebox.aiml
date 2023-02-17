@@ -71,6 +71,14 @@
       </random>
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.resume()</param></mrl></oob></template>
 </category>
+<category><pattern>SEARCH THE SONG *</pattern>
+<template>
+  <think><set name="song"><star/></set></think>
+    <oob><mrl>
+      <service>python</service><method>exec</method><param>searchPlay("<get name="song"/>")</param>
+      </mrl></oob>
+      </template>
+</category>        
 <category><pattern>VOLUME MUSIC LOUDER</pattern>
 <template>Setting music louder.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(1.0)</param></mrl></oob></template>
 </category>
