@@ -187,3 +187,31 @@ def nextMusic():
         ear.startListening()
         sleep(1)
         ear.setAutoListen(setAutoListen)
+        
+def searchPlay(song):
+    if runtime.isStarted('i01.audioPlayer'):
+        if os.path.exists('data/config/default/i01.audioPlayer.yml'):
+            i01.info(u"found config file")
+            f = open('data/config/default/i01.audioPlayer.yml', 'r')
+            liste = f.readlines()
+            #Remove the first 11 elements of the list
+            del liste[0:11]
+            i=0
+            flag =0
+            # iteration on the list with set up of the chaine
+            while i <= len(liste)-2 :  
+                var = "".join(liste[i][4:]).rstrip('\n')
+                #if " "+song+" " in (" " + var + " "):
+                if song.lower() in var :
+                    i01_audioPlayer.play(var)
+                    flag = 1
+                    print(var)
+                i=i+1
+            if flag == 0 :
+                i01.warn(u"I don't have this song in my list, or the file contains upper case.")
+            f.close()
+        else:
+            i01.warn(u"I do not have a default playlist in my configuration.")
+            print("ko")
+    else:
+        i01.warn(u"The audioPlayer service is not started.")        
