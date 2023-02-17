@@ -62,6 +62,14 @@
     <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.resume()</param></mrl></oob>
 </template>
 </category>
+<category><pattern>CHERCHE LE MORCEAU *</pattern>
+<template>
+  <think><set name="morceau"><star/></set></think>
+    <oob><mrl>
+      <service>python</service><method>exec</method><param>searchPlay("<get name="morceau"/>")</param>
+      </mrl></oob>
+      </template>
+</category>
 <category><pattern>BAISSE LE SON</pattern>
 <template>Je baisse le son.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.9)</param></mrl></oob>
 </template>
