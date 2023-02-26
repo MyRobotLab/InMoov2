@@ -6,18 +6,20 @@
 # check if robot can sleep or wakeup
 # only based on pir at this time
 ###############################################################################
+import random
 
 def sleepModeWakeUp():
   i01_ear.clearLock()
   WaitXsecondBeforeRelaunchTracking=-10
-  i01_ear.setAutoListen(setAutoListen)
+  i01_ear.setAutoListen(True)
   if runtime.isStarted('i01.pir'):
       PirControlerArduino.enablePin(PirPin,1)
       SleepTimer.startClock(True)
   
-  if RobotIsStarted==1:
+  #if RobotIsStarted==1:
+  if i01_fsm.getCurrentState()=="awake" or "systemCheck":
     
-    i01_imageDisplay.exitFS()
+    #i01_imageDisplay.exitFS()
     sleep(1)
     i01_imageDisplay.closeAll()
     
@@ -26,14 +28,14 @@ def sleepModeWakeUp():
     rdmWakup=random.randint(1,3)
     if rdmWakup==1:
       sleep(0.5)
-      if PlayCustomSoundIfDetection:i01_audioPlayer.playFile(RuningFolder+'/system/sounds/Notifications/'+random.choice(os.listdir(RuningFolder+'/system/sounds/Notifications')),False)
+      i01_audioPlayer.playFile('resource/InMoov2/system/sounds/Notifications/'+random.choice(os.listdir('resource/InMoov2/system/sounds/Notifications')),False)
     elif rdmWakup==2:
       if runtime.isStarted('i01.neopixel'):i01.setNeopixelAnimation("Larson Scanner", 255, 255, 0, 1)
       sleep(2)
       if runtime.isStarted('i01.neopixel'):i01.stopNeopixelAnimation()
     else: welcomeMessage()
     #optional switchon nervoboard
-    switchOnAllNervo()
+    #switchOnAllNervo()
     if runtime.isStarted('i01.eyeLids'):
       i01_head_eyelidLeft.moveTo(0)
       i01_head_eyelidRight.moveTo(0)
@@ -44,24 +46,25 @@ def sleepModeWakeUp():
       i01_head_neck.moveToBlocking(i01_head_neck.getRest())
   else:
     welcomeMessage()
-    RobotIsSleeping=False
+    #RobotIsSleeping=False
+    i01_fsm.fire("wake")
   if runtime.isStarted('i01.neopixel'):i01.stopNeopixelAnimation()
   fullspeed()
 
 
 def sleepModeSleep():
-  if not ForceMicroOnIfSleeping:ear.setAutoListen(False)
-  i01_ear.lockOutAllGrammarExcept(lockPhrase)
-  stopTracking()
-  i01_imageDisplay.exitFS()
+  i01_ear.setAutoListen(False)
+  i01_ear.lockOutAllGrammarExcept(i01_ear.getConfig().wakeWord)
+  stopTrackHumans()
+  #i01_imageDisplay.exitFS()
   sleep(1)
   i01_imageDisplay.closeAll()
-  RobotIsSleeping=True
+  i01_fsm.fire("sleep")
   i01.halfSpeed()
   rest()
   i01.waitTargetPos()
   #display sleeping robot on screen
-  i01_imageDisplay.display(RuningFolder+'/system/pictures/sleeping_2_1024-600.jpg')
+  i01_imageDisplay.display('resource/InMoov2/system/pictures/sleeping_2_1024-600.jpg')
   #head down
   if runtime.isStarted('i01.eyeLids'):
     i01_head_eyelids.autoBlink(False)
@@ -72,7 +75,7 @@ def sleepModeSleep():
     i01_head_neck.moveTo(10)
   i01.waitTargetPos()
   i01.disable()
-  switchOffAllNervo()
+  #switchOffAllNervo()
   if runtime.isStarted('i01.neopixel'):i01.stopNeopixelAnimation()
   sleep(2)
   if runtime.isStarted('i01.neopixel'):i01.setNeopixelAnimation("Color Wipe", 10, 12, 12, 50)
@@ -83,19 +86,20 @@ def sleepModeSleep():
     
 def wakeUpModeInsult():
   WaitXsecondBeforeRelaunchTracking=-10
-  i01_ear.setAutoListen(setAutoListen)
+  i01_ear.setAutoListen(True)
   i01_ear.clearLock()
   if runtime.isStarted('i01.pir'):
       PirControlerArduino.enablePin(PirPin,1)
       SleepTimer.startClock(True)
   
-  if RobotIsStarted==1: 
-    i01_imageDisplay.exitFS()
+  #if RobotIsStarted==1:
+  if i01_fsm.getCurrentState()=="applyingConfig" or "systemCheck":  
+    #i01_imageDisplay.exitFS()
     sleep(1)
     i01_imageDisplay.closeAll()
     if runtime.isStarted('i01.neopixel'):i01.setNeopixelAnimation("Larson Scanner", 0, 255, 0, 1)
     #optional switchon nervoboard
-    switchOnAllNervo()
+    #switchOnAllNervo()
     if runtime.isStarted('i01.eyeLids'):
       i01_head_eyelidLeft.moveTo(0)
       i01_head_eyelidRight.moveTo(0)
@@ -107,15 +111,16 @@ def wakeUpModeInsult():
   else:
     if talkToInmoovFrQueue("MRLALIVE")=="OK":i01.speakBlocking(i01.localize("OsSynced"))
     relax()
-  RobotIsSleeping=False
+  #RobotIsSleeping=False
+  i01_fsm.fire("wake")
   if runtime.isStarted('i01.neopixel'):i01.stopNeopixelAnimation()
   relax()
   fullspeed()
 
 def sleepModeInsult():
-  if not ForceMicroOnIfSleeping:i01_ear.setAutoListen(False)
-  stopTracking()
-  i01_imageDisplay.exitFS()
+  i01_ear.setAutoListen(False)
+  stopTrackHumans()
+  #i01_imageDisplay.exitFS()
   sleep(1)
   i01_imageDisplay.closeAll()
   #unlockInsult located in ear.py
@@ -124,7 +129,7 @@ def sleepModeInsult():
   rest()
   i01.waitTargetPos()
   #display sleeping robot on screen
-  i01_imageDisplay.displayPic(RuningFolder+'/system/pictures/sleeping_2_1024-600.jpg')
+  i01_imageDisplay.displayPic('resource/InMoov2/system/pictures/sleeping_2_1024-600.jpg')
   #head down
   if runtime.isStarted('i01.eyeLids'):
     i01_head_eyelids.autoBlink(False)
@@ -137,7 +142,7 @@ def sleepModeInsult():
   if runtime.isStarted('i01.rightHand') or runtime.isStarted('i01.leftHand'):
     handsclose()
   i01.disable()
-  switchOffAllNervo()
+  #switchOffAllNervo()
   sleep(2)
   if runtime.isStarted('i01.pir'):
     PirControlerArduino.disablePin(PirPin)
@@ -154,7 +159,8 @@ def welcomeMessage():
       i01_chatBot.getResponse("WAKE_UP")
   else:
     i01.speakBlocking(i01.localize("ready"))
-  RobotIsStarted=True
+  #RobotIsStarted=True
+  i01_fsm.fire("systemCheck")
 
 global WaitXsecondBeforeRelaunchTracking
 WaitXsecondBeforeRelaunchTracking=-10
@@ -167,8 +173,8 @@ def humanDetected():
   global autoTrackingStarted
   if runtime.isStarted('i01.pir'):
     SleepTimer.restartClock(True)
-    if (runtime.isStarted('i01.pir') and UsePirToActivateTracking):
-      if (not i01_vision.isTracking() and WaitXsecondBeforeRelaunchTracking>=5):
+    if runtime.isStarted('i01.pir'):
+      if (not i01_opencv.isTracking() and WaitXsecondBeforeRelaunchTracking>=5):
         WaitXsecondBeforeRelaunchTracking=0
         if runtime.isStarted('i01.neopixel'):i01.setNeopixelAnimation("Larson Scanner", 255, 0, 255, 1)
         autoTrackingStarted=1
@@ -176,7 +182,8 @@ def humanDetected():
       TrackingTimer.restartClock(True)
     
 def SleepTimerRoutine(timedata):
-  if RobotIsSleeping==0:
+  #if RobotIsSleeping==0:
+  if not i01_fsm.getCurrentState()=="sleeping":
     if runtime.isStarted('i01.neopixel'):i01.setNeopixelAnimation("Larson Scanner", 0, 0, 255, 1)
     PirControlerArduino.disablePin(PirPin)
     #sleep function to call
@@ -192,7 +199,7 @@ def TrackingTimerRoutine(timedata):
     WaitXsecondBeforeRelaunchTracking=-5
     if autoTrackingStarted:
       autoTrackingStarted=0
-      stopTracking()
+      stopTrackHumans()
     if runtime.isStarted('i01.neopixel'):i01.stopNeopixelAnimation()
   TrackingTimer.stopClock()    
   
