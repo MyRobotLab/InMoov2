@@ -29,4 +29,4 @@ def onRecognized(text):
       if i01_fsm.getCurrentState()=="applyingConfig" or "systemCheck":  
         if runtime.isStarted('i01.chatBot'):
           if i01_fsm.getCurrentState()=="sleeping" and unicode(text,'utf-8')==lockPhrase:sleepModeWakeUp()
-          if i01_fsm.getCurrentState()=="wake" and not unicode(text,'utf-8')==lockPhrase:humanDetected()
+          if i01_fsm.getCurrentState()=="awake" and not unicode(text,'utf-8')==lockPhrase:humanDetected()
