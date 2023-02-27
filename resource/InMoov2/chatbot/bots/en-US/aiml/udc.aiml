@@ -3,7 +3,14 @@
 <!-- File: udc.aiml -->
 <!--  -->
 <category><pattern>*</pattern>
-<template><srai>UDC</srai></template>
+<template><condition name="gpt3">
+        <li value="enabled">
+        <sraix><star/></sraix>
+        </li>
+        <li>
+        <srai>UDC</srai>
+        </li>
+      </condition></template>
 </category>
 <category><pattern>UDC</pattern>
 <template><random>
