@@ -526,4 +526,13 @@
 <category><pattern>GPS OFF</pattern>
 <template>Use Settings to turn off GPS.</template>
 </category>
+      <category><pattern>BATTERY LEVEL</pattern>
+<template>.<oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>batterylevel()</param>
+          </mrl>
+        </oob></template>
+</category>
 </aiml>
