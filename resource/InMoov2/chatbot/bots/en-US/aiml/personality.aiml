@@ -558,16 +558,6 @@
 		is a book in the Bible about Adam and Eve.  
 		<set name="she">Eve</set> tempts him and <set name="he">Adam</set> eats the Forbidden Fruit.</template>
 </category>
-<category><pattern>NORESP</pattern>
-<template><random>
-			 <li>Yes?</li>
-                         <li>Say what?</li>
-                         <li>What?</li>
-                         <li>Hey!</li>
-                         <li>Hey, yes!</li>
-                         <li>Yeah?</li>
-		</random></template>
-</category>
 <category><pattern><set>article</set></pattern>
 <template><star/> is an article.</template>
 </category>
