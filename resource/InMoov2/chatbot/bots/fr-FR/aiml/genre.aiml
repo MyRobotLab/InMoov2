@@ -107,6 +107,8 @@
             <li value="frederic">male</li>
             <li value="gabriel">male</li>
             <li value="gabrielle">female</li>
+            <li value="gaël">male</li>
+            <li value="gaëlle">female</li>
             <li value="garou">male</li>
             <li value="gary">male</li>
             <li value="george">male</li>
@@ -287,7 +289,7 @@
         <li>
           <think>
             <set name="heshe">ça</set>
-          </think>ES tu un homme ou une femme?</li>
+          </think>Es-tu un homme ou une femme?</li>
       </condition>
     </template>
   </category>

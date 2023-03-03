@@ -4,16 +4,24 @@
   <!--  -->
   <category>
     <pattern>MON NOM EST *</pattern>
-    <template>
-      <set name="name">
-        <formal>
-          <star />
-        </formal>
-      </set> . <random><li>Heureuse de te rencontrer,</li><li>Enchantée,</li><li>comment VAS tu?</li></random><get name="name" />.</template>
+    <template><think>
+          <set name="tmpname"><star/></set>
+          <set name="firstinit">ok</set>
+          <set name="topic">nouvelle rencontre</set>
+        </think>
+        <random><li>Ravi de faire ta connaissance, </li><li>Enchanté, </li><li>Comment vas-tu? </li></random><get name="tmpname" />.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate("Friend","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate("Friend","firstinit","ok"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob></template>
   </category>
   <category>
     <pattern>MON NOM N EST PAS *</pattern>
-    <template>Oh Je suis désolé. Quel est ton nom?</template>
+    <template>Oh Je suis désolé. 
+      <srai>NEW_INIT_USER</srai></template>
   </category>
   <category>
     <pattern>C EST MOI</pattern>
@@ -30,12 +38,18 @@
       </set>. <srai>CHERCHERGENRE</srai></template>
   </category>
   <category>
+    <pattern>MON NOM DE FAMILLE EST *</pattern>
+    <template>
+      <srai><star/> EST MON NOM DE FAMILLE</srai>
+    </template>
+  </category>
+  <category>
     <pattern>* EST MON NOM DE FAMILLE</pattern>
-    <template>tu préfère que je t'appelle <get name="name" /> ou M. <star />? <think><set name="lastname"><star /></set></think></template>
+    <template>tu préfères que je t'appelle <get name="name" /> ou <star />? <think><set name="lastname"><star /></set></think></template>
   </category>
   <category>
     <pattern>*</pattern>
-    <that>TU PRÉFÈRE QUE JE T APPELLE *</that>
+    <that>TU PRÉFÈRES QUE JE T APPELLE *</that>
     <template>
       <random>
         <li>OK je t'appellerai</li>
@@ -49,11 +63,11 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>* TU PRÉFÈRE QUE JE T APPELLE *</that>
+    <that>* TU PRÉFÈRES QUE JE T APPELLE *</that>
     <template>
       <random>
         <li>OK je t'appellerai</li>
-        <li>Hi</li>
+        <li>Hello</li>
       </random>
       <set name="name">
         <formal>
@@ -203,7 +217,7 @@
         <formal>
           <star />
         </formal>
-      </set>, heureuse de te rencontrer! <srai>CHERCHERGENRE</srai></template>
+      </set>, ravi de te rencontrer! <srai>CHERCHERGENRE</srai></template>
   </category>
   <category>
     <pattern>JE M APELLE *</pattern>
@@ -230,7 +244,7 @@
         <formal>
           <star />
         </formal>
-      </set>, heureuse de te rencontrer! <srai>CHERCHERGENRE</srai></template>
+      </set>, ravi de te rencontrer! <srai>CHERCHERGENRE</srai></template>
   </category>
   <category>
     <pattern>* MOI C EST *</pattern>
@@ -277,7 +291,7 @@
   <category>
     <pattern>* JE M APPELLE * ET TOI</pattern>
     <template>
-      <srai>MON NOM EST <star index="2" /></srai>, moi C EST <get name="botname"/>.</template>
+      <srai>MON NOM EST <star index="2" /></srai>, moi c'est <get name="botname"/>.</template>
   </category>
   <category>
     <pattern>* TU PEUX M APPELER *</pattern>
@@ -370,7 +384,7 @@
         <formal>
           <star index="2" />
         </formal>
-      </set>, heureuse de te rencontrer! <srai>CHERCHERGENRE</srai></template>
+      </set>, ravi de te rencontrer! <srai>CHERCHERGENRE</srai></template>
   </category>
   <category>
     <pattern>* JE M APELLE *</pattern>
@@ -397,7 +411,7 @@
         <formal>
           <star index="2" />
         </formal>
-      </set>, heureuse de te rencontrer! <srai>CHERCHERGENRE</srai></template>
+      </set>, ravi de te rencontrer! <srai>CHERCHERGENRE</srai></template>
   </category>
   <category>
     <pattern>*</pattern>
