@@ -337,4 +337,7 @@
 <category><pattern># YOUR ATTENTION</pattern>
 <template><srai>STOP YOUR GESTURE</srai></template>
 </category>
+	<category><pattern>NORESP</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+</category>
 </aiml>
