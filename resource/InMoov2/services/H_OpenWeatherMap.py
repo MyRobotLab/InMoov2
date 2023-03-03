@@ -3,6 +3,7 @@
 #                 OPENWEATHERMAP FILE
 # ##############################################################################
 
+
 security.loadStore()
 apikey = security.getSecret("OPENWEATHERMAP")
 
@@ -10,19 +11,25 @@ apikey = security.getSecret("OPENWEATHERMAP")
 def isTheSunShiny(townParam="town",period=1):
   if runtime.isStarted('i01.openWeatherMap'):
     if apikey==None:
-      i01_chatBot.getResponse("SYSTEM openweathermapError")
-      runtime.error("open weathermap, key error")
+      errorSpokenFunc("ALERT",", open weathermap key error")
+      if error_red==1:
+        if runtime.isStarted('i01.neopixel'):
+          i01.setNeopixelAnimation("Flash Random", 255, 0, 0, 5)
     else:
       openWeatherMap=i01_openWeatherMap
       town=openWeatherMap.getConfig().currentTown
       if town==None:
-        i01_chatBot.getResponse("SYSTEM openweathermapError")
-        runtime.error("open weathermap error, this town is unrecognized")
+        errorSpokenFunc("ALERT",", open weathermap town is unrecognized") 
+        if error_red==1:
+          if runtime.isStarted('i01.neopixel'):
+            i01.setNeopixelAnimation("Flash Random", 255, 0, 0, 5)
       else:
         setUnits=openWeatherMap.getConfig().currentUnits
         if setUnits==None:
-          i01_chatBot.getResponse("SYSTEM openweathermapError")
-          runtime.error("open weathermap error, units are not defined")
+          errorSpokenFunc("ALERT",", open weathermap units not defined") 
+          if error_red==1:
+            if runtime.isStarted('i01.neopixel'):
+              i01.setNeopixelAnimation("Flash Random", 255, 0, 0, 5)
         else:
           if townParam=="town" or townParam=="":townParam=town  
           openWeatherMap.setUnits(setUnits)
@@ -34,3 +41,6 @@ def isTheSunShiny(townParam="town",period=1):
   else:
       i01_chatBot.getResponse("SYSTEM openweathermapNotStarted")
       runtime.error("open weathermap not started or maybe not configured")
+      if error_red==1:
+          if runtime.isStarted('i01.neopixel'):
+            i01.setNeopixelAnimation("Flash Random", 255, 0, 0, 5)

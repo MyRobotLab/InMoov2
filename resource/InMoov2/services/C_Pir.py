@@ -2,32 +2,26 @@
 #            *** PIR SENSOR ***
 # ##############################################################################
 
-# exemple after 5 minutes of inactivity we call the function sleepModeSleep()
-# and if human is detected and if the robot sleeping we call sleepModeWakeUp()
-
 
 # ##############################################################################
-#               PERSONNAL PARAMETERS
-# ##############################################################################  
-  
-
-
-
+#                 SET SERVICE
 # ##############################################################################
-#                 SERVICE START
-# ##############################################################################
-#pir timer to avoid human detection notification every seconds...
 
+publishPin=0
 
 #analog pin listener read the pir
 def publishPinPir(pins):
+  publishPin=1
   if runtime.isStarted("i01.pir"):
     pir=i01_pir
-    PirPin=pir.getConfig().pin
-    PirControlerArduino=pir.getConfig().controller
+    pirPin=pir.getConfig().pin
+    pirControlerArduino=pir.getConfig().controller
   else:
     i01.speakBlocking(i01.localize("PIRNOWORKY"))
-    runtime.error("pir error, not started") 
+    errorSpokenFunc("ALERT",", p,i,r is not started")
+    if error_red==1:
+      if runtime.isStarted('i01.neopixel'):
+        i01.setNeopixelAnimation("Flash Random", 255, 0, 0, 5) 
   
 
   for pin in range(0, len(pins)):
