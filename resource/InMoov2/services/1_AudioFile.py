@@ -7,7 +7,7 @@
 # MRL SERVICE CALL
 # ##############################################################################
 #read current service part config based on file name
-ThisServicePart=RuningFolder+'config/service_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
+ThisServicePart='resource/InMoov2/config/service_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
 CheckFileExist(ThisServicePart)
 ThisServicePartConfig = ConfigParser.ConfigParser()
