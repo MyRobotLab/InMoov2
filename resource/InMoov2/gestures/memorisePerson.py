@@ -26,10 +26,10 @@ def YesName(name):
       fr.train()
       # after we've retrained the model.. start recognizing again
       fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
-      i01.finishedGesture()
       i01_opencv.disableFilter("FaceRecognizer")
       i01_opencv.removeFilter("FaceRecognizer")
       i01_chatBot.getResponse("SYSTEM_SAY_HELLO")
+      i01.finishedGesture()
     else:
       errorSpokenFunc('OPENCVNOWORKY')
 
@@ -59,8 +59,8 @@ def memorisePerson(name):
         fr.train()
         # after we've retrained the model.. start recognizing again
         fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
-        i01.finishedGesture()
         i01_opencv.disableFilter("FaceRecognizer")
         i01_opencv.removeFilter("FaceRecognizer")
+        i01.finishedGesture()
       else:
         i01.warn('facerecognizer not starting because no opencv')
