@@ -71,7 +71,10 @@
                 <div id="leftLegGuiDisplay" ng-show="service.isLeftLegStarted" class="GuiDisplays preventGuiDragSelect">
                     <img src="../img/InMoov2/legL_Activ.png"/>
                 </div>
-                <div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="msg.speakBlocking('battery is'+ str(Runtime.getBatteryLevel())+' %')">
+                <!--<div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="msg.speak('battery is'+ str(runtime.getBatteryLevel())+' %')">
+                    <img src="../img/InMoov2/battery_Activ.png"/>
+                </div>-->
+                <div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="execScript('system/guiScripts/batterylevelGui.py')">
                     <img src="../img/InMoov2/battery_Activ.png"/>
                 </div>
                 <div id="homeGuiButton" class="homeGuiButtons preventGuiDragSelect" ng-click="mrl.changeTab('intro')">Intro</div>
@@ -390,6 +393,20 @@
                 </tr>
                 <tr>
                     <td ng-show="service.isOpencvStarted">
+                        <label>flip Picture:</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable vision upside down" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_flipPicture_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_flipPicture_stop.py')">off</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td ng-show="service.isOpencvStarted">
+                        <label>face Recognizer:</label>
+                        &nbsp;<button title="Enable robot to recognize trained faces" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_faceRecognizerActivated_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_faceRecognizerActivated_stop.py')">off</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td ng-show="service.isOpencvStarted">
                         <img src="../Tracking.png"/>
                         <toggle ng-model="service.isHeadTrackingStarted" ng-change="service.isHeadTrackingStarted?startPeer('headTracking'):releasePeer('headTracking')" width="140" height="30" on="head tracking on" off="head tracking off"></toggle>
                         <span ng-show="service.isHeadTrackingStarted">
@@ -587,6 +604,33 @@
                             <img src="settings.png" width="30" ng-click="mrl.changeTab(peer.getActualName(service, 'neoPixel'))"/>
                         </span>
                 </tr>
+                <tr ng-show="peer.isPeerStarted(service, 'neoPixel')">
+                    <td>
+                        <label>boot_green:</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Sets neopixel to green when robot is booting" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_boot_green_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_boot_green_stop.py')">off</button>
+                    </td>
+                </tr>
+                <!--<tr ng-show="peer.isPeerStarted(service, 'neoPixel')">
+                    <td>
+                        <label>download_blue:</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Sets neopixel to blue when robot is downloading something" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_download_blue_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_download_blue_stop.py')">off</button>
+                    </td>
+                </tr>-->
+                <tr ng-show="peer.isPeerStarted(service, 'neoPixel')">
+                    <td>
+                        <label>error_red:</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Sets neopixel to red when an error occurs" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_error_red_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_error_red_stop.py')">off</button>
+                    </td>
+                </tr>
+                    <td ng-show="peer.isPeerStarted(service, 'neoPixel')">
+                        <label>flash_when_speak:</label>
+                        &nbsp;<button title="Allows neopixel to flash when robot is speaking" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_flash_when_speak_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_flash_when_speak_stop.py')">off</button>
+                    </td>
+                </tr>
                 <tr>
                     <td>
                         <img width="50" height="50" ng-click="setPanel('extra')" ng-src="../img/InMoov2/arrow_blue_left.png" src="../img/InMoov2/arrow_blue_left.png">
@@ -686,6 +730,20 @@
             <span ng-show="peer.isPeerStarted(service, 'pir')">
                             <img src="settings.png" width="30" ng-click="mrl.changeTab(peer.getActualName(service, 'pir'))"/>
                         </span>
+        </td>
+    </tr>
+    <tr ng-show="peer.isPeerStarted(service, 'pir')">
+        <td>
+            <label>pirEnableTracking:</label>
+            &nbsp;&nbsp;<button title="Enable to start tracking faces when pir detect movement" width="30" height="30" class="btn btn-info" 
+                ng-click="execScript('system/startScripts/i01_pirEnableTracking_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_pirEnableTracking_stop.py')">off</button>
+        </td>
+    </tr>
+    <tr ng-show="peer.isPeerStarted(service, 'pir')">
+        <td>
+            <label>pirWakeUp:</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable pir to wake up robot if detected movements" width="30" height="30" class="btn btn-info" 
+                ng-click="execScript('system/startScripts/i01_pirWakeUp_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_pirWakeUp_stop.py')">off</button>
         </td>
     </tr>
     <!----------------------------pir end-------------------------------- -->
@@ -888,6 +946,51 @@
 </tr>
 </table>
 <!------------------------ openni end ---------------------------- -->
+<!------------------------ life service begin ----------------------------  -->
+            <table ng-show="showPanel('lifeService')" class="inmoov-sub-panel table table-striped">
+                <tr>
+                    <td>
+                        <img src="../plus.png"/>
+                        &nbsp;&nbsp;<label>life service:</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>StartupSound:</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable InMoov theme at start" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_startupSound_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_startupSound_stop.py')">off</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>custom sounds:</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable custom sounds when waking up" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_customSound_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_customSound_stop.py')">off</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Health Check:</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Checking your robot condition" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_healthCheckActivated_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_healthCheckActivated_stop.py')">off</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Battery In System:</label>
+                        &nbsp;&nbsp;<button title="Enable checking the battery level" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_batteryInSystem_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_batteryInSystem_stop.py')">off</button>
+                    </td>
+                </tr>
+                <!--<tr>
+                    <td>
+                        <label>health timer Value:</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable pir to wake up robot if detected movements" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_pirWakeUp_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_pirWakeUp_stop.py')">off</button>
+                    </td>
+                </tr>-->
+            </table>
+<!------------------------ life service end ---------------------------- -->
 <!------------------------ InMoov begin ---------------------------- -->
 <table ng-show="showPanel('InMoov')" class="inmoov-sub-panel table table-striped">
     <tr>
@@ -929,6 +1032,12 @@
                             <td>
                         <button width="30" height="30" class="btn btn-default" title="To execute your script data/InMoov2/InMoovCustom.py" ng-click="execScript('gestures/InMoovCustom_start.py')" width="120" height="30"></button>
                        </td>
+                        </tr>
+                        <tr>
+                            <td>Life service</td>
+                            <td>
+                                <img src="settings.png" width="30" ng-click="setPanel('lifeService')"/>
+                            </td>
                         </tr>
                         <tr ng-repeat="(key, value) in service.serviceType.peers">
                             <td>
