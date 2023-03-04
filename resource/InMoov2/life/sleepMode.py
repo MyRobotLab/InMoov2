@@ -25,15 +25,13 @@ def sleepModeWakeUp():
       
       #display(RuningFolder+'/system/pictures/loading_1024-600.jpg')
       
-      rdmWakup=random.randint(1,3)
-      if rdmWakup==1:
-        sleep(0.5)
-        if customSound==1:i01_audioPlayer.playFile('resource/InMoov2/system/sounds/Notifications/'+random.choice(os.listdir('resource/InMoov2/system/sounds/Notifications')),False)
-      elif rdmWakup==2:
-        if runtime.isStarted('i01.neopixel'):i01.setNeopixelAnimation("Larson Scanner", 255, 255, 0, 1)
-        sleep(2)
-        if runtime.isStarted('i01.neopixel'):i01.stopNeopixelAnimation()
+      if customSound==1:
+        i01_audioPlayer.playFile('resource/InMoov2/system/sounds/Notifications/'+random.choice(os.listdir('resource/InMoov2/system/sounds/Notifications')),False)
       else: welcomeMessage()
+      if runtime.isStarted('i01.neopixel'):
+        i01.setNeopixelAnimation("Larson Scanner", 255, 255, 0, 1)
+        sleep(2)
+        i01.stopNeopixelAnimation()
       #optional switchon nervoboard
       #switchOnAllNervo()
       if runtime.isStarted('i01.eyeLids'):
@@ -56,7 +54,10 @@ def sleepModeSleep():
   if runtime.isStarted('i01.ear'):
     i01_ear.setAwake(False)
     print("sleeping")
-    stopTrackHumans()
+    if runtime.isStarted('i01.headTracking'):
+      stopTrackHumans()
+    if runtime.isStarted('i01.opencv'):
+      i01_opencv.stopCapture()  
     if runtime.isStarted('i01.imageDisplay'):
       i01_imageDisplay.closeAll()
     i01_fsm.fire("sleep")
@@ -123,7 +124,8 @@ def wakeUpModeInsult():
 def sleepModeInsult():
   if runtime.isStarted('i01.ear'):
     i01_ear.setAwake(False)
-    stopTrackHumans()
+    if runtime.isStarted('i01.headTracking'):
+      stopTrackHumans()
     if runtime.isStarted('i01.imageDisplay'):
       i01_imageDisplay.closeAll()
     #unlockInsult located in ear.py
@@ -156,11 +158,13 @@ def sleepModeInsult():
 def welcomeMessage():
   
   if runtime.isStarted('i01.chatBot'):
-    if str(i01_chatBot.getPredicate("Friend","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("Friend","firstinit"))=="started":
-      i01_chatBot.setPredicate("Friend","topic","default")
+    if str(i01_chatBot.getPredicate("human","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("human","firstinit"))=="started":
+      i01_chatBot.setPredicate("human","topic","default")
       i01_chatBot.getResponse("FIRST_INIT")
     else:
-      i01_chatBot.getResponse("WAKE_UP")
+      if faceRecognizerActivated==1:facerecognizer()
+      else:
+        i01_chatBot.getResponse("WAKE_UP")
   else:
     i01.speakBlocking(i01.localize("ready"))
   #RobotIsStarted=True
@@ -168,21 +172,18 @@ def welcomeMessage():
 
 global WaitXsecondBeforeRelaunchTracking
 WaitXsecondBeforeRelaunchTracking=-10
-global autoTrackingStarted
-autoTrackingStarted=0
 
 def humanDetected():
   global WaitXsecondBeforeRelaunchTracking
   WaitXsecondBeforeRelaunchTracking+=1
-  global autoTrackingStarted
   if runtime.isStarted('i01.pir'):
     sleepTimer.restartClock(True)
     if runtime.isStarted('i01.pir'):
       if (not i01_opencv.isTracking() and WaitXsecondBeforeRelaunchTracking>=5):
         WaitXsecondBeforeRelaunchTracking=0
         if runtime.isStarted('i01.neopixel'):i01.setNeopixelAnimation("Larson Scanner", 255, 0, 255, 1)
-        autoTrackingStarted=1
-        trackHumans()      
+        if runtime.isStarted('i01.headTracking'):trackHumans()
+        if faceRecognizerActivated==1:facerecognizer()      
       trackingTimer.restartClock(True)
     
 def sleepTimerRoutine(timedata):
@@ -197,13 +198,11 @@ def sleepTimerRoutine(timedata):
     sleepModeSleep()
   
 def trackingTimerRoutine(timedata):
-  global autoTrackingStarted
   global WaitXsecondBeforeRelaunchTracking
   print "trackingTimer stopped"
   if i01_opencv.isTracking():
     WaitXsecondBeforeRelaunchTracking=-5
-    if autoTrackingStarted:
-      autoTrackingStarted=0
+    if runtime.isStarted('i01.headTracking'):
       stopTrackHumans()
     if runtime.isStarted('i01.neopixel'):i01.stopNeopixelAnimation()
   trackingTimer.stopClock()    
