@@ -252,13 +252,13 @@
 <category><pattern>DAVINCI</pattern>
 <template><srai>DA VINCI</srai></template>
 </category>
-<category><pattern>MANUAL</pattern>
-<template>Okay I don't listen anymore, to unlock me you need to say the custom keyword that is <get name="MagicCommandToWakeUp"/>.
-        <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method><param><get name="MagicCommandToWakeUp"/></param></mrl></oob></template>
+<category><pattern>WAKE WORD *</pattern>
+<template><think><set name="wakeWord"><star/></set></think>Okay I don't listen anymore, to unlock me you need to say the custom wakeword that is <star/>.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_ear.setWakeWord('<star/>'), i01_ear.setAwake(False)</param></mrl></oob></template>
 </category>
 <category><pattern>VOICE CONTROL</pattern>
 <template>I'm listening.
-        <oob><mrl><service>i01.ear</service><method>clearLock</method></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>i01_ear.setAwake(True)</param></mrl></oob></template>
 </category>
 <category><pattern>STOP LISTENING</pattern>
 <template>I'm not going to listen to you.
@@ -1164,6 +1164,11 @@
 <template>Can you answer, it is necessary
         <get name="memorisenameinit"/></template>
 </category></topic>
+
+<category><pattern>WHO IS THIS PERSON</pattern>
+<template>Let me check
+          <oob><mrl><service>python</service><method>exec</method><param>whoisthis()</param></mrl></oob></template>
+</category>
 
 <category><pattern># FOR TRAVELLING</pattern>
 <template>Okay I get ready for travelling

@@ -160,6 +160,7 @@
     <oob><mrl><service>python</service><method>exec</method><param>thatwasfun()</param></mrl></oob></template>
 </category>
 
+
 <category><pattern>20 Q</pattern><template><srai>20Q</srai></template></category>
 <category><pattern>TWENTY QUESTIONS</pattern><template><srai>20Q</srai></template></category>
 <category><pattern>20 QUESTIONS</pattern><template><srai>20Q</srai></template></category>
@@ -174,13 +175,13 @@
 <think>
 <set name="qnum">1</set>
 </think>
-Ok let us play 20 questions. I will think of something animal, vegetable or mineral and you have to guess what it is by asking me "yes" or "no" questions.You can ask up to 20 questions before it's game over.If you give up, say "I GIVE UP" and I'll tell you what I was thinking of.Say start the game to play.
+Ok let's play 20 questions. I will think of something animal, vegetable or mineral and you have to guess what it is by asking me "yes" or "no" questions. You can ask up to 20 questions before it's game over. If you give up, say "I GIVE UP" and I'll tell you what I was thinking of. Type "START" to play 20 questions.
 </template>
 </category>
 
 <category>
-<pattern>START THE GAME</pattern>
-<!--that>START THE GAME TO PLAY</that-->
+<pattern>START</pattern>
+<that>TYPE START TO PLAY 20 QUESTIONS</that>
 <template>
 <think>
 <set name="topic">20Q</set>
@@ -205,7 +206,7 @@ Ok let us play 20 questions. I will think of something animal, vegetable or mine
 </random>
 
 </think>
-Ok, the object I am thinking of is classed as <get name="20qcategory"/>. Please ask your first question.
+Ok, the object I am thinking of is classed as <get name="20qcategory"/>. Please ask your question.
 </template>
 </category>
 
@@ -218,32 +219,32 @@ Ok, the object I am thinking of is classed as <get name="20qcategory"/>. Please 
 <set name="topic"></set>
 <set name="qsubject">NO SUBJECT</set>
 </think>
-	<condition name="question"> 
-		<li value="IS IT A *">No, sorry. Ask me another question about it.<think><set name="topic">20Q</set></think></li>
-		<li value="IS IT AN *">No, sorry. Ask me another question about it.<think><set name="topic">20Q</set></think></li>
-		<li value="IS IT *"><think><set name="qsubject">is</set></think><srai>20Q RANDOM</srai></li>
-		<li value="DOES IT *"><think><set name="qsubject">does</set></think><srai>20Q RANDOM</srai></li>
-		<li value="HAS IT *"><think><set name="qsubject">has</set></think><srai>20Q RANDOM</srai></li>
-		<li value="WAS IT *"><think><set name="qsubject">was</set></think><srai>20Q RANDOM</srai></li>
-		<li value="WILL IT *"><think><set name="qsubject">will</set></think><srai>20Q RANDOM</srai></li>
-		<li value="CAN IT *"><think><set name="qsubject">can</set></think><srai>20Q RANDOM</srai></li>
-		<li value="IS *"><srai>20Q RANDOM</srai></li>
-		<li value="COULD *"><srai>20Q RANDOM</srai></li>
-		<li value="WOULD *"><srai>20Q RANDOM</srai></li>
-		<li value="SHOULD *"><srai>20Q RANDOM</srai></li>
-		<li value="DOES *"><srai>20Q RANDOM</srai></li>
-		<li value="ARE *"><srai>20Q RANDOM</srai></li>
-		<li value="HAS *"><srai>20Q RANDOM</srai></li>
-		<li value="WAS *"><srai>20Q RANDOM</srai></li>
-		<li value="WILL *"><srai>20Q RANDOM</srai></li>
-		<li value="DO *"><srai>20Q RANDOM</srai></li>
-		<li value="CAN *"><srai>20Q RANDOM</srai></li>
-		<li value="I GIVE UP"><srai>20Q GIVE UP</srai></li>
-		<li value="I GIVE IN"><srai>20Q GIVE UP</srai></li>
-		<li value="I DO NOT KNOW"><srai>20Q GIVE UP</srai></li>
-		<li value="WHAT IS IT"><srai>20Q GIVE UP</srai></li>
-		<li>That is not a "yes" or "no" question. I can only answer yes or no to your questions. Ask me another question or say "I GIVE UP". If you want to guess what it is, say "IS IT A" and then your guess.<think><set name="topic">20Q</set></think></li>
-	</condition>
+    <condition name="question">
+        <li value="IS IT A *">No, sorry. Ask me another question about it.<think><set name="topic">20Q</set></think></li>
+        <li value="IS IT AN *">No, sorry. Ask me another question about it.<think><set name="topic">20Q</set></think></li>
+        <li value="IS IT *"><think><set name="qsubject">is</set></think><srai>20Q RANDOM</srai></li>
+        <li value="DOES IT *"><think><set name="qsubject">does</set></think><srai>20Q RANDOM</srai></li>
+        <li value="HAS IT *"><think><set name="qsubject">has</set></think><srai>20Q RANDOM</srai></li>
+        <li value="WAS IT *"><think><set name="qsubject">was</set></think><srai>20Q RANDOM</srai></li>
+        <li value="WILL IT *"><think><set name="qsubject">will</set></think><srai>20Q RANDOM</srai></li>
+        <li value="CAN IT *"><think><set name="qsubject">can</set></think><srai>20Q RANDOM</srai></li>
+        <li value="IS *"><srai>20Q RANDOM</srai></li>
+        <li value="COULD *"><srai>20Q RANDOM</srai></li>
+        <li value="WOULD *"><srai>20Q RANDOM</srai></li>
+        <li value="SHOULD *"><srai>20Q RANDOM</srai></li>
+        <li value="DOES *"><srai>20Q RANDOM</srai></li>
+        <li value="ARE *"><srai>20Q RANDOM</srai></li>
+        <li value="HAS *"><srai>20Q RANDOM</srai></li>
+        <li value="WAS *"><srai>20Q RANDOM</srai></li>
+        <li value="WILL *"><srai>20Q RANDOM</srai></li>
+        <li value="DO *"><srai>20Q RANDOM</srai></li>
+        <li value="CAN *"><srai>20Q RANDOM</srai></li>
+        <li value="I GIVE UP"><srai>20Q GIVE UP</srai></li>
+        <li value="I GIVE IN"><srai>20Q GIVE UP</srai></li>
+        <li value="I DO NOT KNOW"><srai>20Q GIVE UP</srai></li>
+        <li value="WHAT IS IT"><srai>20Q GIVE UP</srai></li>
+        <li>That's not a "yes" or "no" question. I can only answer yes or no to your questions. Ask me another question or say "I GIVE UP". If you want to guess what it is, say "IS IT A" and then your guess.<think><set name="topic">20Q</set></think></li>
+    </condition>
 </template>
 </category>
 </topic>
@@ -251,12 +252,12 @@ Ok, the object I am thinking of is classed as <get name="20qcategory"/>. Please 
 <category>
 <pattern>20Q RANDOM</pattern>
 <template>
-	<condition name="qsubject"> 
-		<li value="NO SUBJECT"><random><li>Yes.</li><li>No.</li></random></li>
-		<li><random><li>Yes.</li><li>No.</li><li>Yes it<get name="qsubject"/>.</li><li>No it<get name="qsubject"/>not.</li></random></li>
-	</condition>
+    <condition name="qsubject"> 
+        <li value="NO SUBJECT"><random><li>Yes.</li><li>No.</li></random></li>
+        <li><random><li>Yes.</li><li>No.</li><li>Yes it<get name="qsubject"/>.</li><li>No it<get name="qsubject"/>not.</li></random></li>
+    </condition>
 
-
+<br/><br/>
 <condition name="qnum">
 <li value="1">What is your second question?</li>
 <li value="2">What is your third question?</li>
@@ -283,7 +284,7 @@ Ok, the object I am thinking of is classed as <get name="20qcategory"/>. Please 
 <set name="topic">20Q</set>
 </think>
 <condition name="qnum">
-	<li value="FINISHED"><think><set name="topic"></set></think><srai>ALL 20Q ASKED</srai></li>
+    <li value="FINISHED"><think><set name="topic"></set></think><srai>ALL 20Q ASKED</srai></li>
 </condition>
 </template>
 </category>
@@ -331,4 +332,5 @@ You give up? I was thinking of <get name="20qanswer"/>!
 Sorry, you have asked 20 questions. I was thinking of <get name="20qanswer"/>!
 </template>
 </category>
+
 </aiml>

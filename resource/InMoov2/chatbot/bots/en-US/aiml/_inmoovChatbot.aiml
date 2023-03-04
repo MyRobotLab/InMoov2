@@ -263,7 +263,7 @@
     </template>
 </category>
 <category><pattern>GO TO SLEEP</pattern>
-<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
+<template>okay<oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
 </category>
 <category><pattern>DISABLE</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>disable()</param></mrl></oob></template>
