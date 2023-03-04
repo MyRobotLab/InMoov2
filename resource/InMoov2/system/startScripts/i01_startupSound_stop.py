@@ -4,7 +4,6 @@ file = open(configFilename, "r")
 
 # read the file
 text = file.read()
-print("false")
 # search & replace the word
 replaced_text = text.replace("startupSound=True", "startupSound=False")
 

@@ -1,10 +1,8 @@
 configFilename="data/InMoov2/i01.life.yml"
 # open the file
 file = open(configFilename, "r")
-
 # read the file
 text = file.read()
-print("false")
 # search & replace the word
 replaced_text = text.replace("faceRecognizerActivated=True", "faceRecognizerActivated=False")
 
