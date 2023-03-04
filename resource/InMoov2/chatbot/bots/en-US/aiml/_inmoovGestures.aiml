@@ -1108,6 +1108,9 @@
           </mrl>
         </oob></template>
 </category>
+<category><pattern>MEMORIZE THIS PERSON</pattern>
+<template><srai>MEMORISE THIS PERSON</srai></template>
+</category>          
 <category><pattern>MEMORISE THIS PERSON</pattern>
 <template>Okay, what name should I memorise for this person.
     <think>
