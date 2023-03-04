@@ -42,7 +42,7 @@ def saveConfig(configFilename):
     "\n"
     "[AUDIO]\n"
     "startupSound=True\n"
-    "customSound=True\n"
+    "customSound=False\n"
     "audioSignalProcessing=False\n"
     "analogPinFromSoundCard=53\n"
     "howManyPollsBySecond=2\n"
