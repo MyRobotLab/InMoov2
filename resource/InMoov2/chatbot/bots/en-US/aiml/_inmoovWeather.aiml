@@ -149,6 +149,6 @@ period;
                 <li>Temperature is, </li>
                 <li>The thermometer shows, </li>
                 </random>
-                <star index="1"/> degrees.</template>
+                <star index="1"/> degrees</template>
 </category>
 </aiml>

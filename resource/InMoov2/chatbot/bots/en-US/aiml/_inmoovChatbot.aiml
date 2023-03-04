@@ -66,7 +66,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname","<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name","<get name="tmpname"/>"), i01_chatBot.setPredicate(u"default","lastUsername","<get name="tmpname"/>"), i01_chatBot.setPredicate(u"default","firstinit","ok"), i01_chatBot.savePredicates()</param>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername","u<get name="tmpname"/>"), i01_chatBot.setPredicate(u"Human","firstinit","ok"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>")</param>
           </mrl>
         </oob>
         </template>
@@ -171,10 +171,16 @@
             <li>Nice to meet you, <get name="tmpname"/>.</li>
         </random>
     <think>
-        <set name="name"><get name="tmpname"/></set>
         <set name="newinituser"></set>
         <set name="topic">changing user name</set>
     </think>
+    <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername","u<get name="tmpname"/>"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>")</param>
+          </mrl>
+        </oob>
 </template>
 </category></topic>
 
@@ -336,8 +342,5 @@
 </category>
 <category><pattern># YOUR ATTENTION</pattern>
 <template><srai>STOP YOUR GESTURE</srai></template>
-</category>
-	<category><pattern>NORESP</pattern>
-<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
 </category>
 </aiml>

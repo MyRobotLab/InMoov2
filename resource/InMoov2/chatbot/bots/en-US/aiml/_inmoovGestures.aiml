@@ -1109,19 +1109,14 @@
         </oob></template>
 </category>
 <category><pattern>MEMORISE THIS PERSON</pattern>
-<template>Okay
+<template>Okay, what name should I memorise for this person.
     <think>
         <set name="memoriseinit">started</set>
       </think>
       <think>
         <set name="topic">memoriseinit</set>
       </think>
-          <oob>
-           <mrl>
-             <service>python</service>
-                <method>exec</method><param>memorisePerson()</param>
-          </mrl>
-        </oob></template>
+          </template>
 </category>
 <topic name="MEMORISEINIT">
 <category><pattern>#</pattern><that># WHAT NAME SHOULD I MEMORISE #</that>
@@ -1144,7 +1139,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name","<get name="tmpname"/>"), i01_chatBot.savePredicates(), YesName(u"<get name="memorisename"/>")</param>                
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.savePredicates(), YesName(u"<get name="memorisename"/>")</param>                
             </mrl>
          </oob></template>
 </category></topic>
