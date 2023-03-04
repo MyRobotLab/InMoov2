@@ -4,7 +4,6 @@ file = open(configFilename, "r")
 
 # read the file
 text = file.read()
-print("false")
 # search & replace the word
 replaced_text = text.replace("healthCheckActivated=True", "healthCheckActivated=False")
 
@@ -12,3 +11,7 @@ replaced_text = text.replace("healthCheckActivated=True", "healthCheckActivated=
 file = open(configFilename, "w")
 file.write(replaced_text)
 file.close()
+
+#execfile('resource/InMoov2/life/0_inmoovLife.py')
+runtime.releaseService("healthCheck")
+

@@ -11,4 +11,6 @@ replaced_text = text.replace("pirEnableTracking=False", "pirEnableTracking=True"
 # save the file
 file = open(configFilename, "w")
 file.write(replaced_text)
-file.close()    
+file.close()
+
+execfile('resource/InMoov2/life/0_inmoovLife.py')

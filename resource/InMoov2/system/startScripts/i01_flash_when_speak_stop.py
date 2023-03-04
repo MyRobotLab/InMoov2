@@ -12,3 +12,5 @@ replaced_text = text.replace("flash_when_speak=True", "flash_when_speak=False")
 file = open(configFilename, "w")
 file.write(replaced_text)
 file.close()
+
+execfile('resource/InMoov2/life/0_inmoovLife.py')

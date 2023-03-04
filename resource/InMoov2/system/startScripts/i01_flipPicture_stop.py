@@ -12,3 +12,8 @@ replaced_text = text.replace("flipPicture=True", "flipPicture=False")
 file = open(configFilename, "w")
 file.write(replaced_text)
 file.close()
+
+execfile('resource/InMoov2/life/0_inmoovLife.py')
+
+if runtime.isStarted('i01.opencv'):
+  if flipPicture==0:i01_opencv.removeFilter("Flip")
