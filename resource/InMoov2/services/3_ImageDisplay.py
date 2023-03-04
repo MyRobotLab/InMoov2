@@ -6,8 +6,12 @@
 # MRL SERVICE CALL
 # ##############################################################################
 
-i01_imageDisplay = runtime.start("i01.imageDisplay","ImageDisplay")
-
 def display(pic):
-  i01_imageDisplay.closeAll()
-  r=i01_imageDisplay.displayFullScreen(pic)
+  if runtime.isStarted('i01.imageDisplay'):
+    i01_imageDisplay.closeAll()
+    r=i01_imageDisplay.displayFullScreen(pic)
+  else:
+    errorSpokenFunc("ALERT",", imageDisplay not started")
+    if error_red==1:
+      if runtime.isStarted('i01.neopixel'):
+        i01.setNeopixelAnimation("Flash Random", 255, 0, 0, 5)

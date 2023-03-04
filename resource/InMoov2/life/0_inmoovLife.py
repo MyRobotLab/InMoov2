@@ -1,36 +1,40 @@
-# ##############################################################################
-#            *** INMOOV LIFE ***
-# ##############################################################################
 
+ThisServicePart = 'data/InMoov2/i01.life.yml'
 
+def CheckFileExist(File):
+  if not os.path.isfile(File):
+    execfile('resource/InMoov2/system/startScripts/i01_life_config.py')
+    i01.info("config file created : data/InMoov2/i01.life.yml")
 
-  
-# ##############################################################################
-#               PERSONNAL PARAMETERS
-# ##############################################################################  
+CheckFileExist(ThisServicePart)
+ThisServicePartConfig = ConfigParser.ConfigParser()
+ThisServicePartConfig.read(ThisServicePart)
 
-#read current skeleton part config
-inmoovLifeConfigFile=RuningFolder+'config/InMoovLife'
+healthCheckActivated=ThisServicePartConfig.getboolean('HEALTHCHECK', 'healthCheckActivated')
+timerValue=ThisServicePartConfig.getint('HEALTHCHECK', 'timerValue')
+batteryInSystem=ThisServicePartConfig.getboolean('HEALTHCHECK', 'batteryInSystem')
 
-CheckFileExist(inmoovLifeConfigFile)
-inmoovLifeConfig = ConfigParser.ConfigParser()
-inmoovLifeConfig.read(inmoovLifeConfigFile+'.config')
+robotCanMoveHeadWhileSpeaking=ThisServicePartConfig.getboolean('MOVEHEADRANDOM', 'robotCanMoveHeadWhileSpeaking')
+forceMicroOnIfSleeping=ThisServicePartConfig.getboolean('MOVEHEADRANDOM', 'forceMicroOnIfSleeping')
 
-HealthCheckActivated=inmoovLifeConfig.getboolean('HEALTHCHECK', 'Activated')
-HealthCheckTimerValue=inmoovLifeConfig.getint('HEALTHCHECK', 'TimerValue')
-BatteryInSystem=inmoovLifeConfig.getboolean('HEALTHCHECK', 'BatteryInSystem')
+unlockInsult=unicode(ThisServicePartConfig.get('WAKE', 'unlockInsult'),'utf-8')
 
-RobotCanMoveHeadWhileSpeaking=inmoovLifeConfig.getboolean('MOVEHEADRANDOM', 'RobotCanMoveHeadWhileSpeaking')
-try:
-  SleepTimeout=inmoovLifeConfig.getint('SLEEPMODE', 'SleepTimeout')
-except:
-  inmoovLifeConfig.set('SLEEPMODE', 'SleepTimeout', '300000')
-  inmoovLifeConfig.set('SLEEPMODE', 'TrackingTimeout', '60000')
-  inmoovLifeConfig.set('SLEEPMODE', 'UsePirToActivateTracking', True)
-  with open(inmoovLifeConfigFile+'.config', 'wb') as f:
-    inmoovLifeConfig.write(f)
-  inmoovLifeConfig.read(inmoovLifeConfigFile+'.config')
-  pass
-SleepTimeout=inmoovLifeConfig.getint('SLEEPMODE', 'SleepTimeout')
-TrackingTimeout=inmoovLifeConfig.getint('SLEEPMODE', 'TrackingTimeout')
-UsePirToActivateTracking=inmoovLifeConfig.getboolean('SLEEPMODE', 'UsePirToActivateTracking')
+pirWakeUp=ThisServicePartConfig.getboolean('SLEEPMODE', 'pirWakeUp')
+pirEnableTracking=ThisServicePartConfig.getboolean('SLEEPMODE', 'pirEnableTracking')
+sleepTimeout=ThisServicePartConfig.getint('SLEEPMODE', 'sleepTimeout')
+trackingTimeout=ThisServicePartConfig.getint('SLEEPMODE', 'trackingTimeout')
+
+startupSound=ThisServicePartConfig.getboolean('AUDIO', 'startupSound')
+customSound=ThisServicePartConfig.getboolean('AUDIO', 'customSound')
+audioSignalProcessing=ThisServicePartConfig.getboolean('AUDIO', 'audioSignalProcessing')
+analogPinFromSoundCard=ThisServicePartConfig.getint('AUDIO', 'analogPinFromSoundCard')
+howManyPollsBySecond=ThisServicePartConfig.getint('AUDIO', 'howManyPollsBySecond')
+
+boot_green=ThisServicePartConfig.getboolean('NEOPIXEL', 'boot_green')
+download_blue=ThisServicePartConfig.getboolean('NEOPIXEL', 'download_blue')
+error_red=ThisServicePartConfig.getboolean('NEOPIXEL', 'error_red')
+flash_when_speak=ThisServicePartConfig.getboolean('NEOPIXEL', 'flash_when_speak')
+
+flipPicture=ThisServicePartConfig.getboolean('OPENCV', 'flipPicture')
+faceRecognizerActivated=ThisServicePartConfig.getboolean('OPENCV', 'faceRecognizerActivated')
+

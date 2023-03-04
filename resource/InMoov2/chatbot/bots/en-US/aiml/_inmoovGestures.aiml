@@ -252,13 +252,13 @@
 <category><pattern>DAVINCI</pattern>
 <template><srai>DA VINCI</srai></template>
 </category>
-<category><pattern>MANUAL</pattern>
-<template>Okay I don't listen anymore, to unlock me you need to say the custom keyword that is <get name="MagicCommandToWakeUp"/>.
-        <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method><param><get name="MagicCommandToWakeUp"/></param></mrl></oob></template>
+<category><pattern>WAKE WORD *</pattern>
+<template><think><set name="wakeWord"><star/></set></think>Okay I don't listen anymore, to unlock me you need to say the custom wakeword that is <star/>.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_ear.setWakeWord('<star/>'), i01_ear.setAwake(False)</param></mrl></oob></template>
 </category>
 <category><pattern>VOICE CONTROL</pattern>
 <template>I'm listening.
-        <oob><mrl><service>i01.ear</service><method>clearLock</method></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>i01_ear.setAwake(True)</param></mrl></oob></template>
 </category>
 <category><pattern>STOP LISTENING</pattern>
 <template>I'm not going to listen to you.
@@ -1108,24 +1108,19 @@
           </mrl>
         </oob></template>
 </category>
-<category><pattern>MEMORIZE THIS PERSON</pattern>
-<template>Okay
+<category><pattern>MEMORISE THIS PERSON</pattern>
+<template>Okay, what name should I memorise for this person.
     <think>
-        <set name="memorizeinit">started</set>
+        <set name="memoriseinit">started</set>
       </think>
       <think>
-        <set name="topic">memorizeinit</set>
+        <set name="topic">memoriseinit</set>
       </think>
-          <oob>
-           <mrl>
-             <service>python</service>
-                <method>exec</method><param>memorizePerson()</param>
-          </mrl>
-        </oob></template>
+          </template>
 </category>
-<topic name="MEMORIZEINIT">
-<category><pattern>#</pattern><that># WHAT NAME SHOULD I MEMORIZE #</that>
-<template><set name="memorizenameinit">is <star/> the name you want to memorize , say yes or no</set>
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># WHAT NAME SHOULD I MEMORISE #</that>
+<template><set name="memorisenameinit">is <star/> the name you want to memorise , say yes or no</set>
        <think>
           <set name="tmpname">
             <star/>
@@ -1133,30 +1128,30 @@
         </think></template>
 </category></topic>
 
-<topic name="MEMORIZEINIT">
-<category><pattern># YES #</pattern><that># THE NAME YOU WANT TO MEMORIZE #</that>
+<topic name="MEMORISEINIT">
+<category><pattern># YES #</pattern><that># THE NAME YOU WANT TO MEMORISE #</that>
 <template>Okay I will set <get name="tmpname"> as name.</get>
     <think>
-        <set name="memorizename"><get name="tmpname"/>
+        <set name="memorisename"><get name="tmpname"/>
         </set>
     </think>
         <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<get name="memorizename"/>"),YesName(u"<get name="memorizename"/>")</param>                
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.savePredicates(), YesName(u"<get name="memorisename"/>")</param>                
             </mrl>
          </oob></template>
 </category></topic>
 
-<topic name="MEMORIZEINIT">
-<category><pattern># NO #</pattern><that># THE NAME YOU WANT TO MEMORIZE #</that>
+<topic name="MEMORISEINIT">
+<category><pattern># NO #</pattern><that># THE NAME YOU WANT TO MEMORISE #</that>
 <template>Okay can you repeat the name.</template>
 </category></topic>
 
-<topic name="MEMORIZEINIT">
+<topic name="MEMORISEINIT">
 <category><pattern>#</pattern><that># OKAY CAN YOU REPEAT THE NAME #</that>
-<template><set name="memorizenameinit">is <star/> the name you want to memorize , say yes or no</set>
+<template><set name="memorisenameinit">is <star/> the name you want to memorise , say yes or no</set>
        <think>
           <set name="tmpname">
             <star/>
@@ -1164,11 +1159,16 @@
         </think></template>
 </category></topic>
 
-<topic name="MEMORIZEINIT">
+<topic name="MEMORISEINIT">
 <category><pattern>#</pattern><that># SAY YES OR NO #</that>
 <template>Can you answer, it is necessary
-        <get name="memorizenameinit"/></template>
+        <get name="memorisenameinit"/></template>
 </category></topic>
+
+<category><pattern>WHO IS THIS PERSON</pattern>
+<template>Let me check
+          <oob><mrl><service>python</service><method>exec</method><param>whoisthis()</param></mrl></oob></template>
+</category>
 
 <category><pattern># FOR TRAVELLING</pattern>
 <template>Okay I get ready for travelling

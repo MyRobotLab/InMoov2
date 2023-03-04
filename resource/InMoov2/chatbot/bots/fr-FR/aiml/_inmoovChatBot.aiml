@@ -82,7 +82,7 @@
   <li>Après ces présentations,</li>
   </random>
         <think>
-          <set name="name"><get name="tmpname" /></set>
+          <set name="name"><get name="tmpname"/></set>
           <set name="firstinit">ok</set>
           <set name="topic">default</set>
         </think>
@@ -90,7 +90,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname","<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name","<get name="tmpname"/>"), i01_chatBot.setPredicate(u"default","lastUsername","<get name="tmpname"/>"), i01_chatBot.setPredicate(u"default","firstinit","ok"), i01_chatBot.savePredicates()</param>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname","u<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name","u<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername","<get name="tmpname"/>"), i01_chatBot.setPredicate(u"Friend","firstinit","ok"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>")</param>
           </mrl>
         </oob>
         <srai>WAKE_UP</srai>
@@ -204,6 +204,13 @@
         <set name="newinituser"></set>
         <set name="topic">changement de nom</set>
     </think>
+    <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>")</param>
+            </mrl>
+         </oob>
 </template>
 </category></topic>
 
@@ -376,7 +383,7 @@
   </category>
   <category>
     <pattern>QUEL EST LE SUJET</pattern>
-    <template>LE SUJET EST <get name="topic" /></template>
+    <template>Le sujet est <get name="topic" /></template>
   </category>
   <category><pattern>REDÉMARRE LA SESSION</pattern>
     <template>Je redémarre la session.

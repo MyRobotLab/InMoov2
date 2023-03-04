@@ -3,7 +3,7 @@
 <!-- File: _inmoovWeather.aiml -->
 <!--  -->
 <category><pattern># FORECAST</pattern>
-<template><oob>
+<template>.<oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
@@ -15,7 +15,7 @@
 <template><srai># forecast</srai></template>
 </category>
 <category><pattern># FORECAST # $TOMORROW</pattern>
-<template><oob>
+<template>.<oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
@@ -24,7 +24,7 @@
       </oob></template>
 </category>
 <category><pattern># FORECAST # IN * $DAYS</pattern>
-<template><think><set name="nbdays"><map name="name2number"><star index="3"/></map></set></think>
+<template>.<think><set name="nbdays"><map name="name2number"><star index="3"/></map></set></think>
         <condition>
             <li name="nbdays" value="unknown"><think><set name="nbdays"><star index="3"/></set></think></li>
         </condition>
@@ -40,7 +40,7 @@ period;
       </oob></template>
 </category>
 <category><pattern># FORECAST $IN * $IN * $DAYS</pattern>
-<template><think><set name="nbdays"><map name="name2number"><star index="3"/></map></set></think>
+<template>.<think><set name="nbdays"><map name="name2number"><star index="3"/></map></set></think>
         <condition>
             <li name="nbdays" value="unknown"><think><set name="nbdays"><star index="3"/></set></think></li>
         </condition>
@@ -56,11 +56,11 @@ period;
       </oob></template>
 </category>
 <category><pattern># FORECAST $IN *</pattern>
-<template><oob>
+<template>.<oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
-          <param>isTheSunShiny("<star index="2"/>")</param>
+          <param>isTheSunShiny("<star index="2" />",1)</param>
         </mrl>
       </oob></template>
 </category>
@@ -150,8 +150,5 @@ period;
                 <li>The thermometer shows, </li>
                 </random>
                 <star index="1"/> degrees</template>
-</category>
-<category><pattern>SYSTEM OPENWEATHERMAPERROR</pattern>
-<template>open weathermap a.p.i. error, or maybe this town is unrecognized.</template>
 </category>
 </aiml>
