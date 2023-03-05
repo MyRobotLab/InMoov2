@@ -90,7 +90,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname","u<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name","u<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername","<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>")</param>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate("human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate("human","firstinit","ok"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>")</param>
           </mrl>
         </oob>
         <srai>WAKE_UP</srai>
@@ -296,19 +296,20 @@
       </template>
     </category>
   </topic>
-  <category>
+  
+<category>
     <pattern>EXTINCTION</pattern>
     <template>
       <think>
         <set name="topic">SHUT_DOWN</set>
       </think>
-      Veux-tu oui ou non que je me mette hors tension
+      Veux-tu oui ou non que je ferme mon logiciel
     </template>
   </category>
   <topic name="SHUT_DOWN">
     <category>
       <pattern># OUI #</pattern>
-      <that># ME METTE HORS TENSION #</that>
+      <that># QUE JE FERME MON LOGICIEL #</that>
       <template>
         <think>
           <set name="topic">default</set>
@@ -324,13 +325,13 @@
     </category>
     <category>
       <pattern># NON #</pattern>
-      <that># ME METTE HORS TENSION #</that>
+      <that># QUE JE FERME MON LOGICIEL #</that>
       <template>Annulation de l'arrêt du système. 
       <think><set name="topic">default</set></think></template>
     </category>  
     <category>
       <pattern>#</pattern>
-      <that># ME METTE HORS TENSION #</that>
+      <that># QUE JE FERME MON LOGICIEL #</that>
       <template><think><set name="topic">default</set></think>
         <srai>EXTINCTION</srai>
       </template>
