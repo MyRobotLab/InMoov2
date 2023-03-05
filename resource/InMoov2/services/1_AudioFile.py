@@ -1,86 +1,71 @@
-# ##############################################################################
-#                 AUDIOFILE SERVICE
-# ##############################################################################
-# http://myrobotlab.org/service/audiofile
+#########################################
+# i01_audioPlayer.py
+# categories: inmoov2
+# more info @: http://myrobotlab.org/service/InMoov
+#########################################
 
-# ##############################################################################
-# MRL SERVICE CALL
-# ##############################################################################
-#read current service part config based on file name
-ThisServicePart='resource/InMoov2/config/service_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
-
-CheckFileExist(ThisServicePart)
-ThisServicePartConfig = ConfigParser.ConfigParser()
-ThisServicePartConfig.read(ThisServicePart+'.config')
-
-MyMusicPath=ThisServicePartConfig.get('AUDIO', 'MyMusicPath')
-
-#for noworky
-log.info("MyMusicPath : "+str(MyMusicPath))
-musicpath = MyMusicPath 
-import os
-
-#startup sound
 i01_audioPlayer = runtime.start("i01.audioPlayer", "AudioFile")
+audioPlayer=i01_audioPlayer
+musicpath = audioPlayer.getConfig().currentPlaylist
 #i01.startAudioPlayer()
 mouthControlAudiofile=True
 
-def onAudioStart(data):
-  try:
-    if ear.listening:
-      ear.setAutoListen(False)
-      ear.stopListening()
-  except:
-    pass
+# def onAudioStart(data):
+#   try:
+#     if i01_ear.listening:
+#       i01_ear.setAutoListen(False)
+#       i01_ear.stopListening()
+#   except:
+#     pass
   
-  if AudioSignalProcessing and runtime.isStarted('i01.head'):
-    print "onaudiostart"
-    try:
-      head.jaw.moveTo(180)
-      left.enablePin(AnalogPinFromSoundCard,HowManyPollsBySecond)
-    except:
-      print "onAudioStart error"
-      pass
+#   if AudioSignalProcessing and runtime.isStarted('i01.head'):
+#     print "onaudiostart"
+#     try:
+#       i01_head.jaw.moveTo(180)
+#       i01_left.enablePin(AnalogPinFromSoundCard,HowManyPollsBySecond)
+#     except:
+#       print "onAudioStart error"
+#       pass
       
-  try:
-    if runtime.isStarted('i01.mouthControl') and mouthControlAudiofile:i01_mouthControl.onStartSpeaking("This is a fake text, a long fake text, very long.")
-  except:
-    pass
+#   try:
+#     if runtime.isStarted('i01.mouthControl') and mouthControlAudiofile:i01_mouthControl.onStartSpeaking("This is a fake text, a long fake text, very long.")
+#   except:
+#     pass
     
 
-def onAudioEnd(data):
-  try:
-    if not ear.listening:
-      ear.setAutoListen(setAutoListen)
-      ear.startListening()
-  except:
-    print "onAudioEnd error"
-    pass
-  if AudioSignalProcessing and runtime.isStarted('i01.head'):
-    try:
-      left.disablePin(AnalogPinFromSoundCard)
-      #head.jaw.detach()
-    except:
-      print "onAudioEnd error"
-      pass
+# def onAudioEnd(data):
+#   try:
+#     if not i01_ear.listening:
+#       i01_ear.setAutoListen(True)
+#       i01_ear.startListening()
+#   except:
+#     print "onAudioEnd error"
+#     pass
+#   if AudioSignalProcessing and runtime.isStarted('i01.head'):
+#     try:
+#       i01_left.disablePin(AnalogPinFromSoundCard)
+#       i01_head_jaw.disable()
+#     except:
+#       print "onAudioEnd error"
+#       pass
       
-  try:
-    if runtime.isStarted('i01.mouthControl') and mouthControlAudiofile:i01_mouthControl.onEndSpeaking("This is a fake text, a long fake text, very long.")
-  except:
-    pass
+#   try:
+#     if runtime.isStarted('i01.mouthControl') and mouthControlAudiofile:i01_mouthControl.onEndSpeaking("This is a fake text, a long fake text, very long.")
+#   except:
+#     pass
   
 def AudioPlay(file):
   i01_audioPlayer.playFile(file,False)
       
 
 
-python.subscribe(i01_audioPlayer.getName(),"publishAudioStart")
-python.subscribe(i01_audioPlayer.getName(),"publishAudioEnd")
-if StartupSound:i01_audioPlayer.playFile(RuningFolder+'/system/sounds/startupsound.mp3', False)
+#python.subscribe(i01_audioPlayer.getName(),"publishAudioStart")
+#python.subscribe(i01_audioPlayer.getName(),"publishAudioEnd")
 sleep(2)
 
 global musiconoff
 global cpt
+global element
 musiconoff = 0
 cpt = 0
 
@@ -119,7 +104,7 @@ def playRandomMusic():
         i01_audioPlayer.playFile((matches[i]) , False)
         ear.startListening()
         sleep(1)
-        ear.setAutoListen(setAutoListen)
+        ear.setAutoListen(True)
        
 
 def playMusic():
@@ -131,7 +116,7 @@ def playMusic():
     sleep(3)
     #i01.speakBlocking("playing song" + str(song))
     i01_audioPlayer.playFile(musicpath + str(song) , False)
-    print("playing song:" + str(song))
+    i01.info("playing song:" + str(song))
     # Select one of the mp3 files from the list at random
     mp3 = random.choice(fileList(musicpath))
     print mp3
@@ -140,7 +125,7 @@ def playMusic():
     i01_audioPlayer.playFile((mp3) , False)
     ear.startListening()
     sleep(1)
-    ear.setAutoListen(setAutoListen)
+    ear.setAutoListen(True)
 
 
 # pause method 
@@ -174,7 +159,7 @@ def stopMusic():
                 sleep(0.2)
                 ear.startListening()
                 sleep(1)
-                ear.setAutoListen(setAutoListen)
+                ear.setAutoListen(True)
             cpt = 0
             musiconoff = 0
         
@@ -186,32 +171,26 @@ def nextMusic():
         sleep(1)
         ear.startListening()
         sleep(1)
-        ear.setAutoListen(setAutoListen)
-        
+        ear.setAutoListen(True)
+
 def searchPlay(song):
-    if runtime.isStarted('i01.audioPlayer'):
-        if os.path.exists('data/config/default/i01.audioPlayer.yml'):
-            i01.info(u"found config file")
-            f = open('data/config/default/i01.audioPlayer.yml', 'r')
-            liste = f.readlines()
-            #Remove the first 11 elements of the list
-            del liste[0:11]
-            i=0
-            flag =0
-            # iteration on the list with set up of the chaine
-            while i <= len(liste)-2 :  
-                var = "".join(liste[i][4:]).rstrip('\n')
-                #if " "+song+" " in (" " + var + " "):
-                if song.lower() in var :
-                    i01_audioPlayer.play(var)
-                    flag = 1
-                    print(var)
-                i=i+1
-            if flag == 0 :
-                i01.warn(u"I don't have this song in my list, or the file contains upper case.")
-            f.close()
-        else:
-            i01.warn(u"I do not have a default playlist in my configuration.")
-            print("ko")
-    else:
-        i01.warn(u"The audioPlayer service is not started.")        
+    global musiconoff
+    f = open(musicpath, 'r')
+    liste = f.readlines()
+    #Remove the first 11 elements of the list
+    del liste[0:11]
+    i=0
+    flag =0
+    # iteration on the list with set up of the chaine
+    while i <= len(liste)-2 :  
+        var = "".join(liste[i][4:]).rstrip('\n')
+        #if " "+song+" " in (" " + var + " "):
+        #if song.lower() in var :
+        if song in var :    
+            i01_audioPlayer.play(var)
+            flag = 1
+            print(var)
+        i=i+1
+    if flag == 0 :
+        i01.warn(u"I don't have this song in my list, or the file contains upper case.")
+    f.close()
