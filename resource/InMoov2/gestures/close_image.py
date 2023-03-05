@@ -1,3 +1,6 @@
 def close_image():
-  i01_imageDisplay.closeAll()
-  i01.finishedGesture()
+  if runtime.isStarted('i01.imageDisplay'):
+    i01_imageDisplay.closeAll()
+    i01.finishedGesture()
+  else:
+    errorSpokenFunc("ALERT",", imageDisplay not started")

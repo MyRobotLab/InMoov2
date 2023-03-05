@@ -972,12 +972,12 @@
     <pattern>* PENDANT UN MOMES</pattern>
     <template>Pendant combien de temps? <sr /></template>
   </category>
-  <category>
+  <!--<category>
     <pattern>* PERSONNE</pattern>
     <template>
       <srai>QUI EST <star /> PERSONNE</srai>
     </template>
-  </category>
+  </category>-->
   <category>
     <pattern>* PETITE AMIE</pattern>
     <template>

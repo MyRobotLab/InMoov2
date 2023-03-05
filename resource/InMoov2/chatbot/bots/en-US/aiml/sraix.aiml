@@ -171,7 +171,7 @@
 </category>
 <category><pattern>SRAIXFAILED *</pattern>
 <template>.<condition name="gpt3">
-        <li value="enabled">
+        <li value="enabled"><img src="../Gpt3.png"/>
         <oob>
           <mrl>
             <service>python</service>

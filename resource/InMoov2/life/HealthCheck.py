@@ -6,34 +6,35 @@
 # Timer function to autostart webkit microphone every 10seconds
 # only if robot not actualy speaking
 ###############################################################################
-if HealthCheckActivated==1:
-  HealthCheck = runtime.start("HealthCheck","Clock")
-  HealthCheck.setInterval(60000)
-  if BatteryInSystem==1:
+if healthCheckActivated==1:
+#if i01_fsm.getCurrentState()=="systemCheck":
+  healthCheck = runtime.start("healthCheck","Clock")
+  healthCheck.setInterval(60000)
+  if batteryInSystem==1:
     batterieLevel=100
     errorBat=1
     try:
-      if Runtime.getBatteryLevel():
-        batterieLevel = Runtime.getBatteryLevel()
+      if runtime.getBatteryLevel():
+        batterieLevel = runtime.getBatteryLevel()
         print "battery :",batterieLevel
         errorBat=0
     except:
       pass
-    HealthCheck.addListener("pulse", python.name, "HealthCheck_def")    
-    HealthCheck.startClock()
+    healthCheck.addListener("pulse", python.name, "healthCheck_def")    
+    healthCheck.startClock()
 
 
-def HealthCheck_def(timedata):
+def healthCheck_def(timedata):
   global batterieLevel
 
   if not errorBat:
-    if Runtime.getBatteryLevel():batterieLevel = Runtime.getBatteryLevel()
+    if runtime.getBatteryLevel():batterieLevel = runtime.getBatteryLevel()
   i01.setBatteryLevel(int(batterieLevel))
   print "battery :",batterieLevel
   
-  if RobotIsErrorMode==1:
-    if error_red:
+  if robotIsErrorMode==1:
+    if error_red==1:
       if runtime.isStarted('i01.neopixel'):
         i01.setNeopixelAnimation("Flash Random", 255, 0, 0, 5)
       
-  else:HealthCheck.stopClock()
+  else:healthCheck.stopClock()

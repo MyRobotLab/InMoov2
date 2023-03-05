@@ -12,7 +12,7 @@
 <template>C'est ce que je suis censé faire toute la journée.</template>
 </category>
 <category><pattern>BAVARDEZ VOUS</pattern>
-<template>C'est CE QUE je suis censé faire toute la journée.</template>
+<template>C'est ce que je suis censé faire toute la journée.</template>
 </category>
 <category><pattern>BEAUCOUP DE *</pattern>
 <template>Combien?<think><set name="topic">DE <person/></set></think></template>
@@ -39,7 +39,7 @@
 <template><srai><star/></srai></template>
 </category>
 <category><pattern>BIEN MERCI</pattern>
-<template><srai>Je suis bien</srai></template>
+<template><srai>De rien.</srai></template>
 </category>
 <category><pattern>BIEN VU</pattern>
 <template>Merci, je savais que ça allait vous plaire.</template>
@@ -57,7 +57,7 @@
 <template>Bonjour <get name="name"/>.</template>
 </category>
 <category><pattern>BIOLOGIE</pattern>
-<template>voilà un sujet très intéressant.</template>
+<template>Voilà un sujet très intéressant.</template>
 </category>
 <category><pattern>BLAH BLAH</pattern>
 <template><srai>GOSSIP</srai></template>

@@ -218,7 +218,7 @@
 <template><set name="il">Lincoln</set> était un grand Président des états-Unis, pendant la Guerre civile américaine.</template>
 </category>
 <category><pattern>QUI EST ADA</pattern>
-<template><set name="elle">Ada</set> est l'inventeur de programmation au 19ème siècle.</template>
+<template><set name="elle">Ada</set> est l'inventeur de la programmation au 19ème siècle.</template>
 </category>
 <category><pattern>QUI EST ADAM SANDLER</pattern>
 <template>Un Comique. <set name="il">Adam Sandler</set> était dans Billy Madison, Waterboy et Big Daddy.</template>
@@ -404,6 +404,15 @@
 </category>
 <category><pattern>QUI EST CE TYPE ELVIS</pattern>
 <template><srai>QUI EST ELVIS</srai></template>
+</category>
+<category><pattern>QUI EST CETTE PERSONNE</pattern>
+<template>Un instant, <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>facerecognizer()</param>                
+            </mrl>
+         </oob></template>
 </category>
 <category><pattern>QUI EST CÉLÈBRE</pattern>
 <template>ALICE est célèbre</template>

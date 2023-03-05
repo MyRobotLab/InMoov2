@@ -2,57 +2,40 @@
 #            *** PIR SENSOR ***
 # ##############################################################################
 
-# exemple after 5 minutes of inactivity we call the function sleepModeSleep()
-# and if human is detected and if the robot sleeping we call sleepModeWakeUp()
-
 
 # ##############################################################################
-#               PERSONNAL PARAMETERS
-# ##############################################################################  
-  
-#read current service part config based on file name
-ThisServicePart=RuningFolder+'config/service_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
-
-CheckFileExist(ThisServicePart)
-ThisServicePartConfig = ConfigParser.ConfigParser()
-ThisServicePartConfig.read(ThisServicePart+'.config')
-isPirActivated=0
-
-isPirActivated=ThisServicePartConfig.getboolean('MAIN', 'isPirActivated') 
-PirPin=ThisServicePartConfig.getint('MAIN', 'pirPin') 
-if ScriptType=="Virtual":pirPin=2
-pirArduino=ThisServicePartConfig.get('MAIN', 'pirControlerArduino')
-PlayCustomSoundIfDetection=ThisServicePartConfig.getboolean('MAIN', 'PlayCustomSoundIfDetection')
-
+#                 SET SERVICE
 # ##############################################################################
-#                 SERVICE START
-# ##############################################################################
-#pir timer to avoid human detection notification every seconds...
 
+publishPin=0
 
 #analog pin listener read the pir
 def publishPinPir(pins):
+  publishPin=1
+  if runtime.isStarted("i01.pir"):
+    pir=i01_pir
+    pirPin=pir.getConfig().pin
+    pirControlerArduino=pir.getConfig().controller
+  else:
+    i01.speakBlocking(i01.localize("PIRNOWORKY"))
+    errorSpokenFunc("ALERT",", p,i,r is not started")
+    if error_red==1:
+      if runtime.isStarted('i01.neopixel'):
+        i01.setNeopixelAnimation("Flash Random", 255, 0, 0, 5) 
   
 
   for pin in range(0, len(pins)):
     
     #human detected
     if pins[pin].value>0:
-      if not i01.RobotIsSleeping and i01.RobotIsStarted:
-        humanDetected()
+      #if not i01.RobotIsSleeping and i01.RobotIsStarted:
+      if runtime.isStarted('i01.fsm'):
+        if not i01_fsm.getCurrentState()=="sleeping" and i01_fsm.getCurrentState()=="awake" or "systemCheck": 
+          humanDetected()
       
       #wakeup action
-      if i01.RobotIsSleeping:
-        pirControlerArduino.disablePin(pirPin)
-        sleepModeWakeUp()
-
-
-if isPirActivated:
-  try:
-    pirControlerArduino=eval(pirArduino)
-    i01.speakBlocking(i01.localize("STARTINGPIR"))
-        
-  except:
-    errorSpokenFunc('BADRDUINOCHOOSEN','pir')
-    isPirActivated=0
-    pass
+      #if i01.RobotIsSleeping:
+      if runtime.isStarted('i01.fsm'):
+        if i01_fsm.getCurrentState()=="sleeping":
+          i01_pir.disablePin(pirPin)
+          sleepModeWakeUp()

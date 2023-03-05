@@ -1059,10 +1059,6 @@
         <li>Comment aurais-je pu avoir <set name="topic"><person /></set>?</li>
         <li>Je ne pense pas avoir <set name="topic"><person /></set>.</li>
       </random>
-      <think>
-      <set name="apprendre">oui
-        </set>
-      </think>
     </template>
   </category>
   <category>

@@ -18,21 +18,21 @@
   </category>
   
   <category>
-    <pattern># est ce # <set>weather</set> #</pattern>
+    <pattern># EST CE # <set>weather</set> #</pattern>
     <template>
       <srai>MÉTÉO</srai>
     </template>
   </category>
   
   <category>
-    <pattern># est ce # <set>weather</set> $DEMAIN</pattern>
+    <pattern># EST CE # <set>weather</set> $DEMAIN</pattern>
     <template>
       <srai>QUEL TEMPS # DEMAIN</srai>
     </template>
   </category>
   
   <category>
-  <pattern>^ va t il ^ <set>weather</set> ^</pattern>
+  <pattern>^ VA T IL ^ <set>weather</set> ^</pattern>
     <template>
       <srai>MÉTÉO</srai>
     </template>
@@ -142,13 +142,6 @@ period;
   </category>
   
   <category>
-    <pattern>SYSTEM openweathermapError</pattern>
-    <template>
-      Erreur de clé a.p.i. ou cette ville est inconnue
-    </template>
-  </category>
-  
-  <category>
     <pattern>SYSTEM METEO CURTEMPERATURE * TOWN * COMMENTAIRE *</pattern>
     <template>
       <think>
@@ -159,20 +152,13 @@ period;
       <random>
         <li>En cette belle journée à <star index="2" />,</li>
         <li>Concernant la météo de <star index="2" />,</li>
-        <li>Par rapport au temps de <star index="2" />,</li>
-        <li>Je ne me trompe presque jamais concernant la météo,</li>
+        <li>Le temps à <star index="2" />,</li>
         <li>Alors, à <star index="2" />,</li>
       </random>
-      <random>
-        <li>Je prédis,</li>
-        <li>Je remarque,</li>
-        <li>Je vois,</li>
-        <li>Si tu mets le nez dehors, tu trouvera,</li>
-      </random>
       <condition>
-        <li name="meteo" value="1000">Rien, car je ne peux pas consulter la météo, vérifie ma clé A. P. I. avant toute chose, ami humain.</li>
-        <li name="meteo" value="200">De l'Orage avec pluie légère.</li>
-        <li name="meteo" value="201">De l'Orage avec pluie.</li>
+        <li name="meteo" value="1000">rien, car je ne peux pas consulter la météo, vérifie ma clé A. P. I. avant toute chose, ami humain.</li>
+        <li name="meteo" value="200">de l'Orage avec pluie légère.</li>
+        <li name="meteo" value="201">de l'Orage avec pluie.</li>
         <li name="meteo" value="202">De l'Orage avec de fortes pluies.</li>
         <li name="meteo" value="210">De l'Orage léger.</li>
         <li name="meteo" value="211">De l'Orage.</li>
@@ -229,7 +215,7 @@ period;
             <li>du soleil, attention au p.l.a ça fond,</li>
             <li>du soleil, attention à l'a.b.s. ça jauni,</li>
           </random>
-</li>
+        </li>
         <li name="meteo" value="801">Quelques nuages.</li>
         <li name="meteo" value="802">des nuages ​​dispersés.</li>
         <li name="meteo" value="803">des nuages éparses.</li>
@@ -253,31 +239,18 @@ period;
         <li name="meteo" value="960">De l'Orage.</li>
         <li name="meteo" value="961">une violente tempête.</li>
         <li name="meteo" value="962">un ouragan, je ne rigole pas, reste à la maison.</li>
-        <li>Il fait actuelement <star index="1" /> degrés à <star index="2" /> ..</li>
+        <li>Il fait actuellement <star index="1" /> degrés à <star index="2" /> ..</li>
       </condition>
       <random>
         <li>Concernant la température,</li>
-        <li>Si je regarde mon thermomètre, oh ou il est encore. oups,</li>
+        <li>Mon thermomètre indique,</li>
         <li>D'après quelques données issues de senseurs thermiques,</li>
-        <li>Autre information,</li>
-        <li>J'alais oublier,</li>
-        <li>Si tu veux tout savoir,</li>
-      </random>
-      <random>
-        <li>je mesure,</li>
-        <li>le mercure indiquera,</li>
-        <li>au pif, je dirais,</li>
+        <li>Le mercure indique,</li>
+        <li>Au pif je dirais,</li>
       </random>
       <li>
         <star index="1" /> Degrés
-</li>
-      <random>
-        <li>Exactement!</li>
-        <li>Précisément.</li>
-        <li>A peu près.</li>
-        <li>A la louche.</li>
-        <li>Ou pas.</li>
-      </random>
+      </li>
     </template>
   </category>
   

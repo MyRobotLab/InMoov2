@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: oob.aiml -->
+<!--  -->
+<category><pattern>EFFACER LE JOURNAL</pattern>
+<template>Journal effacer. <oob><clear>log</clear></oob></template>
+</category>
+<category><pattern>LANCE RADIO FIP</pattern>
+<template>Ok je lance FIP radio.  
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>http://direct.fipradio.fr/live/fip-midfi.mp3</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>LANCE RADIO FRANCE INFO</pattern>
+<template>Ok je lance france info.  
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>http://direct.franceinfo.fr/live/franceinfo-midfi.mp3</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>LANCE RADIO FRANCE INTER</pattern>
+<template>Ok je lance France inter.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>http://direct.franceinter.fr/live/franceinter-midfi.mp3</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>LANCE RADIO FRANCE MUSIQUE</pattern>
+<template>Ok je lance France musique.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>http://chai5she.lb.vip.cdn.dvmr.fr/francemusiquelacontemporaine-hifi.mp3</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>LANCE RADIO RIRE ET CHANSONS</pattern>
+<template>Ok je lance rire et chanson.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>http://cdn.nrjaudio.fm/adwz1/fr/30407/mp3_128.mp3?origine=fluxradios</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>MONTRE MOI UNE VIDÉO DE *</pattern>
+<template>Je cherche des vidéos pour toi.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>http://www.youtube.com/embed?listType=search&amp;list=<star/></param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>MONTRE MOI UN SITE WEB SUR *</pattern>
+<template>Essayons une recherche Google.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/search?q=<star/></param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>JE VEUX ACHETER *</pattern>
+<template>Essayons de trouver un magasin sur la carte. 
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/maps/search/<star/></param>
+          </mrl>
+        </oob></template>
+</category>
+
+<category><pattern>GOOGLE</pattern>
+<template>J'ouvre la recherche Google.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>GOOGLE *</pattern>
+<template><oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/search?q=<star/></param>
+          </mrl>
+        </oob> 
+      J'ouvre votre navigateur et je recherche<star/>.</template>
+</category>
+<category><pattern>CHERCHE *</pattern>
+<template>Je vais essayer une recherche sur le Web pour<star/>.  <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/search?q=<star/></param>
+          </mrl>
+        </oob></template>
+</category>
+
+<category><pattern>TROUVER UN *</pattern>
+<template>Essayons de regarder sur la carte.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/maps/search/<star/></param>
+          </mrl>
+        </oob></template>
+</category>
+
+<category><pattern>TROUVER UN * DANS *</pattern>
+<template>Essayons de regarder sur la carte.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/maps/search/<star/>+<star index="2"/></param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>CHERCHE *</pattern>
+<template>Essayons une recherche Google.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/search?q=<star/></param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>CHERCHE LE * LE PLUS PROCHE </pattern>
+<template>je te montre <star/> sur la carte.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/maps/search/<star/></param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>CHERCHE LA * LA PLUS PROCHE</pattern>
+<template>J'en ai trouvé plusieurs près de chez toi.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/maps/search/<star/></param>
+          </mrl>
+        </oob></template>
+</category>
+
+<category><pattern>DIRECTION POUR *</pattern>
+<template>Voici les directions routières.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/maps/search/<star/></param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>DIRECTION DE * À * </pattern>
+<template>Voici la direction de <star/> à <star index="2"/>.  
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/maps/search/<star/>&amp;to&amp;<star index="2"/></param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>DIRECTIONS DE * À * PAR *</pattern>
+<template>Voici la directions de<star/> à <star index="2"/> par <star index="3"/>.  
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/maps/search/<star/>&amp;to&amp;<star index="2"/>&amp;by&amp;<star index="3"/></param>
+          </mrl>
+        </oob></template>
+</category>
+
+
+<category><pattern>OUVRE  *</pattern>
+<template>je n'ai pas trouvé <star/> parmi vos applications installées. Essayons de le chercher.
+        <think><set name="it"><star/></set></think>.  
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/search?q=<star/></param>
+          </mrl>
+        </oob></template>
+</category>
+
+<category><pattern>OUVRE * POINT FR</pattern>
+<template>J'ouvre le site <star/>.fr.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>http://<star/>.fr</param>
+          </mrl>
+        </oob></template>
+</category>
+
+<category><pattern>OÙ PUIS JE TROUVER UN *</pattern>
+<template>Je regarde sur la carte.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/maps/search/<star/></param>
+          </mrl>
+        </oob></template>
+</category>
+
+<category><pattern>GOOGLE MAP</pattern>
+<template>Ouverture de la carte Google.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/maps</param>
+          </mrl>
+        </oob></template>
+</category>
+
+<category><pattern>HOROSCOPE *</pattern>
+<template>Essayons une recherche de ton horoscope.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/search?q=HOROSCOPE <star/></param>
+          </mrl>
+        </oob></template>
+</category>
+
+<category><pattern>TWEET *</pattern>
+<template><oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://twitter.com/intent/tweet?source=webclient&amp;text=<star/></param>
+          </mrl>
+        </oob>Veuillez vérifier le message et appuyez sur Tweeter si vous êtes satisfait.</template>
+</category>
+
+<category><pattern>RESTAURANTS</pattern>
+<template>Je vais chercher sur la carte les restaurants près de chez toi.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/maps/search/RESTAURANTS</param>
+          </mrl>
+        </oob></template>
+</category>
+
+<category><pattern>QUELLE EST LA DISTANCE POUR *</pattern>
+<template>Regardons sur la carte.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/maps/search/&amp;to&amp;<star/></param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>OUVRE GOOGLE</pattern>
+<template>oké.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com</param>
+          </mrl>
+        </oob></template>
+</category>
+
+</aiml>

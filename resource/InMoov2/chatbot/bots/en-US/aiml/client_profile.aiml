@@ -602,7 +602,7 @@ I call you <get name="name"/>.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname","<star/>"), i01_chatBot.setPredicate(u"<star/>","firstname","<star/>"), i01_chatBot.setPredicate(u"<star/>","name","<star/>"), i01_chatBot.setPredicate(u"default","lastUsername","<star/>")</param>
+            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname","<star/>"), i01_chatBot.setPredicate(u"<star/>","firstname","<star/>"), i01_chatBot.setPredicate(u"<star/>","name","<star/>"), i01_chatBot.setPredicate(u"human","lastUsername","<star/>"), memorisePerson(u"<star/>")</param>
           </mrl>
         </oob></template>
 </category>
