@@ -10,18 +10,19 @@ def YesName(name):
       i01.cameraOn()
       i01_opencv.addFilter("FaceRecognizer")
       i01_opencv.setActiveFilter("FaceRecognizer")
+      if runtime.isStarted('i01.head'):
+          i01.setHeadSpeed(70, 70, 70)
+          i01.moveHead(90,90,20)
+          sleep(1.3)
+          i01.moveHead(90,90,170)
+          sleep(2)
+          i01.moveHead(90,90,90)
       # set the name on the filter that will be used for the saved examples
       fr = i01_opencv.getFilter("FaceRecognizer")
       fr.setTrainName(unicode(name,'utf-8'))
       #fr.setTrainName(name)
       # set the filter to be in training mode (Where it learns new images)
       fr.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
-      i01.setHeadSpeed(70, 70, 70)
-      i01.moveHead(90,90,20)
-      sleep(1.3)
-      i01.moveHead(90,90,170)
-      sleep(2)
-      i01.moveHead(90,90,90)
       # now that we have new examples, let's re-train the face recognizer with all our examples.
       fr.train()
       # after we've retrained the model.. start recognizing again
@@ -43,18 +44,19 @@ def memorisePerson(name):
         i01.cameraOn()
         i01_opencv.addFilter("FaceRecognizer")
         i01_opencv.setActiveFilter("FaceRecognizer")
+        if runtime.isStarted('i01.head'):
+          i01.setHeadSpeed(70, 70, 70)
+          i01.moveHead(90,90,20)
+          sleep(1.3)
+          i01.moveHead(90,90,170)
+          sleep(2)
+          i01.moveHead(90,90,90)
         # set the name on the filter that will be used for the saved examples
         fr = i01_opencv.getFilter("FaceRecognizer")
         fr.setTrainName(unicode(name,'utf-8'))
         #fr.setTrainName(name)
         # set the filter to be in training mode (Where it learns new images)
         fr.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
-        i01.setHeadSpeed(70, 70, 70)
-        i01.moveHead(90,90,20)
-        sleep(1.3)
-        i01.moveHead(90,90,170)
-        sleep(2)
-        i01.moveHead(90,90,90)
         # now that we have new examples, let's re-train the face recognizer with all our examples.
         fr.train()
         # after we've retrained the model.. start recognizing again
