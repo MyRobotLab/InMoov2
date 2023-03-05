@@ -36,7 +36,7 @@ execfile('resource/InMoov2/system/Errors.py'.encode('utf8'))
     #execfile('resource/InMoov2/services/'+filename.encode('utf8'))
     #if DEBUG==1:print filename
 #runtime.startConfig('InMoov2_Full')
-#execfile('resource/InMoov2/services/1_AudioFile.py')
+execfile('resource/InMoov2/services/1_AudioFile.py')
 execfile('resource/InMoov2/services/3_ImageDisplay.py')
 execfile('resource/InMoov2/services/4_Ear.py')
 #5_Mouth.py
