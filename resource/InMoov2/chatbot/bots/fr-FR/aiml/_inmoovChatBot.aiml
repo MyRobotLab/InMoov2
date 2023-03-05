@@ -337,6 +337,46 @@
     </category>
   </topic>
   
+  <pattern>EXTINCTION DE L ORDINATEUR</pattern>
+    <template>
+      <think>
+        <set name="topic">SHUT_DOWN_COMPLETE</set>
+      </think>
+      Veux-tu oui ou non que je mette mon ordinateur hors tension
+    </template>
+  </category>
+  <topic name="SHUT_DOWN_COMPLETE">
+    <category>
+      <pattern># OUI #</pattern>
+      <that># METTE MON ORDINATEUR HORS TENSION #</that>
+      <template>
+        <think>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>shutdownComplete()</param>
+          </mrl>
+        </oob>
+      </template>
+    </category>
+    <category>
+      <pattern># NON #</pattern>
+      <that># METTE MON ORDINATEUR HORS TENSION #</that>
+      <template>Annulation de l'arrêt de l'ordinateur. 
+      <think><set name="topic">default</set></think></template>
+    </category>  
+    <category>
+      <pattern>#</pattern>
+      <that># METTE MON ORDINATEUR HORS TENSION #</that>
+      <template><think><set name="topic">default</set></think>
+        <srai>EXTINCTION DE L ORDINATEUR</srai>
+      </template>
+    </category>
+  </topic>
+  
   <!-- end wakeup action -->
   
   <!-- random & to sort -->  
