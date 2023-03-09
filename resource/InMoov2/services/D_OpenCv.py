@@ -11,7 +11,7 @@
 if runtime.isStarted('i01.opencv'):
   opencv=i01_opencv
   opencv.getConfig()
-  if flipPicture==1:opencv.addPreFilter("Flip")
+  if flipPicture==1:opencv.addFilter("Flip")
   python.subscribe("i01.opencv", "publishRecognizedFace")
   
 
