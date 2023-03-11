@@ -1064,7 +1064,7 @@
 
 <topic name="MEMORISEINIT">
 <category><pattern># OUI #</pattern><that># LE NOM QUE TU SOUHAITES MÉMORISER #</that>
-<template>Oké je vais sauvegarder <get name="tmpname"> comme nom.</get>
+<template>Oké je vais sauvegarder <get name="tmpname"/> comme nom.
     <think>
         <set name="memorisename"><get name="tmpname"/>
         </set>
