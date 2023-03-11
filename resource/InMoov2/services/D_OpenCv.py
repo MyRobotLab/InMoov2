@@ -16,7 +16,7 @@ if runtime.isStarted('i01.opencv'):
   
 
 def onRecognizedFace(name):
-  print name
+  #print(name)
   # robot reaction if recognized face ( todo beter reaction... )
   if runtime.isStarted('i01.opencv'):
     if runtime.isStarted('i01.chatBot'):
