@@ -1,5 +1,5 @@
 #########################################
-# i01_audioPlayer.py
+# 1_AudioFile.py
 # categories: inmoov2
 # more info @: http://myrobotlab.org/service/InMoov
 #########################################
