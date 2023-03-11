@@ -54,7 +54,7 @@ execfile('resource/InMoov2/services/D_OpenCv.py')
 execfile('resource/InMoov2/services/H_OpenWeatherMap.py')
 #I_UltrasonicSensor.py
 #J_SensorFinger.py
-execfile('resource/InMoov2/services/K_FiniteStateMachine.py')
+#execfile('resource/InMoov2/services/K_FiniteStateMachine.py')
 
 ################################ 
 # INIT.6- inmoov loading
