@@ -16,13 +16,14 @@ if runtime.isStarted('i01.opencv'):
   
 
 def onRecognizedFace(name):
-  print name
+  #print(name)
   # robot reaction if recognized face ( todo beter reaction... )
   if runtime.isStarted('i01.opencv'):
     if runtime.isStarted('i01.chatBot'):
       i01_chatBot.startSession(unicode(name,'utf-8'))
       i01_opencv.disableFilter("FaceRecognizer")
       i01_chatBot.getResponse("SYSTEM_SAY_HELLO")
+      i01_opencv.removeFilter("FaceRecognizer")
   else:
     errorSpokenFunc("ALERT",", opencv is not started")
     if error_red==1:
