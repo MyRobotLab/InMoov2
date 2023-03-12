@@ -622,7 +622,7 @@ I call you <get name="name"/>.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname","<star/> <star index="2"/>"), i01_chatBot.setPredicate(u"<star/>","firstname","<star/>"), i01_chatBot.setPredicate(u"<star/>","lastname","<star index="2"/>"), i01_chatBot.setPredicate(u"<star/>","name","<star/> <star index="2"/>"), i01_chatBot.setPredicate(u"default","lastUsername","<star/>")</param>
+            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname",u"<star/>"), i01_chatBot.setPredicate(u"<star/>","firstname",u"<star/>"), i01_chatBot.setPredicate(u"<star/>","name",u"<star/>"), i01_chatBot.setPredicate(u"human","lastUsername","u<star/>"), YesName(u"<star/>")</param>
           </mrl>
         </oob></template>
 </category>
