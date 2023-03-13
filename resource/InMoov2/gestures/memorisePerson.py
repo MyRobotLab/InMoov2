@@ -3,8 +3,8 @@ from org.myrobotlab.opencv import OpenCVFilterFaceRecognizer
 def YesName(name):
   print "name confirmed:"
   print(name)
-  if runtime.isStarted('i01.neopixel'):
-    i01.setNeopixelAnimation("Color Wipe", 100, 5, 10, 15) 
+  if runtime.isStarted('i01.neoPixel'):
+    i01_neoPixel.setAnimation("Color Wipe", 100, 5, 10, 15) 
   if runtime.isStarted('i01.chatBot'):
     if runtime.isStarted('i01.opencv'):
       i01.cameraOn()
@@ -37,8 +37,8 @@ def YesName(name):
 def memorisePerson(name):
   if faceRecognizerActivated==1:
     print(name)
-    if runtime.isStarted('i01.neopixel'):
-      i01.setNeopixelAnimation("Color Wipe", 100, 5, 10, 15) 
+    if runtime.isStarted('i01.neoPixel'):
+      i01_neoPixel.setAnimation("Color Wipe", 100, 5, 10, 15) 
     if runtime.isStarted('i01.chatBot'):
       if runtime.isStarted('i01.opencv'):
         i01.cameraOn()
