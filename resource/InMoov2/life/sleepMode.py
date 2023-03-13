@@ -239,4 +239,3 @@ def trackingTimerRoutine(timedata):
       stopTrackHumans()
       trackingTimer.stopClock()
     if runtime.isStarted('i01.neoPixel'):i01_neoPixel.stopAnimation()
-
