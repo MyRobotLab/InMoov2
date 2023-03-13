@@ -1,8 +1,8 @@
 def gestureforlondon4():
-  if runtime.isStarted('i01.neopixel'):
-    i01.setNeopixelAnimation("Color Wipe", 0, 20, 0, 1)
+  if runtime.isStarted('i01.neoPixel'):
+    i01_neoPixel.setAnimation("Color Wipe", 0, 20, 0, 1)
     sleep(2)
-    i01.setNeopixelAnimation("Ironman", 0, 0, 255, 1)
+    i01_neoPixel.setAnimation("Ironman", 0, 0, 255, 1)
   #i01.startedGesture()
 #welcome  
   i01.setHandSpeed("left", 19, 19, 19, 19, 19, 19)
