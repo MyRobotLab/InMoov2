@@ -10,7 +10,7 @@ if startupSound==True:
     i01_audioPlayer.playFile('resource/InMoov2/system/sounds/startupsound.mp3', False)
 
 def initAudioPlayer():
-  musicPath = audioPlayer.getConfig()
+  musicPath = i01_audioPlayer.getConfig()
 
 def searchPlay(song):
     if runtime.isStarted('i01.chatBot'):
