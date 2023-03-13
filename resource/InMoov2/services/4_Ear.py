@@ -6,9 +6,17 @@
 # ##############################################################################
 #                SET SERVICE
 # ##############################################################################
-if runtime.isStarted('i01.ear'):
-  ear=i01_ear
-  lockPhrase=ear.getConfig().wakeWord
+
+def initEar():
+  i01_ear.getConfig()
+  lockPhrase = i01_ear.getConfig().wakeWord
+  i01_ear.setWakeWordTimeout(5000)
+  if lockPhrase==None:
+    i01_ear.setWakeWord('wake up')
+
+#if runtime.isStarted('i01.ear'):
+  #ear=i01_ear
+  #lockPhrase=ear.getConfig().wakeWord
   #unlockInsult="forgive me"
 #else:
   #i01_ear=runtime.start("i01.ear", "WebkitSpeechRecognition")
@@ -23,7 +31,7 @@ if runtime.isStarted('i01.ear'):
 
 global lastRecognized
 lastRecognized=""
-def onRecognized(text):
+def publishRecognized(text):
   if text!="":
     global lastRecognized
     lastRecognized=text

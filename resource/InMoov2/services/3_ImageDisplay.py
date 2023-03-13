@@ -13,5 +13,5 @@ def display(pic):
   else:
     errorSpokenFunc("ALERT",", imageDisplay not started")
     if error_red==1:
-      if runtime.isStarted('i01.neopixel'):
-        i01.setNeopixelAnimation("Flash Random", 255, 0, 0, 5)
+      if runtime.isStarted('i01.neoPixel'):
+        i01_neoPixel.setAnimation("Theater Chase", 255, 0, 0, 50)
