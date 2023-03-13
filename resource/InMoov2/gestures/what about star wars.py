@@ -1,8 +1,8 @@
 def whataboutstarwars():
-  if runtime.isStarted('i01.neopixel'):
-    i01.setNeopixelAnimation("Ironman", 255, 255, 255, 1)
+  if runtime.isStarted('i01.neoPixel'):
+    i01_neoPixel.setAnimation("Ironman", 255, 255, 255, 1)
     sleep(3)
-    i01.stopNeopixelAnimation()
+    i01_neoPixel.stopAnimation()
   #i01.startedGesture()
   x = (random.randint(1, 3))
   if x == 1:

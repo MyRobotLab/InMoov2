@@ -1,6 +1,6 @@
 def whoisthis():
-  if runtime.isStarted('i01.neopixel'):
-    i01.setNeopixelAnimation("Color Wipe", 100, 5, 10, 15) 
+  if runtime.isStarted('i01.neoPixel'):
+    i01_neoPixel.setAnimation("Color Wipe", 100, 5, 10, 15) 
   if runtime.isStarted('i01.chatBot'):
     if runtime.isStarted('i01.opencv'):
       if runtime.isStarted('i01.head'):

@@ -7,15 +7,19 @@
 
 if startupSound==True:
     i01_audioPlayer = runtime.start('i01.audioPlayer','AudioFile')
-    i01_audioPlayer.playFile('resource/InMoov2/system/sounds/startupsound.mp3', False)   
+    i01_audioPlayer.playFile('resource/InMoov2/system/sounds/startupsound.mp3', False)
+
+def initAudioPlayer():
+  musicPath = audioPlayer.getConfig()
 
 def searchPlay(song):
     if runtime.isStarted('i01.chatBot'):
         if runtime.isStarted('i01.audioPlayer'):
-            if os.path.exists('data/config/default/i01.audioPlayer.yml'):
+            initAudioPlayer()
+            if os.path.exists(musicPath):
                     global liste
                     global pointeur
-                    f = open('data/config/default/i01.audioPlayer.yml', 'r')
+                    f = open(musicPath, 'r')
                     liste = f.readlines()
                     #Remove the first 11 elements of the list
                     del liste[0:11]
@@ -42,10 +46,11 @@ def searchPlay(song):
             i01_AudioPlayer = runtime.start('i01.audioPlayer','AudioFile')
     else:
         i01.warn("i01.chatBot needs to be started")
-        
+
 def nextPlay():
     if runtime.isStarted('i01.chatBot'):
         if runtime.isStarted('i01.audioPlayer'):
+            initAudioPlayer()
             global pointeur 
             pointeur = pointeur + 1
             i01_audioPlayer.stop()
@@ -63,10 +68,11 @@ def nextPlay():
             i01_AudioPlayer = runtime.start('i01.audioPlayer','AudioFile')
     else:
         i01.warn("i01.chatBot needs to be started")
-   
+
 def previousPlay():
     if runtime.isStarted('i01.chatBot'):
         if runtime.isStarted('i01.audioPlayer'):
+            initAudioPlayer()
             global pointeur 
             pointeur = pointeur -1
             i01_audioPlayer.stop()
