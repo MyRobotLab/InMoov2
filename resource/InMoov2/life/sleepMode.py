@@ -40,9 +40,6 @@ def sleepModeWakeUp():
       
       #display(RuningFolder+'/system/pictures/loading_1024-600.jpg')
       
-      if customSound==1:
-        i01_audioPlayer=runtime.start('i01_audioPlayer','AudioFile')
-        i01_audioPlayer.playFile('resource/InMoov2/system/sounds/Notifications/'+random.choice(os.listdir('resource/InMoov2/system/sounds/Notifications')),False)
       if runtime.isStarted('i01.neoPixel'):
         i01_neoPixel.setAnimation("Larson Scanner", 255, 255, 0, 25)
         sleep(2)
@@ -63,7 +60,10 @@ def sleepModeWakeUp():
         else:
           welcomeMessage()
       else:
-        welcomeMessage()
+        if customSound==1:
+          i01_audioPlayer=runtime.start('i01_audioPlayer','AudioFile')
+          i01_audioPlayer.playFile('resource/InMoov2/system/sounds/Notifications/'+random.choice(os.listdir('resource/InMoov2/system/sounds/Notifications')),False)
+        else:welcomeMessage()
     else:
       welcomeMessage()
       #RobotIsSleeping=False
