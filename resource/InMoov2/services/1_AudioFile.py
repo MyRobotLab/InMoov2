@@ -11,6 +11,7 @@ if startupSound==True:
 
 def initAudioPlayer():
     global musicPath
+    global musicList
     audioPlayer = i01_audioPlayer
     musicPath = audioPlayer.getConfig().currentPlaylist
     musicList = 'data/config/default/i01.audioPlayer.yml'
@@ -43,7 +44,7 @@ def searchPlay(song):
     if runtime.isStarted('i01.chatBot'):
         if runtime.isStarted('i01.audioPlayer'):
             initAudioPlayer()
-            global musicPath
+            global musicList
             if os.path.exists(musicList):
                     global liste
                     global pointeur
