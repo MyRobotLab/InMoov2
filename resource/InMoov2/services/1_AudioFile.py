@@ -15,6 +15,24 @@ def initAudioPlayer():
     audioPlayer = i01_audioPlayer
     musicPath = audioPlayer.getConfig().currentPlaylist
     musicList = 'data/config/default/i01.audioPlayer.yml'
+    python.subscribe(audioPlayer.getName(),"publishAudioStart")
+    python.subscribe(audioPlayer.getName(),"publishAudioEnd")
+
+def onAudioStart(data):
+  try:
+    if i01_ear.listening:
+      i01_ear.stopListening()
+  except:
+      print "onAudioStart error"
+      pass
+    
+def onAudioEnd(data):
+  try:
+    if not i01_ear.listening:
+      i01_ear.startListening()
+  except:
+    print "onAudioEnd error"
+    pass    
 
 def playMusic():
     if runtime.isStarted('i01.chatBot'):
