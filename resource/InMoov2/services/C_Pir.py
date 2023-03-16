@@ -38,8 +38,5 @@ def publishSense(event):
         sleepModeWakeUp()
           
   else:
-    i01.speakBlocking(i01.localize("PIRNOWORKY"))
     errorSpokenFunc("ALERT",", p,i,r is not started")
-    if error_red==1:
-      if runtime.isStarted('i01.neoPixel'):
-        i01_neoPixel.setAnimation("Theater Chase", 255, 0, 0, 50)
+    

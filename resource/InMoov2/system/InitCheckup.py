@@ -39,7 +39,7 @@ execfile('resource/InMoov2/life/0_inmoovLife.py')
 execfile('resource/InMoov2/services/1_AudioFile.py')
 execfile('resource/InMoov2/services/3_ImageDisplay.py')
 execfile('resource/InMoov2/services/4_Ear.py')
-#5_Mouth.py
+execfile('resource/InMoov2/services/5_Mouth.py')
 #6_Arduino.py
 #7_Inmoov.py
 #8_NervoBoardRelay.py

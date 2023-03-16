@@ -16,26 +16,17 @@ def isTheSunShiny(townParam="town",period=1):
     if apikey==None:
       runtime.warn('open weathermap key error')
       errorSpokenFunc("ALERT",", open weathermap key error")
-      if error_red==1:
-        if runtime.isStarted('i01.neoPixel'):
-          i01_neoPixel.setAnimation("Theater Chase", 255, 0, 0, 50)
     else:
       openWeatherMap=i01_openWeatherMap
       town=openWeatherMap.getConfig().currentTown
       if town==None:
         runtime.warn('open weathermap town is unrecognized')
-        errorSpokenFunc("ALERT",", open weathermap town is unrecognized") 
-        if error_red==1:
-          if runtime.isStarted('i01.neoPixel'):
-            i01_neoPixel.setAnimation("Theater Chase", 255, 0, 0, 50)
+        errorSpokenFunc("ALERT",", open weathermap town is unrecognized")
       else:
         setUnits=openWeatherMap.getConfig().currentUnits
         if setUnits==None:
           runtime.warn('open weathermap units not defined')
           errorSpokenFunc("ALERT",", open weathermap units not defined") 
-          if error_red==1:
-            if runtime.isStarted('i01.neoPixel'):
-              i01_neoPixel.setAnimation("Theater Chase", 255, 0, 0, 50)
         else:
           if townParam=="town" or townParam=="":townParam=town  
           openWeatherMap.setUnits(setUnits)
@@ -45,8 +36,4 @@ def isTheSunShiny(townParam="town",period=1):
           rawCode=openWeatherMap.getWeatherCode()
           i01_chatBot.getResponse("SYSTEM METEO curtemperature " + str(int(curtemperature)) + " Town " + str(townParam.split(',')[0] + " COMMENTAIRE " + str(rawCode)))
   else:
-      i01_chatBot.getResponse("SYSTEM openweathermapNotStarted")
-      runtime.error("open weathermap not started or maybe not configured")
-      if error_red==1:
-          if runtime.isStarted('i01.neoPixel'):
-            i01_neoPixel.setAnimation("Theater Chase", 255, 0, 0, 50)
+      errorSpokenFunc("ALERT",", open weathermap not started or maybe not configured")

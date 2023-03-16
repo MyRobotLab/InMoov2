@@ -33,6 +33,3 @@ def onRecognizedFace(name):
       i01_chatBot.getResponse("SYSTEM_SAY_HELLO")
   else:
     errorSpokenFunc("ALERT",", opencv is not started")
-    if error_red==1:
-      if runtime.isStarted('i01.neoPixel'):
-        i01_neoPixel.setAnimation("Theater Chase", 255, 0, 0, 50)

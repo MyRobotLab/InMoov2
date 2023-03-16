@@ -184,7 +184,7 @@
 <category><pattern>YES</pattern><that>WOULD YOU LIKE TO SEND THIS FEATURE REQUEST *</that>
 <template><srai>SEND FEATURE REQUEST <get name="featurerequest"/></srai></template>
 </category>
-<category><pattern>DIRECTIONS TO *</pattern>
+<category><pattern># DIRECTIONS TO *</pattern>
 <template>Here are the driving directions.  <oob>
           <mrl>
             <service>webgui</service>
@@ -193,7 +193,7 @@
           </mrl>
         </oob></template>
 </category>
-<category><pattern>DIRECTIONS *</pattern>
+<category><pattern># DIRECTIONS *</pattern>
 <template>Here are the directions.  <oob>
           <mrl>
             <service>webgui</service>
@@ -202,7 +202,7 @@
           </mrl>
         </oob></template>
 </category>
-<category><pattern>DIRECTIONS FROM * TO *</pattern>
+<category><pattern># DIRECTIONS FROM * TO *</pattern>
 <template>Here are the directions from <star/> to <star index="2"/>.  
         <oob>
           <mrl>
@@ -212,7 +212,7 @@
           </mrl>
         </oob></template>
 </category>
-<category><pattern>DIRECTIONS FROM * TO * BY *</pattern>
+<category><pattern># DIRECTIONS FROM * TO * BY *</pattern>
 <template>Here are the directions from <star/> to <star index="2"/> by <star index="3"/>.  
       <oob>
           <mrl>

@@ -8,6 +8,16 @@
 ###############################################################################
 import random
 
+if runtime.isStarted('i01.pir'):
+   sleepTimer = runtime.start("sleepTimer","Clock")
+   sleepTimer.addListener("pulse", python.name, "sleepTimerRoutine")
+   sleepTimer.setInterval(sleepTimeout)
+
+if runtime.isStarted('i01.headTracking') or runtime.isStarted('i01.eyeTracking'):
+   trackingTimer = runtime.start("trackingTimer","Clock")
+   trackingTimer.addListener("pulse", python.name, "trackingTimerRoutine")
+   trackingTimer.setInterval(trackingTimeout)  
+
 def sleepModeWakeUp():
   if runtime.isStarted('i01.ear'):
     initEar()
