@@ -19,6 +19,8 @@ if runtime.isStarted('i01.headTracking') or runtime.isStarted('i01.eyeTracking')
    trackingTimer.setInterval(trackingTimeout)  
 
 def sleepModeWakeUp():
+  if runtime.isStarted('i01.mouth'):
+    initMouth()
   if runtime.isStarted('i01.ear'):
     initEar()
     i01_ear.setAwake(True)
@@ -194,6 +196,8 @@ def sleepModeInsult():
     if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Ironman", 255, 0, 0, 1)
     
 def welcomeMessage():
+  if runtime.isStarted('i01.mouth'):
+    initMouth()
   if runtime.isStarted('i01.chatBot'):
     if str(i01_chatBot.getPredicate("human","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("human","firstinit"))=="started":
       i01_chatBot.setPredicate("human","topic","default")
