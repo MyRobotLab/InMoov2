@@ -10,16 +10,45 @@ if startupSound==True:
     i01_audioPlayer.playFile('resource/InMoov2/system/sounds/startupsound.mp3', False)
 
 def initAudioPlayer():
-  musicPath = i01_audioPlayer.getConfig()
+    global musicPath
+    global musicList
+    audioPlayer = i01_audioPlayer
+    musicPath = audioPlayer.getConfig().currentPlaylist
+    musicList = 'data/config/default/i01.audioPlayer.yml'
+
+def playMusic():
+    if runtime.isStarted('i01.chatBot'):
+        if runtime.isStarted('i01.audioPlayer'):
+            initAudioPlayer()
+            i01_audioPlayer.startPlaylist(musicPath,0,0)
+        else :
+            i01.speakBlocking(i01.localize("STARTINGAUDIOPLAYER"))
+            i01_AudioPlayer = runtime.start('i01.audioPlayer','AudioFile')
+    else:
+        i01.warn("i01.chatBot needs to be started")    
+
+
+def playRandomMusic():
+    if runtime.isStarted('i01.chatBot'):
+        if runtime.isStarted('i01.audioPlayer'):
+            initAudioPlayer()
+            #TOSHUFFLE("playlistName", # of times played shuffle, boolean repeat, String track)
+            i01_audioPlayer.startPlaylist(musicPath,1,0)
+        else :
+            i01.speakBlocking(i01.localize("STARTINGAUDIOPLAYER"))
+            i01_AudioPlayer = runtime.start('i01.audioPlayer','AudioFile')
+    else:
+        i01.warn("i01.chatBot needs to be started") 
 
 def searchPlay(song):
     if runtime.isStarted('i01.chatBot'):
         if runtime.isStarted('i01.audioPlayer'):
             initAudioPlayer()
-            if os.path.exists(musicPath):
+            global musicList
+            if os.path.exists(musicList):
                     global liste
                     global pointeur
-                    f = open(musicPath, 'r')
+                    f = open(musicList, 'r')
                     liste = f.readlines()
                     #Remove the first 11 elements of the list
                     del liste[0:11]
@@ -27,8 +56,8 @@ def searchPlay(song):
                     flag =0
                     # iteration on the list with set up of the chaine
                     while i <= len(liste)-2 :  
-                        var = "".join(liste[i][4:]).rstrip('\n')
-                        if song.lower() in var :
+                        var = unicode("".join(liste[i][4:]).rstrip('\n'),'utf-8')
+                        if (song.lower() in var) or (song.capitalize() in var):
                             i01_audioPlayer.play(var)
                             pointeur = i
                             flag = 1
@@ -54,8 +83,8 @@ def nextPlay():
             global pointeur 
             pointeur = pointeur + 1
             i01_audioPlayer.stop()
-            var = "".join(liste[pointeur][4:]).rstrip('\n')
-            if 'mp3' in var :
+            var = unicode("".join(liste[pointeur][4:]).rstrip('\n'),'utf-8')
+            if 'mp3' or 'wav' in var :
                 i01_audioPlayer.play(var)
                 print(var+" Song : "+str(pointeur))
             else:
@@ -76,8 +105,8 @@ def previousPlay():
             global pointeur 
             pointeur = pointeur -1
             i01_audioPlayer.stop()
-            var = "".join(liste[pointeur][4:]).rstrip('\n')
-            if 'mp3' in var :
+            var = unicode("".join(liste[pointeur][4:]).rstrip('\n'),'utf-8')
+            if 'mp3' or 'wav' in var :
                 i01_audioPlayer.play(var)
                 print(var+" Song : "+str(pointeur))
             else:
@@ -90,3 +119,4 @@ def previousPlay():
             i01_AudioPlayer = runtime.start('i01.audioPlayer','AudioFile')
     else:
         i01.warn("i01.chatBot needs to be started")
+
