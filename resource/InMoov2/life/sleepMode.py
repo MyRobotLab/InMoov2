@@ -52,23 +52,19 @@ def sleepModeWakeUp():
         i01_head_eyelids.autoBlink(True)
             #head up
       if runtime.isStarted('i01.head'):
-        i01_head_neck.setSpeed(50)
-        i01_head_neck.moveToBlocking(i01_head_neck.getRest())
-      if runtime.isStarted('i01.opencv'):
-        if faceRecognizerActivated==1:
-          facerecognizer()
-        else:
-          welcomeMessage()
-      else:
-        if customSound==1:
-          i01_audioPlayer=runtime.start('i01_audioPlayer','AudioFile')
-          i01_audioPlayer.playFile('resource/InMoov2/system/sounds/Notifications/'+random.choice(os.listdir('resource/InMoov2/system/sounds/Notifications')),False)
-        else:welcomeMessage()
+      i01_head_neck.setSpeed(50)
+      i01_head_neck.moveToBlocking(i01_head_neck.getRest())
+    if customSound==1:
+      i01_audioPlayer=runtime.start('i01_audioPlayer','AudioFile')
+      i01_audioPlayer.playFile('resource/InMoov2/system/sounds/Notifications/'+random.choice(os.listdir('resource/InMoov2/system/sounds/Notifications')),False)
+    elif runtime.isStarted('i01.opencv'):
+          if faceRecognizerActivated==1:
+             facerecognizer()
+          else:
+             welcomeMessage()     
     else:
-      welcomeMessage()
-      #RobotIsSleeping=False
-      i01_fsm.fire("wake")
-    if runtime.isStarted('i01.neoPixel'):i01_neoPixel.stopAnimation()
+       welcomeMessage()
+   
     if runtime.isStarted('i01'):fullspeed()
 
 
