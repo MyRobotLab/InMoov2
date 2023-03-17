@@ -19,6 +19,7 @@ if runtime.isStarted('i01.headTracking') or runtime.isStarted('i01.eyeTracking')
    trackingTimer.setInterval(trackingTimeout)  
 
 def sleepModeWakeUp():
+  i01_fsm.fire("wake")
   if runtime.isStarted('i01.mouth'):
     initMouth()
   if runtime.isStarted('i01.ear'):
@@ -26,32 +27,32 @@ def sleepModeWakeUp():
     i01_ear.setAwake(True)
     WaitXsecondBeforeRelaunchTracking=-10
     i01_ear.startRecording()
-    if runtime.isStarted('i01.pir'):
-        if pirWakeUp==1:
-          initPir()
-          sleepTimer.startClock()
-        else:  
-          i01_pir.disable()
-    #if RobotIsStarted==1:
-    if i01_fsm.getCurrentState()=="awake" or "systemCheck":
-      
-      if runtime.isStarted('i01.imageDisplay'):
-        i01_imageDisplay.closeAll()
-      
-      #display(RuningFolder+'/system/pictures/loading_1024-600.jpg')
-      
-      if runtime.isStarted('i01.neoPixel'):
-        i01_neoPixel.setAnimation("Larson Scanner", 255, 255, 0, 25)
-        sleep(2)
-        i01_neoPixel.stopAnimation()
-      #optional switchon nervoboard
-      #switchOnAllNervo()
-      if runtime.isStarted('i01.eyeLids'):
-        i01_head_eyelidLeft.moveTo(0)
-        i01_head_eyelidRight.moveTo(0)
-        i01_head_eyelids.autoBlink(True)
-            #head up
-      if runtime.isStarted('i01.head'):
+  if runtime.isStarted('i01.pir'):
+      if pirWakeUp==1:
+        initPir()
+        sleepTimer.startClock()
+      else:  
+        i01_pir.disable()
+  #if RobotIsStarted==1:
+  if i01_fsm.getCurrentState()=="awake" or "systemCheck":
+    
+    if runtime.isStarted('i01.imageDisplay'):
+      i01_imageDisplay.closeAll()
+    
+    #display(RuningFolder+'/system/pictures/loading_1024-600.jpg')
+    
+    if runtime.isStarted('i01.neoPixel'):
+      i01_neoPixel.setAnimation("Larson Scanner", 255, 255, 0, 25)
+      sleep(2)
+      i01_neoPixel.stopAnimation()
+    #optional switchon nervoboard
+    #switchOnAllNervo()
+    if runtime.isStarted('i01.eyeLids'):
+      i01_head_eyelidLeft.moveTo(0)
+      i01_head_eyelidRight.moveTo(0)
+      i01_head_eyelids.autoBlink(True)
+          #head up
+    if runtime.isStarted('i01.head'):
       i01_head_neck.setSpeed(50)
       i01_head_neck.moveToBlocking(i01_head_neck.getRest())
     if customSound==1:
