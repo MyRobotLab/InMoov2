@@ -1267,7 +1267,7 @@
                                 <img src="settings.png" width="30" ng-click="setPanel('lifeService')"/>
                             </td>
                         </tr>
-                        <tr ng-repeat="(key, value) in service.serviceType.peers">
+                        <tr ng-repeat="(key, value) in service.config.peers">
                             <td>
                                 <a href="" ng-click="mrl.changeTab(value.name)" width="100%">
                                     <img ng-src="/{{value.type + '.png'}}" width="32" />
