@@ -398,7 +398,7 @@
                     <td>
                         <button class="btn btn-default"
                             ng-click="msg.send('setSpeechType', service.config.peers['mouth'].type)">save mouth
-                            config</button>
+                            Config</button>
                     </td>
                 </tr>
             </table>
@@ -417,7 +417,7 @@
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
                         <img src="../InMoov2Head.png" />
-                        <label>head:</label>
+                        <label>Head</label>
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'head')"
@@ -443,7 +443,7 @@
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
                         <img src="../MouthControl.png" />
-                        <label>mouth control start:</label>
+                        <label>Mouth Control Start</label>
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'mouthControl')"
@@ -726,7 +726,7 @@
                 <tr>
                     <td>
                         <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.neopixel')">save
-                            neopixel config</button>
+                            Neopixel Config</button>
                     </td>
                     <td>
                     </td>
@@ -1175,33 +1175,33 @@
                 <tr>
                     <td>
                         <img src="../plus.png"/>
-                        &nbsp;&nbsp;<label>life service:</label>
+                        &nbsp;&nbsp;<label>Life Service</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label>StartupSound:</label>
+                        <label>Startup Sound</label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable InMoov theme at start" width="30" height="30" class="btn btn-info" 
                             ng-click="execScript('system/startScripts/i01_startupSound_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_startupSound_stop.py')">off</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label>custom sounds:</label>
+                        <label>Custom Sounds</label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable custom sounds when waking up" width="30" height="30" class="btn btn-info" 
                             ng-click="execScript('system/startScripts/i01_customSound_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_customSound_stop.py')">off</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label>Health Check:</label>
+                        <label>Health Check</label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Checking your robot condition" width="30" height="30" class="btn btn-info" 
                             ng-click="execScript('system/startScripts/i01_healthCheckActivated_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_healthCheckActivated_stop.py')">off</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label>Battery In System:</label>
+                        <label>Battery In System</label>
                         &nbsp;&nbsp;<button title="Enable checking the battery level" width="30" height="30" class="btn btn-info" 
                             ng-click="execScript('system/startScripts/i01_batteryInSystem_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_batteryInSystem_stop.py')">off</button>
                     </td>
@@ -1220,7 +1220,7 @@
     <tr>
         <td>
             <img src="../InMoov2_Icon.png" />
-            <label>config</label>
+            <label>Config</label>
             &nbsp;&nbsp;&nbsp;&nbsp;<img src="../peers.png" height="28" ng-click="filterPeers(null)" />
             <div class="form-group">
                 <select multiple class="form-control vertical-menu" ng-change="setConfig()" ng-model="selectedConfig"
@@ -1238,13 +1238,14 @@
     <tr>
         <td>
             <img src="../InMoov2.png" />
-            <label>service control</label>
+            <label>Service Control</label>
             <br />
             <div id="table-wrapper">
                 <div id="table-scroll">
                     <table class="table table-striped">
                         <tr>
                             <td>Virtualize services</td>
+                            <td></td>
                             <td>
                                 <toggle width="30" height="28"
                                     title="This will set services in virtual mode, allowing you to run without hardware connected"
@@ -1252,17 +1253,17 @@
                                     ng-change="!service.isVirtual?msg.setAllVirtual(false):msg.setAllVirtual(true)"
                                     on=" " off=" "></toggle>
                             </td>
-                            <td></td>
                         </tr>
                         <tr>
                             <td>Custom Script</td>
+                                    <td></td>
                             <td>
                         <button width="30" height="30" class="btn btn-default" title="To execute your script data/InMoov2/InMoovCustom.py" ng-click="execScript('gestures/InMoovCustom_start.py')" width="120" height="30"></button>
                        </td>
-                                    <td></td>
                         </tr>
                         <tr>
                             <td>Life service</td>
+                                    <td></td>
                             <td>
                                 <img src="settings.png" width="30" ng-click="setPanel('lifeService')"/>
                             </td>
@@ -1292,15 +1293,15 @@
     <tr>
         <td>
             <img src="../InMoov2GestureCreator.png" />
-            <label>gestures</label>
+            <label>Gestures</label>
             <br />
             <input class="form-control vertical-menu" type="text" id="gesture" placeholder="Type or select a gesture"
                 ng-model="selectedGesture" ng-readonly="isConnected" press-enter="executeGesture(selectedGesture)"
                 uib-typeahead="gesture for gesture in service.gestures | filter:$viewValue | limitTo:100"
                 typeahead-min-length="0" />
-            <button class="btn btn-default" ng-click="executeGesture(selectedGesture)">execute</button>
+            <button class="btn btn-default" ng-click="executeGesture(selectedGesture)">Execute</button>
             <!--<button class="btn btn-default" title="be cautious with this, it will run all the gestures randomly" ng-click="msg.cycleGestures()">cycle gestures</button>-->
-            <button class="btn btn-default" ng-click="loadGestures()">load gestures</button>
+            <button class="btn btn-default" ng-click="loadGestures()">Load Gestures</button>
         </td>
     </tr>
 </table>
