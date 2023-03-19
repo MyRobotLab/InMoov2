@@ -1,16 +1,11 @@
 def No():
-  # WE MOVE THE ROTHEAD OR ROLLNECK
   if runtime.isStarted('i01.head'):
-    #i01.startedGesture()
-    i01.setHeadSpeed(40,40,40)
-    
-    if random.randint(0,1)==1:
-      i01.moveHeadBlocking(80,130)
-      i01.moveHeadBlocking(80,50)
-      i01.moveHeadBlocking(83,130)
-      i01.moveHeadBlocking(80,90)
-    else:
-      rollneck.moveToBlocking(50)
-      rollneck.moveToBlocking(120)
-      rollneck.moveToBlocking(90)
+    i01.setHeadSpeed(45,45,45)
+    i01.moveHeadBlocking(80,130)
+    sleep(0.5)
+    i01.moveHeadBlocking(80,50)
+    sleep(0.5)
+    i01.moveHeadBlocking(80,130)
+    sleep(0.5)
+    i01.moveHeadBlocking(80,90)
     i01.finishedGesture()

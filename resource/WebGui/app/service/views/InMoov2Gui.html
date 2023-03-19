@@ -88,7 +88,7 @@
                 <!--<div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="msg.speak('battery is'+ str(runtime.getBatteryLevel())+' %')">
                     <img src="../img/InMoov2/battery_Activ.png"/>
                 </div>-->
-                <div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="execScript('system/guiScripts/batterylevelGui.py')">
+                <div id="batteryGuiDisplay" class="GuiDisplays preventGuiDragSelect" ng-click="execScript('system/startScripts/batterylevelGui.py')">
                     <img src="../img/InMoov2/battery_Activ.png"/>
                 </div>
                 <div id="homeGuiButton" class="homeGuiButtons preventGuiDragSelect" ng-click="mrl.changeTab('intro')">
@@ -468,7 +468,7 @@
                     <td ng-show="service.isOpencvStarted">
                         <label>face Recognizer:</label>
                         &nbsp;<button title="Enable robot to recognize trained faces" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_faceRecognizerActivated_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_faceRecognizerActivated_stop.py')">off</button>
+                            ng-click="execScript('system/startScripts/i01_faceRecognizerActivated_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_faceRecognizerActivated_stop.py')">off</button>&nbsp;<button title="To train, you will need to start, brain, mouth, ear. You need to train at least 2 faces!" width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_trainName_start.py')">train</button>
                     </td>
                 </tr>
                 <tr>

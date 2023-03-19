@@ -26,9 +26,9 @@ execfile('resource/InMoov2/system/Errors.py'.encode('utf8'))
 
 # mute for starting action vocals
 #if IsMute==1:i01.setMute(True)
-
+execfile('resource/InMoov2/life/0_inmoovLife.py')
 ################################
-# INIT.2 - services call
+# INIT.3 - services call
 ################################
 #we load services python side from services folder
 #for filename in sorted(os.listdir('resource/InMoov2/services')):    
@@ -39,7 +39,7 @@ execfile('resource/InMoov2/system/Errors.py'.encode('utf8'))
 execfile('resource/InMoov2/services/1_AudioFile.py')
 execfile('resource/InMoov2/services/3_ImageDisplay.py')
 execfile('resource/InMoov2/services/4_Ear.py')
-#5_Mouth.py
+execfile('resource/InMoov2/services/5_Mouth.py')
 #6_Arduino.py
 #7_Inmoov.py
 #8_NervoBoardRelay.py
@@ -57,7 +57,7 @@ execfile('resource/InMoov2/services/H_OpenWeatherMap.py')
 execfile('resource/InMoov2/services/K_FiniteStateMachine.py')
 
 ################################ 
-# INIT.3- inmoov loading
+# INIT.6- inmoov loading
 ################################
     
 #we launch Inmoov life
@@ -66,7 +66,6 @@ execfile('resource/InMoov2/services/K_FiniteStateMachine.py')
     #if name.split(".")[-1] == "py":
       #execfile(os.path.join(root, name))
       #if DEBUG==1:print "debug inmoov Life : ",os.path.join(root, name)
-execfile('resource/InMoov2/life/0_inmoovLife.py')
 execfile('resource/InMoov2/life/HealthCheck.py')
 execfile('resource/InMoov2/life/shutdown.py')
 execfile('resource/InMoov2/life/shutdownComplete.py')
@@ -79,13 +78,11 @@ execfile('resource/InMoov2/life/sleepMode.py')
 #execfile('data/InMoov2/InMoov_custom.py')
 
 ################################
-# INIT.4
+# INIT.8 - yes there is no 7 :) great, inmoov is alive
 ################################
 #if DEBUG==1:runtime.setLogLevel("INFO")
 #else:runtime.setLogLevel("ERROR")
 #i01.setMute(False)
-if runtime.isStarted('i01.audioPlayer'):
-  if startupSound==True:i01_audioPlayer.playFile('resource/InMoov2/system/sounds/startupsound.mp3', False)
 if runtime.isStarted('i01.neopixel'):    
   i01.setNeopixelAnimation("Flash Random", 0, 255, 0, 1)
   sleep(2)
@@ -94,4 +91,3 @@ if runtime.isStarted('i01.neopixel'):
   i01.setNeopixelAnimation("Flash Random", 0, 255, 50, 10)
 sleep(1)
 sleepModeWakeUp()
-

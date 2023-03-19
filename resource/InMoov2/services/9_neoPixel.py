@@ -7,8 +7,8 @@
 #                 SET SERVICE
 # ##############################################################################
 
-#neopixel = runtime.start("neopixel","Neopixel")
-if runtime.isStarted('i01.neopixel'):
-  i01.speakBlocking(i01.localize("STARTINGNEOPIXEL"))
-  if boot_green:
-    i01.setNeopixelAnimation("Theater Chase", 0, 255, 50, 1)
+if runtime.isStarted('i01.neoPixel'):
+  if boot_green==1:
+    i01_neoPixel.setAnimation("Theater Chase", 0, 255, 50, 10)
+  if runtime.isStarted('i01'):
+    i01.speakBlocking(i01.localize("STARTINGNEOPIXEL"))

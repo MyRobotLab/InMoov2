@@ -12,3 +12,4 @@ file.write(replaced_text)
 file.close()
 
 execfile('resource/InMoov2/life/0_inmoovLife.py')
+i01_opencv.removeFilter("FaceRecognizer")

@@ -4,12 +4,14 @@
 # ##############################################################################
 
 def errorSpokenFunc(errorType,param=""):
-  global RobotIsErrorMode 
-  RobotIsErrorMode=1
+  if error_red==1:
+      if runtime.isStarted('i01.neoPixel'):
+        RobotIsErrorMode=1
+        i01_neoPixel.setAnimation("Theater Chase", 255, 0, 0, 50)
   if runtime.isStarted('i01.mouth'):
     i01_mouth.speakBlocking(i01.localize(errorType)+str(param))
-  if error_red==1:
-      if runtime.isStarted('i01.neopixel'):
-        i01.setNeopixelAnimation("Flash Random", 255, 0, 0, 5)  
+    if runtime.isStarted('i01.neoPixel'):
+      i01_neoPixel.clear()
+      RobotIsErrorMode=0
   else:
     runtime.error(errorType + str(param))
