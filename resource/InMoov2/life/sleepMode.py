@@ -203,7 +203,8 @@ def welcomeMessage():
     else:
       i01_chatBot.getResponse("WAKE_UP")
   else:
-    i01.speakBlocking(i01.localize("ready"))
+    if runtime.isStarted('i01'):
+      i01.speakBlocking(i01.localize("ready"))
   #RobotIsStarted=True
   i01_fsm.fire("systemCheck")
 
