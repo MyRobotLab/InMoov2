@@ -107,17 +107,16 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('chatBot')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('chatBot')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
                         <img src="../Brain.png" />
                         <label>Chat Bot</label>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'chatBot')" 
-                            ng-click="startPeer('chatBot')">on</button>
+                            ng-click="startPeer('chatBot')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'chatBot')"
-                            ng-click="releasePeer('chatBot')">off</button>
+                            ng-click="releasePeer('chatBot')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'chatBot')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'chatBot'))">
                                 <img src="settings.png" width="30" />
@@ -154,6 +153,10 @@
                         <img src="../Gpt3.png"/>
                         <label>GPT</label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<toggle width="30" height="28" ng-model="service.isGpt3Started" ng-change="!service.isGpt3Started?execScript('system/startScripts/i01_gpt3_stop.py'):execScript('system/startScripts/i01_gpt3_start.py')" on="" off=""/></toggle>
+                        <!--&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-secondary" ng-model="!service.isGpt3Started" ng-show="service.isGpt3Started"
+                            ng-click="execScript('system/startScripts/i01_gpt3_start.py')">off</button>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-info" ng-model="service.isGpt3Started" ng-show="!service.isGpt3Started"
+                            ng-click="execScript('system/startScripts/i01_gpt3_stop.py')">on</button>-->
                         <span ng-show="service.isGpt3Started">
                             <img src="settings.png" width="30" title="Open" ng-click="mrl.changeTab('i01.gpt3')"/>
                         </span>
@@ -175,8 +178,7 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('leftArm')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('leftArm')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
@@ -185,9 +187,9 @@
                     </td>
                     <td>
                         <button class="btn btn-secondary"  ng-show="!peer.isPeerStarted(service, 'leftArm')"
-                            ng-click="startPeer('leftArm')">on</button>
+                            ng-click="startPeer('leftArm')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'leftArm')"
-                            ng-click="releasePeer('leftArm')">off</button>
+                            ng-click="releasePeer('leftArm')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'leftArm')">
                             <img src="settings.png" width="30"
                                 ng-click="mrl.changeTab(peer.getActualName(service, 'leftArm'))" />
@@ -200,8 +202,7 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('rightArm')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('rightArm')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
@@ -210,9 +211,9 @@
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'rightArm')"
-                            ng-click="startPeer('rightArm')">on</button>
+                            ng-click="startPeer('rightArm')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'rightArm')"
-                            ng-click="releasePeer('rightArm')">off</button>
+                            ng-click="releasePeer('rightArm')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'rightArm')">
                             <img src="settings.png" width="30"
                                 ng-click="mrl.changeTab(peer.getActualName(service, 'rightArm'))" />
@@ -229,17 +230,16 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('ear')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('ear')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
                         <img src="../InMoov2Ear.png" />
                         <label>Ear</label>
                         &nbsp;&nbsp;<button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'ear')"
-                            ng-click="startPeer('ear')">on</button>
+                            ng-click="startPeer('ear')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'ear')"
-                            ng-click="releasePeer('ear')">off</button>
+                            ng-click="releasePeer('ear')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'ear')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'ear'))">
                                 <img src="settings.png" width="30" />
@@ -276,17 +276,16 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('torso')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('torso')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
                         <img src="../InMoov2Torso.png" />
                         <label>Torso</label>
                         &nbsp;&nbsp<button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'torso')"
-                            ng-click="startPeer('torso')">on</button>
+                            ng-click="startPeer('torso')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'torso')"
-                            ng-click="releasePeer('torso')">off</button>
+                            ng-click="releasePeer('torso')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'torso')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'torso'))">
                                 <img src="settings.png" width="30" />
@@ -304,8 +303,7 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('leftHand')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('leftHand')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
@@ -314,15 +312,15 @@
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'leftHand')"
-                            ng-click="startPeer('leftHand')">on</button>
+                            ng-click="startPeer('leftHand')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'leftHand')"
-                            ng-click="releasePeer('leftHand')">off</button>
+                            ng-click="releasePeer('leftHand')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'leftHand')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'leftHand'))">
                                 <img src="settings.png" width="30" />
                             </a>
                         </span>
-                        <label ng-show="service.isLeftHandStarted">Sensors:</label>
+                        <label ng-show="peer.isPeerStarted(service, 'leftHand')">Sensors:</label>
                         &nbsp;<toggle width="30" height="28" ng-show="peer.isPeerStarted(service, 'leftHand')"  ng-model="service.isLeftHandSensorStarted" title="To configure edit data/config/i01.leftHand.sensor.yml" ng-change="!service.isLeftHandSensorStarted?msg.isLeftHandSensorStarted(false):execScript('system/startScripts/i01_leftHandSensor_start.py')" width="120" height="30" on="" off=""/>
                     </td>
                 </tr>
@@ -332,8 +330,7 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('rightHand')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('rightHand')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
@@ -342,15 +339,15 @@
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'rightHand')"
-                            ng-click="startPeer('rightHand')">on</button>
+                            ng-click="startPeer('rightHand')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'rightHand')"
-                            ng-click="releasePeer('rightHand')">off</button>
+                            ng-click="releasePeer('rightHand')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'rightHand')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'rightHand'))">
                                 <img src="settings.png" width="30" />
                             </a>
                         </span>
-                        <label ng-show="service.isRightHandStarted">Sensors:</label>
+                        <label ng-show="peer.isPeerStarted(service, 'rightHand')">Sensors:</label>
                         &nbsp;<toggle width="30" height="28" ng-show="peer.isPeerStarted(service, 'rightHand')" ng-model="service.isRightHandSensorStarted" title="To configure edit data/config/i01.rightHand.sensor.yml" ng-change="!service.isRightHandSensorStarted?msg.isRightHandSensorStarted(false):execScript('system/startScripts/i01_rightHandSensor_start.py')" width="120" height="30" on="" off=""/>
                     </td>
                 </tr>
@@ -364,17 +361,16 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('mouth')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('mouth')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
                         <img src="../InMoov2Mouth.png" />
                         <label>Mouth</label>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'mouth')"
-                            ng-click="startPeer('mouth')">on</button>
+                            ng-click="startPeer('mouth')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'mouth')"
-                            ng-click="releasePeer('mouth')">off</button>
+                            ng-click="releasePeer('mouth')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'mouth')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'mouth'))">
                                 <img src="settings.png" width="30" />
@@ -411,8 +407,7 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('head')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('head')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
@@ -421,9 +416,9 @@
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'head')"
-                            ng-click="startPeer('head')">on</button>
+                            ng-click="startPeer('head')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'head')"
-                            ng-click="releasePeer('head')">off</button>
+                            ng-click="releasePeer('head')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'head')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'head'))">
                                 <img src="settings.png" width="30" />
@@ -431,14 +426,13 @@
                         </span>
                     </td>
                 </tr>
-                <tr>
+                <tr ng-show="peer.isPeerStarted(service, 'head')">
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS--------------------- -->
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('mouthControl')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('mouthControl')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
@@ -447,9 +441,9 @@
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'mouthControl')"
-                            ng-click="startPeer('mouthControl')">on</button>
+                            ng-click="startPeer('mouthControl')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'mouthControl')"
-                            ng-click="releasePeer('mouthControl')">off</button>
+                            ng-click="releasePeer('mouthControl')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'mouthControl')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'mouthControl'))">
                                 <img src="settings.png" width="30" />
@@ -458,21 +452,48 @@
                     </td>
                 </tr>
                 <tr>
-                    <td ng-show="service.isOpencvStarted">
+                    <td>
+                        <!------THIS FOR THE HOVER ICON WITH PEERS--------------------- -->
+                        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('opencv')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+                        <img src="../OpenCV.png"/>
+                        <label>openCV Start:</label>
+                        <!--&nbsp;&nbsp;<toggle width="30" height="28" ng-model="service.isOpencvStarted" ng-change="service.isOpencvStarted?startPeer('opencv'):releasePeer('opencv')" on="" off=""/>-->
+                    </td>
+                    <td>
+                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'opencv')"
+                            ng-click="startPeer('opencv')">off</button>
+                        <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'opencv')"
+                            ng-click="releasePeer('opencv')">on</button>
+                        <span ng-show="peer.isPeerStarted(service, 'opencv')">
+                            <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'opencv'))">
+                                <img src="settings.png" width="30" />
+                            </a>
+                        </span>
+                    </td>
+                </tr>
+                <tr ng-show="peer.isPeerStarted(service, 'opencv')">
+                    <td>
                         <label>flip Picture:</label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable vision upside down" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_flipPicture_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_flipPicture_stop.py')">off</button>
+                    </td>
+                    <td>    
+                        <button title="Enable vision upside down" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_flipPicture_start.py')">on</button>
+                        <button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_flipPicture_stop.py')">off</button>
                     </td>
                 </tr>
-                <tr>
-                    <td ng-show="service.isOpencvStarted">
+                <tr ng-show="peer.isPeerStarted(service, 'opencv')">
+                    <td>
                         <label>face Recognizer:</label>
-                        &nbsp;<button title="Enable robot to recognize trained faces" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_faceRecognizerActivated_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_faceRecognizerActivated_stop.py')">off</button>&nbsp;<button title="To train, you will need to start, brain, mouth, ear. You need to train at least 2 faces!" width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_trainName_start.py')">train</button>
+                    </td>
+                    <td>    
+                        <button title="Enable robot to recognize trained faces" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_faceRecognizerActivated_start.py')">on</button>
+                        <button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_faceRecognizerActivated_stop.py')">off</button>
+                        <button title="To train, you will need to start, brain, mouth, ear. You need to train at least 2 faces!" width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_trainName_start.py')">train</button>
                     </td>
                 </tr>
                 <tr>
-                    <td ng-show="service.isOpencvStarted">
+                    <td ng-show="peer.isPeerStarted(service, 'opencv')">
                         <img src="../Tracking.png"/>
                         <toggle ng-model="service.isHeadTrackingStarted" ng-change="service.isHeadTrackingStarted?startPeer('headTracking'):releasePeer('headTracking')" width="140" height="30" on="head tracking on" off="head tracking off"></toggle>
                         <span ng-show="peer.isPeerStarted(service, 'headTracking')">
@@ -482,7 +503,7 @@
                     </td>
                 </tr>    
                 <tr>
-                    <td ng-show="service.isOpencvStarted">
+                    <td ng-show="peer.isPeerStarted(service, 'opencv')">
                         <img src="../Tracking.png"/>
                         <toggle ng-model="service.isEyeTrackingStarted" ng-change="service.isEyeTrackingStarted?startPeer('eyeTracking'):releasePeer('eyeTracking')" width="140" height="30" on="eye tracking on" off="eye tracking off"></toggle>
                         <span ng-show="peer.isPeerStarted(service, 'eyeTracking')">
@@ -501,8 +522,7 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('right')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('right')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
@@ -511,9 +531,9 @@
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'right')"
-                            ng-click="startPeer('right')">on</button>
+                            ng-click="startPeer('right')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'right')"
-                            ng-click="releasePeer('right')">off</button>
+                            ng-click="releasePeer('right')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'right')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'right'))">
                                 <img src="settings.png" width="30" />
@@ -526,8 +546,7 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('left')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('left')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
@@ -536,9 +555,9 @@
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'left')"
-                            ng-click="startPeer('left')">on</button>
+                            ng-click="startPeer('left')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'left')"
-                            ng-click="releasePeer('left')">off</button>
+                            ng-click="releasePeer('left')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'left')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'left'))">
                                 <img src="settings.png" width="30" />
@@ -552,8 +571,7 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('controller3')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('controller3')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
@@ -562,9 +580,9 @@
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'controller3')"
-                            ng-click="startPeer('controller3')">on</button>
+                            ng-click="startPeer('controller3')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'controller3')"
-                            ng-click="releasePeer('controller3')">off</button>
+                            ng-click="releasePeer('controller3')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'controller3')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'controller3'))">
                                 <img src="settings.png" width="30" />
@@ -578,8 +596,7 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('controller4')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('controller4')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
@@ -588,9 +605,9 @@
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'controller4')"
-                            ng-click="startPeer('controller4')">on</button>
+                            ng-click="startPeer('controller4')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'controller4')"
-                            ng-click="releasePeer('controller4')">off</button>
+                            ng-click="releasePeer('controller4')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'controller4')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'controller4'))">
                                 <img src="settings.png" width="30" />
@@ -604,17 +621,16 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('random')" />
-                        <img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
+                            ng-click="filterPeers('random')" /><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)" />
                         <img src="../Random.png" />
                         <label>Random</label>
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'random')"
-                            ng-click="startPeer('random')">on</button>
+                            ng-click="startPeer('random')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'random')"
-                            ng-click="releasePeer('random')">off</button>
+                            ng-click="releasePeer('random')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'random')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'random'))">
                                 <img src="settings.png" width="30" />
@@ -628,8 +644,7 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('neopixel')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('neopixel')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
@@ -643,9 +658,9 @@
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'neoPixel')"
-                            ng-click="startPeer('neoPixel')">on</button>
+                            ng-click="startPeer('neoPixel')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'neoPixel')"
-                            ng-click="releasePeer('neoPixel')">off</button>
+                            ng-click="releasePeer('neoPixel')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'neoPixel')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'neoPixel'))">
                                 <img src="settings.png" width="30" />
@@ -687,69 +702,36 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('pir')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('pir')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" /></img>
                         </a><img src="../Pir.png" />
-                        <button ng-click="showSubPanel('pir')">
-                            <span class="glyphicon glyphicon-chevron-up"></span>
-                        </button>
                         <label>PIR</label>
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'pir')"
-                            ng-click="startPeer('pir')">on</button>
+                            ng-click="startPeer('pir')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'pir')"
-                            ng-click="releasePeer('pir')">off</button>
+                            ng-click="releasePeer('pir')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'pir')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'pir'))">
                                 <img src="settings.png" width="30" />
                             </a>
                         </span>
                     </td>
-                    <!-- subpir begin  ------------------->
-
-                    <tr>
-                        <td></td>
+                    <tr ng-show="peer.isPeerStarted(service, 'pir')">
                         <td>
-                            <label>Custom Sounds</label>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <toggle width="70" height="30" title="Plays your custom sounds if Pir detects activity"
-                                ng-model="PlayCustomSoundIfDetection" ng-change="PlayCustomSoundIfDetection" on="ON"
-                                off="OFF" />
-                            </toggle>
+                            <label>pirEnableTracking:</label>
+                            &nbsp;&nbsp;<button title="Enable to start tracking faces when pir detect movement" width="30" height="30" class="btn btn-info" 
+                                ng-click="execScript('system/startScripts/i01_pirEnableTracking_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_pirEnableTracking_stop.py')">off</button>
                         </td>
                     </tr>
-                    <tr>
-                        <td></td>
+                    <tr ng-show="peer.isPeerStarted(service, 'pir')">
                         <td>
-                            <label>PIR Enable Tracking</label>
-                            &nbsp;
-                            <toggle width="70" height="30" ng-model="service.pirEnableTracking"
-                                title="Automatically start tracking if Pir detects activity"
-                                ng-change="!service.pirEnableTracking?msg.stopPirEnableTracking(false):msg.startPirEnableTracking(true)"
-                                on="ON" off="OFF" />
-                            </toggle>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <label>PIR Wake Up</label>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <toggle width="70" height="30" ng-model="service.pirWakeUp"
-                                title="Automatically wakes the robot if Pir detects activity"
-                                ng-change="!service.pirWakeUp?msg.stopPirWakeUp(false):msg.startPirWakeUp(true)" on="ON"
-                                off="OFF" />
-                            </toggle>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.pir')">save pir config</button>
+                            <label>pirWakeUp:</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable pir to wake up robot if detected movements" width="30" height="30" class="btn btn-info" 
+                                ng-click="execScript('system/startScripts/i01_pirWakeUp_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_pirWakeUp_stop.py')">off</button>
                         </td>
                     </tr>
                 </tr>
@@ -759,8 +741,7 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('openNi')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('openNi')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
@@ -769,9 +750,9 @@
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'openni')"
-                            ng-click="startPeer('openni')">on</button>
+                            ng-click="startPeer('openni')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'openni')"
-                            ng-click="releasePeer('openni')">off</button>
+                            ng-click="releasePeer('openni')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'openni')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'openni'))">
                                 <img src="settings.png" width="30" />
@@ -785,8 +766,7 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('leap')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('leap')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
@@ -795,14 +775,15 @@
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'leap')"
-                            ng-click="startPeer('leap')">on</button>
+                            ng-click="startPeer('leap')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'leap')"
-                            ng-click="releasePeer('leap')">off</button>
+                            ng-click="releasePeer('leap')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'leap')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'leap'))">
                                 <img src="settings.png" width="30" />
                             </a>
                         </span>
+                        <toggle width="100" height="28" ng-show="peer.isPeerStarted(service, 'leap')" ng-model="service.isLeapTracking" ng-change="!service.isLeapTracking?execScript('system/startScripts/i01_leapMotion_stop.py'):execScript('system/startScripts/i01_leapMotion_start.py')" on="On tracking" off="Off tracking"/></toggle>
                     </td>
                 </tr>
                 <tr>
@@ -811,19 +792,18 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('ultrasonicRight')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('ultrasonicRight')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
                         <img src="../UltrasonicSensor.png" />
-                        <label>Right Ultrasonic</label>
+                        <label>Ultrasonic Right</label>
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'ultrasonicRight')"
-                            ng-click="startPeer('ultrasonicRight')">on</button>
+                            ng-click="startPeer('ultrasonicRight')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'ultrasonicRight')"
-                            ng-click="releasePeer('ultrasonicRight')">off</button>
+                            ng-click="releasePeer('ultrasonicRight')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'ultrasonicRight')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'ultrasonicRight'))">
                                 <img src="settings.png" width="30" />
@@ -837,19 +817,18 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
-                            ng-click="filterPeers('ultrasonicLeft')" />
-                        <img src="../img/InMoov2/markerBlue_left.png"
+                            ng-click="filterPeers('ultrasonicLeft')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
                             ng-click="filterPeers(null)" />
                         <img src="../UltrasonicSensor.png" />
-                        <label>Left Ultrasonic</label>
+                        <label>Ultrasonic Left</label>
                     </td>
                     <td>
                         <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'ultrasonicLeft')"
-                            ng-click="startPeer('ultrasonicLeft')">on</button>
+                            ng-click="startPeer('ultrasonicLeft')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'ultrasonicLeft')"
-                            ng-click="releasePeer('ultrasonicLeft')">off</button>
+                            ng-click="releasePeer('ultrasonicLeft')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'ultrasonicLeft')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'ultrasonicLeft'))">
                                 <img src="settings.png" width="30" />
@@ -1041,9 +1020,9 @@
                             </td>
                             <td>
                                 <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, key)"
-                                    ng-click="startPeer(key)">on</button>
+                                    ng-click="startPeer(key)">off</button>
                                 <button class="btn btn-info" ng-show="peer.isPeerStarted(service, key)"
-                                    ng-click="releasePeer(key)">off</button>
+                                    ng-click="releasePeer(key)">on</button>
                             </td>
                         </tr>
                     </table>
@@ -1062,7 +1041,6 @@
                 uib-typeahead="gesture for gesture in service.gestures | filter:$viewValue | limitTo:100"
                 typeahead-min-length="0" />
             <button class="btn btn-default" ng-click="executeGesture(selectedGesture)">Execute</button>
-            <!--<button class="btn btn-default" title="be cautious with this, it will run all the gestures randomly" ng-click="msg.cycleGestures()">cycle gestures</button>-->
             <button class="btn btn-default" ng-click="loadGestures()">Load Gestures</button>
         </td>
     </tr>
