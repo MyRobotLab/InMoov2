@@ -113,7 +113,9 @@
                             ng-click="filterPeers(null)" />
                         <img src="../Brain.png" />
                         <label>Chat Bot</label>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'chatBot')" 
+                    </td>
+                    <td>
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'chatBot')" 
                             ng-click="startPeer('chatBot')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'chatBot')"
                             ng-click="releasePeer('chatBot')">on</button>
@@ -152,6 +154,8 @@
                         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('gpt3')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <img src="../Gpt3.png"/>
                         <label>GPT</label>
+                    </td>
+                    <td>
                         <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'gpt3')"
                             ng-click="execScript('system/startScripts/i01_gpt3_start.py')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'gpt3')"
@@ -185,7 +189,7 @@
                         <label>Left Arm</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary"  ng-show="!peer.isPeerStarted(service, 'leftArm')"
+                        <button class="btn btn-default"  ng-show="!peer.isPeerStarted(service, 'leftArm')"
                             ng-click="startPeer('leftArm')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'leftArm')"
                             ng-click="releasePeer('leftArm')">on</button>
@@ -209,7 +213,7 @@
                         <label>Right Arm</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'rightArm')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'rightArm')"
                             ng-click="startPeer('rightArm')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'rightArm')"
                             ng-click="releasePeer('rightArm')">on</button>
@@ -235,7 +239,7 @@
                             ng-click="filterPeers(null)" />
                         <img src="../InMoov2Ear.png" />
                         <label>Ear</label>
-                        &nbsp;&nbsp;<button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'ear')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'ear')"
                             ng-click="startPeer('ear')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'ear')"
                             ng-click="releasePeer('ear')">on</button>
@@ -281,7 +285,7 @@
                             ng-click="filterPeers(null)" />
                         <img src="../InMoov2Torso.png" />
                         <label>Torso</label>
-                        &nbsp;&nbsp<button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'torso')"
+                        &nbsp;&nbsp<button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'torso')"
                             ng-click="startPeer('torso')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'torso')"
                             ng-click="releasePeer('torso')">on</button>
@@ -310,7 +314,7 @@
                         <label>Left Hand</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'leftHand')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'leftHand')"
                             ng-click="startPeer('leftHand')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'leftHand')"
                             ng-click="releasePeer('leftHand')">on</button>
@@ -337,7 +341,7 @@
                         <label>Right Hand</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'rightHand')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'rightHand')"
                             ng-click="startPeer('rightHand')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'rightHand')"
                             ng-click="releasePeer('rightHand')">on</button>
@@ -366,7 +370,7 @@
                             ng-click="filterPeers(null)" />
                         <img src="../InMoov2Mouth.png" />
                         <label>Mouth</label>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'mouth')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'mouth')"
                             ng-click="startPeer('mouth')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'mouth')"
                             ng-click="releasePeer('mouth')">on</button>
@@ -414,7 +418,7 @@
                         <label>Head</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'head')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'head')"
                             ng-click="startPeer('head')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'head')"
                             ng-click="releasePeer('head')">on</button>
@@ -439,7 +443,7 @@
                         <label>Mouth Control</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'mouthControl')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'mouthControl')"
                             ng-click="startPeer('mouthControl')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'mouthControl')"
                             ng-click="releasePeer('mouthControl')">on</button>
@@ -459,7 +463,7 @@
                         <!--&nbsp;&nbsp;<toggle width="30" height="28" ng-model="service.isOpencvStarted" ng-change="service.isOpencvStarted?startPeer('opencv'):releasePeer('opencv')" on="" off=""/>-->
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'opencv')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'opencv')"
                             ng-click="startPeer('opencv')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'opencv')"
                             ng-click="releasePeer('opencv')">on</button>
@@ -477,7 +481,7 @@
                     <td>    
                         <button title="Enable vision upside down" width="30" height="30" class="btn btn-info" 
                             ng-click="execScript('system/startScripts/i01_flipPicture_start.py')">on</button>
-                        <button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_flipPicture_stop.py')">off</button>
+                        <button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_flipPicture_stop.py')">off</button>
                     </td>
                 </tr>
                 <tr ng-show="peer.isPeerStarted(service, 'opencv')">
@@ -487,7 +491,7 @@
                     <td>    
                         <button title="Enable robot to recognize trained faces" width="30" height="30" class="btn btn-info" 
                             ng-click="execScript('system/startScripts/i01_faceRecognizerActivated_start.py')">on</button>
-                        <button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_faceRecognizerActivated_stop.py')">off</button>
+                        <button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_faceRecognizerActivated_stop.py')">off</button>
                         <button title="To train, you will need to start, brain, mouth, ear. You need to train at least 2 faces!" width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_trainName_start.py')">train</button>
                     </td>
                 </tr>
@@ -529,7 +533,7 @@
                         <label>Controller Right</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'right')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'right')"
                             ng-click="startPeer('right')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'right')"
                             ng-click="releasePeer('right')">on</button>
@@ -553,7 +557,7 @@
                         <label>Controller Left</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'left')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'left')"
                             ng-click="startPeer('left')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'left')"
                             ng-click="releasePeer('left')">on</button>
@@ -578,7 +582,7 @@
                         <label>Controller 3</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'controller3')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'controller3')"
                             ng-click="startPeer('controller3')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'controller3')"
                             ng-click="releasePeer('controller3')">on</button>
@@ -603,7 +607,7 @@
                         <label>Controller 4</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'controller4')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'controller4')"
                             ng-click="startPeer('controller4')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'controller4')"
                             ng-click="releasePeer('controller4')">on</button>
@@ -626,7 +630,7 @@
                         <label>Random</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'random')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'random')"
                             ng-click="startPeer('random')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'random')"
                             ng-click="releasePeer('random')">on</button>
@@ -651,7 +655,7 @@
                         <label>Neopixel</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'neoPixel')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'neoPixel')"
                             ng-click="startPeer('neoPixel')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'neoPixel')"
                             ng-click="releasePeer('neoPixel')">on</button>
@@ -666,7 +670,7 @@
                         <label>Boot Green</label>
                     </td><td>
                         <button title="Sets neopixel to green when robot is booting" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_boot_green_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_boot_green_stop.py')">off</button>
+                            ng-click="execScript('system/startScripts/i01_boot_green_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_boot_green_stop.py')">off</button>
                     </td>
                 </tr>
                 <tr ng-show="peer.isPeerStarted(service, 'neoPixel')">
@@ -674,7 +678,7 @@
                         <label>Red Error</label>
                     </td><td>
                         <button title="Sets neopixel to red when an error occurs" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_error_red_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_error_red_stop.py')">off</button>
+                            ng-click="execScript('system/startScripts/i01_error_red_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_error_red_stop.py')">off</button>
                     </td>
                 </tr>
                 <tr ng-show="peer.isPeerStarted(service, 'neoPixel')">
@@ -682,7 +686,7 @@
                         <label>Flash when Speaking</label>
                     </td><td>
                         <button title="Allows neopixel to flash when robot is speaking" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_flash_when_speak_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_flash_when_speak_stop.py')">off</button>
+                            ng-click="execScript('system/startScripts/i01_flash_when_speak_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_flash_when_speak_stop.py')">off</button>
                     </td>
                 </tr>
             </table>
@@ -705,7 +709,7 @@
                         <label>PIR</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'pir')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'pir')"
                             ng-click="startPeer('pir')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'pir')"
                             ng-click="releasePeer('pir')">on</button>
@@ -719,14 +723,14 @@
                         <td>
                             <label>pirEnableTracking:</label>
                             &nbsp;&nbsp;<button title="Enable to start tracking faces when pir detect movement" width="30" height="30" class="btn btn-info" 
-                                ng-click="execScript('system/startScripts/i01_pirEnableTracking_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_pirEnableTracking_stop.py')">off</button>
+                                ng-click="execScript('system/startScripts/i01_pirEnableTracking_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_pirEnableTracking_stop.py')">off</button>
                         </td>
                     </tr>
                     <tr ng-show="peer.isPeerStarted(service, 'pir')">
                         <td>
                             <label>pirWakeUp:</label>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable pir to wake up robot if detected movements" width="30" height="30" class="btn btn-info" 
-                                ng-click="execScript('system/startScripts/i01_pirWakeUp_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_pirWakeUp_stop.py')">off</button>
+                                ng-click="execScript('system/startScripts/i01_pirWakeUp_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_pirWakeUp_stop.py')">off</button>
                         </td>
                     </tr>
                 </tr>
@@ -744,7 +748,7 @@
                         <label>Open NI</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'openni')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'openni')"
                             ng-click="startPeer('openni')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'openni')"
                             ng-click="releasePeer('openni')">on</button>
@@ -769,7 +773,7 @@
                         <label>Leap Motion</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'leap')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'leap')"
                             ng-click="startPeer('leap')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'leap')"
                             ng-click="releasePeer('leap')">on</button>
@@ -795,7 +799,7 @@
                         <label>Ultrasonic Right</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'ultrasonicRight')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'ultrasonicRight')"
                             ng-click="startPeer('ultrasonicRight')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'ultrasonicRight')"
                             ng-click="releasePeer('ultrasonicRight')">on</button>
@@ -820,7 +824,7 @@
                         <label>Ultrasonic Left</label>
                     </td>
                     <td>
-                        <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, 'ultrasonicLeft')"
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'ultrasonicLeft')"
                             ng-click="startPeer('ultrasonicLeft')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'ultrasonicLeft')"
                             ng-click="releasePeer('ultrasonicLeft')">on</button>
@@ -898,35 +902,35 @@
                     <td>
                         <label>Startup Sound</label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable InMoov theme at start" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_startupSound_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_startupSound_stop.py')">off</button>
+                            ng-click="execScript('system/startScripts/i01_startupSound_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_startupSound_stop.py')">off</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <label>Custom Sounds</label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable custom sounds when waking up" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_customSound_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_customSound_stop.py')">off</button>
+                            ng-click="execScript('system/startScripts/i01_customSound_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_customSound_stop.py')">off</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <label>Health Check</label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Checking your robot condition" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_healthCheckActivated_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_healthCheckActivated_stop.py')">off</button>
+                            ng-click="execScript('system/startScripts/i01_healthCheckActivated_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_healthCheckActivated_stop.py')">off</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <label>Battery In System</label>
                         &nbsp;&nbsp;<button title="Enable checking the battery level" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_batteryInSystem_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_batteryInSystem_stop.py')">off</button>
+                            ng-click="execScript('system/startScripts/i01_batteryInSystem_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_batteryInSystem_stop.py')">off</button>
                     </td>
                 </tr>
                 <!--<tr>
                     <td>
                         <label>health timer Value:</label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable pir to wake up robot if detected movements" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_pirWakeUp_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_pirWakeUp_stop.py')">off</button>
+                            ng-click="execScript('system/startScripts/i01_pirWakeUp_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_pirWakeUp_stop.py')">off</button>
                     </td>
                 </tr>-->
             </table>
@@ -994,7 +998,7 @@
                                 <a href="" ng-click="mrl.changeTab(value.name)" width="100%">{{key}}</a>
                             </td>
                             <td>
-                                <button class="btn btn-secondary" ng-show="!peer.isPeerStarted(service, key)"
+                                <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, key)"
                                     ng-click="startPeer(key)">off</button>
                                 <button class="btn btn-info" ng-show="peer.isPeerStarted(service, key)"
                                     ng-click="releasePeer(key)">on</button>
