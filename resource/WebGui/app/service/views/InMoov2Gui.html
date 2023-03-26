@@ -157,9 +157,9 @@
                     </td>
                     <td>
                         <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'gpt3')"
-                            ng-click="execScript('system/startScripts/i01_gpt3_start.py')">off</button>
+                            ng-click="startPeer('gpt3')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'gpt3')"
-                            ng-click="execScript('system/startScripts/i01_gpt3_stop.py')">on</button>
+                            ng-click="releasePeer('gpt3')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'gpt3')">
                             <img src="settings.png" width="30" title="Open" ng-click="mrl.changeTab(peer.getActualName(service, 'gpt3'))"/>
                         </span>
@@ -239,6 +239,8 @@
                             ng-click="filterPeers(null)" />
                         <img src="../InMoov2Ear.png" />
                         <label>Ear</label>
+                    </td>
+                    <td>
                         <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'ear')"
                             ng-click="startPeer('ear')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'ear')"
@@ -285,7 +287,9 @@
                             ng-click="filterPeers(null)" />
                         <img src="../InMoov2Torso.png" />
                         <label>Torso</label>
-                        &nbsp;&nbsp<button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'torso')"
+                    </td>
+                    <td>
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'torso')"
                             ng-click="startPeer('torso')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'torso')"
                             ng-click="releasePeer('torso')">on</button>
@@ -370,6 +374,8 @@
                             ng-click="filterPeers(null)" />
                         <img src="../InMoov2Mouth.png" />
                         <label>Mouth</label>
+                    </td>
+                    <td>
                         <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'mouth')"
                             ng-click="startPeer('mouth')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'mouth')"
