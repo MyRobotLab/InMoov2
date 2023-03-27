@@ -12,10 +12,10 @@
         <li>Great!</li>
       </random>
       <think><set name="playsong">ko</set></think>
-    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist()</param></mrl></oob></template>
+    <oob><mrl><service>python</service><method>exec</method><param>playMusic()</param></mrl></oob></template>
 </category>
 
-<!--<category><pattern>START PLAYLIST *</pattern>
+<category><pattern>START PLAYLIST *</pattern>
 <template><random>
         <li>Starting playlist <star/> now.</li>
         <li>Launching <star/> playlist.</li>
@@ -30,21 +30,12 @@
         <li>Sure!</li>
         <li>Ok!</li>
       </random>
+      <think><set name="playsong">ko</set></think>
     <oob><mrl><service>python</service><method>exec</method><param>playRandomMusic()</param></mrl></oob></template>
-</category>-->
-
-<category><pattern>STOP THE MUSIC</pattern>
-<template><srai>STOP MUSIC</srai></template>
 </category>
 
 <category><pattern>STOP MUSIC</pattern>
-<template><random>
-        <li>As you please</li>
-        <li>Stopping music now</li>
-        <li>OK!</li>
-      </random>
-      <think><set name="playsong">ok</set></think>
-      <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob></template>
+<template><srai>STOP PLAYLIST</srai></template>
 </category>
 
 <category><pattern>STOP THE MUSIC</pattern>
