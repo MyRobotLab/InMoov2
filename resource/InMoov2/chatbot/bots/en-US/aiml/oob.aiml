@@ -390,7 +390,7 @@
 <category><pattern>CALL 911</pattern>
 <template>Now dialing emergency services from your location.  <oob><dial>911</dial></oob></template>
 </category>
-<category><pattern>PLAY *</pattern>
+<category><pattern>PLAY YOUTUBE *</pattern>
 <template>Now loading your choice of music. I hope you like it. Please wait a moment while I load it up. 
         <oob>
           <mrl>
