@@ -14,9 +14,9 @@ mrlCompatible='1.1.1060'
 
 ##############
 # Main inmoov service
-#i01 = runtime.start("i01", "InMoov2")
+i01 = runtime.start("i01", "InMoov2")
 #runtime.startConfig('InMoov2_Full')
 ##############
 # robot checkup and initialisation ( skeleton & services )
 RuningFolder="resource/InMoov2"
-execfile(RuningFolder+'/system/InitCheckup2.py')
+execfile(RuningFolder+'/system/InitCheckUp.py')
