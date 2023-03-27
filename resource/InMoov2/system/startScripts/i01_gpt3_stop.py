@@ -8,7 +8,8 @@
 
 # release service gpt3
 Runtime.releaseService("i01.gpt3")
+Runtime.releaseService("i01.gpt3.http")
 if runtime.isStarted('i01.chatBot'):
-   i01_chatBot.getResponse("STOPPINGGPT3")
+   #i01_chatBot.getResponse("STOPPINGGPT3")
    i01_chatBot.setPredicate("gpt3","")
    i01_chatBot.savePredicates()

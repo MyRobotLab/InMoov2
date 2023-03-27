@@ -4,9 +4,8 @@
 # ##############################################################################
 
 
-security.loadStore()
-apikey = security.getSecret("OPENWEATHERMAP")
 def initOwm():
+  security.loadStore()
   apikey = security.getSecret("OPENWEATHERMAP")
 
 # forecast index 1 is next 3 hours , so 24 hours is 8
