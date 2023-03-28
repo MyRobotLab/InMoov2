@@ -2,56 +2,63 @@
 <aiml>
 <!-- File: localization.aiml-->
 <!--  -->
-
-<category><pattern>SYSTEM GPT3 STARTED</pattern>
-  <template>gpt3 started.</template>
+<category><pattern>STARTING*</pattern>
+<template>Starting <lowercase><star/></lowercase>
+</template>
 </category>
 
-<category><pattern>SYSTEM GPT3 STOPPED</pattern>
-  <template>gpt3 stopped.</template>
+<category><pattern>STOPPING*</pattern>
+<template>Stopping <lowercase><star/></lowercase>
+</template>
 </category>
 
-<category><pattern>SYSTEM GPT3_HTTP STARTED</pattern>
-  <template>gpt3 http started.</template>
+<category><pattern>STARTING *</pattern>
+<template>Starting <lowercase><star/></lowercase>
+</template>
 </category>
 
-<category><pattern>SYSTEM GPT3_HTTP STOPPED</pattern>
-  <template>gpt3 http stopped.</template>
+<category><pattern>STOPPING *</pattern>
+<template>Stopping <lowercase><star/></lowercase>
+</template>
+</category>
+  
+<category><pattern>SYSTEM_STARTED *</pattern>
+<template>Starting <lowercase><star/></lowercase>
+</template>
+</category>
+  
+<category><pattern>SYSTEM * STARTED</pattern>
+<template>Starting <lowercase><star/></lowercase>
+</template>
+</category>  
+
+<category><pattern>SYSTEM * STOPPED</pattern>
+<template>Stopping <lowercase><star/></lowercase>
+</template>
+</category>
+  
+<category><pattern>SYSTEM_STOPPED *</pattern>
+<template>Stopping <lowercase><star/></lowercase>
+</template>
 </category>
 
-<category><pattern>SYSTEM MOUTH STARTED</pattern>
-  <template>mouth started.</template>
-</category>
-
-<category><pattern>SYSTEM MOUTH STOPPED</pattern>
-  <template>mouth stopped.</template>
-</category>
-
-<category><pattern>SYSTEM HTMLFILTER STARTED</pattern>
-  <template>htmlfilter started.</template>
-</category>
-
-<category><pattern>SYSTEM HTMLFILTER STOPPED</pattern>
-  <template>htmlfilter stopped.</template>
-</category>
-
-<category><pattern>SYSTEM CHATBOT STARTED</pattern>
+<category><pattern>SYSTEM_STARTED CHATBOT</pattern>
   <template>Chatbot loaded, I may start other components, please wait.</template>
 </category>
 
-<category><pattern>SYSTEM OPENWEATHERMAP STARTED</pattern>
+<category><pattern>SYSTEM_STARTED OPENWEATHERMAP</pattern>
   <template>open weathermap started.</template>
 </category>
 
-<category><pattern>SYSTEM OPENWEATHERMAP STOPPED</pattern>
+<category><pattern>SYSTEM_STOPPED OPENWEATHERMAP</pattern>
   <template>stopping open weathermap.</template>
 </category>
 
-<category><pattern>SYSTEM OPENWEATHERMAPNOTSTARTED</pattern>
+<category><pattern>SYSTEM_OPENWEATHERMAPNOTSTARTED</pattern>
   <template>open weathermap not started or maybe not configured.</template>
 </category>
 
-<category><pattern>SYSTEM OPENWEATHERMAPERROR</pattern>
+<category><pattern>SYSTEM_OPENWEATHERMAPERROR</pattern>
   <template>open weathermap error, or maybe this town or units are unrecognized.</template>
 </category>
 
