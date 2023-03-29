@@ -5,37 +5,13 @@ controller: i01.right
 enabled: false
 idleTimeout: 3000
 inverted: false
-listeners:
-- callback: onServoEnable
-  listener: i01.left
-  method: publishServoEnable
-- callback: onServoDisable
-  listener: i01.left
-  method: publishServoDisable
-- callback: onEncoderData
-  listener: i01.simulator
-  method: publishEncoderData
-- callback: onServoSetSpeed
-  listener: i01.left
-  method: publishServoSetSpeed
-- callback: onServoWriteMicroseconds
-  listener: i01.left
-  method: publishServoWriteMicroseconds
-- callback: onServoMoveTo
-  listener: i01.left
-  method: publishServoMoveTo
-- callback: onServoStop
-  listener: i01.left
-  method: publishServoStop
 maxIn: 180.0
 maxOut: 180.0
 minIn: 0.0
 minOut: 0.0
-peers: null
 pin: '22'
-rest: 90.0
-speed: null
+rest: 0.0
+speed: 50.0
 sweepMax: null
 sweepMin: null
-synced: null
 type: Servo
