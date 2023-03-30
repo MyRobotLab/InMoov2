@@ -2,45 +2,21 @@
 <aiml>
 <!-- File: localization.aiml-->
 <!--  -->
-<category><pattern>STARTING*</pattern>
-<template>Starting <lowercase><star/></lowercase>
-</template>
-</category>
 
-<category><pattern>STOPPING*</pattern>
-<template>Stopping <lowercase><star/></lowercase>
-</template>
-</category>
-
-<category><pattern>STARTING *</pattern>
-<template>Starting <lowercase><star/></lowercase>
-</template>
-</category>
-
-<category><pattern>STOPPING *</pattern>
-<template>Stopping <lowercase><star/></lowercase>
-</template>
-</category>
-  
 <category><pattern>SYSTEM_STARTED *</pattern>
 <template>Starting <lowercase><star/></lowercase>
 </template>
 </category>
-  
-<category><pattern>SYSTEM * STARTED</pattern>
-<template>Starting <lowercase><star/></lowercase>
-</template>
-</category>  
 
-<category><pattern>SYSTEM * STOPPED</pattern>
-<template>Stopping <lowercase><star/></lowercase>
-</template>
-</category>
-  
 <category><pattern>SYSTEM_STOPPED *</pattern>
 <template>Stopping <lowercase><star/></lowercase>
 </template>
 </category>
+  
+<category><pattern>SYSTEM_STARTED GESTURES</pattern>
+<template>Loading gestures
+</template>
+</category>  
 
 <category><pattern>SYSTEM_STARTED CHATBOT</pattern>
   <template>Chatbot loaded, I may start other components, please wait.</template>
