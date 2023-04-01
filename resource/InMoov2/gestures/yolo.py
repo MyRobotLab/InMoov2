@@ -7,6 +7,7 @@
 # "classifications" is the dictionary for detected objects in given time
 # after aquisition & position sort, we will read collection content to play with it
 
+## warning : yolo publisher is now inside java land to avoid threading issues because of python sleep
 def onClassification(data):
     global last_item_found
     last_item_found = None
@@ -57,6 +58,11 @@ def enableYoloFor(duration):
     # wait for X
     sleep(duration)
     lastPhotoFileName = i01_opencv.recordFrame()
+    #print lastPhotoFileName
+    #if runtime.isStarted('i01.imageDisplay'):
+      #i01_imageDisplay.display(lastPhotoFileName)
+      #sleep(3)
+      #i01_imageDisplay.closeAll()
     classifications.clear()
     python.unsubscribe('i01.opencv', 'publishClassification')
     i01_opencv.disableFilter("yolo")
