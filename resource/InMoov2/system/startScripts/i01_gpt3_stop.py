@@ -7,9 +7,8 @@
 # Platform.setVirtual(True) 
 
 # release service gpt3
-Runtime.releaseService("i01.gpt3")
-Runtime.releaseService("i01.gpt3.http")
+i01.releasePeer('gpt3')
 if runtime.isStarted('i01.chatBot'):
-   #i01_chatBot.getResponse("STOPPINGGPT3")
+   i01_chatBot.getResponse("SYSTEM_STOPPED GPT3")
    i01_chatBot.setPredicate("gpt3","")
    i01_chatBot.savePredicates()
