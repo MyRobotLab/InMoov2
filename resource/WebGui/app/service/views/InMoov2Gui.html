@@ -392,13 +392,14 @@
                         <div width="120" height="28">
                             <label>Speech Service Type</label>
                             <select ng-disabled="peer.isPeerStarted(service, 'mouth')" class="form-control"
-                                ng-model="service.config.peers['mouth'].type" id="language-select">
+                                ng-model="service.config.peers['mouth'].type" ng-change="setSpeechType()" id="language-select">
                                 <option ng-repeat="speechType in speechTypes" value="{{getShortName(speechType)}}">
                                     {{getShortName(speechType)}}</option>
                             </select>
                         </div>
                     </td>
                 </tr>
+<!--                         
                 <tr>
                     <td>
                         <button class="btn btn-default"
@@ -406,6 +407,7 @@
                             Config</button>
                     </td>
                 </tr>
+-->                        
             </table>
             <!------------------------ mouth end ------------------------------>
             <!------------------------ head begin ------------------------------>
