@@ -38,10 +38,10 @@ def publishRecognized(text):
     lastRecognized=text
     #if i01.RobotIsStarted:
     if runtime.isStarted('i01.fsm'):
-      if i01_fsm.getCurrentState()=="applyingConfig" or "systemCheck":
+      if i01_fsm.getCurrent()=="applyingConfig" or "systemCheck":
         if runtime.isStarted('i01.chatBot'):
-          if i01_fsm.getCurrentState()=="sleeping" and unicode(text,'utf-8')==lockPhrase:sleepModeWakeUp()
-          if i01_fsm.getCurrentState()=="awake" and text!=lockPhrase:
+          if i01_fsm.getCurrent()=="sleeping" and unicode(text,'utf-8')==lockPhrase:sleepModeWakeUp()
+          if i01_fsm.getCurrent()=="awake" and text!=lockPhrase:
             if runtime.isStarted('i01.chatBot'):
               i01_chatBot.getResponse(text)
             humanDetected()
