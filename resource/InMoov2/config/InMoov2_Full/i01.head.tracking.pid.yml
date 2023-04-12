@@ -1,5 +1,4 @@
 !!org.myrobotlab.service.config.PidConfig
-autoStartPeers: true
 data:
   i01.head.tracking.tilt:
     deadband: 0.0

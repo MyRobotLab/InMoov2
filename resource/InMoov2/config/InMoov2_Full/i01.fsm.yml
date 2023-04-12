@@ -1,5 +1,4 @@
 !!org.myrobotlab.service.config.FiniteStateMachineConfig
-autoStartPeers: true
 states:
 - init
 - safe_random_movements

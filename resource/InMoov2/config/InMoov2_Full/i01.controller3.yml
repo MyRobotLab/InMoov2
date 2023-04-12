@@ -1,5 +1,4 @@
 !!org.myrobotlab.service.config.ArduinoConfig
-autoStartPeers: true
 connect: false
 port: null
 serial: i01.controller3.serial
