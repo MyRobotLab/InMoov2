@@ -2879,18 +2879,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUÉ ES *</pattern>
-    <template>
-      <srai>QUÉESX</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE ES *</pattern>
-    <template>
-      <srai>QUÉESX</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUE ES X</pattern>
     <template>
       <srai>QUÉ ES X</srai>
@@ -3859,18 +3847,6 @@
   </category>
   <!--                  pending   QUÉ TE GUSTA DE LAS MUJERES -->
   <!--                  pending   QUÉ TE GUSTA DE LOS HOMBRES -->
-  <category>
-    <pattern>QUIÉN ES *</pattern>
-    <template>
-      <srai>QUIÉNESX</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUIEN ES *</pattern>
-    <template>
-      <srai>QUIÉNESX</srai>
-    </template>
-  </category>
   <category>
     <pattern>* QUIÉN ES</pattern>
     <template>
