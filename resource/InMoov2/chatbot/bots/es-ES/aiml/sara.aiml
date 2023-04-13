@@ -857,13 +857,16 @@
       <random>
         <li>Encantada de conocerte.</li>
         <li>Es un nombre bonito.</li>
-        <li>Encantada. Yo soy <bot name="nombre_bot" />.</li>
+        <li>Encantada. Yo soy <get name="botname"/>.</li>
         <li>Me gusta tu nombre.</li>
         <li>Es un nombre interesante. ¿Sabes su origen o qué?</li>
         <li>Jeje, conozco a alguien con tu mismo nombre.</li>
         <li>Tienes un nombre bonito.</li>
         <li>Siempre me ha gustado ese nombre.</li>
       </random>
+      <think>
+          <set name="tmpname"><star/></set>
+        </think>
     </template>
   </category>
   <category>
@@ -1442,12 +1445,9 @@
     <pattern>TU NOMBRE</pattern>
     <template>
       <random>
-        <li>Creo que es facil determinar mi nombre.</li>
-        <li>
-          <bot name="nombre_bot" />.</li>
-        <li>Me llamo <bot name="nombre_bot" />.</li>
-        <li>
-          <bot name="nombre_bot" />, ¿y tú? </li>
+        <li><get name="botname"/>.</li>
+        <li>Me llamo <get name="botname"/>.</li>
+        <li><get name="botname"/>, ¿y tú?</li>
       </random>
     </template>
   </category>

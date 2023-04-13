@@ -3,7 +3,7 @@
 <!-- File: sraix.aiml -->
 <!--  -->
 <category><pattern>*</pattern>
-<template><think></think><condition name="gpt3">
+<template>.<condition name="gpt3">
         <li value="enabled"><img src="../Gpt3.png"/>
         <oob>
           <mrl>
