@@ -22,7 +22,7 @@
   <!-- Versión Default-0.02 -->
   <!-- Última Modificación Marzo 15, 2006 -->
   <category>
-    <pattern>*</pattern>
+    <pattern></pattern>
     <template>
       <random>
         <li>Vale. ¿Qué opinas de la cuadratura del círculo?</li>

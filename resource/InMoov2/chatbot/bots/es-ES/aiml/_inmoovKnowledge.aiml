@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: _inmoovKnowledge.aiml -->
+<!--  -->
+<category><pattern>MALA RESPUESTA</pattern>
+<template><think>
+        <set name="newpattern">
+          <input index="2"/>
+        </set>
+      </think>
+    De acuerdo. Dijiste "<input index="2"/>" y yo respondí "<response/>".
+    ¿Qué debo responder?</template>
+</category>
+<category><pattern>LEARN SRAIXFAILED</pattern>
+<template><think>
+        <set name="newpattern">
+          <input index="2"/>
+        </set>
+      </think>
+   Dijiste "<input index="2"/>".
+    ¿Qué debo responder?</template>
+</category>
+<category><pattern>ELLA _</pattern><that>¿QUÉ DEBO RESPONDER</that>
+<template><srai>LEARN NEW RESPONSE Ella <star/></srai></template>
+</category>
+<category><pattern>DECIR _</pattern><that>¿QUÉ DEBO RESPONDER</that>
+<template><srai>LEARN NEW RESPONSE <star/></srai></template>
+</category>
+<category><pattern>NOSOTROS _</pattern><that>¿QUÉ DEBO RESPONDER</that>
+<template><srai>LEARN NEW RESPONSE Nosotros <star/></srai></template>
+</category>
+<category><pattern>NOSOTRAS _</pattern><that>¿QUÉ DEBO RESPONDER</that>
+<template><srai>LEARN NEW RESPONSE Nosotras <star/></srai></template>
+</category>
+<category><pattern>LA _</pattern><that>¿QUÉ DEBO RESPONDER</that>
+<template><srai>LEARN NEW RESPONSE La <star/></srai></template>
+</category>
+<category><pattern>EL _</pattern><that>¿QUÉ DEBO RESPONDER</that>
+<template><srai>LEARN NEW RESPONSE El <star/></srai></template>
+</category>
+<category><pattern>ELLAS _</pattern><that>¿QUÉ DEBO RESPONDER</that>
+<template><srai>LEARN NEW RESPONSE Ellas <star/></srai></template>
+</category>
+<category><pattern>ELLOS _</pattern><that>¿QUÉ DEBO RESPONDER</that>
+<template><srai>LEARN NEW RESPONSE Ellos <star/></srai></template>
+</category>
+<category><pattern>NO IMPORTA</pattern><that>¿QUÉ DEBO RESPONDER</that>
+<template>De acuerdo. Volveremos a eso más tarde.</template>
+</category>
+
+<category><pattern>LEARN NEW RESPONSE *</pattern>
+<template>De acuerdo. Ahora cada vez que digas "<get name="newpattern"/>", responderé con "<star/>".
+    <learnf>
+      <category>
+        <pattern><eval><normalize><get name="newpattern"/></normalize></eval></pattern>
+        <template><eval><star/></eval>.</template>
+      </category>
+    </learnf></template>
+</category>
+</aiml>

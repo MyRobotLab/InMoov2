@@ -864,6 +864,13 @@
         <li>Tienes un nombre bonito.</li>
         <li>Siempre me ha gustado ese nombre.</li>
       </random>
+      <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername","u<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>")</param>
+          </mrl>
+        </oob>
     </template>
   </category>
   <category>
