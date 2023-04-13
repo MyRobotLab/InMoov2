@@ -66,7 +66,7 @@
           <li><get name="tmpname" /> ? en serio, lo guardaré toda mi vida. Muy mal. </li>
           <li><get name="tmpname" /> ? realmente, lo guardaré toda mi vida, entonces. gran. </li>
         </random>
-	        Necesito saber más sobre ti, te estoy escuchando, PUEDO TENER SU PRIMER NOMBRE ?
+	        Necesito saber más sobre ti, te estoy escuchando, puedo tener su primer nombre ?
 	        <think><set name="botname"><get name="tmpname" /></set></think></template>
     </category>
     <category>
@@ -76,7 +76,7 @@
         <random>
           <li>Ahora nos conocemos, <get name="tmpname" />. Estoy casi movido. </li>
           <li>Te reconocí en realidad <get name="tmpname" /> . </li>
-          <li><get name="tmpname" /> et <get name="botname" /> , Lo encuentro agradable. </li>
+          <li><get name="tmpname" /> et <get name="botname" /> , lo encuentro agradable. </li>
         </random>
         <think>
           <set name="name"><get name="tmpname" /></set>
@@ -87,7 +87,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname","<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name","<get name="tmpname"/>"), i01_chatBot.setPredicate(u"default","lastUsername","<get name="tmpname"/>"), i01_chatBot.setPredicate(u"default","firstinit","ok"), i01_chatBot.savePredicates()</param>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername","u<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>")</param>
           </mrl>
         </oob>
         <srai>WAKE_UP</srai>
@@ -104,7 +104,7 @@
       <pattern># no #</pattern>
       <that># SI TU NOMBRE #</that>
       <template>
-        Comenzamos de nuevo. Te escucho. PUEDO TENER SU PRIMER NOMBRE ?
+        Comenzamos de nuevo. Te escucho. puedo tener su primer nombre ?
       </template>
     </category>
     <category>
@@ -135,8 +135,7 @@
   
   <category>
     <pattern>SYSTEM_SAY_HELLO</pattern>
-    <template>
-        Buenos dias
+    <template>Buenos dias
     </template>
   </category>
     <category>
