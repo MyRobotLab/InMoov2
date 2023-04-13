@@ -2,14 +2,43 @@
 <aiml>
 <!-- File: sraix.aiml -->
 <!--  -->
-<category><pattern>*</pattern>
+<category>
+  <pattern>*</pattern>
+    <template>
+      <think>
+        <set name="what">
+          <star />
+        </set>
+      </think>
+      <think>
+        <set name="courant">
+          <star />
+        </set>
+      </think>
+      <think>
+        <set name="topic">
+          <star />
+        </set>
+      </think>
+      <srai>WIKI</srai>
+    </template>
+  </category>
+
+
+<category><pattern>WIKI</pattern>
+<template><sraix><get name="courant"/></sraix>
+        </template>
+</category>
+
+<category><pattern>SRAIXFAILED *</pattern>
 <template>.<condition name="gpt3">
         <li value="enabled"><img src="../Gpt3.png"/>
         <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_gpt3.onText("<star/>")</param>
+            <param>i01_gpt3.onText(u"<condition name="askGpt3">
+        <li><get name="askGpt3" /> <get name="courant" /></li> <li value="unknown"><get name="what" /></li></condition>")</param>
           </mrl>
         </oob>
         </li>
