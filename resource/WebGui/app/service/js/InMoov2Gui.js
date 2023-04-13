@@ -114,7 +114,7 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
 
         let onOK = function() {
             msg.sendTo('runtime', 'setConfig', $scope.service.configName)
-            msg.sendTo('runtime', 'save')
+            msg.sendTo('runtime', 'saveConfig', $scope.service.configName)
         }
 
         let onCancel = function() {
