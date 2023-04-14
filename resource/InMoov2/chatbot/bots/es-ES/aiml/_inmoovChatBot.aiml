@@ -119,6 +119,103 @@
       </template>
     </category>
   </topic>
+<category><pattern>NEW_INIT</pattern>
+<template><think>
+        <set name="newinit">started</set>
+      </think>
+      <think>
+        <set name="topic">newinit</set>
+      </think>
+        Estoy escuchando. ¿A qué te gustaría cambiar mi nombre?</template>
+</category>
+<topic name="NEWINIT">
+<category><pattern>#</pattern><that># ¿A QUÉ TE GUSTARÍA CAMBIAR #</that>
+<template><set name="questionnewinit">si mi nuevo nombre es <star/> , di sí o no o detente</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="NEWINIT">
+<category><pattern># SÍ #</pattern><that># SI MI NUEVO NOMBRE ES #</that>
+<template><random>
+            <li>
+            Me gusta este nombre , <get name="tmpname"/>.
+            </li>
+            <li>
+            Buen nombre, <get name="tmpname"/> es genial.
+            </li>
+        </random>
+    <think>
+        <set name="botname"><get name="tmpname"/></set>
+        <set name="newinit"></set>
+        <set name="topic">cambio de nombre</set>
+    </think>
+</template>
+</category></topic>
+
+<topic name="NEWINIT">
+<category><pattern># NO #</pattern><that># SI MI NUEVO NOMBRE ES #</that>
+<template>Vamos a reiniciar.
+    Estoy escuchando. ¿A qué te gustaría cambiar mi nombre?</template>
+</category></topic>
+
+<topic name="NEWINIT">
+<category><pattern># DETENTE #</pattern><that># SI MI NUEVO NOMBRE ES #</that>
+<template>Ok me quedo con mi nombre <get name="botname"/></template>
+</category></topic>
+
+<category><pattern>NEW_INIT_USER</pattern>
+<template><think>
+        <set name="newinituser">started</set>
+      </think>
+      <think>
+        <set name="topic">newinituser</set>
+      </think>
+        Estoy escuchando. ¿Qué nombre te gustaría que memorizara?</template>
+</category>
+<topic name="NEWINITUSER">
+<category><pattern>#</pattern><that># GUSTARÍA QUE MEMORIZARA #</that>
+<template><set name="questionnewinituser">si su nuevo nombre es <estrella/> , diga sí o no o detente</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="NEWINITUSER">
+<category><pattern># SÍ #</pattern><that># SI SU NUEVO NOMBRE ES #</that>
+<template><think>
+        <set name="newinituser"></set>
+        <set name="topic">cambio de nombre de usuario</set>
+    </think>
+    <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>YesName(u"<get name="tmpname"/>"), i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"human","lastUsername","u<get name="tmpname"/>"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+        <random>
+            <li>Estoy encantado de conocerte, <get name="tmpname"/>.</li>
+            <li>Encantado de conocerte, <get name="tmpname"/>.</li>
+        </random>
+</template>
+</category></topic>
+
+<topic name="NEWINITUSER">
+<category><pattern># NO #</pattern><that># SI SU NUEVO NOMBRE ES #</that>
+<template>Vamos a reiniciar.
+    Estoy escuchando. ¿A qué te gustaría cambiar tu nombre? ?</template>
+</category></topic>
+
+<topic name="NEWINITUSER">
+<category><pattern># DETENTE #</pattern><that># SI SU NUEVO NOMBRE ES #</that>
+<template>Ok me quedo con tu nombre <get name="name"/></template>
+</category></topic>	
   <!-- end initialisaion routine -->
   
   <!-- wakeup action ( WAKE_UP is globalized )-->
