@@ -873,21 +873,10 @@
   <category>
     <pattern>ME LLAMO</pattern>
     <template>
-      <random>
-        <li>Encantada de conocerte.</li>
-        <li>Es un nombre bonito.</li>
-        <li>Encantada. Yo soy <get name="botname"/>.</li>
-        <li>Me gusta tu nombre.</li>
-        <li>Es un nombre interesante. ¿Sabes su origen o qué?</li>
-        <li>Jeje, conozco a alguien con tu mismo nombre.</li>
-        <li>Tienes un nombre bonito.</li>
-        <li>Siempre me ha gustado ese nombre.</li>
-      </random>
-      <think>
-          <set name="tmpname"><star/></set>
-        </think>
+      <srai>NEW_INIT_USER</srai>
     </template>
   </category>
+  <category>
   <category>
     <pattern>MENTIROSA</pattern>
     <template>
