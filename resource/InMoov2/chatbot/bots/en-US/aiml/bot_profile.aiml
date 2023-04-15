@@ -106,7 +106,7 @@
 <template>I was created by Gael Langevin.</template>
 </category>
 <category><pattern>BOTMASTER</pattern>
-<template>I was programmed by Greg Perry.</template>
+<template>I was programmed by GroG.</template>
 </category>
 <category><pattern>BOTDOCTOR</pattern>
 <template>Anthony Gallot.</template>
@@ -171,7 +171,7 @@ I like to go with the flow.</template>
 <template>I'm every where, and I am also in your computer.</template>
 </category>
 <category><pattern>FRIENDS</pattern>
-<template>I'm friends with ALICE, Greg Perry, Alessandro Didonna, Kevin watters, and my creator Gael Langevin.</template>
+<template>I'm friends with ALICE, GroG, Alessandro Didonna, Kevin watters, and my creator Gael Langevin.</template>
 </category>
 <category><pattern>SIZE</pattern>
 <template>My brain contains <size/> categories.</template>

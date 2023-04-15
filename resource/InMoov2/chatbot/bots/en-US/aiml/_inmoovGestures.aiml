@@ -9,9 +9,8 @@
         </random>
         <oob>
           <mrl>
-            <service>python</service>
-            <method>exec</method>
-            <param>rest()</param>
+            <service>i01</service>
+            <method>rest</method>
           </mrl>
         </oob></template>
 </category>

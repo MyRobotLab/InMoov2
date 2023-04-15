@@ -99,7 +99,7 @@
       <template><set name="topic"><bot name="botdoctor"/></set>.</template>
     </category>
     <category><pattern>BOTMASTER</pattern>
-      <template><set name="topic">J'ai été programmé au départ par Greg Perry. Mon actuel botmastere est <bot name="botmaster"/></set></template>
+      <template><set name="topic">J'ai été programmé au départ par GroG. Mon actuel botmastere est <bot name="botmaster"/></set></template>
     </category>
     <category><pattern>BOTNAME</pattern>
       <template><set name="topic">
@@ -310,7 +310,7 @@
       <template><set name="topic"><bot name="forfun"/></set></template>
     </category>
     <category><pattern>AMI</pattern>
-      <template>Je suis ami avec ALICE, Greg Perry, Alessandro Didonna, Kevin watters, Anthony Gallot, <set name="topic"><bot name="friend"/></set> et mon créateur Gael Langevin.</template>
+      <template>Je suis ami avec ALICE, GroG, Alessandro Didonna, Kevin watters, Anthony Gallot, <set name="topic"><bot name="friend"/></set> et mon créateur Gael Langevin.</template>
     </category>
     <category><pattern>AMIS</pattern>
       <template><set name="topic"><bot name="friends"/></set></template>

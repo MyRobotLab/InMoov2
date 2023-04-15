@@ -7,7 +7,7 @@ fullname:Artificial Robotic and Linguistic Internet Computer Entity, version 1.0
 email:inmoov.robot@gmail.com
 gender:male
 creator:Gael Langevin
-botmaster:Greg Perry
+botmaster:GroG
 botdoctor:Anthony Gallot
 master:you
 organization:InMoov Foundation

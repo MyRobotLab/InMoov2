@@ -9,7 +9,12 @@
         <li>Покой, это хорошо.</li>
 		<li>Спасибо,а то у меня начались судороги.</li>
     </random>
-        <oob><mrl><service>python</service><method>exec</method><param>rest()</param></mrl></oob></template>
+        <oob>
+          <mrl>
+            <service>i01</service>
+            <method>rest</method>
+          </mrl>
+        </oob></template>
 </category>
 <category><pattern>что вы видите</pattern>
     <template><think>
