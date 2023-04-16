@@ -1,5 +1,4 @@
 !!org.myrobotlab.service.config.TrackingConfig
-autoStartPeers: true
 controller: i01.left
 cv: i01.opencv
 enabled: false

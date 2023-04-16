@@ -1,14 +1,16 @@
 !!org.myrobotlab.service.config.RuntimeConfig
-autoStartPeers: true
 enableCli: true
-locale: en-US
+id: null
+locale: null
 logLevel: null
+peers: null
 registry:
 - runtime
 - security
 - webgui
-- intro
 - python
+- intro
+- i01.audioPlayer
 - i01
 - i01.rightHand.index
 - i01.rightHand.majeure
@@ -17,18 +19,17 @@ registry:
 - i01.rightHand.thumb
 - i01.rightHand.wrist
 - i01.rightHand
+- i01.right
+- i01.mouth.audioFile
+- i01.mouth
+- i01.htmlFilter
+- i01.chatBot.search
+- i01.chatBot
 - i01.rightArm.bicep
 - i01.rightArm.omoplate
 - i01.rightArm.rotate
 - i01.rightArm.shoulder
-- i01.simulator
 - i01.rightArm
-- i01.right
-- i01.mouth.audioFile
-- i01.mouth
 - i01.ear
-- i01.chatBot.search
-- i01.chatBot
-- i01.htmlFilter
 type: Runtime
-virtual: false
+virtual: null

@@ -4,15 +4,16 @@
 # ##############################################################################
 
 
-security.loadStore()
-apikey = security.getSecret("OPENWEATHERMAP")
 def initOwm():
+  security.loadStore()
+  global apikey
   apikey = security.getSecret("OPENWEATHERMAP")
 
 # forecast index 1 is next 3 hours , so 24 hours is 8
 def isTheSunShiny(townParam="town",period=1):
   if runtime.isStarted('i01.openWeatherMap'):
     initOwm()
+    global apikey
     if apikey==None:
       runtime.warn('open weathermap key error')
       errorSpokenFunc("ALERT",", open weathermap key error")

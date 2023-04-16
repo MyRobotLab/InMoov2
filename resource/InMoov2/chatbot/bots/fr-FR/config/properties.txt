@@ -4,7 +4,7 @@ email:inmoov.robot@gmail.com
 facebook page:
 
 creator:Gaël Langevin
-botmaster:Greg Perry
+botmaster:GroG
 botdoctor:Anthony Gallot
 
 master:you

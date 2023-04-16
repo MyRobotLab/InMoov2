@@ -11,7 +11,10 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     let centerY = 226
     let radius = 215
 
+    let firstTime = true
+
     $scope.peer = peer
+    $scope.mrl = mrl
 
     $scope.servos = []
     $scope.sliders = []
@@ -76,7 +79,7 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         if ($scope.selectedConfig.length) {
             for (let i = 0; i < $scope.selectedConfig.length; ++i) {
                 // msg.sendTo('runtime', 'load', 'data/config/' + $scope.selectedConfig[i] + '/runtime.yml')
-                msg.sendTo('runtime', 'setConfigName', $scope.selectedConfig[i])
+                msg.sendTo('runtime', 'setConfig', $scope.selectedConfig[i])
                 msg.sendTo('runtime', 'load', 'runtime')
             }
         }
@@ -86,21 +89,21 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         console.info('startConfig')
         if ($scope.selectedConfig.length) {
             for (let i = 0; i < $scope.selectedConfig.length; ++i) {
-                msg.sendTo('runtime', 'startConfigSet', $scope.selectedConfig[i])
+                msg.sendTo('runtime', 'startConfig', $scope.selectedConfig[i])
             }
         }
     }
 
-    $scope.unsetConfigName = function() {
-        console.info('unsetConfigName')
-        msg.sendTo('runtime', 'unsetConfigName')
+    $scope.unsetConfig = function() {
+        console.info('unsetConfig')
+        msg.sendTo('runtime', 'unsetConfig')
     }
 
     $scope.releaseConfig = function() {
         console.info('releaseConfig')
         if ($scope.selectedConfig && $scope.selectedConfig.length) {
             for (let i = 0; i < $scope.selectedConfig.length; ++i) {
-                // msg.sendTo('runtime', 'setConfigName', $scope.selectedConfig[i])
+                // msg.sendTo('runtime', 'setConfig', $scope.selectedConfig[i])
                 msg.sendTo('runtime', 'releaseConfig', $scope.selectedConfig[i])
             }
         }
@@ -110,8 +113,8 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         console.info('saveConfig')
 
         let onOK = function() {
-            msg.sendTo('runtime', 'setConfigName', $scope.service.configName)
-            msg.sendTo('runtime', 'save')
+            msg.sendTo('runtime', 'setConfig', $scope.service.configName)
+            msg.sendTo('runtime', 'saveConfig', $scope.service.configName)
         }
 
         let onCancel = function() {
@@ -164,10 +167,16 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     // GOOD TEMPLATE TO FOLLOW
     this.updateState = function(service) {
         $scope.service = service
+
         $scope.service.configName = mrl.getService('runtime').configName
         $scope.languageSelected = service.locale.tag
         $scope.mouth = mrl.getService(service.name + '.mouth')
 
+        if (firstTime){
+            mrl.changeTab(service.name)
+            firstTime = false
+        }
+        
         $scope.$apply()
     }
 
@@ -282,11 +291,11 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         }
     }
 
-    $scope.setConfigName = function() {
-        console.info('setConfigName')
+    $scope.setConfig = function() {
+        console.info('setConfig')
         if ($scope.selectedConfig.length > 0) {
             $scope.service.configName = $scope.selectedConfig[0]
-            msg.sendTo('runtime', 'setConfigName', $scope.service.configName)
+            msg.sendTo('runtime', 'setConfig', $scope.service.configName)
         }
     }
 
@@ -299,6 +308,10 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         console.info('execScript')
         msg.send('execScript', resourceScript)
     }    
+
+    $scope.setSpeechType = function(){
+        msg.send('setSpeechType', $scope.service.config.peers['mouth'].type)
+    }
 
     // circular main menu buttons
     addButton('brain', 'circular')
@@ -331,5 +344,6 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     msg.sendTo(mrl.getRuntime().name, 'getServiceTypeNamesFromInterface', 'SpeechSynthesis')
     msg.sendTo(mrl.getRuntime().name, 'publishConfigList')
     msg.subscribe(this)
+    
 }
 ])

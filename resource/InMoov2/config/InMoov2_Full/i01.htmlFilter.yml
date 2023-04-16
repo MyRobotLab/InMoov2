@@ -1,8 +1,11 @@
 !!org.myrobotlab.service.config.HtmlFilterConfig
-autoStartPeers: true
+listeners:
+- callback: onText
+  listener: i01.mouth
+  method: publishText
+peers: null
 postHtmlTag: </pre>
 preHtmlTag: <pre>
 stripHtml: true
-textListeners:
-- i01.mouth
+stripUrls: true
 type: HtmlFilter

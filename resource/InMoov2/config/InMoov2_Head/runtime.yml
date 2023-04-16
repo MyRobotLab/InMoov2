@@ -1,8 +1,11 @@
 !!org.myrobotlab.service.config.RuntimeConfig
-autoStartPeers: true
 enableCli: true
-locale: en-US
+id: null
+listeners:
+
+locale: null
 logLevel: null
+peers: null
 registry:
 - runtime
 - security
@@ -13,15 +16,11 @@ registry:
 - i01.mouth.audioFile
 - i01.mouth
 - i01.ear
-- i01.chatBot.search
 - i01.chatBot
 - i01.htmlFilter
 - i01.head.eyeX
 - i01.head.eyeY
-- i01.head.eyelidLeft
-- i01.head.eyelidRight
 - i01.head.jaw
-- i01.head.mouthControl
 - i01.head.neck
 - i01.head.rollNeck
 - i01.head.rothead

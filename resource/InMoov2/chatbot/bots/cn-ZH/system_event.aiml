@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED audioPlayer</pattern>
+    <template>音频播放器已启动</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED audioPlayer</pattern>
+    <template>停止音频播放器</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED chatBot</pattern>
+    <template>对话系统准备就绪，现在启动其他组件</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED chatBot</pattern>
+    <template>停止聊天机器人</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED controller3</pattern>
+    <template>启动控制器三</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED controller3</pattern>
+    <template>停止控制器三</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED controller4</pattern>
+    <template>启动控制器四</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED controller4</pattern>
+    <template>停止控制器四</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED ear</pattern>
+    <template>启动耳朵</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED ear</pattern>
+    <template>停止耳朵</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED eyeTracking</pattern>
+    <template>启动眼动追踪</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED eyeTracking</pattern>
+    <template>停止眼动追踪</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED fsm</pattern>
+    <template>启动fsm</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED fsm</pattern>
+    <template>停止fsm</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED gpt3</pattern>
+    <template>启动gpt3</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED gpt3</pattern>
+    <template>停止gpt3</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED head</pattern>
+    <template>启动头部</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED head</pattern>
+    <template>停止头部</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED headTracking</pattern>
+    <template>启动头部跟踪</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED headTracking</pattern>
+    <template>停止头部跟踪</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED htmlFilter</pattern>
+    <template>启动html过滤器</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED htmlFilter</pattern>
+    <template>停止html过滤器</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED imageDisplay</pattern>
+    <template>启动图像显示</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED imageDisplay</pattern>
+    <template>停止图像显示</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED leap</pattern>
+    <template>启动leap</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED leap</pattern>
+    <template>停止leap</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED left</pattern>
+    <template>启动左侧</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED left</pattern>
+    <template>停止左侧</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED leftArm</pattern>
+    <template>启动左臂</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED leftArm</pattern>
+    <template>停止左臂</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED leftHand</pattern>
+    <template>启动左手</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED leftHand</pattern>
+    <template>停止左手</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED mouth</pattern>
+    <template>启动嘴巴</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED mouth</pattern>
+    <template>停止嘴巴</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED mouthControl</pattern>
+    <template>启动口控</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED mouthControl</pattern>
+    <template>停止口控</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED neoPixel</pattern>
+    <template>启动NeoPixel</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED neoPixel</pattern>
+    <template>停止NeoPixel</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED openWeatherMap</pattern>
+    <template>启动OpenWeatherMap</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED openWeatherMap</pattern>
+    <template>停止OpenWeatherMap</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED opencv</pattern>
+    <template>启动视觉</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED opencv</pattern>
+    <template>停止视觉</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED openni</pattern>
+    <template>启动openni</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED openni</pattern>
+    <template>停止openni</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED pid</pattern>
+    <template>启动pid</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED pid</pattern>
+    <template>停止pid</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED pir</pattern>
+    <template>启动运动传感器</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED pir</pattern>
+    <template>停止运动传感器</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED random</pattern>
+    <template>启动随机</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED random</pattern>
+    <template>停止随机</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED right</pattern>
+    <template>右侧开始</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED right</pattern>
+    <template>右侧停止</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED rightArm</pattern>
+    <template>右臂开始</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED rightArm</pattern>
+    <template>右臂停止</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED rightHand</pattern>
+    <template>右手开始</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED rightHand</pattern>
+    <template>右手停止</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED servoMixer</pattern>
+    <template>舵机混合器开始</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED servoMixer</pattern>
+    <template>舵机混合器停止</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED simulator</pattern>
+    <template>模拟器开始</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED simulator</pattern>
+    <template>模拟器停止</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED torso</pattern>
+    <template>躯干开始</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED torso</pattern>
+    <template>躯干停止</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED ultrasonicLeft</pattern>
+    <template>左超声波传感器开始</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED ultrasonicLeft</pattern>
+    <template>左超声波传感器停止</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED ultrasonicRight</pattern>
+    <template>右超声波传感器开始</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED ultrasonicRight</pattern>
+    <template>右超声波传感器停止</template>
+  </category>
+</aiml>

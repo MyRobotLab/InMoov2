@@ -12,12 +12,12 @@
           <li>Rust nemen</li>
         </random>
         <oob>
+        <oob>
           <mrl>
-            <service>python</service>
-            <method>exec</method>
-            <param>rest()</param>
+            <service>i01</service>
+            <method>rest</method>
           </mrl>
-        </oob>
+        </oob></template>
       </template>
     </category>
 

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED audioPlayer</pattern>
+    <template>Audioplayer başlatılıyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED audioPlayer</pattern>
+    <template>Audioplayer durduruluyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED chatBot</pattern>
+    <template>Diyalog sistemi hazır, şimdi diğer bileşenleri başlatın</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED chatBot</pattern>
+    <template>Chatbot durduruluyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED controller3</pattern>
+    <template>Kontrolör üç başlatılıyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED controller3</pattern>
+    <template>Kontrolör üç durduruluyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED controller4</pattern>
+    <template>Kontrolör dört başlatılıyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED controller4</pattern>
+    <template>Kontrolör dört durduruluyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED ear</pattern>
+    <template>Kulaklar başlatılıyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED ear</pattern>
+    <template>Kulaklar durduruluyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED eyeTracking</pattern>
+    <template>Göz takibi başlatılıyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED eyeTracking</pattern>
+    <template>Göz takibi durduruluyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED fsm</pattern>
+    <template>fsm başlatılıyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED fsm</pattern>
+    <template>fsm durduruluyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED gpt3</pattern>
+    <template>gpt3 başlatılıyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED gpt3</pattern>
+    <template>gpt3 durduruluyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED head</pattern>
+    <template>Kafa başlatılıyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED head</pattern>
+    <template>Kafa durduruluyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED headTracking</pattern>
+    <template>Kafa takibi başlatılıyor</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED headTracking</pattern>
+    <template>Kafa takibi durduruluyor</template>
+  </category>
+
+<category>
+    <pattern>SYSTEM_EVENT STARTED htmlFilter</pattern>
+    <template>html Filtresi başlat</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STOPPED htmlFilter</pattern>
+    <template>html Filtresi durdur</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STARTED imageDisplay</pattern>
+    <template>Ekranı başlat</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STOPPED imageDisplay</pattern>
+    <template>Ekranı durdur</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STARTED leap</pattern>
+    <template>leap başlat</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STOPPED leap</pattern>
+    <template>leap durdur</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STARTED left</pattern>
+    <template>Sola başlat</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STOPPED left</pattern>
+    <template>Sola durdur</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STARTED leftArm</pattern>
+    <template>Sol kol başlat</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STOPPED leftArm</pattern>
+    <template>Sol kol durdur</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STARTED leftHand</pattern>
+    <template>Sol el başlat</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STOPPED leftHand</pattern>
+    <template>Sol el durdur</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STARTED mouth</pattern>
+    <template>Ağız başlat</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STOPPED mouth</pattern>
+    <template>Ağız durdur</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STARTED mouthControl</pattern>
+    <template>Ağız kontrolünü başlat</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STOPPED mouthControl</pattern>
+    <template>Ağız kontrolünü durdur</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STARTED neoPixel</pattern>
+    <template>neoPixel başlat</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STOPPED neoPixel</pattern>
+    <template>neoPixel durdur</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STARTED openWeatherMap</pattern>
+    <template>Hava durumu haritasını başlat</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STOPPED openWeatherMap</pattern>
+    <template>Hava durumu haritasını durdur</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STARTED opencv</pattern>
+    <template>görüntü işleme başlat</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED opencv</pattern>
+    <template>görüntü işleme durdur</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED openni</pattern>
+    <template>openni başlat</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED openni</pattern>
+    <template>openni durdur</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED pid</pattern>
+    <template>pid başlat</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED pid</pattern>
+    <template>pid durdur</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED pir</pattern>
+    <template>Hareket sensörü başlat</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED pir</pattern>
+    <template>Hareket sensörü durdur</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED random</pattern>
+    <template>rastgele başlat</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED random</pattern>
+    <template>rastgele durdur</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED right</pattern>
+    <template>Sağ başlat</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED right</pattern>
+    <template>Sağ durdur</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED rightArm</pattern>
+    <template>Sağ kol başlat</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED rightArm</pattern>
+    <template>Sağ kol durdur</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED rightHand</pattern>
+    <template>Sağ el başlat</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED rightHand</pattern>
+    <template>Sağ el durdur</template>
+  </category>
+<category>
+    <pattern>SYSTEM_EVENT STARTED servoMixer</pattern>
+    <template>Servomikser başlat</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED servoMixer</pattern>
+    <template>Servomikser durdur</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED simulator</pattern>
+    <template>simülasyon başlat</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED simulator</pattern>
+    <template>simülasyon durdur</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED torso</pattern>
+    <template>tors başlat</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED torso</pattern>
+    <template>tors durdur</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED ultrasonicLeft</pattern>
+    <template>Sol ultrasonik sensörü başlat</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED ultrasonicLeft</pattern>
+    <template>Sol ultrasonik sensörü durdur</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED ultrasonicRight</pattern>
+    <template>Sağ ultrasonik sensörü başlat</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED ultrasonicRight</pattern>
+    <template>Sağ ultrasonik sensörü durdur</template>
+  </category>
+  
+</aiml>

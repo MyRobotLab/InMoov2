@@ -1,5 +1,4 @@
 !!org.myrobotlab.service.config.MouthControlConfig
-autoStartPeers: true
 delaytime: 75
 delaytimeletter: 45
 delaytimestop: 150

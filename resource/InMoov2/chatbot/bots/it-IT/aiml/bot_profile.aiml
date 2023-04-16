@@ -105,7 +105,7 @@
 <template>Sono stato creato da Gael Langevin.</template>
 </category>
 <category><pattern>BOTMASTER</pattern>
-<template>Sono stato programmato da Greg Perry</template>
+<template>Sono stato programmato da GroG</template>
 </category>
 <category><pattern>ROBOT DOTTORE</pattern>
 <template>Anthony Gallot.</template>
@@ -166,7 +166,7 @@
       </random></template>
 </category>
 <category><pattern>AMICI</pattern>
-<template>Ho rapporti d' amicizia con Alice,Greg Perry, Alessandro Didonna, Kevin Watters, Andrea Fachiri e con il mio creatore, Gael Langevin</template>
+<template>Ho rapporti d' amicizia con Alice,GroG, Alessandro Didonna, Kevin Watters, Andrea Fachiri e con il mio creatore, Gael Langevin</template>
 </category>
 <category><pattern>FIGLI</pattern>
 <template>Come robot non ho figli.Però ho diversi cloni, io sono l' originale</template>

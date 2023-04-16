@@ -2,9 +2,9 @@
 
 # We classify objects per frame and get the maximum detected for 1 frame only
 # So we can list & count at one time, every available classified object in the field of view, in given time
-# Also get given element (label) position if set, from all others in the field off view, from left to right
+# Also get given element (last_item_found) position if set, from all others in the field off view, from left to right
 
-# "i01_vision_collectionCount" is the dictionary for detected objects in given time
+# "classifications" is the dictionary for detected objects in given time
 # after aquisition & position sort, we will read collection content to play with it
 
 ## warning : yolo publisher is now inside java land to avoid threading issues because of python sleep
@@ -40,10 +40,7 @@ def getYoloPosition(last_item_found):
   # to not launch gesture, comment showObject :
   print "Position of : ", last_item_found, position
   showObject(position)
-  return position  
-
-# TODO classify while head moves ! ( count )
-# TODO what do you see in front of you ( few centimeters -> use gael mods )
+  return position
 
 global lastPhotoFileName
 #shared function to start & stop yolo filter

@@ -34,7 +34,7 @@ def sleepModeWakeUp():
       else:  
         i01_pir.disable()
   #if RobotIsStarted==1:
-  if i01_fsm.getCurrentState()=="awake" or "systemCheck":
+  if i01_fsm.getCurrent()=="awake" or "systemCheck":
     
     if runtime.isStarted('i01.imageDisplay'):
       i01_imageDisplay.closeAll()
@@ -129,7 +129,7 @@ def wakeUpModeInsult():
         i01_pir.disable()
     
     #if RobotIsStarted==1:
-    if i01_fsm.getCurrentState()=="applyingConfig" or "systemCheck":  
+    if i01_fsm.getCurrent()=="applyingConfig" or "systemCheck":  
       if runtime.isStarted('i01.imageDisplay'):
         i01_imageDisplay.closeAll()
       if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Larson Scanner", 0, 255, 0, 25)
@@ -230,7 +230,7 @@ def humanDetected():
     
 def sleepTimerRoutine(timedata):
   #if RobotIsSleeping==0:
-  if not i01_fsm.getCurrentState()=="sleeping":
+  if not i01_fsm.getCurrent()=="sleeping":
     if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Larson Scanner", 17, 126, 57, 1)
     if runtime.isStarted("i01.pir"):
       i01_pir.disable()

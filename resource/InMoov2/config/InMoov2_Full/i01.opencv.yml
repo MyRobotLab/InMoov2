@@ -1,5 +1,4 @@
 !!org.myrobotlab.service.config.OpenCVConfig
-autoStartPeers: true
 cameraIndex: 0
 capturing: false
 filters: {
@@ -7,6 +6,11 @@ filters: {
 grabberType: OpenCV
 inputFile: null
 inputSource: camera
+listeners:
+- callback: onCvData
+  listener: i01.simulator
+  method: publishCvData
 nativeViewer: true
+peers: null
 type: OpenCV
 webViewer: false

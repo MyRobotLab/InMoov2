@@ -1,11 +1,14 @@
 !!org.myrobotlab.service.config.NeoPixelConfig
-autoStartPeers: true
+autoClear: false
 blue: 212
 brightness: 255
-controller: i01.controller3
+controller: null
 currentAnimation: Ironman
 fill: false
 green: 180
+idleTimeout: 1000
+listeners: null
+peers: null
 pin: 2
 pixelCount: 16
 pixelDepth: 3

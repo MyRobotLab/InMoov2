@@ -5,7 +5,7 @@
 ################################
 # INIT.1 - system dependencies & language pack
 ################################
-
+DEBUG=0
 log = runtime.start("log", "Log")
 runtime.setLogLevel("INFO")
 # libraries import
@@ -28,36 +28,35 @@ execfile('resource/InMoov2/system/Errors.py'.encode('utf8'))
 #if IsMute==1:i01.setMute(True)
 execfile('resource/InMoov2/life/0_inmoovLife.py')
 ################################
-# INIT.3 - services call
+# INIT.2 - services call
 ################################
 #we load services python side from services folder
 #for filename in sorted(os.listdir('resource/InMoov2/services')):    
   #if os.path.splitext(filename)[1] == ".py":
     #execfile('resource/InMoov2/services/'+filename.encode('utf8'))
     #if DEBUG==1:print filename
-#runtime.startConfig('InMoov2_Full')
 execfile('resource/InMoov2/services/1_AudioFile.py')
 execfile('resource/InMoov2/services/3_ImageDisplay.py')
 execfile('resource/InMoov2/services/4_Ear.py')
 execfile('resource/InMoov2/services/5_Mouth.py')
-#6_Arduino.py
-#7_Inmoov.py
-#8_NervoBoardRelay.py
+#6_Arduino.py ## NOT NECESSARY FOR NIXIE
+#7_Inmoov.py  ## NEED FIXING FOR NIXIE
+#8_NervoBoardRelay.py  ##NEED FIXING FOR NIXIE
 execfile('resource/InMoov2/services/9_neoPixel.py')
 #execfile('resource/InMoov2/services/A_Chatbot.py')
-#B_Wikidata.py
+#B_Wikidata.py  ## NOT NECESSARY FOR NIXIE?
 execfile('resource/InMoov2/services/C_Pir.py')
 execfile('resource/InMoov2/services/D_OpenCv.py')
-#E_Oak.py
-#F_VirtualInmoov.py
-#G_Translator.py
+#E_Oak.py ## WOULD REPLACE KINECT
+#F_VirtualInmoov.py ## NOT NECESSARY FOR NIXIE?
+#G_Translator.py ## NEED FIXING FOR NIXIE
 execfile('resource/InMoov2/services/H_OpenWeatherMap.py')
-#I_UltrasonicSensor.py
-#J_SensorFinger.py
+#I_UltrasonicSensor.py ## NEED FIXING FOR NIXIE
+#J_SensorFinger.py ## NEED FIXING FOR NIXIE
 execfile('resource/InMoov2/services/K_FiniteStateMachine.py')
 
 ################################ 
-# INIT.6- inmoov loading
+# INIT.3- inmoov loading
 ################################
     
 #we launch Inmoov life
@@ -78,11 +77,11 @@ execfile('resource/InMoov2/life/sleepMode.py')
 #execfile('data/InMoov2/InMoov_custom.py')
 
 ################################
-# INIT.8 - yes there is no 7 :) great, inmoov is alive
+# INIT.4 - great, inmoov is alive
 ################################
-#if DEBUG==1:runtime.setLogLevel("INFO")
-#else:runtime.setLogLevel("ERROR")
-#i01.setMute(False)
+
+if DEBUG==1:runtime.setLogLevel("INFO")
+else:runtime.setLogLevel("ERROR")
 if runtime.isStarted('i01.neopixel'):    
   i01.setNeopixelAnimation("Flash Random", 0, 255, 0, 1)
   sleep(2)
