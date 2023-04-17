@@ -18,6 +18,9 @@ execfile('resource/InMoov2/system/Import_Functions.py')
 # global vars import
 execfile('resource/InMoov2/system/Robot_Satus_GlobalsVars.py')
 
+# we load our custom script
+execfile('resource/InMoov2/system/startScripts/InMoovCustom_start.py')
+
 # we load a personal config parameters
 execfile('resource/InMoov2/system/startScripts/i01_life_config.py')
 
