@@ -127,7 +127,7 @@
                             </a>
                         </span>
                         <button class="btn btn-default" ng-show="peer.isPeerStarted(service, 'chatBot')" 
-                            ng-click="execScript('services/A_Chatbot.py')">First contact</button>
+                            ng-click="mrl.changeTab(peer.getActualName(service, 'chatBot'));execScript('services/A_Chatbot.py')">First contact</button>
                     </td>
                 </tr>
                 <tr>
