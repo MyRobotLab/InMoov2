@@ -95,6 +95,8 @@
                     Intro</div>
                 <div id="languageGuiButton" class="languageGuiButtons preventGuiDragSelect"
                     ng-click="mrl.changeTab('runtime')">Language</div>
+                <a id="helpGuiButton" class="helpGuiButtons preventGuiDragSelect"
+                    href="https://inmoov.fr/inmoov2-in-nixie/" target="_blank">Help</a>
             </div>
         </td>
         <td>
@@ -124,6 +126,8 @@
                                 <img src="settings.png" width="30" />
                             </a>
                         </span>
+                        <button class="btn btn-default" ng-show="peer.isPeerStarted(service, 'chatBot')" 
+                            ng-click="mrl.changeTab(peer.getActualName(service, 'chatBot'));execScript('services/A_Chatbot.py')">First contact</button>
                     </td>
                 </tr>
                 <tr>
