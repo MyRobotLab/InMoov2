@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>EMPIEZA A TOCAR MÚSICA</pattern>
+<template><random>
+        <li>Pongo la música en modo playlist.</li>
+        <li>¡De acuerdo! Estoy en modo de lista de música</li>
+      </random>
+      <think><set name="playsong">ko</set></think>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist()</param></mrl></oob></template>
+</category>
+
+<category><pattern>EMPIEZA LA MÚSICA</pattern>
+<template>
+  <srai>EMPIEZA A TOCAR MÚSICA</srai>
+</template>
+</category>
+
+<category><pattern>EMPIEZA A TOCAR MÚSICA *</pattern>
+<template>Pongo la playlist <star/>.<think><set name="playsong">ko</set></think>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist('<star/>')</param></mrl></oob>
+</template>
+</category>
+
+<category><pattern>DEJAR DE TOCAR MÚSICA</pattern>
+<template>Detengo la lista de música . <think><set name="playsong">ok</set></think>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stopPlaylist(), i01_audioPlayer.stop()</param></mrl></oob>
+</template>
+</category>
+
+<category><pattern>PRÓXIMA LISTA DE MÚSICA</pattern>
+<template><random>
+        <li>Siguiente pista en la lista de reproducción.</li>
+        <li>Bueno!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob>
+</template>
+</category>
+<!-- FIN MODE PLAYLIST -->
+<!-- Ici Utilise le script A_music.py -->
+<category><pattern>PARA LA MÚSICA</pattern>
+<template><think><set name="playsong">ok</set></think>
+      <random>
+        <li>Detengo la musica</li>
+        <li>Bueno!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob></template>
+</category>
+
+<category><pattern>BUSCA LA PIEZA *</pattern>
+<template>
+<think><set name="playsong">ok</set><set name="song"><star/></set></think> 
+    <oob><mrl>
+      <service>python</service><method>exec</method><param>searchPlay("<get name="song"/>")</param>
+      </mrl></oob>
+      </template>
+</category>
+
+<category><pattern># PRÓXIMA PIEZA</pattern>
+  <template>
+    <think><get name = "playsong"></get></think>
+     <condition name="playsong" value="ok">
+        <oob><mrl><service>python</service><method>exec</method><param>nextPlay()</param></mrl></oob>
+    </condition>  
+    <condition name="playsong" value="ko">
+  <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob>
+    </condition>  
+  </template>
+</category>
+
+<category><pattern># PISTA ANTERIOR</pattern>
+<template>
+ <think><get name = "playsong"></get></think>
+   <condition name="playsong" value="ok">
+        <oob><mrl><service>python</service><method>exec</method><param>previousPlay()</param></mrl></oob>
+  </condition> 
+  <condition name="playsong" value="ko">
+    Anterior no funciona en el modo de lista de reproducción. Pero sólo en el modo de búsqueda.  </condition> 
+  </template>
+</category>
+
+<category><pattern>PAUSA LA MÚSICA</pattern>
+<template><random>
+        <li>Música en pausa</li>
+        <li>Pongo en pausa la musica</li>
+        <li>Bueno!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.pause()</param></mrl></oob></template>
+</category>
+
+<category><pattern>VOLVER A LA MÚSICA</pattern>
+<template><random>
+        <li>Devuelvo la musica</li>
+        <li>Claro!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.resume()</param></mrl></oob>
+</template>
+</category>
+<category><pattern>BAJA EL SONIDO</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.9)</param></mrl></oob>
+</template>
+</category>
+<category><pattern>DISMINUYA EL SONIDO OTRA VEZ</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.8)</param></mrl></oob></template>
+</category>
+<category><pattern>AUMENTA EL SONIDO</pattern>
+<template>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(1.0)</param></mrl></oob>
+</template>
+</category>
+
+<category><pattern>SYSTEM_NEXT_SONG</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>nextPlay()</param></mrl></oob></template>
+</category>
+
+<category><pattern>NEXT_SONG</pattern>
+<template>Bueno aqui esta la cancion.</template>
+</category>
+
+<category><pattern>DO_NOT_HAVE_SONG</pattern>
+<template>No tengo esta pieza en mis listas, o el archivo contiene mayúsculas.</template>
+</category>
+
+<category><pattern>DO_NOT_HAVE_PLAYLIST</pattern>
+<template>No tengo una lista de reproducción configurada en el directorio predeterminado.</template>
+</category>
+
+<category><pattern>END_PLAYLIST</pattern>
+<template>He llegado al final de la lista de reproducción. Vuelvo al principio de la lista..</template>
+</category>
+
+</aiml>
