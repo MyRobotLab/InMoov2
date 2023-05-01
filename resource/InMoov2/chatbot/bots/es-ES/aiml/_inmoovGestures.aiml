@@ -21,8 +21,6 @@
       </template>
     </category>
 
-<!-- to translate !!!  -->
-
     <category>
       <pattern>BUSCAR HUMANOS</pattern>
       <template>Estoy buscando rostros.
@@ -39,7 +37,7 @@
     <category>
       <pattern>MÍRAME</pattern>
       <template>Dónde estás, ahí estás.
-        <srai>SEARCH HUMANS</srai>
+        <srai>BUSCAR HUMANOS</srai>
       </template>
     </category>
 
@@ -433,6 +431,12 @@
       <pattern>CIERRE LENTAMENTE SU MANO DERECHA</pattern>
       <template>Lentamente cerrando mi mano derecha.
         <oob><mrl><service>python</service><method>exec</method><param>slowlycloserighthand()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>CIERRE LENTAMENTE SU MANO IZQUIERDA</pattern>
+      <template>Lentamente cerrando mi mano izquierda.
+        <oob><mrl><service>python</service><method>exec</method><param>slowlycloselefthand()</param></mrl></oob></template>
     </category>
 
 

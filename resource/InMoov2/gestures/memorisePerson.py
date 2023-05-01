@@ -32,7 +32,7 @@ def YesName(name):
       i01_opencv.removeFilter("FaceRecognizer")
       i01.finishedGesture()
     else:
-      errorSpokenFunc('OPENCVNOWORKY')
+      i01.warn('facerecognizer not starting because no opencv')
 
 def memorisePerson(name):
   if faceRecognizerActivated==1:

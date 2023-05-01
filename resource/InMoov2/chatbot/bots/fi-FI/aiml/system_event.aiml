@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
+    <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
+    <template>Eleiden tuonti</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIGSTARTED</pattern>
+    <template>Aloitetaan asennus.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
+    <template>Vasemman käden anturien käynnistys.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED RIGHT HAND SENSOR</pattern>
+    <template>Oikean käden anturien käynnistys.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED LEFT</pattern>
+    <template>Vasemman ohjaimen käynnistys.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED RIGHT</pattern>
+    <template>Oikean ohjaimen käynnistys.</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED audioPlayer</pattern>
     <template>Audioplayer käynnistyy</template>
   </category>

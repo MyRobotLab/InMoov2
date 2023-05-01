@@ -184,7 +184,7 @@
         <oob><mrl><service>python</service><method>exec</method><param>fighter()</param></mrl></oob></template>
 </category>
 <category><pattern># MAINS SUR LES HANCHES</pattern>
-<template>Je mets mes mains SÛR les hanches.
+<template>Je mets mes mains sur les hanches.
         <oob><mrl><service>python</service><method>exec</method><param>fistHips()</param></mrl></oob></template>
 </category>
 <category><pattern>REGARDE CECI</pattern>
@@ -223,7 +223,7 @@
 <template>Désormais je n'écoute plus, pour reprendre contrôle dites <get name="MagicCommandToWakeUp"/>. Le mot clé peut être configuré dans ire . config
         <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method><param><get name="MagicCommandToWakeUp"/></param></mrl></oob></template>
 </category>
-<category><pattern>VOICE CONTROL</pattern>
+<category><pattern>COMMANDE VOCALE</pattern>
 <template>J'écoute à nouveau.
         <oob><mrl><service>i01.ear</service><method>clearLock</method></mrl></oob></template>
 </category>

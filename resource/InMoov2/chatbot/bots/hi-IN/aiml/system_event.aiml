@@ -2,6 +2,30 @@
 <!-- InMoov2 system events translated by gpt3 :) -->
 <aiml>
   <category>
+    <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
+    <template>इशारा आयात</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIGSTARTED</pattern>
+    <template>सेटअप प्रारंभ कर रहा है.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
+    <template>बाएं हाथ के सेंसर चालू हो रहे हैं.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED RIGHT HAND SENSOR</pattern>
+    <template>दाहिने हाथ के सेंसर शुरू करना.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED LEFT</pattern>
+    <template>बाएँ नियंत्रक को प्रारंभ कर रहा है.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED RIGHT</pattern>
+    <template>सही नियंत्रक शुरू करना.</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED audioPlayer</pattern>
     <template>ऑडियो प्लेयर शुरू हो रहा है</template>
   </category>
