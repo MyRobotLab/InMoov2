@@ -82,4 +82,29 @@
 <template>Chatbot loaded, I may start other components, please wait.</template>
 </category>
 
+<category>
+<pattern>SYSTEM_EVENT CONFIGSTARTED</pattern>
+<template>Config started.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
+<template>Starting left hand sensor.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED RIGHT HAND SENSOR</pattern>
+<template>Starting right hand sensor.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED LEFT</pattern>
+<template>Starting left controller.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED RIGHT</pattern>
+<template>Starting right controller.</template>
+</category>
+
 </aiml>
