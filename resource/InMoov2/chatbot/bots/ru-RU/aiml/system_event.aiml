@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
+    <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
+    <template>Импорт жестов</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIGSTARTED</pattern>
+    <template>Запуск установки.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
+    <template>Запуск левых датчиков.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED RIGHT HAND SENSOR</pattern>
+    <template>Запуск правых датчиков.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED LEFT</pattern>
+    <template>Запуск левого контроллера.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED RIGHT</pattern>
+    <template>Запуск правильного контроллера.</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED audioPlayer</pattern>
     <template>Аудиоплеер запущен</template>
   </category>
