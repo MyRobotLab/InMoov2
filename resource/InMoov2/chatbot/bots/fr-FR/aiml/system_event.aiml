@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
+    <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
+    <template>Importation des gestuelles</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIGSTARTED</pattern>
+    <template>Démarrage de la configuration.</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED audioPlayer</pattern>
     <template>Démarrage du lecteur audio</template>
   </category>
