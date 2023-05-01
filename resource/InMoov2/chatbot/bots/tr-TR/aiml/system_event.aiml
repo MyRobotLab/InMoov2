@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
+    <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
+    <template>Hareketle içe aktarma</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIGSTARTED</pattern>
+    <template>Kurulumu Başlatma.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
+    <template>Sol El Sensörlerini Çalıştırma.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED RIGHT HAND SENSOR</pattern>
+    <template>Sağ sensörlerin çalıştırılması.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED LEFT</pattern>
+    <template>Sol denetleyiciyi başlatma.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED RIGHT</pattern>
+    <template>Doğru denetleyiciyi başlatma.</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED audioPlayer</pattern>
     <template>Audioplayer başlatılıyor</template>
   </category>
