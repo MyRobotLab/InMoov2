@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
+    <pattern>SYSTEM_EVENT INIT</pattern>
+    <template>Başlatma başlangıcı</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
+    <template>Kurulum tamamlandı</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
     <template>Hareketle içe aktarma</template>
   </category>
