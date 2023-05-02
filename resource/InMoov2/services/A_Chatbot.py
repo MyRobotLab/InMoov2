@@ -21,4 +21,5 @@ if runtime.isStarted('i01.chatBot'):
     i01_chatBot.setPredicate("default","topic","default")
     i01_chatBot.getResponse("FIRST_INIT")
   else:
+    i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername")))
     i01_chatBot.getResponse("WAKE_UP")
