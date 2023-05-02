@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-
-  <category>
-    <pattern>SYSTEM_EVENT STARTED *</pattern>
-    <template>Starting <lowercase>
-      <star/>
-    </lowercase>
-  </template>
+<category>
+<pattern>SYSTEM_EVENT INIT</pattern>
+<template>Initialisation</template>
 </category>
 
 <category>
-  <pattern>SYSTEM_EVENT STOPPED *</pattern>
-  <template>Stopping <lowercase>
-    <star/>
-  </lowercase>
+<pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
+<template>Configuration loaded</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED *</pattern>
+<template>Starting <lowercase><star/></lowercase>
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED *</pattern>
+<template>Stopping <lowercase><star/></lowercase>
 </template>
 </category>
 
