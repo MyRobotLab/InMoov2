@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
+    <pattern>SYSTEM_EVENT INIT</pattern>
+    <template>初始化开始</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
+    <template>设置完成</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
     <template>手势导入</template>
   </category>
