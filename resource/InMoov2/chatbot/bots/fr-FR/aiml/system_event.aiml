@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
+    <pattern>SYSTEM_EVENT INIT</pattern>
+    <template>Démarrage initialisation</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
+    <template>Configuration terminée</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
     <template>Importation des gestuelles</template>
   </category>
