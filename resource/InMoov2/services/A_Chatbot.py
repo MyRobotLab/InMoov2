@@ -17,8 +17,9 @@ def initChatBot():
 if runtime.isStarted('i01.chatBot'):
   initChatBot()
     # This launch the chatbot for the first initialization
-  if str(i01_chatBot.getPredicate("Human","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("Human","firstinit"))=="started":
+  if str(i01_chatBot.getPredicate("human","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("human","firstinit"))=="started":
     i01_chatBot.setPredicate("default","topic","default")
     i01_chatBot.getResponse("FIRST_INIT")
   else:
+    i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername")))
     i01_chatBot.getResponse("WAKE_UP")
