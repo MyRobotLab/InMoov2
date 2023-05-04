@@ -7,7 +7,7 @@ def YesName(name):
     i01_neoPixel.setAnimation("Color Wipe", 100, 5, 10, 15) 
   if runtime.isStarted('i01.chatBot'):
     if runtime.isStarted('i01.opencv'):
-      i01.cameraOn()
+      i01_opencv.capture()
       i01_opencv.addFilter("FaceRecognizer")
       i01_opencv.setActiveFilter("FaceRecognizer")
       if runtime.isStarted('i01.head'):
@@ -30,6 +30,7 @@ def YesName(name):
       fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
       i01_opencv.disableFilter("FaceRecognizer")
       i01_opencv.removeFilter("FaceRecognizer")
+      i01_opencv.stopCapture()
       i01.finishedGesture()
     else:
       i01.warn('facerecognizer not starting because no opencv')
@@ -41,7 +42,7 @@ def memorisePerson(name):
       i01_neoPixel.setAnimation("Color Wipe", 100, 5, 10, 15) 
     if runtime.isStarted('i01.chatBot'):
       if runtime.isStarted('i01.opencv'):
-        i01.cameraOn()
+        i01_opencv.capture()
         i01_opencv.addFilter("FaceRecognizer")
         i01_opencv.setActiveFilter("FaceRecognizer")
         # if runtime.isStarted('i01.head'):
@@ -57,13 +58,16 @@ def memorisePerson(name):
         #fr.setTrainName(name)
         # set the filter to be in training mode (Where it learns new images)
         fr.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
+        sleep(2)
         # now that we have new examples, let's re-train the face recognizer with all our examples.
         fr.train()
         # after we've retrained the model.. start recognizing again
         fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
         i01_opencv.disableFilter("FaceRecognizer")
         i01_opencv.removeFilter("FaceRecognizer")
+        i01_opencv.stopCapture()
         i01_chatBot.getResponse("SYSTEM_SAY_HELLO")
         i01.finishedGesture()
       else:
         i01.warn('facerecognizer not starting because no opencv')
+        i01_chatBot.setPredicate(i01_chatBot.getCurrentUserName(),"training","no")
