@@ -2,6 +2,10 @@
 <!-- InMoov2 system events translated by gpt3 :) -->
 <aiml>
   <category>
+    <pattern>SYSTEM_EVENT WAKE</pattern>
+    <template><srai>WAKE_UP</srai></template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT INIT</pattern>
     <template>आरंभीकरण प्रारंभ</template>
   </category>
