@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
+    <pattern>SYSTEM_EVENT WAKE</pattern>
+    <template><srai>WAKE_UP</srai></template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT INIT</pattern>
     <template>初始化开始</template>
   </category>
