@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
+    <pattern>SYSTEM_EVENT WAKE</pattern>
+    <template><srai>WAKE_UP</srai></template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT INIT</pattern>
+    <template>Início da inicialização</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
+    <template>Configuração concluída</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
+    <template>Importação de gesto</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIGSTARTED</pattern>
+    <template>Iniciando a Configuração.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
+    <template>Sensores de partida da mão esquerda.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED RIGHT HAND SENSOR</pattern>
+    <template>Iniciando os sensores da mão direita.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED LEFT</pattern>
+    <template>Iniciando o controlador esquerdo.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED RIGHT</pattern>
+    <template>Iniciando o controlador certo.</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED audioPlayer</pattern>
     <template>O player de áudio foi iniciado</template>
   </category>

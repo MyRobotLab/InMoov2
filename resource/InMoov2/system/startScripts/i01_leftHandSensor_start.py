@@ -195,8 +195,8 @@ if runtime.isStarted('i01.left'):
                     print pinsLeft[pin].value,"Value:",left_pinkyPin,"leftPinkySensorPin:"
                     print "-----------Left-Finger-Sensors-----------"
 
-
-        i01.speakBlocking(i01.localize("STARTINGLEFTHANDSENSOR"))
+        if runtime.isStarted('i01.chatBot'):
+            i01_chatBot.getResponse("SYSTEM_EVENT STARTED LEFT HAND SENSOR")
         i01_left.addListener("publishPinArray","python","publishLeftPin")
 
         def leftHandSensorON():

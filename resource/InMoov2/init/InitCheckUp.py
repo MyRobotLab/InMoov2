@@ -46,7 +46,7 @@ execfile('resource/InMoov2/services/5_Mouth.py')
 #7_Inmoov.py  ## NEED FIXING FOR NIXIE
 #8_NervoBoardRelay.py  ##NEED FIXING FOR NIXIE
 execfile('resource/InMoov2/services/9_neoPixel.py')
-#execfile('resource/InMoov2/services/A_Chatbot.py')
+execfile('resource/InMoov2/services/A_Chatbot.py')
 #B_Wikidata.py  ## NOT NECESSARY FOR NIXIE?
 execfile('resource/InMoov2/services/C_Pir.py')
 execfile('resource/InMoov2/services/D_OpenCv.py')

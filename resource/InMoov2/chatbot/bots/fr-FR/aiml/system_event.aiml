@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
+    <pattern>SYSTEM_EVENT WAKE</pattern>
+    <template><srai>WAKE_UP</srai></template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT INIT</pattern>
+    <template>Démarrage initialisation</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
+    <template>Configuration terminée</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
+    <template>Importation des gestuelles</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIGSTARTED</pattern>
+    <template>Démarrage de la configuration.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
+    <template>Démarrage des capteurs de la main gauche.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED RIGHT HAND SENSOR</pattern>
+    <template>Démarrage des capteurs de la main droite.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED LEFT</pattern>
+    <template>Démarrage du controlleur gauche.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED RIGHT</pattern>
+    <template>Démarrage du controlleur droit.</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED audioPlayer</pattern>
     <template>Démarrage du lecteur audio</template>
   </category>
@@ -18,19 +54,19 @@
   </category>
   <category>
     <pattern>SYSTEM_EVENT STARTED controller3</pattern>
-    <template>Démarrage du contrôleur 3</template>
+    <template>Démarrage du contrôleur trois</template>
   </category>
   <category>
     <pattern>SYSTEM_EVENT STOPPED controller3</pattern>
-    <template>Arrêt du contrôleur 3</template>
+    <template>Arrêt du contrôleur trois</template>
   </category>
   <category>
     <pattern>SYSTEM_EVENT STARTED controller4</pattern>
-    <template>Démarrage du contrôleur 4</template>
+    <template>Démarrage du contrôleur quatre</template>
   </category>
   <category>
     <pattern>SYSTEM_EVENT STOPPED controller4</pattern>
-    <template>Arrêt du contrôleur 4</template>
+    <template>Arrêt du contrôleur quatre</template>
   </category>
   <category>
     <pattern>SYSTEM_EVENT STARTED ear</pattern>

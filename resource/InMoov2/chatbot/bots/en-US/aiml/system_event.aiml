@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-
-  <category>
-    <pattern>SYSTEM_EVENT STARTED *</pattern>
-    <template>Starting <lowercase>
-      <star/>
-    </lowercase>
-  </template>
+<category>
+<pattern>SYSTEM_EVENT WAKE</pattern>
+<template><srai>WAKE_UP</srai></template>
 </category>
 
 <category>
-  <pattern>SYSTEM_EVENT STOPPED *</pattern>
-  <template>Stopping <lowercase>
-    <star/>
-  </lowercase>
+<pattern>SYSTEM_EVENT INIT</pattern>
+<template>Initialisation</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
+<template>Configuration loaded</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED *</pattern>
+<template>Starting <lowercase><star/></lowercase>
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED *</pattern>
+<template>Stopping <lowercase><star/></lowercase>
 </template>
 </category>
 
@@ -80,6 +90,31 @@
 <category>
 <pattern>SYSTEM_EVENT STARTED CHATBOT</pattern>
 <template>Chatbot loaded, I may start other components, please wait.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT CONFIGSTARTED</pattern>
+<template>Config started.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
+<template>Starting left hand sensor.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED RIGHT HAND SENSOR</pattern>
+<template>Starting right hand sensor.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED LEFT</pattern>
+<template>Starting left controller.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED RIGHT</pattern>
+<template>Starting right controller.</template>
 </category>
 
 </aiml>
