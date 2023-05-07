@@ -9,6 +9,6 @@
 # release service gpt3
 i01.releasePeer('gpt3')
 if runtime.isStarted('i01.chatBot'):
-   #i01_chatBot.getResponse("SYSTEM_EVENT STOPPED GPT3")
+   #i01_chatBot.getResponse("SYSTEMEVENT STOPPED GPT3")
    i01_chatBot.setPredicate("gpt3","")
    i01_chatBot.savePredicates()

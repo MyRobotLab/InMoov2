@@ -2,8 +2,7 @@
 <aiml>
       <category>
             <pattern>WHAT IS THE TOPIC</pattern>
-            <template>
-    The current topic is <get name="topic"/>
+            <template>The current topic is <get name="topic"/>
             </template>
       </category>
       <category>

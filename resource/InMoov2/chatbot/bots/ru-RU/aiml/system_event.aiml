@@ -1,304 +1,304 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
-    <pattern>SYSTEM_EVENT WAKE</pattern>
+    <pattern>SYSTEMEVENT WAKE</pattern>
     <template><srai>WAKE_UP</srai></template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT INIT</pattern>
+    <pattern>SYSTEMEVENT INIT</pattern>
     <template>Начало инициализации</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
+    <pattern>SYSTEMEVENT CONFIG LOADED</pattern>
     <template>Настройка завершена</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
+    <pattern>SYSTEMEVENT LOAD GESTURES</pattern>
     <template>Импорт жестов</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT CONFIGSTARTED</pattern>
+    <pattern>SYSTEMEVENT CONFIGSTARTED</pattern>
     <template>Запуск установки.</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
+    <pattern>SYSTEMEVENT STARTED LEFT HAND SENSOR</pattern>
     <template>Запуск левых датчиков.</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED RIGHT HAND SENSOR</pattern>
+    <pattern>SYSTEMEVENT STARTED RIGHT HAND SENSOR</pattern>
     <template>Запуск правых датчиков.</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED LEFT</pattern>
+    <pattern>SYSTEMEVENT STARTED LEFT</pattern>
     <template>Запуск левого контроллера.</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED RIGHT</pattern>
+    <pattern>SYSTEMEVENT STARTED RIGHT</pattern>
     <template>Запуск правильного контроллера.</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED audioPlayer</pattern>
+    <pattern>SYSTEMEVENT STARTED audioPlayer</pattern>
     <template>Аудиоплеер запущен</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED audioPlayer</pattern>
+    <pattern>SYSTEMEVENT STOPPED audioPlayer</pattern>
     <template>Остановить аудиоплеер</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED chatBot</pattern>
+    <pattern>SYSTEMEVENT STARTED chatBot</pattern>
     <template>Система диалога готова, запустите другие компоненты</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED chatBot</pattern>
+    <pattern>SYSTEMEVENT STOPPED chatBot</pattern>
     <template>Остановить чат-бота</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED controller3</pattern>
+    <pattern>SYSTEMEVENT STARTED controller3</pattern>
     <template>Запуск контроллера три</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED controller3</pattern>
+    <pattern>SYSTEMEVENT STOPPED controller3</pattern>
     <template>Остановить контроллер три</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED controller4</pattern>
+    <pattern>SYSTEMEVENT STARTED controller4</pattern>
     <template>Запуск контроллера четыре</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED controller4</pattern>
+    <pattern>SYSTEMEVENT STOPPED controller4</pattern>
     <template>Остановить контроллер четыре</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED ear</pattern>
+    <pattern>SYSTEMEVENT STARTED ear</pattern>
     <template>Запуск ушей</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED ear</pattern>
+    <pattern>SYSTEMEVENT STOPPED ear</pattern>
     <template>Остановка ушей</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED eyeTracking</pattern>
+    <pattern>SYSTEMEVENT STARTED eyeTracking</pattern>
     <template>Запуск системы отслеживания глаз</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED eyeTracking</pattern>
+    <pattern>SYSTEMEVENT STOPPED eyeTracking</pattern>
     <template>Остановить систему отслеживания глаз</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED fsm</pattern>
+    <pattern>SYSTEMEVENT STARTED fsm</pattern>
     <template>Запуск конечного автомата</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED fsm</pattern>
+    <pattern>SYSTEMEVENT STOPPED fsm</pattern>
     <template>Остановить конечный автомат</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED gpt3</pattern>
+    <pattern>SYSTEMEVENT STARTED gpt3</pattern>
     <template>Запуск gpt3</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED gpt3</pattern>
+    <pattern>SYSTEMEVENT STOPPED gpt3</pattern>
     <template>Остановить gpt3</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED head</pattern>
+    <pattern>SYSTEMEVENT STARTED head</pattern>
     <template>Запуск головы</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED head</pattern>
+    <pattern>SYSTEMEVENT STOPPED head</pattern>
     <template>Остановить голову</template>
   </category>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED headTracking</pattern>
+    <pattern>SYSTEMEVENT STARTED headTracking</pattern>
     <template>Запустить отслеживание головы</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STOPPED headTracking</pattern>
+    <pattern>SYSTEMEVENT STOPPED headTracking</pattern>
     <template>Остановить отслеживание головы</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STARTED htmlFilter</pattern>
+    <pattern>SYSTEMEVENT STARTED htmlFilter</pattern>
     <template>Запустить фильтр HTML</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STOPPED htmlFilter</pattern>
+    <pattern>SYSTEMEVENT STOPPED htmlFilter</pattern>
     <template>Остановить фильтр HTML</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STARTED imageDisplay</pattern>
+    <pattern>SYSTEMEVENT STARTED imageDisplay</pattern>
     <template>Запустить отображение изображения</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STOPPED imageDisplay</pattern>
+    <pattern>SYSTEMEVENT STOPPED imageDisplay</pattern>
     <template>Остановить отображение изображения</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STARTED leap</pattern>
+    <pattern>SYSTEMEVENT STARTED leap</pattern>
     <template>Запустить leap</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STOPPED leap</pattern>
+    <pattern>SYSTEMEVENT STOPPED leap</pattern>
     <template>Остановить leap</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STARTED left</pattern>
+    <pattern>SYSTEMEVENT STARTED left</pattern>
     <template>Запустить левый</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STOPPED left</pattern>
+    <pattern>SYSTEMEVENT STOPPED left</pattern>
     <template>Остановить левый</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STARTED leftArm</pattern>
+    <pattern>SYSTEMEVENT STARTED leftArm</pattern>
     <template>Запустить левую руку</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STOPPED leftArm</pattern>
+    <pattern>SYSTEMEVENT STOPPED leftArm</pattern>
     <template>Остановить левую руку</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STARTED leftHand</pattern>
+    <pattern>SYSTEMEVENT STARTED leftHand</pattern>
     <template>Запустить левую руку</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STOPPED leftHand</pattern>
+    <pattern>SYSTEMEVENT STOPPED leftHand</pattern>
     <template>Остановить левую руку</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STARTED mouth</pattern>
+    <pattern>SYSTEMEVENT STARTED mouth</pattern>
     <template>Запустить рот</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STOPPED mouth</pattern>
+    <pattern>SYSTEMEVENT STOPPED mouth</pattern>
     <template>Остановить рот</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STARTED mouthControl</pattern>
+    <pattern>SYSTEMEVENT STARTED mouthControl</pattern>
     <template>Запустить управление ртом</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STOPPED mouthControl</pattern>
+    <pattern>SYSTEMEVENT STOPPED mouthControl</pattern>
     <template>Остановить управление ртом</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STARTED neoPixel</pattern>
+    <pattern>SYSTEMEVENT STARTED neoPixel</pattern>
     <template>Запустить neoPixel</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STOPPED neoPixel</pattern>
+    <pattern>SYSTEMEVENT STOPPED neoPixel</pattern>
     <template>Остановить neoPixel</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STARTED openWeatherMap</pattern>
+    <pattern>SYSTEMEVENT STARTED openWeatherMap</pattern>
     <template>Запустить карту погоды</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STOPPED openWeatherMap</pattern>
+    <pattern>SYSTEMEVENT STOPPED openWeatherMap</pattern>
     <template>Остановить карту погоды</template>
 </category>
 <category>
-    <pattern>SYSTEM_EVENT STARTED opencv</pattern>
+    <pattern>SYSTEMEVENT STARTED opencv</pattern>
     <template>запустить обработку видео</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED opencv</pattern>
+    <pattern>SYSTEMEVENT STOPPED opencv</pattern>
     <template>остановить обработку видео</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED openni</pattern>
+    <pattern>SYSTEMEVENT STARTED openni</pattern>
     <template>запустить openni</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED openni</pattern>
+    <pattern>SYSTEMEVENT STOPPED openni</pattern>
     <template>остановить openni</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED pid</pattern>
+    <pattern>SYSTEMEVENT STARTED pid</pattern>
     <template>запустить pid</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED pid</pattern>
+    <pattern>SYSTEMEVENT STOPPED pid</pattern>
     <template>остановить pid</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED pir</pattern>
+    <pattern>SYSTEMEVENT STARTED pir</pattern>
     <template>запустить датчик движения</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED pir</pattern>
+    <pattern>SYSTEMEVENT STOPPED pir</pattern>
     <template>остановить датчик движения</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED random</pattern>
+    <pattern>SYSTEMEVENT STARTED random</pattern>
     <template>запустить случайное событие</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED random</pattern>
+    <pattern>SYSTEMEVENT STOPPED random</pattern>
     <template>остановить случайное событие</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED right</pattern>
+    <pattern>SYSTEMEVENT STARTED right</pattern>
     <template>запустить вправо</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED right</pattern>
+    <pattern>SYSTEMEVENT STOPPED right</pattern>
     <template>остановить вправо</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED rightArm</pattern>
+    <pattern>SYSTEMEVENT STARTED rightArm</pattern>
     <template>запустить правую руку</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED rightArm</pattern>
+    <pattern>SYSTEMEVENT STOPPED rightArm</pattern>
     <template>остановить правую руку</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED rightHand</pattern>
+    <pattern>SYSTEMEVENT STARTED rightHand</pattern>
     <template>запустить правую руку</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED rightHand</pattern>
+    <pattern>SYSTEMEVENT STOPPED rightHand</pattern>
     <template>остановить правую руку</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED servoMixer</pattern>
+    <pattern>SYSTEMEVENT STARTED servoMixer</pattern>
     <template>запустить микшер сервоприводов</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED servoMixer</pattern>
+    <pattern>SYSTEMEVENT STOPPED servoMixer</pattern>
     <template>остановить микшер сервоприводов</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED simulator</pattern>
+    <pattern>SYSTEMEVENT STARTED simulator</pattern>
     <template>запустить симулятор</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED simulator</pattern>
+    <pattern>SYSTEMEVENT STOPPED simulator</pattern>
     <template>остановить симулятор</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED torso</pattern>
+    <pattern>SYSTEMEVENT STARTED torso</pattern>
     <template>начать работу torso</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED torso</pattern>
+    <pattern>SYSTEMEVENT STOPPED torso</pattern>
     <template>остановить работу torso</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED ultrasonicLeft</pattern>
+    <pattern>SYSTEMEVENT STARTED ultrasonicLeft</pattern>
     <template>начать работу левого ультразвукового датчика</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED ultrasonicLeft</pattern>
+    <pattern>SYSTEMEVENT STOPPED ultrasonicLeft</pattern>
     <template>остановить работу левого ультразвукового датчика</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STARTED ultrasonicRight</pattern>
+    <pattern>SYSTEMEVENT STARTED ultrasonicRight</pattern>
     <template>начать работу правого ультразвукового датчика</template>
   </category>
   <category>
-    <pattern>SYSTEM_EVENT STOPPED ultrasonicRight</pattern>
+    <pattern>SYSTEMEVENT STOPPED ultrasonicRight</pattern>
     <template>остановить работу правого ультразвукового датчика</template>
   </category>
 
