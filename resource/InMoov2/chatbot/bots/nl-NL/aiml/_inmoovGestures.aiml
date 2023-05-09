@@ -9,16 +9,14 @@
       <template>
         <random>
           <li>Ah, ontspannend.</li>
-          <li>Rust nemen</li>
+          <li>Rust nemen.</li>
         </random>
-        <oob>
         <oob>
           <mrl>
             <service>i01</service>
             <method>rest</method>
           </mrl>
         </oob></template>
-      </template>
     </category>
 
 
@@ -318,7 +316,7 @@
 
 
     <category>
-      <pattern>CAPTURE GESTURE</pattern>
+      <pattern>CAPTURE GEBAAR</pattern>
       <template>Ik sta dit gebaar vast.
         <oob><mrl><service>i01</service><method>captureGesture</method></mrl></oob></template>
     </category>
@@ -566,39 +564,39 @@
 
 
     <category>
-      <pattern>DELICATE GRAB</pattern>
-      <template>Delicate grab.
+      <pattern>DELICATE GRIJS</pattern>
+      <template>Fijne greep.
         <oob><mrl><service>python</service><method>exec</method><param>delicategrab()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DELICATE GRABING</pattern>
+      <pattern>DELICAAT GRIJPEN</pattern>
       <template>
-        <srai>DELICATE GRAB</srai>
+        <srai>DELICATE GRIJS</srai>
       </template>
     </category>
 
 
     <category>
-      <pattern>GRAB DIT DELICATELY</pattern>
+      <pattern>PAK DIT DELICAAT</pattern>
       <template>
-        <srai>DELICATE GRAB</srai>
+        <srai>DELICATE GRIJS</srai>
       </template>
     </category>
 
   
     <category>
-      <pattern>GRAB DELICATELY</pattern>
+      <pattern>GRIJP DELICAAT</pattern>
       <template>
-        <srai>DELICATE GRAB</srai>
+        <srai>DELICATE GRIJS</srai>
       </template>
     </category>
 
 
     <category>
-      <pattern>RELEASE DELICATE</pattern>
-      <template>Release delicate.
+      <pattern>DELICAAT VRIJGEVEN</pattern>
+      <template>Laat delicaat los.
         <oob><mrl><service>python</service><method>exec</method><param>releasedelicate()</param></mrl></oob></template>
     </category>
 
