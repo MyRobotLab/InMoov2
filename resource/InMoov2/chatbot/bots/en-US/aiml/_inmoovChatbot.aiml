@@ -5,7 +5,6 @@
 <category><pattern>FIRST_INIT</pattern>
 <template><think>
         <set name="firstinit">started</set>
-        <set name="train">training</set>
       </think>
       <think>
         <set name="topic">firstinit</set>
@@ -60,7 +59,7 @@
             <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>")</param>
           </mrl>
         </oob>-->
-        <set name="questionfirstinit">Would you like me to memorise your face along your name, <get name="tmpname"/>?</set>
+        <set name="questionfirstinit">Would you like me to use my vision to memorise your face along your name, <get name="tmpname"/>?</set>
         </template>
 </category></topic>
 
@@ -72,7 +71,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.savePredicates(),i01.startPeer('opencv'), memorisePerson(u"<get name="tmpname"/>")</param>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.savePredicates(),i01.startPeer('opencv'), memorisePerson(u"<get name="tmpname"/>")</param>
           </mrl>
         </oob> 
         <think>
@@ -84,10 +83,7 @@
 
 
 <category><pattern>YESMEMORIZED</pattern>
-<template>Okay, I am starting to memorize your face with my vision.
-        <think>
-            <set name="train">trained</set>
-        </think></template>
+<template>Okay, I am starting to memorize your face with my vision.</template>
 </category>
 
 <category><pattern>NOTMEMORIZED</pattern>
@@ -95,7 +91,6 @@
     Do you want me to start my vision?
         <think>
             <set name="topic">startVision</set>
-            <set name="train">training</set>
         </think>
     </template>
 </category>
@@ -131,7 +126,7 @@
 
 <topic name="FIRSTINIT">
 <category><pattern># NO #</pattern><that># YOUR FACE ALONG YOUR NAME #</that>
-<template>Ok <get name="tmpname"/>,then we are done with our first contact.
+<template>Ok <get name="tmpname"/>, then we are done with our first contact.
         <random>
         <li>Just say HELP if you need me.</li>
         <li>Say HELP ME PLEASE if you need me.</li>
