@@ -1,4 +1,4 @@
-def printList(en):
+def printList_EN():
     gesturesList = ["CLOSE YOUR FINGER", "OPEN YOUR FINGER", "FINGER TO THE MIDDLE", 
         "ACTION YOUR FINGER", "OPEN HAND", "CLOSE HAND", "OPEN HANDS", 
         "CLOSE HANDS", "OPEN YOUR RIGHT HAND", "OPEN YOUR LEFT HAND", 
@@ -17,7 +17,7 @@ def printList(en):
     for i in gesturesList:
         print(i)
 
-def printList(fr):
+def printList_FR():
     gesturesList = ["FERME TON DOIGT", "OUVRE TON DOIGT", "DOIGT AU MILIEU", "OUVRE TES MAINS", 
         "FERME TES MAINS", "OUVRE TA MAIN DROITE", "OUVRE TA MAIN GAUCHE",
         "FERME TA MAIN DROITE", "FERME TA MAIN GAUCHE", "DOUCEMENT FERME TA MAIN DROITE", 
@@ -35,7 +35,7 @@ def printList(fr):
     for i in gesturesList:
         print unicode(i,'utf-8')
 
-def printList(es):
+def printList_ES():
     gesturesList = ["CIERRE SU DEDO", "ABRE TU DEDO", "DEDO AL MEDIO", "MANOS ABIERTAS", 
         "CIERRE LAS MANOS", "ABRE TU MANO DERECHA", "ABRE TU MANO IZQUIERDA",
         "CIERRA TU MANO DERECHA", "CIERRA TU MANO IZQUIERDA", "CIERRE LENTAMENTE SU MANO DERECHA", 
@@ -48,7 +48,7 @@ def printList(es):
         "IMAGEN DEL LADO IZQUIERDO", "IMAGEN EN AMBOS LADOS", "MIRA A TU LADO DERECHO",
         "MIRA A TU LADO IZQUIERDO", "MIRA EN EL MEDIO", "MIRAR PARA ARRIBA", "MIRA ABAJO",
         "INCLINA LA CABEZA HACIA EL LADO DERECHO", "INCLINA TU CABEZA HACIA EL LADO IZQUIERDO",
-        "ESTRECHAR LA MANO", "QUE VOIS TU", "CÓMO TE SIENTES"
+        "ESTRECHAR LA MANO", "QUÉ VES", "CÓMO TE SIENTES"
         ]
     for i in gesturesList:
         print unicode(i,'utf-8')        
