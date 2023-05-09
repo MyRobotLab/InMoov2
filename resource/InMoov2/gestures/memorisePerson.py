@@ -42,6 +42,8 @@ def memorisePerson(name):
       i01_neoPixel.setAnimation("Color Wipe", 100, 5, 10, 15) 
     if runtime.isStarted('i01.chatBot'):
       if runtime.isStarted('i01.opencv'):
+        global i01_opencv
+        i01_opencv = runtime.start("i01.opencv","OpenCV")
         i01_opencv.capture()
         i01_opencv.addFilter("FaceRecognizer")
         i01_opencv.setActiveFilter("FaceRecognizer")
@@ -70,4 +72,9 @@ def memorisePerson(name):
         i01.finishedGesture()
       else:
         i01.warn('facerecognizer not starting because no opencv')
-        i01_chatBot.setPredicate(i01_chatBot.getCurrentUserName(),"training","no")
+        if runtime.isStarted('i01.chatBot'):
+          i01_chatBot.getResponse("NOTMEMORIZED")
+  else:
+        i01.warn('facerecognizer is OFF')
+        if runtime.isStarted('i01.chatBot'):
+          i01_chatBot.getResponse("NOTMEMORIZED")        
