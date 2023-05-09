@@ -24,7 +24,7 @@ def YesName(name):
       # set the filter to be in training mode (Where it learns new images)
       fr.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
       # now that we have new examples, let's re-train the face recognizer with all our examples.
-      sleep(2)
+      sleep(5)
       fr.train()
       # after we've retrained the model.. start recognizing again
       fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
@@ -60,7 +60,7 @@ def memorisePerson(name):
         #fr.setTrainName(name)
         # set the filter to be in training mode (Where it learns new images)
         fr.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
-        sleep(2)
+        sleep(5)
         # now that we have new examples, let's re-train the face recognizer with all our examples.
         fr.train()
         # after we've retrained the model.. start recognizing again
