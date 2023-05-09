@@ -42,6 +42,7 @@ hair:what
 has:what
 he:who
 husband:who
+img:../service/img/user_unknown.png
 isanumber:false
 it:what
 lastname:what
