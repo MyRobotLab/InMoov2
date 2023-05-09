@@ -74,22 +74,6 @@
     </template>
 </category></topic>
 
-<topic name="FIRSTINIT">
-<category><pattern>NOTMEMORIZED</pattern>
-<template>I couldn't memorize your face because my vision is not started.
-    Do you want me to start my vision?
-        <think>
-            <set name="topic">startVision</set>
-        </think>
-    </template>
-</category></topic>
-
-
-<category><pattern>NOTFACERECOGNIZED</pattern>
-<template>I couldn't memorize your face because face recognizer is OFF in my vision settings.
-    </template>
-</category>
-
 <topic name="STARTVISION">
 <category><pattern># YES #</pattern><that># START MY VISION #</that>
 <template>Ok, make sure you are facing the camera, and please don't wear glasses.
@@ -147,6 +131,28 @@
         </random>
         <get name="questionfirstinit"/></template>
 </category></topic>
+
+<category><pattern>NOTMEMORIZED</pattern>
+<template>I couldn't memorize your face because my vision is not started.
+    Do you want me to start my vision?
+        <think>
+            <set name="topic">startVision</set>
+        </think>
+    </template>
+</category>
+
+
+<category><pattern>NOTFACERECOGNIZED</pattern>
+      <template>I couldn't memorize your face because face recognizer is OFF in my vision settings. Set it ON in my vision settings.
+        <random>
+          <li>I restart, it's important.</li>
+          <li>I repeat.</li>
+        </random>
+        <think>
+          <set name="topic">firstinit</set>
+        </think>
+        <get name="questionfirstinit"/></template>
+      </category>
 
 <category><pattern>NEW_INIT</pattern>
 <template><think>
