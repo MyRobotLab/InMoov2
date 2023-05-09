@@ -77,4 +77,4 @@ def memorisePerson(name):
   else:
         i01.warn('facerecognizer is OFF')
         if runtime.isStarted('i01.chatBot'):
-          i01_chatBot.getResponse("NOTMEMORIZED")        
+          i01_chatBot.getResponse("NOTFACERECOGNIZED")        
