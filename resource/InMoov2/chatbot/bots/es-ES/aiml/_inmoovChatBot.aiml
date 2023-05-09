@@ -30,10 +30,9 @@
     </template>
   </category>
   
-  <topic name="firstinit">
+  <topic name="FIRSTINIT">
     <category>
-      <pattern>#</pattern>
-      <that># Cuál es mi nombre #</that>
+      <pattern>#</pattern><that># CUÁL ES MI NOMBRE #</that>
       <template>
         <set name="questionfirstinit">Si mi nombre es <star /> , responde sí o no</set>
         <think>
@@ -42,11 +41,11 @@
           </set>
         </think>
       </template>
-    </category>
-
+    </category></topic>
+  
+  <topic name="FIRSTINIT">
     <category>
-      <pattern>#</pattern>
-      <that># PUEDO TENER SU PRIMER NOMBRE #</that>
+      <pattern>#</pattern><that># PUEDO TENER SU PRIMER NOMBRE #</that>
       <template>
         <set name="questionfirstinit">Si tu nombre es <star /> , responde sí o no</set>
         <think>
@@ -55,10 +54,11 @@
           </set>
         </think>
       </template>
-    </category>
+    </category></topic>
+
+  <topic name="FIRSTINIT">  
     <category>
-      <pattern># sí #</pattern>
-      <that># Si mi nombre es #</that>
+      <pattern># SÍ #</pattern><that># SI MI NOMBRE ES #</that>
       <template>
         <random>
           <li>Me gusta mucho este nombre , <get name="tmpname" />. </li>
@@ -68,20 +68,73 @@
         </random>
 	        Necesito saber más sobre ti, te estoy escuchando, puedo tener su primer nombre ?
 	        <think><set name="botname"><get name="tmpname" /></set></think></template>
-    </category>
-    <category>
-      <pattern># sí #</pattern>
-      <that># SI TU NOMBRE #</that>
-      <template>
-        <random>
-          <li>Ahora nos conocemos, <get name="tmpname" />. Estoy casi movido. </li>
-          <li>Te reconocí en realidad <get name="tmpname" /> . </li>
-          <li><get name="tmpname" /> et <get name="botname" /> , lo encuentro agradable. </li>
-        </random>
-        <li>Solo di AYUDA si me necesitas.</li>
-        <li>Di AYUDAME POR FAVOR si me necesitas.</li>
+    </category></topic>
+
+  <topic name="FIRSTINIT">
+    <category><pattern># SÍ #</pattern><that># SI TU NOMBRE #</that>
+      <template><think>
+          <set name="name">
+            <get name="tmpname"/>
+          </set>
+        </think>
+        <set name="questionfirstinit"><get name="tmpname"/>, te gustaría que use mi visión para memorizar tu cara junto con tu nombre?</set>
+        </template>
+    </category></topic>
+
+  <topic name="FIRSTINIT">
+    <category><pattern># SÍ #</pattern><that># CARA JUNTO CON TU NOMBRE</that>
+      <template>Vale, asegúrate de mirar a la cámara y no uses gafas.<think>
+          <set name="topic">default</set>
+        </think><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.savePredicates(),i01.startPeer('opencv'), memorisePerson(u"<get name="tmpname"/>")</param>
+          </mrl>
+        </oob> 
         <think>
-          <set name="name"><get name="tmpname" /></set>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+      </template>
+    </category></topic>
+
+  <topic name="STARTVISION">
+    <category><pattern># SÍ #</pattern><that># QUE EMPIECE MI VISIÓN #</that>
+      <template>Vale, asegúrate de mirar a la cámara y no uses gafas.        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01.startPeer('opencv'), memorisePerson(u"<get name="name"/>")</param>
+          </mrl>
+        </oob></template>
+    </category></topic>
+
+  <topic name="STARTVISION">
+    <category><pattern># NO #</pattern><that># QUE EMPIECE MI VISIÓN #</that>
+      <template>Ok, siempre puedes entrenarme más tarde, en mi guia de visión.<srai>SYSTEM_SAY_HELLO</srai></template>
+    </category></topic>  
+
+  <topic name="FIRSTINIT">  
+    <category>
+      <pattern># NO #</pattern><that># SI MI NOMBRE ES #</that>
+      <template>
+        Comenzamos de nuevo. Te escucho. Cuál es mi nombre ?
+      </template>
+    </category></topic>
+
+  <topic name="FIRSTINIT">  
+    <category>
+      <pattern># NO #</pattern><that># SI TU NOMBRE #</that>
+      <template>
+        Comenzamos de nuevo. Te escucho. puedo tener su primer nombre ?
+      </template>
+    </category></topic>
+
+  <topic name="FIRSTINIT">
+    <category><pattern># NO #</pattern><that># CARA JUNTO CON TU NOMBRE</that>
+      <template>Ok <get name="tmpname"/>, entonces hemos terminado con nuestro primer contacto.       
+        <think>
           <set name="firstinit">ok</set>
           <set name="topic">default</set>
         </think>
@@ -89,29 +142,14 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>")</param>
+            <param>i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.savePredicates()</param>
           </mrl>
-        </oob>
-        <srai>WAKE_UP</srai>
-      </template>
-    </category>
+        </oob><srai>SYSTEM_SAY_HELLO</srai></template>
+    </category></topic>
+
+  <topic name="FIRSTINIT">  
     <category>
-      <pattern># no #</pattern>
-      <that># Si mi nombre es #</that>
-      <template>
-        Comenzamos de nuevo. Te escucho. Cuál es mi nombre ?
-      </template>
-    </category>
-    <category>
-      <pattern># no #</pattern>
-      <that># SI TU NOMBRE #</that>
-      <template>
-        Comenzamos de nuevo. Te escucho. puedo tener su primer nombre ?
-      </template>
-    </category>
-    <category>
-      <pattern>#</pattern>
-      <that># responde sí o no #</that>
+      <pattern>#</pattern><that># RESPONDE SÍ O NO #</that>
       <template>
         <random>
           <li>Por favor, responda las preguntas que estoy formulando, es importante. </li>
@@ -119,30 +157,57 @@
         </random>
         <get name="questionfirstinit" />
       </template>
+    </category></topic>
+
+    <category><pattern>NOTMEMORIZED</pattern>
+      <template>No pude memorizar tu cara porque mi visión no se inicia.
+        ¿Quieres que empiece mi visión?
+        <think>
+            <set name="topic">startVision</set>
+        </think>
+      </template>
     </category>
-  </topic>
-<category><pattern>NEW_INIT</pattern>
-<template><think>
+
+    <category><pattern>NOTFACERECOGNIZED</pattern>
+      <template>No pude memorizar tu rostro porque el reconocedor de rostros está OFF en mi configuración de visión.</template>
+    </category>
+
+    <category><pattern>NOTFACERECOGNIZED</pattern>
+      <template>No pude memorizar tu rostro porque el reconocedor de rostros está OFF en mi configuración de visión. Póngalo en ON en mi configuración de visión.
+        <random>
+          <li>Reinicio, es importante.</li>
+          <li>Repito.</li>
+        </random>
+        <think>
+          <set name="topic">firstinit</set>
+        </think>
+        <get name="questionfirstinit"/></template>
+      </category>
+
+
+    <category><pattern>NEW_INIT</pattern>
+      <template><think>
         <set name="newinit">started</set>
       </think>
       <think>
         <set name="topic">newinit</set>
       </think>
         Estoy escuchando. ¿A qué te gustaría cambiar mi nombre?</template>
-</category>
-<topic name="NEWINIT">
-<category><pattern>#</pattern><that># ¿A QUÉ TE GUSTARÍA CAMBIAR #</that>
-<template><set name="questionnewinit">si mi nuevo nombre es <star/> , di sí o no o detente</set>
+    </category>
+
+  <topic name="NEWINIT">
+    <category><pattern>#</pattern><that># ¿A QUÉ TE GUSTARÍA CAMBIAR #</that>
+      <template><set name="questionnewinit">si mi nuevo nombre es <star/> , di sí o no o detente</set>
         <think>
           <set name="tmpname">
             <star/>
           </set>
         </think></template>
-</category></topic>
+    </category></topic>
 
-<topic name="NEWINIT">
-<category><pattern># SÍ #</pattern><that># SI MI NUEVO NOMBRE ES #</that>
-<template><random>
+  <topic name="NEWINIT">
+    <category><pattern># SÍ #</pattern><that># SI MI NUEVO NOMBRE ES #</that>
+      <template><random>
             <li>
             Me gusta este nombre , <get name="tmpname"/>.
             </li>
@@ -155,42 +220,43 @@
         <set name="newinit"></set>
         <set name="topic">cambio de nombre</set>
     </think>
-</template>
-</category></topic>
+      </template>
+  </category></topic>
 
-<topic name="NEWINIT">
-<category><pattern># NO #</pattern><that># SI MI NUEVO NOMBRE ES #</that>
-<template>Vamos a reiniciar.
+  <topic name="NEWINIT">
+    <category><pattern># NO #</pattern><that># SI MI NUEVO NOMBRE ES #</that>
+      <template>Vamos a reiniciar.
     Estoy escuchando. ¿A qué te gustaría cambiar mi nombre?</template>
-</category></topic>
+    </category></topic>
 
-<topic name="NEWINIT">
-<category><pattern># DETENTE #</pattern><that># SI MI NUEVO NOMBRE ES #</that>
-<template>Ok me quedo con mi nombre <get name="botname"/></template>
-</category></topic>
+  <topic name="NEWINIT">
+    <category><pattern># DETENTE #</pattern><that># SI MI NUEVO NOMBRE ES #</that>
+      <template>Ok me quedo con mi nombre <get name="botname"/></template>
+    </category></topic>
 
-<category><pattern>NEW_INIT_USER</pattern>
-<template><think>
+    <category><pattern>NEW_INIT_USER</pattern>
+      <template><think>
         <set name="newinituser">started</set>
       </think>
       <think>
         <set name="topic">newinituser</set>
       </think>
         Estoy escuchando. ¿Qué nombre te gustaría que memorizara?</template>
-</category>
-<topic name="NEWINITUSER">
-<category><pattern>#</pattern><that># GUSTARÍA QUE MEMORIZARA #</that>
-<template><set name="questionnewinituser">si su nuevo nombre es <estrella/> , diga sí o no o detente</set>
+    </category>
+
+  <topic name="NEWINITUSER">
+    <category><pattern>#</pattern><that># GUSTARÍA QUE MEMORIZARA #</that>
+      <template><set name="questionnewinituser">si su nuevo nombre es <estrella/> , diga sí o no o detente</set>
         <think>
           <set name="tmpname">
             <star/>
           </set>
         </think></template>
-</category></topic>
+    </category></topic>
 
-<topic name="NEWINITUSER">
-<category><pattern># SÍ #</pattern><that># SI SU NUEVO NOMBRE ES #</that>
-<template><think>
+  <topic name="NEWINITUSER">
+    <category><pattern># SÍ #</pattern><that># SI SU NUEVO NOMBRE ES #</that>
+      <template><think>
         <set name="newinituser"></set>
         <set name="topic">cambio de nombre de usuario</set>
     </think>
@@ -205,19 +271,19 @@
             <li>Estoy encantado de conocerte, <get name="tmpname"/>.</li>
             <li>Encantado de conocerte, <get name="tmpname"/>.</li>
         </random>
-</template>
-</category></topic>
+      </template>
+    </category></topic>
 
-<topic name="NEWINITUSER">
-<category><pattern># NO #</pattern><that># SI SU NUEVO NOMBRE ES #</that>
-<template>Vamos a reiniciar.
+  <topic name="NEWINITUSER">
+    <category><pattern># NO #</pattern><that># SI SU NUEVO NOMBRE ES #</that>
+       <template>Vamos a reiniciar.
     Estoy escuchando. ¿A qué te gustaría cambiar tu nombre? ?</template>
-</category></topic>
+    </category></topic>
 
-<topic name="NEWINITUSER">
-<category><pattern># DETENTE #</pattern><that># SI SU NUEVO NOMBRE ES #</that>
-<template>Ok me quedo con tu nombre <get name="name"/></template>
-</category></topic>	
+  <topic name="NEWINITUSER">
+    <category><pattern># DETENTE #</pattern><that># SI SU NUEVO NOMBRE ES #</that>
+      <template>Ok me quedo con tu nombre <get name="name"/></template>
+    </category></topic>	
   <!-- end initialisaion routine -->
   
   <!-- wakeup action ( WAKE_UP is globalized )-->
@@ -233,9 +299,9 @@
     </template>
   </category>
   
-  <category>
-    <pattern>SYSTEM_SAY_HELLO</pattern>
-    <template>Buenos dias.
+  <category><pattern>SYSTEM_SAY_HELLO</pattern>
+    <template><srai>HI</srai>
+        Solo di AYUDA si me necesitas.
     </template>
   </category>
     <category>
