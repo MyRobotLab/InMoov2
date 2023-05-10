@@ -31,5 +31,7 @@ def onRecognizedFace(name):
       i01_chatBot.startSession(unicode(name,'utf-8'))
       i01_opencv.removeFilter("FaceRecognizer")
       i01_chatBot.getResponse("SYSTEM_SAY_HELLO")
+      i01_opencv.stopCapture()
+      print("recognized:" + name)
   else:
     errorSpokenFunc("ALERT",", opencv is not started")
