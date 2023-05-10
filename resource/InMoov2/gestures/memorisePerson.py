@@ -7,6 +7,7 @@ def YesName(name):
   if runtime.isStarted('i01.chatBot'):
     if runtime.isStarted('i01.opencv'):
       i01_opencv.capture()
+      sleep(13)
       i01_opencv.addFilter("FaceRecognizer")
       i01_opencv.setActiveFilter("FaceRecognizer")
       if runtime.isStarted('i01.head'):
@@ -23,7 +24,7 @@ def YesName(name):
       # set the filter to be in training mode (Where it learns new images)
       fr.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
       # now that we have new examples, let's re-train the face recognizer with all our examples.
-      sleep(5)
+      sleep(4)
       fr.train()
       # after we've retrained the model.. start recognizing again
       fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
@@ -44,6 +45,7 @@ def memorisePerson(name):
         global i01_opencv
         i01_opencv = runtime.start("i01.opencv","OpenCV")
         i01_opencv.capture()
+        sleep(13)
         i01_opencv.addFilter("FaceRecognizer")
         i01_opencv.setActiveFilter("FaceRecognizer")
         # if runtime.isStarted('i01.head'):
@@ -59,7 +61,7 @@ def memorisePerson(name):
         #fr.setTrainName(name)
         # set the filter to be in training mode (Where it learns new images)
         fr.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
-        sleep(5)
+        sleep(4)
         # now that we have new examples, let's re-train the face recognizer with all our examples.
         fr.train()
         # after we've retrained the model.. start recognizing again
