@@ -1,7 +1,6 @@
 from org.myrobotlab.opencv import OpenCVFilterFaceRecognizer
 
 def YesName(name):
-  print "name confirmed:"
   print(name)
   if runtime.isStarted('i01.neoPixel'):
     i01_neoPixel.setAnimation("Color Wipe", 100, 5, 10, 15) 
