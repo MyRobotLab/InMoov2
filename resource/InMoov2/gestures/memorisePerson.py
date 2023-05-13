@@ -6,6 +6,8 @@ def YesName(name):
     i01_neoPixel.setAnimation("Color Wipe", 100, 5, 10, 15) 
   if runtime.isStarted('i01.chatBot'):
     if runtime.isStarted('i01.opencv'):
+      global i01_opencv
+      i01_opencv = runtime.start("i01.opencv","OpenCV")
       i01_opencv.capture()
       sleep(13)
       i01_opencv.addFilter("FaceRecognizer")
