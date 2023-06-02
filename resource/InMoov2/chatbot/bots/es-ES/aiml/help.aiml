@@ -32,7 +32,7 @@
           Puede ver una lista más larga en la pestaña de python, pero aún puede encontrar muchos más comandos de voz en la carpeta data, programAB, aiml files.
           <oob>
         <mrl>
-          <service>python</service><method>exec</method><param>printList('es')</param>
+          <service>python</service><method>exec</method><param>printList_ES()</param>
         </mrl>
       </oob>
       </template>

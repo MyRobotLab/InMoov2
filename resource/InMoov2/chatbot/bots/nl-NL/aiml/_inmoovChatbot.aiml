@@ -25,8 +25,7 @@
   </template>
   </category>
   
-  <topic name="firstinit">
-  
+  <topic name="FIRSTINIT">
     <category>
       <pattern>#</pattern>
       <that># wat is mijn naam #</that>
@@ -38,8 +37,9 @@
           </set>
         </think>
       </template>
-    </category>
+    </category></topic>
   
+  <topic name="FIRSTINIT">
     <category>
       <pattern>#</pattern>
       <that># Mag ik je naam weten #</that>
@@ -51,11 +51,12 @@
           </set>
         </think>
       </template>
-    </category>
+    </category></topic>
   
+  <topic name="FIRSTINIT">
     <category>
-      <pattern># ja #</pattern>
-      <that># als mijn naam is #</that>
+      <pattern># JA #</pattern>
+      <that># ALS MIJN NAAM IS #</that>
       <template>
         <random>
       <li>
@@ -67,22 +68,76 @@
         </random>
   Ik moet je kennen, ik luister, Mag ik je naam weten ?
   <think><set name="botname"><get name="tmpname" /></set></think></template>
-    </category>
-  
-    <category>
-      <pattern># ja #</pattern>
-      <that># als je naam #</that>
-      <template>
-        <random>
-    <li>
-      Nu ken ik jou, <get name="tmpname" />. ik ben blij.
-    </li>
-        </random>
-    
-        <think>
+    </category></topic>
+
+  <topic name="FIRSTINIT">
+    <category><pattern># JA #</pattern><that># ALS JE NAAM #</that>
+      <template><think>
           <set name="name">
-            <get name="tmpname" />
+            <get name="tmpname"/>
           </set>
+        </think>
+        <set name="questionfirstinit">Zou je willen dat ik mijn visie gebruik om je gezicht naast je naam te onthouden <get name="tmpname"/>?</set>
+        </template>
+    </category></topic>
+
+  <topic name="FIRSTINIT">
+    <category><pattern># JA #</pattern><that># NAAST JE NAAM TE ONTHOUDEN #</that>
+      <template>Ok, zorg ervoor dat je in de camera kijkt en draag alsjeblieft geen bril.<think>
+          <set name="topic">default</set>
+        </think><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.savePredicates(),i01.startPeer('opencv'), memorisePerson(u"<get name="tmpname"/>")</param>
+          </mrl>
+        </oob> 
+        <think>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+      </template>
+    </category></topic>
+
+  <topic name="STARTVISION">
+    <category><pattern># JA #</pattern><that># MIJN VISIOEN BEGIN #</that>
+      <template>Ok, zorg ervoor dat je in de camera kijkt en draag alsjeblieft geen bril.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01.startPeer('opencv'), memorisePerson(u"<get name="name"/>")</param>
+          </mrl>
+        </oob></template>
+    </category></topic>
+
+  <topic name="STARTVISION">
+    <category><pattern># NEE #</pattern><that># MIJN VISIOEN BEGIN #</that>
+      <template>Ok, je kunt me altijd later trainen, in mijn visie-gui.<srai>SYSTEM_SAY_HELLO</srai></template>
+    </category></topic>
+  
+  <topic name="FIRSTINIT">  
+    <category>
+      <pattern># NEE #</pattern>
+      <that># als mijn naam is #</that>
+      <template>We starten opnieuw.
+  Ik luister. wat is mijn naam ?
+    </template>
+    </category></topic>
+  
+  <topic name="FIRSTINIT">
+    <category>
+      <pattern># nee #</pattern>
+      <that># als je naam #</that>
+      <template>We starten opnieuw.
+  Ik luister. Mag ik je naam weten ?
+      </template>
+    </category></topic>
+
+  <topic name="FIRSTINIT">
+    <category><pattern># NEE #</pattern><that># NAAST JE NAAM TE ONTHOUDEN #</that>
+      <template>Ok, dan zijn we klaar met ons eerste contact.
+        <think>
           <set name="firstinit">ok</set>
           <set name="topic">default</set>
         </think>
@@ -90,31 +145,12 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>")</param>
+            <param>i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.savePredicates()</param>
           </mrl>
-        </oob>
-        <srai>WAKE_UP</srai>
-      </template>
-    </category>
+        </oob><srai>SYSTEM_SAY_HELLO</srai></template>
+    </category></topic>
   
-    <category>
-      <pattern># nee #</pattern>
-      <that># als mijn naam is #</that>
-      <template>
-  We starten opnieuw.
-  Ik luister. wat is mijn naam ?
-    </template>
-    </category>
-  
-    <category>
-      <pattern># nee #</pattern>
-      <that># als je naam #</that>
-      <template>
-  We starten opnieuw.
-  Ik luister. Mag ik je naam weten ?
-    </template>
-    </category>
-  
+  <topic name="FIRSTINIT">
     <category>
       <pattern>#</pattern>
       <that># zeg ja, of nee #</that>
@@ -129,134 +165,217 @@
         </random>
         <get name="questionfirstinit" />
       </template>
-    </category>
-  </topic>
+    </category></topic>
   <!-- end initialisaion routine -->
+
+    <category><pattern>NOTMEMORIZED</pattern>
+      <template>Ik kon je gezicht niet onthouden omdat mijn visie niet is gestart.
+            Wil je dat ik met mijn visioen begin?
+            <think>
+                <set name="topic">startVision</set>
+            </think>
+        </template>
+      </category>
+
+    <category><pattern>NOTFACERECOGNIZED</pattern>
+      <template>Ik kon je gezicht niet volgen omdat gezichtsherkenning UIT staat in mijn zichtinstellingen. Zet het op AAN in mijn visie-instellingen.
+        <random>
+          <li>Ik zal opnieuw opstarten, het is belangrijk.</li>
+          <li>Ik zal herhalen.</li>
+        </random>
+        <think>
+          <set name="topic">firstinit</set>
+        </think>
+        <get name="questionfirstinit"/></template>
+      </category>
   
   <!-- updater  -->
   
-  <category>
-    <pattern>SYSTEM_NEW_VERSION</pattern>
-    <template>
-       <think><set name="topic">updater</set></think>
-     Alert, nieuwe Inmoov besturingssysteem versie beschikbaar, als u dat wenst, kan ik het bijwerken, ja of nee
-     </template>
-  </category>
   
-  <topic name="updater">
-  
-  
-    <category>
-      <pattern># YES #</pattern>
-      <that># zeg ja #</that>
-      <template>
-       <think>
-         <set name="topic">default</set>
-        </think>
-      <li>
-      Begin de download, wacht alstublieft.
-      </li>
-  <oob>
-          <mrl>
-            <service>python</service>
-            <method>exec</method>
-            <param>updateMe()</param>
-          </mrl>
-     </oob>   
-  </template>
-    </category>
-  
-     <category>
-      <pattern># NO #</pattern>
-      <that># zeg ja #</that>
-      <template>
+  <category><pattern>NEW_INIT</pattern>
+<template><think>
+        <set name="newinit">started</set>
+      </think>
+      <think>
+        <set name="topic">newinit</set>
+      </think>
+        Ik luister. Waar zou je mijn naam in willen veranderen ?</template>
+</category>
+<topic name="NEWINIT">
+<category><pattern>#</pattern><that># NAAM IN WILLEN VERANDEREN #</that>
+<template><set name="questionnewinit">als mijn nieuwe naam <star/> is, zeg dan ja of nee of stop</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="NEWINIT">
+<category><pattern># JA #</pattern><that># ALS MIJN NIEUWE NAAM #</that>
+<template><random>
+            <li>
+            Ik hou van deze naam , <get name="tmpname"/>.
+            </li>
+            <li>
+            Mooie naam, <get name="tmpname"/> is geweldig.
+            </li>
+        </random>
     <think>
-         <set name="topic">default</set>
-        </think>
-  Oké, zoals je wil, misschien de volgende keer
+        <set name="botname"><get name="tmpname"/></set>
+        <set name="newinit"></set>
+        <set name="topic">changing name</set>
+    </think>
+</template>
+</category></topic>
+
+<topic name="NEWINIT">
+<category><pattern># NEE #</pattern><that># ALS MIJN NIEUWE NAAM #</that>
+<template>Laten we opnieuw beginnen.    
+        Ik luister. Waar zou je mijn naam in willen veranderen ?</template>
+</category></topic>
+
+<topic name="NEWINIT">
+<category><pattern># STOP #</pattern><that># ALS MIJN NIEUWE NAAM #</that>
+<template>Ok, ik houd mijn naam <get name="botname"/></template>
+</category></topic>
+
+<category><pattern>NEW_INIT_USER</pattern>
+<template><think>
+        <set name="newinituser">started</set>
+      </think>
+      <think>
+        <set name="topic">newinituser</set>
+      </think>
+        Ik luister. Welke naam wil je dat ik onthoud ?</template>
+</category>
+<topic name="NEWINITUSER">
+<category><pattern>#</pattern><that># WELKE NAAM WIL JE DAT IK ONTHOUD #</that>
+<template><set name="questionnewinituser">als je nieuwe naam <star/> is, zeg dan ja of nee of stop</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="NEWINITUSER">
+<category><pattern># JA #</pattern><that># ALS JE NIEUWE NAAM #</that>
+<template><think>
+        <set name="newinituser"></set>
+        <set name="topic">changing user name</set>
+    </think>
     <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>dontUpdateMe()</param>
+            <param>YesName(u"<get name="tmpname"/>"), i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.savePredicates()</param>
           </mrl>
-     </oob> 
-    </template>
-    </category>
-  
-    <category>
-      <pattern>#</pattern>
-      <that># zeg ja #</that>
-      <template>Gelieve mijn vraag te stellen, het is belangrijk, ja of nee zeggen</template>
-    </category>
-    
-  </topic>
-  
-    <category>
-    <pattern>* SYSTEM_PERCENT</pattern>
-    <template>
-      <li>
-        <star /> procent.
-      </li>
-    </template>
-  </category>
-  
-  
-      <category>
-    <pattern>SYSTEM_DOWNLOAD_OK</pattern>
-    <template>
-      <li>
-       Download ok, ik zal afsluiten. Herstart me alsjeblieft opnieuw.
-      </li>
-    </template>
-  </category>
-  
+        </oob>
+        <random>
+            <li>Ik ben blij dat ik je ken, <get name="tmpname"/>.</li>
+            <li>Leuk u te ontmoeten, <get name="tmpname"/>.</li>
+        </random>
+</template>
+</category></topic>
 
-  <category><pattern>AUDIO TEST</pattern>
-    <template><oob>
+<topic name="NEWINITUSER">
+<category><pattern># NEE #</pattern><that># ALS JE NIEUWE NAAM #</that>
+<template>Laten we opnieuw beginnen.    
+        Ik luister. Welke naam wil je dat ik onthoud?</template>
+</category></topic>
+
+<topic name="NEWINITUSER">
+<category><pattern># STOP #</pattern><that># ALS JE NIEUWE NAAM #</that>
+<template>Ok, ik houd je naam <get name="name"/></template>
+</category></topic>
+
+<category><pattern>AUDIO TEST</pattern>
+<template><oob>
          <mrl>
           <service>i01.audioPlayer</service>
           <method>play</method>
-          <param>resource\InMoov2\system\sounds\startupsound.mp3</param>
+          <param>resource/InMoov2/system/sounds/startupsound.mp3</param>
          </mrl>
        </oob></template>
-  </category>
-  
-  <category>
-    <pattern>WAKE_UP</pattern>
-    <template>
-        <random>
-          <li>Ik ben klaar en luisterend.</li>
+</category>
+<category><pattern>WAKE_UP</pattern>
+<template><random>
+          <li>Ik ben klaar en luister.</li>
           <li>Wat kan ik voor je doen.</li>
           <li>Hoe kan ik u helpen.</li>
-        </random>
-    </template>
-  </category>
-  
-  <category>
-    <pattern>WAKKER WORDEN</pattern>
-    <template>
-      <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob>
-    </template>
-  </category>
+        </random><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession("<get name="lastUsername"/>")</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>SYSTEM_SAY_HELLO</pattern>
+<template><srai>HOI</srai>
+        <random>
+        <li>Zeg gewoon HELP als je me nodig hebt.</li>
+        <li>Zeg HELP ME ALSJEBLIEFT als je me nodig hebt.</li>
+        </random></template>
+</category>
+<category><pattern>WAKKER WORDEN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+</category>
+<category><pattern>AFSLUITEN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>
+</category>
 
-    <category>
-    <pattern>afsluiten</pattern>
+<category>
+    <pattern>ROBOT VOLTOOID UITSCHAKELEN</pattern>
     <template>
-      <oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob>
+      <think>
+        <set name="topic">SHUT_DOWN</set>
+      </think>
+            Wil je dat ik mijn computer uitzet, zeg dan ja of nee.
     </template>
+</category>
+<topic name="SHUT_DOWN">
+    <category>
+    <pattern># JA #</pattern>
+    <that># WIL JE DAT IK MIJN COMPUTER UITZET #</that>
+    <template>
+        <think>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>shutdownComplete()</param>
+          </mrl>
+        </oob>
+    </template>
+    </category></topic>
+    <category>
+    <pattern># NEE #</pattern>
+    <that># WIL JE DAT IK MIJN COMPUTER UITZET #</that>
+    <template>Ok, ik zet mijn computer niet uit. 
+            <think><set name="topic">default</set></think></template>
     </category>
+    <category>
+    <pattern>#</pattern>
+    <that># WIL JE DAT IK MIJN COMPUTER UITZET #</that>
+    <template><think><set name="topic">default</set></think>
+        <srai>ROBOT VOLTOOID UITSCHAKELEN</srai>
+    </template>
+</category>
+<category><pattern>GA SLAPEN</pattern>
+<template>ok<oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
+</category>
+<category><pattern>UITZETTEN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>disable()</param></mrl></oob></template>
+</category>
+<category><pattern>WAT IS HET ONDERWERP</pattern>
+<template>Het onderwerp is
+      <get name="topic"/></template>
+</category>
   
-  <category>
-    <pattern>WAT IS HET TOPIC</pattern>
-    <template>Het onderwerp is
-      <get name="topic" /></template>
-  </category>
-  <category>
-    <pattern>BOOT UP MODE</pattern>
-    <template>Invoeren in het opstartonderwerp.
-      <think><set name="topic">BOOTUP</set></think></template>
-  </category>
   <category>
     <pattern>GEBAREN</pattern>
     <template>Invoeren in het gebaaronderwerp.

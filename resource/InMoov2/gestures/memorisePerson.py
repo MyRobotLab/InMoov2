@@ -1,13 +1,15 @@
 from org.myrobotlab.opencv import OpenCVFilterFaceRecognizer
 
 def YesName(name):
-  print "name confirmed:"
   print(name)
   if runtime.isStarted('i01.neoPixel'):
     i01_neoPixel.setAnimation("Color Wipe", 100, 5, 10, 15) 
   if runtime.isStarted('i01.chatBot'):
     if runtime.isStarted('i01.opencv'):
-      i01.cameraOn()
+      global i01_opencv
+      i01_opencv = runtime.start("i01.opencv","OpenCV")
+      i01_opencv.capture()
+      sleep(13)
       i01_opencv.addFilter("FaceRecognizer")
       i01_opencv.setActiveFilter("FaceRecognizer")
       if runtime.isStarted('i01.head'):
@@ -24,12 +26,13 @@ def YesName(name):
       # set the filter to be in training mode (Where it learns new images)
       fr.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
       # now that we have new examples, let's re-train the face recognizer with all our examples.
-      sleep(2)
+      sleep(4)
       fr.train()
       # after we've retrained the model.. start recognizing again
       fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
       i01_opencv.disableFilter("FaceRecognizer")
       i01_opencv.removeFilter("FaceRecognizer")
+      i01_opencv.stopCapture()
       i01.finishedGesture()
     else:
       i01.warn('facerecognizer not starting because no opencv')
@@ -41,7 +44,10 @@ def memorisePerson(name):
       i01_neoPixel.setAnimation("Color Wipe", 100, 5, 10, 15) 
     if runtime.isStarted('i01.chatBot'):
       if runtime.isStarted('i01.opencv'):
-        i01.cameraOn()
+        global i01_opencv
+        i01_opencv = runtime.start("i01.opencv","OpenCV")
+        i01_opencv.capture()
+        sleep(13)
         i01_opencv.addFilter("FaceRecognizer")
         i01_opencv.setActiveFilter("FaceRecognizer")
         # if runtime.isStarted('i01.head'):
@@ -57,13 +63,21 @@ def memorisePerson(name):
         #fr.setTrainName(name)
         # set the filter to be in training mode (Where it learns new images)
         fr.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
+        sleep(4)
         # now that we have new examples, let's re-train the face recognizer with all our examples.
         fr.train()
         # after we've retrained the model.. start recognizing again
         fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
         i01_opencv.disableFilter("FaceRecognizer")
         i01_opencv.removeFilter("FaceRecognizer")
+        i01_opencv.stopCapture()
         i01_chatBot.getResponse("SYSTEM_SAY_HELLO")
         i01.finishedGesture()
       else:
         i01.warn('facerecognizer not starting because no opencv')
+        if runtime.isStarted('i01.chatBot'):
+          i01_chatBot.getResponse("NOTMEMORIZED")
+  else:
+        i01.warn('facerecognizer is OFF')
+        if runtime.isStarted('i01.chatBot'):
+          i01_chatBot.getResponse("NOTFACERECOGNIZED")        

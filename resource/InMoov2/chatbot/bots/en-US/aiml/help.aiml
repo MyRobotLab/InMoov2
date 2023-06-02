@@ -12,7 +12,7 @@
 <template><srai>HELP</srai></template>
 </category>
 <category><pattern>HELP</pattern>
-<template>You can check now the help list in the chatbot GUI. You can voice command each line to get more help or type them in the text box: HELP GESTURES , HELP GUI , HELP SERVICE 
+<template>You can check now the help list in the chatbot GUI. You can voice command each line to get more help or type them in the text box: HELP GESTURES , HELP GUI. 
         </template>
 </category>
 <category><pattern>HELP GESTURES</pattern>
@@ -33,83 +33,18 @@
           You can view a longer list in the python tab, but you can find still a LOT more voice commands in the folder data, programAB, aiml files.
           <oob>
         <mrl>
-          <service>python</service><method>exec</method><param>printList()</param>
+          <service>python</service><method>exec</method><param>printList_EN()</param>
         </mrl>
       </oob>
       </template>
 </category>
 <category><pattern>HELP GUI</pattern>
-<template>This needs to be done yet, we need help.
-      </template>
-</category>
-<category><pattern>HELP SERVICE</pattern>
-<template>You can try to vocally create a service: START SERVICE * , RELEASE SERVICE * , START *. Note this is a work in progress and it doesn't always work, it's more reliable to manually create the service in the runtime tab.
-      </template>
-</category>
-<category><pattern>START SERVICE SEARCH</pattern>
-<template>Starting service i01.chatBot.search
-      <oob>
-        <mrl>
-          <service>runtime</service>
-          <method>createAndStart</method>
-          <param>i01.chatBot.search</param>
-          <param>GoogleSearch</param>
-        </mrl>
-      </oob></template>
-</category>
-<category><pattern>RELEASE SERVICE SEARCH</pattern>
-<template>Releasing service i01.chatBot.search
-      <oob>
-        <mrl>
-          <service>runtime</service>
-          <method>release</method>
-          <param>i01.chatBot.search</param>
-        </mrl>
-      </oob></template>
-</category>
-<category><pattern>START *</pattern>
-<template><srai>START SERVICE <star/></srai></template>
-</category>
-<category><pattern>START SERVICE *</pattern>
-<template>Starting service <star/>
-      <oob>
-        <mrl>
-          <service>runtime</service>
-          <method>createAndStart</method>
-          <param><star/></param>
-          <param><star/></param>
-        </mrl>
-      </oob></template>
-</category>
-<category><pattern>RELEASE *</pattern>
-<template><srai>RELEASE SERVICE <star/></srai></template>
-</category>
-<category><pattern>RELEASE SERVICE *</pattern>
-<template>Releasing service <star/>
-      <oob>
-        <mrl>
-          <service>runtime</service>
-          <method>release</method>
-          <param><star/></param>
-        </mrl>
-      </oob></template>
-</category>
-<category><pattern>START PIR</pattern>
-<template>ok
-      <oob>
-        <mrl>
-          <service>i01</service>
-          <method>startPir</method>
-        </mrl>
-      </oob></template>
-</category>
-<category><pattern>START ULTRA SONIC RIGHT</pattern>
-<template>ok
-      <oob>
-        <mrl>
-          <service>i01</service>
-          <method>startUltrasonicRight</method>
-        </mrl>
-      </oob></template>
+<template><oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://inmoov.fr/inmoov2-in-nixie/</param>
+          </mrl>
+        </oob></template>
 </category>
 </aiml>

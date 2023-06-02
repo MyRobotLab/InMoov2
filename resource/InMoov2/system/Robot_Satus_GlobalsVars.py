@@ -20,6 +20,8 @@ global RobotCanMoveBodyRandom
 RobotCanMoveBodyRandom=0
 global RobotCanMoveRandom
 RobotCanMoveRandom=0
+global error_red
+error_red=0
 global RobotIsErrorMode
 RobotIsErrorMode=0
 global RobotneedUpdate

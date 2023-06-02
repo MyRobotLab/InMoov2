@@ -12,11 +12,11 @@
 <template><srai>À L AIDE</srai></template>
 </category>
 <category><pattern>À L AIDE</pattern>
-<template>Vous pourrez consulter la liste d'aide dans l'interface graphique du chatbot. Vous pouvez commander vocalement chaque ligne pour obtenir plus d'aide ou les saisir dans la zone de texte: À L AIDE GESTUELLES , À L AIDE INTERFACE GRAPHIQUE
+<template>Vous pourrez consulter la liste d'aide dans l'interface graphique du chatbot. Vous pouvez commander vocalement chaque ligne pour obtenir plus d'aide ou les saisir dans la zone de texte: À L'AIDE GESTUELLE , À L'AIDE INTERFACE GRAPHIQUE.
         </template>
 </category>
-<category><pattern>À L AIDE GESTUELLES</pattern>
-<template>Voici une petites liste de commande vocale:<br/>
+<category><pattern>À L AIDE GESTUELLE</pattern>
+<template>Voici une petite liste de commande vocale:<br/>
           FERME TON DOIGT.<br/>
           OUVRE TON DOIGT.<br/>
           DOIGT AU MILIEU.<br/>
@@ -31,7 +31,7 @@
           Vous pouvez trouver une liste plus longue dans la fenêtre python et encore bien plus dans data, programAB, aiml fichier.
           <oob>
         <mrl>
-          <service>python</service><method>exec</method><param>printList('fr')</param>
+          <service>python</service><method>exec</method><param>printList_FR()</param>
         </mrl>
       </oob>
       </template>

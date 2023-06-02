@@ -9,7 +9,7 @@
       <think>
         <set name="topic">firstinit</set>
       </think>
-		Hello, This is my first initialisation. I need some informations, I am listening, what is my name ?</template>
+        Hello, This is my first initialisation. I need some informations, I am listening, what is my name ?</template>
 </category>
 <topic name="FIRSTINIT">
 <category><pattern>#</pattern><that># WHAT IS MY NAME #</that>
@@ -34,68 +34,125 @@
 <topic name="FIRSTINIT">
 <category><pattern># YES #</pattern><that># IF MY NAME IS #</that>
 <template><random>
-			<li>
-			I like this name , <get name="tmpname"/>.
-			</li>
-			<li>
-			Very nice name, <get name="tmpname"/> is great.
-			</li>
+            <li>
+            I like this name , <get name="tmpname"/>.
+            </li>
+            <li>
+            Very nice name, <get name="tmpname"/> is great.
+            </li>
         </random>
-	I need to know you, I am listening, may I have your name ?
-	<think><set name="botname"><get name="tmpname"/></set></think></template>
+    I need to know you, I am listening, may I have your name ?
+    <think><set name="botname"><get name="tmpname"/></set></think></template>
 </category></topic>
 
 <topic name="FIRSTINIT">
 <category><pattern># YES #</pattern><that># IF YOUR NAME #</that>
-<template><random>
-        <li>I am glad to know you, <get name="tmpname"/>.</li>
-        <li>Nice to meet you, <get name="tmpname"/>.</li>
-        </random>
-        <random>
-        <li>Just say HELP if you need me.</li>
-        <li>Say HELP ME PLEASE if you need me.</li>
-		</random>
-        <think>
+<template><think>
           <set name="name">
             <get name="tmpname"/>
           </set>
+        </think>
+        <set name="questionfirstinit">Would you like me to use my vision to memorise your face along your name, <get name="tmpname"/>?</set>
+        </template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># YES #</pattern><that># YOUR FACE ALONG YOUR NAME #</that>
+<template>Ok, make sure you are facing the camera, and please don't wear glasses.<think>
+          <set name="topic">default</set>
+        </think><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.savePredicates(),i01.startPeer('opencv'), memorisePerson(u"<get name="tmpname"/>")</param>
+          </mrl>
+        </oob> 
+        <think>
           <set name="firstinit">ok</set>
           <set name="topic">default</set>
         </think>
+    </template>
+</category></topic>
+
+<topic name="STARTVISION">
+<category><pattern># YES #</pattern><that># START MY VISION #</that>
+<template>Ok, make sure you are facing the camera, and please don't wear glasses.
         <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>")</param>
+            <param>i01.startPeer('opencv'), memorisePerson(u"<get name="name"/>")</param>
           </mrl>
-        </oob>
-        </template>
+        </oob></template>
+</category></topic>
+
+<topic name="STARTVISION">
+<category><pattern># NO #</pattern><that># START MY VISION #</that>
+<template>Ok, you always can train me later, in my vision gui.<srai>SYSTEM_SAY_HELLO</srai></template>
 </category></topic>
 
 <topic name="FIRSTINIT">
 <category><pattern># NO #</pattern><that># IF MY NAME IS #</that>
 <template>We restart.
-	I am listening. what is my name ?</template>
+    I am listening. what is my name ?</template>
 </category></topic>
 
 <topic name="FIRSTINIT">
 <category><pattern># NO #</pattern><that># IF YOUR NAME #</that>
 <template>We restart.
-	I am listening. may I have your name ?</template>
+    I am listening. may I have your name ?</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># NO #</pattern><that># YOUR FACE ALONG YOUR NAME #</that>
+<template>Ok <get name="tmpname"/>, then we are done with our first contact.
+        <think>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+    <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob><srai>SYSTEM_SAY_HELLO</srai></template>
 </category></topic>
 
 <topic name="FIRSTINIT">
 <category><pattern>#</pattern><that># SAY YES OR NO #</that>
 <template><random>
           <li>
-	Please, answer my question, it is important
-	</li>
+    Please, answer my question, it is important
+    </li>
           <li>
-	I repeat.
-	</li>
+    I repeat.
+    </li>
         </random>
         <get name="questionfirstinit"/></template>
 </category></topic>
+
+<category><pattern>NOTMEMORIZED</pattern>
+<template>I couldn't memorize your face because my vision is not started.
+    Do you want me to start my vision?
+        <think>
+            <set name="topic">startVision</set>
+        </think>
+    </template>
+</category>
+
+
+<category><pattern>NOTFACERECOGNIZED</pattern>
+      <template>I couldn't memorize your face because face recognizer is OFF in my vision settings. Set it ON in my vision settings.
+        <random>
+          <li>I restart, it's important.</li>
+          <li>I repeat.</li>
+        </random>
+        <think>
+          <set name="topic">firstinit</set>
+        </think>
+        <get name="questionfirstinit"/></template>
+      </category>
 
 <category><pattern>NEW_INIT</pattern>
 <template><think>
@@ -218,7 +275,11 @@
         </oob></template>
 </category>
 <category><pattern>SYSTEM_SAY_HELLO</pattern>
-<template><srai>HI</srai></template>
+<template><srai>HI</srai>
+        <random>
+        <li>Just say HELP if you need me.</li>
+        <li>Say HELP ME PLEASE if you need me.</li>
+        </random></template>
 </category>
 <category><pattern>WAKE UP</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
