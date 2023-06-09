@@ -38,6 +38,30 @@
 <template>loading gestures
 </template>
 </category>
+  
+<category>
+<pattern>SYSTEM_EVENT STARTED RIGHTARM</pattern>
+<template>Starting right arm
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED RIGHTARM</pattern>
+<template>Stopping right arm
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED LEFTARM</pattern>
+<template>Starting left arm
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED LEFTARM</pattern>
+<template>Stopping left arm
+</template>
+</category>  
 
 <category>
 <pattern>SYSTEM_EVENT STARTED HTMLFILTER</pattern>
