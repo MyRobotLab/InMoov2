@@ -18,7 +18,7 @@ bots:
 - data/ProgramAB/ru-RU
 - data/ProgramAB/tr-TR
 currentBotName: en-US
-currentUserName: Friend
+currentUserName: human
 listeners:
 - callback: onText
   listener: i01.htmlFilter

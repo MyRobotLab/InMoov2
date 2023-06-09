@@ -24,4 +24,4 @@ speechRecognizers:
 - i01.mouthControl
 substitutions: null
 type: MarySpeech
-voice: Obadiah
+voice: Mark
