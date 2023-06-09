@@ -9,7 +9,7 @@ def YesName(name):
       global i01_opencv
       i01_opencv = runtime.start("i01.opencv","OpenCV")
       i01_opencv.capture()
-      sleep(13)
+      sleep(5)
       i01_opencv.addFilter("FaceRecognizer")
       i01_opencv.setActiveFilter("FaceRecognizer")
       if runtime.isStarted('i01.head'):
@@ -47,7 +47,7 @@ def memorisePerson(name):
         global i01_opencv
         i01_opencv = runtime.start("i01.opencv","OpenCV")
         i01_opencv.capture()
-        sleep(13)
+        sleep(5)
         i01_opencv.addFilter("FaceRecognizer")
         i01_opencv.setActiveFilter("FaceRecognizer")
         # if runtime.isStarted('i01.head'):
