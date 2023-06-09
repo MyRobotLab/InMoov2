@@ -56,7 +56,7 @@ execfile('resource/InMoov2/services/D_OpenCv.py')
 execfile('resource/InMoov2/services/H_OpenWeatherMap.py')
 #I_UltrasonicSensor.py ## NEED FIXING FOR NIXIE
 #J_SensorFinger.py ## NEED FIXING FOR NIXIE
-execfile('resource/InMoov2/services/K_FiniteStateMachine.py')
+#execfile('resource/InMoov2/services/K_FiniteStateMachine.py')
 
 ################################ 
 # INIT.3- inmoov loading
