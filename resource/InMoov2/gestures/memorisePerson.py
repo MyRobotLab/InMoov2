@@ -92,15 +92,16 @@ def takeMyPicture():
     opencv.stopCapture()
     picturePath='resource/WebGui/app/service/img/'
     shutil.move(photoFileName,picturePath)
-    print "moved image"
     newName = str(i01_chatBot.getPredicate("human","lastUsername"))+'.png'
     print(newName)
     sleep(1)
     os.chdir(picturePath)
-    print "Current working dir : %s" % os.getcwd()
-    os.rename('i01.opencv-00001.png', newName)
-    #opencv.cropImage('i01.opencv-00001', 100)
-    os.chdir("../../../../../")
-    print "Current working dir : %s" % os.getcwd()
+    try:
+      os.rename('i01.opencv-00001.png', newName)
+      #opencv.cropImage('i01.opencv-00001', 100)
+      os.chdir("../../../../../")
+    except:
+      os.remove('i01.opencv-00001.png')
+      os.chdir("../../../../../")
+      pass
     i01.finishedGesture()
-    
