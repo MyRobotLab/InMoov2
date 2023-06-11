@@ -3,7 +3,7 @@ listeners:
 - callback: onText
   listener: i01.chatBot
   method: publishText
-listening: false
+listening: true
 peers: null
 recording: false
 textListeners:

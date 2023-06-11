@@ -19,7 +19,8 @@ if runtime.isStarted('i01.headTracking') or runtime.isStarted('i01.eyeTracking')
    trackingTimer.setInterval(trackingTimeout)  
 
 def sleepModeWakeUp():
-  i01_fsm.fire("wake")
+  #if runtime.isStarted('i01.fsm'):
+    #i01_fsm.fire("wake")
   if runtime.isStarted('i01.mouth'):
     initMouth()
   if runtime.isStarted('i01.ear'):
@@ -28,45 +29,46 @@ def sleepModeWakeUp():
     WaitXsecondBeforeRelaunchTracking=-10
     i01_ear.startRecording()
   if runtime.isStarted('i01.pir'):
-      if pirWakeUp==1:
-        initPir()
-        sleepTimer.startClock()
-      else:  
-        i01_pir.disable()
+    initPir()
+    if pirWakeUp==1:
+      sleepTimer.startClock()
+    else:  
+      i01_pir.disable()
   #if RobotIsStarted==1:
-  if i01_fsm.getCurrent()=="awake" or "systemCheck":
+  #if runtime.isStarted('i01.fsm'):
+    #if i01_fsm.getCurrent()=="awake" or "systemCheck":
     
-    if runtime.isStarted('i01.imageDisplay'):
-      i01_imageDisplay.closeAll()
-    
-    #display(RuningFolder+'/system/pictures/loading_1024-600.jpg')
-    
-    if runtime.isStarted('i01.neoPixel'):
-      i01_neoPixel.setAnimation("Larson Scanner", 255, 255, 0, 25)
-      sleep(2)
-      i01_neoPixel.stopAnimation()
-    #optional switchon nervoboard
-    #switchOnAllNervo()
-    if runtime.isStarted('i01.eyeLids'):
-      i01_head_eyelidLeft.moveTo(0)
-      i01_head_eyelidRight.moveTo(0)
-      i01_head_eyelids.autoBlink(True)
-          #head up
-    if runtime.isStarted('i01.head'):
-      i01_head_neck.setSpeed(50)
-      i01_head_neck.moveToBlocking(i01_head_neck.getRest())
-    if customSound==1:
-      i01_audioPlayer=runtime.start('i01_audioPlayer','AudioFile')
-      i01_audioPlayer.playFile('resource/InMoov2/system/sounds/Notifications/'+random.choice(os.listdir('resource/InMoov2/system/sounds/Notifications')),False)
-    elif runtime.isStarted('i01.opencv'):
-          if faceRecognizerActivated==1:
-             facerecognizer()
-          else:
-             welcomeMessage()     
-    else:
-       welcomeMessage()
-   
-    if runtime.isStarted('i01'):fullspeed()
+  if runtime.isStarted('i01.imageDisplay'):
+    i01_imageDisplay.closeAll()
+  
+  #display(RuningFolder+'/system/pictures/loading_1024-600.jpg')
+  
+  if runtime.isStarted('i01.neoPixel'):
+    i01_neoPixel.setAnimation("Larson Scanner", 255, 255, 0, 25)
+    sleep(2)
+    i01_neoPixel.stopAnimation()
+  #optional switchon nervoboard
+  #switchOnAllNervo()
+  if runtime.isStarted('i01.eyeLids'):
+    i01_head_eyelidLeft.moveTo(0)
+    i01_head_eyelidRight.moveTo(0)
+    i01_head_eyelids.autoBlink(True)
+        #head up
+  if runtime.isStarted('i01.head'):
+    i01_head_neck.setSpeed(50)
+    i01_head_neck.moveToBlocking(i01_head_neck.getRest())
+  if customSound==1:
+    i01_audioPlayer=runtime.start('i01_audioPlayer','AudioFile')
+    i01_audioPlayer.playFile('resource/InMoov2/system/sounds/Notifications/'+random.choice(os.listdir('resource/InMoov2/system/sounds/Notifications')),False)
+  elif runtime.isStarted('i01.opencv'):
+        if faceRecognizerActivated==1:
+           facerecognizer()
+        else:
+           welcomeMessage()     
+  else:
+     welcomeMessage()
+ 
+  if runtime.isStarted('i01'):fullspeed()
 
 
 def sleepModeSleep():
@@ -81,7 +83,7 @@ def sleepModeSleep():
       i01_opencv.stopCapture()  
     if runtime.isStarted('i01.imageDisplay'):
       i01_imageDisplay.closeAll()
-    i01_fsm.fire("sleep")
+    #i01_fsm.fire("sleep")
     i01.halfSpeed()
     rest()
     i01.waitTargetPos()
@@ -129,7 +131,7 @@ def wakeUpModeInsult():
         i01_pir.disable()
     
     #if RobotIsStarted==1:
-    if i01_fsm.getCurrent()=="applyingConfig" or "systemCheck":  
+    #if i01_fsm.getCurrent()=="applyingConfig" or "systemCheck":  
       if runtime.isStarted('i01.imageDisplay'):
         i01_imageDisplay.closeAll()
       if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Larson Scanner", 0, 255, 0, 25)
@@ -146,7 +148,7 @@ def wakeUpModeInsult():
     else:
       relax()
     #RobotIsSleeping=False
-    i01_fsm.fire("wake")
+    ##i01_fsm.fire("wake")
     if runtime.isStarted('i01.neoPixel'):i01_neoPixel.stopAnimation()
     if runtime.isStarted('i01'):
       relax()
@@ -206,7 +208,7 @@ def welcomeMessage():
     if runtime.isStarted('i01'):
       i01.speakBlocking(i01.localize("ready"))
   #RobotIsStarted=True
-  i01_fsm.fire("systemCheck")
+  ##i01_fsm.fire("systemCheck")
 
 global WaitXsecondBeforeRelaunchTracking
 WaitXsecondBeforeRelaunchTracking=-10
@@ -230,17 +232,17 @@ def humanDetected():
     
 def sleepTimerRoutine(timedata):
   #if RobotIsSleeping==0:
-  if not i01_fsm.getCurrent()=="sleeping":
-    if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Larson Scanner", 17, 126, 57, 1)
-    if runtime.isStarted("i01.pir"):
-      i01_pir.disable()
-      #pirControlerArduino.disablePin(pirPin)
-    #sleep function to call
-    sleepTimer.stopClock()
-    if runtime.isStarted('i01.headTracking'):
-      initTracking()   
-      trackingTimer.stopClock()
-    sleepModeSleep()
+  #if not i01_fsm.getCurrent()=="sleeping":
+  if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Larson Scanner", 17, 126, 57, 1)
+  if runtime.isStarted("i01.pir"):
+    i01_pir.disable()
+    #pirControlerArduino.disablePin(pirPin)
+  #sleep function to call
+  sleepTimer.stopClock()
+  if runtime.isStarted('i01.headTracking'):
+    initTracking()   
+    trackingTimer.stopClock()
+  sleepModeSleep()
   
 def trackingTimerRoutine(timedata):
   global WaitXsecondBeforeRelaunchTracking
@@ -252,3 +254,4 @@ def trackingTimerRoutine(timedata):
       stopTrackHumans()
       trackingTimer.stopClock()
     if runtime.isStarted('i01.neoPixel'):i01_neoPixel.stopAnimation()
+
