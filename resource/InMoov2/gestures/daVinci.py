@@ -6,6 +6,8 @@ def daVinci():
   # turn off auto disable for this gesture
   i01_leftArm_omoplate.setAutoDisable(False)
   i01_rightArm_omoplate.setAutoDisable(False)
+  i01_leftArm_omoplate.enable()
+  i01_rightArm_omoplate.enable()
   i01.setHandSpeed("left", 100.0, 100.0, 100.0, 100.0, 100.0, 22.0)
   i01.setHandSpeed("right", 100.0, 100.0, 100.0, 100.0, 100.0, 22.0)
   i01.setArmSpeed("left", 36, 36, 36, 36)
