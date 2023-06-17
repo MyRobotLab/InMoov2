@@ -7,7 +7,7 @@
 
 <category>
 <pattern>SYSTEM_EVENT INIT</pattern>
-<template>Initialisation</template>
+<template>Initialisation scripts</template>
 </category>
 
 <category>
@@ -24,12 +24,6 @@
 <category>
 <pattern>SYSTEM_EVENT STOPPED *</pattern>
 <template>Stopping <lowercase><star/></lowercase>
-</template>
-</category>
-
-<category>
-<pattern>SYSTEM_EVENT INIT</pattern>
-<template>starting initialization scripts
 </template>
 </category>
 
