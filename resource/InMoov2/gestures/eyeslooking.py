@@ -1,9 +1,6 @@
 def eyeslooking():
   for y in range(0, 5):
-    if (data == "can i have your attention"):
-      i01.speak("ok you have my attention")
-      stopit()
-    if (data == "inmoov"):
+    if runtime.isStarted(('i01_eyeX') and ('i01_eyeY')):
       stopit()
     x = (random.randint(1, 6))
     if x == 1:
