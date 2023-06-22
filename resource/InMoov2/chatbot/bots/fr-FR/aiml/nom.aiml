@@ -6,7 +6,6 @@
     <pattern>MON NOM EST *</pattern>
     <template><think>
           <set name="tmpname"><star/></set>
-          <set name="firstinit">ok</set>
           <set name="topic">nouvelle rencontre</set>
         </think>
         <random><li>Ravi de faire ta connaissance, </li><li>Enchanté, </li><li>Comment vas-tu? </li></random><get name="tmpname" />.
@@ -14,7 +13,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>")</param>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), takeMyPicture(u"<get name="tmpname"/>"),  i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>") , i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","img",u"../service/img/<get name="tmpname"/>.png"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>"), i01_chatBot.startSession(u"<get name="tmpname"/>")</param>
           </mrl>
         </oob></template>
   </category>
