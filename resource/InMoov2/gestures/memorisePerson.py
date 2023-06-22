@@ -82,7 +82,7 @@ def memorisePerson(name):
         if runtime.isStarted('i01.chatBot'):
           i01_chatBot.getResponse("NOTFACERECOGNIZED")        
 
-def takeMyPicture():
+def takeMyPicture(name):
     i01.startPeer('opencv')
     opencv = runtime.start('i01.opencv', 'OpenCV')
     opencv.capture()
@@ -92,7 +92,7 @@ def takeMyPicture():
     opencv.stopCapture()
     picturePath='resource/WebGui/app/service/img/'
     shutil.move(photoFileName,picturePath)
-    newName = str(i01_chatBot.getPredicate("human","lastUsername"))+'.png'
+    newName = unicode(name,'utf-8')+'.png'
     print(newName)
     sleep(1)
     os.chdir(picturePath)

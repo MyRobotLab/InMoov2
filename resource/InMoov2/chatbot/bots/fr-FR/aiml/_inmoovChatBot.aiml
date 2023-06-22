@@ -86,12 +86,12 @@
   
   <topic name="FIRSTINIT">
     <category><pattern># OUI #</pattern><that># SOUHAITES TU QUE JE MEMORISE #</that>
-      <template>
+      <template>Ok, mets toi bien face à ma camera, et s'il te plait, enlèves tes lunettes si tu en portes.
         <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), takeMyPicture(),  i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","img","../service/img/<get name="tmpname"/>.png"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>")</param>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), takeMyPicture(u"<get name="tmpname"/>"),  i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","img",u"../service/img/<get name="tmpname"/>.png"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>"), i01_chatBot.startSession(u"<get name="tmpname"/>")</param>
           </mrl>
         </oob>
         <think>
@@ -274,7 +274,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), takeMyPicture(), i01_chatBot.setPredicate(u"<get name="tmpname"/>","img","../service/img/<get name="tmpname"/>.png"), i01_chatBot.savePredicates(), YesName(u"<get name="tmpname"/>")</param>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), takeMyPicture(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","img",u"../service/img/<get name="tmpname"/>.png"), i01_chatBot.savePredicates(), YesName(u"<get name="tmpname"/>"), i01_chatBot.startSession(u"<get name="tmpname"/>")</param>
           </mrl>
          </oob>
 </template>
@@ -309,6 +309,11 @@
           <li>Chouette! je suis réveillé.</li>
           <li>Ce fut une longue nuit, je suis éveillé désormais.</li>
         </random>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername")))</param>
+        </mrl>
     </template>
   </category>
   
