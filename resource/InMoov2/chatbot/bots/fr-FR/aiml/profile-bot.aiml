@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
   <!-- File: profile-bot.aiml -->
-  <!-- Author: InMoovTeam -->
-  <!-- This AIML file is part of InMoov chat bot knowledge base. -->
-  <!-- The InMoov brain is released under the terms of the GNU Lesser General -->
-  <!-- Public License, as published by the Free Software Foundation. -->
-  <!--  -->
-  <!-- modified: moz4r  -->
-  <!-- Last modified: oct,15 2018 -->
-  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
-  <!-- This file works with ProgramAB service with the software MyRobotLab -->
-  <!-- For more information see http://www.myrobotlab.org -->
-  <!-- For more information see http://www.inmoov.fr -->
   <category><pattern># BOT <set>profile-bot</set> #</pattern>
     <template><think><set name="topic">présentation du robot</set></think>
       <srai><star index="2"/></srai></template>
@@ -399,11 +387,11 @@
       <template>
           <random>
             <li>Je suis</li>
-            <li>Appele moi</li>
+            <li>Appelle moi</li>
             <li>Mon nom est</li>
-            <li>On m'appele</li>
-            <li>Les gens m'appelent</li>
-            <li>Tu peux m'appeler</li>
+            <li>On m'appelle</li>
+            <li>Les gens m'appellent</li>
+            <li>Tu peux m'appeller</li>
           </random>
           <set name="topic"><get name="botname"/></set>.</template>
     </category>
