@@ -319,8 +319,7 @@
   </category>
   <category>
     <pattern>BONJOUR *</pattern>
-    <template>
-      <srai>BONJOUR</srai>
+    <template>Bonjour
       <sr />
     </template>
   </category>
@@ -333,14 +332,7 @@
   <category>
     <pattern>BONJOUR MON NOM EST *</pattern>
     <template>
-      <srai>BONJOUR</srai>
-      <srai>mon nom EST cE QUE <star /> est</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>BONJOUR OPALE</pattern>
-    <template>
-      <srai>BONJOUR</srai>
+      <srai>MON NOM EST <star /></srai>
     </template>
   </category>
   <category>

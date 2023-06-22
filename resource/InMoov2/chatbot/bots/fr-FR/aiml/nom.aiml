@@ -8,7 +8,6 @@
           <set name="tmpname"><star/></set>
           <set name="topic">nouvelle rencontre</set>
         </think>
-        <random><li>Ravi de faire ta connaissance, </li><li>Enchanté, </li><li>Comment vas-tu? </li></random><get name="tmpname" />.
         <oob>
           <mrl>
             <service>python</service>
@@ -44,7 +43,7 @@
   </category>
   <category>
     <pattern>* EST MON NOM DE FAMILLE</pattern>
-    <template>tu préfères que je t'appelle <get name="name" /> ou <star />? <think><set name="lastname"><star /></set></think></template>
+    <template>Tu préfères que je t'appelle <get name="name" /> ou <star />? <think><set name="lastname"><star /></set></think></template>
   </category>
   <category>
     <pattern>*</pattern>

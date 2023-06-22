@@ -86,7 +86,7 @@
   
   <topic name="FIRSTINIT">
     <category><pattern># OUI #</pattern><that># SOUHAITES TU QUE JE MEMORISE #</that>
-      <template>
+      <template>Ok, mets toi bien face à ma camera, et s'il te plait, enlèves tes lunettes si tu en portes.
         <oob>
           <mrl>
             <service>python</service>
