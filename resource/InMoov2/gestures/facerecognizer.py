@@ -10,5 +10,12 @@ def facerecognizer():
     fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
     python.subscribe("i01.opencv", "publishRecognizedFace")
   else:
-    errorSpokenFunc('OPENCVNOWORKY')
+    i01.warn('facerecognizer not starting because no opencv')
+    if runtime.isStarted('i01.chatBot'):
+      i01_chatBot.setPredicate("topic", "firstinit")
+      i01_chatBot.getResponse("NOTMEMORIZED")
+    else:
+      i01.warn('facerecognizer is OFF')
+      if runtime.isStarted('i01.chatBot'):
+        i01_chatBot.getResponse("NOTFACERECOGNIZED")
   i01.finishedGesture()
