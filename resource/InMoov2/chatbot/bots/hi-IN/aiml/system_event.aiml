@@ -3,7 +3,7 @@
 <aiml>
   <category>
     <pattern>SYSTEM_EVENT WAKE</pattern>
-    <template><srai>WAKE_UP</srai></template>
+    <template><srai>WAKE UP</srai></template>
   </category>
   <category>
     <pattern>SYSTEM_EVENT INIT</pattern>
