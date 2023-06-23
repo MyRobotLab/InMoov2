@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
+
 <category>
 <pattern>SYSTEM_EVENT WAKE</pattern>
-<template><srai>WAKE_UP</srai></template>
+<template><srai>WAKE UP</srai></template>
 </category>
 
 <category>
