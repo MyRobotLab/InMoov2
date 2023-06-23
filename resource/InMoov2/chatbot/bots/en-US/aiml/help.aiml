@@ -12,7 +12,7 @@
 <template><srai>HELP</srai></template>
 </category>
 <category><pattern>HELP</pattern>
-<template>You can check now the help list in the chatbot GUI. You can voice command each line to get more help or type them in the text box: HELP GESTURES , HELP GUI. 
+<template>You can check now the help list in the chatbot GUI. You can voice command each line to get more help or type them in the text box: HELP GESTURES , HELP GUI, HELP SERVICE.
         </template>
 </category>
 <category><pattern>HELP GESTURES</pattern>
@@ -46,5 +46,128 @@
             <param>https://inmoov.fr/inmoov2-in-nixie/</param>
           </mrl>
         </oob></template>
+</category>
+
+<category><pattern>HELP SERVICE</pattern>
+<template>You can vocally start or release a service. As an example you can say: START SERVICE RIGHT HAND or RELEASE SERVICE HEAD</template>
+</category>
+
+<category><pattern>START SERVICE *</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>startPeer</method>
+                <param><star/></param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+<category><pattern>RELEASE SERVICE *</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>releasePeer</method>
+                <param><star/></param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>START SERVICE RIGHT HAND</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>startPeer</method>
+                <param>rightHand</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>RELEASE SERVICE RIGHT HAND</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>releasePeer</method>
+                <param>rightHand</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>START SERVICE LEFT HAND</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>startPeer</method>
+                <param>leftHand</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>RELEASE SERVICE LEFT HAND</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>releasePeer</method>
+                <param>leftHand</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>START SERVICE RIGHT ARM</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>startPeer</method>
+                <param>rightArm</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>RELEASE SERVICE RIGHT ARM</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>releasePeer</method>
+                <param>rightArm</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>START SERVICE LEFT ARM</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>startPeer</method>
+                <param>leftArm</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>RELEASE SERVICE LEFT ARM</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>releasePeer</method>
+                <param>leftArm</param>
+            </mrl>
+        </oob>
+    </template>
 </category>
 </aiml>
