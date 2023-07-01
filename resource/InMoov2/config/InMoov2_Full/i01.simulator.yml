@@ -2,7 +2,7 @@
 cameraLookAt: i01.torso.lowStom
 listeners: null
 modelPaths:
-- ../InMoov2/resource/InMoov2/JMonkeyEngine
+- resource\InMoov2/JMonkeyEngine
 multiMapped:
   i01.leftHand.index:
   - i01.leftHand.index

@@ -81,3 +81,27 @@ def memorisePerson(name):
         i01.warn('facerecognizer is OFF')
         if runtime.isStarted('i01.chatBot'):
           i01_chatBot.getResponse("NOTFACERECOGNIZED")        
+
+def takeMyPicture(name):
+    i01.startPeer('opencv')
+    opencv = runtime.start('i01.opencv', 'OpenCV')
+    opencv.capture()
+    photoFileName = opencv.recordFrame()
+    print(photoFileName)
+    sleep(2)
+    opencv.stopCapture()
+    picturePath='resource/WebGui/app/service/img/'
+    shutil.move(photoFileName,picturePath)
+    newName = unicode(name,'utf-8')+'.png'
+    print(newName)
+    sleep(1)
+    os.chdir(picturePath)
+    try:
+      os.rename('i01.opencv-00001.png', newName)
+      #opencv.cropImage('i01.opencv-00001', 100)
+      os.chdir("../../../../../")
+    except:
+      os.remove('i01.opencv-00001.png')
+      os.chdir("../../../../../")
+      pass
+    i01.finishedGesture()
