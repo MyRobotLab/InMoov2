@@ -1,0 +1,20 @@
+!!org.myrobotlab.service.config.MarySpeechConfig
+blocking: false
+listeners:
+- callback: onStartSpeaking
+  listener: i01.ear
+  method: publishStartSpeaking
+- callback: onEndSpeaking
+  listener: i01.ear
+  method: publishEndSpeaking
+mute: false
+peers:
+  audioFile:
+    autoStart: true
+    name: i01.mouth.audioFile
+    type: AudioFile
+speechRecognizers:
+- i01.ear
+substitutions: null
+type: MarySpeech
+voice: Mark

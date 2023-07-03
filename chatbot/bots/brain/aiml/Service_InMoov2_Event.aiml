@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED *</pattern>
+    <template>Starting <lowercase>
+        <star />
+      </lowercase>
+    </template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STOPPED *</pattern>
+    <template>Stopping <lowercase>
+        <star />
+      </lowercase>
+    </template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT INIT</pattern>
+    <template>starting initialization scripts
+    </template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT LOAD GESTURES</pattern>
+    <template>loading gestures
+    </template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED HTMLFILTER</pattern>
+    <template>Starting mouth filter
+    </template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STOPPED HTMLFILTER</pattern>
+    <template>Stopping mouth filter
+    </template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED IMAGEDISPLAY</pattern>
+    <template>Starting image display service
+    </template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STOPPED IMAGEDISPLAY</pattern>
+    <template>Stopping image display service
+    </template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED OPENCV</pattern>
+    <template>Starting vision
+    </template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STOPPED OPENCV</pattern>
+    <template>Stopping vision
+    </template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED PIR</pattern>
+    <template>Starting motion sensor
+    </template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STOPPED PIR</pattern>
+    <template>Stopping motion sensor
+    </template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED CHATBOT</pattern>
+    <template>Chatbot loaded, I may start other components, please wait.</template>
+  </category>
+
+</aiml>

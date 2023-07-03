@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: contactfunctions.aiml -->
+<!--  -->
+<category><pattern>CONTACTID *</pattern>
+<template><!--<contactid>
+        <star/>
+      </contactid>--><set name="contactid"><star/></set></template>
+</category>
+<category><pattern>MULTIPLEIDS *</pattern>
+<template><!--<multipleids>
+        <star/>
+      </multipleids>--><set name="multipleids"><star/></set></template>
+</category>
+<category><pattern>ADDINFO DISPLAYNAME * DIALNUMBER * PHONETYPE * EMAILADDRESS * EMAILTYPE * BIRTHDAY *</pattern>
+<template><addinfo>
+        <displayname>
+          <star/>
+        </displayname><!--<set name="displayname"><star/></set>-->
+        <dialnumber>
+          <srai>DENORMALIZE <star index="2"/></srai>
+        </dialnumber>
+        <phonetype>
+          <star index="3"/>
+        </phonetype>
+        <emailaddress>
+          <srai>DENORMALIZE <star index="4"/></srai>
+        </emailaddress>
+        <emailtype>
+          <star index="5"/>
+        </emailtype>
+        <birthday>
+          <star index="6"/>
+        </birthday>
+      </addinfo></template>
+</category>
+<category><pattern>DISPLAYNAME *</pattern>
+<template><!--<displayname>
+        <star/>
+      </displayname>--><set name="displayname"><star/></set></template>
+</category>
+<category><pattern>DIALNUMBER * *</pattern>
+<template><!--<dialnumber>
+        <type>
+          <star/>
+        </type>
+        <id>
+          <star index="2"/>
+        </id>
+      </dialnumber>!!!!Something is wrong here!!!--><set name="dialnumber"><star/> <star index="2"/></set></template>
+</category>
+<category><pattern>DIALNUMBER *</pattern>
+<template>unknown</template>
+</category>
+<category><pattern>CONTACTBIRTHDAY *</pattern>
+<template><!--<contactbirthday>
+        <star/>
+      </contactbirthday>--><set name="contactbirthday"><star/></set></template>
+</category>
+<category><pattern>EMAILADDRESS * *</pattern>
+<template><!--<emailaddress>
+        <type>
+          <star/>
+        </type>
+        <id>
+          <star index="2"/>
+        </id>
+      </emailaddress>!!!!Something is wrong here!!!!--><set name="emailaddress"><star/> <star index="2"/></set></template>
+</category>
+<category><pattern>EMAILADDRESS *</pattern>
+<template>unknown</template>
+</category>
+</aiml>

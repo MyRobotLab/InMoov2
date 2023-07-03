@@ -1,0 +1,17 @@
+!!org.myrobotlab.service.config.ProgramABConfig
+botDir: data/ProgramAB
+bots:
+currentBotName: en-US
+currentUserName: Friend
+listeners:
+- callback: onText
+  listener: i01.htmlFilter
+  method: publishText
+peers:
+  search:
+    autoStart: true
+    name: i01.chatBot.search
+    type: Wikipedia
+sleep: false
+textFilters: null
+type: ProgramAB

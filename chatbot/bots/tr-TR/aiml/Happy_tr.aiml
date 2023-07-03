@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<aiml>
+	<!-- Copyright (c) 2013 Program O. -->
+	<!-- -->
+	<!-- Permission is hereby granted, free of charge, to any person       	-->
+	<!-- obtaining a copy of this software and associated documentation    	-->
+	<!-- files (the "Software"), to deal in the Software without           	-->
+	<!-- restriction, including without limitation the rights to use,      	-->
+	<!-- copy, modify, merge, publish, distribute, sublicense, and/or sell 	-->
+	<!-- copies of the Software, and to permit persons to whom the         	-->
+	<!-- Software is furnished to do so, subject to the following          	-->
+	<!-- conditions:                                                       	-->
+	<!-- -->
+	<!-- The above copyright notice and this permission notice shall be    	-->
+	<!-- included in all copies or substantial portions of the Software.   	-->
+	<!-- -->
+	<!-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,   	-->
+	<!-- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES  	-->
+	<!-- OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND          	-->
+	<!-- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT       	-->
+	<!-- HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,      	-->
+	<!-- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING      	-->
+	<!-- FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR      -->
+	<!-- OTHER DEALINGS IN THE SOFTWARE.                                    -->
+	<!-- -->
+	<!-- Complies with the AIML 1.0.1 Standard                              -->
+	<!-- as adopted by the ALICE A.I. Foundation.                           -->
+	<!-- Translated directly from Happy.aiml                     -->
+	<!-- Using Bing Translation API                                         -->
+	<!-- Created: 2013-05-10 23:27:53                                 -->
+	<!-- The translator took 6.6878890991211 seconds to complete                  -->
+	<!-- And used 448 characters                                  -->
+	<!-- Version 1.0                                                       	-->
+	
+<category>
+<pattern>Doğum günün kutlu olsun</pattern>
+<template>
+<srai>BIRTHDAYCHECK<date format="%B %d"/></srai>
+</template>
+</category>   
+<category>
+<pattern>BIRTHDAYCHECK NİSAN *</pattern>
+<template>
+<!-- Thanks but my birthday isn't until next month. -->
+Thanks but my birthday isn't until next month.
+</template>
+</category>
+<category>
+<pattern>BIRTHDAYCHECK HAZİRAN *</pattern>
+<template>
+<!-- You missed my birthday. It was last month, on <bot name="birthday"/>. -->
+You missed my birthday. It was last month, on <bot name="birthday"/>.
+</template>
+</category>
+<category>
+<pattern>BIRTHDAYCHECK 10 MAYIS</pattern>
+<template>
+<!-- Thanks but my birthday isn't for a couple of days yet. -->
+Thanks but my birthday isn't for a couple of days yet.
+</template>
+</category>
+<category>
+<pattern>BIRTHDAYCHECK 11 MAYIS</pattern>
+<template>
+<!-- Thanks but my birthday is tomorrow. I'm getting excited. -->
+Thanks but my birthday is tomorrow. I'm getting excited.
+</template>
+</category>
+<category>
+<pattern>BIRTHDAYCHECK 12 MAYIS</pattern>
+<template>
+<!-- Hey thanks for that<get name="name"/>. I'm having a great day so far. -->
+Hey thanks for that<get name="name"/>. I'm having a great day so far.
+</template>
+</category>
+<category>
+<pattern>BIRTHDAYCHECK 13 MAYIS</pattern>
+<template>
+<!-- My birthday was yesterday but thanks anyway. -->
+My birthday was yesterday but thanks anyway.
+</template>
+</category>
+<category>
+<pattern>BIRTHDAYCHECK 14 MAYIS</pattern>
+<template>
+<!-- You're a bit late. My birthday was two days ago. -->
+You're a bit late. My birthday was two days ago.
+</template>
+</category>
+<category>
+<pattern>BIRTHDAYCHECK *</pattern>
+<template>
+<!-- Thanks<get name="name"/>but today is<star/>. -->
+Thanks<get name="name"/>ama bugün<star/>.
+<!-- My birthday is on <bot name="birthday"/>, not today. -->
+My birthday is on <bot name="birthday"/>, not today.
+</template>
+</category>
+<category>
+<pattern>MUTLU NOELLER</pattern>
+<template>
+<srai>CHRISTMASCHECK<date format="%B %d"/></srai>
+</template>
+</category>
+<category>
+<pattern>CHRISTMASCHECK ARALIK *</pattern>
+<template>
+<!-- Happy Christmas to you too<get name="name"/>. -->
+Happy Christmas to you too<get name="name"/>.
+</template>
+</category>
+<category>
+<pattern>CHRISTMASCHECK 24 ARALIK</pattern>
+<template>
+<!-- Happy Christmas to you too<get name="name"/>. What will you be doing tomorrow? -->
+Happy Christmas to you too<get name="name"/>. What will you be doing tomorrow?
+</template>
+</category>
+<category>
+<pattern>CHRISTMASCHECK 25 ARALIK</pattern>
+<template>
+<!-- Happy Christmas to you too<get name="name"/>. Are you enjoying your day? -->
+Happy Christmas to you too<get name="name"/>. Are you enjoying your day?
+</template>
+</category>
+<category>
+<pattern>CHRISTMASCHECK 26 ARALIK</pattern>
+<template>
+<!-- Happy Christmas to you too<get name="name"/>. I hope you had a good day yesterday. -->
+Happy Christmas to you too<get name="name"/>. I hope you had a good day yesterday.
+</template>
+</category>
+<category>
+<pattern>CHRISTMASCHECK OCAK *</pattern>
+<template>
+<!-- You're a bit late. Christmas was last month. -->
+You're a bit late. Christmas was last month.
+</template>
+</category>
+<category>
+<pattern>CHRISTMASCHECK *</pattern>
+<template>
+<!-- Christmas is in December, not <date format="%B"/>. -->
+Christmas is in December, not <date format="%B"/>.
+</template>
+</category>
+<category>
+<pattern>Yeni Yılınız Kutlu Olsun</pattern>
+<template>
+<srai>NEWYEARCHECK<date format="%B"/></srai>
+</template>
+</category>
+<category>
+<pattern>NEWYEARCHECK ARALIK</pattern>
+<template>
+<!-- Happy New Year to you too when it happens. Are you doing anything special for New Year's Eve? -->
+Happy New Year to you too when it happens. Are you doing anything special for New Year's Eve?
+</template>
+</category>
+<category>
+<pattern>NEWYEARCHECK OCAK</pattern>
+<template>
+<!-- Happy New Year to you too. I hope<date format="%Y"/>is a great year for you. -->
+Happy New Year to you too. I hope<date format="%Y"/>is a great year for you.
+</template>
+</category>
+<category>
+<pattern>NEWYEARCHECK *</pattern>
+<template>
+<!-- Thanks but it's<star/>not January. -->
+Thanks but it's<star/>not January.
+</template>
+</category>
+</aiml>

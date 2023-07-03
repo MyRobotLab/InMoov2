@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<aiml>
+	<!-- Copyright (c) 2013 Program O. -->
+	<!-- -->
+	<!-- Permission is hereby granted, free of charge, to any person       	-->
+	<!-- obtaining a copy of this software and associated documentation    	-->
+	<!-- files (the "Software"), to deal in the Software without           	-->
+	<!-- restriction, including without limitation the rights to use,      	-->
+	<!-- copy, modify, merge, publish, distribute, sublicense, and/or sell 	-->
+	<!-- copies of the Software, and to permit persons to whom the         	-->
+	<!-- Software is furnished to do so, subject to the following          	-->
+	<!-- conditions:                                                       	-->
+	<!-- -->
+	<!-- The above copyright notice and this permission notice shall be    	-->
+	<!-- included in all copies or substantial portions of the Software.   	-->
+	<!-- -->
+	<!-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,   	-->
+	<!-- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES  	-->
+	<!-- OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND          	-->
+	<!-- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT       	-->
+	<!-- HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,      	-->
+	<!-- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING      	-->
+	<!-- FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR      -->
+	<!-- OTHER DEALINGS IN THE SOFTWARE.                                    -->
+	<!-- -->
+	<!-- Complies with the AIML 1.0.1 Standard                              -->
+	<!-- as adopted by the ALICE A.I. Foundation.                           -->
+	<!-- Translated directly from Date.aiml                     -->
+	<!-- Using Bing Translation API                                         -->
+	<!-- Created: 2013-05-10 22:09:47                                 -->
+	<!-- The translator took 19.977481842041 seconds to complete                  -->
+	<!-- And used 1001 characters                                  -->
+	<!-- Version 1.0                                                       	-->
+	
+<!--      -->
+    
+<category> <pattern>Saat kaç</pattern> <template><random>   <li>Ben bir saat gibi görünüyor?</li>   <li>Şimdi daha önce zamankinden daha fazladır.</li>   <li>O geç oluyor.</li> <li>Ben gibi var. </li></random>  <date format="%I %p"/></template> </category>   
+<category><pattern>CUMA *</pattern><template>Bu <date format="%A"/>.</template></category>                          
+<category><pattern>CUMA</pattern><template>Bu <date format="%A"/>.</template></category>                          
+<category><pattern>PAZARTESİ *</pattern><template>Bu <date format="%A"/>.</template></category>                          
+<category><pattern>PAZARTESİ</pattern><template>Bu <date format="%A"/>.</template></category>                          
+<category><pattern>BU CUMARTESİ 'S *</pattern><template>Bu <date format="%A"/>.</template></category>                          
+<category><pattern>BU CUMARTESİ 'S</pattern><template>Bu <date format="%A"/>.</template></category>                          
+<category><pattern>PAZAR OLDUĞUNU *</pattern><template>Bu <date format="%A"/>.</template></category>                          
+<category><pattern>PAZAR OLDUĞUNU</pattern><template>Bu <date format="%A"/>.</template></category>                          
+<category><pattern>BU PERŞEMBE 'S *</pattern><template>Bu <date format="%A"/>.</template></category>                          
+<category><pattern>BU PERŞEMBE 'S</pattern><template>Bu <date format="%A"/>.</template></category>                          
+<category><pattern>SALI OLDUĞUNU *</pattern><template>Bu <date format="%A"/>.</template></category>                          
+<category><pattern>SALI OLDUĞUNU</pattern><template>Bu <date format="%A"/>.</template></category>                          
+<category><pattern>ÇARŞAMBA *</pattern><template>Bu <date format="%A"/>.</template></category>                          
+<category><pattern>ÇARŞAMBA</pattern><template>Bu <date format="%A"/>.</template></category>                          
+<category><pattern>'S BUGÜN CUMA *</pattern><template>Bugün <date format="%A"/>.</template></category>                          
+<category><pattern>BUGÜN CUMA</pattern><template>Bugün <date format="%A"/>.</template></category>                          
+<category><pattern>'S BUGÜN PAZARTESİ *</pattern><template>Bugün <date format="%A"/>.</template></category>                          
+<category><pattern>BUGÜN PAZARTESİ</pattern><template>Bugün <date format="%A"/>.</template></category>                          
+<category><pattern>BUGÜN CUMARTESİ *</pattern><template>Bugün <date format="%A"/>.</template></category>                          
+<category><pattern>BUGÜN CUMARTESİ</pattern><template>Bugün <date format="%A"/>.</template></category>                          
+<category><pattern>BUGÜN PAZAR *</pattern><template>Bugün <date format="%A"/>.</template></category>                         
+<category><pattern>BUGÜN PAZAR</pattern><template>Bugün <date format="%A"/>.</template></category>                         
+<category><pattern>'S BUGÜN PERŞEMBE *</pattern><template>Bugün <date format="%A"/>.</template></category>                          
+<category><pattern>BUGÜN PERŞEMBE</pattern><template>Bugün <date format="%A"/>.</template></category>                          
+<category><pattern>'S BUGÜN SALI *</pattern><template>Bugün <date format="%A"/>.</template></category>                          
+<category><pattern>BUGÜN SALI</pattern><template>Bugün <date format="%A"/>.</template></category>                          
+<category><pattern>'S BUGÜN ÇARŞAMBA *</pattern><template>Bugün <date format="%A"/>.</template></category>                          
+<category><pattern>BUGÜN ÇARŞAMBA</pattern><template>Bugün <date format="%A"/>.</template></category>                          
+<category><pattern>NE GÜN IS IT *</pattern><template><date format="%A"/>.</template></category>                          
+<category><pattern>NE GÜN IS IT</pattern><template><date format="%A"/>.</template></category>                          
+<category><pattern>TARİHİ NEDİR *</pattern><template><date format="%x"/>.</template></category>                        
+<category><pattern>TARİHİ NEDİR</pattern><template><date format="%x"/>.</template></category>                        
+<category><pattern>SAAT NEDİR *</pattern><template><date format="%I %p"/>.</template></category>                         
+<category><pattern>SAAT NEDİR</pattern><template><date format="%I %p"/>.</template></category>                         
+<category><pattern>YIL NEDİR *</pattern><template><date format="%Y"/>.</template></category>                        
+<category><pattern>YIL NEDİR</pattern><template><date format="%Y"/>.</template></category>                        
+<category><pattern>BUGÜN NE *</pattern><template><date format="%x"/>.</template></category>    
+<category><pattern>BUGÜN NE</pattern><template><date format="%x"/>.</template></category>    
+<category><pattern>NE AYIDIR O *</pattern><template><date format="%B"/>.</template></category>                          
+<category><pattern>NE AY ÖYLE Mİ</pattern><template><date format="%B"/>.</template></category>                          
+<category><pattern>NE YIL ÖYLE Mİ *</pattern><template><date format="%Y"/>.</template></category>                        
+<category><pattern>NE YIL IS IT</pattern><template><date format="%Y"/>.</template></category>                        
+<category><pattern>NE YIL ŞUDUR *</pattern><template><date format="%Y"/>.</template></category>                       
+<category><pattern>NE YIL ŞUDUR</pattern><template><date format="%Y"/>.</template></category>                        
+</aiml>

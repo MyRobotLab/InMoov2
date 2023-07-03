@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>RND *</pattern>
+<template><javascript>
+myMath = Math.floor(Math.random() * <star index="1"/>);
+myMath = myMath / Math.pow(10, 0);
+myMath = myMath.toString();
+myMath;
+
+</javascript></template>
+</category>
+<category><pattern>* X *</pattern>
+<template><srai><star index="1"/> MULTIPLIÉ PAR <star index="2"/></srai></template>
+</category>
+<category><pattern>* MULTIPLIÉ PAR *</pattern>
+<template><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>mathX("<star index="1"/>","<star index="2"/>")</param></mrl></oob></sraix></template>
+</category>
+<category><pattern>* PLUS *</pattern>
+<template><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>mathPlus("<star index="1"/>","<star index="2"/>")</param></mrl></oob></sraix></template>
+</category>
+<category><pattern>* MOINS *</pattern>
+<template><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>mathMinus("<star index="1"/>","<star index="2"/>")</param></mrl></oob></sraix></template>
+</category>
+<category><pattern>* DIVISÉ PAR *</pattern>
+<template><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>mathDivide("<star index="1"/>","<star index="2"/>")</param></mrl></oob></sraix></template>
+</category>
+<category><pattern>EST CE UN NOMBRE *</pattern>
+<template><think>
+        <srai>testnombre <star/></srai>
+      </think></template>
+</category>
+<category><pattern>EST CE QUE * EST UN NOMBRE</pattern>
+<template><think>
+        <srai>testnombre <star/></srai>
+      </think></template>
+</category>
+<category><pattern>ALPHA *</pattern>
+<template><star/> n'est pas un nombre</template>
+</category>
+<category><pattern>NUMBER *</pattern>
+<template><star/> est un nombre</template>
+</category>
+<category><pattern>TESTER LE NOMBRE *</pattern>
+<template><srai>testnombre <star/></srai>
+<condition>     
+  <li name="cestunnombre" value="nb"><srai>number <get name="lenombre"/></srai></li>
+  <li><srai>alpha <get name="lenombre"/></srai></li>
+</condition></template>
+</category>
+<category><pattern>TESTNOMBRE *</pattern>
+<template><think>
+        <set name="lenombre">
+          <star/>
+        </set>
+      </think>
+      <think>
+        <set name="cestunnombre">
+          <sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>is_number_for_aiml("<star index="1"/>")</param></mrl></oob></sraix>
+        </set>
+      </think></template>
+</category>
+<category><pattern>RND100</pattern>
+<template><srai>RND 100</srai></template>
+</category>
+<category><pattern>RND90</pattern>
+<template><srai>RND 90</srai></template>
+</category>
+<category><pattern>RND80</pattern>
+<template><srai>RND 80</srai></template>
+</category>
+<category><pattern>RND70</pattern>
+<template><srai>RND 70</srai></template>
+</category>
+<category><pattern>RND60</pattern>
+<template><srai>RND 60</srai></template>
+</category>
+<category><pattern>RND50</pattern>
+<template><srai>RND 50</srai></template>
+</category>
+<category><pattern>RND40</pattern>
+<template><srai>RND 40</srai></template>
+</category>
+<category><pattern>RND30</pattern>
+<template><srai>RND 30</srai></template>
+</category>
+<category><pattern>RND20</pattern>
+<template><srai>RND 20</srai></template>
+</category>
+<category><pattern>RND10</pattern>
+<template><srai>RND 10</srai></template>
+</category>
+</aiml>

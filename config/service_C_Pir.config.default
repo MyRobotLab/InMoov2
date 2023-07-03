@@ -1,0 +1,12 @@
+;----------------------------- PIR CONFIGURATION ----------------------------------------
+[MAIN]
+isPirActivated=False
+
+;witch arduino control pir :
+pirControlerArduino=right
+pirPin=23
+PlayCustomSoundIfDetection=True
+
+;----------------------------------- END --------------------------------------------------
+
+

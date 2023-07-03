@@ -1,3 +1,0 @@
-description=Test bot
-version=0.9
-image=bot.png

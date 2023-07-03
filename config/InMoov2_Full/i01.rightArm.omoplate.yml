@@ -1,0 +1,41 @@
+!!org.myrobotlab.service.config.ServoConfig
+autoDisable: true
+clip: true
+controller: i01.right
+enabled: false
+idleTimeout: 3000
+inverted: false
+listeners:
+- callback: onServoEnable
+  listener: i01.right
+  method: publishServoEnable
+- callback: onServoDisable
+  listener: i01.right
+  method: publishServoDisable
+- callback: onEncoderData
+  listener: i01.simulator
+  method: publishEncoderData
+- callback: onServoSetSpeed
+  listener: i01.right
+  method: publishServoSetSpeed
+- callback: onServoWriteMicroseconds
+  listener: i01.right
+  method: publishServoWriteMicroseconds
+- callback: onServoMoveTo
+  listener: i01.right
+  method: publishServoMoveTo
+- callback: onServoStop
+  listener: i01.right
+  method: publishServoStop
+maxIn: 80.0
+maxOut: 80.0
+minIn: 10.0
+minOut: 10.0
+peers: null
+pin: '11'
+rest: 10.0
+speed: 45.0
+sweepMax: null
+sweepMin: null
+synced: null
+type: Servo

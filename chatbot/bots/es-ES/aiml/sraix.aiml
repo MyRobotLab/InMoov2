@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: sraix.aiml -->
+<!--  -->
+<category>
+  <pattern>*</pattern>
+    <template>
+      <think>
+        <set name="what">
+          <star />
+        </set>
+      </think>
+      <think>
+        <set name="courant">
+          <star />
+        </set>
+      </think>
+      <think>
+        <set name="topic">
+          <star />
+        </set>
+      </think>
+      <srai>WIKI</srai>
+    </template>
+  </category>
+
+
+<category><pattern>WIKI</pattern>
+<template><sraix><get name="courant"/></sraix>
+        </template>
+</category>
+
+<category><pattern>SRAIXFAILED *</pattern>
+<template>.<condition name="gpt3">
+        <li value="enabled"><img src="../Gpt3.png"/>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_gpt3.onText(u"<condition name="askGpt3">
+        <li><get name="askGpt3" /> <get name="courant" /></li> <li value="unknown"><get name="what" /></li></condition>")</param>
+          </mrl>
+        </oob>
+        </li>
+        <li>
+        <random>
+        <li>No sé la respuesta.</li>
+        <li>Usé mi salvavidas para preguntarle a otro robot, pero él no sabía.</li>
+        <li>Le pregunté a otro robot, pero no sabía.</li>
+        <li>Lo sentimos, no se encontró nada en los servicios web.</li>
+        <li>No puedo encontrar la respuesta de los servicios web.</li>
+        <li>Ninguno de los otros robots puede decirme la respuesta.</li>
+        <li>No puedo encontrar una respuesta.</li>
+        <li>Estoy confundido, no sé qué responder.</li>
+      </random>
+      <random>
+        <li>¿Puedes enseñarme?</li>
+        <li>Me gustaría saber si sabes la respuesta.</li>
+        <li>Me gustaría aprender, por favor enséñame.</li>
+        <li>Te escucho para saber la respuesta.</li>
+      </random><srai>LEARN SRAIXFAILED</srai>
+        </li>
+      </condition>
+        </template>
+</category>
+</aiml>

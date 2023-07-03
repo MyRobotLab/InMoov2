@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: help.aiml -->
+  <!--  -->
+<category><pattern>* À L AIDE *</pattern>
+<template><srai>À L AIDE</srai></template>
+</category>
+<category><pattern>* À L AIDE</pattern>
+<template><srai>À L AIDE</srai></template>
+</category>
+<category><pattern>À L AIDE *</pattern>
+<template><srai>À L AIDE</srai></template>
+</category>
+<category><pattern>À L AIDE</pattern>
+<template>Vous pourrez consulter la liste d'aide dans l'interface graphique du chatbot. Vous pouvez commander vocalement chaque ligne pour obtenir plus d'aide ou les saisir dans la zone de texte: À L'AIDE GESTUELLE , À L'AIDE INTERFACE GRAPHIQUE.
+        </template>
+</category>
+<category><pattern>À L AIDE GESTUELLE</pattern>
+<template>Voici une petite liste de commande vocale:<br/>
+          FERME TON DOIGT.<br/>
+          OUVRE TON DOIGT.<br/>
+          DOIGT AU MILIEU.<br/>
+          OUVRE TES MAINS.<br/>
+          FERME TES MAINS.<br/>
+          OUVRE TA MAIN DROITE.<br/>
+          OUVRE TA MAIN GAUCHE.<br/>
+          FERME TA MAIN DROITE.<br/>
+          FERME TA MAIN GAUCHE.<br/>
+          DOUCEMENT FERME TA MAIN DROITE.<br/>
+          DOUCEMENT FERME TA MAIN GAUCHE.<br/>
+          Vous pouvez trouver une liste plus longue dans la fenêtre python et encore bien plus dans data, programAB, aiml fichier.
+          <oob>
+        <mrl>
+          <service>python</service><method>exec</method><param>printList_FR()</param>
+        </mrl>
+      </oob>
+      </template>
+</category>
+<category><pattern>À L AIDE INTERFACE GRAPHIQUE</pattern>
+<template><oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://inmoov.fr/inmoov2-in-nixie/</param>
+          </mrl>
+        </oob>
+      </template>
+</category>
+
+</aiml>

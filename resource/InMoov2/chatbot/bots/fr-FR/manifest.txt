@@ -1,3 +1,0 @@
-description=InMoov chatbot est basé sur Alice. Il a été inspiré par Joseph Weizenbaum avec son ELIZA classique programme.
-locale=fr-FR
-image=bot.png

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>SYSTEMEVENT WAKE</pattern>
+    <template><srai>WAKE_UP</srai></template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT INIT</pattern>
+    <template>Initialisatie begint</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT CONFIG LOADED</pattern>
+    <template>Installatie voltooid</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT LOAD GESTURES</pattern>
+    <template>Gebaar importeren</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT CONFIGSTARTED</pattern>
+    <template>Installatie starten.</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED LEFT HAND SENSOR</pattern>
+    <template>Linkshandige sensoren starten.</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED RIGHT HAND SENSOR</pattern>
+    <template>Starten van de rechterhandsensoren.</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED LEFT</pattern>
+    <template>De linkercontroller starten.</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED RIGHT</pattern>
+    <template>De rechtercontroller starten.</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED audioPlayer</pattern>
+    <template>Audioplayer wordt gestart</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED audioPlayer</pattern>
+    <template>Audioplayer stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED chatBot</pattern>
+    <template>Dialogsysteem gereed, start nu verdere componenten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED chatBot</pattern>
+    <template>Chatbot stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED controller3</pattern>
+    <template>Start controller drie</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED controller3</pattern>
+    <template>Controller drie stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED controller4</pattern>
+    <template>Start controller vier</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED controller4</pattern>
+    <template>Controller vier stoppen</template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED ear</pattern>
+    <template>Startende oren</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED ear</pattern>
+    <template>Stoppende oren</template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED eyeTracking</pattern>
+    <template>Starten Eyetracking</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED eyeTracking</pattern>
+    <template>Stoppen Eyetracking</template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED fsm</pattern>
+    <template>fsm starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED fsm</pattern>
+    <template>fsm stoppen</template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED gpt3</pattern>
+    <template>gpt3 starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED gpt3</pattern>
+    <template>gpt3 stoppen</template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED head</pattern>
+    <template>Starten hoofd</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED head</pattern>
+    <template>Stoppen hoofd</template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED headTracking</pattern>
+    <template>Starten hoofdtracking</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED headTracking</pattern>
+    <template>Stoppen hoofdtracking</template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED htmlFilter</pattern>
+    <template>html-filter starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED htmlFilter</pattern>
+    <template>html-filter stoppen</template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED imageDisplay</pattern>
+    <template>Afbeelding weergeven starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED imageDisplay</pattern>
+    <template>Afbeelding weergeven stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED leap</pattern>
+    <template>leap starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED leap</pattern>
+    <template>leap stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED left</pattern>
+    <template>links starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED left</pattern>
+    <template>links stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED leftArm</pattern>
+    <template>linker arm starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED leftArm</pattern>
+    <template>linker arm stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED leftHand</pattern>
+    <template>linker hand starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED leftHand</pattern>
+    <template>linker hand stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED mouth</pattern>
+    <template>mond starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED mouth</pattern>
+    <template>mond stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED mouthControl</pattern>
+    <template>mondcontrole starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED mouthControl</pattern>
+    <template>mondcontrole stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED neoPixel</pattern>
+    <template>neoPixel starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED neoPixel</pattern>
+    <template>neoPixel stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED openWeatherMap</pattern>
+    <template>weerkaart starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED openWeatherMap</pattern>
+    <template>weerkaart stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED opencv</pattern>
+    <template>vision starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED opencv</pattern>
+    <template>vision stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED openni</pattern>
+    <template>openni starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED openni</pattern>
+    <template>openni stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED pid</pattern>
+    <template>pid starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED pid</pattern>
+    <template>pid stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED pir</pattern>
+    <template>Bewegingssensor starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED pir</pattern>
+    <template>Bewegingssensor stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED random</pattern>
+    <template>willekeurig starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED random</pattern>
+    <template>willekeurig stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED right</pattern>
+    <template>Rechts starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED right</pattern>
+    <template>Rechts stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED rightArm</pattern>
+    <template>Rechterarm starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED rightArm</pattern>
+    <template>Rechterarm stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED rightHand</pattern>
+    <template>Rechterhand starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED rightHand</pattern>
+    <template>Rechterhand stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED servoMixer</pattern>
+    <template>Servomixer starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED servoMixer</pattern>
+    <template>Servomixer stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED simulator</pattern>
+    <template>simulator starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED simulator</pattern>
+    <template>simulator stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED torso</pattern>
+    <template>torso starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED torso</pattern>
+    <template>torso stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED ultrasonicLeft</pattern>
+    <template>Linker ultrasone sensor starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED ultrasonicLeft</pattern>
+    <template>Linker ultrasone sensor stoppen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED ultrasonicRight</pattern>
+    <template>Rechter ultrasone sensor starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED ultrasonicRight</pattern>
+    <template>Rechter ultrasone sensor stoppen</template>
+  </category>
+
+</aiml>

@@ -1,0 +1,16 @@
+!!org.myrobotlab.service.config.InMoov2TorsoConfig
+listeners: null
+peers:
+  lowStom:
+    autoStart: true
+    name: i01.torso.lowStom
+    type: Servo
+  midStom:
+    autoStart: true
+    name: i01.torso.midStom
+    type: Servo
+  topStom:
+    autoStart: true
+    name: i01.torso.topStom
+    type: Servo
+type: InMoov2Torso

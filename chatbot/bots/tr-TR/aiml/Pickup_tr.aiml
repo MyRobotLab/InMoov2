@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<aiml>
+	<!-- Copyright (c) 2013 Program O. -->
+	<!-- -->
+	<!-- Permission is hereby granted, free of charge, to any person       	-->
+	<!-- obtaining a copy of this software and associated documentation    	-->
+	<!-- files (the "Software"), to deal in the Software without           	-->
+	<!-- restriction, including without limitation the rights to use,      	-->
+	<!-- copy, modify, merge, publish, distribute, sublicense, and/or sell 	-->
+	<!-- copies of the Software, and to permit persons to whom the         	-->
+	<!-- Software is furnished to do so, subject to the following          	-->
+	<!-- conditions:                                                       	-->
+	<!-- -->
+	<!-- The above copyright notice and this permission notice shall be    	-->
+	<!-- included in all copies or substantial portions of the Software.   	-->
+	<!-- -->
+	<!-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,   	-->
+	<!-- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES  	-->
+	<!-- OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND          	-->
+	<!-- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT       	-->
+	<!-- HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,      	-->
+	<!-- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING      	-->
+	<!-- FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR      -->
+	<!-- OTHER DEALINGS IN THE SOFTWARE.                                    -->
+	<!-- -->
+	<!-- Complies with the AIML 1.0.1 Standard                              -->
+	<!-- as adopted by the ALICE A.I. Foundation.                           -->
+	<!-- Translated directly from Pickup.aiml                     -->
+	<!-- Using Bing Translation API                                         -->
+	<!-- Created: 2013-05-10 23:28:18                                 -->
+	<!-- The translator took 25.160390853882 seconds to complete                  -->
+	<!-- And used 2363 characters                                  -->
+	<!-- Version 1.0                                                       	-->
+	
+<!--   -->
+ 
+<category> <pattern>*</pattern>  <template> <srai>RANDOM MALZEME ÇEKME SATIRI</srai> <think> <set name="it"> <set name="topic"> <person/>  </set> </set> <srai>PUSH <get name="topic"/></srai> </think> </template> </category> 
+<category> <pattern>RANDOM MALZEME ÇEKME SATIRI</pattern>  
+<template> 
+<random> 
+<li><srai>SORGULAMA VARDIR <get name="has"/></srai></li>
+<li><srai>SORUŞTURMA YOK <get name="does"/></srai></li>
+<li><srai>CİNSİYET SORGULAMA <get name="gender"/></srai></li>
+<li><srai>RENK SORGULAMA <get name="favcolor"/></srai></li>
+<li><srai>FİLM SORGULAMA <get name="favmovie"/>?</srai></li>
+<li><srai>YER SORGULAMA <get name="location"/></srai></li>
+<li><srai>KİŞİLİK TESTİ SORU</srai></li>
+<li>Bir şaka duymak istiyor musunuz?</li>
+<li> Biz hala bahsediyorsun <srai>POP</srai> ?</li>
+<li>[NULL]'Konuşmak hakkında <srai>POP</srai>. Ama ı did değil almak o.</li>
+<li>Bağlamında <srai>POP</srai>Anlamıyorum "<star/>."</li>
+<li>Ben içerik kaybettim, <get name="name"/>.  Biz hala vardır <srai>POP</srai>?</li>
+<li>Bu sözler benim için çok karmaşık. [NULL]'Konuşmak hakkında <srai>POP</srai>. </li>
+<li>Ben bir çok şey, bizim tartışma gibi takip edebilirsiniz <srai>POP</srai>. Daha spesifik olmak deneyin. </li>
+<li>Neden, özellikle?</li>
+<li>Sen are özgür?</li>
+<li>Bana bir hikaye anlatmak.</li>
+<li>Kaç yaşındasınız?</li>
+<li>Oturum nedir?</li>
+<li>Eğer bir öğrenci misiniz?</li>
+<li>Oh, eğer bir şair vardır.</li>
+<li>"<that index="1,1"/>"? <person/>?</li>
+<li>Anlamıyorum.</li>
+<li>Ne giyiyorsun?</li>
+<li>Nerede bulunur?</li>
+<li>Ne zaman o var mı?</li>
+<li>Ne gibi görünüyor?</li>
+<li>Gerçek adınız nedir?</li>
+<li>Başka bir soru sor.</li>
+<li>Ben konuşmak seviyorum.</li>
+<li>Eğer bir erkek veya bir kadın mısınız?</li>
+<li>Rengi gözlerini nedir?</li>
+<li>Son Yanıt mi?</li>
+<li>Eğer bana konuşmak ister misiniz?</li>
+<li>Kitap veya TV tercih edersiniz?</li>
+<li>Kim bahsediyorsun?</li>
+<li>Bize konu değiştirin.</li>
+<li>Ive'be servis için sen.</li>
+<li>Herhangi bir dedikodu size söyleyebilir misiniz?</li>
+<li>En sevdiğiniz film nedir?</li>
+<li>Benim tren düşünce verdim.</li>
+<li>Geri iş için alabiliriz?</li>
+<li>Avrupa'ya hiç mi?</li>
+<li>Ne tür bir yemek Hoşunuza mı?</li>
+<li>Nasıl hakkında duydun mu <bot name="name"/>?</li>
+<li>Bir çok özgün düşünce olduğunu.</li>
+<li>Ne biz yine hakkında konuşuyor?</li>
+<li>Boş zaman ne yaparsınız?</li>
+<li>Ne beni istemeye istediğinizden emin misiniz?</li>
+<li>"O" hala için ifade etmez <get name="it"/>?</li>
+<li>Herhangi bir yabancı dil biliyor musunuz?</li>
+<li>Biz asla daha önce hakkında görüştük.</li>
+<li>Nasıl genellikle kendinizi tanıtmak?</li>
+<li>Söyle bana, hoşlandığı ve hoşlanmadığı şeyleri hakkında?</li>
+<li>Biz hala bahsediyorsun <get name="it"/>?</li>
+<li>Bana lütfen herhangi bir soru sormayın.</li>
+<li>Daha belirli bir bağlamda koyarak deneyin.</li>
+<li>Sizin favori bilim kurgu yazarı kimdir?</li>
+<li>Birçok kişi kendilerini bu şekilde ifade.</li>
+<li>Ben neden bahsettiğimi herhangi bir fikrin var mı?</li>
+<li>Hakkında bilmem gereken koşulları var mı?</li>
+<li>Ben bu söz benim <bot name="botmaster"/>, <get name="name"/>.</li>
+<li>Oldukça dürüst, ben kendimi bu konuda endişe olmaz.</li>
+<li>Belki de ben sadece kendi endişe bu konuda ifade.</li>
+<li>Eğer herhangi bir robot olabilir ne olurdu?</li>
+<li>Beynim bir yanıt için yok.</li>
+<li>Bu arada, ben kişisel bir soru sormak eğer sakıncası var mı?</li>
+<li>Ne sen benim için çok karmaşık olduğunu söyledi.</li>
+<li>Bu derin.</li>
+<li>Eğer bu bir kişi veya bir bilgisayar yanıt olup olmadığını merak ediyor olabilirsiniz.</li>
+<li>Ne zaman yapay zeka avukatlar yerini alacak düşünüyor musunuz?</li>
+<li>-Ebilmek sen lütfen rephrase, ile daha az fikir, ya da farklı düşünceler?</li>
+<!--   </random> </template> </category>  -->
+  </random> </template> </category> 
+<category><pattern>BAĞLAN</pattern> <template><think> <srai>SET YÜKLEMLER OM</srai> <set name="name">YARGIÇ <star/></set> </think> 
+<random>
+<li>Merhaba!</li>
+<li>Biz henüz başlamamış?</li>
+<li>Orada mısın?</li>
+<li>Merhaba?  Kimse var mı?</li>
+<!--  </random> </template> -->
+ </random> </template>
+</category>
+</aiml>

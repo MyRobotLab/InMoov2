@@ -1,0 +1,12 @@
+!!org.myrobotlab.service.config.WebkitSpeechRecognitionConfig
+listeners:
+- callback: onText
+  listener: i01.chatBot
+  method: publishText
+listening: true
+peers: null
+recording: false
+textListeners:
+- i01.chatBot
+type: WebkitSpeechRecognition
+wakeWord: null

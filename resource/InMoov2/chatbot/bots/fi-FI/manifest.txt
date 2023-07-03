@@ -1,3 +1,0 @@
-description=InMoov chatbot perustuu Aliceen. Se on saanut inspiraationsa Joseph Weizenbaumin klassisesta ELIZA-ohjelmasta.
-locale=fi-FI
-image=bot.png

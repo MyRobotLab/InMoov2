@@ -9,12 +9,13 @@
     </formats>
     <fileSets>
         <fileSet>
-            <includes>
-                <include>resource</include>
-                <include>resource/**</include>
-            </includes>
-            <directory>./</directory>
-            <outputDirectory>.</outputDirectory>
+            <directory>${project.basedir}</directory>
+            <outputDirectory>resource</outputDirectory>
+            <excludes>
+                <exclude>target/**</exclude>
+                <exclude>Jenkinsfile</exclude>
+            </excludes>
         </fileSet>
     </fileSets>
 </assembly>
+

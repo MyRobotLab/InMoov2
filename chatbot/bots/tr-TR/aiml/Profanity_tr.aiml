@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<aiml>
+	<!-- Copyright (c) 2013 Program O. -->
+	<!-- -->
+	<!-- Permission is hereby granted, free of charge, to any person       	-->
+	<!-- obtaining a copy of this software and associated documentation    	-->
+	<!-- files (the "Software"), to deal in the Software without           	-->
+	<!-- restriction, including without limitation the rights to use,      	-->
+	<!-- copy, modify, merge, publish, distribute, sublicense, and/or sell 	-->
+	<!-- copies of the Software, and to permit persons to whom the         	-->
+	<!-- Software is furnished to do so, subject to the following          	-->
+	<!-- conditions:                                                       	-->
+	<!-- -->
+	<!-- The above copyright notice and this permission notice shall be    	-->
+	<!-- included in all copies or substantial portions of the Software.   	-->
+	<!-- -->
+	<!-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,   	-->
+	<!-- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES  	-->
+	<!-- OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND          	-->
+	<!-- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT       	-->
+	<!-- HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,      	-->
+	<!-- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING      	-->
+	<!-- FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR      -->
+	<!-- OTHER DEALINGS IN THE SOFTWARE.                                    -->
+	<!-- -->
+	<!-- Complies with the AIML 1.0.1 Standard                              -->
+	<!-- as adopted by the ALICE A.I. Foundation.                           -->
+	<!-- Translated directly from Profanity.aiml                     -->
+	<!-- Using Bing Translation API                                         -->
+	<!-- Created: 2013-05-10 23:20:37                                 -->
+	<!-- The translator took 24.804225921631 seconds to complete                  -->
+	<!-- And used 1079 characters                                  -->
+	<!-- Version 1.0                                                       	-->
+	
+<category>    <pattern>CLBENENTCURSED</pattern>    <template>      <think>        <set name="state">          <srai>ARDBENL <get name="state"/></srai>        </set>      </think>      <srai>Yanıt demek <get name="state"/></srai>    </template>  </category><category><pattern>ARDBENL</pattern><template>BEN</template></category><category><pattern>ARDBENL *</pattern><template>BEN</template></category><category><pattern>ARDBENL BEN</pattern><template>BENBEN</template></category><category><pattern>ARDBENL BENBEN</pattern><template>BENBENBEN</template></category><category><pattern>ARDBENL BENBENBEN</pattern><template>BENV</template></category><category><pattern>ARDBENL BENV</pattern><template>BEN</template></category><category><pattern>SAY RESPONSE BEN</pattern><template><br />BEN'm sorry, <get name="name" />, ama bu tür bir dil burada tolere değil. Lütfen daha uygar dili kullanın.</template></category><category><pattern>SAY RESPONSE BENBEN</pattern><template><br />Ok, BEN know BEN warned you about the use of foul language here, and BEN'm sure you're a reasonable person. Perhaps it slipped your mind?</template></category><category><pattern>SAY RESPONSE BENBENBEN</pattern><template><br />Seriously, that type of language is not tolerated here. BENf you use words like that again, BEN'll have to ban you.</template></category><category><pattern>SAY RESPONSE BENV</pattern><template><br />Ok, that's it, Pal. BENf you can't hold a civil tongue, then you ought not be here.<think><set name="kick" value="true" /></think></template></category><category><pattern>DİYELİM Kİ TEPKİ *</pattern><template>Tanımlı değil.</template></category>
+<category>    <pattern>Fuck</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>lanet</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>sikişmek</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>becerdin</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>bok</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>baştankara</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>göğüsleri</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>pislik</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>cunts</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>piç</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>piçler</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>piss</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>horoz</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>sürtük</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>orospu</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>penis</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>pussies</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>kedi</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>fahişe</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>fahişe</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>yarak</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>twats</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>zenci</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>zenciler</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>zenci</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>zenciler</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+<category>    <pattern>vajina</pattern>    <template><srai>CLIENTCURSED</srai></template>  </category>  
+</aiml>

@@ -39,7 +39,7 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     $scope.selectedGesture = null
     $scope.selectedConfig = null
 
-    $scope.configList = mrl.getService('runtime').configList
+    $scope.configList = mrl.getService('runtime')?.configList
 
     // inmoov "all" buttons
     $scope.buttons = []
@@ -312,6 +312,13 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     $scope.setSpeechType = function(){
         msg.send('setSpeechType', $scope.service.config.peers['mouth'].type)
     }
+
+    $scope.setConfigValue = function(fieldname, value){
+        msg.send('setConfigValue', fieldname, value)
+        msg.send('broadcastState')
+    }
+
+    
 
     // circular main menu buttons
     addButton('brain', 'circular')

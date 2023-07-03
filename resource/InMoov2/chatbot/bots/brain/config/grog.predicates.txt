@@ -1,8 +1,0 @@
-botname:worky
-firstinit:ok
-firstname:grog
-jsenabled:true
-name:grog
-questionfirstinit:if your name is grog , say yes or no
-tmpname:grog
-topic:BootUp

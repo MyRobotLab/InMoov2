@@ -1,0 +1,33 @@
+!!org.myrobotlab.service.config.ProgramABConfig
+botDir: data/ProgramAB
+bots:
+- data/ProgramAB/Alice
+- data/ProgramAB/Dr.Who
+- data/ProgramAB/Ency
+- data/ProgramAB/Mr. Turing
+- data/ProgramAB/Work-E
+- data/ProgramAB/de-DE
+- data/ProgramAB/en-US
+- data/ProgramAB/es-ES
+- data/ProgramAB/fi-FI
+- data/ProgramAB/fr-FR
+- data/ProgramAB/hi-IN
+- data/ProgramAB/it-IT
+- data/ProgramAB/nl-NL
+- data/ProgramAB/pt-PT
+- data/ProgramAB/ru-RU
+- data/ProgramAB/tr-TR
+currentBotName: en-US
+currentUserName: Friend
+listeners:
+- callback: onText
+  listener: i01.htmlFilter
+  method: publishText
+peers:
+  search:
+    autoStart: true
+    name: i01.chatBot.search
+    type: Wikipedia
+sleep: false
+textFilters: null
+type: ProgramAB

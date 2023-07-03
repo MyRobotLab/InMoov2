@@ -1,1 +1,0 @@
-Use https://www.draw.io to open or mods diagrams

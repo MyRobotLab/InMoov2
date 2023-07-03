@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>SYSTEMEVENT WAKE</pattern>
+    <template><srai>WAKE_UP</srai></template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT INIT</pattern>
+    <template>Alustus alkaa</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT CONFIG LOADED</pattern>
+    <template>Asennus valmis</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT LOAD GESTURES</pattern>
+    <template>Eleiden tuonti</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT CONFIGSTARTED</pattern>
+    <template>Aloitetaan asennus.</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED LEFT HAND SENSOR</pattern>
+    <template>Vasemman käden anturien käynnistys.</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED RIGHT HAND SENSOR</pattern>
+    <template>Oikean käden anturien käynnistys.</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED LEFT</pattern>
+    <template>Vasemman ohjaimen käynnistys.</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED RIGHT</pattern>
+    <template>Oikean ohjaimen käynnistys.</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED audioPlayer</pattern>
+    <template>Audioplayer käynnistyy</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED audioPlayer</pattern>
+    <template>Audioplayer pysähtyy</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED chatBot</pattern>
+    <template>Keskusteluohjelma on valmis, käynnistä lisäkomponentteja</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED chatBot</pattern>
+    <template>Keskusteluohjelman pysäyttäminen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED controller3</pattern>
+    <template>Kontrolleri kolme käynnistyy</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED controller3</pattern>
+    <template>Kontrolleri kolme pysähtyy</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED controller4</pattern>
+    <template>Kontrolleri neljä käynnistyy</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED controller4</pattern>
+    <template>Kontrolleri neljä pysähtyy</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED ear</pattern>
+    <template>Korvien käynnistys</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED ear</pattern>
+    <template>Korvien pysähtyminen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED eyeTracking</pattern>
+    <template>Silmien seurannan käynnistys</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED eyeTracking</pattern>
+    <template>Silmien seurannan pysähtyminen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED fsm</pattern>
+    <template>fsm:n käynnistys</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED fsm</pattern>
+    <template>fsm:n pysähtyminen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED gpt3</pattern>
+    <template>gpt3:n käynnistys</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED gpt3</pattern>
+    <template>gpt3:n pysähtyminen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED head</pattern>
+    <template>Pään käynnistys</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED head</pattern>
+    <template>Pään pysähtyminen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED headTracking</pattern>
+    <template>Pään seurannan käynnistys</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED headTracking</pattern>
+    <template>Pään seurannan pysähtyminen</template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED htmlFilter</pattern>
+    <template>käynnistä html-suodatin</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED htmlFilter</pattern>
+    <template>lopeta html-suodatin</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED imageDisplay</pattern>
+    <template>käynnistä näyttö</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED imageDisplay</pattern>
+    <template>lopeta näyttö</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED leap</pattern>
+    <template>käynnistä leap</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED leap</pattern>
+    <template>lopeta leap</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED left</pattern>
+    <template>käynnistä vasen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED left</pattern>
+    <template>lopeta vasen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED leftArm</pattern>
+    <template>käynnistä vasen käsi</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED leftArm</pattern>
+    <template>lopeta vasen käsi</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED leftHand</pattern>
+    <template>käynnistä vasen käsi</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED leftHand</pattern>
+    <template>lopeta vasen käsi</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED mouth</pattern>
+    <template>käynnistä suu</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED mouth</pattern>
+    <template>lopeta suu</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED mouthControl</pattern>
+    <template>käynnistä suunkäyttö</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED mouthControl</pattern>
+    <template>lopeta suunkäyttö</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED neoPixel</pattern>
+    <template>käynnistä neoPixel</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED neoPixel</pattern>
+    <template>lopeta neoPixel</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED openWeatherMap</pattern>
+    <template>käynnistä sääkartta</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED openWeatherMap</pattern>
+    <template>lopeta sääkartta</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED opencv</pattern>
+    <template>käynnistä näkö</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED opencv</pattern>
+    <template>lopeta näkö</template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED openni</pattern>
+    <template>openni käynnistetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED openni</pattern>
+    <template>openni pysäytetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED pid</pattern>
+    <template>pid käynnistetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED pid</pattern>
+    <template>pid pysäytetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED pir</pattern>
+    <template>liiketunnistin käynnistetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED pir</pattern>
+    <template>liiketunnistin pysäytetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED random</pattern>
+    <template>satunnaisesti käynnistetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED random</pattern>
+    <template>satunnaisesti pysäytetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED right</pattern>
+    <template>Oikea käynnistetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED right</pattern>
+    <template>Oikea pysäytetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED rightArm</pattern>
+    <template>Oikea käsivarsi käynnistetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED rightArm</pattern>
+    <template>Oikea käsivarsi pysäytetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED rightHand</pattern>
+    <template>Oikea käsi käynnistetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED rightHand</pattern>
+    <template>Oikea käsi pysäytetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED servoMixer</pattern>
+    <template>Servosekoitin käynnistetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED servoMixer</pattern>
+    <template>Servosekoitin pysäytetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED simulator</pattern>
+    <template>simulaattori käynnistetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED simulator</pattern>
+    <template>simulaattori pysäytetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED torso</pattern>
+    <template>torso käynnistetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED torso</pattern>
+    <template>torso pysäytetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STARTED ultrasonicLeft</pattern>
+    <template>Vasen ultranopeusanturi käynnistetty</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED ultrasonicLeft</pattern>
+    <template>Vasen ultranopeusanturi pysäytetty</template>
+  </category>
+
+  <category>
+    <pattern>SYSTEMEVENT STARTED ultrasonicRight</pattern>
+    <template>oikean ultraäänisensorin käynnistäminen</template>
+  </category>
+  <category>
+    <pattern>SYSTEMEVENT STOPPED ultrasonicRight</pattern>
+    <template>oikean ultraäänisensorin pysäyttäminen</template>
+  </category>
+
+</aiml>

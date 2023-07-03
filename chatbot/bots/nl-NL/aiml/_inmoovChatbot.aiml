@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: chatBot.aiml -->
+  
+
+    <category>
+    <pattern>SAY *</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  
+   <!-- initialisaion  -->
+  
+  <category>
+    <pattern>FIRST_INIT</pattern>
+    <template>
+      <think>
+        <set name="firstinit">started</set>
+      </think>
+      <think>
+        <set name="topic">firstinit</set>
+      </think>
+    Hallo, dit is mijn eerste initialisatie. Ik heb wat informatie nodig, ik luister, wat is mijn naam ?
+  </template>
+  </category>
+  
+  <topic name="FIRSTINIT">
+    <category>
+      <pattern>#</pattern>
+      <that># wat is mijn naam #</that>
+      <template>
+        <set name="questionfirstinit">als mijn naam is <star /> , zeg ja, of nee</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category></topic>
+  
+  <topic name="FIRSTINIT">
+    <category>
+      <pattern>#</pattern>
+      <that># Mag ik je naam weten #</that>
+      <template>
+        <set name="questionfirstinit">als je naam is <star /> , zeg ja, of nee</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category></topic>
+  
+  <topic name="FIRSTINIT">
+    <category>
+      <pattern># JA #</pattern>
+      <that># ALS MIJN NAAM IS #</that>
+      <template>
+        <random>
+      <li>
+      Ik vind deze naam leuk , <get name="tmpname" />.
+      </li>
+      <li>
+      Zeer mooie naam, <get name="tmpname" /> is geweldig.
+      </li>
+        </random>
+  Ik moet je kennen, ik luister, Mag ik je naam weten ?
+  <think><set name="botname"><get name="tmpname" /></set></think></template>
+    </category></topic>
+
+  <topic name="FIRSTINIT">
+    <category><pattern># JA #</pattern><that># ALS JE NAAM #</that>
+      <template><think>
+          <set name="name">
+            <get name="tmpname"/>
+          </set>
+        </think>
+        <set name="questionfirstinit">Zou je willen dat ik mijn visie gebruik om je gezicht naast je naam te onthouden <get name="tmpname"/>?</set>
+        </template>
+    </category></topic>
+
+  <topic name="FIRSTINIT">
+    <category><pattern># JA #</pattern><that># NAAST JE NAAM TE ONTHOUDEN #</that>
+      <template>Ok, zorg ervoor dat je in de camera kijkt en draag alsjeblieft geen bril.<think>
+          <set name="topic">default</set>
+        </think><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.savePredicates(),i01.startPeer('opencv'), memorisePerson(u"<get name="tmpname"/>")</param>
+          </mrl>
+        </oob> 
+        <think>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+      </template>
+    </category></topic>
+
+  <topic name="STARTVISION">
+    <category><pattern># JA #</pattern><that># MIJN VISIOEN BEGIN #</that>
+      <template>Ok, zorg ervoor dat je in de camera kijkt en draag alsjeblieft geen bril.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01.startPeer('opencv'), memorisePerson(u"<get name="name"/>")</param>
+          </mrl>
+        </oob></template>
+    </category></topic>
+
+  <topic name="STARTVISION">
+    <category><pattern># NEE #</pattern><that># MIJN VISIOEN BEGIN #</that>
+      <template>Ok, je kunt me altijd later trainen, in mijn visie-gui.<srai>SYSTEM_SAY_HELLO</srai></template>
+    </category></topic>
+  
+  <topic name="FIRSTINIT">  
+    <category>
+      <pattern># NEE #</pattern>
+      <that># als mijn naam is #</that>
+      <template>We starten opnieuw.
+  Ik luister. wat is mijn naam ?
+    </template>
+    </category></topic>
+  
+  <topic name="FIRSTINIT">
+    <category>
+      <pattern># nee #</pattern>
+      <that># als je naam #</that>
+      <template>We starten opnieuw.
+  Ik luister. Mag ik je naam weten ?
+      </template>
+    </category></topic>
+
+  <topic name="FIRSTINIT">
+    <category><pattern># NEE #</pattern><that># NAAST JE NAAM TE ONTHOUDEN #</that>
+      <template>Ok, dan zijn we klaar met ons eerste contact.
+        <think>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob><srai>SYSTEM_SAY_HELLO</srai></template>
+    </category></topic>
+  
+  <topic name="FIRSTINIT">
+    <category>
+      <pattern>#</pattern>
+      <that># zeg ja, of nee #</that>
+      <template>
+        <random>
+          <li>
+  Gelieve mijn vraag te beantwoorden, het is belangrijk
+  </li>
+          <li>
+  ik herhaal.
+  </li>
+        </random>
+        <get name="questionfirstinit" />
+      </template>
+    </category></topic>
+  <!-- end initialisaion routine -->
+
+    <category><pattern>NOTMEMORIZED</pattern>
+      <template>Ik kon je gezicht niet onthouden omdat mijn visie niet is gestart.
+            Wil je dat ik met mijn visioen begin?
+            <think>
+                <set name="topic">startVision</set>
+            </think>
+        </template>
+      </category>
+
+    <category><pattern>NOTFACERECOGNIZED</pattern>
+      <template>Ik kon je gezicht niet volgen omdat gezichtsherkenning UIT staat in mijn zichtinstellingen. Zet het op AAN in mijn visie-instellingen.
+        <random>
+          <li>Ik zal opnieuw opstarten, het is belangrijk.</li>
+          <li>Ik zal herhalen.</li>
+        </random>
+        <think>
+          <set name="topic">firstinit</set>
+        </think>
+        <get name="questionfirstinit"/></template>
+      </category>
+  
+  <!-- updater  -->
+  
+  
+  <category><pattern>NEW_INIT</pattern>
+<template><think>
+        <set name="newinit">started</set>
+      </think>
+      <think>
+        <set name="topic">newinit</set>
+      </think>
+        Ik luister. Waar zou je mijn naam in willen veranderen ?</template>
+</category>
+<topic name="NEWINIT">
+<category><pattern>#</pattern><that># NAAM IN WILLEN VERANDEREN #</that>
+<template><set name="questionnewinit">als mijn nieuwe naam <star/> is, zeg dan ja of nee of stop</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="NEWINIT">
+<category><pattern># JA #</pattern><that># ALS MIJN NIEUWE NAAM #</that>
+<template><random>
+            <li>
+            Ik hou van deze naam , <get name="tmpname"/>.
+            </li>
+            <li>
+            Mooie naam, <get name="tmpname"/> is geweldig.
+            </li>
+        </random>
+    <think>
+        <set name="botname"><get name="tmpname"/></set>
+        <set name="newinit"></set>
+        <set name="topic">changing name</set>
+    </think>
+</template>
+</category></topic>
+
+<topic name="NEWINIT">
+<category><pattern># NEE #</pattern><that># ALS MIJN NIEUWE NAAM #</that>
+<template>Laten we opnieuw beginnen.    
+        Ik luister. Waar zou je mijn naam in willen veranderen ?</template>
+</category></topic>
+
+<topic name="NEWINIT">
+<category><pattern># STOP #</pattern><that># ALS MIJN NIEUWE NAAM #</that>
+<template>Ok, ik houd mijn naam <get name="botname"/></template>
+</category></topic>
+
+<category><pattern>NEW_INIT_USER</pattern>
+<template><think>
+        <set name="newinituser">started</set>
+      </think>
+      <think>
+        <set name="topic">newinituser</set>
+      </think>
+        Ik luister. Welke naam wil je dat ik onthoud ?</template>
+</category>
+<topic name="NEWINITUSER">
+<category><pattern>#</pattern><that># WELKE NAAM WIL JE DAT IK ONTHOUD #</that>
+<template><set name="questionnewinituser">als je nieuwe naam <star/> is, zeg dan ja of nee of stop</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="NEWINITUSER">
+<category><pattern># JA #</pattern><that># ALS JE NIEUWE NAAM #</that>
+<template><think>
+        <set name="newinituser"></set>
+        <set name="topic">changing user name</set>
+    </think>
+    <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>YesName(u"<get name="tmpname"/>"), i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+        <random>
+            <li>Ik ben blij dat ik je ken, <get name="tmpname"/>.</li>
+            <li>Leuk u te ontmoeten, <get name="tmpname"/>.</li>
+        </random>
+</template>
+</category></topic>
+
+<topic name="NEWINITUSER">
+<category><pattern># NEE #</pattern><that># ALS JE NIEUWE NAAM #</that>
+<template>Laten we opnieuw beginnen.    
+        Ik luister. Welke naam wil je dat ik onthoud?</template>
+</category></topic>
+
+<topic name="NEWINITUSER">
+<category><pattern># STOP #</pattern><that># ALS JE NIEUWE NAAM #</that>
+<template>Ok, ik houd je naam <get name="name"/></template>
+</category></topic>
+
+<category><pattern>AUDIO TEST</pattern>
+<template><oob>
+         <mrl>
+          <service>i01.audioPlayer</service>
+          <method>play</method>
+          <param>resource/InMoov2/system/sounds/startupsound.mp3</param>
+         </mrl>
+       </oob></template>
+</category>
+<category><pattern>WAKE_UP</pattern>
+<template><random>
+          <li>Ik ben klaar en luister.</li>
+          <li>Wat kan ik voor je doen.</li>
+          <li>Hoe kan ik u helpen.</li>
+        </random><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession("<get name="lastUsername"/>")</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>SYSTEM_SAY_HELLO</pattern>
+<template><srai>HOI</srai>
+        <random>
+        <li>Zeg gewoon HELP als je me nodig hebt.</li>
+        <li>Zeg HELP ME ALSJEBLIEFT als je me nodig hebt.</li>
+        </random></template>
+</category>
+<category><pattern>WAKKER WORDEN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+</category>
+<category><pattern>AFSLUITEN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>
+</category>
+
+<category>
+    <pattern>ROBOT VOLTOOID UITSCHAKELEN</pattern>
+    <template>
+      <think>
+        <set name="topic">SHUT_DOWN</set>
+      </think>
+            Wil je dat ik mijn computer uitzet, zeg dan ja of nee.
+    </template>
+</category>
+<topic name="SHUT_DOWN">
+    <category>
+    <pattern># JA #</pattern>
+    <that># WIL JE DAT IK MIJN COMPUTER UITZET #</that>
+    <template>
+        <think>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>shutdownComplete()</param>
+          </mrl>
+        </oob>
+    </template>
+    </category></topic>
+    <category>
+    <pattern># NEE #</pattern>
+    <that># WIL JE DAT IK MIJN COMPUTER UITZET #</that>
+    <template>Ok, ik zet mijn computer niet uit. 
+            <think><set name="topic">default</set></think></template>
+    </category>
+    <category>
+    <pattern>#</pattern>
+    <that># WIL JE DAT IK MIJN COMPUTER UITZET #</that>
+    <template><think><set name="topic">default</set></think>
+        <srai>ROBOT VOLTOOID UITSCHAKELEN</srai>
+    </template>
+</category>
+<category><pattern>GA SLAPEN</pattern>
+<template>ok<oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
+</category>
+<category><pattern>UITZETTEN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>disable()</param></mrl></oob></template>
+</category>
+<category><pattern>WAT IS HET ONDERWERP</pattern>
+<template>Het onderwerp is
+      <get name="topic"/></template>
+</category>
+  
+  <category>
+    <pattern>GEBAREN</pattern>
+    <template>Invoeren in het gebaaronderwerp.
+      <think><set name="topic">GEBAREN</set></think></template>
+  </category>
+  <category>
+    <pattern>GEBAREN *</pattern>
+    <template>
+      <srai>GEBAREN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* GEBAREN</pattern>
+    <template>
+      <srai>GEBAREN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* GEBAREN *</pattern>
+    <template>
+      <srai>GEBAREN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ALLES ALLEN</pattern>
+    <template>alles allen
+      <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>DETACHT ALLES</pattern>
+    <template>
+      <srai>ALLES ALLEN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOUD ALLES AAN</pattern>
+    <template>Alles bevestigen
+      <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>AANVULLEN ALLES</pattern>
+    <template>
+      <srai>HOUD ALLES AAN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOUD DE RECHTERHAND VAST</pattern>
+    <template>Bevestig mijn rechterhand
+      <oob><mrl><service>i01.rightHand</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>HOUD JE RECHTERHAND VAST</pattern>
+    <template>
+      <srai>HOUD DE RECHTERHAND VAST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOOGSTE HAND AANVULLEN</pattern>
+    <template>Het verwijderen van mijn rechterhand
+      <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ONTBIND JOUW RECHTE HAND</pattern>
+    <template>
+      <srai>HOOGSTE HAND AANVULLEN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOUD JE LINKERHAND VAST</pattern>
+    <template>Bevestig mijn linkerhand
+      <oob><mrl><service>i01.leftHand</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>HOUD JE LINKERHAND VAST</pattern>
+    <template>
+      <srai>HOUD DE LINKERHAND VAST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BINNEN LINK HAND</pattern>
+    <template>Verwijderen van mijn linkerhand
+      <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ONTWERP JOU LEFT HAND</pattern>
+    <template>
+      <srai>BINNEN LINK HAND</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOOFDSTUK</pattern>
+    <template>Mijn hoofd bevestigen
+      <oob><mrl><service>i01.head</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>HOUD JE HOOFD VAST</pattern>
+    <template>
+      <srai>HOOFDSTUK</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOOFDDEKEN</pattern>
+    <template>Afscheiding van mijn hoofd
+      <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ONDERNEMEN HOOFD</pattern>
+    <template>
+      <srai>HOOFDDEKEN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOUD DE RECHTERARM VAST</pattern>
+    <template>Bevestig mijn rechterarm
+      <oob><mrl><service>i01.rightArm</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>HOUD JE RECHTERARM VAST</pattern>
+    <template>
+      <srai>HOUD DE RECHTERARM VAST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LET OP RECHTS ARM</pattern>
+    <template>Verwijderen van mijn rechterarm
+      <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>HAAL DE RECHTERARM AF</pattern>
+    <template>
+      <srai>LET OP RECHTS ARM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOUD DE LINKER ARM VAST</pattern>
+    <template>Bevestig mijn linkerarm
+      <oob><mrl><service>i01.leftArm</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>HOUD JE LINKER ARM VAST</pattern>
+    <template>
+      <srai>HOUD DE LINKER ARM VAST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BINNEN LINKS ARM</pattern>
+    <template>Verwijderen van mijn linkerarm
+      <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ONTWERP LEFT ARM</pattern>
+    <template>
+      <srai>BINNEN LINKS ARM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOUD DE ROMP VAST</pattern>
+    <template>Mijn romp bevestigen
+      <oob><mrl><service>i01.torso</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>HOUD JE ROMP VAST</pattern>
+    <template>
+      <srai>HOUD DE ROMP VAST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BINNEN ROMP</pattern>
+    <template>Het losmaken van mijn romp
+      <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ONDERNEMEN ROMP</pattern>
+    <template>
+      <srai>BINNEN ROMP</srai>
+    </template>
+  </category>
+</aiml>

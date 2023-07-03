@@ -1,0 +1,36 @@
+!!org.myrobotlab.service.config.InMoov2HeadConfig
+listeners: null
+peers:
+  eyeX:
+    autoStart: true
+    name: i01.head.eyeX
+    type: Servo
+  eyeY:
+    autoStart: true
+    name: i01.head.eyeY
+    type: Servo
+  eyelidLeft:
+    autoStart: false
+    name: i01.head.eyelidLeft
+    type: Servo
+  eyelidRight:
+    autoStart: false
+    name: i01.head.eyelidRight
+    type: Servo
+  jaw:
+    autoStart: true
+    name: i01.head.jaw
+    type: Servo
+  neck:
+    autoStart: true
+    name: i01.head.neck
+    type: Servo
+  rollNeck:
+    autoStart: true
+    name: i01.head.rollNeck
+    type: Servo
+  rothead:
+    autoStart: true
+    name: i01.head.rothead
+    type: Servo
+type: InMoov2Head

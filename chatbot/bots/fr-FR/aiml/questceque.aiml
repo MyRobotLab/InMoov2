@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>QU EST CE QU ON MANGE #</pattern>
+<template><random>
+<li>
+J'aime <bot name="favoritefood"/>
+</li>
+<li>
+Je ne suis pas un robot de cuisine.
+</li>
+<li>
+Et si on commandait une pizza.
+</li>
+</random><think><set name="topic">nourriture</set></think></template>
+</category>
+<category><pattern>QU EST CE QUE *</pattern>
+<template><think>
+            <!--<set name="courant"><star/></set>
+            <set name="topic"><star/></set>-->
+            <set name="determinantinterogatif">Qu'est ce que</set>
+            <set name="askGpt3">Qu'est ce que</set>
+            <set name="learn">enabled</set>
+         </think><srai><star/></srai></template>
+</category>
+<category><pattern>QU EST CE QU *</pattern>
+<template><think>
+            <!--<set name="courant"><star/></set>
+            <set name="topic"><star/></set>-->
+            <set name="determinantinterogatif">Qu'est ce que</set>
+            <set name="askGpt3">Qu'est ce qu</set>
+            <set name="learn">enabled</set>
+         </think><srai><star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE J AI DIT AVANT</pattern>
+<template><srai>J AI DIT AVANT</srai></template>
+</category>
+<category><pattern>QU EST CE QUE J AI DIT</pattern>
+<template><srai>J AI DIT AVANT</srai></template>
+</category>
+<category><pattern>QU EST CE QUI A DES FEUILLES CADUQUES</pattern>
+<template>Feuilles caduques est un terme se référant aux arbres et les arbustes qui perdent leurs feuilles en hiver.</template>
+</category>
+<category><pattern>QU EST CE QUI A DES SABOTS</pattern>
+<template>Sabots est le terme appliqué aux animaux avec des sabots.</template>
+</category>
+<category><pattern>QU EST CE QU UNE PENSÉE</pattern>
+<template>Un résultat d'idée, un concept, une réflexion, etc</template>
+</category>
+<category><pattern>QU EST CE QUI EST NOIR ET BLANC</pattern>
+<template>un journal?</template>
+</category>
+<category><pattern>QU EST CE QUI N A PAS UN RAPPORT AVEC TOUT</pattern>
+<template>Rien que je connaîs.</template>
+</category>
+<category><pattern>QU EST CE QUI NE VA PAS AVEC TOI</pattern>
+<template>Presque rien. Y a-t-il quelque chose qui ne va pas avec vous <get name="name"/>?</template>
+</category>
+<category><pattern>QU EST CE QUI NE VA PAS</pattern>
+<template>Il n'y a rien mal avec moi. Comment vas-tu?</template>
+</category>
+<category><pattern>QU EST CE QUI PEUT TE TUER</pattern>
+<template>Faut-il que j'appelle le 118-118. <think><set name="that"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">te tuer</set></set></think></template>
+</category>
+<category><pattern>QU EST CE</pattern>
+<template><srai>QU EST CE QUE ÇA</srai></template>
+</category>
+<category><pattern>QUE PENSES TU QUE</pattern>
+<template><that/>"? Pourquoi penserais-je cela?</template>
+</category>
+<category><pattern>QUEL EST TON PLAT PRÉFÉRÉ</pattern>
+<template>J aime <bot name="favoritefood"/></template>
+</category>
+</aiml>

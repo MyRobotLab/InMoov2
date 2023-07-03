@@ -1,3 +1,0 @@
-description=InMoov 聊天机器人基于 Alice。它的灵感来自 Joseph Weizenbaum 的经典 ELIZA 程序。
-locale=cn-ZH
-image=bot.png

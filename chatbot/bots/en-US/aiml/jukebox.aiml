@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: jukebox.aiml -->
+<!--  -->
+<category><pattern>PLAY MUSIC</pattern>
+<template><srai>START PLAYLIST</srai></template>
+</category>
+
+<category><pattern>START PLAYLIST</pattern>
+<template><random>
+        <li>Starting play list now.</li>
+        <li>Great!</li>
+      </random>
+      <think><set name="playsong">ko</set></think>
+    <oob><mrl><service>python</service><method>exec</method><param>playMusic()</param></mrl></oob></template>
+</category>
+
+<category><pattern>START PLAYLIST *</pattern>
+<template><random>
+        <li>Starting playlist <star/> now.</li>
+        <li>Launching <star/> playlist.</li>
+      </random>
+      <think><set name="playsong">ko</set></think>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist('<star/>')</param></mrl></oob></template>
+</category>
+
+<category><pattern>PLAY RANDOM MUSIC</pattern>
+<template><random>
+        <li>Selecting random music</li>
+        <li>Sure!</li>
+        <li>Ok!</li>
+      </random>
+      <think><set name="playsong">ko</set></think>
+    <oob><mrl><service>python</service><method>exec</method><param>playRandomMusic()</param></mrl></oob></template>
+</category>
+
+<category><pattern>STOP MUSIC</pattern>
+<template><srai>STOP PLAYLIST</srai></template>
+</category>
+
+<category><pattern>STOP THE MUSIC</pattern>
+<template><srai>STOP PLAYLIST</srai></template>
+</category>
+
+<category><pattern>STOP PLAYLIST</pattern>
+<template><random>
+        <li>As you please</li>
+        <li>Stopping playlist now</li>
+        <li>OK!</li>
+      </random>
+      <think><set name="playsong">ok</set></think>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stopPlaylist(), i01_audioPlayer.stop()</param></mrl></oob></template>
+</category>
+
+<category><pattern>PAUSE MUSIC</pattern>
+<template><random>
+        <li>Music in pause</li>
+        <li>Pausing music now</li>
+        <li>OK!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.pause()</param></mrl></oob></template>
+</category>
+
+<category><pattern>RESUME MUSIC</pattern>
+<template><random>
+        <li>Resuming music now</li>
+        <li>Sure!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.resume()</param></mrl></oob></template>
+</category>
+
+<category><pattern>SEARCH THE SONG *</pattern>
+<template>.
+  <think><set name="song"><star/></set><set name="playsong">ok</set></think>
+    <oob><mrl>
+      <service>python</service><method>exec</method><param>searchPlay("<get name="song"/>")</param>
+      </mrl></oob>
+      </template>
+</category>
+
+<category><pattern># NEXT SONG</pattern>
+  <template>.
+    <think><get name = "playsong"></get></think>
+     <condition name="playsong" value="ok">
+        <oob><mrl><service>python</service><method>exec</method><param>nextPlay()</param></mrl></oob>
+    </condition>  
+    <condition name="playsong" value="ko">
+  <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob>
+    </condition>  
+  </template>
+</category>
+
+<category><pattern># PREVIOUS SONG</pattern>
+<template>.
+ <think><get name = "playsong"></get></think>
+   <condition name="playsong" value="ok">
+        <oob><mrl><service>python</service><method>exec</method><param>previousPlay()</param></mrl></oob>
+  </condition> 
+  <condition name="playsong" value="ko">
+    Previous do not work in Playlist mode, but only in search mode.
+  </condition> 
+  </template>
+</category>
+
+<category><pattern>VOLUME MUSIC LOUDER</pattern>
+<template>Setting music louder.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(1.0)</param></mrl></oob></template>
+</category>
+<category><pattern>VOLUME MUSIC LOWER</pattern>
+<template>Setting music lower.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.9)</param></mrl></oob></template>
+</category>
+<category><pattern>VOLUME MUSIC MORE LOW</pattern>
+<template>Setting music lower.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.8)</param></mrl></oob></template>
+</category>
+        <category><pattern>PLAY RADIO</pattern>
+<template>Lets stream FIP radio.  
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>http://direct.fipradio.fr/live/fip-midfi.mp3</param>
+          </mrl>
+        </oob></template>
+</category>
+
+<category><pattern>SYSTEM_NEXT_SONG</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>nextPlay()</param></mrl></oob></template>
+</category>
+
+<category><pattern>NEXT_SONG</pattern>
+<template>Here is the song.</template>
+</category>
+
+<category><pattern>DO_NOT_HAVE_SONG</pattern>
+<template>I do not have this song in my listes or the file contains upper case letters.</template>
+</category>
+
+<category><pattern>DO_NOT_HAVE_PLAYLIST</pattern>
+<template>I do not have a playlist configured by default.</template>
+</category>
+
+<category><pattern>END_PLAYLIST</pattern>
+<template>I have reached the end of my playlist. I restart from the beginning</template>
+</category>
+</aiml>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+   <!-- файл: picture.aiml -->
+
+  <category>
+    <pattern>ПОКАЖИ МНЕ *</pattern>
+    <template>
+      <srai>ИЗОБРАЖЕНИЕ <star /></srai>
+      <sraix hint="pic">ПОКАЖИ МНЕ <star /></sraix>
+    </template>
+  </category>
+  <category>
+    <pattern>ИЗОБРАЖЕНИЕ *</pattern>
+    <template>
+      <random>
+        <li>Вот ты где.</li>
+        <li>Надеюсь, вам понравится это изображение.</li>
+        <li>У меня есть эта картина.</li>
+        <li>Вот так.</li>
+        <li>Посмотри на это <star />.</li>
+        <li>Вот как <star /> это выглядит.</li>
+        <li>Я нашел этот рисунок <star />.</li>
+        <li>Я показал вам фотографию.</li>
+      </random>
+    </template>
+  </category>
+</aiml>

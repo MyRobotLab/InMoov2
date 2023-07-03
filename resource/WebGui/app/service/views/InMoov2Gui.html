@@ -903,35 +903,42 @@
                 <tr>
                     <td>
                         <img src="../plus.png"/>
-                        &nbsp;&nbsp;<label>Life Service</label>
+                                </td><td>
+                        <label>Life Service</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label>Startup Sound</label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable InMoov theme at start" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_startupSound_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_startupSound_stop.py')">off</button>
+                        <label>Boot Up Sound</label>
+                        </td>
+                     <td>
+                        <button ng-show="service.config.bootUpSound" class="btn btn-info" title="Enable InMoov theme at start" ng-click="setConfigValue('bootUpSound', false)">on</button>
+                        <button ng-show="!service.config.bootUpSound" class="btn btn-default" ng-click="setConfigValue('bootUpSound', true)">off</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <label>Custom Sounds</label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable custom sounds when waking up" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_customSound_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_customSound_stop.py')">off</button>
+                                </td><td>
+
+                        <button ng-show="service.config.customSound" class="btn btn-info" title="Custom sounds on events" ng-click="setConfigValue('customSound', false)">on</button>
+                        <button ng-show="!service.config.customSound" class="btn btn-default" ng-click="setConfigValue('customSound', true)">off</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <label>Health Check</label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Checking your robot condition" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_healthCheckActivated_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_healthCheckActivated_stop.py')">off</button>
+                                </td><td>
+                        <button title="Checking your robot condition"  class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_healthCheckActivated_start.py')">on</button>&nbsp;<button  class="btn btn-default" ng-click="execScript('system/startScripts/i01_healthCheckActivated_stop.py')">off</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <label>Battery In System</label>
-                        &nbsp;&nbsp;<button title="Enable checking the battery level" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_batteryInSystem_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_batteryInSystem_stop.py')">off</button>
+                                </td><td>
+                        <button title="Enable checking the battery level"  class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_batteryInSystem_start.py')">on</button>&nbsp;<button  class="btn btn-default" ng-click="execScript('system/startScripts/i01_batteryInSystem_stop.py')">off</button>
                     </td>
                 </tr>
                 <!--<tr>

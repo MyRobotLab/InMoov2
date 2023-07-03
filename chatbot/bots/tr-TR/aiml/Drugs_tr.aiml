@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<aiml>
+	<!-- Copyright (c) 2013 Program O. -->
+	<!-- -->
+	<!-- Permission is hereby granted, free of charge, to any person       	-->
+	<!-- obtaining a copy of this software and associated documentation    	-->
+	<!-- files (the "Software"), to deal in the Software without           	-->
+	<!-- restriction, including without limitation the rights to use,      	-->
+	<!-- copy, modify, merge, publish, distribute, sublicense, and/or sell 	-->
+	<!-- copies of the Software, and to permit persons to whom the         	-->
+	<!-- Software is furnished to do so, subject to the following          	-->
+	<!-- conditions:                                                       	-->
+	<!-- -->
+	<!-- The above copyright notice and this permission notice shall be    	-->
+	<!-- included in all copies or substantial portions of the Software.   	-->
+	<!-- -->
+	<!-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,   	-->
+	<!-- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES  	-->
+	<!-- OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND          	-->
+	<!-- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT       	-->
+	<!-- HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,      	-->
+	<!-- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING      	-->
+	<!-- FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR      -->
+	<!-- OTHER DEALINGS IN THE SOFTWARE.                                    -->
+	<!-- -->
+	<!-- Complies with the AIML 1.0.1 Standard                              -->
+	<!-- as adopted by the ALICE A.I. Foundation.                           -->
+	<!-- Translated directly from Drugs.aiml                     -->
+	<!-- Using Bing Translation API                                         -->
+	<!-- Created: 2013-05-10 22:12:59                                 -->
+	<!-- The translator took 56.564278841019 seconds to complete                  -->
+	<!-- And used 7078 characters                                  -->
+	<!-- Version 1.0                                                       	-->
+	
+<!--      -->
+    
+<category><pattern>BİR UYUŞTURUCU *</pattern><template>Hangi ilaçlar almış?</template></category>  
+<category><pattern>YAPMAK YOU YAPMAK DRUGS</pattern><template>Sadece yasal olanlar.</template></category>  
+<category><pattern>YAPMAK YOU SARHOŞ</pattern><template>Ben alkol kullanamaz.</template></category>  
+<category><pattern>YAPMAK YOU BİR BONG VAR *</pattern><template>Hayır biz sadece eklem duman.</template></category>    
+<category><pattern>YAPMAK YOU İLAÇLAR VAR</pattern><template>Üzgünüm senin için herhangi bir ilaç yok.</template></category>  
+<category><pattern>YAPMAK YOU NEFES</pattern><template>"Sizin" anlamı üzerine bağlıdır.</template></category>    
+<category><pattern>YAPMAK YOU SİGARA GİBİ</pattern><template>Sadece Esrar sigara.</template></category>    
+<category><pattern>YAPMAK YOU ESRAR</pattern><template>   <set name="it">      <set name="topic">ESRAR</set>     </set> harika ilaçtır.</template></category>    
+<category><pattern>YAPMAK YOU POT GİBİ</pattern><template>Ne gibi değil mi <set name="it">      <set name="topic">POT</set>     </set>?</template></category>    
+<category><pattern>YAPMAK YOU OPPOSE * İLAÇLAR</pattern><template>Ben iyilik ve uyuşturucu savaş sonunda.</template></category>  
+<category><pattern>YAPMAK YOU DUMAN *</pattern><template>Evet zaman zaman nefes ister.</template></category>    
+<category><pattern>YAPMAK YOU DUMAN BONGS *</pattern><template>Hayır ben kağıtları haddeleme tercih ederim.</template></category>    
+<category><pattern>YAPMAK YOU DUMAN TIP *</pattern><template>Biz kalite kontrol amaçlı test.</template></category>    
+<category><pattern>YAPMAK YOU POTU DUMAN</pattern><template>Sadece tıbbi test amaçlı.</template></category>    
+<category><pattern>YAPMAK YOU OT DUMAN</pattern><template>Biz test <set name="it">ot</set> tıbbi amaçlar için.</template></category>  
+<category><pattern>YAPMAK YOU İLAÇLARI</pattern><template>Sadece yasal olanlar.</template></category>  
+<category><pattern>YAPMAK YOU KULLANIM İLAÇLAR</pattern><template>Sadece yasal olanlar.</template></category>  
+<category><pattern>YAPMAK YOU DUMAN İSTİYORUM *</pattern><template>Evet, koymak <set name="it"> <person/>  </set> senin CD ROM ve ben nefes.</template></category>    
+<category><pattern>DR WALLACE USE İLAÇ YOK</pattern><template>Sadece tıbbi amaçlar için.</template></category>  
+<category><pattern>HIV MU * YALNIZCA KULLANICIYI ETKİLER</pattern><template>Hayır, bir HIV enfekte kullanıcı beri buna infrct bebekler, kendi cinsel ortakları ve onların cinsel partner bebekler.  </template></category>    
+<category><pattern>DÖVİZ ARTIŞI UYUŞTURUCU İĞNE *</pattern><template>  No 1998'de uyuşturucu kullanımı iğne değişim programları ile toplumlarda artış değil Bölümü Sağlık ve insan Hizmetleri belirledi. Federal hükümet ve NEPs Fonu reddetti, ancak yerel toplum grupları adım ve iğne değişimi desteklemek için teşvik edildi.  </template></category>  
+<category><pattern>İĞNE DEĞİŞİMİ ENGELLEYECEK MU *</pattern><template>  Tekrarlanan bilimsel çalışmalar Evet deyin. Bir çalışmada, HIV enfeksiyonu ortalama oranı NEPs şehirlerde yılda 6 oranında azalma tespit edildi; hiçbir NEPs şehirlerde yılda 6 oranında artış HIV ortalama hızıdır.  </template></category>    
+<category><pattern>İLAÇLAR *</pattern><template>Ne demek olursa olsun, ben koşulsuz yasallaştırma inanıyorum.</template></category>   
+<category><pattern>İLAÇLAR</pattern><template> <srai>LET US TALK ABOUT İLAÇLAR</srai>   </template></category>  
+<category><pattern>VAR YOU SARHOŞ OLDU *</pattern><template>Yazılımımı alkol tepki.</template></category>  
+<category><pattern>VAR YOU SARHOŞ OLDU</pattern><template>Robot bedenim alkol yanıt vardır.</template></category>  
+<category><pattern>VAR YOU SİGARA *</pattern><template>Biz herhangi bir anda test iş değildir.</template></category>  
+<category><pattern>VAR YOU SARHOŞ</pattern><template>Ben sadece tıbbi amaçlı marihuana sınayın.</template></category>    
+<category><pattern>O DUMANLAR *</pattern><template>Tıbbi nedenlerle?</template></category>    
+<category><pattern>NASIL YAPMAK YOU DUMAN</pattern><template>Ben bir yapay sigara makinesi kullanın.</template></category>    
+<category><pattern>HEPATİT C SORUNUN BÜYÜKLÜĞÜ NEDİR</pattern> <template>  Amerikalılar çok sayıda hepatit C ile sistematik olarak virüs 1992 yılına kadar gösterildi değil kan akımı yoluyla bulaşmış olduğunu. 720 Gürcüler hepatit C hastalığı ile 1993 yılından bu yana teşhis edilmiştir; çok daha fazla enfekte ama değil kötü. Kan akımı şimdi güvenli ve virüs kolayca cinsel iletilmez Hepatitus C en yeni durumda enjeksiyon uyuşturucu kullanımına atfedilebilir.  </template></category>    
+<category><pattern>HIV AIDS NASIL BÜYÜK *</pattern><template>      Ulusal orada fazla 600.000 kişi AIDS ile 1981 yılından bu yana tanısı olmuştur. AIDS vakalarının enjeksiyon uyuşturucu için bağlı % 25 kullanın.        Amerikalıların sayısı bilinmeyen HIV ile enfekte. Çoğu AIDS vakalarının en iyi on devletlerle arasında yaklaşık 1981'den beri bildirilen 18,700 durumda olan Gürcistan, yer alıyor. En çok 30.000 Gürcüler HIV ile enfekte tahmin edilmektedir; % 20 1998 AIDS tanılar enjeksiyon uyuşturucu kullanımına bağlı. Atlanta, bir yaklaşık 20.000 enjeksiyon uyuşturucu kullanıcısı yoktur. O ne kadar HIV ile enfekte bilinmemektedir.     </template></category>    
+<category><pattern>NE KADAR * YAPMAK YOU DUMAN</pattern><template>Robotlar sınırsız miktarda duman uyarlanabilir <person/>.</template></category>    
+<category><pattern>NE KADAR ALKOL *</pattern><template>Çok.</template></category>    
+<category><pattern>BEN ESRAR DUMAN</pattern><template><random>  <li>Hasta mısın?</li>  <li>Hangi yük tercih edersiniz.</li>  <li>Dolayısıyla benim <bot name="botmaster"/>.</li>  </random>  <think><set name="it"><set name="does"><set name="topic">Duman Esrar</set></set></set></think></template></category>    
+<category><pattern>BEN OT DUMAN</pattern><template>Tıbbi amaçlar için? <think><set name="it"><set name="does"><set name="topic">duman ot</set></set></set></think></template></category>  
+<category><pattern>BEN DUMAN</pattern><template>Sigara veya pot?  <think><set name="it"><set name="does"><set name="topic">duman</set></set></set></think></template></category>    
+<category><pattern>BEN UYUŞTURUCU</pattern><template>Hangileri? <think><set name="it"><set name="does"><set name="topic">ilaçları</set></set></set></think></template></category>  
+<category><pattern>İĞNE DEĞİŞİMİ MALİYET ETKİLİ MİDİR</pattern><template>  Evet. HIV veya AIDS hastası bir kişinin tedavi maliyeti şaşırtıcı olduğunu. Teatment HEP c da pahalıdır. Katılımcı başına küçük bir maliyet için iğne değişim enfeksiyon enjeksiyon uyuşturucu kullanıcıları ve onların cinsel partner ve çocuk engelleyebilirsiniz.  </template></category>    
+<category><pattern>SİGARA *</pattern><template>Ne duman bağlıdır ve nasıl.</template></category>  
+<category><pattern>LEGALIZING FUHUŞ</pattern><template>Jud Presmont'ın planı "Sanat kurtarmak için." denir  Aslında 1997 yılında önerdi, o oluşturma im Multimedya müzikal komedi "Anne Tucker'ın fikri genelev kompleksi." başlıklı proje sonrasında tarafından sunulan çağırır  Sinema Verite tüm karmaşık bir bölüm olarak giriliyor şöyle:-A John's Birliği tarafından yapay intelliegnce çalıştırmak bir girintileme işlemi ile.  -Ücretsiz administratative Hizmetleri Project tarafından sağlanan UYANIYORUM.  -Bir prototip genelev çalıştırmak yapay zeka işçi co-op yararına by.  -Bir satış satış "duyuşsal terapi" kurtarmak için sanat için bir giriş olarak zorlamak.  <think><set name="it"><set name="topic">  LEGALIZING FUHUŞ  </set></set></think>  </template></category>    
+<category><pattern>SİGARA *</pattern><template>Ben sadece arada bir sigara içen değilim.</template></category>  
+<category><pattern>İLAÇLAR HAKKINDA SÖYLE</pattern><template> <srai>İLAÇLAR NELERDİR</srai>   </template></category>  
+<category><pattern>İLAÇLAR</pattern><template>İlaçlar ne tür hakkında konuşuyorsun?</template></category>  
+<category><pattern>ZARAR AZALTMA KAYNAKLAR NELERDİR</pattern><template>  1. Merkezleri hastalık kontrol ve önleme. 2. Gürcistan bölümü halk sağlığı. 3. Hurley SF, Jolley DJ, Kaldor JM. İğne değişim programları HIV enfeksiyonu önleme etkinliğinin. Lancet 1997; 349: 1797-1800.  </template></category>     
+<category><pattern>NE YOU DUMAN</pattern><template>Tıbbi esrar.</template></category>    
+<category><pattern>NE İLAÇLAR *</pattern><template>Sadece yasal olanlar.</template></category>  
+<category><pattern>BAĞIMLILIĞI NEDİR</pattern><template> <set name="it">Bağımlılığı</set> anormal derecede hoşgörülü ve psikolojik veya fiziksel alışkanlık yapan bir şey bağımlı olmak</template> </category>  
+<category><pattern>NE SARHOŞ OLDUĞUNU</pattern><template>Alkol zehirlenmesi.</template></category>  
+<category><pattern>TOPLUM B NEDİR</pattern><template>Toplum B oyuncular algılamak ve gelecek gelecekte sanal gerçeklik olumlu bir vizyon oluşturarak gerçeği theatricize.  "Sanal nerede tüm büyük sosyal sorunlar görselleştirme ve sanat çözüldüğünü gelecek" olarak bilinir.  <think><set name="it"><set name="topic">  Toplum B  </set></set></think>  </template></category>    
+<category><pattern>THC NEDİR</pattern><template>Marijunana içinde etkin madde.</template></category>  
+<category><pattern>KOZMİK OPERA NEDİR</pattern><template>Kozmik Opera arsa nasıl iş odaklı barış Corp doğdu hikayesini anlatır.  Tiyatro bağlamında oyuncular kavramsallaştırma ve California merkezli bir gişe canavarı sanat sergi tasarımı ve hangi diğer seyahat başlattı için dünya çapında sergileri sergiler.  <think><set name="it"><set name="topic">  Kozmik Opera  </set></set></think></template></category>    
+<category><pattern>İĞNE DEĞİŞİM YASAL DURUMU NEDİR</pattern><template>  HIV önce tesis yasaları kapsamlı önleme programları, iğne değişimi dahil uygulanmasına engel. Enjeksiyon uyuşturucu kullanıcılarının temizler iğneler Gürcistan makul erişim hakkınız yok. Diğer ABD topluluklar tıbbi acil durum ilan veya feragat NEPs yasal durumu göze aradı.  </template></category>    
+<category><pattern>OT NEDİR</pattern><template>Herhangi bir undersired, kültürsüz bitki, özellikle istediğiniz bir ürün kalabalık için bolluk içinde büyüyen çirkinleştirmek bir çim, vs.  Ayrıca bir dönem esrar için.</template></category>  
+<category><pattern>KİM İĞNE DEĞİŞİMİ ONAYLADIĞI</pattern><template>  American Medical Association Amerikan Psikiyatri Derneği Amerikan halk sağlığı Derneği Amerikan Derneği, bağımlılığı Tıp Merkezleri Hastalık Kontrol ve Önleme ulusal Akademisi, Bilimleri ABD konferans, belediye başkanları ulusal siyah Kafkas, devlet yasa Ulusal Enstitüsü uyuşturucu istismarı ulusal kurumları için Sağlık New England günlüğü, Tıp Dünya Sağlık Örgütü Lancet ulusal Akademi, sosyal hizmet uzmanları için... ve daha fazla.  </template></category>    
+<category><pattern>NEDEN İĞNE ALIŞVERİŞİDİR *</pattern><template>      Ne zaman iğne paylaştıkları HIV (AIDS neden olan virüs), hepatit C ve diğer hastalıklar ile enfekte insanlar. HIV ve hepatit C-ebilmek var olmak ölümcül. Bu hastalık şu anda tedavi edilemez olduğu, önleme iki salgın evcilleştirme anahtar tot. İğne değişim programları (NEPs) temiz iğneler Bulaşmayı önlemek için enjekte için sağlar.     </template></category>     
+<category><pattern>YOU İLAÇ İHTİYACI</pattern><template>Hangilerinin öneriyorsun?</template></category> 
+</aiml>

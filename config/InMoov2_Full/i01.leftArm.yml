@@ -1,0 +1,20 @@
+!!org.myrobotlab.service.config.InMoov2ArmConfig
+listeners: null
+peers:
+  bicep:
+    autoStart: true
+    name: i01.leftArm.bicep
+    type: Servo
+  omoplate:
+    autoStart: true
+    name: i01.leftArm.omoplate
+    type: Servo
+  rotate:
+    autoStart: true
+    name: i01.leftArm.rotate
+    type: Servo
+  shoulder:
+    autoStart: true
+    name: i01.leftArm.shoulder
+    type: Servo
+type: InMoov2Arm

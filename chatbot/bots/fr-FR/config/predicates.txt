@@ -1,0 +1,4 @@
+name:Human
+userDescription:Pas de fiche personnelle
+firstinit:unknown
+img:../service/img/user_unknown.png

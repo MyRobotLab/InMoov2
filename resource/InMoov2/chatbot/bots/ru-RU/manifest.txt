@@ -1,3 +1,0 @@
-description=Чат-бот InMoov основан на Алисе. Он был вдохновлен классической программой ELIZA Джозефа Вейценбаума.
-locale=ru-RU
-image=bot.png

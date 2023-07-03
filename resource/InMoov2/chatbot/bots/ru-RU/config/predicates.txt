@@ -1,3 +1,0 @@
-userDescription:no personal description
-firstinit:unknown
-img:../service/img/user_unknown.png
