@@ -244,7 +244,7 @@
 
   <topic name="NEWINITUSER">
     <category><pattern>#</pattern><that># GUSTARÍA QUE MEMORIZARA #</that>
-      <template><set name="questionnewinituser">si su nuevo nombre es <estrella/> , diga sí o no o detente</set>
+      <template><set name="questionnewinituser">si su nuevo nombre es <star/> , diga sí o no o detente</set>
         <think>
           <set name="tmpname">
             <star/>
