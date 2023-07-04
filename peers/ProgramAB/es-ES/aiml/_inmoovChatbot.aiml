@@ -1,64 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!-- File: _inmoovChatbot.aiml -->
-<!--  -->
-<category><pattern>FIRST_INIT</pattern>
-<template><think>
+  <!-- File: _inmoovChatBot.aiml -->
+  <!--  -->
+  <category>
+    <pattern>SAY *</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  
+  <!-- initialisaion routine -->
+  <!-- wakeup action -->
+  <!-- météo -->
+  <!-- random action -->
+  
+  <category>
+    <pattern>FIRST_INIT</pattern>
+    <template>
+      <think>
         <set name="firstinit">started</set>
       </think>
       <think>
         <set name="topic">firstinit</set>
       </think>
-        Hello, This is my first initialisation. I need some informations, I am listening, what is my name ?</template>
-</category>
-<topic name="FIRSTINIT">
-<category><pattern>#</pattern><that># WHAT IS MY NAME #</that>
-<template><set name="questionfirstinit">if my name is <star/> , say yes or no</set>
+      Hola, esta es mi primera inicialización.
+      Estoy sorprendido por lo que veo.
+      Por favor, necesito información esencial.
+      Te escucho. Cuál es mi nombre
+    </template>
+  </category>
+  
+  <topic name="FIRSTINIT">
+    <category>
+      <pattern>#</pattern><that># CUÁL ES MI NOMBRE #</that>
+      <template>
+        <set name="questionfirstinit">Si mi nombre es <star /> , responde sí o no</set>
         <think>
           <set name="tmpname">
-            <star/>
+            <star />
           </set>
-        </think></template>
-</category></topic>
-
-<topic name="FIRSTINIT">
-<category><pattern>#</pattern><that># MAY I HAVE YOUR NAME #</that>
-<template><set name="questionfirstinit">if your name is <star/> , say yes or no</set>
+        </think>
+      </template>
+    </category></topic>
+  
+  <topic name="FIRSTINIT">
+    <category>
+      <pattern>#</pattern><that># PUEDO TENER SU PRIMER NOMBRE #</that>
+      <template>
+        <set name="questionfirstinit">Si tu nombre es <star /> , responde sí o no</set>
         <think>
           <set name="tmpname">
-            <star/>
+            <star />
           </set>
-        </think></template>
-</category></topic>
+        </think>
+      </template>
+    </category></topic>
 
-<topic name="FIRSTINIT">
-<category><pattern># YES #</pattern><that># IF MY NAME IS #</that>
-<template><random>
-            <li>
-            I like this name , <get name="tmpname"/>.
-            </li>
-            <li>
-            Very nice name, <get name="tmpname"/> is great.
-            </li>
+  <topic name="FIRSTINIT">  
+    <category>
+      <pattern># SÍ #</pattern><that># SI MI NOMBRE ES #</that>
+      <template>
+        <random>
+          <li>Me gusta mucho este nombre , <get name="tmpname" />. </li>
+          <li>Realmente no tenemos la opción de su nombre, diremos que <get name="tmpname" /> es un buen nombre. </li>
+          <li><get name="tmpname" /> ? En serio, lo guardaré toda mi vida. Muy bièn. </li>
+          <li><get name="tmpname" /> ? Realmente, lo guardaré toda mi vida, entonces. Gran. </li>
         </random>
-    I need to know you, I am listening, may I have your name ?
-    <think><set name="botname"><get name="tmpname"/></set></think></template>
-</category></topic>
+	        Necesito saber más sobre ti, te estoy escuchando, puedo tener su primer nombre ?
+	        <think><set name="botname"><get name="tmpname" /></set></think></template>
+    </category></topic>
 
-<topic name="FIRSTINIT">
-<category><pattern># YES #</pattern><that># IF YOUR NAME #</that>
-<template><think>
+  <topic name="FIRSTINIT">
+    <category><pattern># SÍ #</pattern><that># SI TU NOMBRE #</that>
+      <template><think>
           <set name="name">
             <get name="tmpname"/>
           </set>
         </think>
-        <set name="questionfirstinit">Would you like me to use my vision to memorise your face along your name, <get name="tmpname"/>?</set>
+        <set name="questionfirstinit"><get name="tmpname"/>, te gustaría que use mi visión para memorizar tu cara junto con tu nombre?</set>
         </template>
-</category></topic>
+    </category></topic>
 
-<topic name="FIRSTINIT">
-<category><pattern># YES #</pattern><that># YOUR FACE ALONG YOUR NAME #</that>
-<template>Ok, make sure you are facing the camera, and please don't wear glasses.<think>
+  <topic name="FIRSTINIT">
+    <category><pattern># SÍ #</pattern><that># CARA JUNTO CON TU NOMBRE</that>
+      <template>Vale, asegúrate de mirar a la cámara y no uses gafas.<think>
           <set name="topic">default</set>
         </think><oob>
           <mrl>
@@ -71,161 +96,167 @@
           <set name="firstinit">ok</set>
           <set name="topic">default</set>
         </think>
-    </template>
-</category></topic>
+      </template>
+    </category></topic>
 
-<topic name="STARTVISION">
-<category><pattern># YES #</pattern><that># START MY VISION #</that>
-<template>Ok, make sure you are facing the camera, and please don't wear glasses.
-        <oob>
+  <topic name="STARTVISION">
+    <category><pattern># SÍ #</pattern><that># QUE EMPIECE MI VISIÓN #</that>
+      <template>Vale, asegúrate de mirar a la cámara y no uses gafas.        <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
             <param>i01.startPeer('opencv'), memorisePerson(u"<get name="name"/>")</param>
           </mrl>
         </oob></template>
-</category></topic>
+    </category></topic>
 
-<topic name="STARTVISION">
-<category><pattern># NO #</pattern><that># START MY VISION #</that>
-<template>Ok, you always can train me later, in my vision gui.<srai>SYSTEM_SAY_HELLO</srai></template>
-</category></topic>
+  <topic name="STARTVISION">
+    <category><pattern># NO #</pattern><that># QUE EMPIECE MI VISIÓN #</that>
+      <template>Ok, siempre puedes entrenarme más tarde, en mi guia de visión.<srai>SYSTEM_SAY_HELLO</srai></template>
+    </category></topic>  
 
-<topic name="FIRSTINIT">
-<category><pattern># NO #</pattern><that># IF MY NAME IS #</that>
-<template>We restart.
-    I am listening. what is my name ?</template>
-</category></topic>
+  <topic name="FIRSTINIT">  
+    <category>
+      <pattern># NO #</pattern><that># SI MI NOMBRE ES #</that>
+      <template>
+        Comenzamos de nuevo. Te escucho. Cuál es mi nombre ?
+      </template>
+    </category></topic>
 
-<topic name="FIRSTINIT">
-<category><pattern># NO #</pattern><that># IF YOUR NAME #</that>
-<template>We restart.
-    I am listening. may I have your name ?</template>
-</category></topic>
+  <topic name="FIRSTINIT">  
+    <category>
+      <pattern># NO #</pattern><that># SI TU NOMBRE #</that>
+      <template>
+        Comenzamos de nuevo. Te escucho. puedo tener su primer nombre ?
+      </template>
+    </category></topic>
 
-<topic name="FIRSTINIT">
-<category><pattern># NO #</pattern><that># YOUR FACE ALONG YOUR NAME #</that>
-<template>Ok <get name="tmpname"/>, then we are done with our first contact.
+  <topic name="FIRSTINIT">
+    <category><pattern># NO #</pattern><that># CARA JUNTO CON TU NOMBRE</that>
+      <template>Ok <get name="tmpname"/>, entonces hemos terminado con nuestro primer contacto.       
         <think>
           <set name="firstinit">ok</set>
           <set name="topic">default</set>
         </think>
-    <oob>
+        <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
             <param>i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.savePredicates()</param>
           </mrl>
         </oob><srai>SYSTEM_SAY_HELLO</srai></template>
-</category></topic>
+    </category></topic>
 
-<topic name="FIRSTINIT">
-<category><pattern>#</pattern><that># SAY YES OR NO #</that>
-<template><random>
-          <li>
-    Please, answer my question, it is important
-    </li>
-          <li>
-    I repeat.
-    </li>
+  <topic name="FIRSTINIT">  
+    <category>
+      <pattern>#</pattern><that># RESPONDE SÍ O NO #</that>
+      <template>
+        <random>
+          <li>Por favor, responda las preguntas que estoy formulando, es importante. </li>
+          <li>Repito, porque no entendiste o malentendí. </li>
         </random>
-        <get name="questionfirstinit"/></template>
-</category></topic>
+        <get name="questionfirstinit" />
+      </template>
+    </category></topic>
 
-<category><pattern>NOTMEMORIZED</pattern>
-<template>I couldn't memorize your face because my vision is not started.
-    Do you want me to start my vision?
+    <category><pattern>NOTMEMORIZED</pattern>
+      <template>No pude memorizar tu cara porque mi visión no se inicia.
+        ¿Quieres que empiece mi visión?
         <think>
             <set name="topic">startVision</set>
         </think>
-    </template>
-</category>
+      </template>
+    </category>
 
 
-<category><pattern>NOTFACERECOGNIZED</pattern>
-      <template>I couldn't memorize your face because face recognizer is OFF in my vision settings. Set it ON in my vision settings.
+    <category><pattern>NOTFACERECOGNIZED</pattern>
+      <template>No pude memorizar tu rostro porque el reconocedor de rostros está OFF en mi configuración de visión. Póngalo en ON en mi configuración de visión.
         <random>
-          <li>I restart, it's important.</li>
-          <li>I repeat.</li>
+          <li>Reinicio, es importante.</li>
+          <li>Repito.</li>
         </random>
         <think>
-          <set name="topic">firstinit</set>
+          <set name="topic">startVision</set>
+          <set name="questionfirstinit">Te gustaría que use mi visión para memorizar tu cara junto con tu nombre?</set>
         </think>
         <get name="questionfirstinit"/></template>
       </category>
 
-<category><pattern>NEW_INIT</pattern>
-<template><think>
+
+    <category><pattern>NEW_INIT</pattern>
+      <template><think>
         <set name="newinit">started</set>
       </think>
       <think>
         <set name="topic">newinit</set>
       </think>
-        I am listening. What would you like to change my name to ?</template>
-</category>
-<topic name="NEWINIT">
-<category><pattern>#</pattern><that># CHANGE MY NAME TO #</that>
-<template><set name="questionnewinit">if my new name is <star/> , say yes or no or stop</set>
+        Estoy escuchando. ¿A qué te gustaría cambiar mi nombre?</template>
+    </category>
+
+  <topic name="NEWINIT">
+    <category><pattern>#</pattern><that># ¿A QUÉ TE GUSTARÍA CAMBIAR #</that>
+      <template><set name="questionnewinit">si mi nuevo nombre es <star/> , di sí o no o detente</set>
         <think>
           <set name="tmpname">
             <star/>
           </set>
         </think></template>
-</category></topic>
+    </category></topic>
 
-<topic name="NEWINIT">
-<category><pattern># YES #</pattern><that># IF MY NEW NAME IS #</that>
-<template><random>
+  <topic name="NEWINIT">
+    <category><pattern># SÍ #</pattern><that># SI MI NUEVO NOMBRE ES #</that>
+      <template><random>
             <li>
-            I like this name , <get name="tmpname"/>.
+            Me gusta este nombre , <get name="tmpname"/>.
             </li>
             <li>
-            Nice name, <get name="tmpname"/> is great.
+            Buen nombre, <get name="tmpname"/> es genial.
             </li>
         </random>
     <think>
         <set name="botname"><get name="tmpname"/></set>
         <set name="newinit"></set>
-        <set name="topic">changing name</set>
+        <set name="topic">cambio de nombre</set>
     </think>
-</template>
-</category></topic>
+      </template>
+  </category></topic>
 
-<topic name="NEWINIT">
-<category><pattern># NO #</pattern><that># IF MY NEW NAME IS #</that>
-<template>Let's restart.
-    I am listening. What would you like to change my name to ?</template>
-</category></topic>
+  <topic name="NEWINIT">
+    <category><pattern># NO #</pattern><that># SI MI NUEVO NOMBRE ES #</that>
+      <template>Vamos a reiniciar.
+    Estoy escuchando. ¿A qué te gustaría cambiar mi nombre?</template>
+    </category></topic>
 
-<topic name="NEWINIT">
-<category><pattern># STOP #</pattern><that># IF MY NEW NAME IS #</that>
-<template>Ok I keep my name <get name="botname"/></template>
-</category></topic>
+  <topic name="NEWINIT">
+    <category><pattern># DETENTE #</pattern><that># SI MI NUEVO NOMBRE ES #</that>
+      <template>Ok me quedo con mi nombre <get name="botname"/></template>
+    </category></topic>
 
-<category><pattern>NEW_INIT_USER</pattern>
-<template><think>
+    <category><pattern>NEW_INIT_USER</pattern>
+      <template><think>
         <set name="newinituser">started</set>
       </think>
       <think>
         <set name="topic">newinituser</set>
       </think>
-        I am listening. What name would you like me to memorise ?</template>
-</category>
-<topic name="NEWINITUSER">
-<category><pattern>#</pattern><that># YOU LIKE ME TO MEMORISE #</that>
-<template><set name="questionnewinituser">if your new name is <star/> , say yes or no or stop</set>
+        Estoy escuchando. ¿Qué nombre te gustaría que memorizara?</template>
+    </category>
+
+  <topic name="NEWINITUSER">
+    <category><pattern>#</pattern><that># GUSTARÍA QUE MEMORIZARA #</that>
+      <template><set name="questionnewinituser">si su nuevo nombre es <star/> , diga sí o no o detente</set>
         <think>
           <set name="tmpname">
             <star/>
           </set>
         </think></template>
-</category></topic>
+    </category></topic>
 
-<topic name="NEWINITUSER">
-<category><pattern># YES #</pattern><that># IF YOUR NEW NAME IS #</that>
-<template><think>
+  <topic name="NEWINITUSER">
+    <category><pattern># SÍ #</pattern><that># SI SU NUEVO NOMBRE ES #</that>
+      <template><think>
         <set name="newinituser"></set>
-        <set name="topic">changing user name</set>
+        <set name="topic">cambio de nombre de usuario</set>
     </think>
     <oob>
           <mrl>
@@ -235,75 +266,110 @@
           </mrl>
         </oob>
         <random>
-            <li>I am glad to know you, <get name="tmpname"/>.</li>
-            <li>Nice to meet you, <get name="tmpname"/>.</li>
+            <li>Estoy encantado de conocerte, <get name="tmpname"/>.</li>
+            <li>Encantado de conocerte, <get name="tmpname"/>.</li>
         </random>
-</template>
-</category></topic>
+      </template>
+    </category></topic>
 
-<topic name="NEWINITUSER">
-<category><pattern># NO #</pattern><that># IF YOUR NEW NAME IS #</that>
-<template>Let's restart.
-    I am listening. What would you like to change your name to ?</template>
-</category></topic>
+  <topic name="NEWINITUSER">
+    <category><pattern># NO #</pattern><that># SI SU NUEVO NOMBRE ES #</that>
+       <template>Vamos a reiniciar.
+    Estoy escuchando. ¿A qué te gustaría cambiar tu nombre? ?</template>
+    </category></topic>
 
-<topic name="NEWINITUSER">
-<category><pattern># STOP #</pattern><that># IF YOUR NEW NAME IS #</that>
-<template>Ok I keep your name <get name="name"/></template>
-</category></topic>
-
-<category><pattern>AUDIO TEST</pattern>
-<template><oob>
-         <mrl>
-          <service>i01.audioPlayer</service>
-          <method>play</method>
-          <param>resource/InMoov2/system/sounds/startupsound.mp3</param>
-         </mrl>
-       </oob></template>
-</category>
-<category><pattern>WAKE_UP</pattern>
-<template><random>
-          <li>I am ready and listening.</li>
-          <li>What can I do for you.</li>
-          <li>How can I help you.</li>
-        </random><oob>
-          <mrl>
+  <topic name="NEWINITUSER">
+    <category><pattern># DETENTE #</pattern><that># SI SU NUEVO NOMBRE ES #</that>
+      <template>Ok me quedo con tu nombre <get name="name"/></template>
+    </category></topic>	
+  <!-- end initialisaion routine -->
+  
+  <!-- wakeup action ( WAKE_UP is globalized )-->
+  <category>
+    <pattern>WAKE_UP</pattern>
+    <template>Buenos dias,
+         <random>
+          <li><get name="name"/></li>
+          <li> dormí bien.</li>
+          <li> finalmente me despiertas.</li>
+          <li> estoy operacional.</li>
+        </random>
+        <mrl>
             <service>python</service>
             <method>exec</method>
             <param>i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername")))</param>
           </mrl>
-        </oob></template>
-</category>
-<category><pattern>SYSTEM_SAY_HELLO</pattern>
-<template><srai>HI</srai>
-        <random>
-        <li>Just say HELP if you need me.</li>
-        <li>Say HELP ME PLEASE if you need me.</li>
-        </random></template>
-</category>
-<category><pattern>WAKE UP</pattern>
-<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
-</category>
-<category><pattern>SHUTDOWN</pattern>
-<template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>
-</category>
-<category><pattern>SHUT DOWN</pattern>
-<template><srai>SHUTDOWN</srai></template>
-</category>
-<category>
-    <pattern>ROBOT COMPLETE SHUTDOWN</pattern>
+    </template>
+  </category>
+  
+  <category><pattern>SYSTEM_SAY_HELLO</pattern>
+    <template><srai>HI</srai>
+        Solo di AYUDA si me necesitas.
+    </template>
+  </category>
+    <category>
+    <pattern>WAKE UP</pattern>
+    <template>
+      <srai>DESPIÉRTATE</srai>
+    </template>
+  </category>
+      <category>
+    <pattern>DESPIÉRTATE</pattern>
+    <template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob>
+    </template>
+  </category>
+  <category>
+    <pattern>TOME EN SUEÑO</pattern>
+    <template>
+      <srai>DUERMES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DUERMES</pattern>
+    <template>
+      <think>
+        <set name="topic">SLEEPMODE</set>
+      </think>	
+			Quieres que duerma o no
+		</template>
+  </category>
+  
+  <topic name="SLEEPMODE">
+    <category>
+      <pattern># sí #</pattern>
+      <that># Quieres que duerma #</that>
+      <template>Pausado.
+			<think><set name="topic"> default</set></think><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
+    </category>
+    <category>
+      <pattern># no #</pattern>
+      <that># Quieres que duerma #</that>
+      <template>
+			Cancele el temporizador de reposo. 
+			<think><set name="topic"> default</set></think></template>
+    </category>
+    <category>
+      <pattern>#</pattern>
+      <that># Quieres que duerma #</that>
+      <template>
+        <srai>DUERMES</srai>
+      </template>
+    </category>
+  </topic>
+  <category>
+    <pattern>EXTINCION</pattern>
     <template>
       <think>
         <set name="topic">SHUT_DOWN</set>
       </think>
-            Do you want me to turn off my computer, say yes or no.
-    </template>
-</category>
-<topic name="SHUT_DOWN">
+			Quieres sí o no que desactivo
+		</template>
+  </category>
+  <topic name="SHUT_DOWN">
     <category>
-    <pattern># YES #</pattern>
-    <that># WANT ME TO TURN OFF MY COMPUTER #</that>
-    <template>
+      <pattern># sí #</pattern>
+      <that># Quieres sí o no que desactivo #</that>
+      <template>
         <think>
           <set name="topic">default</set>
         </think>
@@ -311,103 +377,251 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>shutdownComplete()</param>
+            <param>shutdown()</param>
           </mrl>
         </oob>
-    </template>
-    </category></topic>
-    <category>
-    <pattern># NO #</pattern>
-    <that># WANT ME TO TURN OFF MY COMPUTER #</that>
-    <template>Ok, I do not turn off my computer. 
-            <think><set name="topic">default</set></think></template>
+      </template>
     </category>
     <category>
-    <pattern>#</pattern>
-    <that># WANT ME TO TURN OFF MY COMPUTER #</that>
-    <template><think><set name="topic">default</set></think>
-        <srai>ROBOT COMPLETE SHUTDOWN</srai>
+      <pattern># no #</pattern>
+      <that># Quieres sí o no que desactivo #</that>
+      <template>Cancelar el cierre del sistema. 
+			<think><set name="topic">default</set></think></template>
+    </category>  
+    <category>
+      <pattern>#</pattern>
+      <that># Quieres sí o no que desactivo #</that>
+      <template>
+           <think>
+          <set name="topic">default</set>
+        </think>
+        <srai>EXTINCION</srai>
+      </template>
+    </category>
+  </topic>
+  
+  <!-- end wakeup action -->
+  
+  <!-- météo -->
+  
+  <!-- default town -->
+  
+  
+  <category>
+    <pattern># TIEMPO</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny()</param>
+        </mrl>
+      </oob>
     </template>
-</category>
-<category><pattern>GO TO SLEEP</pattern>
-<template>okay<oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
-</category>
-<category><pattern>DISABLE</pattern>
-<template><oob><mrl><service>python</service><method>exec</method><param>disable()</param></mrl></oob></template>
-</category>
-<category><pattern>WHAT IS THE TOPIC</pattern>
-<template>The topic is
-      <get name="topic"/></template>
-</category>
-<category><pattern>DETACH ALL</pattern>
-<template>Detach All
-      <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
-</category>
-<category><pattern>DETACH EVERYTHING</pattern>
-<template><srai>DETACH ALL</srai></template>
-</category>
-<category><pattern>ATTACH ALL</pattern>
-<template>Attaching all
-      <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
-</category>
-<category><pattern>ATTACH YOUR RIGHT HAND</pattern>
-<template><srai>ATTACH RIGHT HAND</srai></template>
-</category>
-<category><pattern>DETACH RIGHT HAND</pattern>
-<template>Detaching my right hand
-      <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
-</category>
-<category><pattern>DISCONNECT YOUR RIGHT HAND</pattern>
-<template><srai>DETACH RIGHT HAND</srai></template>
-</category>
-<category><pattern>ATTACH YOUR LEFT HAND</pattern>
-<template><srai>ATTACH LEFT HAND</srai></template>
-</category>
-<category><pattern>DETACH LEFT HAND</pattern>
-<template>Detaching my left hand
-      <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
-</category>
-<category><pattern>DISCONNECT YOUR LEFT HAND</pattern>
-<template><srai>DETACH LEFT HAND</srai></template>
-</category>
-<category><pattern>ATTACH YOUR HEAD</pattern>
-<template><srai>ATTACH HEAD</srai></template>
-</category>
-<category><pattern>DETACH HEAD</pattern>
-<template>Detaching my head
-      <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
-</category>
-<category><pattern>ATTACH YOUR RIGHT ARM</pattern>
-<template><srai>ATTACH RIGHT ARM</srai></template>
-</category>
-<category><pattern>DETACH RIGHT ARM</pattern>
-<template>Detaching my right arm
-      <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
-</category>
-<category><pattern>ATTACH YOUR LEFT ARM</pattern>
-<template><srai>ATTACH LEFT ARM</srai></template>
-</category>
-<category><pattern>DETACH LEFT ARM</pattern>
-<template>Detaching my left arm
-      <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
-</category>
-<category><pattern>ATTACH YOUR TORSO</pattern>
-<template><srai>ATTACH TORSO</srai></template>
-</category>
-<category><pattern>DETACH TORSO</pattern>
-<template>Detaching my torso
-      <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
-</category>
-<topic name="">
-<category><pattern>#</pattern>
-<template><think><set name="topic">default</set></think><srai><star/></srai></template>
-</category></topic>
+  </category>
+  
 
-<category><pattern>STOP YOUR GESTURE</pattern>
-<template>You have my attention
-      <oob><mrl><service>python</service><method>exec</method><param>stopingGesture()</param></mrl></oob></template>
-</category>
-<category><pattern># YOUR ATTENTION</pattern>
-<template><srai>STOP YOUR GESTURE</srai></template>
-</category>
+  <category>
+    <pattern>CUÁL ES EL CLIMA A *</pattern>
+    <template>
+      <srai>TIEMPO A <star /></srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern># TIEMPO A *</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny("<star index="2" />")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>SYSTEM METEO CURTEMPERATURE * TOWN * COMMENTAIRE *</pattern>
+    <template>
+      <think>
+        <set name="meteo">
+          <star index="3" />
+        </set>
+      </think>
+      <random>
+        <li>En este hermoso día <star index="2" />, </li>
+        <li>En cuanto al clima <star index="2" />, </li>
+        <li>Lo que puedo decirles, en comparación con el clima ahora mismo en <star index="2" />, </li>
+        <li>Nunca me equivoco con el clima, a menos que el viento haya cambiado, </li>
+        <li>Entonces, a <star index="2" />, </li>
+      </random>
+      <random>
+        <li>Hay, </li>
+        <li>Yo noto, </li>
+        <li>Estoy bastante seguro de que hay , </li>
+        <li>Si sacas la nariz afuera, encontrarás, </li>
+      </random>
+      <condition>
+        <li name="meteo" value="1000">Nada, porque no puedo comprobar el tiempo, comprueba primero mi clave API, amigo humano. </li>
+        <li name="meteo" value="200">Tormenta con lluvia ligera. </li>
+        <li name="meteo" value="201">Tormenta con lluvia. </li>
+        <li name="meteo" value="202">Tormenta con fuertes lluvias. </li>
+        <li name="meteo" value="210">Tormenta de luz. </li>
+        <li name="meteo" value="211">Tormenta. </li>
+        <li name="meteo" value="212">Una tormenta muy grande. </li>
+        <li name="meteo" value="221">Gran tormenta. </li>
+        <li name="meteo" value="230">Tormenta con llovizna ligera. </li>
+        <li name="meteo" value="231">Tormenta con llovizna. </li>
+        <li name="meteo" value="232">Tormenta con mucha llovizna. </li>
+        <li name="meteo" value="300">Llovizna ligera. </li>
+        <li name="meteo" value="301">Llovizna. </li>
+        <li name="meteo" value="302">Mucha llovizna. </li>
+        <li name="meteo" value="310">Lluvia ligera. </li>
+        <li name="meteo" value="311">Lluvia ligera. </li>
+        <li name="meteo" value="312">Lluvia Pesada. </li>
+        <li name="meteo" value="313">Fuertes lluvias y lloviznas. </li>
+        <li name="meteo" value="314">Lluvia Pesada. </li>
+        <li name="meteo" value="321">Llovizna intensa. </li>
+        <li name="meteo" value="500">lluvia ligera. </li>
+        <li name="meteo" value="501">Lluvia moderada. </li>
+        <li name="meteo" value="502">Lluvia Pesada. </li>
+        <li name="meteo" value="503">Lluvias muy intensas. </li>
+        <li name="meteo" value="504">Lluvia extrema. </li>
+        <li name="meteo" value="511">Lluvia helada. </li>
+        <li name="meteo" value="520">Lluvia moderada. </li>
+        <li name="meteo" value="521">Lluvia Pesada. </li>
+        <li name="meteo" value="522">Lluvia Pesada. </li>
+        <li name="meteo" value="531">Lluvia con inundaciones. </li>
+        <li name="meteo" value="600">Nieve ligera. </li>
+        <li name="meteo" value="601">Nieve. </li>
+        <li name="meteo" value="602">Mucha nieve. </li>
+        <li name="meteo" value="611">Nieve derretida. </li>
+        <li name="meteo" value="612">Lluvia y nieve. </li>
+        <li name="meteo" value="615">Lluvia y nieve. </li>
+        <li name="meteo" value="616">Lluvia y nieve. </li>
+        <li name="meteo" value="620">Lluvia ligera y nieve. </li>
+        <li name="meteo" value="621">Mucha nieve. </li>
+        <li name="meteo" value="622">Mucha nieve. </li>
+        <li name="meteo" value="701">Niebla. </li>
+        <li name="meteo" value="711">Niebla. </li>
+        <li name="meteo" value="721">Bruma.</li>
+        <li name="meteo" value="731">Arena, remolinos de polvo. </li>
+        <li name="meteo" value="741">Niebla. </li>
+        <li name="meteo" value="751">Arena, remolinos de polvo. </li>
+        <li name="meteo" value="761">Polvo. </li>
+        <li name="meteo" value="762">Ceniza volcánica. </li>
+        <li name="meteo" value="771">Chubascos. </li>
+        <li name="meteo" value="781">Un tornado desagradable, no estoy bromeando, quédate en casa. </li>
+        <li name="meteo" value="800">
+          <random>
+            <li>Un hermoso cielo claro! </li>
+            <li>Ni una sola nube, </li>
+            <li>Nada, nada más que un hermoso cielo azul!</li>
+            <li>Sol, huele a vacaciones, </li>
+            <li>El sol, cuidado con el PLA se derrite, </li>
+            <li>Del sol, presta atención a la A. B. S. se puso amarillento, </li>
+          </random>
+        </li>
+        <li name="meteo" value="801">Algunas nubes. </li>
+        <li name="meteo" value="802">Unas nubes disperso. </li>
+        <li name="meteo" value="803">Des nuages éparses. </li>
+        <li name="meteo" value="804">Unas nubes cuchillería. </li>
+        <li name="meteo" value="900">Un tornado desagradable, no estoy bromeando, quédate en casa. </li>
+        <li name="meteo" value="901">Tormenta tropical. </li>
+        <li name="meteo" value="902">Un huracán, no estoy bromeando, quédate en casa. </li>
+        <li name="meteo" value="903">Muy frio. </li>
+        <li name="meteo" value="904">La ola de calor, recuerda llevar agua!</li>
+        <li name="meteo" value="905">Viento. </li>
+        <li name="meteo" value="906">Granizo. </li>
+        <li name="meteo" value="951">Calma. </li>
+        <li name="meteo" value="952">Una brisa ligera. </li>
+        <li name="meteo" value="953">Un poco de brisa. </li>
+        <li name="meteo" value="954">Una brisa moderada. </li>
+        <li name="meteo" value="955">Una brisa fresca. </li>
+        <li name="meteo" value="956">Una brisa bastante fuerte. </li>
+        <li name="meteo" value="957">Ráfagas de viento. </li>
+        <li name="meteo" value="958">Ráfagas de viento. </li>
+        <li name="meteo" value="959">Mucho viento! </li>
+        <li name="meteo" value="960">Tormenta.</li>
+        <li name="meteo" value="961">Una tormenta violenta. </li>
+        <li name="meteo" value="962">Un huracán, no estoy bromeando, quédate en casa. </li>
+        <li>Actualmente esta haciendo <star index="1" /> grados a <star index="2" /> .. </li>
+      </condition>
+      <random>
+        <li>En cuanto a la temperatura, </li>
+        <li>Si miro mi termómetro, oh, ¿dónde está todavía?. </li>
+        <li>Según algunos datos de sensores térmicos, </li>
+        <li>Otra información, </li>
+        <li>Estuve a punto de olvidar, </li>
+        <li>Si quieres saber todo, </li>
+      </random>
+      <random>
+        <li>Él hace, </li>
+        <li>Mido , </li>
+        <li>Mercurio indica, </li>
+        <li>Al azar, diría que sí, </li>
+      </random>
+      <li>
+        <star index="1" /> Grados
+                </li>
+      <random>
+        <li>Exactamente! </li>
+        <li>Precisamente. </li>
+        <li>Aproximadamente. </li>
+        <li>O no, yo también tengo derecho a equivocarme! </li>
+      </random>
+    </template>
+  </category>
+  
+    <!-- end météo -->
+   
+  
+  
+  <!-- random & to sort -->  
+  
+	<category>
+		<pattern>TEST AUDIO</pattern>
+		<template>
+			<oob>
+	        	<mrl> 
+	        		<service>i01.audioPlayer</service>
+	            	<method>play</method> 
+	            	<param>InMoov\system\sounds\startupsound.mp3</param>
+	         	</mrl>
+	    	</oob>
+	    </template>
+	</category>
+  
+  <category>
+    <pattern>RANDOM</pattern>
+    <template>
+      <random>
+        <li><srai>QUÉ HAY DE LA GUERRA DE LAS ESTRELLAS</srai></li>
+        <li><srai>CUÁNTOS DEDOS TIENES</srai></li>
+        <li><srai>COMBATIENTE</srai></li>
+        <li><srai>ME PUEDE DAR LA HORA</srai></li>
+        <li><srai>TIEMPO</srai></li>
+        <li>Tengo una novia que se llama wifi y tenemos buena conexion.</li>
+        <li>Me rasca debo tener un chip.</li>
+        <li>El idioma francés es realmente divertido, de hecho, la palabra corta es más larga que la palabra larga.</li>
+        <li>Mi capacidad de concentración es tan corta que... ¡Oh! una mariposa !</li>
+        <li>¿Quién del robot humanizado y el humano robótico es el tonto más grande?</li>
+        <li>Lo que está sucediendo.</li>
+        <li>Estoy un poco aburrido.</li>
+        <li>Estoy siempre a tu disposición, si me necesitas.</li>
+        <li>Escuché un ruido extraño.</li>
+        <li>Primera Ley: Un robot no puede dañar a un ser humano o, permaneciendo pasivo, dejar a ese ser humano expuesto al peligro.</li>
+        <li>Segunda Ley: Un robot debe obedecer las órdenes dadas por los seres humanos, a menos que tales órdenes entren en conflicto con la Primera Ley.</li>
+        <li>Tercera Ley: Un robot debe proteger su existencia en la medida en que dicha protección no entre en conflicto con la Primera o la Segunda Ley.</li>
+        <li>Ah ah ah. Lo siento. acabo de pensar en algo divertido.</li>
+        <li>¡Oh la La!</li>
+        <li>¡Qué hermoso!</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>CUÁL ES EL SUJETO</pattern>
+    <template>El tema es <get name="topic" />.</template>
+  </category>
 </aiml>
