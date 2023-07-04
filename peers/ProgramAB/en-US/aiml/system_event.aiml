@@ -117,6 +117,16 @@
 </category>
 
 <category>
+<pattern>SYSTEM_EVENT CONFIG STARTED *</pattern>
+<template>Config <star/> started.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT CONFIG LOADED *</pattern>
+<template>Configuration <star/> loaded.</template>
+</category>
+
+<category>
 <pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
 <template>Starting left hand sensor.</template>
 </category>
