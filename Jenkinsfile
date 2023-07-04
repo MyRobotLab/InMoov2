@@ -76,13 +76,13 @@ pipeline {
                if (isUnix()) {
                   sh '''
                         echo "building ${JOB_NAME}..."
-                        echo "${VERSION}" > resource/${RESOURCE_DIR}/version.txt
+                        echo "${VERSION}" > version.txt
                         mvn package
                   '''
                } else {
                   bat('''
                         type "building ${JOB_NAME}..."
-                        type '${VERSION}' > 'resource/${RESOURCE_DIR}/version.txt'
+                        type '${VERSION}' > version.txt
                         mvn package
                   ''')
                } // isUnix
