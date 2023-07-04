@@ -21,6 +21,14 @@
     <template>Démarrage de la configuration.</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT CONFIG STARTED *</pattern>
+    <template>Démarrage de la configuration <star/>.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIG LOADED *</pattern>
+    <template>Configuration <star/> démarrée.</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
     <template>Démarrage des capteurs de la main gauche.</template>
   </category>
