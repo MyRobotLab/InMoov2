@@ -19,4 +19,4 @@ i01 = runtime.start("i01", "InMoov2")
 ##############
 # robot checkup and initialisation ( skeleton & services )
 RuningFolder="resource/InMoov2"
-execfile(RuningFolder+'/system/InitCheckUp.py')
+execfile(RuningFolder+'/init/InitCheckUp.py')
