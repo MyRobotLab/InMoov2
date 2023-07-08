@@ -11,4 +11,4 @@ speechRecognizers:
 - i01.ear
 substitutions: null
 type: MarySpeech
-voice: null
+voice: Mark
