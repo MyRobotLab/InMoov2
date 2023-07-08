@@ -1,6 +1,6 @@
 !!org.myrobotlab.service.config.PirConfig
 controller: i01.left
-enable: false
+enable: true
 listeners:
 - callback: onPirOn
   listener: i01

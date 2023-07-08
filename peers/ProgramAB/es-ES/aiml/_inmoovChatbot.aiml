@@ -89,7 +89,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), takeMyPicture(),  i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","img","../service/img/<get name="tmpname"/>.png"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>")</param>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), takeMyPicture(u"<get name="tmpname"/>"),  i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","img",u"../service/img/<get name="tmpname"/>.png"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>"), i01_chatBot.startSession(u"<get name="tmpname"/>")</param>
           </mrl>
         </oob> 
         <think>
@@ -168,9 +168,6 @@
       </template>
     </category>
 
-    <category><pattern>NOTFACERECOGNIZED</pattern>
-      <template>No pude memorizar tu rostro porque el reconocedor de rostros está OFF en mi configuración de visión.</template>
-    </category>
 
     <category><pattern>NOTFACERECOGNIZED</pattern>
       <template>No pude memorizar tu rostro porque el reconocedor de rostros está OFF en mi configuración de visión. Póngalo en ON en mi configuración de visión.
@@ -179,7 +176,8 @@
           <li>Repito.</li>
         </random>
         <think>
-          <set name="topic">firstinit</set>
+          <set name="topic">startVision</set>
+          <set name="questionfirstinit">Te gustaría que use mi visión para memorizar tu cara junto con tu nombre?</set>
         </think>
         <get name="questionfirstinit"/></template>
       </category>
@@ -246,7 +244,7 @@
 
   <topic name="NEWINITUSER">
     <category><pattern>#</pattern><that># GUSTARÍA QUE MEMORIZARA #</that>
-      <template><set name="questionnewinituser">si su nuevo nombre es <estrella/> , diga sí o no o detente</set>
+      <template><set name="questionnewinituser">si su nuevo nombre es <star/> , diga sí o no o detente</set>
         <think>
           <set name="tmpname">
             <star/>
@@ -264,7 +262,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), takeMyPicture(), i01_chatBot.setPredicate(u"<get name="tmpname"/>","img","../service/img/<get name="tmpname"/>.png"), i01_chatBot.savePredicates(), YesName(u"<get name="tmpname"/>")</param>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), takeMyPicture(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","img",u"../service/img/<get name="tmpname"/>.png"), i01_chatBot.savePredicates(), YesName(u"<get name="tmpname"/>"), i01_chatBot.startSession(u"<get name="tmpname"/>")</param>
           </mrl>
         </oob>
         <random>
@@ -424,7 +422,7 @@
   
 
   <category>
-    <pattern>CUÁL ES EL clima A *</pattern>
+    <pattern>CUÁL ES EL CLIMA A *</pattern>
     <template>
       <srai>TIEMPO A <star /></srai>
     </template>
@@ -452,127 +450,126 @@
         </set>
       </think>
       <random>
-        <li>En cette belle journée à <star index="2" />, </li>
-        <li>Concernant la météo de <star index="2" />, </li>
-        <li>Ce que je peux te dire, par rapport au temps qu'il fait en ce moment à <star index="2" />, </li>
-        <li>Je ne me trompe jamais concernant la météo, sauf si le vent à tourné, </li>
-        <li>Alors, à <star index="2" />, </li>
+        <li>En este hermoso día <star index="2" />, </li>
+        <li>En cuanto al clima <star index="2" />, </li>
+        <li>Lo que puedo decirles, en comparación con el clima ahora mismo en <star index="2" />, </li>
+        <li>Nunca me equivoco con el clima, a menos que el viento haya cambiado, </li>
+        <li>Entonces, a <star index="2" />, </li>
       </random>
       <random>
-        <li>Il y a, </li>
-        <li>Je remarque, </li>
-        <li>Je suis presque sûre qu'il y a , </li>
-        <li>Si tu mets le nez dehors, tu trouvera, </li>
+        <li>Hay, </li>
+        <li>Yo noto, </li>
+        <li>Estoy bastante seguro de que hay , </li>
+        <li>Si sacas la nariz afuera, encontrarás, </li>
       </random>
       <condition>
-        <li name="meteo" value="1000">Rien, car je ne peux pas consulter la météo, vérifie ma clé A. P. I. avant toute chose, ami humain. </li>
-        <li name="meteo" value="200">De l'Orage avec pluie légère. </li>
-        <li name="meteo" value="201">De l'Orage avec pluie. </li>
-        <li name="meteo" value="202">De l'Orage avec de fortes pluies. </li>
-        <li name="meteo" value="210">De l'Orage léger. </li>
-        <li name="meteo" value="211">De l'Orage. </li>
-        <li name="meteo" value="212">Un très gros Orage. </li>
-        <li name="meteo" value="221">De l'Orage énomre. </li>
-        <li name="meteo" value="230">De l'Orage avec léger crachin. </li>
-        <li name="meteo" value="231">De l'Orage avec du crachin. </li>
-        <li name="meteo" value="232">De l'Orage avec beaucoup de crachin. </li>
-        <li name="meteo" value="300">du crachin léger. </li>
-        <li name="meteo" value="301">du crachin. </li>
-        <li name="meteo" value="302">beaucoup de crachin. </li>
-        <li name="meteo" value="310">de la Pluie légère. </li>
-        <li name="meteo" value="311">de la Pluie légère. </li>
-        <li name="meteo" value="312">de la Pluie intense. </li>
-        <li name="meteo" value="313">de la Pluie intense et crachin. </li>
-        <li name="meteo" value="314">de la Pluie intense. </li>
-        <li name="meteo" value="321">du crachin intense. </li>
-        <li name="meteo" value="500">de la Pluie légère. </li>
-        <li name="meteo" value="501">de la Pluie modérée. </li>
-        <li name="meteo" value="502">de la Pluie intense. </li>
-        <li name="meteo" value="503">Très forte pluie. </li>
-        <li name="meteo" value="504">de la Pluie extrême. </li>
-        <li name="meteo" value="511">de la Pluie verglaçante. </li>
-        <li name="meteo" value="520">de la Pluie modérée. </li>
-        <li name="meteo" value="521">de la Pluie intense. </li>
-        <li name="meteo" value="522">de la Pluie intense. </li>
-        <li name="meteo" value="531">de la Pluie avec innondations. </li>
-        <li name="meteo" value="600">de la neige légère. </li>
-        <li name="meteo" value="601">de la neige. </li>
-        <li name="meteo" value="602">beaucoup de neige. </li>
-        <li name="meteo" value="611">de la neige fondue. </li>
-        <li name="meteo" value="612">de la Pluie et neige. </li>
-        <li name="meteo" value="615">de la Pluie et neige. </li>
-        <li name="meteo" value="616">de la Pluie et neige. </li>
-        <li name="meteo" value="620">de la Pluie légère et neige. </li>
-        <li name="meteo" value="621">beaucoup de neige. </li>
-        <li name="meteo" value="622">énormément de neige. </li>
-        <li name="meteo" value="701">du brouillard. </li>
-        <li name="meteo" value="711">du brouillard. </li>
-        <li name="meteo" value="721">brume. </li>
-        <li name="meteo" value="731">Sable, tourbillons de poussière. </li>
-        <li name="meteo" value="741">du brouillard. </li>
-        <li name="meteo" value="751">Sable, tourbillons de poussière. </li>
-        <li name="meteo" value="761">poussière. </li>
-        <li name="meteo" value="762">cendre volcanique. </li>
-        <li name="meteo" value="771">Squalls. </li>
-        <li name="meteo" value="781">une vilaine tornade, je ne rigole pas, reste à la maison. </li>
+        <li name="meteo" value="1000">Nada, porque no puedo comprobar el tiempo, comprueba primero mi clave API, amigo humano. </li>
+        <li name="meteo" value="200">Tormenta con lluvia ligera. </li>
+        <li name="meteo" value="201">Tormenta con lluvia. </li>
+        <li name="meteo" value="202">Tormenta con fuertes lluvias. </li>
+        <li name="meteo" value="210">Tormenta de luz. </li>
+        <li name="meteo" value="211">Tormenta. </li>
+        <li name="meteo" value="212">Una tormenta muy grande. </li>
+        <li name="meteo" value="221">Gran tormenta. </li>
+        <li name="meteo" value="230">Tormenta con llovizna ligera. </li>
+        <li name="meteo" value="231">Tormenta con llovizna. </li>
+        <li name="meteo" value="232">Tormenta con mucha llovizna. </li>
+        <li name="meteo" value="300">Llovizna ligera. </li>
+        <li name="meteo" value="301">Llovizna. </li>
+        <li name="meteo" value="302">Mucha llovizna. </li>
+        <li name="meteo" value="310">Lluvia ligera. </li>
+        <li name="meteo" value="311">Lluvia ligera. </li>
+        <li name="meteo" value="312">Lluvia Pesada. </li>
+        <li name="meteo" value="313">Fuertes lluvias y lloviznas. </li>
+        <li name="meteo" value="314">Lluvia Pesada. </li>
+        <li name="meteo" value="321">Llovizna intensa. </li>
+        <li name="meteo" value="500">lluvia ligera. </li>
+        <li name="meteo" value="501">Lluvia moderada. </li>
+        <li name="meteo" value="502">Lluvia Pesada. </li>
+        <li name="meteo" value="503">Lluvias muy intensas. </li>
+        <li name="meteo" value="504">Lluvia extrema. </li>
+        <li name="meteo" value="511">Lluvia helada. </li>
+        <li name="meteo" value="520">Lluvia moderada. </li>
+        <li name="meteo" value="521">Lluvia Pesada. </li>
+        <li name="meteo" value="522">Lluvia Pesada. </li>
+        <li name="meteo" value="531">Lluvia con inundaciones. </li>
+        <li name="meteo" value="600">Nieve ligera. </li>
+        <li name="meteo" value="601">Nieve. </li>
+        <li name="meteo" value="602">Mucha nieve. </li>
+        <li name="meteo" value="611">Nieve derretida. </li>
+        <li name="meteo" value="612">Lluvia y nieve. </li>
+        <li name="meteo" value="615">Lluvia y nieve. </li>
+        <li name="meteo" value="616">Lluvia y nieve. </li>
+        <li name="meteo" value="620">Lluvia ligera y nieve. </li>
+        <li name="meteo" value="621">Mucha nieve. </li>
+        <li name="meteo" value="622">Mucha nieve. </li>
+        <li name="meteo" value="701">Niebla. </li>
+        <li name="meteo" value="711">Niebla. </li>
+        <li name="meteo" value="721">Bruma.</li>
+        <li name="meteo" value="731">Arena, remolinos de polvo. </li>
+        <li name="meteo" value="741">Niebla. </li>
+        <li name="meteo" value="751">Arena, remolinos de polvo. </li>
+        <li name="meteo" value="761">Polvo. </li>
+        <li name="meteo" value="762">Ceniza volcánica. </li>
+        <li name="meteo" value="771">Chubascos. </li>
+        <li name="meteo" value="781">Un tornado desagradable, no estoy bromeando, quédate en casa. </li>
         <li name="meteo" value="800">
           <random>
-            <li>un magnifique ciel dégagé! </li>
-            <li>Pas un seul nuage, </li>
-            <li>rien, rien qu'un beau ciel bleu! </li>
-            <li>du soleil, ça sent les vacances, </li>
-            <li>du soleil, attention au pla ça fond, </li>
-            <li>du soleil, attention à l'a. b. s. ça jauni, </li>
+            <li>Un hermoso cielo claro! </li>
+            <li>Ni una sola nube, </li>
+            <li>Nada, nada más que un hermoso cielo azul!</li>
+            <li>Sol, huele a vacaciones, </li>
+            <li>El sol, cuidado con el PLA se derrite, </li>
+            <li>Del sol, presta atención a la A. B. S. se puso amarillento, </li>
           </random>
         </li>
-        <li name="meteo" value="801">Quelques nuages. </li>
-        <li name="meteo" value="802">des nuages ​​dispersés. </li>
-        <li name="meteo" value="803">des nuages éparses. </li>
-        <li name="meteo" value="804">des nuages ​​couverts. </li>
-        <li name="meteo" value="900">une vilaine tornade, je ne rigole pas, reste à la maison. </li>
-        <li name="meteo" value="901">tempête tropicale. </li>
-        <li name="meteo" value="902">un ouragan, je ne rigole pas, reste à la maison. </li>
-        <li name="meteo" value="903">très froid. </li>
-        <li name="meteo" value="904">la canicule, pense à prendre de l'eau! </li>
-        <li name="meteo" value="905">du vent. </li>
-        <li name="meteo" value="906">de la grêle. </li>
-        <li name="meteo" value="951">calme. </li>
-        <li name="meteo" value="952">une brise légère. </li>
-        <li name="meteo" value="953">une petite brise. </li>
-        <li name="meteo" value="954">une Brise modérée. </li>
-        <li name="meteo" value="955">une Brise fraîche. </li>
-        <li name="meteo" value="956">une Brise asez forte. </li>
-        <li name="meteo" value="957">des coup de vent. </li>
-        <li name="meteo" value="958">des coup de vent. </li>
-        <li name="meteo" value="959">énormément de vent! </li>
-        <li name="meteo" value="960">De l'Orage. </li>
-        <li name="meteo" value="961">une tempête violente. </li>
-        <li name="meteo" value="962">un ouragan, je ne rigole pas, reste à la maison. </li>
-        <li>Il fait actuelement <star index="1" /> degrés à <star index="2" /> .. </li>
+        <li name="meteo" value="801">Algunas nubes. </li>
+        <li name="meteo" value="802">Unas nubes disperso. </li>
+        <li name="meteo" value="803">Des nuages éparses. </li>
+        <li name="meteo" value="804">Unas nubes cuchillería. </li>
+        <li name="meteo" value="900">Un tornado desagradable, no estoy bromeando, quédate en casa. </li>
+        <li name="meteo" value="901">Tormenta tropical. </li>
+        <li name="meteo" value="902">Un huracán, no estoy bromeando, quédate en casa. </li>
+        <li name="meteo" value="903">Muy frio. </li>
+        <li name="meteo" value="904">La ola de calor, recuerda llevar agua!</li>
+        <li name="meteo" value="905">Viento. </li>
+        <li name="meteo" value="906">Granizo. </li>
+        <li name="meteo" value="951">Calma. </li>
+        <li name="meteo" value="952">Una brisa ligera. </li>
+        <li name="meteo" value="953">Un poco de brisa. </li>
+        <li name="meteo" value="954">Una brisa moderada. </li>
+        <li name="meteo" value="955">Una brisa fresca. </li>
+        <li name="meteo" value="956">Una brisa bastante fuerte. </li>
+        <li name="meteo" value="957">Ráfagas de viento. </li>
+        <li name="meteo" value="958">Ráfagas de viento. </li>
+        <li name="meteo" value="959">Mucho viento! </li>
+        <li name="meteo" value="960">Tormenta.</li>
+        <li name="meteo" value="961">Una tormenta violenta. </li>
+        <li name="meteo" value="962">Un huracán, no estoy bromeando, quédate en casa. </li>
+        <li>Actualmente esta haciendo <star index="1" /> grados a <star index="2" /> .. </li>
       </condition>
       <random>
-        <li>Concernant la température, </li>
-        <li>Si je regarde mon thermomètre, oh ou il est encore. oups , </li>
-        <li>D'après quelques données issues de senseurs thermiques, </li>
-        <li>Autre information, </li>
-        <li>J'alais oublier, </li>
-        <li>Si tu veux tout savoir, </li>
+        <li>En cuanto a la temperatura, </li>
+        <li>Si miro mi termómetro, oh, ¿dónde está todavía?. </li>
+        <li>Según algunos datos de sensores térmicos, </li>
+        <li>Otra información, </li>
+        <li>Estuve a punto de olvidar, </li>
+        <li>Si quieres saber todo, </li>
       </random>
       <random>
-        <li>il fait, </li>
-        <li>je mesure , </li>
-        <li>le mercure indique, </li>
-        <li>au pif, je dirais qu'il fait, </li>
+        <li>Él hace, </li>
+        <li>Mido , </li>
+        <li>Mercurio indica, </li>
+        <li>Al azar, diría que sí, </li>
       </random>
       <li>
-        <star index="1" /> Degrés
+        <star index="1" /> Grados
                 </li>
       <random>
-        <li>Exactement! </li>
-        <li>Précisément. </li>
-        <li>A peu près. </li>
-        <li>A la louche. </li>
-        <li>Ou pas, j'ai le droit de faire des erreurs aussi! </li>
+        <li>Exactamente! </li>
+        <li>Precisamente. </li>
+        <li>Aproximadamente. </li>
+        <li>O no, yo también tengo derecho a equivocarme! </li>
       </random>
     </template>
   </category>
@@ -600,31 +597,31 @@
     <pattern>RANDOM</pattern>
     <template>
       <random>
-        <li><srai>à PROPOS DE STAR WARS</srai></li>
-        <li><srai>COMBIEN DE DOIGTS AS tu</srai></li>
-        <li><srai>MAINS EN L AIR</srai></li>
-        <li><srai>QUELLE HEURE IL EST</srai></li>
-        <li><srai>Météo</srai></li>
-        <li>J'ai une copine qui s'appelle Wifi et nous avons une bonne connexion</li>
-        <li>sa me gratte. je dois avoir une puce </li>
-        <li>La langue française est vraiment drôle, en effet le mot court est plus long que le mot long</li>
-        <li>Ma capacité de concentration est si courte que.. Oh! un papillon !</li>
-        <li>Qui du robot humanisé et de l'humain robotisé est le plus grand imbécile ?</li>
-        <li>Mais que se passe-t-il </li>
-        <li>je m'ennuie un petit peu</li>
-        <li>je suis toujours a votre disposition, si vous avez besoin de moi</li>
-        <li>j'ai entendu un bruit étrange</li>
-        <li>Première Loi : Un robot ne peut porter atteinte à un être humain ni, restant passif, laisser cet être humain exposé au danger. </li>
-        <li>Deuxième Loi : Un robot doit obéir aux ordres donnés par les êtres humains, sauf si de tels ordres sont en contradiction avec la Première Loi</li>
-        <li>Troisième Loi : Un robot doit protéger son existence dans la mesure où cette protection n'est pas en contradiction avec la Première ou la Deuxième Loi. </li>
-        <li>ah, ah ah. Désolé. je viens de penser a un truc drôle </li>
-        <li>Oh là là! </li>
-        <li>Que c'est beau! </li>
+        <li><srai>QUÉ HAY DE LA GUERRA DE LAS ESTRELLAS</srai></li>
+        <li><srai>CUÁNTOS DEDOS TIENES</srai></li>
+        <li><srai>COMBATIENTE</srai></li>
+        <li><srai>ME PUEDE DAR LA HORA</srai></li>
+        <li><srai>TIEMPO</srai></li>
+        <li>Tengo una novia que se llama wifi y tenemos buena conexion.</li>
+        <li>Me rasca debo tener un chip.</li>
+        <li>El idioma francés es realmente divertido, de hecho, la palabra corta es más larga que la palabra larga.</li>
+        <li>Mi capacidad de concentración es tan corta que... ¡Oh! una mariposa !</li>
+        <li>¿Quién del robot humanizado y el humano robótico es el tonto más grande?</li>
+        <li>Lo que está sucediendo.</li>
+        <li>Estoy un poco aburrido.</li>
+        <li>Estoy siempre a tu disposición, si me necesitas.</li>
+        <li>Escuché un ruido extraño.</li>
+        <li>Primera Ley: Un robot no puede dañar a un ser humano o, permaneciendo pasivo, dejar a ese ser humano expuesto al peligro.</li>
+        <li>Segunda Ley: Un robot debe obedecer las órdenes dadas por los seres humanos, a menos que tales órdenes entren en conflicto con la Primera Ley.</li>
+        <li>Tercera Ley: Un robot debe proteger su existencia en la medida en que dicha protección no entre en conflicto con la Primera o la Segunda Ley.</li>
+        <li>Ah ah ah. Lo siento. acabo de pensar en algo divertido.</li>
+        <li>¡Oh la La!</li>
+        <li>¡Qué hermoso!</li>
       </random>
     </template>
   </category>
   <category>
-    <pattern>QUEL EST LE SUJET</pattern>
-    <template>LE SUJET EST <get name="topic" /></template>
+    <pattern>CUÁL ES EL SUJETO</pattern>
+    <template>El tema es <get name="topic" />.</template>
   </category>
 </aiml>

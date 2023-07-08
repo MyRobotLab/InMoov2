@@ -1,8 +1,23 @@
 !!org.myrobotlab.service.config.ProgramABConfig
-botDir: data/ProgramAB
+botDir: resource/ProgramAB
 bots:
+- resource/ProgramAB/Alice
+- resource/ProgramAB/Dr.Who
+- resource/ProgramAB/Ency
+- resource/ProgramAB/Mr. Turing
+- resource/ProgramAB/de-DE
+- resource/ProgramAB/en-US
+- resource/ProgramAB/es-ES
+- resource/ProgramAB/fi-FI
+- resource/ProgramAB/fr-FR
+- resource/ProgramAB/hi-IN
+- resource/ProgramAB/it-IT
+- resource/ProgramAB/nl-NL
+- resource/ProgramAB/pt-PT
+- resource/ProgramAB/ru-RU
+- resource/ProgramAB/tr-TR
 currentBotName: en-US
-currentUserName: Friend
+currentUserName: human
 listeners:
 - callback: onText
   listener: i01.htmlFilter

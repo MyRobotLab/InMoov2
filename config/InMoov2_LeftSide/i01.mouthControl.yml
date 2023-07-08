@@ -2,7 +2,7 @@
 delaytime: 75
 delaytimeletter: 45
 delaytimestop: 150
-jaw: i01head.jaw
+jaw: i01.head.jaw
 listeners: null
 mouth: i01.mouth
 mouthClosedPos: 0

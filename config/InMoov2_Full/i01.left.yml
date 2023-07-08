@@ -1,9 +1,6 @@
 !!org.myrobotlab.service.config.ArduinoConfig
 connect: false
-listeners:
-- callback: onPin
-  listener: i01.pir
-  method: publishPin
+listeners: null
 peers:
   serial:
     autoStart: true

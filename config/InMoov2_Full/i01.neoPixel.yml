@@ -1,8 +1,8 @@
 !!org.myrobotlab.service.config.NeoPixelConfig
-autoClear: false
+autoClear: true
 blue: 212
 brightness: 255
-controller: null
+controller: i01.controller3
 currentAnimation: Ironman
 fill: false
 green: 180
