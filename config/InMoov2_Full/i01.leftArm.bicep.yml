@@ -2,31 +2,10 @@
 autoDisable: true
 clip: true
 controller: i01.left
-enabled: false
+enabled: true
 idleTimeout: 3000
 inverted: false
-listeners:
-- callback: onServoEnable
-  listener: i01.left
-  method: publishServoEnable
-- callback: onServoDisable
-  listener: i01.left
-  method: publishServoDisable
-- callback: onEncoderData
-  listener: i01.simulator
-  method: publishEncoderData
-- callback: onServoSetSpeed
-  listener: i01.left
-  method: publishServoSetSpeed
-- callback: onServoWriteMicroseconds
-  listener: i01.left
-  method: publishServoWriteMicroseconds
-- callback: onServoMoveTo
-  listener: i01.left
-  method: publishServoMoveTo
-- callback: onServoStop
-  listener: i01.left
-  method: publishServoStop
+listeners: null
 maxIn: 90.0
 maxOut: 90.0
 minIn: 0.0

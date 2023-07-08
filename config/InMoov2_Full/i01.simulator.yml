@@ -1,8 +1,8 @@
 !!org.myrobotlab.service.config.JMonkeyEngineConfig
 cameraLookAt: i01.torso.lowStom
 listeners: null
-modelPaths:
-- resource\InMoov2/JMonkeyEngine
+models: [
+  ]
 multiMapped:
   i01.leftHand.index:
   - i01.leftHand.index
@@ -480,10 +480,5 @@ nodes:
       minX: 0.0
       minY: 60.0
     rotationMask: x
-  camera:
-    mapper: null
-    rotationMask: null
 peers: null
-test: !!set {
-  }
 type: JMonkeyEngine

@@ -1,9 +1,0 @@
-!!org.myrobotlab.service.config.TrackingConfig
-controller: i01.left
-cv: i01.opencv
-enabled: false
-lostTrackingDelayMs: 1000
-pan: i01.head.rothead
-pid: i01.head.tracking.pid
-tilt: i01.head.neck
-type: Tracking
