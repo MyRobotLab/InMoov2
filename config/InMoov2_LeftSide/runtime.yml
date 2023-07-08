@@ -1,9 +1,9 @@
 !!org.myrobotlab.service.config.RuntimeConfig
 enableCli: true
 id: null
-
+listeners: null
 locale: null
-logLevel: null
+logLevel: info
 peers: null
 registry:
 - runtime
@@ -45,4 +45,4 @@ registry:
 - i01.chatBot
 - i01.htmlFilter
 type: Runtime
-virtual: null
+virtual: false

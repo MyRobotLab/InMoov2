@@ -1,21 +1,13 @@
 !!org.myrobotlab.service.config.AudioFileConfig
-audioListeners: [
-  ]
+audioListeners: null
 currentPlaylist: default
 currentTrack: default
-listeners:
-- callback: onAudioEnd
-  listener: i01.mouth
-  method: publishAudioEnd
-- callback: onAudioStart
-  listener: i01.mouth
-  method: publishAudioStart
+listeners: null
 mute: false
 peakDelayMs: null
-peakMultiplier: 1.0
+peakMultiplier: 100.0
 peakSampleInterval: 15.0
 peers: null
-playlists: {
-  }
+playlists: null
 type: AudioFile
 volume: 1.0

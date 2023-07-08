@@ -4,7 +4,7 @@ listeners: null
 peers:
   serial:
     autoStart: true
-    name: i01.left.serial
+    name: i01.controller4.serial
     type: Serial
 port: null
 type: Arduino

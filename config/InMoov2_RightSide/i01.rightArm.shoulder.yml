@@ -2,9 +2,10 @@
 autoDisable: true
 clip: true
 controller: i01.right
-enabled: false
+enabled: true
 idleTimeout: 3000
 inverted: false
+listeners: null
 maxIn: 180.0
 maxOut: 180.0
 minIn: 0.0
@@ -12,7 +13,7 @@ minOut: 0.0
 peers: null
 pin: '10'
 rest: 30.0
-speed: 20.0
+speed: 45.0
 sweepMax: null
 sweepMin: null
 synced: null

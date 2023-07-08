@@ -1,4 +1,12 @@
 !!org.myrobotlab.service.config.InMoov2Config
+analogPinFromSoundCard: 53
+audioPollsBySeconds: 2
+audioSignalProcessing: false
+batteryInSystem: false
+customSound: false
+forceMicroOnIfSleeping: true
+healthCheckActivated: false
+healthCheckTimerMs: 60000
 heartbeat: false
 idleTimer: true
 listeners:
@@ -8,18 +16,21 @@ listeners:
 - callback: onEvent
   listener: i01.fsm
   method: publishEvent
-- callback: onI01
-  listener: powerUp
-  method: i01
 loadGestures: true
 locale: null
+neoPixelBootGreen: true
+neoPixelDownloadBlue: true
+neoPixelErrorRed: true
+neoPixelFlashWhenSpeaking: true
+openCVFaceRecognizerActivated: true
+openCVFlipPicture: false
 peers:
   audioPlayer:
     autoStart: true
     name: i01.audioPlayer
     type: AudioFile
   chatBot:
-    autoStart: false
+    autoStart: true
     name: i01.chatBot
     type: ProgramAB
   controller3:
@@ -42,6 +53,10 @@ peers:
     autoStart: false
     name: i01.fsm
     type: FiniteStateMachine
+  gpt3:
+    autoStart: false
+    name: i01.gpt3
+    type: Gpt3
   head:
     autoStart: false
     name: i01.head
@@ -51,7 +66,7 @@ peers:
     name: i01.headTracking
     type: Tracking
   htmlFilter:
-    autoStart: false
+    autoStart: true
     name: i01.htmlFilter
     type: HtmlFilter
   imageDisplay:
@@ -144,9 +159,14 @@ peers:
     type: UltrasonicSensor
 pirEnableTracking: false
 pirPlaySounds: true
-pirWakeUp: false
+pirWakeUp: true
+robotCanMoveHeadWhileSpeaking: true
 shutdownStartupSpeed: 50.0
+sleepTimeoutMs: 300000
 startBrainOnBoot: true
 startMouthOnBoot: true
+startupSound: true
+trackingTimeoutMs: 10000
 type: InMoov2
+unlockInsult: forgive me
 virtual: false

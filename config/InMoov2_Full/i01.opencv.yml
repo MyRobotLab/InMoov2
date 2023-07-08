@@ -6,10 +6,7 @@ filters: {
 grabberType: OpenCV
 inputFile: null
 inputSource: camera
-listeners:
-- callback: onCvData
-  listener: i01.simulator
-  method: publishCvData
+listeners: null
 nativeViewer: true
 peers: null
 type: OpenCV

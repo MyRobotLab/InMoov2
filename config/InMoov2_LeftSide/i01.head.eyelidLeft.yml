@@ -5,6 +5,7 @@ controller: i01.right
 enabled: false
 idleTimeout: 3000
 inverted: false
+listeners: null
 maxIn: 180.0
 maxOut: 180.0
 minIn: 0.0
