@@ -163,8 +163,6 @@ pirWakeUp: true
 robotCanMoveHeadWhileSpeaking: true
 shutdownStartupSpeed: 50.0
 sleepTimeoutMs: 300000
-startBrainOnBoot: true
-startMouthOnBoot: true
 startupSound: true
 trackingTimeoutMs: 10000
 type: InMoov2
