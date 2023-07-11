@@ -96,12 +96,13 @@ def takeMyPicture(name):
     print(newName)
     sleep(1)
     os.chdir(picturePath)
+    matching_names = glob.glob('i01.opencv-*.png')
     try:
-      os.rename('i01.opencv-00001.png', newName)
-      #opencv.cropImage('i01.opencv-00001', 100)
-      os.chdir("../../../../../")
+      if matching_names:
+        os.rename(matching_names[0], newName)
+        os.chdir("../../../../../")
     except:
-      os.remove('i01.opencv-00001.png')
+      os.remove(matching_names[0])
       os.chdir("../../../../../")
       pass
     i01.finishedGesture()
