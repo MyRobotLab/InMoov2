@@ -696,7 +696,6 @@
         <li>Hola <get name="name"/>, ¿cómo va todo?</li>
         <li>Hola, ¿qué hay <get name="name"/>?</li>
         <li>Saludos <get name="name"/>, ¿en qué puedo ayudarte?</li>
-        <li>Hola <get name="name"/>, ¿cómo te llamas?</li>
         <li>¿Qué tal <get name="name"/>?</li>
         <li>Buenas <get name="name"/>.</li>
       </random>
