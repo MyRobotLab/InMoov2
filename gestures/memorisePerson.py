@@ -86,11 +86,11 @@ def takeMyPicture(name):
     i01.startPeer('opencv')
     opencv = runtime.start('i01.opencv', 'OpenCV')
     opencv.capture()
-    photoFileName = opencv.recordFrame()
+     photoFileName = opencv.recordFrame()
     print(photoFileName)
     sleep(2)
     opencv.stopCapture()
-    picturePath='resource/WebGui/app/service/img/'
+    picturePath='resource/ProgramAB/'
     shutil.move(photoFileName,picturePath)
     newName = unicode(name,'utf-8')+'.png'
     print(newName)
@@ -100,9 +100,9 @@ def takeMyPicture(name):
     try:
       if matching_names:
         os.rename(matching_names[0], newName)
-        os.chdir("../../../../../")
+        os.chdir("../../")
     except:
       os.remove(matching_names[0])
-      os.chdir("../../../../../")
+      os.chdir("../../")
       pass
     i01.finishedGesture()
