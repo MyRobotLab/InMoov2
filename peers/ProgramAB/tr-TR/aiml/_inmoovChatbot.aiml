@@ -2,6 +2,16 @@
 <aiml>
 <!-- File: _inmoovChatbot.aiml -->
 <!--  -->
+
+<category><pattern>BOOTUP</pattern>
+  <template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>welcomeMessage()</param>
+          </mrl>
+        </oob></template>
+</category>
 <category><pattern>FIRST_INIT</pattern>
 <template><think>
         <set name="firstinit">started</set>
