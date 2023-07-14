@@ -11,7 +11,13 @@
   </category>
   <category>
     <pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
-    <template>सेटअप पूरा हुआ</template>
+    <template>सेटअप पूरा हुआ
+    <srai>BOOTUP</srai></template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIG LOADED *</pattern>
+    <template>सेटअप पूरा हुआ
+    <srai>BOOTUP</srai></template>
   </category>
   <category>
     <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
