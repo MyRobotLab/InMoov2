@@ -304,6 +304,13 @@
           <li>What can I do for you.</li>
           <li>How can I help you.</li>
         </random>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername"))), i01_chatBot.getPredicates()</param>
+          </mrl>
+        </oob>
       </template>
 </category>
 <category><pattern>SYSTEM_SAY_HELLO</pattern>
