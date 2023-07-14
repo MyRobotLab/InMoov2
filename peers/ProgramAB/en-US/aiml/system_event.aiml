@@ -13,7 +13,8 @@
 
 <category>
 <pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
-<template>Configuration loaded</template>
+<template>Configuration loaded
+<srai>BOOTUP</srai></template>
 </category>
 
 <category>
@@ -123,7 +124,8 @@
 
 <category>
 <pattern>SYSTEM_EVENT CONFIG LOADED *</pattern>
-<template>Configuration <star/> loaded.</template>
+<template>Configuration <star/> loaded.
+<srai>BOOTUP</srai></template>
 </category>
 
 <category>
