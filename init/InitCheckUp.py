@@ -95,4 +95,4 @@ if runtime.isStarted('i01.neopixel'):
   sleep(1)
   i01.setNeopixelAnimation("Flash Random", 0, 255, 50, 10)
 sleep(1)
-sleepModeWakeUp()
+welcomeMessage()
