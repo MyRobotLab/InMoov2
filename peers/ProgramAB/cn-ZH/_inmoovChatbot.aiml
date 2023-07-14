@@ -6,7 +6,15 @@
    <!-- initialisation  -->
    <!-- updater  -->
    <!-- gesture  -->
-  
+<category><pattern>BOOTUP</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>welcomeMessage()</param>
+          </mrl>
+        </oob></template>
+</category> 
   
    <category><pattern>说 *</pattern>
 <template><star/></template>
