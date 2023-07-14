@@ -10,7 +10,13 @@
   </category>
   <category>
     <pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
-    <template>Installazione completata</template>
+    <template>Installazione completata
+    <srai>BOOTUP</srai></template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIG LOADED *</pattern>
+    <template>Installazione <star/> completata
+    <srai>BOOTUP</srai></template>
   </category>
   <category>
     <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
