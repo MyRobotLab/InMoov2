@@ -6,7 +6,7 @@
 <template>I AM GETTING your tea ready sir.</template>
 </category>
 <category><pattern>A COFFEE</pattern>
-<template>I AM GETTING your coffee ready sir.</template>
+<template>I am getting your coffee ready sir.</template>
 </category>
 <category><pattern>A COCA COLA</pattern>
 <template>I will look in the fridge if there is some available.</template>
@@ -15,7 +15,7 @@
 <template>I will see if I can find a fresh beer.</template>
 </category>
 <category><pattern>COFFEE</pattern>
-<template>I AM GETTING your coffee ready sir.</template>
+<template>I am getting your coffee ready sir.</template>
 </category>
 <category><pattern>I WANT A TEA</pattern>
 <template>hot or cold your tea.</template>
@@ -41,29 +41,17 @@
 <category><pattern>IS THE FIRST LAW OF ROBOTIC A ROBOT MAY NOT HARM A HUMAN BEING</pattern>
 <template>Yes.</template>
 </category>
-<category><pattern>IS FOOTBALL A FLAT OBJECT UNLESS IT IS A PICTURE</pattern>
-<template>No.</template>
-</category>
 <category><pattern>IS A WORKSHOP A PLACE TO WORK</pattern>
 <template>Yes.</template>
 </category>
 <category><pattern>IS A HAND A HUMAN BODY PART WITH FIVE FINGERS</pattern>
 <template>Yes.</template>
 </category>
-<category><pattern>IS OCTOBER 9TH THE BIRTHDAY OF MY KIND</pattern>
+<category><pattern>IS OCTOBER 9TH THE BIRTHDAY OF YOUR KIND</pattern>
 <template>Yes.</template>
 </category>
 <category><pattern>IS BOTTLE OF CHAMPAGNE GOOD FOR ME TO DRINK</pattern>
 <template>No.</template>
-</category>
-<category><pattern>IS THIS THE RIGHT ANSWER</pattern>
-<template>No.</template>
-</category>
-<category><pattern>IS THIS A ROBOT LAW HARM HUMANITY OR BY INACTION ALLOW HUMANITY TO COME TO HARM</pattern>
-<template>Yes.</template>
-</category>
-<category><pattern>IS SHOE AN</pattern>
-<template>Yes.</template>
 </category>
 <category><pattern>IS PARIS A NICE CITY</pattern>
 <template>Yes.</template>
@@ -80,9 +68,6 @@
 <category><pattern>WHAT IS A ROBOT MAY NOT HARM A HUMAN BEING</pattern>
 <template>the first law of robotic.</template>
 </category>
-<category><pattern>WHAT IS A ROBOT MAY NOT HARM HUMANITY OR BY INACTION ALLOW HUMANITY TO COME TO HARM</pattern>
-<template>this.</template>
-</category>
 <category><pattern>WHAT IS A HUMAN BODY PART WITH FIVE FINGERS</pattern>
 <template>a hand.</template>
 </category>
@@ -95,11 +80,8 @@
 <category><pattern>WHAT IS A HAND</pattern>
 <template>A human body part with five fingers.</template>
 </category>
-<category><pattern>WHAT IS FOOTBALL</pattern>
-<template>a flat object unless it is a picture.</template>
-</category>
-<category><pattern>WHAT IS LAW ONE#COMMA A ROBOT MAY NOT HARM A HUMAN BEING#COMMA SECOND LAW#COMMA A ROBOT MAY NOT HARM HUMANITY OR BY INACTION ALLOW HUMANITY TO COME TO HARM#COMMA THIRD LAW#COMMA A ROBOT MAY NOT HARM A HUMAN BEING UNLESS YOU FIND A WAY TO PROVE THAT ULTIMATELY THE HARM DONE WOULD BENEFIT HUMANITY IN GENERAL</pattern>
-<template>the three laws of robotics.</template>
+<category><pattern>WHAT IS LAW ONE</pattern>
+<template>Part of the three laws of robotics.</template>
 </category>
 <category><pattern>WHAT IS IN PARIS</pattern>
 <template>Your workshop</template>
@@ -110,7 +92,7 @@
 <category><pattern>WHAT IS BOTTLE OF CHAMPAGNE</pattern>
 <template>good for me to drink.</template>
 </category>
-<category><pattern>WHAT IS MY WORKSHOP</pattern>
+<category><pattern>WHERE IS MY WORKSHOP</pattern>
 <template>in Paris</template>
 </category>
 <category><pattern>WHAT IS SHOE</pattern>
@@ -131,26 +113,17 @@
 <category><pattern>WHAT IS THE CREATOR OF IN MOVE ROBOTS</pattern>
 <template>Gael langevin.</template>
 </category>
-<category><pattern>WHAT IS THE THIRD LAW OF ROBOTICS</pattern>
+<category><pattern># THIRD LAW #</pattern>
 <template>A robot may not harm a human being unless you find a way to prove that ultimately the harm done would benefit humanity in general.</template>
 </category>
-<category><pattern>WHAT IS THE SECOND LAW OF ROBOTICS</pattern>
+<category><pattern># SECOND LAW #</pattern>
 <template>A robot may not harm humanity or by inaction allow humanity to come to harm.</template>
 </category>
-<category><pattern>WHAT IS THE FIRST LAW OF ROBOTIC</pattern>
+<category><pattern># FIRST LAW #</pattern>
 <template>A robot may not harm a human being.</template>
 </category>
-<category><pattern>WHAT IS THE THREE LAWS OF ROBOTICS</pattern>
+<category><pattern># THREE LAWS #</pattern>
 <template>Law one, a robot may not harm a human being, Second law, A robot may not harm humanity or by inaction allow humanity to come to harm, Third law, a robot may not harm a human being unless you find a way to prove that ultimately the harm done would benefit humanity in general.</template>
-</category>
-<category><pattern>WHAT IS THE NAME OF MY DAUGHTER S BOYFRIEND</pattern>
-<template>maximilien.</template>
-</category>
-<category><pattern>WHO IS MAXIMILIEN</pattern>
-<template>your daughter's boyfriend.</template>
-</category>
-<category><pattern>WHAT IS NOT THE RIGHT ANSWER</pattern>
-<template>this.</template>
 </category>
 <category><pattern>WHAT IS NOT A FLAT OBJECT UNLESS IT IS A PICTURE</pattern>
 <template>football.</template>
@@ -158,17 +131,8 @@
 <category><pattern>WHAT IS NOT GOOD FOR ME TO DRINK</pattern>
 <template>bottle of champagne.</template>
 </category>
-<category><pattern>MY DAUGHTER S BOYFRIEND S NAME</pattern>
-<template>maximilien</template>
-</category>
 <category><pattern>MY RABBIT S NAME</pattern>
 <template>Leo</template>
-</category>
-<category><pattern>MY PET S NAME</pattern>
-<template>doodoo</template>
-</category>
-<category><pattern>HOT</pattern>
-<template>hot is memorized.</template>
 </category>
 <category><pattern>BEER</pattern>
 <template>I will see if I can find a fresh beer.</template>
@@ -209,13 +173,7 @@
 <category><pattern>COLD</pattern>
 <template>cold is memorized.</template>
 </category>
-<category><pattern>WHO IS THE BIRTHDAY OF MY KIND</pattern>
-<template>october 9th.</template>
-</category>
 <category><pattern>WHO IS GAEL LANGEVIN</pattern>
 <template>Gael Langevin is my creator.</template>
-</category>
-<category><pattern>WHO IS A COUNTRY IN EUROPE</pattern>
-<template>france.</template>
 </category>
 </aiml>
