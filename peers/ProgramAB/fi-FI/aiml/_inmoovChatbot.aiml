@@ -5,7 +5,15 @@
    <!-- Get free Voice RSS apikey: http://www.voicerss.org/ -->
    
    <!-- initialisation  -->
-   
+<category><pattern>BOOTUP</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>welcomeMessage()</param>
+          </mrl>
+        </oob></template>
+</category>   
    
 <category><pattern>SAY *</pattern>
 <template><star/></template>

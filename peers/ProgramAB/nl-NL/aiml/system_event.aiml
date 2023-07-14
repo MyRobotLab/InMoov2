@@ -10,7 +10,13 @@
   </category>
   <category>
     <pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
-    <template>Installatie voltooid</template>
+    <template>Installatie voltooid
+    <srai>BOOTUP</srai></template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIG LOADED *</pattern>
+    <template>Installatie <star/> voltooid
+    <srai>BOOTUP</srai></template>
   </category>
   <category>
     <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>

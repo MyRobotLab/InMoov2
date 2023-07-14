@@ -6,7 +6,7 @@
 	 <!-- updater  -->
      <!-- meteo  -->
 	 <!-- gesture  -->
-  
+ 
   
     <category>
     <pattern>SAY *</pattern>
@@ -16,7 +16,16 @@
   </category>
   
    <!-- initialisaion  -->
-  
+  <category><pattern>BOOTUP</pattern>
+    <template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>welcomeMessage()</param>
+          </mrl>
+        </oob></template>
+  </category>
+
   <category>
     <pattern>FIRST_INIT</pattern>
     <template>

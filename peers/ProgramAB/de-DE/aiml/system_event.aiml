@@ -13,6 +13,11 @@
     <template>Einrichtung abgeschlossen</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT CONFIG LOADED *</pattern>
+    <template>Einrichtung <star/> abgeschlossen</template>
+    <srai>BOOTUP</srai>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
     <template>Gestenimport</template>
   </category>

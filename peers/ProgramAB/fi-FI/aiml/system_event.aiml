@@ -11,6 +11,17 @@
   <category>
     <pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
     <template>Asennus valmis</template>
+    <srai>BOOTUP</srai>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIG LOADED *</pattern>
+    <template>Asennus <star/> valmis</template>
+    <srai>BOOTUP</srai>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIG LOADED *</pattern>
+    <template>Asennus <star/> valmis</template>
+    <srai>BOOTUP</srai>
   </category>
   <category>
     <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>

@@ -10,7 +10,8 @@
   </category>
   <category>
     <pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
-    <template>Configuration terminée</template>
+    <template>Configuration terminée
+    <srai>BOOTUP</srai></template>
   </category>
   <category>
     <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
@@ -26,7 +27,8 @@
   </category>
   <category>
     <pattern>SYSTEM_EVENT CONFIG LOADED *</pattern>
-    <template>Configuration <star/> démarrée.</template>
+    <template>Configuration <star/> démarrée.
+    <srai>BOOTUP</srai></template>
   </category>
   <category>
     <pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
