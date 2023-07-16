@@ -1,4 +1,5 @@
 def VieAleatoire():
+    execfile('resource/InMoov2/system/startScripts/i01_random_start.py')
     if runtime.isStarted('MoveRandomTimer'):
         MoveRandomTimer.startClock()
         MoveRandomStart()
