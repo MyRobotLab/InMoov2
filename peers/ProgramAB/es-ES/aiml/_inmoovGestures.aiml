@@ -59,7 +59,7 @@
     <category>
       <pattern>CONGELAR PISTA</pattern>
       <template>Detener mi seguimiento
-        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackPoint()</param></mrl></oob></template>
     </category>
 
 
