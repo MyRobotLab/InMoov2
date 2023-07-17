@@ -507,7 +507,11 @@
                 <tr>
                     <td ng-show="peer.isPeerStarted(service, 'opencv')">
                         <img src="../Tracking.png"/>
-                        <toggle ng-model="service.isHeadTrackingStarted" ng-change="service.isHeadTrackingStarted?startPeer('headTracking'):releasePeer('headTracking')" width="140" height="30" on="head tracking on" off="head tracking off"></toggle>
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'headTracking')"
+                            ng-click="startPeer('headTracking')">head tracking off</button>
+                        <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'headTracking')"
+                            ng-click="releasePeer('headTracking')">head tracking on</button>
+                        <!--<toggle ng-model="service.isHeadTrackingStarted" ng-change="service.isHeadTrackingStarted?startPeer('headTracking'):releasePeer('headTracking')" width="140" height="30" on="head tracking on" off="head tracking off"></toggle>-->
                         <span ng-show="peer.isPeerStarted(service, 'headTracking')">
                             <img src="settings.png" width="30" ng-click="mrl.changeTab(peer.getActualName(service, 'headTracking'))"/>
                         </span>
@@ -517,8 +521,12 @@
                 <tr>
                     <td ng-show="peer.isPeerStarted(service, 'opencv')">
                         <img src="../Tracking.png"/>
-                        <toggle ng-model="service.isEyeTrackingStarted" ng-change="service.isEyeTrackingStarted?startPeer('eyeTracking'):releasePeer('eyeTracking')" width="140" height="30" on="eye tracking on" off="eye tracking off"></toggle>
-                        <span ng-show="peer.isPeerStarted(service, 'eyeTracking')">
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'eyeTracking')"
+                            ng-click="startPeer('eyeTracking')">eye tracking off</button>
+                        <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'eyeTracking')"
+                            ng-click="releasePeer('eyeTracking')">eye tracking on</button>
+                        <!--<toggle ng-model="service.isEyeTrackingStarted" ng-change="service.isEyeTrackingStarted?startPeer('eyeTracking'):releasePeer('eyeTracking')" width="140" height="30" on="eye tracking on" off="eye tracking off"></toggle>-->
+                        &nbsp;&nbsp;<span ng-show="peer.isPeerStarted(service, 'eyeTracking')">
                             <img src="settings.png" width="30" ng-click="mrl.changeTab(peer.getActualName(service, 'eyeTracking'))"/>
                         </span>
                         <toggle width="100" height="28" ng-show="peer.isPeerStarted(service, 'eyeTracking')" ng-model="service.isEyeTracking" ng-change="!service.isEyeTracking?execScript('system/startScripts/i01_eyeTracking_stop.py'):execScript('system/startScripts/i01_eyeTracking_start.py')" on="Disable" off="Enable"/></toggle>
