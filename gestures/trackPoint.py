@@ -11,4 +11,4 @@ def trackPoint():
     tr.addPoint(280, 280)
     i01_opencv.capture()
   else:
-    i01.warn("i01.opencv needs to be started!"))
+    i01.warn("i01.opencv needs to be started!")
