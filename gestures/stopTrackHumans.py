@@ -1,5 +1,7 @@
 def stopTrackHumans():
   if runtime.isStarted("i01.opencv"):
     if (i01_opencv.isCapturing()):
-      i01_headTracking.disable()
+      if runtime.isStarted("i01.headTracking"):
+        i01_headTracking.disable()
       i01_head_rollNeck.setAutoDisable(True)
+      i01_opencv.stopCapture()

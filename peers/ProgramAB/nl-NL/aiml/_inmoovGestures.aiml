@@ -232,7 +232,7 @@
     <category>
       <pattern>FREEZE TRACK</pattern>
       <template>Mijn opsporing stopzetten
-        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackPoint()</param></mrl></oob></template>
     </category>
 
 

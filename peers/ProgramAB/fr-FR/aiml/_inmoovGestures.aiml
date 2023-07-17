@@ -75,8 +75,8 @@
         <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
 </category>
 <category><pattern>DÉTECTION DE VISAGE</pattern>
-<template>I'm looking for faces.
-        <oob><mrl><service>python</service><method>exec</method><param>trackHumans(False)</param></mrl></oob></template>
+<template>Je cherche les visages.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
 </category>
 <category><pattern># REGARDE MOI #</pattern>
 <template>Je vais te suivre du regard jusqu'a ce que tu me dise arrête de me regarder.
@@ -96,6 +96,10 @@
 <category><pattern>ARRÊTE LE TRACKING</pattern>
 <template>J'arrête mon tracking
         <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
+</category>
+<category><pattern>ARRÊTE LE TRACKING DE POINT</pattern>
+<template>J'arrête mon tracking de point
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackPoint()</param></mrl></oob></template>
 </category>
 <category><pattern>OUVRE TES MAINS</pattern>
 <template>Main ouvertes.

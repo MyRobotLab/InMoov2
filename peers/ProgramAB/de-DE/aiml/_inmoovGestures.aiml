@@ -52,7 +52,7 @@
 </category>
 <category><pattern>STOPPEN SIE IHRE SPUR</pattern>
 <template>Ich stoppe mein Tracking
-        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackPoint()</param></mrl></oob></template>
 </category>
 <category><pattern>BEFESTIGEN SIE DEN SENSOR</pattern>
 <template>Starten des P.I.R-Sensors.
