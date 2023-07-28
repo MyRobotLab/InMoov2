@@ -39,14 +39,14 @@ def shakehand():
       timeoutRightGetCloser+=1
       distanceRight=i01_ultrasonicRight.range()
       print "==UltrasonicRight distance:", distanceRight
-      if timeoutRight > 20:
+      if timeoutRight > 10:
         global noHumanRight
         noHumanRight=1
         noHuman()
         break  
       sleep(0.5)
       # ask GET CLOSER
-      if timeoutRightGetCloser> 10:
+      if timeoutRightGetCloser> 7:
         global getCloserRight
         getCloserRight=1
         getCloser()   
@@ -66,14 +66,14 @@ def shakehand():
       timeoutLeftGetCloser+=1
       distanceLeft=i01_ultrasonicLeft.range()
       print "==UltrasonicLeft distance:", distanceLeft
-      if timeoutLeft > 20:
+      if timeoutLeft > 10:
         global noHumanLeft
         noHumanLeft=1
         noHuman()
         break  
       sleep(0.5)
       # ask GET CLOSER
-      if timeoutLeftGetCloser> 10:
+      if timeoutLeftGetCloser> 7:
         global getCloserLeft
         getCloserLeft=1
         getCloser()  
@@ -101,7 +101,7 @@ def getCloser():
     i01_chatBot.getResponse("SYSTEM_SHAKE_HAND_GET_CLOSER")
     timeoutLeftGetCloser=0
     timeoutRightGetCloser=0
-    sleep(2)
+    sleep(6)
 
 def goShake():
   if distanceLeftOK==1 or distanceRightOK==1:
@@ -255,4 +255,3 @@ def shakehandFinish():
   sleep(0.5)
   i01.finishedGesture()
   rest()
-  relax()
