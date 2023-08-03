@@ -10,7 +10,7 @@ def whoisthis():
         i01.moveHead(90,90,170)
         sleep(2)
         i01.moveHead(90,90,90)
-      i01.cameraOn()
+      i01_opencv.capture()
       i01_opencv.addFilter("FaceRecognizer")
       fr=i01_opencv.getFilter("FaceRecognizer")
       # set the name on the filter that will be used for the saved examples
@@ -18,7 +18,9 @@ def whoisthis():
       fr.train()
       fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
       python.subscribe("i01.opencv", "publishRecognizedFace")
+      sleep(5)
+      i01_opencv.removeFilter("FaceRecognizer")
+      i01_opencv.stopCapture()
       i01.finishedGesture()
     else:
       errorSpokenFunc('OPENCVNOWORKY')
-
