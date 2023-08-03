@@ -837,7 +837,7 @@
 <template><srai>START FACE RECOGNIZER</srai></template>
 </category>
 <category><pattern>STOP FACE RECOGNIZER</pattern>
-<template>I'm stopping face recognizer<oob><mrl><service>i01.opencv</service><method>disableAll</method></mrl></oob></template>
+<template>I'm stopping face recognizer<oob><mrl><service>python</service><method>exec</method><param>stopfaceRecognizer()</param></mrl></oob></template>
 </category>
 <category><pattern>STOP FACE RECOGNITION</pattern>
 <template><srai>STOP FACE RECOGNIZER</srai></template>
