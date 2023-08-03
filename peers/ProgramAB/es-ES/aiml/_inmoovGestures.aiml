@@ -1128,7 +1128,7 @@
 
     <category>
       <pattern>STOP RECONOCEDOR DE CARA</pattern>
-      <template>Estoy deteniendo el reconocimiento facial<oob><mrl><service>i01.opencv</service><method>disableAll</method></mrl></oob></template>
+      <template>Estoy deteniendo el reconocimiento facial<oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
     </category>
     
     <category>
