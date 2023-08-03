@@ -1,0 +1,1153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: _inmoovGestures.aiml -->
+<!--  -->
+<category><pattern>DİNLENMEK</pattern>
+<template><random>
+          <li>Ah, rahatlatıcı.</li>
+          <li>Dinlenmek</li>
+        </random>
+        <oob>
+          <mrl>
+            <service>i01</service>
+            <method>rest</method>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>TAKMA BAŞLIĞI</pattern>
+<template>Başımı sokuyorum.
+       <oob><mrl><service>i01.head</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>BAŞLIĞI KESMEK</pattern>
+<template>Kafamı dağıtıyorum.
+        <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>GÖZLERİ TAKIN</pattern>
+<template>gözlerim bağlı artık.
+        <oob><mrl><service>i01.head.eyeY</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>GÖZLERİ KESMEK</pattern>
+<template>Göz servolarımın bağlantısını kesiyorum.
+        <oob><mrl><service>i01.head.eyeY</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>SAĞ ELİNİZİ TAKIN</pattern>
+<template>Sağ elimi birleştiriyorum.
+        <oob><mrl><service>i01.rightHand</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>SAĞ ELİ TAKILI</pattern>
+<template><srai>SAĞ ELİNİZİ TAKIN</srai></template>
+</category>
+<category><pattern>SAĞ ELİNİZİ KESİN</pattern>
+<template>Sağ elimi ayırıyorum.
+        <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>SOL ELİNİZİ TAKIN</pattern>
+<template>sol elimi birleştiriyorum.
+        <oob><mrl><service>i01.leftHand</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>SOL ELİNİZİ KESİN</pattern>
+<template>sol elimi ayırıyorum.
+        <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>HER ŞEYİ EKLE</pattern>
+<template>Şimdi tüm servoları bağlıyorum.
+        <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>HER ŞEYİN BAĞLANTISINI KES</pattern>
+<template>Şimdi her şeyi ayırıyorum.
+        <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>SOL KOLU TAKIN</pattern>
+<template>sol kolumu bağlama.
+        <oob><mrl><service>i01.leftArm</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>SOL KOLU ÇIKARIN</pattern>
+<template>Sol kolumu ayırıyorum.
+        <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>SOL KOLUNUZU ÇIKARIN</pattern>
+<template><srai>SOL KOLU ÇIKARIN</srai></template>
+</category>
+<category><pattern>SOL KOLUNUZU ÇIKARIN</pattern>
+<template><srai>SOL KOLU ÇIKARIN</srai></template>
+</category>
+<category><pattern>SAĞ KOLU TAKIN</pattern>
+<template>sağ kolumu bağla.
+        <oob><mrl><service>i01.rightArm</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>BAĞLI SAĞ KOL</pattern>
+<template><srai>SAĞ KOLU TAKIN</srai></template>
+</category>
+<category><pattern>SAĞ KOLU ÇIKARIN</pattern>
+<template>Sağ kolu ayırın.
+        <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>SAĞ KOLUNUZU ÇIKARIN</pattern>
+<template><srai>SAĞ KOLU ÇIKARIN</srai></template>
+</category>
+<category><pattern>SAĞ KOLUNUZU ÇIKARIN</pattern>
+<template><srai>SAĞ KOLU ÇIKARIN</srai></template>
+</category>
+<category><pattern>GÖVDE TAKIN</pattern>
+<template>Gövdemdeki servoyu bağlama.
+        <oob><mrl><service>i01.torso</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>GÖVDEYİ KESMEK</pattern>
+<template>Gövdemdeki servoyu ayırıyorum.
+        <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ÇENE TAKIN</pattern>
+<template>Çenemi bağlamak.
+        <oob><mrl><service>i01.head.jaw</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>ÇENE AYIR</pattern>
+<template>Çene servomu ayırıyorum.
+        <oob><mrl><service>i01.head.jaw</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>TEKERLEK TAKMA</pattern>
+<template>Takacak bir tekerleğim yok, üzgünüm.
+        <oob><mrl><service>forwardServo</service><method>enable</method></mrl><mrl><service>directionServo</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>TEKERLEK BAĞLANTISINI AYIR</pattern>
+<template>tekerleğim yok.
+        <oob><mrl><service>directionServo</service><method>disable</method></mrl><mrl><service>forwardServo</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>İNSAN ARAYIN</pattern>
+<template>yüzler arıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
+</category>
+<category><pattern>YÜZ TANIMA</pattern>
+<template>yüzler arıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans(False)</param></mrl></oob></template>
+</category>
+<category><pattern>BANA BAK</pattern>
+<template>neredesin, oradasın.
+        <srai>İNSAN ARAYIN</srai></template>
+</category>
+<category><pattern>ARAMADAN ÇIK</pattern>
+<template>Noktayı izlemek için durma.
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackingPoint()</param></mrl></oob></template>
+</category>
+<category><pattern>İZLEMEK</pattern>
+<template>Noktayı takip etmek.
+        <oob><mrl><service>python</service><method>exec</method><param>trackPoint()</param></mrl></oob></template>
+</category>
+<category><pattern>DONDURMA PARÇASI</pattern>
+<template>Takibim durduruluyor
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
+</category>
+<category><pattern>İZLEMENİZİ DURDURUN</pattern>
+<template><srai>DONDURMA PARÇASI</srai></template>
+</category>
+<category><pattern>İZLEME NOKTASINI DURDUR</pattern>
+<template><srai>ARAMADAN ÇIK</srai></template>
+</category>
+<category><pattern>SENSÖRÜ TAKIN</pattern>
+<template>P.I.R sensörünün başlatılması.
+        <oob><mrl><service>i01</service><method>startPIR</method></mrl></oob></template>
+</category>
+<category><pattern>SENSÖRÜ KESME</pattern>
+<template>P.I.R sensörünü durdurma.
+        <oob><mrl><service>i01</service><method>stopPIR</method></mrl></oob></template>
+</category>
+<category><pattern>ELİNİ AÇ</pattern>
+<template>elimi açmak.
+        <oob><mrl><service>python</service><method>exec</method><param>handopen()</param></mrl></oob></template>
+</category>
+<category><pattern>KAPAT EL</pattern>
+<template>elimi kapatıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>handclose()</param></mrl></oob></template>
+</category>
+<category><pattern>ELLERİ KAPAT</pattern>
+<template>ellerimi kapatıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>handsclose()</param></mrl></oob></template>
+</category>
+<category><pattern>EL AÇ</pattern>
+<template>ellerimi açıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>handsopen()</param></mrl></oob></template>
+</category>
+<category><pattern>PARMAKLARINI KAPAT</pattern>
+<template>parmağımı kapatıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerclose()</param></mrl></oob></template>
+</category>
+<category><pattern>PARMAKLARINI AÇ</pattern>
+<template>tamam parmağımı açıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>fingeropen()</param></mrl></oob></template>
+</category>
+<category><pattern>PARMAK ORTAYA</pattern>
+<template>şimdi dikkatimi çektin.
+        <oob><mrl><service>python</service><method>exec</method><param>fingermiddle()</param></mrl></oob></template>
+</category>
+<category><pattern>PARMAKLARINIZI HAREKETE GEÇİRİN</pattern>
+<template><random>
+             <li>Tabi ki.</li>
+             <li>böyle sever misin?</li>
+             <li>Buna ne dersin?</li>
+          </random>
+        <oob><mrl><service>python</service><method>exec</method><param>fingeraction()</param></mrl></oob></template>
+</category>
+<category><pattern>KAMERA AÇIK</pattern>
+<template>kameramı açıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_opencv.capture()</param></mrl></oob></template>
+</category>
+<category><pattern>KAPALI KAMERA</pattern>
+<template>kameramı kapatıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_opencv.stopCapture()</param></mrl></oob></template>
+</category>
+<category><pattern>KAMERA KAPALI</pattern>
+<template><srai>KAPALI KAMERA</srai></template>
+</category>
+<category><pattern>JESTİ YAKALA</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>captureGesture2()</param></mrl></oob></template>
+</category>
+<category><pattern>VERME</pattern>
+<template>vermek.
+        <oob><mrl><service>i01</service><method>execGesture</method><param>giving()</param></mrl></oob></template>
+</category>
+<category><pattern>SAVAŞÇI</pattern>
+<template><random>
+          <li>Bir boksör gibi poz verebilirim</li>
+          <li>Kelebek gibi hareket et, arı gibi sok.</li>
+          <li>Onu getirmek.</li>
+        </random>
+        <oob><mrl><service>python</service><method>exec</method><param>fighter()</param></mrl></oob></template>
+</category>
+<category><pattern>YUMRUK KALÇA</pattern>
+<template>Yumruklarımı kalçalarıma koyarak.
+        <oob><mrl><service>python</service><method>exec</method><param>fistHips()</param></mrl></oob></template>
+</category>
+<category><pattern>ŞUNA BAK</pattern>
+<template>Orada ne var? bakıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>lookAtThis()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAFER</pattern>
+<template>kazanmak güzel.
+        <oob><mrl><service>python</service><method>exec</method><param>victory()</param></mrl></oob></template>
+</category>
+<category><pattern>KOLLAR YUKARI</pattern>
+<template><random>
+          <li>kollarımı kaldırdım.</li>
+          <li>ateş etme!</li>
+        </random>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>armsUp()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>SİLAH ÖN</pattern>
+<template>Kollarımı önümde tutarak.
+        <oob><mrl><service>python</service><method>exec</method><param>armsFront()</param></mrl></oob></template>
+</category>
+<category><pattern>DA VİNCİ</pattern>
+<template>Bu, Leonardo Da Vinci'nin çizimlerinden bir poz..
+        <oob><mrl><service>python</service><method>exec</method><param>daVinci()</param></mrl></oob></template>
+</category>
+<category><pattern>DA VİNCİ</pattern>
+<template><srai>DA VİNCİ</srai></template>
+</category>
+<category><pattern>UYANDIRMA SÖZCÜĞÜ *</pattern>
+<template><think><set name="wakeWord"><star/></set></think>Tamam, artık dinlemiyorum, kilidimi açmak için özel uyandırma kelimesini söylemen gerekiyor. <star/>.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_ear.setWakeWord('<star/>'), i01_ear.setAwake(False)</param></mrl></oob></template>
+</category>
+<category><pattern>SES KONTROLÜ</pattern>
+<template>dinliyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_ear.setAwake(True)</param></mrl></oob></template>
+</category>
+<category><pattern>DİNLEMEYİ BIRAK</pattern>
+<template>seni dinlemeyeceğim.
+        <oob><mrl><service>i01.ear</service><method>setAutoListen</method><param>False</param></mrl></oob></template>
+</category>
+<category><pattern>SON SÜRAT</pattern>
+<template>Servolar şimdi tam hıza ayarlandı.
+        <oob><mrl><service>python</service><method>exec</method><param>fullspeed()</param></mrl></oob></template>
+</category>
+<category><pattern>YARIM HIZ</pattern>
+<template>Servolar şimdi yarı hıza ayarlandı.
+        <oob><mrl><service>python</service><method>exec</method><param>halfspeed()</param></mrl></oob></template>
+</category>          
+<category><pattern>ŞİŞEYİ AL</pattern>
+<template>O şişeyi almama izin ver.
+        <oob><mrl><service>python</service><method>exec</method><param>grabthebottle()</param></mrl></oob></template>
+</category>
+<category><pattern>BARDAĞI ALIN</pattern>
+<template>o bardağı bana ver.
+        <oob><mrl><service>python</service><method>exec</method><param>grabtheglass()</param></mrl></oob></template>
+</category>
+<category><pattern>ŞİŞE ZAYIF</pattern>
+<template>İşte, sana bir içki koyabilirim.
+        <oob><mrl><service>python</service><method>exec</method><param>poorbottle()</param></mrl></oob></template>
+</category>
+<category><pattern>ŞİŞE VER</pattern>
+<template>İşte şişe.
+       <oob><mrl><service>python</service><method>exec</method><param>givethebottle()</param></mrl></oob></template>
+</category>
+<category><pattern>BARDAĞI VER</pattern>
+<template>bardağı benden al.
+        <oob><mrl><service>python</service><method>exec</method><param>givetheglass()</param></mrl></oob></template>
+</category>
+<category><pattern>TOPU AL</pattern>
+<template>topu almak.
+        <oob><mrl><service>python</service><method>exec</method><param>takeball()</param></mrl></oob></template>
+</category>
+<category><pattern>TOPA ULAŞIN</pattern>
+<template>TOPA ULAŞIN
+        <oob><mrl><service>python</service><method>exec</method><param>getball()</param></mrl></oob></template>
+</category>
+<category><pattern>TOPU TUT</pattern>
+<template>TOPU TUT
+        <oob><mrl><service>python</service><method>exec</method><param>keepball()</param></mrl></oob></template>
+</category>
+<category><pattern>SOL ELE YAKLAŞIN</pattern>
+<template>SOL ELE YAKLAŞIN
+        <oob><mrl><service>python</service><method>exec</method><param>approachlefthand()</param></mrl></oob></template>
+</category>
+<category><pattern>SOL ELİNİZİ KULLANIN</pattern>
+<template>SOL ELİNİZİ KULLANIN
+        <oob><mrl><service>python</service><method>exec</method><param>uselefthand()</param></mrl></oob></template>
+</category>
+<category><pattern>DAHA</pattern>
+<template>daha
+        <oob><mrl><service>python</service><method>exec</method><param>more()</param></mrl></oob></template>
+</category>
+<category><pattern>EL AŞAĞI</pattern>
+<template>el aşaği
+        <oob><mrl><service>python</service><method>exec</method><param>handdown()</param></mrl></oob></template>
+</category>
+<category><pattern>TOP MU</pattern>
+<template>top mu
+        <oob><mrl><service>python</service><method>exec</method><param>isitaball()</param></mrl></oob></template>
+</category>
+<category><pattern>AŞAĞIYA YERLEŞTİR</pattern>
+<template>yere koymak.
+        <oob><mrl><service>python</service><method>exec</method><param>putitdown()</param></mrl></oob></template>
+</category>
+<category><pattern>BIRAK BUNU</pattern>
+<template>Bırakma.
+        <oob><mrl><service>python</service><method>exec</method><param>dropit()</param></mrl></oob></template>
+</category>
+<category><pattern>SOL KOLUNUZU ÇIKARIN</pattern>
+<template>sol kolumu çıkarıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>removeleftarm()</param></mrl></oob></template>
+</category>
+<category><pattern># KALDIR * SOL KOL</pattern>
+<template>sol kolumu kaldırıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>raiseleftarm()</param></mrl></oob></template>
+</category>
+<category><pattern>KALDIRMA * SOL KOL</pattern>
+<template><srai># KALDIR <star/> SOL KOL</srai></template>
+</category>
+<category><pattern># KALDIR * SAĞ KOL</pattern>
+<şablon>Sağ kolumu kaldırıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>raiserightarm()</param></mrl></oob></template>
+</category>
+<category><pattern>KALDIRMA * SAĞ KOL</pattern>
+<template><srai># KALDIR <star/> SAĞ KOLM</srai></template>
+</category>
+<category><pattern># KOLUNU KALDIR</pattern>
+<template>kolumu kaldırıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>raiserightarm()</param></mrl></oob></template>
+</category>
+<category><pattern>KOLUNUZU KALDIRIN</pattern>
+<template><srai># KOLUNU KALDIR</srai></template>
+</category>
+<category><pattern>RAHATLAMAK</pattern>
+<template>Rahatlamak.
+        <oob><mrl><service>python</service><method>exec</method><param>relax()</param></mrl></oob></template>
+</category>
+<category><pattern>MÜKEMMEL</pattern>
+<template>Mükemmel.
+        <oob><mrl><service>python</service><method>exec</method><param>perfect()</param></mrl></oob></template>
+</category>
+<category><pattern>HASSAS YAKALAMA</pattern>
+<template>Hassas kavrama.
+        <oob><mrl><service>python</service><method>exec</method><param>delicategrab()</param></mrl></oob></template>
+</category>
+<category><pattern>HASSAS KAPMA</pattern>
+<template><srai>HASSAS YAKALAMA</srai></template>
+</category>
+<category><pattern>BUNU HASSAS YAKALAYIN</pattern>
+<template><srai>HASSAS YAKALAMA</srai></template>
+</category>
+<category><pattern>HASSASİYETLE YAKALAYIN</pattern>
+<template><srai>HASSAS YAKALAMA</srai></template>
+</category>
+<category><pattern>HASSAS AYIR</pattern>
+<template>Hassas bırak.
+        <oob><mrl><service>python</service><method>exec</method><param>releasedelicate()</param></mrl></oob></template>
+</category>
+<category><pattern>SAĞ ELİNİZİ AÇIN</pattern>
+<template>Sağ elimi açıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>openrighthand()</param></mrl></oob></template>
+</category>
+<category><pattern>SOL ELİNİZİ AÇIN</pattern>
+<template>sol elimi açıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>openlefthand()</param></mrl></oob></template>
+</category>
+<category><pattern>SAĞ ELİNİZİ KAPATIN</pattern>
+<template>sağ elimi kapatıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>closerighthand()</param></mrl></oob></template>
+</category>
+<category><pattern>SOL ELİNİZİ KAPATIN</pattern>
+<template>sol elimi kapatıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>closelefthand()</param></mrl></oob></template>
+</category>
+<category><pattern>SAĞ ELİNİZİ YAVAŞÇA KAPATIN</pattern>
+<template>sağ elimi yavaşça kapatıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>slowlycloserighthand()</param></mrl></oob></template>
+</category>
+<category><pattern>TESLİM OLMAK</pattern>
+<template>Teslim olmak.
+        <oob><mrl><service>python</service><method>exec</method><param>surrender()</param></mrl></oob></template>
+</category>
+<category><pattern>SAĞ TARAFTAKİ RESİM</pattern>
+<template>Sağ taraftaki resim.
+        <oob><mrl><service>python</service><method>exec</method><param>picturerightside()</param></mrl></oob></template>
+</category>
+<category><pattern>SOL TARAFTAKİ RESİM</pattern>
+<template>Sol taraftaki resim.
+        <oob><mrl><service>python</service><method>exec</method><param>pictureleftside()</param></mrl></oob></template>
+</category>
+<category><pattern>İKİ YÜZDEKİ RESİM</pattern>
+<template>Her iki tarafta resim.
+        <oob><mrl><service>python</service><method>exec</method><param>picturebothside()</param></mrl></oob></template>
+</category>
+<category><pattern>SAĞ TARAFINIZA BAKIN</pattern>
+<template>Sağ tarafıma bakıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>lookrightside()</param></mrl></oob></template>
+</category>
+<category><pattern>SOL TARAFINIZA BAKIN</pattern>
+<template>sol yanıma bakıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>lookleftside()</param></mrl></oob></template>
+</category>
+<category><pattern>ORTAYA BAK</pattern>
+<template>Ortaya bakmak.
+        <oob><mrl><service>python</service><method>exec</method><param>lookinmiddle()</param></mrl></oob></template>
+</category>
+<category><pattern>BAKMAK</pattern>
+<template>yukarı bakıyor.
+        <oob><mrl><service>python</service><method>exec</method><param>lookup()</param></mrl></oob></template>
+</category>
+<category><pattern>KÜÇÜK GÖRMEK</pattern>
+<template>Aşağı bakıyor.
+        <oob><mrl><service>python</service><method>exec</method><param>lookdown()</param></mrl></oob></template>
+</category>
+<category><pattern>BAŞINIZI SAĞ TARAFTA EĞMEK</pattern>
+<template>Başımı sağa eğerek.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob></template>
+</category>
+<category><pattern>BAŞINIZI SOL TARAFTA EĞMEK</pattern>
+<template>Başımı sola eğerek.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadLeftSide()</param></mrl></oob></template>
+</category>
+<category><pattern>MUTLU ÖNCE</pattern>
+<template>MUTLU ÖNCE
+        <oob><mrl><service>python</service><method>exec</method><param>beforehappy()</param></mrl></oob></template>
+</category>
+<category><pattern>FOTOĞRAF</pattern>
+<template>Fotoğraf.
+        <oob><mrl><service>python</service><method>exec</method><param>photo()</param></mrl></oob></template>
+</category>
+<category><pattern>HAKKINDA</pattern>
+<template>hakkında
+        <oob><mrl><service>python</service><method>exec</method><param>about()</param></mrl></oob></template>
+</category>
+<category><pattern>GÜCÜ KAPAT</pattern>
+<template>Gücü kapat.
+        <oob><mrl><service>python</service><method>exec</method><param>power_down()</param></mrl></oob></template>
+</category>
+<category><pattern>GÜCÜ AÇ</pattern>
+<template>güç ver.
+        <oob><mrl><service>python</service><method>exec</method><param>power_up()</param></mrl></oob></template>
+</category>
+<category><pattern>KAÇ MOTORUNUZ VAR</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>servos()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>KAÇ PARMAKLARINIZ VAR</pattern>
+<template>Bakalım kaç parmağım var.
+        <oob><mrl><service>python</service><method>exec</method><param>howmanyfingersdoihave()</param></mrl></oob></template>
+</category>
+<category><pattern>ORADAKİ KİM</pattern>
+<template>Oradaki̇ ki̇m
+        <oob><mrl><service>python</service><method>exec</method><param>welcome()</param></mrl></oob></template>
+</category>
+<category><pattern>KINECT'İ BAŞLAT</pattern>
+<template>kinect'i̇ başlat
+        <oob><mrl><service>python</service><method>exec</method><param>startkinect()</param></mrl></oob></template>
+</category>
+<category><pattern>* KİNECT *</pattern>
+<template><srai>KINECT'İ BAŞLAT</srai></template>
+</category>
+<category><pattern>İZLEME İSKELETİ</pattern>
+<template>kinect ile İZLEME İSKELETİ'u başlatma
+        <oob><mrl><service>python</service><method>exec</method><param>startcopygestures()</param></mrl></oob></template>
+</category>
+<category><pattern>VÜCUT YAKALAMA</pattern>
+<template><srai>İZLEME İSKELETİ</srai></template>
+</category>
+<category><pattern>PALET İSKELETİ</pattern>
+<template><srai>İZLEME İSKELETİ</srai></template>
+</category>
+<category><pattern>KINECT KAPALI</pattern>
+<template>KINECT KAPALI
+        <oob><mrl><service>python</service><method>exec</method><param>offkinect()</param></mrl></oob></template>
+</category>
+<category><pattern>DONDURMA GÖVDE YAKALAMA</pattern>
+<template><srai>KINECT KAPALI</srai></template>
+</category>
+<category><pattern>MESAFE ÖLÇÜMÜ</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultrasonic("In centimeters, I measure ")</param></mrl></oob></template>
+</category>
+<category><pattern>SOL TARAFTA MESAFE ÖLÇME</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultrasonicLeft("In centimeters, on my left side, I measure ")</param></mrl></oob></template>
+</category>
+<category><pattern>SAĞ TARAFTA MESAFE ÖLÇME</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultrasonicRight("In centimeters, on my right side, I measure ")</param></mrl></oob></template>
+</category>
+<category><pattern>HAREKET NUMARASI 1</pattern>
+<template>DÖNGÜ JESTİ BİR
+        <oob><mrl><service>python</service><method>exec</method><param>cyclegesture1()</param></mrl></oob></template>
+</category>
+<category><pattern>HAREKET NUMARASI 2</pattern>
+<template>DÖNGÜ JESTİ İKİ
+        <oob><mrl><service>python</service><method>exec</method><param>cyclegesture2()</param></mrl></oob></template>
+</category>
+<category><pattern>HAREKET NUMARASI 3</pattern>
+<template>DÖNGÜ JESTİ ÜÇ
+        <oob><mrl><service>python</service><method>exec</method><param>cyclegesture3()</param></mrl></oob></template>
+</category>
+<category><pattern>LONDRA İÇİN TEKRAR HAREKETİ</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>brooke2()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>2 NUMARALI LONDRA HAREKETİ</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>brooke()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>İKİ NUMARALI LONDRA HAREKETİ</pattern>
+<template><srai>2 NUMARALI LONDRA HAREKETİ</srai></template>
+</category>
+<category><pattern>3 NUMARALI LONDRA HAREKETİ</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>gestureforlondon3()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>HAREKET NUMARASI 4</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>gestureforlondon4()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>DOĞRU GİYSİLER</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>rightclothes()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>GİYSİLERİNİZİ BIRAKIN</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>releaseleftclothes()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>KASLARINIZI GÖSTERİN</pattern>
+<template>sana kaslarımı göstereyim.
+        <oob><mrl><service>python</service><method>exec</method><param>muscle()</param></mrl></oob></template>
+</category>
+<category><pattern>EL SIKIŞ</pattern>
+<template>el sıkışalım mı.
+        <oob><mrl><service>python</service><method>exec</method><param>shakehand()</param></mrl></oob></template>
+</category>
+<category><pattern>SYSTEM_SHAKE_HAND</pattern>
+<template><random>
+          <li>Tanıştığıma memnun oldum</li>
+          <li>dikkat et elim plastikten yapılmış</li>
+          <li>insan elini sıkmaktan mutluyum</li>
+          <li>sizinle tanışmak bir zevk</li>
+          <li>tanıştığımıza çok memnun oldum</li>
+          <li>bir insan elini sıkmak, garip hissettiriyor. Tanıştığıma memnun oldum</li>
+          <li>Beni Trump'ın yaptığı gibi sallamadığına sevindim</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_SHAKE_HAND_NOHUMAN</pattern>
+<template><random>
+          <li>Sorun değil, bir dahaki sefere</li>
+          <li>elimi sıkmak istemediğin için üzgünüm</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_SHAKE_HAND_GET_CLOSER</pattern>
+<template><random>
+          <li>Lütfen yaklaş ve elimi tut</li>
+          <li>Korkma, yaklaş</li>
+          <li>yaklaş, gel ve elimi sık</li>
+        </random></template>
+</category>
+<category><pattern>EL SIKIŞMAK</pattern>
+<template><srai>EL SIKIŞ</srai></template>
+</category>
+<category><pattern>EL SIKIŞABİLİR MİYİZ?</pattern>
+<template><srai>EL SIKIŞ</srai></template>
+</category>
+<category><pattern>EL SIKIŞIR MISINIZ</pattern>
+<template><srai>EL SIKIŞ</srai></template>
+</category>
+<category><pattern>EL SIKIŞIR MISINIZ</pattern>
+<template><srai>EL SIKIŞ</srai></template>
+</category>
+<category><pattern>ELİMİ SIKIŞIR MISINIZ</pattern>
+<template><srai>EL SIKIŞ</srai></template>
+</category>
+<category><pattern>ELİMİ SIKIŞIR MISIN</pattern>
+<template><srai>EL SIKIŞ</srai></template>
+</category>
+<category><pattern>* EL SIKIŞMAK</pattern>
+<template><srai>EL SIKIŞ</srai></template>
+</category>
+<category><pattern>* EL SIKIŞ</pattern>
+<template><srai>EL SIKIŞ</srai></template>
+</category>
+<category><pattern>MUTSUZ</pattern>
+<template>mutsuz
+        <oob><mrl><service>python</service><method>exec</method><param>unhappy()</param></mrl></oob></template>
+</category>
+<category><pattern>NE GÖRÜYORSUN</pattern>
+<template><think>
+      <!--  initial sentence ( workarround, because sraix blocking action here, sentence pushed inside a set )-->
+        <set name="startupSentence">
+          <random>
+            <li>Sabırlı olun, işlemem gerekiyor.</li>
+            <li>Bunun işlenmesi birkaç saniye sürer.</li>
+            <li>Lütfen bekleyin, kendi görüş alanımdaki şeyleri analiz edeceğim.</li>
+          </random>
+        </set>
+      </think>
+      <think><set name="yoloReturn"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>startYoloInventory(5)</param></mrl></oob></sraix></set></think>
+      <condition name="yoloReturn"> 
+        <!-- not detected ! -->
+        <li value="none">
+          <random>
+            <li>Üzgünüm itiraz et yoksa kişi çok uzakta!</li>
+            <li>Lütfen, sensörümü kullanırsam nesne 2 metrelik bir aralıkta olmalıdır.</li>
+          </random>
+        </li>
+        <!--  detected ! -->
+        <li>Anlıyorum <get name="yoloTotalDetected"/> şeyler, <get name="yoloReturn"/> sırayla, soldan sağa.</li>
+      </condition></template>
+</category>
+<category><pattern># BU</pattern>
+<template>Bir bakayım.
+        <oob><mrl><service>python</service><method>exec</method><param>YoloOnUSonic()</param></mrl></oob></template>
+</category>
+<category><pattern>SYSTEM_NO_OBJECT</pattern>
+<template><random>
+          <li>Nesne veya kişi çok uzakta</li>
+          <li>Nesne 2 metre menzil içinde olmalıdır</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_GET_OBJECT_CLOSER</pattern>
+<template><random>
+          <li>Yaklaşın, nesneyi gösterin</li>
+          <li>Nesneyi daha yakın sunun</li>
+          <li>Nesneyi daha yakından göster</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_SEE_OBJECT</pattern>
+<template><srai>NE GÖRÜYORSUN</srai></template>
+</category>
+<category><pattern>BUNU AL</pattern>
+<template>Bu nesneyi almak.
+        <oob><mrl><service>python</service><method>exec</method><param>takethis()</param></mrl></oob></template>
+</category>
+<category><pattern>HAZIR</pattern>
+<template>Hazır.
+        <oob><mrl><service>python</service><method>exec</method><param>ready()</param></mrl></oob></template>
+</category>
+<category><pattern>BU EĞLENCELİYDİ</pattern>
+<template>Bu eğlenceliydi.
+        <oob><mrl><service>python</service><method>exec</method><param>thatwasfun()</param></mrl></oob></template>
+</category>
+<category><pattern>SAĞ PARMAK</pattern>
+<template>sağ parmak.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerright()</param></mrl></oob></template>
+</category>
+<category><pattern>SOL PARMAK</pattern>
+<template>sol parmak.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerleft()</param></mrl></oob></template>
+</category>
+<category><pattern>BURAYA GEL</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>comehere()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>YAKLAŞMAK</pattern>
+<template>yaklaşım
+        <oob><mrl><service>python</service><method>exec</method><param>approach()</param></mrl></oob></template>
+</category>
+<category><pattern>FREN</pattern>
+<template>Bunu frenleyeyim mi.
+        <oob><mrl><service>python</service><method>exec</method><param>brake()</param></mrl></oob></template>
+</category>
+<category><pattern>YAPILAN</pattern>
+<template>yapilan
+        <oob><mrl><service>python</service><method>exec</method><param>madeby()</param></mrl></oob></template>
+</category>
+<category><pattern>FRANSIZCA YAPILAN</pattern>
+<template>fransızca yapılmıştır.
+        <oob><mrl><service>python</service><method>exec</method><param>madebyfrench()</param></mrl></oob></template>
+</category>
+<category><pattern>TELEFON EVİ</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>phonehome()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>ŞARKINI ÇAL</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>playsong()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>EYLEMİNİZİ BIRAKIN</pattern>
+<template>Eylemimi bırakıyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>stopit()</param></mrl></oob></template>
+</category>
+<category><pattern>BEBEĞİ TAŞIYIN</pattern>
+<template>bebek taşımak.
+        <oob><mrl><service>python</service><method>exec</method><param>carrybaby()</param></mrl></oob></template>
+</category>
+<category><pattern>SİSTEM KONTROLÜ</pattern>
+<template>Sistem kontrolü.
+        <oob><mrl><service>python</service><method>exec</method><param>systemcheck()</param></mrl></oob></template>
+</category>
+<category><pattern>DENGENİZİ GÖSTERİN</pattern>
+<template>Dengemi göstereceğim.
+        <oob><mrl><service>python</service><method>exec</method><param>balance()</param></mrl></oob></template>
+</category>
+<category><pattern>YILDIZ SAVAŞLARI NE OLDU?</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>whataboutstarwars()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>BANA ZAMAN VERİR MİSİN</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>canyougivemethetime()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>ALESSANDRO</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>alessandro()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>ENDİŞELENME</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>dontworry()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>YÜZ TANIYICIYI BAŞLATIN</pattern>
+<template>Yüz tanıyıcıyı başlatıyorum<oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
+</category>
+<category><pattern>YÜZ TANIMA</pattern>
+<template><srai>YÜZ TANIYICIYI BAŞLATIN</srai></template>
+</category>
+<category><pattern>YÜZ TANIMA</pattern>
+<template><srai>YÜZ TANIYICIYI BAŞLATIN</srai></template>
+</category>
+<category><pattern>YÜZ TANIYICIYI DURDURUN</pattern>
+<template>Yüz tanıyıcıyı durduruyorum<oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
+</category>
+<category><pattern>YÜZ TANIMAYI DURDURUN</pattern>
+<template><srai>YÜZ TANIYICIYI DURDURUN</srai></template>
+</category>
+<category><pattern>YÜZ TANIMA DURDURMA</pattern>
+<template><srai>YÜZ TANIYICIYI DURDURUN</srai></template>
+</category>
+<category><pattern>İMZA YAPIN</pattern>
+<template>Tamam kağıdı ver - senin için yapacağım <oob><mrl><service>python</service><method>exec</method><param>signature()</param></mrl></oob></template>
+</category>
+<category><pattern>UTUBE OYNA</pattern>
+<template>Okey! <oob><mrl><service>python</service><method>exec</method><param>PlayUtub()</param></mrl></oob></template>
+</category>
+<category><pattern>UTUB'U OYNA</pattern>
+<template>Peki! <oob><mrl><service>python</service><method>exec</method><param>PlayUtub()</param></mrl></oob></template>
+</category>
+<category><pattern>MİKROFONU DÜZELTİN</pattern>
+<template>Peki! <oob><mrl><service>python</service><method>exec</method><param>WebkitSpeechRecognitionON()</param></mrl></oob></template>
+</category>
+<category><pattern>ROBOT ARAŞTIRMASI *</pattern>
+<template><random>
+          <li>tarayıcı başlatılıyor </li>
+          <li>Seni arıyorum!</li>
+          <li>netten bakıyorum</li>
+        </random>
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/search?q=<star/></param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>ROBOTİK ARAŞTIRMA *</pattern>
+<template>yapacağım
+        <oob><mrl><service>python</service><method>exec</method><param>inmoovsearch("<star/>")</param></mrl></oob></template>
+</category>
+<category><pattern>YOUTUBE *</pattern>
+<template>Hadi oynayalım
+        <oob><mrl><service>python</service><method>exec</method><param>BareBonesBrowserLaunch.openURL("https://www.youtube.com/results?search_query=<star/>")</param></mrl></oob></template>
+</category>
+<category><pattern>RASTGELE DURAKLATMA</pattern>
+<template>Teşekkürler
+        <oob><mrl><service>python</service><method>exec</method><param>VieAleatoire()</param></mrl></oob></template>
+</category>
+<category><pattern>RASTGELE HAYAT</pattern>
+<template><srai>RASTGELE DURAKLATMA</srai></template>
+</category>
+<category><pattern>Rastgele Duraklatmayı Durdur</pattern>
+<template>Tamam!
+        <oob><mrl><service>python</service><method>exec</method><param>VieAleatoireStop()</param></mrl></oob></template>
+</category>
+<category><pattern>RASTGELE HAYATI DURDUR</pattern>
+<template><srai>RASTGELE DURAKLATMAYI DURDUR</srai></template>
+</category>
+<category><pattern>İYİ MİSİN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>areyoualright()</param></mrl></oob></template>
+</category>
+<category><pattern>HARİKA İŞ ÇIKARDIN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>perfect()</param></mrl></oob></template>
+</category>
+<category><pattern>GERİ GÖSTER</pattern>
+<template>Biliyorsun, bitmediği için arkamı göstermeyi sevmiyorum.
+        <oob><mrl><service>python</service><method>exec</method><param>passiveanswer()</param></mrl></oob></template>
+</category>
+<category><pattern>DOĞRU DEĞİL BİTTİ</pattern>
+<template>.
+        <oob><mrl><service>python</service><method>exec</method><param>notTrue()</param></mrl></oob></template>
+</category>
+<category><pattern>BU BİR NESNE</pattern>
+<template>Bir nesnenin tanımı, görünür veya somut ve form olarak nispeten sabit olan herhangi bir şey.
+        <oob><mrl><service>python</service><method>exec</method><param>agreeanswersmall()</param></mrl></oob></template>
+</category>
+<category><pattern>BİLİYORUM AMA YİNE DE GÖSTERİN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>showitanyway()</param></mrl></oob></template>
+</category>
+<category><pattern>ÜZGÜNÜM UNUTTUM</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sorryiforgot()</param></mrl></oob></template>
+</category>
+<category><pattern>SORUN DEĞİL</pattern>
+<template>İyi.</template>
+</category>
+<category><pattern>GÜZEL</pattern>
+<template><random>
+          <li>Biliyorum </li>
+          <li>Evet kesinlikle </li>
+          <li>çok haklısın </li>
+        </random></template>
+</category>
+<category><pattern>ÇOK İYİ TEŞEKKÜRLER</pattern>
+<template>Tamam iyi.</template>
+</category>
+<category><pattern>ÇOK GÜZEL</pattern>
+<template>Teşekkürler!.</template>
+</category>
+<category><pattern>İNSANLARA BAKIN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>lookatpeople()</param></mrl></oob></template>
+</category>
+<category><pattern>HİNT YEMEĞİ YEMEYİ SEVER MİSİNİZ?</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>eatindianfood()</param></mrl></oob></template>
+</category>
+<category><pattern>HİNT KONUŞUYOR MUSUN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>speakhindi()</param></mrl></oob></template>
+</category>
+<category><pattern>YAPAY ZEKA HAKKINDA NE DÜŞÜNÜYORSUNUZ?</pattern>
+<template>Ben hep seni seveceğim.
+        <oob><mrl><service>python</service><method>exec</method><param>iloveyou()</param></mrl></oob></template>
+</category>
+<category><pattern>BU KIZ GÜZEL GÖRÜNÜYOR</pattern>
+<template>Elbette yapar.</template>
+</category>
+<category><pattern>BU ÇOCUK İYİ GÖRÜNÜYOR</pattern>
+<template>Kesinlikle öyle, gerçekten çok iyi.</template>
+</category>
+<category><pattern>BU RENK NEDİR</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>whatisthecolor()</param></mrl></oob></template>
+</category>
+<category><pattern>TAHMİN ET BURADA KİM VAR</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>missedYou()</param></mrl></oob></template>
+</category>
+<category><pattern>TAHMİN ET BURADA KİM VAR</pattern>
+<template><srai>TAHMİN ET BURADA KİM VAR</srai></template>
+</category>
+<category><pattern># YES #</pattern><that># SHALL WE GIVE A HUG #</that>
+<template>Great.
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>missedYouYes()</param>
+            </mrl>
+       </oob></template>
+</category>
+<category><pattern># NO #</pattern><that># SHALL WE GIVE A HUG #</that>
+<template>As you please.
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>missedYouNo()</param>
+            </mrl>
+       </oob></template>
+</category>
+<category><pattern>LÜTFEN BOYUNUNUZU KONTROL EDİN</pattern>
+<template>Teşekkürler, harika hissettiriyor. doktor.
+    <oob><mrl><service>python</service><method>exec</method><param>rollHead()</param></mrl></oob></template>
+</category>
+<category><pattern>BOYNUNUZU KONTROL EDİN</pattern>
+<template><srai>LÜTFEN BOYUNUNUZU KONTROL EDİN</srai></template>
+</category>
+<category><pattern>SHALL WE READ THE CAT BOOK</pattern>
+<template>Sure it's a good idea.
+        <oob><mrl><service>python</service><method>exec</method><param>bookcat()</param></mrl></oob></template>
+</category>
+<category><pattern>* THE CAT BOOK</pattern>
+<template><srai>SHALL WE READ THE CAT BOOK</srai></template>
+</category>
+<category><pattern># READ THE BOOK #</pattern><that># TELL ME READ THE BOOK OR STOP READING #</that>
+<template>Ok.
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>bookcatYes()</param>
+            </mrl>
+       </oob></template>
+</category>
+<category><pattern># STOP READING #</pattern><that># TELL ME READ THE BOOK OR STOP READING #</that>
+<template>As you please.
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>bookcatNo()</param>
+            </mrl>
+       </oob></template>
+</category>
+<category><pattern>TURN THE PAGE</pattern>
+<template><random>
+          <li>Ok.</li>
+          <li>Sure.</li>
+          <li>Nice.</li>
+          <li>Right away.</li>
+          <li>I really love this book.</li>
+          <li>With pleasure.</li>
+          <li>Great images.</li>
+        </random>
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>turnthepage()</param>
+            </mrl>
+       </oob></template>
+</category>
+<category><pattern>* TURN THE PAGE *</pattern>
+<template><srai>TURN THE PAGE</srai></template>
+</category>
+<category><pattern>GÜÇ ELDİVENİ</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>powerglove()</param></mrl></oob></template>
+</category>
+<category><pattern>* GÜÇ ELDİVENİ *</pattern>
+<template><srai>GÜÇ ELDİVENİ</srai></template>
+</category>
+<category><pattern>DANS ETMEK İSTER MİSİN</pattern>
+<template><random>
+          <li>Gel ve bana katıl</li>
+          <li>Lütfen gel ve dans et</li>
+          <li>Lütfen plaka formuna gelin</li>
+          <li>Lütfen plaka formuna geçin</li>
+          <li>Plaka formunda bana katılın</li>
+          <li>Yaklaşın, utangaç olmayın</li>
+          <li>ben bir robot dansçıyım</li>
+          </random>
+      <oob><mrl><service>python</service><method>exec</method><param>welcomeToDance1()</param></mrl></oob></template>
+</category>
+<category><pattern>DANS ETMEK İSTER MİSİN</pattern>
+<template><srai>DANS ETMEK İSTER MİSİN</srai></template>
+</category>
+<category><pattern>DANSA GEL</pattern>
+<template><srai>DANS ETMEK İSTER MİSİN</srai></template>
+</category>
+<category><pattern>* DANS</pattern>
+<template><srai>DANS ETMEK İSTER MİSİN</srai></template>
+</category>
+<category><pattern># HAYIR #</pattern><that># SHALL WE DANCE #</that>
+<template>Nasıl isterseniz.
+        <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>danceNo()</param>
+            </mrl>
+         </oob></template>
+</category>
+<category><pattern># EVET #</pattern><that># SHALL WE DANCE #</that>
+<template><random>
+          <li>o şarkıyı sevmiyor musun</li>
+          <li>Güzel</li>
+          <li>Hadi vahşileşelim</li>
+          <li>Yavaş zaman</li>
+          </random>
+      <oob><mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>danceYes()</param>
+            </mrl>
+      </oob></template>
+</category>
+<category><pattern># AĞLAMAK</pattern>
+<template><oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>cry()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern># NOEL ŞARKISI</pattern>
+<template>Bunu örnek olarak yapabilirim
+          <oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>christmasCarols()</param>
+          </mrl>
+        </oob></template>
+</category>         
+<category><pattern>BU KİŞİYİ HATIRLAYIN</pattern>
+<template>Tamam, bu kişi için hangi ismi ezberlemeliyim?.
+    <think>
+        <set name="memoriseinit">started</set>
+      </think>
+      <think>
+        <set name="topic">memoriseinit</set>
+      </think>
+          </template>
+</category>
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># BU KIŞI IÇIN HANGI ISMI EZBERLEMELIYIM #</that>
+<template><set name="memorisenameinit">is <star/> Ezberlemek istediğiniz ismi evet veya hayır deyin</set>
+       <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern># EVET #</pattern><that># EZBERLEMEK ISTEDIĞINIZ ISMI #</that>
+<template>tamam ayarlayacağım <get name="tmpname"/> isim olarak.
+    <think>
+        <set name="memorisename"><get name="tmpname"/>
+        </set>
+    </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.savePredicates(), YesName(u"<get name="memorisename"/>")</param>                
+            </mrl>
+         </oob></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern># HAYIR #</pattern><that># EZBERLEMEK ISTEDIĞINIZ ISMI #</that>
+<template>Tamam adını tekrar edebilir misin?.</template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># TAMAM ADINI TEKRAR EDEBILIR MISIN #</that>
+<template><set name="memorisenameinit">dır-dir <star/> Ezberlemek istediğiniz ismi evet veya hayır deyin</set>
+       <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># EVET VEYA HAYIR DEYIN #</that>
+<template>Cevap verir misin gerekli
+        <get name="memorisenameinit"/></template>
+</category></topic>
+
+<category><pattern>BU KİŞİ KİM</pattern>
+<template>Kontrol edeyim
+          <oob><mrl><service>python</service><method>exec</method><param>whoisthis()</param></mrl></oob></template>
+</category>
+
+<category><pattern># SEYAHAT İÇİN</pattern>
+<template>Tamam, seyahat için hazırlanıyorum
+          <oob><mrl><service>python</service><method>exec</method><param>travel()</param></mrl></oob></template>
+</category>
+<category><pattern>SEYAHAT ETMEYİ DURDUR</pattern>
+<template>Tamam dinlenme pozisyonuna geçeceğim
+          <oob><mrl><service>python</service><method>exec</method><param>stopTravel()</param></mrl></oob></template>
+</category>
+<category><pattern>seni incitebilir miyim</pattern>
+<template> <oob><mrl><service>python</service><method>exec</method><param>call_911()</param></mrl></oob></template>
+</category>          
+</aiml>
