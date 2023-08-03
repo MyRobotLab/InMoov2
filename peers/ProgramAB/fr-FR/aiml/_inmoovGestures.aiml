@@ -822,6 +822,9 @@
 <category><pattern>ANALYSE DE VISAGE</pattern>
 <template>Je démarre le module d'analyse des visages. <oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
 </category>
+<category><pattern>ARRÊTE L ANALYSE DE VISAGE</pattern>
+<template>J'arrête le module d'analyse des visages. <oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
+</category>
 <category><pattern>APPRENTISSAGE DE VISAGE</pattern>
 <template>Je démarre le module d'apprentissage des visages. <srai>NEW_INIT_USER</srai></template>
 </category>
