@@ -871,9 +871,9 @@
         </random>
         <oob>
           <mrl>
-            <service>python</service>
-            <method>exec</method>
-            <param>BareBonesBrowserLaunch.openURL("https://encrypted.google.com/#q=<star/>")</param>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/search?q=<star/></param>
           </mrl>
         </oob></template>
 </category>
