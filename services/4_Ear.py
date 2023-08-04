@@ -13,7 +13,7 @@ def initEar():
   i01_ear.setWakeWordTimeout(5000)
   if lockPhrase==None:
     i01_ear.setWakeWord('wake up')
-  python.subscribe(i01_ear.getName(),"recognized")  
+  python.subscribe(i01_ear.getName(),"publishRecognized")  
 
 #if runtime.isStarted('i01.ear'):
   #ear=i01_ear
@@ -37,11 +37,9 @@ def publishRecognized(text):
     global lastRecognized
     lastRecognized=text
     #if i01.RobotIsStarted:
-    if runtime.isStarted('i01.fsm'):
-      if i01_fsm.getCurrent()=="applyingConfig" or "systemCheck":
-        if runtime.isStarted('i01.chatBot'):
-          if i01_fsm.getCurrent()=="sleeping" and unicode(text,'utf-8')==lockPhrase:sleepModeWakeUp()
-          if i01_fsm.getCurrent()=="awake" and text!=lockPhrase:
-            if runtime.isStarted('i01.chatBot'):
-              i01_chatBot.getResponse(text)
-            humanDetected()
+    #if unicode(text,'utf-8')==unlockInsult:wakeUpModeInsult()
+    #if runtime.isStarted('i01.chatBot'):
+      #if i01_chatBot.onText()=="SYSTEM_EVENT WAKE" and unicode(text,'utf-8')==lockPhrase:sleepModeWakeUp()
+      #if i01_chatBot.onText()=="SYSTEM_EVENT WAKE" and text!=lockPhrase:
+        #i01_chatBot.getResponse(text)
+        #humanDetected()
