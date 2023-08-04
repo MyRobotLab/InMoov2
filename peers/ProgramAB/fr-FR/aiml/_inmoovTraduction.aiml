@@ -93,6 +93,27 @@
   </category>
   <category>
     <pattern>AZURE_ERROR_3</pattern>
-    <template>J ai un problème de connection au server .</template>
+    <template>J'ai un problème de connection au server .</template>
+  </category>
+  <category><pattern>PASSE À L ANGLAIS</pattern>
+    <template>Je passe à l'anglais.
+    <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.setCurrentBotName("en-US"), runtime.setAllLocales("en-US"), i01_ear.getLocales(), i01_mouth.setVoice("Microsoft David Desktop"), i01_chatBot.startSession(str(i01_chatBot.getCurrentUserName())), i01_chatBot.setPredicate(str(i01_chatBot.getCurrentUserName()),"name",str(i01_chatBot.getCurrentUserName())), i01_chatBot.setPredicate(str(i01_chatBot.getCurrentUserName()),"botname",str(i01_chatBot.getPredicate(str(i01_chatBot.getCurrentUserName()))),"botname"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+        <think>
+          <set name="tmpname"><get name="name"/></set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession("human"), i01_chatBot.setPredicate("human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.savePredicates(), i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername"))), i01_chatBot.setPredicate(u"<get name="name"/>","img",u"../ProgramAB/<get name="name"/>.png"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+    </template>
   </category>
 </aiml>

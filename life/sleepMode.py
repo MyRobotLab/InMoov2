@@ -32,6 +32,7 @@ def sleepModeWakeUp():
     initPir()
     if pirWakeUp==1:
       sleepTimer.startClock()
+      i01_pir.disable()
     else:  
       i01_pir.disable()
   #if RobotIsStarted==1:
@@ -118,10 +119,9 @@ def sleepModeSleep():
     
 def wakeUpModeInsult():
   if runtime.isStarted('i01.ear'):
-    initEar()
     WaitXsecondBeforeRelaunchTracking=-10
+    i01_ear.setWakeWord('wake up')
     i01_ear.setAwake(True)
-    i01_ear.unsetWakeWord(unlockInsult)
     i01_ear.startRecording()
     if runtime.isStarted('i01.pir'):
       if pirWakeUp==1:
@@ -129,9 +129,9 @@ def wakeUpModeInsult():
         sleepTimer.startClock()
       else:
         i01_pir.disable()
-    
-    #if RobotIsStarted==1:
-    #if i01_fsm.getCurrent()=="applyingConfig" or "systemCheck":  
+    if runtime.isStarted('i01.chatBot'):
+      i01_chatBot.getResponse("FORGIVE ME")
+    #if RobotIsStarted==1:  
       if runtime.isStarted('i01.imageDisplay'):
         i01_imageDisplay.closeAll()
       if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Larson Scanner", 0, 255, 0, 25)
@@ -158,18 +158,18 @@ def sleepModeInsult():
   if runtime.isStarted('i01.ear'):
     initEar()
     i01_ear.setAwake(False)
+    #unlockInsult located in ear.py
+    i01_ear.setWakeWord(unlockInsult)
     if runtime.isStarted('i01.headTracking'):
       initTracking()
       stopTrackHumans()
-    if runtime.isStarted('i01.imageDisplay'):
-      i01_imageDisplay.closeAll()
-    #unlockInsult located in ear.py
-    i01_ear.setWakeWord(unlockInsult)
     i01.halfSpeed()
     rest()
     i01.waitTargetPos()
     #display sleeping robot on screen
     if runtime.isStarted('i01.imageDisplay'):
+      i01_imageDisplay.closeAll()
+      sleep(1)
       i01_imageDisplay.displayPic('resource/InMoov2/system/pictures/sleeping_2_1024-600.jpg')
     #head down
     if runtime.isStarted('i01.eyeLids'):
@@ -188,12 +188,9 @@ def sleepModeInsult():
     #restart pir poling
     if runtime.isStarted('i01.pir'):
       if pirWakeUp==1:
-        initPir()
-        i01_pir.enable()
-      else:
         i01_pir.disable()
     sleep(1)
-    if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Ironman", 255, 0, 0, 1)
+    if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Ironman", 255, 0, 0, 50)
     
 def welcomeMessage():
   if runtime.isStarted('i01.mouth'):
@@ -219,8 +216,8 @@ def humanDetected():
   if runtime.isStarted('i01.pir'):
     if pirWakeUp==1:
       initPir()
-      sleepTimer.restartClock()
-    if (not i01_headTracking and WaitXsecondBeforeRelaunchTracking>=5):
+      sleepTimer.restartClock()  
+    if (not runtime.isStarted('i01_headTracking') and WaitXsecondBeforeRelaunchTracking>=5):
       WaitXsecondBeforeRelaunchTracking=0
       if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Larson Scanner", 255, 0, 255, 25)
       if runtime.isStarted('i01.headTracking'):
@@ -254,4 +251,3 @@ def trackingTimerRoutine(timedata):
       stopTrackHumans()
       trackingTimer.stopClock()
     if runtime.isStarted('i01.neoPixel'):i01_neoPixel.stopAnimation()
-

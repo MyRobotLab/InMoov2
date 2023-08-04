@@ -10,19 +10,19 @@
   </category>
   <category>
     <pattern>PARLES TU ANGLAIS</pattern>
-    <template>Désolé, je ne parle pas du tout anglais. Alice, ma mère, est anglophone.</template>
+    <template>Oui bien sûr! <srai>PASSE À L ANGLAIS</srai></template>
   </category>
   <category>
     <pattern>DO YOU SPEAK ENGLISH</pattern>
-    <template>Sorry, I do not speak English at all. Alice, my mother, do.</template>
+    <template>Yes! <srai>PASSE À L ANGLAIS</srai></template>
   </category>
   <category>
     <pattern>YOU JUST SPOKE ENGLISH</pattern>
-    <template>Sorry, just this sentence. I can't speak more.</template>
+    <template>Sorry, just this sentence.</template>
   </category>
   <category>
     <pattern>YOU JUST SPOKE * ENGLISH</pattern>
-    <template>Sorry, just this sentence. I can't speak more.</template>
+    <template>Sorry, just this sentence.</template>
   </category>
   <category>
     <pattern>I DONT SPEAK FRENCH</pattern>

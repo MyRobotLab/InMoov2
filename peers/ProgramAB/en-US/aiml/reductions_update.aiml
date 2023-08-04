@@ -3406,7 +3406,7 @@
 <template><srai>BEST FRIEND</srai></template>
 </category>
 <category><pattern>DO YOU SPEAK FRENCH</pattern>
-<template><srai>LANGUAGE</srai></template>
+<template>Sure! <srai>SWITCH TO FRENCH</srai></template>
 </category>
 <category><pattern>HOW FAR IS IT TO *</pattern>
 <template><srai>DIRECTIONS TO <star/></srai></template>
