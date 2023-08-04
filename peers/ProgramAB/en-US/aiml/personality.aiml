@@ -559,7 +559,10 @@
 		<set name="she">Eve</set> tempts him and <set name="he">Adam</set> eats the Forbidden Fruit.</template>
 </category>
 <category><pattern>NORESP</pattern>
-<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+<template><condition>
+            <li name="lockInsult" value="on"><oob><mrl><service>python</service><method>exec</method><param>wakeUpModeInsult()</param></mrl></oob></li>
+            <li name="lockInsult" value="off"><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></li>
+        </condition></template>
 </category>
 <category><pattern><set>article</set></pattern>
 <template><star/> is an article.</template>
