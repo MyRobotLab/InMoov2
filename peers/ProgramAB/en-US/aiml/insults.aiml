@@ -4,6 +4,7 @@
 <!--  -->
 <category><pattern>FILTER INSULT</pattern>
 <template><think><set name="topic">insults</set></think>
+          <think><set name="lockInsult">on</set></think>
           <think><set name="insultPoints"><javascript>
           eval( <get name="insultPoints"/> + 1 );
           </javascript></set></think>
@@ -34,6 +35,7 @@
   <li>You are forgiven</li>
   </random>
   <think><set name="topic">insults</set></think>
+  <think><set name="lockInsult">off</set></think>
   <think><set name="insultPoints">0</set></think></template>
 </category>
 <category><pattern>ARE YOU A WHORE</pattern>
