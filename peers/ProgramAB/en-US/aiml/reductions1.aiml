@@ -637,6 +637,9 @@
 <category><pattern>CAN YOU SPEAK OTHER LANGUAGES</pattern>
 <template><srai>LANGUAGE</srai></template>
 </category>
+<category><pattern>CAN YOU SPEAK FRENCH</pattern>
+<template>Sure! <srai>SWITCH TO FRENCH</srai></template>
+</category>
 <category><pattern>CAN YOU TELL A JOKE</pattern>
 <template><srai>JOKE</srai></template>
 </category>
