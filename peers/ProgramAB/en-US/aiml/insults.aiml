@@ -20,6 +20,8 @@
 <template>You have insulted me <get name="insultPoints"/> time.<condition>
         <li name="insultPoints" value="2"> One more insult, and I won't speak with you.</li>
         <li name="insultPoints" value="3"> I won't speak with you, unless you say Forgive me.<srai>SPEAK_BLOCK_INSULT</srai></li>
+        <li name="insultPoints" value="4"> I won't speak with you, unless you say Forgive me.<srai>SPEAK_BLOCK_INSULT</srai></li>
+        <li name="insultPoints" value="5"> I won't speak with you, unless you say Forgive me.<srai>SPEAK_BLOCK_INSULT</srai></li>
       </condition></template>
 </category></topic>
 
@@ -32,7 +34,7 @@
   <li>You are forgiven</li>
   </random>
   <think><set name="topic">insults</set></think>
-  <think><set name="insultPoints">0</set></think><oob><mrl><service>python</service><method>exec</method><param>wakeUpModeInsult()</param></mrl></oob></template>
+  <think><set name="insultPoints">0</set></think></template>
 </category>
 <category><pattern>ARE YOU A WHORE</pattern>
 <template><srai>FILTER INSULT</srai></template>
