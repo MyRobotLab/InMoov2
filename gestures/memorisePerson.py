@@ -87,7 +87,7 @@ def takeMyPicture(name):
     opencv = runtime.start('i01.opencv', 'OpenCV')
     opencv.capture()
     i01_opencv.addFilter("SetImageROI")
-    sleep(3)
+    sleep(10)# Add delay if opencv error recordFrame()
     rect = i01_opencv.getFilter("SetImageROI") 
     # changing parameters
     x=0
