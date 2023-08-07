@@ -32,7 +32,7 @@ def initEar():
 
 global lastRecognized
 lastRecognized=""
-def publishRecognized(text):
+def onRecognized(text):
   if text!="":
     global lastRecognized
     lastRecognized=text
