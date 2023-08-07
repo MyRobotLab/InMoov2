@@ -8,7 +8,7 @@
 
 def shutdown():
   i01.speakBlocking(i01.localize("SHUTDOWN"))
-  sleep(2)
+  sleep(3)
   if runtime.isStarted('i01.head.eyelids'):
     i01_head.autoBlink(False)
     i01_head_eyelidLeft.moveTo(180)
