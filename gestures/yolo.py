@@ -11,7 +11,7 @@
 def onClassification(data):
     global last_item_found
     last_item_found = None
-    global classifications, last_item_found
+    global classifications
     classifications = data
     for key, value in data.items():
         #print(key)
