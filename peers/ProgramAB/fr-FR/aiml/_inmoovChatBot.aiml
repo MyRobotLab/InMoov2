@@ -318,11 +318,13 @@
           <li>Chouette! je suis réveillé.</li>
           <li>Ce fut une longue nuit, je suis éveillé désormais.</li>
         </random>
+        <oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
           <param>i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername")))</param>
         </mrl>
+        </oob>
     </template>
   </category>
   
