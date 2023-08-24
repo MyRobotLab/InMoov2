@@ -2858,7 +2858,13 @@ Ich bin ein Roboter der Inmuv Klasse. </template>
 <template>Hallo! <sr/></template>
 </category>
 <category><pattern>HALLO</pattern>
-<template>Hallo!</template>
+<template><random>
+            <li>Hallo <get name="name"/>, schön dich zu sehen!</li>
+            <li>Hallo, schön dich zu sehen <get name="name"/> !</li>
+            <li>Hallo <get name="name"/>, wie geht es dir?</li>
+            <li>Hallo! <get name="name"/>, ich kann dein Lächeln heute wirklich spüren.</li>
+            <li>Hallo! Es ist schön, Sie zu sehen <get name="name"/>.</li>
+        </random></template>
 </category>
 <category><pattern>HALLO <bot name="name"/></pattern>
 <template>Hallo <get name="name"/>!</template>

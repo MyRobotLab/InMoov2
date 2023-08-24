@@ -28,7 +28,7 @@
           FERME TA MAIN GAUCHE.<br/>
           DOUCEMENT FERME TA MAIN DROITE.<br/>
           DOUCEMENT FERME TA MAIN GAUCHE.<br/>
-          Vous pouvez trouver une liste plus longue dans la fenêtre python et encore bien plus dans data, programAB, aiml fichier.
+          Vous pouvez trouver une liste plus longue dans la fenêtre python et encore bien plus dans resource, programAB, aiml fichier.
           <oob>
         <mrl>
           <service>python</service><method>exec</method><param>printList_FR()</param>

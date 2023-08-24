@@ -82,4 +82,26 @@
 </template>
 </category>
 
+<category><pattern>SWITCH TO GERMAN</pattern>
+<template>Switching to German.
+    <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.setCurrentBotName("de-DE"), runtime.setAllLocales("de-DE"), i01_ear.getLocales(), i01_mouth.setVoice("Hans"), i01_chatBot.startSession(str(i01_chatBot.getCurrentUserName())), i01_chatBot.setPredicate(str(i01_chatBot.getCurrentUserName()),"name",str(i01_chatBot.getCurrentUserName())), i01_chatBot.setPredicate(str(i01_chatBot.getCurrentUserName()),"botname",str(i01_chatBot.getPredicate(str(i01_chatBot.getCurrentUserName()))),"botname"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+        <think>
+          <set name="tmpname"><get name="name"/></set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession("human"), i01_chatBot.setPredicate("human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.savePredicates(), i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername"))), i01_chatBot.setPredicate(u"<get name="name"/>","img",u"../ProgramAB/<get name="name"/>.png"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+</template>
+</category>
+
 </aiml>

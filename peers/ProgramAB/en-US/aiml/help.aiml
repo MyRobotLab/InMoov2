@@ -30,7 +30,7 @@
           CLOSE YOUR RIGHT HAND.<br/>
           CLOSE YOUR LEFT HAND.<br/>
           SLOWLY CLOSE YOUR RIGHT HAND.<br/>
-          You can view a longer list in the python tab, but you can find still a LOT more voice commands in the folder data, programAB, aiml files.
+          You can view a longer list in the python tab, but you can find still a LOT more voice commands in the folder resource, programAB, aiml files.
           <oob>
         <mrl>
           <service>python</service><method>exec</method><param>printList_EN()</param>

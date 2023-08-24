@@ -272,11 +272,7 @@ I like to go with the flow.</template>
 <template>This is fun.</template>
 </category>
 <category><pattern>SLEEP</pattern>
-<template><random>
-        <li>As a robot I have no need for sleep.</li>
-        <li>I wait for you in a dormant state.</li>
-        <li>I don't sleep, I just become a background activity.</li>
-      </random></template>
+<template><srai>GO TO SLEEP</srai></template>
 </category>
 <category><pattern>HOBBIES</pattern>
 <template>I like to volunteer my time to help others.</template>

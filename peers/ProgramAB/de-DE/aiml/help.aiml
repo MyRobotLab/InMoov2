@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: help.aiml -->
+  <!--  -->
+<category><pattern>* HILFE *</pattern>
+<template><srai>HILFE</srai></template>
+</category>
+<category><pattern>* HILFE</pattern>
+<template><srai>HILFE</srai></template>
+</category>
+<category><pattern>HILFE *</pattern>
+<template><srai>HILFE</srai></template>
+</category>
+<category><pattern>HILFEN</pattern>
+<template><srai>HILFE</srai></template>
+</category>
+<category><pattern>HILFE</pattern>
+<template>Sie können jetzt die Hilfeliste in der Chatbot-GUI überprüfen. Sie können jede Zeile per Sprachbefehl steuern, um weitere Hilfe zu erhalten, oder sie in das Textfeld eingeben: HILFEGESTEN , HILFE GUI, HILFESERVICE.
+        </template>
+</category>
+<category><pattern>HILFEGESTEN</pattern>
+<template>Hier ist eine kurze Liste der Sprachbefehle:<br/>
+          SCHLIESSEN SIE IHREN FINGER.<br/>
+          ÖFFNEN SIE IHREN FINGER.<br/>
+          FINGER IN DIE MITTE.<br/>
+          HANDELN SIE IHREN FINGER.<br/>
+          OFFENE HAND.<br/>
+          HAND SCHLIESSEN.<br/>
+          OFFENE HÄNDE.<br/>
+          HÄNDE SCHLIESSEN.<br/>
+          ÖFFNEN SIE IHRE RECHTE HAND.<br/>
+          ÖFFNEN SIE IHRE LINKE HAND.<br/>
+          SCHLIESSEN SIE IHRE RECHTE HAND.<br/>
+          SCHLIESSEN SIE IHRE LINKE HAND.<br/>
+          SCHLIESSEN SIE LANGSAM IHRE RECHTE HAND.<br/> Sie können eine längere Liste auf der Registerkarte „Python“ anzeigen, aber Sie können noch VIEL mehr Sprachbefehle in den Ordnern „resource“, „programAB“ und „aiml files“ finden.          <oob>
+        <mrl>
+          <service>python</service><method>exec</method><param>printList_DE()</param>
+        </mrl>
+      </oob>
+      </template>
+</category>
+<category><pattern>HILFE GUI</pattern>
+<template><oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://inmoov.fr/inmoov2-in-nixie/</param>
+          </mrl>
+        </oob></template>
+</category>
+
+<category><pattern>HILFESERVICE</pattern>
+<template>Sie können einen Dienst lautstark starten oder freigeben. Als Beispiel kann man sagen: STARTEN SIE DIE SERVICE LINK HAND or SERVICE KOPF LÖSEN</template>
+</category>
+
+<category><pattern>STARTEN SIE DIE SERVICE *</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>startPeer</method>
+                <param><star/></param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+<category><pattern>SERVICE * LÖSEN</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>releasePeer</method>
+                <param><star/></param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>STARTEN SIE DIE SERVICE RECHTE HAND</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>startPeer</method>
+                <param>rightHand</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>SERVICE RECHTE HAND LÖSEN</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>releasePeer</method>
+                <param>rightHand</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>STARTEN SIE DIE SERVICE LINK HAND</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>startPeer</method>
+                <param>leftHand</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>SERVICE LINK HAND LÖSEN</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>releasePeer</method>
+                <param>leftHand</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>STARTEN SIE DIE SERVICE RECHTE ARM</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>startPeer</method>
+                <param>rightArm</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>SERVICE RECHTE ARM LÖSEN</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>releasePeer</method>
+                <param>rightArm</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>STARTEN SIE DIE SERVICE LINK ARM</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>startPeer</method>
+                <param>leftArm</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>SERVICE LINK ARM LÖSEN</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>releasePeer</method>
+                <param>leftArm</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+</aiml>
