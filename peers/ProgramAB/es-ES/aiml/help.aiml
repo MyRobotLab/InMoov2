@@ -29,7 +29,7 @@
           CIERRA TU MANO DERECHA.<br/>
           CIERRA TU MANO IZQUIERDA.<br/>
           CIERRE LENTAMENTE SU MANO DERECHA.<br/>
-          Puede ver una lista más larga en la pestaña de python, pero aún puede encontrar muchos más comandos de voz en la carpeta data, programAB, aiml files.
+          Puede ver una lista más larga en la pestaña de python, pero aún puede encontrar muchos más comandos de voz en la carpeta resource, programAB, aiml files.
           <oob>
         <mrl>
           <service>python</service><method>exec</method><param>printList_ES()</param>
