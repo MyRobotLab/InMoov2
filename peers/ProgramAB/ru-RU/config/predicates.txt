@@ -1,3 +1,4 @@
 userDescription:no personal description
 firstinit:unknown
+name:human
 img:../service/img/user_unknown.png
