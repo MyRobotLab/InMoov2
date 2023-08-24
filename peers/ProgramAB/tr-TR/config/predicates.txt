@@ -54,7 +54,7 @@ longitute:which
 meta:set
 middlename:what
 mother:who
-name:Friend
+name:human
 nephew:who
 newcontact:unknown
 newpattern:NORESP
