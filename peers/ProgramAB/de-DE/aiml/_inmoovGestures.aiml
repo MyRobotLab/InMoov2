@@ -42,6 +42,10 @@
 <template>Ich suche nach Gesichtern.
         <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
 </category>
+<category><pattern>SCHAU MICH AN</pattern>
+<template>Wo bist du, da bist du.
+        <srai>SUCHEN MENSCHEN</srai></template>
+</category>
 <category><pattern>BEENDEN SIE DIE SUCHE</pattern>
 <template>Stoppen meiner Suche
         <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
@@ -70,6 +74,14 @@
 <template>Meine Hand schließen
         <oob><mrl><service>python</service><method>exec</method><param>handclose()</param></mrl></oob></template>
 </category>
+<category><pattern>HÄNDE SCHLIESSEN</pattern>
+<template>Ich schließe meine Hände.
+        <oob><mrl><service>python</service><method>exec</method><param>handsclose()</param></mrl></oob></template>
+</category>
+<category><pattern>HÄNDE ÖFFNEN</pattern>
+<template>Ich öffne meine Hände.
+        <oob><mrl><service>python</service><method>exec</method><param>handsopen()</param></mrl></oob></template>
+</category>
 <category><pattern>SCHLIESSEN SIE IHREN FINGER</pattern>
 <template>Schließe meinen Finger.
         <oob><mrl><service>python</service><method>exec</method><param>fingerclose()</param></mrl></oob></template>
@@ -81,6 +93,14 @@
 <category><pattern>FINGER IN DIE MITTE</pattern>
 <template>Jetzt hast du meine Aufmerksamkeit.
         <oob><mrl><service>python</service><method>exec</method><param>fingermiddle()</param></mrl></oob></template>
+</category>
+<category><pattern>HANDELN SIE IHREN FINGER</pattern>
+<template><random>
+             <li>Klar.</li>
+             <li>Gefällt es dir so?</li>
+             <li>Was ist damit?</li>
+          </random>
+        <oob><mrl><service>python</service><method>exec</method><param>fingeraction()</param></mrl></oob></template>
 </category>
 <category><pattern>KAMERA AN</pattern>
 <template>Ich schalte meine Kamera ein.
@@ -134,7 +154,7 @@
           </mrl>
         </oob></template>
 </category>
-<category><pattern>ARMS FRONT</pattern>
+<category><pattern>ARME VORNE</pattern>
 <template>Ich halte meine Arme vor mir.
         <oob><mrl><service>python</service><method>exec</method><param>armsFront()</param></mrl></oob></template>
 </category>
@@ -160,6 +180,10 @@
 <category><pattern>VOLLGAS</pattern>
 <template>Servos sind jetzt auf volle Geschwindigkeit eingestellt.
         <oob><mrl><service>python</service><method>exec</method><param>fullspeed()</param></mrl></oob></template>
+</category>
+<category><pattern>HALBGESCHWINDIGKEIT</pattern>
+<template>Die Servos sind jetzt auf halbe Geschwindigkeit eingestellt.
+        <oob><mrl><service>python</service><method>exec</method><param>halfspeed()</param></mrl></oob></template>
 </category>
 <category><pattern>GRAB DIE FLASCHE</pattern>
 <template>Lass mich die Flasche nehmen.
