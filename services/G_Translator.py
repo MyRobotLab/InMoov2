@@ -35,8 +35,8 @@ if outputSpeechService!="default":
   AzureTranslatorMouth = runtime.start("AzureTranslatorMouth", outputSpeechService)
   #maybe
   #AzureTranslatorMouth.setKey(awsaccesskeyid,awssecretkey)
-  python.subscribe(AzureTranslatorMouth.getName(),"publishStartSpeaking")
-  python.subscribe(AzureTranslatorMouth.getName(),"publishEndSpeaking")
+  # python.subscribe(AzureTranslatorMouth.getName(),"publishStartSpeaking")
+  # python.subscribe(AzureTranslatorMouth.getName(),"publishEndSpeaking")
 else:
   # or we map AzureTranslator output to original mouth
   AzureTranslatorMouth=i01_mouth

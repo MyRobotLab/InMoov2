@@ -694,8 +694,9 @@
                     <td>
                         <label>Flash when Speaking</label>
                     </td><td>
-                        <button title="Allows neopixel to flash when robot is speaking" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_flash_when_speak_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_flash_when_speak_stop.py')">off</button>
+                        <button ng-show="service.config.neoPixelFlashWhenSpeaking" title="Allows neopixel to flash when robot is speaking" class="btn btn-info" 
+                                    ng-click="msg.send('setConfigValue','neoPixelFlashWhenSpeaking',false);msg.send('broadcastState')">on</button>
+                        <button ng-show="!service.config.neoPixelFlashWhenSpeaking"  width="30" height="30" class="btn btn-default" ng-click="msg.send('setConfigValue','neoPixelFlashWhenSpeaking',true);msg.send('broadcastState')">off</button>
                     </td>
                 </tr>
             </table>
@@ -909,36 +910,36 @@
                 </tr>
                 <tr>
                     <td>
-                        <label>Boot Up Sound</label>
-                        </td>
-                     <td>
-                        <button ng-show="service.config.bootUpSound" class="btn btn-info" title="Enable InMoov theme at start" ng-click="setConfigValue('bootUpSound', false)">on</button>
-                        <button ng-show="!service.config.bootUpSound" class="btn btn-default" ng-click="setConfigValue('bootUpSound', true)">off</button>
+                        <label>Startup Sound</label>
+                    </td><td>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable InMoov theme at start" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_startupSound_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_startupSound_stop.py')">off</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <label>Custom Sounds</label>
-                                </td><td>
-
-                        <button ng-show="service.config.customSound" class="btn btn-info" title="Custom sounds on events" ng-click="setConfigValue('customSound', false)">on</button>
-                        <button ng-show="!service.config.customSound" class="btn btn-default" ng-click="setConfigValue('customSound', true)">off</button>
+                    </td><td>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable custom sounds when waking up" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_customSound_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_customSound_stop.py')">off</button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <label>Health Check</label>
-                                </td><td>
-                        <button title="Checking your robot condition"  class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_healthCheckActivated_start.py')">on</button>&nbsp;<button  class="btn btn-default" ng-click="execScript('system/startScripts/i01_healthCheckActivated_stop.py')">off</button>
+                    </td><td>
+                        <button ng-show="service.config.healthCheck" title="Checks health and battery level" class="btn btn-info" ng-click="msg.send('stopHealthCheck');msg.send('broadcastState')">on</button>
+                        <button ng-show="!service.config.healthCheck"  width="30" height="30" class="btn btn-default" ng-click="msg.send('startHealthCheck');msg.send('broadcastState')">off</button>                                
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <label>Battery In System</label>
-                                </td><td>
-                        <button title="Enable checking the battery level"  class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_batteryInSystem_start.py')">on</button>&nbsp;<button  class="btn btn-default" ng-click="execScript('system/startScripts/i01_batteryInSystem_stop.py')">off</button>
+                    </td><td>
+                        <button ng-show="service.config.batteryInSystem" title="Allows neopixel to flash when robot is speaking" class="btn btn-info" 
+                                    ng-click="msg.send('setConfigValue','batteryInSystem',false);msg.send('broadcastState')">on</button>
+                        <button ng-show="!service.config.batteryInSystem"  width="30" height="30" class="btn btn-default" 
+                                    ng-click="msg.send('setConfigValue','batteryInSystem',true);msg.send('broadcastState')">off</button>
                     </td>
                 </tr>
                 <!--<tr>

@@ -5,8 +5,8 @@
 
 def initMouth():
   i01_mouth.getConfig()
-  python.subscribe(i01_mouth.getName(),"publishStartSpeaking")
-  python.subscribe(i01_mouth.getName(),"publishEndSpeaking")
+  # python.subscribe(i01_mouth.getName(),"publishStartSpeaking")
+  # python.subscribe(i01_mouth.getName(),"publishEndSpeaking")
 
 # ##############################################################################
 # MRL SERVICE TWEAKS
