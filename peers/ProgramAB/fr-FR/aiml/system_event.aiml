@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <category>
-    <pattern>SYSTEMEVENT WAKE</pattern>
+    <pattern>SYSTEM_EVENT WAKE</pattern>
     <template><srai>WAKE_UP</srai></template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT INIT</pattern>
+    <pattern>SYSTEM_EVENT INIT</pattern>
     <template>Démarrage initialisation</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT CONFIG LOADED</pattern>
+    <pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
     <template>Configuration terminée</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT LOAD GESTURES</pattern>
+    <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
     <template>Importation des gestuelles</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT CONFIGSTARTED</pattern>
+    <pattern>SYSTEM_EVENT CONFIGSTARTED</pattern>
     <template>Démarrage de la configuration.</template>
   </category>
   <category>
@@ -33,281 +33,281 @@
     <template>Démarrage des capteurs de la main gauche.</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED RIGHT HAND SENSOR</pattern>
+    <pattern>SYSTEM_EVENT STARTED RIGHT HAND SENSOR</pattern>
     <template>Démarrage des capteurs de la main droite.</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED LEFT</pattern>
+    <pattern>SYSTEM_EVENT STARTED LEFT</pattern>
     <template>Démarrage du controlleur gauche.</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED RIGHT</pattern>
+    <pattern>SYSTEM_EVENT STARTED RIGHT</pattern>
     <template>Démarrage du controlleur droit.</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED audioPlayer</pattern>
+    <pattern>SYSTEM_EVENT STARTED audioPlayer</pattern>
     <template>Démarrage du lecteur audio</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED audioPlayer</pattern>
+    <pattern>SYSTEM_EVENT STOPPED audioPlayer</pattern>
     <template>Arrêt du lecteur audio</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED chatBot</pattern>
+    <pattern>SYSTEM_EVENT STARTED chatBot</pattern>
     <template>Système de dialogue prêt, démarrage des autres composants</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED chatBot</pattern>
+    <pattern>SYSTEM_EVENT STOPPED chatBot</pattern>
     <template>Arrêt du chatbot</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED controller3</pattern>
+    <pattern>SYSTEM_EVENT STARTED controller3</pattern>
     <template>Démarrage du contrôleur trois</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED controller3</pattern>
+    <pattern>SYSTEM_EVENT STOPPED controller3</pattern>
     <template>Arrêt du contrôleur trois</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED controller4</pattern>
+    <pattern>SYSTEM_EVENT STARTED controller4</pattern>
     <template>Démarrage du contrôleur quatre</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED controller4</pattern>
+    <pattern>SYSTEM_EVENT STOPPED controller4</pattern>
     <template>Arrêt du contrôleur quatre</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED ear</pattern>
+    <pattern>SYSTEM_EVENT STARTED ear</pattern>
     <template>Démarrage des oreilles</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED ear</pattern>
+    <pattern>SYSTEM_EVENT STOPPED ear</pattern>
     <template>Arrêt des oreilles</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED eyeTracking</pattern>
+    <pattern>SYSTEM_EVENT STARTED eyeTracking</pattern>
     <template>Démarrage du suivi oculaire</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED eyeTracking</pattern>
+    <pattern>SYSTEM_EVENT STOPPED eyeTracking</pattern>
     <template>Arrêt du suivi oculaire</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED fsm</pattern>
+    <pattern>SYSTEM_EVENT STARTED fsm</pattern>
     <template>Démarrage de fsm</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED fsm</pattern>
+    <pattern>SYSTEM_EVENT STOPPED fsm</pattern>
     <template>Arrêt de fsm</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED gpt3</pattern>
+    <pattern>SYSTEM_EVENT STARTED gpt3</pattern>
     <template>Démarrage de gpt3</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED gpt3</pattern>
+    <pattern>SYSTEM_EVENT STOPPED gpt3</pattern>
     <template>Arrêt de gpt3</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED head</pattern>
+    <pattern>SYSTEM_EVENT STARTED head</pattern>
     <template>Démarrage de la tête</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED head</pattern>
+    <pattern>SYSTEM_EVENT STOPPED head</pattern>
     <template>Arrêt de la tête</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED headTracking</pattern>
+    <pattern>SYSTEM_EVENT STARTED headTracking</pattern>
     <template>Démarrage du suivi de la tête</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED headTracking</pattern>
+    <pattern>SYSTEM_EVENT STOPPED headTracking</pattern>
     <template>Arrêt du suivi de la tête</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED htmlFilter</pattern>
+    <pattern>SYSTEM_EVENT STARTED htmlFilter</pattern>
     <template>Démarrage du filtre html</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED htmlFilter</pattern>
+    <pattern>SYSTEM_EVENT STOPPED htmlFilter</pattern>
     <template>Arrêt du filtre html</template>
   </category>
 
   <category>
-    <pattern>SYSTEMEVENT STARTED imageDisplay</pattern>
+    <pattern>SYSTEM_EVENT STARTED imageDisplay</pattern>
     <template>Démarrage l'affichage d'image</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED imageDisplay</pattern>
+    <pattern>SYSTEM_EVENT STOPPED imageDisplay</pattern>
     <template>Arrêt de l'affichage d'image</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED leap</pattern>
+    <pattern>SYSTEM_EVENT STARTED leap</pattern>
     <template>Démarrage du leap</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED leap</pattern>
+    <pattern>SYSTEM_EVENT STOPPED leap</pattern>
     <template>Arrêt du leap</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED left</pattern>
+    <pattern>SYSTEM_EVENT STARTED left</pattern>
     <template>Démarrage du controlleur gauche</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED left</pattern>
+    <pattern>SYSTEM_EVENT STOPPED left</pattern>
     <template>Arrêt du controlleur gauche</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED leftArm</pattern>
+    <pattern>SYSTEM_EVENT STARTED leftArm</pattern>
     <template>Démarrage du bras gauche</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED leftArm</pattern>
+    <pattern>SYSTEM_EVENT STOPPED leftArm</pattern>
     <template>Arrêt du bras gauche</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED leftHand</pattern>
+    <pattern>SYSTEM_EVENT STARTED leftHand</pattern>
     <template>Démarrage de la main gauche</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED leftHand</pattern>
+    <pattern>SYSTEM_EVENT STOPPED leftHand</pattern>
     <template>Arrêt de la main gauche</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED mouth</pattern>
+    <pattern>SYSTEM_EVENT STARTED mouth</pattern>
     <template>Démarrage de la bouche</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED mouth</pattern>
+    <pattern>SYSTEM_EVENT STOPPED mouth</pattern>
     <template>Arrêt de la bouche</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED mouthControl</pattern>
+    <pattern>SYSTEM_EVENT STARTED mouthControl</pattern>
     <template>Démarrage du contrôle de la bouche</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED mouthControl</pattern>
+    <pattern>SYSTEM_EVENT STOPPED mouthControl</pattern>
     <template>Arrêt du contrôle de la bouche</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED neoPixel</pattern>
+    <pattern>SYSTEM_EVENT STARTED neoPixel</pattern>
     <template>Démarrage du neoPixel</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED neoPixel</pattern>
+    <pattern>SYSTEM_EVENT STOPPED neoPixel</pattern>
     <template>Arrêt du neoPixel</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED openWeatherMap</pattern>
+    <pattern>SYSTEM_EVENT STARTED openWeatherMap</pattern>
     <template>Démarrage openWeatherMap</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED openWeatherMap</pattern>
+    <pattern>SYSTEM_EVENT STOPPED openWeatherMap</pattern>
     <template>Arrêt openWeatherMap</template>
   </category>
 
   <category>
-    <pattern>SYSTEMEVENT STARTED opencv</pattern>
+    <pattern>SYSTEM_EVENT STARTED opencv</pattern>
     <template>Démarrage de la vision</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED opencv</pattern>
+    <pattern>SYSTEM_EVENT STOPPED opencv</pattern>
     <template>Arrêt de la vision</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED openni</pattern>
+    <pattern>SYSTEM_EVENT STARTED openni</pattern>
     <template>Démarrage d'openni</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED openni</pattern>
+    <pattern>SYSTEM_EVENT STOPPED openni</pattern>
     <template>Arrêt d'openni</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED pid</pattern>
+    <pattern>SYSTEM_EVENT STARTED pid</pattern>
     <template>Démarrage de pid</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED pid</pattern>
+    <pattern>SYSTEM_EVENT STOPPED pid</pattern>
     <template>Arrêt de pid</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED pir</pattern>
+    <pattern>SYSTEM_EVENT STARTED pir</pattern>
     <template>Démarrage du capteur de mouvement</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED pir</pattern>
+    <pattern>SYSTEM_EVENT STOPPED pir</pattern>
     <template>Arrêt du capteur de mouvement</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED random</pattern>
+    <pattern>SYSTEM_EVENT STARTED random</pattern>
     <template>Démarrage mode aléatoire</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED random</pattern>
+    <pattern>SYSTEM_EVENT STOPPED random</pattern>
     <template>Arrêt mode aléatoire</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED right</pattern>
+    <pattern>SYSTEM_EVENT STARTED right</pattern>
     <template>Démarrage du controlleur droit</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED right</pattern>
+    <pattern>SYSTEM_EVENT STOPPED right</pattern>
     <template>Arrêt du controlleur droit</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED rightArm</pattern>
+    <pattern>SYSTEM_EVENT STARTED rightArm</pattern>
     <template>Démarrage du bras droit</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED rightArm</pattern>
+    <pattern>SYSTEM_EVENT STOPPED rightArm</pattern>
     <template>Arrêt du bras droit</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED rightHand</pattern>
+    <pattern>SYSTEM_EVENT STARTED rightHand</pattern>
     <template>Démarrage de la main droite</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED rightHand</pattern>
+    <pattern>SYSTEM_EVENT STOPPED rightHand</pattern>
     <template>Arrêt de la main droite</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED servoMixer</pattern>
+    <pattern>SYSTEM_EVENT STARTED servoMixer</pattern>
     <template>Démarrage du mixeur de servo</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED servoMixer</pattern>
+    <pattern>SYSTEM_EVENT STOPPED servoMixer</pattern>
     <template>Arrêt du mixeur de servo</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED simulator</pattern>
+    <pattern>SYSTEM_EVENT STARTED simulator</pattern>
     <template>Démarrage du simulateur</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED simulator</pattern>
+    <pattern>SYSTEM_EVENT STOPPED simulator</pattern>
     <template>Arrêt du simulateur</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED torso</pattern>
+    <pattern>SYSTEM_EVENT STARTED torso</pattern>
     <template>Démarrage du torse</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED torso</pattern>
+    <pattern>SYSTEM_EVENT STOPPED torso</pattern>
     <template>Arrêt du torse</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED ultrasonicLeft</pattern>
+    <pattern>SYSTEM_EVENT STARTED ultrasonicLeft</pattern>
     <template>Démarrage du capteur ultrasonique gauche</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED ultrasonicLeft</pattern>
+    <pattern>SYSTEM_EVENT STOPPED ultrasonicLeft</pattern>
     <template>Arrêt du capteur ultrasonique gauche</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STARTED ultrasonicRight</pattern>
+    <pattern>SYSTEM_EVENT STARTED ultrasonicRight</pattern>
     <template>Démarrage du capteur ultrasonique droit</template>
   </category>
   <category>
-    <pattern>SYSTEMEVENT STOPPED ultrasonicRight</pattern>
+    <pattern>SYSTEM_EVENT STOPPED ultrasonicRight</pattern>
     <template>Arrêt du capteur ultrasonique droit</template>
   </category>
 

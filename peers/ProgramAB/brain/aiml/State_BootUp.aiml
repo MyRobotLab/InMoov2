@@ -23,7 +23,7 @@
 
             <!-- leaving boot up state -->
             <category>
-                  <pattern>SYSTEMEVENT BootUpCompleted</pattern>
+                  <pattern>SYSTEM_EVENT BootUpCompleted</pattern>
                   <template>
                         <think>
                               <set name="topic">FirstInit</set>

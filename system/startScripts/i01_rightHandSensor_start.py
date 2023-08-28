@@ -202,7 +202,7 @@ if runtime.isStarted('i01.right'):
                     print "-----------Right-Finger-Sensors-----------"
 
         if runtime.isStarted('i01.chatBot'):
-            i01_chatBot.getResponse("SYSTEMEVENT STARTED RIGHT HAND SENSOR")
+            i01_chatBot.getResponse("SYSTEM_EVENT STARTED RIGHT HAND SENSOR")
         i01_right.addListener("publishPinArray","python","publishPinRight")
 
         def rightHandSensorON():

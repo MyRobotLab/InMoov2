@@ -1,5 +1,5 @@
 address:where
-age:SYSTEMEVENT STARTED chatBot
+age:SYSTEM_EVENT STARTED chatBot
 baby:who
 bestfriend:who
 birthday:when
@@ -45,12 +45,12 @@ he:who
 husband:who
 img:../service/img/user_unknown.png
 isanumber:false
-it:SYSTEMEVENT STARTED chatBot
+it:SYSTEM_EVENT STARTED chatBot
 jsenabled:true
 lastname:what
 latitude:which
 likes:what
-location:SYSTEMEVENT STARTED chatBot
+location:SYSTEM_EVENT STARTED chatBot
 longitute:which
 meta:set
 middlename:what

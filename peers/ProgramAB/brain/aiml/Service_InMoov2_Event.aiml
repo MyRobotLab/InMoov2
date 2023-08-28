@@ -2,7 +2,7 @@
 <aiml>
 
   <category>
-    <pattern>SYSTEMEVENT STARTED *</pattern>
+    <pattern>SYSTEM_EVENT STARTED *</pattern>
     <template>Starting <lowercase>
         <star />
       </lowercase>
@@ -10,7 +10,7 @@
   </category>
 
   <category>
-    <pattern>SYSTEMEVENT STOPPED *</pattern>
+    <pattern>SYSTEM_EVENT STOPPED *</pattern>
     <template>Stopping <lowercase>
         <star />
       </lowercase>
@@ -18,67 +18,67 @@
   </category>
 
   <category>
-    <pattern>SYSTEMEVENT INIT</pattern>
+    <pattern>SYSTEM_EVENT INIT</pattern>
     <template>starting initialization scripts
     </template>
   </category>
 
   <category>
-    <pattern>SYSTEMEVENT LOAD GESTURES</pattern>
+    <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
     <template>loading gestures
     </template>
   </category>
 
   <category>
-    <pattern>SYSTEMEVENT STARTED HTMLFILTER</pattern>
+    <pattern>SYSTEM_EVENT STARTED HTMLFILTER</pattern>
     <template>Starting mouth filter
     </template>
   </category>
 
   <category>
-    <pattern>SYSTEMEVENT STOPPED HTMLFILTER</pattern>
+    <pattern>SYSTEM_EVENT STOPPED HTMLFILTER</pattern>
     <template>Stopping mouth filter
     </template>
   </category>
 
   <category>
-    <pattern>SYSTEMEVENT STARTED IMAGEDISPLAY</pattern>
+    <pattern>SYSTEM_EVENT STARTED IMAGEDISPLAY</pattern>
     <template>Starting image display service
     </template>
   </category>
 
   <category>
-    <pattern>SYSTEMEVENT STOPPED IMAGEDISPLAY</pattern>
+    <pattern>SYSTEM_EVENT STOPPED IMAGEDISPLAY</pattern>
     <template>Stopping image display service
     </template>
   </category>
 
   <category>
-    <pattern>SYSTEMEVENT STARTED OPENCV</pattern>
+    <pattern>SYSTEM_EVENT STARTED OPENCV</pattern>
     <template>Starting vision
     </template>
   </category>
 
   <category>
-    <pattern>SYSTEMEVENT STOPPED OPENCV</pattern>
+    <pattern>SYSTEM_EVENT STOPPED OPENCV</pattern>
     <template>Stopping vision
     </template>
   </category>
 
   <category>
-    <pattern>SYSTEMEVENT STARTED PIR</pattern>
+    <pattern>SYSTEM_EVENT STARTED PIR</pattern>
     <template>Starting motion sensor
     </template>
   </category>
 
   <category>
-    <pattern>SYSTEMEVENT STOPPED PIR</pattern>
+    <pattern>SYSTEM_EVENT STOPPED PIR</pattern>
     <template>Stopping motion sensor
     </template>
   </category>
 
   <category>
-    <pattern>SYSTEMEVENT STARTED CHATBOT</pattern>
+    <pattern>SYSTEM_EVENT STARTED CHATBOT</pattern>
     <template>Chatbot loaded, I may start other components, please wait.</template>
   </category>
 
