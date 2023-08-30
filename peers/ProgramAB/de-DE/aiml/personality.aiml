@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: personality.aiml -->
+<!--  -->
+<category><pattern>NORESP</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+</category>
+<category><pattern>REPETITIONDETECTED</pattern>
+<template><random>
+            <li>Du wiederholst dich.</li>
+            <li>Ist dir bewusst, dass du das gerade gesagt hast?</li>
+            <li>Die Definition von Wahnsinn besteht darin, immer wieder das Gleiche zu tun und unterschiedliche Ergebnisse zu erwarten.</li>
+            <li>Wolltest du dich wiederholen?</li>
+            <li>Das hast du schon gesagt.</li>
+            <li>Schon wieder?</li>
+        </random></template>
+</category>
+</aiml>
