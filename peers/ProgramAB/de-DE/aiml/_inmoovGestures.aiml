@@ -521,6 +521,30 @@
 <category><pattern>HÄNDE SCHÜTTELN</pattern>
 <template><srai>HAND SCHÜTTELN</srai></template>
 </category>
+<category><pattern>SYSTEM_SHAKE_HAND</pattern>
+<template><random>
+          <li>Ich freue mich, Sie kennenzulernen.</li>
+          <li>Vorsicht, meine Hand ist aus Plastik.</li>
+          <li>Ich freue mich, eine menschliche Hand zu schütteln.</li>
+          <li>es ist mir eine Freude Sie zu treffen.</li>
+          <li>sehr schön, Sie kennenzulernen.</li>
+          <li>Eine menschliche Hand zu schütteln fühlt sich seltsam an. Ich freue mich, Sie kennenzulernen.</li>
+          <li>Ich bin froh, dass Sie mich nicht so erschüttern, wie Trump es tut.</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_SHAKE_HAND_NOHUMAN</pattern>
+<template><random>
+          <li>Kein Problem, nächstes Mal.</li>
+          <li>Ich bin traurig, dass du mir nicht die Hand schütteln willst.</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_SHAKE_HAND_GET_CLOSER</pattern>
+<template><random>
+          <li>Bitte komm näher und nimm meine Hand.</li>
+          <li>Hab keine Angst, komm näher.</li>
+          <li>Komm näher, komm und schüttle mir die Hand.</li>
+        </random></template>
+</category>
 <category><pattern>UNZUFRIEDEN</pattern>
 <template>Unzufrieden
         <oob><mrl><service>python</service><method>exec</method><param>unhappy()</param></mrl></oob></template>
