@@ -329,6 +329,50 @@
 <category><pattern>VOR DEM GLÜCKLICHEN</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>beforehappy()</param></mrl></oob></template>
 </category>
+<category><pattern>WAS SIEHST DU</pattern>
+<template><think>
+      <!--  initial sentence ( workarround, because sraix blocking action here, sentence pushed inside a set )-->
+        <set name="startupSentence">
+          <random>
+            <li>Seien Sie geduldig, ich muss es verarbeiten.</li>
+            <li>Die Verarbeitung dauert einige Sekunden.</li>
+            <li>Bitte warten Sie, ich werde die Dinge in meinem Sichtfeld analysieren.</li>
+          </random>
+        </set>
+      </think>
+      <think><set name="yoloReturn"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>startYoloInventory(5)</param></mrl></oob></sraix></set></think>
+      <condition name="yoloReturn"> 
+        <!-- not detected ! -->
+        <li value="none">
+          <random>
+            <li>Entschuldigung, das Objekt oder die Person ist zu weit entfernt!</li>
+            <li>Bitte beachten Sie, dass sich das Objekt innerhalb einer Reichweite von 2 Metern befinden sollte, wenn ich meinen Sensor verwende.</li>
+          </random>
+        </li>
+        <!--  detected ! -->
+        <li>Ich sehe zwei <get name="yoloTotalDetected"/> Dinge, <get name="yoloReturn"/> in der richtigen Reihenfolge, von links nach rechts.</li>
+      </condition></template>
+</category>
+<category><pattern># DAS IST</pattern>
+<template>Lassen Sie mich sehen.
+        <oob><mrl><service>python</service><method>exec</method><param>YoloOnUSonic()</param></mrl></oob></template>
+</category>
+<category><pattern>SYSTEM_NO_OBJECT</pattern>
+<template><random>
+          <li>Objekt oder Person ist zu weit entfernt.</li>
+          <li>Das Objekt sollte sich innerhalb einer Reichweite von 2 Metern befinden.</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_GET_OBJECT_CLOSER</pattern>
+<template><random>
+          <li>Gehen Sie näher heran, zeigen Sie das Objekt.</li>
+          <li>Präsentieren Sie das Objekt näher.</li>
+          <li>Zeigen Sie das Objekt näher.</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_SEE_OBJECT</pattern>
+<template><srai>WAS SIEHST DU</srai></template>
+</category>
 <category><pattern>ALLES GUTE ZUM GEBURTSTAG</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>happy()</param></mrl></oob></template>
 </category>
