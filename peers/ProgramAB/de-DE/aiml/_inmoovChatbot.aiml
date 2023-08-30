@@ -292,8 +292,12 @@
         </template>
 </category>
 
-<category><pattern>AUFWACHEN</pattern>
+<category><pattern>WAKE UP</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+</category>
+
+<category><pattern>AUFWACHEN</pattern>
+<template><srai>WAKE UP</srai></template>
 </category>
 
 <category><pattern>ABSCHALTEN</pattern>
