@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: jukebox.aiml -->
+<!--  -->
+<category><pattern>MUSIK ABSPIELEN</pattern>
+<template><srai>PLAYLIST STARTEN</srai></template>
+</category>
+
+<category><pattern>PLAYLIST STARTEN</pattern>
+<template><random>
+        <li>Wiedergabeliste wird jetzt gestartet.</li>
+        <li>Großartig!</li>
+      </random>
+      <think><set name="playsong">ko</set></think>
+    <oob><mrl><service>python</service><method>exec</method><param>playMusic()</param></mrl></oob></template>
+</category>
+
+<category><pattern>PLAYLIST STARTEN *</pattern>
+<template><random>
+        <li>Wiedergabeliste <star/> wird jetzt gestartet.</li>
+        <li><star/> Playlist wird gestartet.</li>
+      </random>
+      <think><set name="playsong">ko</set></think>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist('<star/>')</param></mrl></oob></template>
+</category>
+
+<category><pattern>SPIELEN SIE ZUFÄLLIGE MUSIK</pattern>
+<template><random>
+        <li>Zufällige Musik auswählen.</li>
+        <li>Klar!</li>
+        <li>Ok!</li>
+      </random>
+      <think><set name="playsong">ko</set></think>
+    <oob><mrl><service>python</service><method>exec</method><param>playRandomMusic()</param></mrl></oob></template>
+</category>
+
+<category><pattern>MUSIK STOPPEN</pattern>
+<template><srai>PLAYLIST STOPPEN</srai></template>
+</category>
+
+<category><pattern>STOP DIE MUSIK</pattern>
+<template><srai>PLAYLIST STOPPEN</srai></template>
+</category>
+
+<category><pattern>PLAYLIST STOPPEN</pattern>
+<template><random>
+        <li>Wie du magst.</li>
+        <li>Playlist jetzt stoppen.</li>
+        <li>OK!</li>
+      </random>
+      <think><set name="playsong">ok</set></think>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stopPlaylist(), i01_audioPlayer.stop()</param></mrl></oob></template>
+</category>
+
+<category><pattern>MUSIK ANHALTEN</pattern>
+<template><random>
+        <li>Musik in Pause.</li>
+        <li>Musik jetzt pausieren.</li>
+        <li>OK!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.pause()</param></mrl></oob></template>
+</category>
+
+<category><pattern>MUSIK FORTSETZEN</pattern>
+<template><random>
+        <li>Jetzt wieder Musik machen.</li>
+        <li>Klar!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.resume()</param></mrl></oob></template>
+</category>
+
+<category><pattern>SUCHEN SIE DAS LIED *</pattern>
+<template>.
+  <think><set name="song"><star/></set><set name="playsong">ok</set></think>
+    <oob><mrl>
+      <service>python</service><method>exec</method><param>searchPlay("<get name="song"/>")</param>
+      </mrl></oob>
+      </template>
+</category>
+
+<category><pattern># NÄCHSTES LIED</pattern>
+  <template>.
+    <think><get name = "playsong"></get></think>
+     <condition name="playsong" value="ok">
+        <oob><mrl><service>python</service><method>exec</method><param>nextPlay()</param></mrl></oob>
+    </condition>  
+    <condition name="playsong" value="ko">
+  <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob>
+    </condition>  
+  </template>
+</category>
+
+<category><pattern># VORHERIGES LIED</pattern>
+<template>.
+ <think><get name = "playsong"></get></think>
+   <condition name="playsong" value="ok">
+        <oob><mrl><service>python</service><method>exec</method><param>previousPlay()</param></mrl></oob>
+  </condition> 
+  <condition name="playsong" value="ko">
+    Bisherige funktionieren nicht im Playlist-Modus, sondern nur im Suchmodus.  </condition> 
+  </template>
+</category>
+
+<category><pattern>LAUTSTÄRKE DER MUSIK LAUT</pattern>
+<template>Musik lauter stellen.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(1.0)</param></mrl></oob></template>
+</category>
+<category><pattern>LAUTSTÄRKE MUSIK SENKEN</pattern>
+<template>Musik leiser einstellen.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.9)</param></mrl></oob></template>
+</category>
+<category><pattern>LAUTSTÄRKE DER MUSIK NIEDRIGER</pattern>
+<template>Musik leiser einstellen.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.8)</param></mrl></oob></template>
+</category>
+        <category><pattern>RADIO ABSPIELEN</pattern>
+<template>Lasst uns FIP-Radio streamen.
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>http://direct.fipradio.fr/live/fip-midfi.mp3</param>
+          </mrl>
+        </oob></template>
+</category>
+
+<category><pattern>SYSTEM_NEXT_SONG</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>nextPlay()</param></mrl></oob></template>
+</category>
+
+<category><pattern>NEXT_SONG</pattern>
+<template>Hier ist das Lied.</template>
+</category>
+
+<category><pattern>DO_NOT_HAVE_SONG</pattern>
+<template>Ich habe dieses Lied nicht in meinen Listen oder die Datei enthält Großbuchstaben.</template>
+</category>
+
+<category><pattern>DO_NOT_HAVE_PLAYLIST</pattern>
+<template>Ich habe standardmäßig keine Playlist konfiguriert.</template>
+</category>
+
+<category><pattern>END_PLAYLIST</pattern>
+<template>Ich bin am Ende meiner Playlist angelangt. Ich fange von vorne an.</template>
+</category>
+</aiml>
