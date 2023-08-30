@@ -228,7 +228,7 @@
 </category></topic>
 
 <topic name="NEWINITUSER">
-<category><pattern># JA #</pattern><that># WENN DEIN NEUER NAM #</that>
+<category><pattern># JA #</pattern><that># WENN DEIN NEUER NAME #</that>
 <template><think>
         <set name="newinituser"></set>
         <set name="topic">Benutzernamen ändern</set>
@@ -248,13 +248,13 @@
 </category></topic>
 
 <topic name="NEWINITUSER">
-<category><pattern># NEIN #</pattern><that># WENN DEIN NEUER NAM #</that>
+<category><pattern># NEIN #</pattern><that># WENN DEIN NEUER NAME #</that>
 <template>Lasst uns neu starten.
     Ich höre zu. Welchen Namen soll ich mir merken ?</template>
 </category></topic>
 
 <topic name="NEWINITUSER">
-<category><pattern># STOPPEN #</pattern><that># WENN DEIN NEUER NAM #</that>
+<category><pattern># STOPPEN #</pattern><that># WENN DEIN NEUER NAME #</that>
 <template>Ok, ich behalte deinen Namen, <get name="name"/>.</template>
 </category></topic>
 
