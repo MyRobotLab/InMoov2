@@ -66,7 +66,7 @@ def printList_DE():
         "VOLLGAS", "HALBGESCHWINDIGKEIT", "BILD AUF DER RECHTEN SEITE",
         "BILD AUF DER LINKEN SEITE", "BILD AUF BEIDEN SEITEN", "SCHAUEN SIE AUF IHRE RECHTE SEITE",
         "SCHAUEN SIE NACH DER LINKEN SEITE", "SCHAUEN SIE IN DIE MITTE", "SCHAUEN SIE NACH OBEN", "SCHAUEN SIE NACH UNTEN",
-        "Neigen Sie Ihren Kopf nach der rechten Seite", "neigen Sie Ihren Kopf nach der linken Seite",
-        "HAND SCHÜTTELN", "WAS SIEHST DU"        ]
+        "NEIGE DEINEN KOPF AUF DER RECHTEN SEITE", "NEIGE DEINEN KOPF AUF DER LINKEN SEITE",
+        "HAND SCHÜTTELN", "WAS SIEHST DU"]
     for i in gesturesList:
         print unicode(i,'utf-8')
