@@ -329,6 +329,7 @@
 <category><pattern>VOR DEM GLÜCKLICHEN</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>beforehappy()</param></mrl></oob></template>
 </category>
+
 <category><pattern>WAS SIEHST DU</pattern>
 <template><think>
       <!--  initial sentence ( workarround, because sraix blocking action here, sentence pushed inside a set )-->
@@ -373,6 +374,7 @@
 <category><pattern>SYSTEM_SEE_OBJECT</pattern>
 <template><srai>WAS SIEHST DU</srai></template>
 </category>
+
 <category><pattern>ALLES GUTE ZUM GEBURTSTAG</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>happy()</param></mrl></oob></template>
 </category>
@@ -794,5 +796,82 @@
 <category><pattern>STOP RANDOM LEBEN</pattern>
 <template>Okay
         <oob><mrl><service>python</service><method>exec</method><param>VieAleatoireStop()</param></mrl></oob></template>
+</category>
+<category><pattern># WEINEN</pattern>
+<template><oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>cry()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern># WEIHNACHTSLIED</pattern>
+<template>Ich kann das zum Beispiel machen.
+          <oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>christmasCarols()</param>
+          </mrl>
+        </oob></template>
+</category>         
+<category><pattern>MERKEN SIE SICH DIESE PERSON</pattern>
+<template>Okay, welchen Namen soll ich mir für diese Person merken?    <think>
+        <set name="memoriseinit">started</set>
+      </think>
+      <think>
+        <set name="topic">memoriseinit</set>
+      </think>
+          </template>
+</category>
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># WELCHEN NAMEN SOLL ICH MIR #</that>
+<template><set name="memorisenameinit">ist <star/> der Name, den Sie sich merken möchten, sagen Sie Ja oder Nein.</set>
+       <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern># JA #</pattern><that># DEN SIE SICH MERKEN MÖCHTEN #</that>
+<template>Okay, ich werde <get name="tmpname"/> als Namen festlegen.
+    <think>
+        <set name="memorisename"><get name="tmpname"/>
+        </set>
+    </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), takeMyPicture(u"<get name="memorisename"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","img",u"../ProgramAB/<get name="memorisename"/>.png"), i01_chatBot.savePredicates(), YesName(u"<get name="memorisename"/>"), i01_chatBot.startSession(u"<get name="tmpname"/>")</param>                
+            </mrl>
+         </oob></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern># NEIN #</pattern><that># DEN SIE SICH MERKEN MÖCHTEN #</that>
+<template>Okay, kannst du den Namen wiederholen?</template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># KANNST DU DEN NAMEN WIEDERHOLEN #</that>
+<template><set name="memorisenameinit">ist <star/> der Name, den Sie sich merken möchten, sagen Sie Ja oder Nein.</set>
+       <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># SAGEN SIE JA ODER NEIN #</that>
+<template>Können Sie antworten? Es ist notwendig.
+        <get name="memorisenameinit"/></template>
+</category></topic>
+
+<category><pattern>WER IST DIESE PERSON</pattern>
+<template>Lass mich das überprüfen.
+          <oob><mrl><service>python</service><method>exec</method><param>whoisthis()</param></mrl></oob></template>
 </category>
 </aiml>
