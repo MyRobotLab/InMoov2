@@ -26,6 +26,10 @@
     <template>Setup starten.</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT CONFIG STARTED *</pattern>
+    <template>Setup <star/> starten.</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
     <template>Linksseitige Sensoren starten.</template>
   </category>
