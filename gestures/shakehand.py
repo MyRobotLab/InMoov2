@@ -152,7 +152,8 @@ def shakehandAnimation():
     sleep(2)
     rightHandSensorOFF()
   else:
-    i01.rightHand.moveTo(79,90,140,130,122,180)
+    if runtime.isStarted('i01.rightHand'):
+      i01_rightHand.moveTo(79,90,140,130,122,180)
   i01.setHandSpeed("left", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   i01.setHandSpeed("right", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   i01.setArmSpeed("left", 100.0, 100.0, 100.0, 100.0)
