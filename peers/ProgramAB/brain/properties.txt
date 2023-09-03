@@ -1,0 +1,3 @@
+botname:brain
+version:0.9
+username:DOOD

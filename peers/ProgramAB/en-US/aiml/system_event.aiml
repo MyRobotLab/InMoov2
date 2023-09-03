@@ -2,6 +2,11 @@
 <aiml>
 
 <category>
+    <pattern>SYSTEM_EVENT ON STATE *</pattern>
+    <template>my current state is <star/> </template>
+</category>        
+
+<category>
 <pattern>SYSTEM_EVENT WAKE</pattern>
 <template><srai>WAKE UP</srai></template>
 </category>
@@ -13,8 +18,7 @@
 
 <category>
 <pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
-<template>Configuration loaded
-<srai>BOOTUP</srai></template>
+<template>Configuration loaded</template>
 </category>
 
 <category>
@@ -124,8 +128,7 @@
 
 <category>
 <pattern>SYSTEM_EVENT CONFIG LOADED *</pattern>
-<template>Configuration <star/> loaded.
-<srai>BOOTUP</srai></template>
+<template>Configuration <star/> loaded.</template>
 </category>
 
 <category>

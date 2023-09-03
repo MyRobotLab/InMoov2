@@ -10,32 +10,52 @@ MORE INFO : http://myrobotlab.org/service/InMoov2
 
 # InMoov2 State Diagram
 
-
-
-
 ```mermaid
 stateDiagram
     [*] --> boot: boot started InMoov2 and finished processing configuration
-    boot --> powerUp: powerUp
-    powerUp --> idle: heartBeat
+    boot --> wake: wake
+    wake --> idle: idle
+    wake --> firstInit: firstInit
+    firstInit --> idle: idle
+    idle --> powerDown: powerDown
+    idle --> sleep: sleep
+    idle --> random: random
+    random --> idle: idle
+    sleep --> wake: wake
+    sleep --> powerDown: powerDown
+    powerDown --> shutdown: shutdown
+    shutdown --> [*]
 ```
 
+### boot
+Boot state starts after all configuration has processed.
+All services started and all errors during startup are reported,
+and the main heartbeat timer is started.
 
-### configStarted
-When InMoov is started from a configuration set, or Runtime is configured to automatically load a config set.
-```python
-runtime.startConfig("myInMoovConfig")
-# used to auto start the config next time mrl is started
-runtime.setAutoStart(True)
-```
+* set autoDisable true for all servos
+* copy over default config sets
+* play the startup sound
+* report on services started in the order the were started
+* start the heartbeat
+* start inactivity timer
+* start health check
 
-### startService
-When InMoov is started from Intro or the Python service is used to start the service without configuration.
-e.g.
 ```python
 i01 = runtime.start("i01", "InMoov2")
+# or
+runtime.startConfig("myInMoovConfig")
 ```
 
+
+### wake
+Wake state
+
+* if ear has been started, start listening
+
+
+### firstInit
+First init is the first time InMoov and the chatBot is started and
+the predicate first_init is set to true.
 
 
 ## Web UI Style Guide
@@ -204,12 +224,20 @@ sequenceDiagram
     InMoov2->>InMoov2: 
 
 ```
-```mermaid
-graph TD
-    A[Christmas] -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[<img src='https://iconscout.com/ms-icon-310x310.png' width='40' height='40' />]
-    C -->|Two| E[iPhone]
-    C -->|Three| F[fa:fa-car Car]
 
+
+### configStarted
+When InMoov is started from a configuration set, or Runtime is configured to automatically load a config set.
+```python
+runtime.startConfig("myInMoovConfig")
+# used to auto start the config next time mrl is started
+runtime.setAutoStart(True)
 ```
+
+### startService
+When InMoov is started from Intro or the Python service is used to start the service without configuration.
+e.g.
+```python
+i01 = runtime.start("i01", "InMoov2")
+```
+

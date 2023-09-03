@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <topic name="inmoov2">
+        <category>
+            <pattern>START *</pattern>
+            <template>
+                <srai>START SERVICE <star/>
+                </srai>
+            </template>
+        </category>
+        <category>
+            <pattern>START UP *</pattern>
+            <template>
+                <srai>START SERVICE <star/>
+                </srai>
+            </template>
+        </category>
+        <category>
+            <pattern>STOP *</pattern>
+            <template>
+                <srai>STOP SERVICE <star/>
+                </srai>
+            </template>
+        </category>        
+        <category>
+            <pattern>RELEASE *</pattern>
+            <template>
+                <srai>STOP SERVICE <star/>
+                </srai>
+            </template>
+        </category>        
+        <category>
+            <pattern>START SERVICE *</pattern>
+            <template>
+                <oob>
+                    <mrl>
+                        <service>i01</service>
+                        <method>startPeer</method>
+                        <param>
+                            <star/>
+                        </param>
+                    </mrl>
+                </oob>
+            </template>
+        </category>
+        <category>
+            <pattern>STOP SERVICE *</pattern>
+            <template>
+                <oob>
+                    <mrl>
+                        <service>i01</service>
+                        <method>releasePeer</method>
+                        <param><star/></param>
+                    </mrl>
+                </oob>                        
+            </template>
+        </category>
+    </topic>
+</aiml>

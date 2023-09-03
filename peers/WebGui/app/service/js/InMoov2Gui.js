@@ -13,6 +13,8 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
 
     let firstTime = true
 
+    $scope.batteryLevel = 0
+
     $scope.peer = peer
     $scope.mrl = mrl
 
@@ -39,7 +41,7 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     $scope.selectedGesture = null
     $scope.selectedConfig = null
 
-    $scope.configList = mrl.getService('runtime').configList
+    $scope.configList = mrl.getService('runtime')?.configList
 
     // inmoov "all" buttons
     $scope.buttons = []
@@ -265,6 +267,10 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
             $scope.onText = data;
             $scope.$apply()
             break
+        case 'onBatteryLevel':
+            $scope.batteryLevel = data;
+            $scope.$apply()
+            break
         case 'onVoices':
             $scope.service.voices = data
             $scope.$apply()
@@ -313,6 +319,13 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         msg.send('setSpeechType', $scope.service.config.peers['mouth'].type)
     }
 
+    $scope.setConfigValue = function(fieldname, value){
+        msg.send('setConfigValue', fieldname, value)
+        msg.send('broadcastState')
+    }
+
+    
+
     // circular main menu buttons
     addButton('brain', 'circular')
     addButton('mouth', 'circular')
@@ -341,6 +354,7 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
 
     msg.subscribe('publishText')
     msg.subscribe('publishPeerStarted')
+    msg.subscribe('publishBatteryLevel')
     msg.sendTo(mrl.getRuntime().name, 'getServiceTypeNamesFromInterface', 'SpeechSynthesis')
     msg.sendTo(mrl.getRuntime().name, 'publishConfigList')
     msg.subscribe(this)

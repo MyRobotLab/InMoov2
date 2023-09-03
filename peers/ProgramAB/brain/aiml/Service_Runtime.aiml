@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+      <!-- TODO  add star You can try to vocally create a service: START SERVICE * , RELEASE SERVICE * , START *-->
+      <!-- TODO star index=1 index=2 for start -->
+
+      <topic name="runtime">
+            <category>
+                  <pattern>SERVICES HELP</pattern>
+                  <template>I can start and stop services, power up or power down</template>
+            </category>
+            <category>
+                  <pattern>WHAT CAN YOU DO</pattern>
+                  <template>
+                        <srai>SERVICES HELP</srai>
+                  </template>
+            </category>
+            <category>
+                  <pattern>* HELP *</pattern>
+                  <template>
+                        <srai>SERVICES HELP</srai>
+                  </template>
+            </category>
+            <category>
+                  <pattern>* HELP</pattern>
+                  <template>
+                        <srai>SERVICES HELP</srai>
+                  </template>
+            </category>
+            <category>
+                  <pattern>HELP</pattern>
+                  <template>
+                        <srai>SERVICES HELP</srai>
+                  </template>
+            </category>
+
+            <category>
+                  <pattern>HELP</pattern>
+                  <template>
+                        <srai>SERVICES HELP</srai>
+                  </template>
+            </category>
+
+            <!-- service topic catchall -->
+            <category>
+                  <pattern>*</pattern>
+                  <template>
+                        Sorry I don't understand.
+                        <srai>SERVICES HELP</srai>
+                  </template>
+            </category>
+      </topic>
+
+      <!-- enter and exit services topic -->
+      <category>
+            <pattern>SERVICES</pattern>
+            <template>
+                  <srai>SERVICE RUNTIME</srai>
+            </template>
+      </category>
+      <category>
+            <pattern>SERVICE RUNTIME</pattern>
+            <template>ready for service commands 
+                  <think>
+                        <set name="topic">runtime</set>
+                  </think>
+            </template>
+      </category>
+      <category>
+            <pattern>LEAVE SERVICES</pattern>
+            <template>
+                  <random>
+                        <li>leaving runtime</li>
+                        <li>leaving services</li>
+                        <li>done with services moving back to default topic</li>
+                  </random>
+                  <think>
+                        <set name="topic">default</set>
+                  </think>
+            </template>
+      </category>
+
+</aiml>
