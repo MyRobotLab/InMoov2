@@ -14,6 +14,8 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     let firstTime = true
 
     $scope.batteryLevel = 0
+    $scope.currentState = "boot"
+    $scope.systemEvent = null
 
     $scope.peer = peer
     $scope.mrl = mrl
@@ -259,6 +261,14 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
             _self.updateState(data)
             $scope.$apply()
             break
+        case 'onOnStateChange':
+            $scope.currentState = data
+            $scope.$apply()
+            break
+        case 'onSystemEvent':
+            $scope.systemEvent = data
+            $scope.$apply()
+            break
         case 'onServiceTypeNamesFromInterface':
             $scope.speechTypes = data.serviceTypes;
             $scope.$apply()
@@ -352,6 +362,9 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     mrl.subscribe(mrl.getRuntime().name, 'getServiceTypeNamesFromInterface');
     mrl.subscribeToServiceMethod(_self.onMsg, mrl.getRuntime().name, 'getServiceTypeNamesFromInterface');
 
+    msg.subscribe('onStateChange')
+    msg.subscribe('publishSystemEvent')
+    
     msg.subscribe('publishText')
     msg.subscribe('publishPeerStarted')
     msg.subscribe('publishBatteryLevel')

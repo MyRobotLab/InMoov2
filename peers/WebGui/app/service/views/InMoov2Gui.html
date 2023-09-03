@@ -35,7 +35,7 @@
 
 <table class="table table-striped">
     <tr>
-        <td colspan="2">&nbsp;{{onText}}
+        <td colspan="2"><b>{{currentState.current}}</b> {{systemEvent}} <br/>{{onText}}
         </td>
     </tr>
     <tr>
@@ -674,31 +674,6 @@
                             </a>
                         </span>
                 </tr>
-                <tr ng-show="peer.isPeerStarted(service, 'neoPixel')">
-                    <td>
-                        <label>Boot Green</label>
-                    </td><td>
-                        <button title="Sets neopixel to green when robot is booting" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_boot_green_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_boot_green_stop.py')">off</button>
-                    </td>
-                </tr>
-                <tr ng-show="peer.isPeerStarted(service, 'neoPixel')">
-                    <td>
-                        <label>Red Error</label>
-                    </td><td>
-                        <button title="Sets neopixel to red when an error occurs" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_error_red_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_error_red_stop.py')">off</button>
-                    </td>
-                </tr>
-                <tr ng-show="peer.isPeerStarted(service, 'neoPixel')">
-                    <td>
-                        <label>Flash when Speaking</label>
-                    </td><td>
-                        <button ng-show="service.config.neoPixelFlashWhenSpeaking" title="Allows neopixel to flash when robot is speaking" class="btn btn-info" 
-                                    ng-click="setConfigValue('neoPixelFlashWhenSpeaking',false)">on</button>
-                        <button ng-show="!service.config.neoPixelFlashWhenSpeaking"  width="30" height="30" class="btn btn-default" ng-click="setConfigValue('neoPixelFlashWhenSpeaking',true)">off</button>
-                    </td>
-                </tr>
             </table>
 
             <!------------------------ extra end ------------------------------>
@@ -922,10 +897,10 @@
                     <td>
                         <label>Custom Sounds</label>
                     </td><td>
-                        <button ng-show="service.config.startupSound" title="Enable InMoov theme at start" class="btn btn-info" 
-                                    ng-click="setConfigValue('startupSound', false)">on</button>
-                        <button ng-show="!service.config.startupSound"  width="30" height="30" class="btn btn-default" 
-                                    ng-click="setConfigValue('startupSound', true)">off</button>                    </td>
+                        <button ng-show="service.config.customSounds" title="Enable InMoov theme at start" class="btn btn-info" 
+                                    ng-click="setConfigValue('customSounds', false)">on</button>
+                        <button ng-show="!service.config.customSounds"  width="30" height="30" class="btn btn-default" 
+                                    ng-click="setConfigValue('customSounds', true)">off</button>                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -955,6 +930,33 @@
                                     ng-click="setConfigValue('batteryLevelCheck', true)">off</button>
                     </td>
                 </tr>
+
+                <tr ng-show="peer.isPeerStarted(service, 'neoPixel')">
+                    <td>
+                        <label>Boot Green</label>
+                    </td><td>
+                        <button title="Sets neopixel to green when robot is booting" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_boot_green_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_boot_green_stop.py')">off</button>
+                    </td>
+                </tr>
+                <tr ng-show="peer.isPeerStarted(service, 'neoPixel')">
+                    <td>
+                        <label>Red Error</label>
+                    </td><td>
+                        <button title="Sets neopixel to red when an error occurs" width="30" height="30" class="btn btn-info" 
+                            ng-click="execScript('system/startScripts/i01_error_red_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_error_red_stop.py')">off</button>
+                    </td>
+                </tr>
+                <tr ng-show="peer.isPeerStarted(service, 'neoPixel')">
+                    <td>
+                        <label>Flash when Speaking</label>
+                    </td><td>
+                        <button ng-show="service.config.neoPixelFlashWhenSpeaking" title="Allows neopixel to flash when robot is speaking" class="btn btn-info" 
+                                    ng-click="setConfigValue('neoPixelFlashWhenSpeaking',false)">on</button>
+                        <button ng-show="!service.config.neoPixelFlashWhenSpeaking"  width="30" height="30" class="btn btn-default" ng-click="setConfigValue('neoPixelFlashWhenSpeaking',true)">off</button>
+                    </td>
+                </tr>
+                        
             </table>
 <!------------------------ life service end ------------------------------>
 <!------------------------ InMoov begin ------------------------------>
