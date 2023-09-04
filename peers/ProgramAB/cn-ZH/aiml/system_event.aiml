@@ -306,4 +306,17 @@
     <pattern>SYSTEM_EVENT STOPPED ultrasonicRight</pattern>
     <template>右超声波传感器停止</template>
   </category>
+  <category>
+    <pattern>SYSTEM_EVENT SHUTDOWN</pattern>
+    <template>正在关闭我的机器人实验室，请稍等 10 秒.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT SHUTDOWNCOMPLETE</pattern>
+    <template>正在关闭我的计算机，请等待该过程.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT GESTURE_ERROR</pattern>
+    <template>正在关闭我的计算机，请等待该过程.</template>
+  </category>
+  <category>
 </aiml>

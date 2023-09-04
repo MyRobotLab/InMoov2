@@ -11,7 +11,9 @@ def display(pic):
     i01_imageDisplay.closeAll()
     r=i01_imageDisplay.displayFullScreen(pic)
   else:
-    errorSpokenFunc("ALERT",", imageDisplay not started")
+    if runtime.isStarted('i01.chatBot'):
+      i01_chatBot.getResponse("ALERT")
+      i01_chatBot.getResponse("SYSTEM_ERROR_IMAGE_DISPLAY_1")
     if error_red==1:
       if runtime.isStarted('i01.neoPixel'):
         i01_neoPixel.setAnimation("Theater Chase", 255, 0, 0, 50)

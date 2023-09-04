@@ -308,5 +308,17 @@
     <pattern>SYSTEM_EVENT STOPPED ultrasonicRight</pattern>
     <template>Parar sensor de ultrassom direito</template>
   </category>
+  <category>
+    <pattern>SYSTEM_EVENT SHUTDOWN</pattern>
+    <template>Desligando meu laboratório de robôs, aguarde 10 segundos.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT SHUTDOWNCOMPLETE</pattern>
+    <template>Desligando meu computador, aguarde o processo.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT GESTURE_ERROR</pattern>
+    <template>Não consigo carregar os gestos, há um problema com um deles.</template>
+  </category>
 
 </aiml>

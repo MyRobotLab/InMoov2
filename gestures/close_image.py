@@ -3,4 +3,6 @@ def close_image():
     i01_imageDisplay.closeAll()
     i01.finishedGesture()
   else:
-    errorSpokenFunc("ALERT",", imageDisplay not started")
+    if runtime.isStarted('i01.chatBot'):
+      i01_chatBot.getResponse("ALERT")
+      i01_chatBot.getResponse("SYSTEM_ERROR_IMAGE_DISPLAY_1")

@@ -8,43 +8,16 @@
 # you can read them in your script
 # DONT CHANGE VARS HERE THEY ARE DYNAMICAL , IT IS A DECLARATION PART
 
-global RobotIsStarted
-RobotIsStarted=0
-global RobotIsSleeping
-RobotIsSleeping=0
-global RobotCanMoveHeadRandom
-RobotCanMoveHeadRandom=0
-global RobotCanMoveEyesRandom
-RobotCanMoveEyesRandom=0
-global RobotCanMoveBodyRandom
-RobotCanMoveBodyRandom=0
-global RobotCanMoveRandom
-RobotCanMoveRandom=0
 global error_red
 error_red=0
-global RobotIsErrorMode
-RobotIsErrorMode=0
-global RobotneedUpdate
-RobotneedUpdate=0
 global batterieLevel
 batterieLevel=100
-global iHaveInmoovFrKey
-iHaveInmoovFrKey=0
 global coloring
 coloring=0
 global helvar
 helvar=0
 global iReadbookcat
 iReadbookcat=0
-
-#system values
-#used by mouthcontrol audio signal processing
-global AudioInputValues
-AudioInputValues=[]
-global MouthControlActivated
-MouthControlActivated=0
-global AudioSignalProcessing
-AudioSignalProcessing=0
 
 # Used by finger sensors
 # Right Hand

@@ -323,4 +323,16 @@
     <pattern>SYSTEM_EVENT STOPPED ultrasonicRight</pattern>
     <template>दाएं अल्ट्रासोनिक सेंसर बंद करें</template>
   </category>
+  <category>
+    <pattern>SYSTEM_EVENT SHUTDOWN</pattern>
+    <template>मेरी रोबोट लैब बंद हो रही है, कृपया 10 सेकंड प्रतीक्षा करें.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT SHUTDOWNCOMPLETE</pattern>
+    <template>मेरा कंप्यूटर बंद हो रहा है, कृपया प्रक्रिया की प्रतीक्षा करें.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT GESTURE_ERROR</pattern>
+    <template>मैं इशारों को लोड नहीं कर सकता, उनमें से एक के साथ कोई समस्या है।.</template>
+  </category>
 </aiml>

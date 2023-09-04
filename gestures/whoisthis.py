@@ -23,4 +23,6 @@ def whoisthis():
       i01_opencv.stopCapture()
       i01.finishedGesture()
     else:
-      errorSpokenFunc('OPENCVNOWORKY')
+      if runtime.isStarted('i01.chatBot'):
+        i01_chatBot.getResponse("ALERT")
+        i01_chatBot.getResponse("SYSTEM_ERROR_OPENCV_1")
