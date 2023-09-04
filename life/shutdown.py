@@ -7,8 +7,8 @@
 ###############################################################################
 
 def shutdown():
-  if runtime.isStarted('i01.mouth'):
-    i01.speakBlocking(str(i01_chatBot.getResponse("SYSTEM_EVENT SHUTDOWN")))
+  if runtime.isStarted('i01.chatBot'):
+    i01_chatBot.getResponse("SYSTEM_EVENT SHUTDOWN")
   else:
     runtime.info(str(i01_chatBot.getResponse("SYSTEM_EVENT SHUTDOWN")))
   sleep(3)

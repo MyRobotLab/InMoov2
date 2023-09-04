@@ -8,8 +8,8 @@
 python.subscribe(runtime,"shutdown")
 
 def shutdownComplete():
-  if runtime.isStarted('i01.mouth'):
-    i01.speakBlocking(str(i01_chatBot.getResponse("SYSTEM_EVENT SHUTDOWNCOMPLETE")))
+  if runtime.isStarted('i01.chatBot'):
+    i01_chatBot.getResponse("SYSTEM_EVENT SHUTDOWNCOMPLETE")
   else:
     runtime.info(str(i01_chatBot.getResponse("SYSTEM_EVENT SHUTDOWNCOMPLETE")))
   sleep(2)
