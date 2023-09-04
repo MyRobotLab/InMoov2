@@ -2,6 +2,24 @@
 <aiml>
   <!--  gael le 04/09/2023 -->
   <!--  -->
+<category><pattern>ALERT</pattern>
+<template>
+      Alert,
+   <oob><mrl><service>python</service><method>exec</method><param>errors()</param></mrl></oob></template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_IMAGE_DISPLAY_1</pattern>
+<template>
+      imageDisplay not started.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENCV_1</pattern>
+<template>
+      Open CV is not started.
+   </template>
+</category>
+
 <category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_1</pattern>
 <template>
       open weathermap key error.
@@ -23,6 +41,12 @@
 <category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_4</pattern>
 <template>
        open weathermap not started or maybe not configured.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_PIR_1</pattern>
+<template>
+      P, I, R sensor is not started.
    </template>
 </category>
 
