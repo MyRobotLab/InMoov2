@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  gael le 04/09/2023 -->
+  <!--  -->
+<category><pattern>ALERT</pattern>
+<template>
+      Alerta,
+   <oob><mrl><service>python</service><method>exec</method><param>errors()</param></mrl></oob></template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_IMAGE_DISPLAY_1</pattern>
+<template>
+      imageDisplay não iniciado.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENCV_1</pattern>
+<template>
+      Open CV não foi iniciado.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_1</pattern>
+<template>
+      open weathermap erro de chave.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_2</pattern>
+<template>
+      open weathermap cidade não é reconhecida.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_3</pattern>
+<template>
+       open weathermap unidades não definidas.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_4</pattern>
+<template>
+       open weathermap não iniciado ou talvez não configurado.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_PIR_1</pattern>
+<template>
+      P, I, R o sensor não foi iniciado.
+   </template>
+</category>
+
+</aiml>
