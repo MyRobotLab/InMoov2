@@ -34,4 +34,6 @@ def onRecognizedFace(name):
       i01_opencv.stopCapture()
       print("recognized:" + name)
   else:
-    errorSpokenFunc("ALERT",", opencv is not started")
+    if runtime.isStarted('i01.chatBot'):
+      i01_chatBot.getResponse("ALERT")
+      i01_chatBot.getResponse("SYSTEM_ERROR_OPENCV_1")
