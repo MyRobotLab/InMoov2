@@ -2,25 +2,25 @@
 <aiml>
   <!--  gael le 04/09/2023 -->
   <!--  -->
-<category><pattern>OPEN_WEATHERMAP_1</pattern>
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_1</pattern>
 <template>
       open weathermap key error.
    </template>
 </category>
 
-<category><pattern>OPEN_WEATHERMAP_2</pattern>
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_2</pattern>
 <template>
       open weathermap town is unrecognized.
    </template>
 </category>
 
-<category><pattern>OPEN_WEATHERMAP_3</pattern>
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_3</pattern>
 <template>
        open weathermap units not defined.
    </template>
 </category>
 
-<category><pattern>OPEN_WEATHERMAP_4</pattern>
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_4</pattern>
 <template>
        open weathermap not started or maybe not configured.
    </template>
