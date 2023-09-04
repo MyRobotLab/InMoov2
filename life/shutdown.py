@@ -7,7 +7,10 @@
 ###############################################################################
 
 def shutdown():
-  i01.speakBlocking(i01.localize("SHUTDOWN"))
+  if runtime.isStarted('i01.mouth'):
+    i01.speakBlocking(str(i01_chatBot.getResponse("SYSTEM_EVENT SHUTDOWN")))
+  else:
+    runtime.info(str(i01_chatBot.getResponse("SYSTEM_EVENT SHUTDOWN")))
   sleep(3)
   if runtime.isStarted('i01.head.eyelids'):
     i01_head.autoBlink(False)
