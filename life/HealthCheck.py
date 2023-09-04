@@ -32,4 +32,4 @@ def healthCheck_def(timedata):
   i01.setBatteryLevel(int(batterieLevel))
   print "battery :",batterieLevel
   
-  else:healthCheck.stopClock()
+  healthCheck.stopClock()
