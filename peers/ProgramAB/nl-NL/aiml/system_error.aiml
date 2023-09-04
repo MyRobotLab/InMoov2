@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  gael le 04/09/2023 -->
+  <!--  -->
+<category><pattern>ALERT</pattern>
+<template>
+      Waarschuw,
+   <oob><mrl><service>python</service><method>exec</method><param>errors()</param></mrl></oob></template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_IMAGE_DISPLAY_1</pattern>
+<template>
+      imageDisplay niet gestart.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENCV_1</pattern>
+<template>
+      Open CV is niet gestart.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_1</pattern>
+<template>
+      open weathermap sleutelfout.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_2</pattern>
+<template>
+      open weathermap stad wordt niet herkend.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_3</pattern>
+<template>
+       open weathermap eenheden niet gedefinieerd.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_4</pattern>
+<template>
+       open weathermap niet gestart of misschien niet geconfigureerd.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_PIR_1</pattern>
+<template>
+      P, I, R sensor is niet gestart.
+         </template>
+</category>
+
+</aiml>
