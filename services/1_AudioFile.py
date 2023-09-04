@@ -40,7 +40,6 @@ def playMusic():
             initAudioPlayer()
             i01_audioPlayer.startPlaylist(musicPath,0,0)
         else :
-            i01.speakBlocking(i01.localize("STARTINGAUDIOPLAYER"))
             i01_AudioPlayer = runtime.start('i01.audioPlayer','AudioFile')
     else:
         i01.warn("i01.chatBot needs to be started")    
@@ -53,7 +52,6 @@ def playRandomMusic():
             #TOSHUFFLE("playlistName", # of times played shuffle, boolean repeat, String track)
             i01_audioPlayer.startPlaylist(musicPath,1,0)
         else :
-            i01.speakBlocking(i01.localize("STARTINGAUDIOPLAYER"))
             i01_AudioPlayer = runtime.start('i01.audioPlayer','AudioFile')
     else:
         i01.warn("i01.chatBot needs to be started") 
@@ -89,7 +87,6 @@ def searchPlay(song):
             else:
                 i01_chatBot.getResponse("DO_NOT_HAVE_PLAYLIST")
         else :
-            i01.speakBlocking(i01.localize("STARTINGAUDIOPLAYER"))
             i01_AudioPlayer = runtime.start('i01.audioPlayer','AudioFile')
     else:
         i01.warn("i01.chatBot needs to be started")
@@ -111,7 +108,6 @@ def nextPlay():
                 i01_audioPlayer.stop()
                 i01_chatBot.getResponse("SYSTEM_NEXT_SONG")
         else :
-            i01.speakBlocking(i01.localize("STARTINGAUDIOPLAYER"))
             i01_AudioPlayer = runtime.start('i01.audioPlayer','AudioFile')
     else:
         i01.warn("i01.chatBot needs to be started")
@@ -133,7 +129,6 @@ def previousPlay():
                 i01_audioPlayer.stop()
                 i01_chatBot.getResponse("SYSTEM_NEXT_SONG")
         else :
-            i01.speakBlocking(i01.localize("STARTINGAUDIOPLAYER"))
             i01_AudioPlayer = runtime.start('i01.audioPlayer','AudioFile')
     else:
         i01.warn("i01.chatBot needs to be started")
