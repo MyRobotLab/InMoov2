@@ -148,4 +148,19 @@
 <template>Starting right controller.</template>
 </category>
 
+<category>
+<pattern>SYSTEM_EVENT SHUTDOWN</pattern>
+<template>Shutting down my robot lab, please wait 10 seconds.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT SHUTDOWNCOMPLETE</pattern>
+<template>Shutting down my computer, please wait for the process.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT GESTURE_ERROR</pattern>
+<template>I cannot load the gestures, there is a problem with one of them.</template>
+</category>
+
 </aiml>
