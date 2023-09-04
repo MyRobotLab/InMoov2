@@ -314,5 +314,17 @@
     <pattern>SYSTEM_EVENT STOPPED ultrasonicRight</pattern>
     <template>Rechter ultrasone sensor stoppen</template>
   </category>
+  <category>
+    <pattern>SYSTEM_EVENT SHUTDOWN</pattern>
+    <template>Mijn robotlab wordt afgesloten. Wacht 10 seconden.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT SHUTDOWNCOMPLETE</pattern>
+    <template>Ik sluit mijn computer af. Wacht alstublieft op het proces.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT GESTURE_ERROR</pattern>
+    <template>Ik kan de gebaren niet laden, er is een probleem met een ervan.</template>
+  </category>
 
 </aiml>
