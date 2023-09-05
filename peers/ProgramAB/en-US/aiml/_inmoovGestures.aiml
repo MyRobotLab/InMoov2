@@ -192,6 +192,35 @@
           </random>
         <oob><mrl><service>python</service><method>exec</method><param>fingeraction()</param></mrl></oob></template>
 </category>
+
+<category><pattern>CLOSE YOUR HAND</pattern>
+<template>Okay, which hand do you want me to close, the right hand or the left hand?</template>
+</category>
+
+<category><pattern>THE RIGHT HAND</pattern><that># THE RIGHT HAND OR THE LEFT HAND #</that>
+<template>As you please.
+        <srai>CLOSE YOUR RIGHT HAND</srai></template>
+</category>
+
+<category><pattern>THE LEFT HAND</pattern><that># THE RIGHT HAND OR THE LEFT HAND #</that>
+<template>As you please.
+        <srai>CLOSE YOUR LEFT HAND</srai></template>
+</category>
+
+<category><pattern>OPEN YOUR HAND</pattern>
+<template>Okay, which hand do you want me to open, the left hand or the right hand?</template>
+</category>
+
+<category><pattern>THE RIGHT HAND</pattern><that># THE LEFT HAND OR THE RIGHT HAND #</that>
+<template>Here you go.
+        <srai>OPEN YOUR RIGHT HAND</srai></template>
+</category>
+
+<category><pattern>THE LEFT HAND</pattern><that># THE LEFT HAND OR THE RIGHT HAND #</that>
+<template>Here you go.
+        <srai>OPEN YOUR LEFT HAND</srai></template>
+</category>
+
 <category><pattern>CAMERA ON</pattern>
 <template>I turn my camera on.
         <oob><mrl><service>python</service><method>exec</method><param>i01_opencv.capture()</param></mrl></oob></template>
