@@ -311,4 +311,16 @@
     <pattern>SYSTEM_EVENT STOPPED ultrasonicRight</pattern>
     <template>detener sensor de ultrasonidos derecho</template>
   </category>
+  <category>
+    <pattern>SYSTEM_EVENT SHUTDOWN</pattern>
+    <template>Cerrando mi laboratorio de robots, espere 10 segundos.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT SHUTDOWNCOMPLETE</pattern>
+    <template>Apagando mi computadora, por favor espere el proceso.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT GESTURE_ERROR</pattern>
+    <template>No puedo cargar los gestos, hay un problema con uno de ellos.</template>
+  </category>
 </aiml>

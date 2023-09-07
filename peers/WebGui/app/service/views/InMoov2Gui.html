@@ -750,6 +750,29 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
+                            ng-click="filterPeers('oakD')" /><img src="../img/InMoov2/markerBlue_left.png"
+                            onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
+                            onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
+                            ng-click="filterPeers(null)" />
+                        <img src="../OakD.png" />
+                        <label>OakD Lite</label>
+                    </td>
+                    <!--<td>
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'oakD')"
+                            ng-click="startPeer('oakD')">off</button>
+                        <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'oakD')"
+                            ng-click="release('oakD')">on</button>
+                    </td>-->
+                    <td>
+                    <toggle width="38" height="35" ng-model="isOakDStarted" ng-change="!isOakDStarted?execScript('system/startScripts/i01_OakD_stop.py'):execScript('system/startScripts/i01_OakD_start.py')" on="" off=""/></toggle>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+                        <img src="../img/InMoov2/markerBlue_right.png"
+                            onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
+                            onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
                             ng-click="filterPeers('leap')" /><img src="../img/InMoov2/markerBlue_left.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
@@ -1003,7 +1026,7 @@
                             <td>Custom Script</td>
                                     <td></td>
                             <td>
-                        <button width="30" height="30" class="btn btn-default" title="To execute your script data/InMoov2/InMoovCustom.py" ng-click="execScript('system/startScripts/InMoovCustom_start.py')" width="120" height="30"></button>
+                        <button width="30" height="30" class="btn btn-default" title="To execute your script data/InMoov2/InMoovCustom.py" ng-click="execScript('custom/InMoovCustom_start.py')" width="120" height="30"></button>
                        </td>
                         </tr>
                         <tr>

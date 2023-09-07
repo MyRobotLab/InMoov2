@@ -38,5 +38,7 @@ def publishSense(event):
         sleepModeWakeUp()
           
   else:
-    errorSpokenFunc("ALERT",", p,i,r is not started")
+    if runtime.isStarted('i01.chatBot'):
+      i01_chatBot.getResponse("ALERT")
+      i01_chatBot.getResponse("SYSTEM_ERROR_PIR_1")
     

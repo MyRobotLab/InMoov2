@@ -312,5 +312,17 @@
     <pattern>SYSTEM_EVENT STOPPED ultrasonicRight</pattern>
     <template>Arrêt du capteur ultrasonique droit</template>
   </category>
+  <category>
+    <pattern>SYSTEM_EVENT SHUTDOWN</pattern>
+    <template>J'arrête my robot lab, veuillez patienter 10 secondes.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT SHUTDOWNCOMPLETE</pattern>
+    <template>J'arrête mon ordinateur, veuillez attendre le processus.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT GESTURE_ERROR</pattern>
+    <template>Je n'arrive pas à charger les gestuelles, il y a un problème avec l'une d'elles.</template>
+  </category>
 
 </aiml>

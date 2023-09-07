@@ -1373,8 +1373,12 @@
 <category><pattern>TEACH ME ENGLISH</pattern>
 <template>You can practise your English conversation skills with me.</template>
 </category>
+<category><pattern>STOP TALKING</pattern>
+<template>You can always interrupt me by pressing the Speak button.
+<oob><mrl><service>python</service><method>exec</method><param>i01_audioFile.stop()</param></mrl></oob></template>
+</category>
 <category><pattern>SHUT UP</pattern>
-<template>You can always interrupt me by pressing the Speak button.</template>
+<template><srai>STOP TALKING</srai></template>
 </category>
 <category><pattern>OU *</pattern>
 <template>I don't speak French.</template>

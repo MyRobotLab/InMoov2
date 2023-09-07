@@ -16,18 +16,21 @@ def isTheSunShiny(townParam="town",period=1):
     global apikey
     if apikey==None:
       runtime.warn('open weathermap key error')
-      errorSpokenFunc("ALERT",", open weathermap key error")
+      if runtime.isStarted('i01.chatBot'):
+        i01_chatBot.getResponse("SYSTEM_ERROR_OPENWEATHERMAP_1")
     else:
       openWeatherMap=i01_openWeatherMap
       town=openWeatherMap.getConfig().currentTown
       if town==None:
         runtime.warn('open weathermap town is unrecognized')
-        errorSpokenFunc("ALERT",", open weathermap town is unrecognized")
+        if runtime.isStarted('i01.chatBot'):
+          i01_chatBot.getResponse("SYSTEM_ERROR_OPENWEATHERMAP_2")
       else:
         setUnits=openWeatherMap.getConfig().currentUnits
         if setUnits==None:
           runtime.warn('open weathermap units not defined')
-          errorSpokenFunc("ALERT",", open weathermap units not defined") 
+          if runtime.isStarted('i01.chatBot'):
+            i01_chatBot.getResponse("SYSTEM_ERROR_OPENWEATHERMAP_3") 
         else:
           if townParam=="town" or townParam=="":townParam=town  
           openWeatherMap.setUnits(setUnits)
@@ -37,4 +40,6 @@ def isTheSunShiny(townParam="town",period=1):
           rawCode=openWeatherMap.getWeatherCode()
           i01_chatBot.getResponse("SYSTEM METEO curtemperature " + str(int(curtemperature)) + " Town " + str(townParam.split(',')[0] + " COMMENTAIRE " + str(rawCode)))
   else:
-      errorSpokenFunc("ALERT",", open weathermap not started or maybe not configured")
+    if runtime.isStarted('i01.chatBot'):
+      i01_chatBot.getResponse("SYSTEM_ERROR_OPENWEATHERMAP_4")
+

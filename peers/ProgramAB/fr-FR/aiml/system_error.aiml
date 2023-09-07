@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  gael le 04/09/2023 -->
+  <!--  -->
+<category><pattern>ALERT</pattern>
+<template>
+      Alerte,
+   <oob><mrl><service>python</service><method>exec</method><param>errors()</param></mrl></oob></template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_IMAGE_DISPLAY_1</pattern>
+<template>
+      imageDisplay n'est pas démarré.
+         </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENCV_1</pattern>
+<template>
+      Le CV ouvert n'est pas démarré.
+         </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_1</pattern>
+<template>
+      Erreur de clé d'accès open weathermap.
+         </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_2</pattern>
+<template>
+      La ville selectionné sur open weathermap n'est pas reconnue.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_3</pattern>
+<template>
+       unités de open weathermap non définies.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_4</pattern>
+<template>
+       open weathermap pas démarré ou peut-être pas configuré.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_PIR_1</pattern>
+<template>
+      Le capteur P, I, R n'est pas démarré.
+   </template>
+</category>
+
+</aiml>

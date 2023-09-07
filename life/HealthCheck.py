@@ -32,9 +32,4 @@ def healthCheck_def(timedata):
   i01.setBatteryLevel(int(batterieLevel))
   print "battery :",batterieLevel
   
-  if robotIsErrorMode==1:
-    if error_red==1:
-      if runtime.isStarted('i01.neopixel'):
-        i01.setNeopixelAnimation("Flash Random", 255, 0, 0, 5)
-      
-  else:healthCheck.stopClock()
+  healthCheck.stopClock()

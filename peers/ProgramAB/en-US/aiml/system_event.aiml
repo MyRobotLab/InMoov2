@@ -112,6 +112,18 @@
 </category>
 
 <category>
+<pattern>SYSTEM_EVENT STARTED OAKD</pattern>
+<template>Starting vision sensor
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED OAKD</pattern>
+<template>Stopping vision sensor
+</template>
+</category>
+
+<category>
 <pattern>SYSTEM_EVENT STARTED CHATBOT</pattern>
 <template>Chatbot loaded, I may start other components, please wait.</template>
 </category>
@@ -149,6 +161,26 @@
 <category>
 <pattern>SYSTEM_EVENT STARTED RIGHT</pattern>
 <template>Starting right controller.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT SHUTDOWN</pattern>
+<template>Shutting down my robot lab, please wait 10 seconds.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT SHUTDOWNCOMPLETE</pattern>
+<template>Shutting down my computer, please wait for the process.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT GESTURE_ERROR</pattern>
+<template>I cannot load the gestures, there is a problem with one of them.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT LOAD SCRIPTS ERROR</pattern>
+<template>I cannot load the scripts, there is a problem with one of them.</template>
 </category>
 
 </aiml>
