@@ -35,7 +35,7 @@
 
 <table class="table table-striped">
     <tr>
-        <td colspan="2"><b>{{currentState.current}}</b> {{systemEvent}} <br/>{{onText}}
+        <td colspan="2"><b>State {{currentState.current}}</b> {{systemEvent}} <br/>{{onText}}
         </td>
     </tr>
     <tr>
@@ -160,11 +160,12 @@
                         <label>GPT</label>
                     </td>
                     <td>
-                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'gpt3')"
-                            ng-click="execScript('system/startScripts/i01_gpt3_start.py')">off</button>
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'gpt3')" 
+                            ng-click="startPeer('gpt3')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'gpt3')"
-                            ng-click="execScript('system/startScripts/i01_gpt3_stop.py')">on</button>
+                            ng-click="releasePeer('gpt3')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'gpt3')">
+                                    
                             <img src="settings.png" width="30" title="Open" ng-click="mrl.changeTab(peer.getActualName(service, 'gpt3'))"/>
                         </span>
                     </td>
