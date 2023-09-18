@@ -351,6 +351,10 @@
 <template>HAND DOWN
         <oob><mrl><service>python</service><method>exec</method><param>handdown()</param></mrl></oob></template>
 </category>
+<category><pattern>WHAT IS IT</pattern>
+<template>Let me check.
+        <oob><mrl><service>python</service><method>exec</method><param>studyball()</param></mrl></oob></template>
+</category>
 <category><pattern>IS IT A BALL</pattern>
 <template>IS IT A BALL
         <oob><mrl><service>python</service><method>exec</method><param>isitaball()</param></mrl></oob></template>
@@ -1214,5 +1218,58 @@
 </category>
 <category><pattern>CAN I HURT YOU</pattern>
 <template> <oob><mrl><service>python</service><method>exec</method><param>call_911()</param></mrl></oob></template>
-</category>          
+</category>
+<category><pattern>CAN YOU WELCOME THE CROWD</pattern>
+<template><oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>gritting()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>WELCOME THE PUBLIC</pattern>
+<template><srai>CAN YOU WELCOME THE CROWD</srai></template>
+</category>
+<category><pattern>CAN YOU WELCOME THE PUBLIC</pattern>
+<template><srai>CAN YOU WELCOME THE CROWD</srai></template>
+</category>
+<category><pattern>WELCOME EVERYBODY</pattern>
+<template><srai>CAN YOU WELCOME THE CROWD</srai></template>
+</category>
+<category><pattern>BONJOUR</pattern>
+<template>Bonjour
+          <oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>agreeanswersmall()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>COME ON SAVA</pattern>
+<template><random>
+            <li>I rather speak English if you don't mind</li>
+            <li>Are you trying to sound English?</li>
+         </random>
+          <oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>tiltHeadAgree()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>COMO SAVA</pattern>
+<template><srai>COME ON SAVA</srai></template>
+</category>
+<category><pattern>CAN I TELL YOUR STORY</pattern>
+<template>Sure don't be shy
+          <oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>Yes()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>CAN I TELL MY STORY</pattern>
+<template><srai>CAN I TELL YOUR STORY</srai></template>
+</category>
 </aiml>
