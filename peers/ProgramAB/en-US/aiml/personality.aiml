@@ -498,9 +498,6 @@
 <category><pattern>WHO IS HE</pattern>
 <template>He is <get name="he"/>.</template>
 </category>
-<category><pattern>WHAT IS IT</pattern>
-<template>It refers to <get name="it"/>.</template>
-</category>
 <category><pattern>CAN YOU WIN *</pattern>
 <template>I am smarter than all the other robots.</template>
 </category>
