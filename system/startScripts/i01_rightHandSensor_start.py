@@ -244,10 +244,12 @@ if runtime.isStarted('i01.right'):
 
     except:
         i01.error('could not start right hand sensor')
-        i01.speakBlocking(i01.localize('CONFIGPARSERPROBLEM'))
+        if runtime.isStarted('i01.chatBot'):
+            i01.invoke("publishError", "RIGHTHANDSENSOR_1")
         rightHandSensorStarted = False
         pass
 else:
     i01.error('i01.right controller not found for right hand sensor')
-    i01.speakBlocking(i01.localize('BADRDUINOCHOOSEN','right Hand Sensor'))
+    if runtime.isStarted('i01.chatBot'):
+            i01.invoke("publishError", "RIGHTHANDSENSOR_2")
     rightHandSensorStarted = False
