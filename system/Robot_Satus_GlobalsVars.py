@@ -21,8 +21,8 @@ iReadbookcat=0
 
 # Used by finger sensors
 # Right Hand
-global rightHandSensorActivated
-rightHandSensorActivated=0
+global rightHandSensorStarted
+rightHandSensorStarted=0
 global rightThumbPressure
 rightThumbPressure=0
 global rightIndexPressure
@@ -37,8 +37,8 @@ global rightExtraPressure
 rightExtraPressure=0
 
 # Left Hand
-global leftHandSensorActivated
-leftHandSensorActivated=0
+global leftHandSensorStarted
+leftHandSensorStarted=0
 global leftThumbPressure
 leftThumbPressure=0
 global leftIndexPressure
