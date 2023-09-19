@@ -40,6 +40,14 @@
     <template>Oikean käden anturien käynnistys.</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STOPPED LEFT HAND SENSOR</pattern>
+    <template>Vasemman käden anturin pysäyttäminen.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED RIGHT HAND SENSOR</pattern>
+    <template>Oikean anturin pysäyttäminen.</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED LEFT</pattern>
     <template>Vasemman ohjaimen käynnistys.</template>
   </category>
