@@ -246,12 +246,12 @@ if runtime.isStarted('i01.right'):
         i01.error('could not start right hand sensor')
         if runtime.isStarted('i01.chatBot'):
             i01_chatBot.getResponse("ALERT")
-            i01_chatBot.getResponse("RIGHTHANDSENSOR_1")
+            i01_chatBot.getResponse("SYSTEM_ERROR_RIGHTHANDSENSOR_1")
         rightHandSensorStarted = False
         pass
 else:
     i01.error('i01.right controller not found for right hand sensor')
     if runtime.isStarted('i01.chatBot'):
             i01_chatBot.getResponse("ALERT")
-            i01_chatBot.getResponse("RIGHTHANDSENSOR_2")
+            i01_chatBot.getResponse("SYSTEM_ERROR_RIGHTHANDSENSOR_2")
     rightHandSensorStarted = False
