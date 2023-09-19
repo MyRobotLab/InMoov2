@@ -35,6 +35,14 @@
     <template>Sağ sensörlerin çalıştırılması.</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STOPPED LEFT HAND SENSOR</pattern>
+    <template>Sol el sensörü başlatılıyor.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED RIGHT HAND SENSOR</pattern>
+    <template>Sağ sensör başlatılıyor.</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED LEFT</pattern>
     <template>Sol denetleyiciyi başlatma.</template>
   </category>
