@@ -326,5 +326,4 @@
     <pattern>SYSTEM_EVENT GESTURE_ERROR</pattern>
     <template>正在关闭我的计算机，请等待该过程.</template>
   </category>
-  <category>
 </aiml>
