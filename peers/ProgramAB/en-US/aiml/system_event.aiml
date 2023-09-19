@@ -152,12 +152,12 @@
 
 <category>
 <pattern>SYSTEM_EVENT STOPPED LEFT HAND SENSOR</pattern>
-<template>Starting left hand sensor.</template>
+<template>Stopping left hand sensor.</template>
 </category>
 
 <category>
 <pattern>SYSTEM_EVENT STOPPED RIGHT HAND SENSOR</pattern>
-<template>Starting right hand sensor.</template>
+<template>Stopping right hand sensor.</template>
 </category>
 
 <category>
