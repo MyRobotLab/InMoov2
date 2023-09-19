@@ -38,6 +38,14 @@
     <template>Starten der rechten Sensoren.</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STOPPED LEFT HAND SENSOR</pattern>
+    <template>Linker Sensor stoppt.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED RIGHT HAND SENSOR</pattern>
+    <template>Anhalten des rechten Sensors.</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED LEFT</pattern>
     <template>Starten des linken Controllers.</template>
   </category>
