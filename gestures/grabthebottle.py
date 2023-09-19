@@ -9,7 +9,7 @@ def grabthebottle():
   i01.moveHead(20,107)
   i01.moveArm("left",77,85,45,20)
   i01.moveArm("right",5,90,30,10)
-  if leftHandSensorActivated==1:
+  if leftHandSensorStarted==1:
     global leftThumbPressure
     global leftIndexPressure
     global leftMajeurePressure

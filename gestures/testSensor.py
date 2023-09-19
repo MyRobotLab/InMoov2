@@ -15,7 +15,7 @@ def testSensor():
   i01.moveTorso(90.0,90.0,90.0)
   ## TODO fix the bug if we don't finish the gesture at this point
   ## the pressure sensors don't work
-  if rightHandSensorActivated==1:
+  if rightHandSensorStarted==1:
     global leftThumbPressure
     global leftIndexPressure
     global leftMajeurePressure
