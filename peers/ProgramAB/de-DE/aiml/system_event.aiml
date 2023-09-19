@@ -361,6 +361,5 @@
     <pattern>SYSTEM_EVENT GESTURE_ERROR</pattern>
     <template>I cannot load the gestures, there is a problem with one of them.</template>
   </category>
-  <category>
 
 </aiml>
