@@ -36,6 +36,14 @@
     <template>दाहिने हाथ के सेंसर शुरू करना.</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STOPPED LEFT HAND SENSOR</pattern>
+    <template>बाएँ हाथ का सेंसर बंद हो रहा है.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED RIGHT HAND SENSOR</pattern>
+    <template>दाहिने हाथ का सेंसर बंद हो रहा है.</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED LEFT</pattern>
     <template>बाएँ नियंत्रक को प्रारंभ कर रहा है.</template>
   </category>
