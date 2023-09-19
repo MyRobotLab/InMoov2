@@ -239,11 +239,13 @@ if runtime.isStarted('i01.left'):
     except:
         i01.error('could not start left hand sensor')
         if runtime.isStarted('i01.chatBot'):
-            i01.invoke("publishError", "LEFTHANDSENSOR_1")
+            i01_chatBot.getResponse("ALERT")
+            i01_chatBot.getResponse("LEFTHANDSENSOR_1")
         leftHandSensorStarted = False
         pass
 else:
     i01.error('i01.left controller not found for left hand sensor')
     if runtime.isStarted('i01.chatBot'):
-            i01.invoke("publishError", "LEFTHANDSENSOR_2")
+            i01_chatBot.getResponse("ALERT")
+            i01_chatBot.getResponse("LEFTHANDSENSOR_2")
     leftHandSensorStarted = False
