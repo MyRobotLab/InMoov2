@@ -211,7 +211,7 @@ if runtime.isStarted('i01.left'):
 
         if runtime.isStarted('i01.chatBot'):
             i01_chatBot.getResponse("SYSTEM_EVENT STARTED LEFT HAND SENSOR")
-        i01_left.addListener("publishPinArray","python","publishLeftPin")
+        i01_left.addListener("publishPinArray","python","publishPinLeft")
 
         def leftHandSensorON():
             if leftHandSensorStarted==1:
@@ -238,10 +238,12 @@ if runtime.isStarted('i01.left'):
 
     except:
         i01.error('could not start left hand sensor')
-        i01.speakBlocking(i01.localize('CONFIGPARSERPROBLEM'))
+        if runtime.isStarted('i01.chatBot'):
+            i01.invoke("publishError", "LEFTHANDSENSOR_1")
         leftHandSensorStarted = False
         pass
 else:
     i01.error('i01.left controller not found for left hand sensor')
-    i01.speakBlocking(i01.localize('BADRDUINOCHOOSEN','left Hand Sensor'))
+    if runtime.isStarted('i01.chatBot'):
+            i01.invoke("publishError", "LEFTHANDSENSOR_2")
     leftHandSensorStarted = False
