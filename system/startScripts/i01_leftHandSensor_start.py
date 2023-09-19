@@ -68,7 +68,21 @@ global leftPinkyPressure
 leftPinkyPressure=0
 
 if runtime.isStarted('i01.left'):
-    leftHandSensorActivated = True
+    leftHandSensorStarted = True
+    configFilename="data/InMoov2/i01.life.yml"
+    # open the file
+    file = open(configFilename, "r")
+    # read the file
+    text = file.read()
+    # search & replace the word
+    replaced_text = text.replace("leftHandSensorStarted=False", "leftHandSensorStarted=True")
+
+    # save the file
+    file = open(configFilename, "w")
+    file.write(replaced_text)
+    file.close()
+
+    execfile('resource/InMoov2/life/0_inmoovLife.py')
 
     try:
         # common left pin listener function
@@ -197,10 +211,10 @@ if runtime.isStarted('i01.left'):
 
         if runtime.isStarted('i01.chatBot'):
             i01_chatBot.getResponse("SYSTEM_EVENT STARTED LEFT HAND SENSOR")
-        i01_left.addListener("publishPinArray","python","publishLeftPin")
+        i01_left.addListener("publishPinArray","python","publishPinLeft")
 
         def leftHandSensorON():
-            if leftHandSensorActivated==1:
+            if leftHandSensorStarted==1:
                 print "=========LeftSensorON========" 
                 i01_left.enablePin(left_thumbPin, 2) #2 is the number of polls per seconds
                 i01_left.enablePin(left_indexPin, 2)
@@ -212,7 +226,7 @@ if runtime.isStarted('i01.left'):
 
         def leftHandSensorOFF():
             #sleep(5)
-            if leftHandSensorActivated==1:
+            if leftHandSensorStarted==1:
                 i01_left.disablePin(left_thumbPin)
                 i01_left.disablePin(left_indexPin)
                 i01_left.disablePin(left_majeurePin)
@@ -224,10 +238,14 @@ if runtime.isStarted('i01.left'):
 
     except:
         i01.error('could not start left hand sensor')
-        i01.speakBlocking(i01.localize('CONFIGPARSERPROBLEM'))
-        leftHandSensorActivated = False
+        if runtime.isStarted('i01.chatBot'):
+            i01_chatBot.getResponse("ALERT")
+            i01_chatBot.getResponse("SYSTEM_ERROR_LEFTHANDSENSOR_1")
+        leftHandSensorStarted = False
         pass
 else:
     i01.error('i01.left controller not found for left hand sensor')
-    i01.speakBlocking(i01.localize('BADRDUINOCHOOSEN','left Hand Sensor'))
-    leftHandSensorActivated = False
+    if runtime.isStarted('i01.chatBot'):
+            i01_chatBot.getResponse("ALERT")
+            i01_chatBot.getResponse("SYSTEM_ERROR_LEFTHANDSENSOR_2")
+    leftHandSensorStarted = False

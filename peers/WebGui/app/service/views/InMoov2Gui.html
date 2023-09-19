@@ -332,7 +332,7 @@
                             </a>
                         </span>
                         <label ng-show="peer.isPeerStarted(service, 'leftHand')">Sensors:</label>
-                        &nbsp;<toggle width="30" height="28" ng-show="peer.isPeerStarted(service, 'leftHand')"  ng-model="service.isLeftHandSensorStarted" title="To configure edit data/config/i01.leftHand.sensor.yml" ng-change="!service.isLeftHandSensorStarted?msg.isLeftHandSensorStarted(false):execScript('system/startScripts/i01_leftHandSensor_start.py')" width="120" height="30" on="" off=""/>
+                        &nbsp;<toggle width="30" height="28" ng-show="peer.isPeerStarted(service, 'leftHand')"  ng-model="service.leftHandSensorStarted" title="To configure edit data/config/i01.leftHand.sensor.yml" ng-change="!service.leftHandSensorStarted?execScript('system/startScripts/i01_leftHandSensor_stop.py'):execScript('system/startScripts/i01_leftHandSensor_start.py')" width="120" height="30" on="" off=""/>
                     </td>
                 </tr>
                 <tr>
@@ -359,7 +359,7 @@
                             </a>
                         </span>
                         <label ng-show="peer.isPeerStarted(service, 'rightHand')">Sensors:</label>
-                        &nbsp;<toggle width="30" height="28" ng-show="peer.isPeerStarted(service, 'rightHand')" ng-model="service.isRightHandSensorStarted" title="To configure edit data/config/i01.rightHand.sensor.yml" ng-change="!service.isRightHandSensorStarted?msg.isRightHandSensorStarted(false):execScript('system/startScripts/i01_rightHandSensor_start.py')" width="120" height="30" on="" off=""/>
+                        &nbsp;<toggle width="30" height="28" ng-show="peer.isPeerStarted(service, 'rightHand')" ng-model="service.rightHandSensorStarted" title="To configure edit data/config/i01.rightHand.sensor.yml" ng-change="!service.rightHandSensorStarted?execScript('system/startScripts/i01_rightHandSensor_stop.py'):execScript('system/startScripts/i01_rightHandSensor_start.py')" width="120" height="30" on="" off=""/>
                     </td>
                 </tr>
             </table>

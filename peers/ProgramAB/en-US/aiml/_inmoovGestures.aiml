@@ -799,6 +799,27 @@
           </mrl>
         </oob></template>
 </category>
+<category><pattern>HOW DO YOU FEEL</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>newyork()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>* FRANK SINATRA *</pattern>
+<template><srai>HOW DO YOU FEEL</srai></template>
+</category>
+<category><pattern>PLAY YOUR SONG</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>playsong()</param>
+          </mrl>
+        </oob></template>
+</category>
 <category><pattern>PLAY YOUR SONG</pattern>
 <template><oob>
           <mrl>

@@ -35,6 +35,14 @@
     <template>Запуск правых датчиков.</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STOPPED LEFT HAND SENSOR</pattern>
+    <template>Остановка левого датчика.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED RIGHT HAND SENSOR</pattern>
+    <template>Остановка правого датчика.</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED LEFT</pattern>
     <template>Запуск левого контроллера.</template>
   </category>
