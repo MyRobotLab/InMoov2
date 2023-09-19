@@ -56,6 +56,11 @@ def saveConfig(configFilename):
     "[OPENCV]\n"
     "flipPicture=False\n"
     "faceRecognizerActivated=True\n"
+    "\n"
+    "[SENSOR]\n"
+    "leftHandSensorStarted=False\n"
+    "rightHandSensorStarted=False\n"
+    "\n"
     ]
     configWriter.writelines(L)
     configWriter.close()

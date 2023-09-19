@@ -68,7 +68,21 @@ global rightPinkyPressure
 rightPinkyPressure=0
 
 if runtime.isStarted('i01.right'):
-    rightHandSensorActivated = True
+    rightHandSensorStarted = True
+    configFilename="data/InMoov2/i01.life.yml"
+    # open the file
+    file = open(configFilename, "r")
+    # read the file
+    text = file.read()
+    # search & replace the word
+    replaced_text = text.replace("rightHandSensorStarted=False", "rightHandSensorStarted=True")
+
+    # save the file
+    file = open(configFilename, "w")
+    file.write(replaced_text)
+    file.close()
+
+    execfile('resource/InMoov2/life/0_inmoovLife.py')
 
     try:
         # common right pin listener function
@@ -206,7 +220,7 @@ if runtime.isStarted('i01.right'):
         i01_right.addListener("publishPinArray","python","publishPinRight")
 
         def rightHandSensorON():
-            if rightHandSensorActivated==1:
+            if rightHandSensorStarted==1:
                 print "=========RightSensorON========" 
                 i01_right.enablePin(right_thumbPin, 2) #2 is the number of polls per seconds
                 i01_right.enablePin(right_indexPin, 2)
@@ -218,7 +232,7 @@ if runtime.isStarted('i01.right'):
 
         def rightHandSensorOFF():
             #sleep(5)
-            if rightHandSensorActivated==1:
+            if rightHandSensorStarted==1:
                 i01_right.disablePin(right_thumbPin)
                 i01_right.disablePin(right_indexPin)
                 i01_right.disablePin(right_majeurePin)
@@ -231,9 +245,9 @@ if runtime.isStarted('i01.right'):
     except:
         i01.error('could not start right hand sensor')
         i01.speakBlocking(i01.localize('CONFIGPARSERPROBLEM'))
-        rightHandSensorActivated = False
+        rightHandSensorStarted = False
         pass
 else:
     i01.error('i01.right controller not found for right hand sensor')
     i01.speakBlocking(i01.localize('BADRDUINOCHOOSEN','right Hand Sensor'))
-    rightHandSensorActivated = False
+    rightHandSensorStarted = False
