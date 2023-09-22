@@ -4620,9 +4620,6 @@
 <template><srai>HELLO</srai>
       <srai>WHAT IS YOUR NAME</srai></template>
 </category>
-<category><pattern>HOW DO YOU DO</pattern>
-<template><srai>HOW ARE YOU</srai></template>
-</category>
 <category><pattern>HOW IS THE WEATHER IN *</pattern>
 <template><srai>WEATHER IN <star/></srai></template>
 </category>
@@ -5534,9 +5531,6 @@
 </category>
 <category><pattern>OK</pattern>
 <template><srai>YES</srai></template>
-</category>
-<category><pattern>HELLO</pattern>
-<template><srai>HI</srai></template>
 </category>
 <category><pattern>911</pattern>
 <template><srai>CALL 911</srai></template>
