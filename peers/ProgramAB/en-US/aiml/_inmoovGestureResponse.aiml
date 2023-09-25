@@ -48,13 +48,16 @@
    </template>
 </category>
 <category><pattern>HOWDOYOUDO_1</pattern>
-<template>
-      I'm fine thank you.
+<template><random>
+      <li>I'm fine thank you.</li>
+      <li>Nice, thank you.</li>
+      <li>Feeling great, thank you.</li>
+          </random>
    </template>
 </category>
 <category><pattern>HOWDOYOUDO_2</pattern>
 <template>
-      you have already said that at least twice.
+      You have already said that at least twice.
    </template>
 </category>
 <category><pattern>HOWDOYOUDO_3</pattern>
