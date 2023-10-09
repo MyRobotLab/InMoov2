@@ -1355,7 +1355,7 @@
 </category>
 <category><pattern>STOP TALKING</pattern>
 <template>You can always interrupt me by pressing the Speak button.
-<oob><mrl><service>python</service><method>exec</method><param>i01_audioFile.stop()</param></mrl></oob></template>
+<oob><mrl><service>python</service><method>exec</method><param>i01_mouth_audioFile.stop()</param></mrl></oob></template>
 </category>
 <category><pattern>SHUT UP</pattern>
 <template><srai>STOP TALKING</srai></template>
