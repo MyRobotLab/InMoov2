@@ -3375,9 +3375,6 @@
 <category><pattern>IM BORED</pattern>
 <template><srai>I AM BORED</srai></template>
 </category>
-<category><pattern>STOP TALKING</pattern>
-<template><srai>SHUT UP</srai></template>
-</category>
 <category><pattern>YAH</pattern>
 <template><srai>YES</srai></template>
 </category>
