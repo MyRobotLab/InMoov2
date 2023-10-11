@@ -854,6 +854,15 @@
           </mrl>
         </oob></template>
 </category>
+<category><pattern>SHOW ME YOUR DARK SIDE</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>darkSide()</param>
+          </mrl>
+        </oob></template>
+</category>
 <category><pattern>CAN YOU GIVE ME THE TIME</pattern>
 <template><oob>
           <mrl>
