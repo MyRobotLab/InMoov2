@@ -7,7 +7,9 @@
 # Platform.setVirtual(True)
 
 if runtime.isStarted('i01.opencv'):
-    i01_opencv.removeFilter("FaceDetectDNN")
-    i01_eyeTracking.enable()
+    if not runtime.isStarted('i01.headTracking'):
+        i01_opencv.removeFilters()
+        i01_eyeTracking.enable()
+    else:i01_eyeTracking.enable()
 else:
     i01_eyeTracking.enable()

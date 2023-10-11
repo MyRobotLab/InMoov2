@@ -7,7 +7,9 @@
 # Platform.setVirtual(True)
 
 if runtime.isStarted('i01.opencv'):
-    i01_opencv.removeFilters()
-    i01_headTracking.enable()
+    if not runtime.isStarted('i01.eyeTracking'):
+        i01_opencv.removeFilters()
+        i01_headTracking.enable()
+    else:i01_headTracking.enable() 
 else:
     i01_headTracking.enable()   
