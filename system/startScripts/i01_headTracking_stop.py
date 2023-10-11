@@ -7,3 +7,6 @@
 # Platform.setVirtual(True)
 
 i01_headTracking.disable()
+if not runtime.isStarted('i01.eyeTracking'):
+  i01_opencv.removeFilters()
+  i01_opencv.stopCapture()
