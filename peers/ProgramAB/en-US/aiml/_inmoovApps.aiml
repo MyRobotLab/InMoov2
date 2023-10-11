@@ -158,7 +158,7 @@
     See you soon, I like to play!
     </li>
     <oob><mrl><service>python</service><method>exec</method><param>thatwasfun()</param></mrl></oob></template>
-
+</category>
 
 <category><pattern>20 Q</pattern><template><srai>20Q</srai></template></category>
 <category><pattern>TWENTY QUESTIONS</pattern><template><srai>20Q</srai></template></category>
