@@ -1,9 +1,9 @@
 def relax():
   #i01.startedGesture()
   if runtime.isStarted('i01.neoPixel'):
-    i01_neoPixel.setAnimation("Color Wipe", 0, 0, 20, 1)
+    i01_neoPixel.setAnimation("Color Wipe", 0, 0, 20, 50)
     sleep(2)
-    i01_neoPixel.setAnimation("Ironman", 0, 0, 255, 1)
+    i01_neoPixel.setAnimation("Ironman", 0, 255, 255, 50)
   if runtime.isStarted('i01.opencv') and i01_opencv.isCapturing():
     i01.setHandSpeed("left", 43, 43, 43, 43, 43, 43)
     i01.setHandSpeed("right", 43, 43, 43, 43, 43, 43)
