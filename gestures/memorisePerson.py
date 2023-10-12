@@ -87,6 +87,8 @@ def takeMyPicture(name):
     opencv = runtime.start('i01.opencv', 'OpenCV')
     opencv.capture()
     i01_opencv.addFilter("SetImageROI")
+    if runtime.isStarted('i01.chatBot'):
+      i01_chatBot.getResponse("GETREADY")
     sleep(10)# Add delay if opencv error recordFrame()
     rect = i01_opencv.getFilter("SetImageROI") 
     # changing parameters
@@ -96,7 +98,9 @@ def takeMyPicture(name):
     height=450
     rect.setROI(x, y, width, height)
     photoFileName = opencv.recordFrame()
-    i01_opencv.removeFilter("SetImageROI")
+    if runtime.isStarted('i01.audioPlayer'):
+      i01_audioPlayer.playFile('resource/InMoov2/system/sounds/ShutterClik.mp3')
+    i01_opencv.disableFilter("SetImageROI")
     print(photoFileName)
     sleep(2)
     opencv.stopCapture()
