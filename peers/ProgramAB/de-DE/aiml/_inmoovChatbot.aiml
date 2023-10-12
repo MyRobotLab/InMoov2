@@ -161,6 +161,11 @@
         <get name="questionfirstinit"/></template>
       </category>
 
+<category><pattern>GETREADY</pattern>
+<template>Ich setze meine Vision in die Tat um. Bereit machen.
+    </template>
+</category>
+
 <category><pattern>NEW_INIT</pattern>
 <template><think>
         <set name="newinit">started</set>
