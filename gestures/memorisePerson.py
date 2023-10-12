@@ -30,8 +30,7 @@ def YesName(name):
       fr.train()
       # after we've retrained the model.. start recognizing again
       fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
-      i01_opencv.disableFilter("FaceRecognizer")
-      i01_opencv.removeFilter("FaceRecognizer")
+      i01_opencv.removeFilters()
       i01_opencv.stopCapture()
       i01.finishedGesture()
     else:
@@ -68,8 +67,7 @@ def memorisePerson(name):
         fr.train()
         # after we've retrained the model.. start recognizing again
         fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
-        i01_opencv.disableFilter("FaceRecognizer")
-        i01_opencv.removeFilter("FaceRecognizer")
+        i01_opencv.removeFilters()
         i01_opencv.stopCapture()
         i01_chatBot.getResponse("SYSTEM_SAY_HELLO")
         i01.finishedGesture()
@@ -100,7 +98,7 @@ def takeMyPicture(name):
     photoFileName = opencv.recordFrame()
     if runtime.isStarted('i01.audioPlayer'):
       i01_audioPlayer.playFile('resource/InMoov2/system/sounds/ShutterClik.mp3')
-    i01_opencv.disableFilter("SetImageROI")
+    i01_opencv.removeFilters()
     print(photoFileName)
     sleep(2)
     opencv.stopCapture()
