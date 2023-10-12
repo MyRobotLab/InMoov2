@@ -138,6 +138,10 @@
 <category><pattern>HERÄÄ</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
 </category>
+<category><pattern>GETREADY</pattern>
+<template>Saan näkemääni kuntoon. Valmistaudu.
+</template>
+</category>
 <category><pattern>SAMMU</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>
 </category>
@@ -154,23 +158,7 @@
 <template>Aiheeni on
       <get name="topic"/></template>
 </category>
-<category><pattern>BOOT UP MODE</pattern>
-<template>Entering into the boot up topic.
-      <think><set name="topic">BOOTUP</set></think></template>
-</category>
-<category><pattern>GESTURES</pattern>
-<template>Entering into the gestures topic.
-      <think><set name="topic">GESTURES</set></think></template>
-</category>
-<category><pattern>GESTURES *</pattern>
-<template><srai>GESTURES</srai></template>
-</category>
-<category><pattern>* GESTURES</pattern>
-<template><srai>GESTURES</srai></template>
-</category>
-<category><pattern>* GESTURES *</pattern>
-<template><srai>GESTURES</srai></template>
-</category>
+
 <category><pattern>DETACH ALL</pattern>
 <template>Detach All
       <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>

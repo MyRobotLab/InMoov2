@@ -191,6 +191,11 @@
         <get name="questionfirstinit"/></template>
       </category>
 
+    <category><pattern>GETREADY</pattern>
+      <template>Estoy configurando mi visión. Prepararse.
+      </template>
+    </category>
+
 
     <category><pattern>NEW_INIT</pattern>
       <template><think>

@@ -165,6 +165,11 @@
     </template>
 </category>
 
+<category><pattern>GETREADY</pattern>
+<template>I am getting my vision set up. Get ready.
+    </template>
+</category>
+
 <category><pattern>NEW_INIT</pattern>
 <template><think>
         <set name="newinit">started</set>
