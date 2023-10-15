@@ -1353,11 +1353,14 @@
 <category><pattern>CATCH BALL LEFT</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>catchBallLeft()</param></mrl></oob></template>
 </category>
-<category><pattern>JUGGLE</pattern>
+<category><pattern># JUGGLE</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>juggle()</param></mrl></oob></template>
 </category>
-<category><pattern>JUGGLE VERSION TWO</pattern>
+<category><pattern># JUGGLE VERSION TWO</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>juggle2()</param></mrl></oob></template>
+</category>
+<category><pattern># JUGGLE AND CLOSE HAND</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>juggleCloseHand()</param></mrl></oob></template>
 </category>
 <category><pattern>CATCH THE BALL</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>catchball()</param></mrl></oob></template>
