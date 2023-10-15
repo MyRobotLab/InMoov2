@@ -1346,4 +1346,26 @@
 <category><pattern>DO GESTURE *</pattern>
 <template>Ok<oob><mrl><service>i01.servoMixer</service><method>playGesture</method><param><star/></param></mrl></oob></template>
 </category>
+
+<category><pattern>CATCH BALL RIGHT</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>catchBallRight()</param></mrl></oob></template>
+</category>
+<category><pattern>CATCH BALL LEFT</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>catchBallLeft()</param></mrl></oob></template>
+</category>
+<category><pattern># JUGGLE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>juggle()</param></mrl></oob></template>
+</category>
+<category><pattern># JUGGLE VERSION TWO</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>juggle2()</param></mrl></oob></template>
+</category>
+<category><pattern># JUGGLE AND CLOSE HAND</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>juggleCloseHand()</param></mrl></oob></template>
+</category>
+<category><pattern>CATCH THE BALL</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>catchball()</param></mrl></oob></template>
+</category>
+<category><pattern>CLOSE BOTH HANDS SLOWLY</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>CloseBothHandSlow()</param></mrl></oob></template>
+</category>
 </aiml>
