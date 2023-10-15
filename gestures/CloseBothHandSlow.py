@@ -1,5 +1,5 @@
 def CloseBothHandSlow():
-  i01.startedGesture() 
+  #i01.startedGesture() 
   rest()
   sleep(2)
   ###############################
