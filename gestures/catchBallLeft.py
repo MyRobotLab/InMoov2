@@ -1,5 +1,5 @@
 def catchBallLeft():
-  i01.startedGesture()
+  #i01.startedGesture()
   rest()
   sleep(2)  
   i01.setHandSpeed("left", 0.99, 0.99, 0.99, 0.99, 0.99, 0.99)
