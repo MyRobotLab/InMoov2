@@ -25,11 +25,11 @@ execfile('resource/InMoov2/custom/InMoovCustom_start.py')
 execfile('resource/InMoov2/system/startScripts/InMoovTrain_start.py')
 
 # we load a personal config parameters
-execfile('resource/InMoov2/system/startScripts/i01_life_config.py')
+#execfile('resource/InMoov2/system/startScripts/i01_life_config.py')
 
 # mute for starting action vocals
 #if IsMute==1:i01.setMute(True)
-execfile('resource/InMoov2/life/0_inmoovLife.py')
+#execfile('resource/InMoov2/life/0_inmoovLife.py')
 ################################
 # INIT.2 - services call
 ################################
