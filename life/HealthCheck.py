@@ -12,7 +12,7 @@ if runtime.isStarted('i01'):
   #if i01_fsm.getCurrentState()=="systemCheck":
     heartbeat = runtime.start("heartbeat","Clock")
     heartbeat.setInterval(60000)
-    if i01.getConfig().batteryLevelCheck==1:
+    if i01.getConfig().batteryInSytem==1:
       batterieLevel=100
       errorBat=1
       try:
