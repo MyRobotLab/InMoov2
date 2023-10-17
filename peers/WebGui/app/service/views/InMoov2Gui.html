@@ -1003,10 +1003,10 @@
                     <td>
                         <label>battery Level Check</label>
                         </td><td>
-                        <button ng-show="service.config.batteryInSytem" title="Allows neopixel to flash if battery is running low" class="btn btn-info" 
-                        ng-click="msg.send('setConfigValue','batteryInSytem',false);msg.send('broadcastState')">on</button>
-                        <button ng-show="!service.config.batteryInSytem"  width="30" height="30" class="btn btn-default" title="Allows neopixel to flash if battery is running low" 
-                        ng-click="msg.send('setConfigValue','batteryInSytem',true);msg.send('broadcastState')">off</button>
+                        <button ng-show="service.config.batteryInSystem" title="Allows neopixel to flash if battery is running low" class="btn btn-info" 
+                        ng-click="msg.send('setConfigValue','batteryInSystem',false);msg.send('broadcastState')">on</button>
+                        <button ng-show="!service.config.batteryInSystem"  width="30" height="30" class="btn btn-default" title="Allows neopixel to flash if battery is running low" 
+                        ng-click="msg.send('setConfigValue','batteryInSystem',true);msg.send('broadcastState')">off</button>
                     </td>
                 </tr>
                 <!--<tr>
