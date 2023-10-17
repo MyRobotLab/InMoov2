@@ -979,8 +979,8 @@
                     <td>
                         <label>Custom Sounds</label>
                     </td><td>
-                        <button ng-show="service.config.customSounds" class="btn btn-info" title="Custom sounds on events" ng-click="setConfigValue('customSounds', false)">on</button>
-                        <button ng-show="!service.config.customSounds" class="btn btn-default" title="Custom sounds on events" ng-click="setConfigValue('customSounds', true)">off</button>
+                        <button ng-show="service.config.customSound" class="btn btn-info" title="Custom sounds on events" ng-click="setConfigValue('customSound', false)">on</button>
+                        <button ng-show="!service.config.customSound" class="btn btn-default" title="Custom sounds on events" ng-click="setConfigValue('customSound', true)">off</button>
                     </td>
                 </tr>
                 <tr>
@@ -991,22 +991,22 @@
                         <button ng-show="!service.config.heartbeat"  width="30" height="30" class="btn btn-default" title="Checks health and battery level" ng-click="msg.send('startHeartbeat');msg.send('setConfigValue','heartbeat',true);msg.send('broadcastState')">off</button>
                     </td>
                 </tr>
-                <tr>
+                <!--<tr>
                     <td>
                         <label>Heart Beat flash</label>
                         </td><td>
                         <button ng-show="service.config.heartbeatFlash" title="Flashes the neopixel every time a health check is preformed" class="btn btn-info" ng-click="msg.send('setConfigValue','heartbeatFlash',false);msg.send('broadcastState')">on</button>
                         <button ng-show="!service.config.heartbeatFlash"  width="30" height="30" class="btn btn-default" title="Flashes the neopixel every time a health check is preformed" ng-click="msg.send('setConfigValue','heartbeatFlash',true);msg.send('broadcastState')">off</button>
                     </td>
-                </tr>
+                </tr>-->
                 <tr>
                     <td>
                         <label>battery Level Check</label>
                         </td><td>
-                        <button ng-show="service.config.batteryLevelCheck" title="Allows neopixel to flash if battery is running low" class="btn btn-info" 
-                        ng-click="msg.send('setConfigValue','batteryLevelCheck',false);msg.send('broadcastState')">on</button>
-                        <button ng-show="!service.config.batteryLevelCheck"  width="30" height="30" class="btn btn-default" title="Allows neopixel to flash if battery is running low" 
-                        ng-click="msg.send('setConfigValue','batteryLevelCheck',true);msg.send('broadcastState')">off</button>
+                        <button ng-show="service.config.batteryInSytem" title="Allows neopixel to flash if battery is running low" class="btn btn-info" 
+                        ng-click="msg.send('setConfigValue','batteryInSytem',false);msg.send('broadcastState')">on</button>
+                        <button ng-show="!service.config.batteryInSytem"  width="30" height="30" class="btn btn-default" title="Allows neopixel to flash if battery is running low" 
+                        ng-click="msg.send('setConfigValue','batteryInSytem',true);msg.send('broadcastState')">off</button>
                     </td>
                 </tr>
                 <!--<tr>
@@ -1016,7 +1016,7 @@
                             ng-click="execScript('system/startScripts/i01_pirWakeUp_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_pirWakeUp_stop.py')">off</button>
                     </td>
                 </tr>-->
-            </table>
+</table>
 <!------------------------ life service end ------------------------------>
 <!------------------------ InMoov begin ------------------------------>
 <table ng-show="showPanel('InMoov')" class="inmoov-sub-panel table table-striped">
