@@ -5,10 +5,9 @@
 #########################################
 # -- coding: utf-8 --
 
-if runtime.isStarted('i01'):
-  if i01.getConfig().startupSound==1:
-      i01_audioPlayer = runtime.start('i01.audioPlayer','AudioFile')
-      i01_audioPlayer.playFile('resource/InMoov2/system/sounds/startupsound.mp3', False)
+if i01.getConfig().startupSound==1:
+    i01_audioPlayer = runtime.start('i01.audioPlayer','AudioFile')
+    i01_audioPlayer.playFile('resource/InMoov2/system/sounds/startupsound.mp3', False)
 
 def initAudioPlayer():
     global musicPath
