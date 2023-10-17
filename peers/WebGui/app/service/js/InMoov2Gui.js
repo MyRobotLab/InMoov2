@@ -313,6 +313,11 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         msg.send('setSpeechType', $scope.service.config.peers['mouth'].type)
     }
 
+    $scope.setConfigValue = function(fieldname, value){
+        msg.send('setConfigValue', fieldname, value)
+        msg.send('broadcastState')
+    }
+
     // circular main menu buttons
     addButton('brain', 'circular')
     addButton('mouth', 'circular')

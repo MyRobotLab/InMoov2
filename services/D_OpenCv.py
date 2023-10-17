@@ -10,7 +10,7 @@
 #i01_opencv = Runtime.create("i01.opencv", "OpenCV")
 def initOpencv():
   i01_opencv.getConfig()
-  if flipPicture==1:i01_opencv.addFilter("Flip")
+  if i01.getConfig().openCVFlipPicture==1:i01_opencv.addFilter("Flip")
   python.subscribe("i01.opencv", "publishRecognizedFace")
 
 def initTracking():

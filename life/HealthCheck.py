@@ -6,25 +6,27 @@
 # Timer function to autostart webkit microphone every 10seconds
 # only if robot not actualy speaking
 ###############################################################################
-if healthCheckActivated==1:
-#if i01_fsm.getCurrentState()=="systemCheck":
-  healthCheck = runtime.start("healthCheck","Clock")
-  healthCheck.setInterval(60000)
-  if batteryInSystem==1:
-    batterieLevel=100
-    errorBat=1
-    try:
-      if runtime.getBatteryLevel():
-        batterieLevel = runtime.getBatteryLevel()
-        print "battery :",batterieLevel
-        errorBat=0
-    except:
-      pass
-    healthCheck.addListener("pulse", python.name, "healthCheck_def")    
-    healthCheck.startClock()
+
+if runtime.isStarted('i01'):
+  if i01.getConfig().heartbeat==1:
+  #if i01_fsm.getCurrentState()=="systemCheck":
+    heartbeat = runtime.start("heartbeat","Clock")
+    heartbeat.setInterval(60000)
+    if i01.getConfig().batteryLevelCheck==1:
+      batterieLevel=100
+      errorBat=1
+      try:
+        if runtime.getBatteryLevel():
+          batterieLevel = runtime.getBatteryLevel()
+          print "battery :",batterieLevel
+          errorBat=0
+      except:
+        pass
+      heartbeat.addListener("pulse", python.name, "heartbeat_def")    
+      heartbeat.startClock()
 
 
-def healthCheck_def(timedata):
+def heartbeat_def(timedata):
   global batterieLevel
 
   if not errorBat:
@@ -32,4 +34,4 @@ def healthCheck_def(timedata):
   i01.setBatteryLevel(int(batterieLevel))
   print "battery :",batterieLevel
   
-  healthCheck.stopClock()
+  heartbeat.stopClock()
