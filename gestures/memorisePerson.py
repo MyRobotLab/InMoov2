@@ -37,7 +37,7 @@ def YesName(name):
       i01.warn('facerecognizer not starting because no opencv')
 
 def memorisePerson(name):
-  if faceRecognizerActivated==1:
+  if openCVFaceRecognizerActivated==1:
     print(name)
     if runtime.isStarted('i01.neoPixel'):
       i01_neoPixel.setAnimation("Color Wipe", 100, 5, 10, 15) 
