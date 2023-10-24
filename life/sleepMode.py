@@ -11,12 +11,12 @@ import random
 if runtime.isStarted('i01.pir'):
    sleepTimer = runtime.start("sleepTimer","Clock")
    sleepTimer.addListener("pulse", python.name, "sleepTimerRoutine")
-   sleepTimer.setInterval(sleepTimeout)
+   sleepTimer.setInterval(i01.getConfig().sleepTimeoutMs)
 
 if runtime.isStarted('i01.headTracking') or runtime.isStarted('i01.eyeTracking'):
    trackingTimer = runtime.start("trackingTimer","Clock")
    trackingTimer.addListener("pulse", python.name, "trackingTimerRoutine")
-   trackingTimer.setInterval(trackingTimeout)  
+   trackingTimer.setInterval(i01.getConfig().trackingTimeoutMs)
 
 def sleepModeWakeUp():
   #if runtime.isStarted('i01.fsm'):
