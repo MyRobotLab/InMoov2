@@ -442,8 +442,8 @@
                     <td>
                         <label>headMoveWhileSpeaking:</label>
                         </td><td>
-                        <button ng-show="service.config.headMoveWhileSpeaking" class="btn btn-info" title="Enable random head movements while speaking" ng-click="setConfigValue('headMoveWhileSpeaking', false)">on</button>
-                        <button ng-show="!service.config.headMoveWhileSpeaking" class="btn btn-default" title="Enable vision upside down" ng-click="setConfigValue('headMoveWhileSpeaking', true)">off</button>
+                        <button ng-show="service.config.robotCanMoveHeadWhileSpeaking" class="btn btn-info" title="Enable random head movements while speaking" ng-click="setConfigValue('robotCanMoveHeadWhileSpeaking', false)">on</button>
+                        <button ng-show="!service.config.robotCanMoveHeadWhileSpeaking" class="btn btn-default" title="Enable vision upside down" ng-click="setConfigValue('robotCanMoveHeadWhileSpeaking', true)">off</button>
                         </td>
                 </tr>
                 <tr ng-show="peer.isPeerStarted(service, 'head')">

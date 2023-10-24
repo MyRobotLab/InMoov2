@@ -13,7 +13,6 @@ execfile('resource/InMoov2/system/Import_Libraries.py')
 # common functions
 execfile('resource/InMoov2/system/Import_Functions.py')
 
-
 #RuningFolder=os.getcwd().replace("\\", "/")+"/"+RuningFolder+"/"
 # global vars import
 execfile('resource/InMoov2/system/Robot_Satus_GlobalsVars.py')
@@ -24,15 +23,12 @@ execfile('resource/InMoov2/custom/InMoovCustom_start.py')
 # we load alan's face for facerecognition
 execfile('resource/InMoov2/system/startScripts/InMoovTrain_start.py')
 
-# we load a personal config parameters
-#execfile('resource/InMoov2/system/startScripts/i01_life_config.py')
-
 # we get InMoov2 service
 i01 = Runtime.getService("i01")
 
 # mute for starting action vocals
 #if IsMute==1:i01.setMute(True)
-#execfile('resource/InMoov2/life/0_inmoovLife.py')
+
 ################################
 # INIT.2 - services call
 ################################
