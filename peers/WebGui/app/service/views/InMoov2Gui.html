@@ -494,8 +494,8 @@
                     <td>
                         <label>openCVFlipPicture:</label>
                         </td><td>
-                        <button ng-show="service.config.openCVFlipPicture" class="btn btn-info" title="Enable vision upside down" ng-click="setConfigValue('openCVFlipPicture', false)">on</button>
-                        <button ng-show="!service.config.openCVFlipPicture" class="btn btn-default" title="Enable vision upside down" ng-click="setConfigValue('openCVFlipPicture', true)">off</button>
+                        <button ng-show="service.config.openCVFlipPicture" class="btn btn-info" title="Enable vision upside down" ng-click="setConfigValue('openCVFlipPicture', false); execScript('system/startScripts/i01_flipPicture_stop.py')">on</button>
+                        <button ng-show="!service.config.openCVFlipPicture" class="btn btn-default" title="Enable vision upside down" ng-click="setConfigValue('openCVFlipPicture', true); execScript('system/startScripts/i01_flipPicture_start.py')">off</button>
                         </td>
                 </tr>
                 <tr ng-show="peer.isPeerStarted(service, 'opencv')">
