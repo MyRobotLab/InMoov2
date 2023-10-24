@@ -15,6 +15,7 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
 
     $scope.peer = peer
     $scope.mrl = mrl
+    $scope.peerConfig = {}
 
     $scope.servos = []
     $scope.sliders = []
@@ -253,6 +254,11 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         let data = inMsg.data[0];
 
         switch (inMsg.method) {
+        case 'onPeerConfig':
+            console.info(data)
+            // $scope.peerConfig
+            $scope.$apply()
+            break
         case 'onState':
             _self.updateState(data)
             $scope.$apply()
@@ -318,6 +324,11 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         msg.send('broadcastState')
     }
 
+    $scope.setPeerConfigValue = function(peerkey, fieldname, value){
+        msg.send('setPeerConfigValue', peerkey, fieldname, value)
+        msg.send('broadcastState')
+    }
+
     // circular main menu buttons
     addButton('brain', 'circular')
     addButton('mouth', 'circular')
@@ -344,10 +355,12 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     mrl.subscribe(mrl.getRuntime().name, 'getServiceTypeNamesFromInterface');
     mrl.subscribeToServiceMethod(_self.onMsg, mrl.getRuntime().name, 'getServiceTypeNamesFromInterface');
 
+    msg.subscribe('getPeerConfig')
     msg.subscribe('publishText')
     msg.subscribe('publishPeerStarted')
     msg.sendTo(mrl.getRuntime().name, 'getServiceTypeNamesFromInterface', 'SpeechSynthesis')
     msg.sendTo(mrl.getRuntime().name, 'publishConfigList')
+    msg.send('getPeerConfig', 'opencv')
     msg.subscribe(this)
     
 }
