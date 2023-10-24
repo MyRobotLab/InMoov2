@@ -29,18 +29,8 @@ i01 = Runtime.getService("i01")
 # mute for starting action vocals
 #if IsMute==1:i01.setMute(True)
 
-################################ 
-# INIT.2- inmoov loading
 ################################
-    
-#we launch Inmoov life
-execfile('resource/InMoov2/life/HealthCheck.py')
-execfile('resource/InMoov2/life/shutdown.py')
-execfile('resource/InMoov2/life/shutdownComplete.py')
-execfile('resource/InMoov2/life/sleepMode.py')
-
-################################
-# INIT.3 - services call
+# INIT.2 - services call
 ################################
 #we load services python side from services folder
 execfile('resource/InMoov2/services/1_AudioFile.py')
@@ -57,6 +47,16 @@ execfile('resource/InMoov2/services/D_OpenCv.py')
 execfile('resource/InMoov2/services/H_OpenWeatherMap.py')
 #J_SensorFinger.py ## NEED FIXING FOR NIXIE
 #execfile('resource/InMoov2/services/K_FiniteStateMachine.py')
+
+################################ 
+# INIT.3- inmoov loading
+################################
+    
+#we launch Inmoov life
+execfile('resource/InMoov2/life/HealthCheck.py')
+execfile('resource/InMoov2/life/shutdown.py')
+execfile('resource/InMoov2/life/shutdownComplete.py')
+execfile('resource/InMoov2/life/sleepMode.py')
 
 ################################
 # INIT.4 - great, inmoov is alive
