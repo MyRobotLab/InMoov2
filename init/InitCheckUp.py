@@ -13,7 +13,6 @@ execfile('resource/InMoov2/system/Import_Libraries.py')
 # common functions
 execfile('resource/InMoov2/system/Import_Functions.py')
 
-
 #RuningFolder=os.getcwd().replace("\\", "/")+"/"+RuningFolder+"/"
 # global vars import
 execfile('resource/InMoov2/system/Robot_Satus_GlobalsVars.py')
@@ -24,17 +23,24 @@ execfile('resource/InMoov2/custom/InMoovCustom_start.py')
 # we load alan's face for facerecognition
 execfile('resource/InMoov2/system/startScripts/InMoovTrain_start.py')
 
-# we load a personal config parameters
-#execfile('resource/InMoov2/system/startScripts/i01_life_config.py')
-
 # we get InMoov2 service
 i01 = Runtime.getService("i01")
 
 # mute for starting action vocals
 #if IsMute==1:i01.setMute(True)
-#execfile('resource/InMoov2/life/0_inmoovLife.py')
+
+################################ 
+# INIT.2- inmoov loading
 ################################
-# INIT.2 - services call
+    
+#we launch Inmoov life
+execfile('resource/InMoov2/life/HealthCheck.py')
+execfile('resource/InMoov2/life/shutdown.py')
+execfile('resource/InMoov2/life/shutdownComplete.py')
+execfile('resource/InMoov2/life/sleepMode.py')
+
+################################
+# INIT.3 - services call
 ################################
 #we load services python side from services folder
 execfile('resource/InMoov2/services/1_AudioFile.py')
@@ -51,16 +57,6 @@ execfile('resource/InMoov2/services/D_OpenCv.py')
 execfile('resource/InMoov2/services/H_OpenWeatherMap.py')
 #J_SensorFinger.py ## NEED FIXING FOR NIXIE
 #execfile('resource/InMoov2/services/K_FiniteStateMachine.py')
-
-################################ 
-# INIT.3- inmoov loading
-################################
-    
-#we launch Inmoov life
-execfile('resource/InMoov2/life/HealthCheck.py')
-execfile('resource/InMoov2/life/shutdown.py')
-execfile('resource/InMoov2/life/shutdownComplete.py')
-execfile('resource/InMoov2/life/sleepMode.py')
 
 ################################
 # INIT.4 - great, inmoov is alive
