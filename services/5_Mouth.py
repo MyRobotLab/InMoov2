@@ -30,7 +30,7 @@ def initMouth():
 #stop autolisten
 def onEndSpeaking(text):
 
-  if flash_when_speak==1 and runtime.isStarted('i01.neoPixel'):i01_neoPixel.clear()
+  if i01.getConfig().neoPixelFlashWhenSpeaking==1 and runtime.isStarted('i01.neoPixel'):i01_neoPixel.clear()
 
   # if AudioSignalProcessing:
   #   try:
@@ -44,7 +44,7 @@ def onEndSpeaking(text):
 def onStartSpeaking(text):
 
   #if RobotIsErrorMode==0:
-  if runtime.isStarted('i01.neoPixel') and flash_when_speak==1:i01_neoPixel.setAnimation("Ironman", 255, 255, 255, 20)
+  if runtime.isStarted('i01.neoPixel') and i01.getConfig().neoPixelFlashWhenSpeaking==1:i01_neoPixel.setAnimation("Ironman", 255, 255, 255, 20)
   if 'oui ' in text or 'yes ' in text or ' oui' in text or 'ja ' in text or text=="yes" or text=="kyllä":Yes()
   if 'non ' in text or 'no ' in text or 'nicht ' in text or 'neen ' in text or text=="no" or text=="ei":No()
   
@@ -66,4 +66,3 @@ def onStartSpeaking(text):
     #   if random.randint(0,1)==1:
     #     RobotCanMoveEyesRandom=True #FIXME in java
     #     MoveEyesTimer.startClock()
-

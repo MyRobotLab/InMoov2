@@ -197,6 +197,11 @@
         </think>
         <get name="questionfirstinit"/></template>
       </category>
+
+      <category><pattern>GETREADY</pattern>
+        <template>Ik ben mijn visie aan het opstellen. Maak je klaar.
+        </template>
+      </category>
   
   <!-- updater  -->
   

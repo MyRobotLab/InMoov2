@@ -39,6 +39,14 @@
     <template>Puesta en marcha de los sensores de la mano derecha.</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STOPPED LEFT HAND SENSOR</pattern>
+    <template>Detener sensor izquierdo.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED RIGHT HAND SENSOR</pattern>
+    <template>Detener sensor derecho.</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED LEFT</pattern>
     <template>Iniciando el controlador izquierdo.</template>
   </category>

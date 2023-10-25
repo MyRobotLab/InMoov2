@@ -114,7 +114,7 @@
 
 <topic name="FIRSTINIT">
 <category><pattern># NO #</pattern><that># YOUR FACE ALONG YOUR NAME #</that>
-<template>Ok <get name="tmpname"/>, then we are done with our first contact.
+<template>Ok, then we are done with our first contact.
         <think>
           <set name="firstinit">ok</set>
           <set name="topic">default</set>
@@ -159,9 +159,16 @@
         </random>
         <think>
           <set name="topic">firstinit</set>
+          <set name="questionfirstinit">Would you like me to use my vision to memorise your face along your name ?</set>
         </think>
-        <get name="questionfirstinit"/></template>
-      </category>
+      <get name="questionfirstinit"/>
+    </template>
+</category>
+
+<category><pattern>GETREADY</pattern>
+<template>I am getting my vision set up. Get ready.
+    </template>
+</category>
 
 <category><pattern>NEW_INIT</pattern>
 <template><think>

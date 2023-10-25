@@ -39,6 +39,14 @@
     <template>Démarrage des capteurs de la main droite.</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STOPPED LEFT HAND SENSOR</pattern>
+    <template>Arrêt du capteur gauche.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED RIGHT HAND SENSOR</pattern>
+    <template>Arrêt du capteur droit.</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED LEFT</pattern>
     <template>Démarrage du controlleur gauche.</template>
   </category>

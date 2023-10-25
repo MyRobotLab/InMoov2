@@ -47,5 +47,33 @@
     So, until then. i will be humankind's humble servant.
    </template>
 </category>
+<category><pattern>HOWDOYOUDO_1</pattern>
+<template><random>
+      <li>I'm fine thank you.</li>
+      <li>Nice, thank you.</li>
+      <li>Feeling great, thank you.</li>
+          </random>
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_2</pattern>
+<template>
+      You have already said that at least twice.
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_3</pattern>
+<template>
+      What is your problem stop saying how do you do all the time.
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_4</pattern>
+<template>
+      I will ignore you if you say how do you do one more time.
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_5</pattern>
+<template>
+      Great, thank you.
+   </template>
+</category>
 
 </aiml>

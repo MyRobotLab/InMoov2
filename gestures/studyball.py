@@ -13,7 +13,7 @@ def studyball():
   i01.moveArm("right",54,77,45,10)
   i01.moveHand("left",0,50,40,20,20,90)
   i01.moveTorso(90,90,90)
-  if rightHandSensorActivated:
+  if rightHandSensorStarted:
     rightHandSensorON()
     sleep(1.5)
     rightThumbPressure=1 # Pressure range between 0-3
@@ -47,7 +47,7 @@ def studyball():
   i01.moveHead(10,80)
   i01.moveArm("left",80,45,59,23)
   i01.moveArm("right",75,40,50,10)
-  if leftHandSensorActivated:
+  if leftHandSensorStarted:
     leftHandSensorON()
     sleep(1.5)
     leftThumbPressure=1 # Pressure range between 0-3
@@ -67,7 +67,7 @@ def studyball():
   i01.moveHead(13,80)
   i01.moveArm("left",80,45,59,23)
   i01.moveArm("right",75,40,50,10)
-  if leftHandSensorActivated:
+  if leftHandSensorStarted:
     leftHandSensorON()
     sleep(1.5)
     leftThumbPressure=1 # Pressure range between 0-3
@@ -102,7 +102,7 @@ def studyball():
   i01.moveHead(70,82,40)
   i01.moveArm("left",80,59,95,15)
   i01.moveArm("right",12,74,33,15)
-  if leftHandSensorActivated:
+  if leftHandSensorStarted:
     leftHandSensorON()
     sleep(1.5)
     leftThumbPressure=1 # Pressure range between 0-3

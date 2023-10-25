@@ -19,7 +19,7 @@ right_ringFingerPin=ThisServicePartConfig.getint('MAIN', 'right_ringFingerPin')
 right_pinkyPin=ThisServicePartConfig.getint('MAIN', 'right_pinkyPin')
 right_extraPin=ThisServicePartConfig.getint('MAIN', 'right_extraPin')
 rightHandSensorArduino=ThisServicePartConfig.get('MAIN', 'rightHandSensorArduino')
-rightHandSensorActivated=ThisServicePartConfig.getboolean('MAIN', 'rightHandSensorActivated')
+rightHandSensorStarted=ThisServicePartConfig.getboolean('MAIN', 'rightHandSensorStarted')
 
 right_thumb_Psi_min=ThisServicePartConfig.getint('MAIN', 'right_thumb_Psi_min')
 right_thumb_Psi_low=ThisServicePartConfig.getint('MAIN', 'right_thumb_Psi_low')
@@ -60,7 +60,7 @@ left_ringFingerPin=ThisServicePartConfig.getint('MAIN', 'left_ringFingerPin')
 left_pinkyPin=ThisServicePartConfig.getint('MAIN', 'left_pinkyPin')
 left_extraPin=ThisServicePartConfig.getint('MAIN', 'left_extraPin')
 leftHandSensorArduino=ThisServicePartConfig.get('MAIN', 'leftHandSensorArduino')
-leftHandSensorActivated=ThisServicePartConfig.getboolean('MAIN', 'leftHandSensorActivated')
+leftHandSensorStarted=ThisServicePartConfig.getboolean('MAIN', 'leftHandSensorStarted')
 
 left_thumb_Psi_min=ThisServicePartConfig.getint('MAIN', 'left_thumb_Psi_min')
 left_thumb_Psi_low=ThisServicePartConfig.getint('MAIN', 'left_thumb_Psi_low')
@@ -93,7 +93,7 @@ left_extra_Psi_mid=ThisServicePartConfig.getint('MAIN', 'left_extra_Psi_mid')
 left_extra_Psi_max=ThisServicePartConfig.getint('MAIN', 'left_extra_Psi_max')
 
 
-if rightHandSensorActivated:
+if rightHandSensorStarted:
   
   try:
     # common right pin listener function
@@ -203,7 +203,7 @@ if rightHandSensorActivated:
     i01.speakBlocking(i01.localize("STARTINGRIGHTHANDSENSOR"))
     
     def rightHandSensorON():
-      if rightHandSensorActivated:
+      if rightHandSensorStarted:
         print "=========RightSensorON========" 
         rightHandSensorArduino.enablePin(right_thumbPin,2) #2 is the number of polls per seconds
         rightHandSensorArduino.enablePin(right_indexPin,2)
@@ -216,7 +216,7 @@ if rightHandSensorActivated:
 
     def rightHandSensorOFF():
       #sleep(5)
-      if rightHandSensorActivated:
+      if rightHandSensorStarted:
         rightHandSensorArduino.disablePin(right_thumbPin)
         rightHandSensorArduino.disablePin(right_indexPin)
         rightHandSensorArduino.disablePin(right_majeurePin)
@@ -229,10 +229,10 @@ if rightHandSensorActivated:
     
   except:
     errorSpokenFunc('BADRDUINOCHOOSEN','right Hand Sensor')
-    rightHandSensorActivated=False
+    rightHandSensorStarted=False
     pass
 
-if leftHandSensorActivated:
+if leftHandSensorStarted:
   
   try:
     # common left pin listener function
@@ -342,7 +342,7 @@ if leftHandSensorActivated:
     i01.speakBlocking(i01.localize("STARTINGLEFTHANDSENSOR"))
     
     def leftHandSensorON():
-      if leftHandSensorActivated:
+      if leftHandSensorStarted:
         print "=========LeftSensorON========" 
         leftHandSensorArduino.enablePin(left_thumbPin,2) #1 is the number of polls per seconds
         leftHandSensorArduino.enablePin(left_indexPin,2)
@@ -353,7 +353,7 @@ if leftHandSensorActivated:
 
     def leftHandSensorOFF():
       #sleep(5)
-      if leftHandSensorActivated:
+      if leftHandSensorStarted:
         leftHandSensorArduino.disablePin(left_thumbPin)
         leftHandSensorArduino.disablePin(left_indexPin)
         leftHandSensorArduino.disablePin(left_majeurePin)
@@ -364,5 +364,5 @@ if leftHandSensorActivated:
     
   except:
     errorSpokenFunc('BADRDUINOCHOOSEN','left Hand Sensor')
-    leftHandSensorActivated=False
+    leftHandSensorStarted=False
     pass

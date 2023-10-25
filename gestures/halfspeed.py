@@ -1,9 +1,9 @@
 def halfspeed():
   #i01.startedGesture()
   if runtime.isStarted('i01.neoPixel'):
-    i01_neoPixel.setAnimation("Color Wipe", 0, 200, 0, 1)
+    i01_neoPixel.setAnimation("Color Wipe", 0, 200, 0, 50)
     sleep(1)
-    i01_neoPixel.setAnimation("Ironman", 0, 255, 0, 1)
+    i01_neoPixel.setAnimation("Ironman", 0, 255, 0, 50)
   if runtime.isStarted('i01.rightHand'):
     i01.setHandSpeed("right", 50.0, 50.0, 50.0, 50.0, 50.0, 50.0)
       

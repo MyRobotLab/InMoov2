@@ -50,4 +50,27 @@
    </template>
 </category>
 
+<category><pattern>SYSTEM_ERROR_LEFTHANDSENSOR_1</pattern>
+<template>
+      Could not start left hand sensor.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_RIGTHANDSENSOR_1</pattern>
+<template>
+      Could not start right hand sensor.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_LEFTHANDSENSOR_2</pattern>
+<template>
+      i01.left controller not found for left hand sensor.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_RIGHTHANDSENSOR_2</pattern>
+<template>
+      i01.right controller not found for right hand sensor.
+   </template>
+</category>
 </aiml>

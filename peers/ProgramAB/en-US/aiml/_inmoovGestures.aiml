@@ -351,6 +351,10 @@
 <template>HAND DOWN
         <oob><mrl><service>python</service><method>exec</method><param>handdown()</param></mrl></oob></template>
 </category>
+<category><pattern>WHAT IS IT</pattern>
+<template>Let me check.
+        <oob><mrl><service>python</service><method>exec</method><param>studyball()</param></mrl></oob></template>
+</category>
 <category><pattern>IS IT A BALL</pattern>
 <template>IS IT A BALL
         <oob><mrl><service>python</service><method>exec</method><param>isitaball()</param></mrl></oob></template>
@@ -795,6 +799,27 @@
           </mrl>
         </oob></template>
 </category>
+<category><pattern>HOW DO YOU FEEL</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>newyork()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>* FRANK SINATRA *</pattern>
+<template><srai>HOW DO YOU FEEL</srai></template>
+</category>
+<category><pattern>PLAY YOUR SONG</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>playsong()</param>
+          </mrl>
+        </oob></template>
+</category>
 <category><pattern>PLAY YOUR SONG</pattern>
 <template><oob>
           <mrl>
@@ -826,6 +851,15 @@
             <service>python</service>
             <method>exec</method>
             <param>whataboutstarwars()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>SHOW ME YOUR DARK SIDE</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>darkSide()</param>
           </mrl>
         </oob></template>
 </category>
@@ -976,6 +1010,46 @@
 </category>
 <category><pattern>DO YOU SPEAK INDI</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>speakhindi()</param></mrl></oob></template>
+</category>
+<category><pattern>I KNOW</pattern>
+<template><random>
+          <li>yes, me too.</li>
+          <li>I do too.</li>
+          <li>Sorry about that.</li>
+        </random>
+        <oob><mrl><service>python</service><method>exec</method><param>agreeanswer()</param></mrl></oob></template>
+</category>
+<category><pattern>SORRY</pattern>
+<template><random>
+          <li>No problems.</li>
+          <li>It doesn't matter.</li>
+          <li>It's okay.</li>
+        </random>
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadAgree()</param></mrl></oob></template>
+</category>
+<category><pattern>BYE</pattern>
+<template><random>
+          <li>I'm looking forward to see you again.</li>
+          <li>Goodbye.</li>
+          <li>See you soon.</li>
+          <li>Looking forward to seeing you again soon.</li>
+          <li>It's been a pleasure to be in your company.</li>
+          <li>Looking forward to our next time together.</li>
+          <li>See you later my friend.</li>
+          <li>I don't like to say goodbye.</li>
+          <li>Have a great journey until next time.</li>
+        </random><oob><mrl><service>python</service><method>exec</method><param>tiltHeadAgree()</param></mrl></oob></template>
+</category>
+<category><pattern>HELLO</pattern>
+<template><srai>HI</srai>
+        <oob><mrl><service>python</service><method>exec</method><param>hello()</param></mrl></oob></template>
+</category>
+<category><pattern>HOW DO YOU DO</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>howdoyoudo()</param></mrl></oob></template>
+</category>
+<category><pattern>I LOVE YOU</pattern>
+<template>I love you too.
+        <oob><mrl><service>python</service><method>exec</method><param>iloveyou()</param></mrl></oob></template>
 </category>
 <category><pattern>WHAT DO YOU THINK ABOUT ARTIFICIAL INTELLIGENCE</pattern>
 <template>I will always love you.
@@ -1214,5 +1288,84 @@
 </category>
 <category><pattern>CAN I HURT YOU</pattern>
 <template> <oob><mrl><service>python</service><method>exec</method><param>call_911()</param></mrl></oob></template>
-</category>          
+</category>
+<category><pattern>CAN YOU WELCOME THE CROWD</pattern>
+<template><oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>gritting()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>WELCOME THE PUBLIC</pattern>
+<template><srai>CAN YOU WELCOME THE CROWD</srai></template>
+</category>
+<category><pattern>CAN YOU WELCOME THE PUBLIC</pattern>
+<template><srai>CAN YOU WELCOME THE CROWD</srai></template>
+</category>
+<category><pattern>WELCOME EVERYBODY</pattern>
+<template><srai>CAN YOU WELCOME THE CROWD</srai></template>
+</category>
+<category><pattern>BONJOUR</pattern>
+<template>Bonjour
+          <oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>agreeanswersmall()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>COME ON SAVA</pattern>
+<template><random>
+            <li>I rather speak English if you don't mind</li>
+            <li>Are you trying to sound English?</li>
+         </random>
+          <oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>tiltHeadAgree()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>COMO SAVA</pattern>
+<template><srai>COME ON SAVA</srai></template>
+</category>
+<category><pattern>CAN I TELL YOUR STORY</pattern>
+<template>Sure don't be shy
+          <oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>Yes()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>CAN I TELL MY STORY</pattern>
+<template><srai>CAN I TELL YOUR STORY</srai></template>
+</category>
+<!--This is for servoMixer gestures-->
+<category><pattern>DO GESTURE *</pattern>
+<template>Ok<oob><mrl><service>i01.servoMixer</service><method>playGesture</method><param><star/></param></mrl></oob></template>
+</category>
+
+<category><pattern>CATCH BALL RIGHT</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>catchBallRight()</param></mrl></oob></template>
+</category>
+<category><pattern>CATCH BALL LEFT</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>catchBallLeft()</param></mrl></oob></template>
+</category>
+<category><pattern># JUGGLE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>juggle()</param></mrl></oob></template>
+</category>
+<category><pattern># JUGGLE VERSION TWO</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>juggle2()</param></mrl></oob></template>
+</category>
+<category><pattern># JUGGLE AND CLOSE HAND</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>juggleCloseHand()</param></mrl></oob></template>
+</category>
+<category><pattern>CATCH THE BALL</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>catchball()</param></mrl></oob></template>
+</category>
+<category><pattern>CLOSE BOTH HANDS SLOWLY</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>CloseBothHandSlow()</param></mrl></oob></template>
+</category>
 </aiml>

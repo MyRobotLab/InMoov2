@@ -132,6 +132,11 @@
         <get name="questionfirstinit"/></template>
       </category>
 
+    <category><pattern>GETREADY</pattern>
+      <template>Je prépare ma caméra. Attention.
+      </template>
+    </category>
+
     <topic name="STARTVISION">
     <category><pattern># OUI #</pattern><that># JE DÉMARRE MA VISION #</that>
       <template>Oké, assure-toi d'être bien en face de ma caméra et sans porter de lunette.

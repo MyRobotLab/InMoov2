@@ -1,9 +1,9 @@
 def fullspeed():
   #i01.startedGesture()
   if runtime.isStarted('i01.neoPixel'):
-    i01_neoPixel.setAnimation("Color Wipe", 200, 0, 0, 1)
+    i01_neoPixel.setAnimation("Color Wipe", 200, 0, 0, 50)
     sleep(1)
-    i01_neoPixel.setAnimation("Ironman", 0, 0, 255, 1)
+    i01_neoPixel.setAnimation("Ironman", 0, 255, 255, 50)
 
   if runtime.isStarted('i01.rightHand'):  
     i01.setHandSpeed("right", 500.0, 500.0, 500.0, 500.0, 500.0, 500.0)

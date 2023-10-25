@@ -1152,5 +1152,8 @@
 <category><pattern>SYSTEM_SEE_OBJECT</pattern>
 <template><srai>QUE VOIS TU</srai></template>
 </category>
-
+<!--This is for servoMixer gestures-->
+<category><pattern>EXECUTE LA GESTUELLE *</pattern>
+<template>Ok<oob><mrl><service>i01.servoMixer</service><method>playGesture</method><param><star/></param></mrl></oob></template>
+</category>
 </aiml>

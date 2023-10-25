@@ -333,7 +333,7 @@
                             </a>
                         </span>
                         <label ng-show="peer.isPeerStarted(service, 'leftHand')">Sensors:</label>
-                        &nbsp;<toggle width="30" height="28" ng-show="peer.isPeerStarted(service, 'leftHand')"  ng-model="service.isLeftHandSensorStarted" title="To configure edit data/config/i01.leftHand.sensor.yml" ng-change="!service.isLeftHandSensorStarted?msg.isLeftHandSensorStarted(false):execScript('system/startScripts/i01_leftHandSensor_start.py')" width="120" height="30" on="" off=""/>
+                        &nbsp;<toggle width="30" height="28" ng-show="peer.isPeerStarted(service, 'leftHand')"  ng-model="service.leftHandSensorStarted" title="To configure edit data/config/i01.leftHand.sensor.yml" ng-change="!service.leftHandSensorStarted?execScript('system/startScripts/i01_leftHandSensor_stop.py'):execScript('system/startScripts/i01_leftHandSensor_start.py')" width="120" height="30" on="" off=""/>
                     </td>
                 </tr>
                 <tr>
@@ -360,7 +360,7 @@
                             </a>
                         </span>
                         <label ng-show="peer.isPeerStarted(service, 'rightHand')">Sensors:</label>
-                        &nbsp;<toggle width="30" height="28" ng-show="peer.isPeerStarted(service, 'rightHand')" ng-model="service.isRightHandSensorStarted" title="To configure edit data/config/i01.rightHand.sensor.yml" ng-change="!service.isRightHandSensorStarted?msg.isRightHandSensorStarted(false):execScript('system/startScripts/i01_rightHandSensor_start.py')" width="120" height="30" on="" off=""/>
+                        &nbsp;<toggle width="30" height="28" ng-show="peer.isPeerStarted(service, 'rightHand')" ng-model="service.rightHandSensorStarted" title="To configure edit data/config/i01.rightHand.sensor.yml" ng-change="!service.rightHandSensorStarted?execScript('system/startScripts/i01_rightHandSensor_stop.py'):execScript('system/startScripts/i01_rightHandSensor_start.py')" width="120" height="30" on="" off=""/>
                     </td>
                 </tr>
             </table>
@@ -441,6 +441,14 @@
                 </tr>
                 <tr ng-show="peer.isPeerStarted(service, 'head')">
                     <td>
+                        <label>headMoveWhileSpeaking:</label>
+                        </td><td>
+                        <button ng-show="service.config.robotCanMoveHeadWhileSpeaking" class="btn btn-info" title="Enable random head movements while speaking" ng-click="setConfigValue('robotCanMoveHeadWhileSpeaking', false)">on</button>
+                        <button ng-show="!service.config.robotCanMoveHeadWhileSpeaking" class="btn btn-default" title="Enable vision upside down" ng-click="setConfigValue('robotCanMoveHeadWhileSpeaking', true)">off</button>
+                        </td>
+                </tr>
+                <tr ng-show="peer.isPeerStarted(service, 'head')">
+                    <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
@@ -453,9 +461,9 @@
                         <label>Mouth Control</label>
                     </td>
                     <td>
-                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'mouthControl')"
+                        <button class="btn btn-default" title="Enable jaw movement while speaking" ng-show="!peer.isPeerStarted(service, 'mouthControl')"
                             ng-click="startPeer('mouthControl')">off</button>
-                        <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'mouthControl')"
+                        <button class="btn btn-info" title="Enable jaw movement while speaking" ng-show="peer.isPeerStarted(service, 'mouthControl')"
                             ng-click="releasePeer('mouthControl')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'mouthControl')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'mouthControl'))">
@@ -470,7 +478,6 @@
                         <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('opencv')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
                         <img src="../OpenCV.png"/>
                         <label>openCV Start:</label>
-                        <!--&nbsp;&nbsp;<toggle width="30" height="28" ng-model="service.isOpencvStarted" ng-change="service.isOpencvStarted?startPeer('opencv'):releasePeer('opencv')" on="" off=""/>-->
                     </td>
                     <td>
                         <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'opencv')"
@@ -484,29 +491,26 @@
                         </span>
                     </td>
                 </tr>
-                <tr ng-show="peer.isPeerStarted(service, 'opencv')">
+                <tr> 
                     <td>
-                        <label>flip Picture:</label>
-                    </td>
-                    <td>    
-                        <button title="Enable vision upside down" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_flipPicture_start.py')">on</button>
-                        <button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_flipPicture_stop.py')">off</button>
-                    </td>
+                        <label>flip video:</label>
+                        </td>{{peer.getPeerConfig(service, 'opencv').flip}}<td>
+                        <button ng-show="peer.getPeerConfig(service, 'opencv').flip"  class="btn btn-info" title="Enable vision upside down" ng-click="setPeerConfigValue('opencv', 'flip', false)">on</button>
+                        <button ng-show="!peer.getPeerConfig(service, 'opencv').flip" class="btn btn-default" title="Enable vision upside down" ng-click="setPeerConfigValue('opencv', 'flip', true)">off</button>
+                        </td>
                 </tr>
                 <tr ng-show="peer.isPeerStarted(service, 'opencv')">
                     <td>
-                        <label>face Recognizer:</label>
-                    </td>
-                    <td>    
-                        <button title="Enable robot to recognize trained faces" width="30" height="30" class="btn btn-info" 
-                            ng-click="execScript('system/startScripts/i01_faceRecognizerActivated_start.py')">on</button>
-                        <button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_faceRecognizerActivated_stop.py')">off</button>
-                        <button title="To train, you will need to start, brain, mouth, ear. You need to train at least 2 faces!" width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_trainName_start.py')">train</button>
+                        <label>openCVFaceRecognizerActivated:</label>
+                    </td><td>
+                        <button ng-show="service.config.openCVFaceRecognizerActivated" class="btn btn-info" title="Enable robot to recognize trained faces" ng-click="setConfigValue('openCVFaceRecognizerActivated', false)">on</button>
+                        <button ng-show="!service.config.openCVFaceRecognizerActivated" class="btn btn-default" title="Enable robot to recognize trained faces" ng-click="setConfigValue('openCVFaceRecognizerActivated', true)">off</button>
+                        <button title="To train, you will need to start, brain, mouth, ear" width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_trainName_start.py')">train</button>
                     </td>
                 </tr>
+<!--                <tr ng-show="peer.isPeerStarted(service, 'opencv')"> -->
                 <tr>
-                    <td ng-show="peer.isPeerStarted(service, 'opencv')">
+                    <td>
                         <img src="../Tracking.png"/>
                         <toggle ng-model="service.isHeadTrackingStarted" ng-change="service.isHeadTrackingStarted?startPeer('headTracking'):releasePeer('headTracking')" width="140" height="30" on="head tracking on" off="head tracking off"></toggle>
                         <span ng-show="peer.isPeerStarted(service, 'headTracking')">
@@ -515,8 +519,9 @@
                         <toggle width="100" height="28" ng-show="peer.isPeerStarted(service, 'headTracking')" ng-model="service.isHeadTracking" ng-change="!service.isHeadTracking?execScript('system/startScripts/i01_headTracking_stop.py'):execScript('system/startScripts/i01_headTracking_start.py')" on="Disable" off="Enable"/></toggle>
                     </td>
                 </tr>    
+<!--                <tr ng-show="peer.isPeerStarted(service, 'opencv')"> -->
                 <tr>
-                    <td ng-show="peer.isPeerStarted(service, 'opencv')">
+                    <td>
                         <img src="../Tracking.png"/>
                         <toggle ng-model="service.isEyeTrackingStarted" ng-change="service.isEyeTrackingStarted?startPeer('eyeTracking'):releasePeer('eyeTracking')" width="140" height="30" on="eye tracking on" off="eye tracking off"></toggle>
                         <span ng-show="peer.isPeerStarted(service, 'eyeTracking')">
@@ -675,6 +680,39 @@
                             </a>
                         </span>
                 </tr>
+                <tr ng-show="peer.isPeerStarted(service, 'neoPixel')">
+                    <td>
+                        <label>neopixelBootGreen</label>
+                        </td><td>
+                        <button ng-show="service.config.neoPixelBootGreen" class="btn btn-info" title="Sets neopixel to green when robot is booting" ng-click="setConfigValue('neoPixelBootGreen', false)">on</button>
+                        <button ng-show="!service.config.neoPixelBootGreen" class="btn btn-default" title="Sets neopixel to green when robot is booting" ng-click="setConfigValue('neoPixelBootGreen', true)">off</button>
+                    </td>
+                </tr>
+                <tr ng-show="peer.isPeerStarted(service, 'neoPixel')">
+                    <td>
+                        <label>neoPixelErrorRed</label>
+                        </td><td>
+                        <button ng-show="service.config.neoPixelErrorRed" class="btn btn-info" title="Sets neopixel to red when an error occurs" ng-click="setConfigValue('neoPixelErrorRed', false)">on</button>
+                        <button ng-show="!service.config.neoPixelErrorRed" class="btn btn-default" title="Sets neopixel to red when an error occurs" ng-click="setConfigValue('neoPixelErrorRed', true)">off</button>
+                    </td>
+                </tr>
+                <tr ng-show="peer.isPeerStarted(service, 'neoPixel')">
+                    <td>
+                        <label>neoPixelFlashWhenSpeaking</label>
+                    </td><td>
+                        <button ng-show="service.config.neoPixelFlashWhenSpeaking" title="Allows neopixel to flash when robot is speaking" class="btn btn-info" 
+                                    ng-click="msg.send('setConfigValue','neoPixelFlashWhenSpeaking',false);msg.send('broadcastState')">on</button>
+                        <button ng-show="!service.config.neoPixelFlashWhenSpeaking"  width="30" height="30" class="btn btn-default" title="Allows neopixel to flash when robot is speaking" ng-click="msg.send('setConfigValue','neoPixelFlashWhenSpeaking',true);msg.send('broadcastState')">off</button>
+                    </td>
+                </tr>
+                <tr ng-show="peer.isPeerStarted(service, 'neoPixel')">
+                    <td>
+                        <label>neoPixelDownloadBlue</label>
+                        </td><td>
+                        <button ng-show="service.config.neoPixelDownloadBlue" class="btn btn-info" title="Sets neopixel blue when downloading new version" ng-click="setConfigValue('neoPixelDownloadBlue', false)">on</button>
+                        <button ng-show="!service.config.neoPixelDownloadBlue" class="btn btn-default" title="Sets neopixel blue when downloading new version" ng-click="setConfigValue('neoPixelDownloadBlue', true)">off</button>
+                    </td>
+                </tr>
             </table>
 
             <!------------------------ extra end ------------------------------>
@@ -706,18 +744,36 @@
                     </td>
                     <tr ng-show="peer.isPeerStarted(service, 'pir')">
                         <td>
-                            <label>pirEnableTracking:</label>
-                            &nbsp;&nbsp;<button title="Enable to start tracking faces when pir detect movement" width="30" height="30" class="btn btn-info" 
-                                ng-click="execScript('system/startScripts/i01_pirEnableTracking_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_pirEnableTracking_stop.py')">off</button>
+                            <label>pirWakeUp:</label>
+                            </td><td>
+                        <button ng-show="service.config.pirWakeUp" class="btn btn-info" title="Pir wakes up the robot when detected movement" ng-click="setConfigValue('pirWakeUp', false)">on</button>
+                        <button ng-show="!service.config.pirWakeUp" class="btn btn-default" title="Pir wakes up the robot when detected movement" ng-click="setConfigValue('pirWakeUp', true)">off</button>
                         </td>
                     </tr>
                     <tr ng-show="peer.isPeerStarted(service, 'pir')">
                         <td>
-                            <label>pirWakeUp:</label>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button title="Enable pir to wake up robot if detected movements" width="30" height="30" class="btn btn-info" 
-                                ng-click="execScript('system/startScripts/i01_pirWakeUp_start.py')">on</button>&nbsp;<button width="30" height="30" class="btn btn-default" ng-click="execScript('system/startScripts/i01_pirWakeUp_stop.py')">off</button>
+                            <label>pirEnableTracking:</label>
+                        </td><td>
+                        <button ng-show="service.config.pirEnableTracking" class="btn btn-info" title="Enable to start tracking faces when pir detect movement" ng-click="setConfigValue('pirEnableTracking', false)">on</button>
+                        <button ng-show="!service.config.pirEnableTracking" class="btn btn-default" title="Enable to start tracking faces when pir detect movement" ng-click="setConfigValue('pirEnableTracking', true)">off</button>
+                    </td>
+                    </tr>
+                    <tr ng-show="peer.isPeerStarted(service, 'pir')">
+                        <td>
+                            <label>pirPlaySounds:</label>
+                            </td><td>
+                        <button ng-show="service.config.pirPlaySounds" class="btn btn-info" title="Play sounds when pir switching states" ng-click="setConfigValue('pirPlaySounds', false)">on</button>
+                        <button ng-show="!service.config.pirPlaySounds" class="btn btn-default" title="Play sounds when pir switching states" ng-click="setConfigValue('pirPlaySounds', true)">off</button>
                         </td>
                     </tr>
+                    <!--<tr ng-show="peer.isPeerStarted(service, 'pir')">
+                        <td>
+                            <label>pirOnFlash:</label>
+                            </td><td>
+                        <button ng-show="service.config.pirOnFlash" class="btn btn-info" title="Pir flash neopixel when pir switching states" ng-click="setConfigValue('pirOnFlash', false)">on</button>
+                        <button ng-show="!service.config.pirOnFlash" class="btn btn-default" title="Pir flash neopixel when pir switching states" ng-click="setConfigValue('pirOnFlash', true)">off</button>
+                        </td>
+                    </tr>-->
                 </tr>
                 <tr>
                     <td>
@@ -909,12 +965,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <label>Startup Sound</label>
-                    </td><td>
-                        <button ng-show="service.config.startupSound" title="Enable InMoov theme at start" class="btn btn-info" 
-                                    ng-click="setConfigValue('startupSound', false)">on</button>
-                        <button ng-show="!service.config.startupSound"  width="30" height="30" class="btn btn-default" 
-                                    ng-click="setConfigValue('startupSound', true)">off</button>
+                        <label>Start Up Sound</label>
+                        </td><td>
+                        <button ng-show="service.config.startupSound" class="btn btn-info" title="Enable InMoov theme at start" ng-click="setConfigValue('startupSound', false)">on</button>
+                        <button ng-show="!service.config.startupSound" class="btn btn-default" title="Enable InMoov theme at start" ng-click="setConfigValue('startupSound', true)">off</button>
                     </td>
                 </tr>
                 <tr>

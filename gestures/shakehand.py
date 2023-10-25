@@ -135,7 +135,7 @@ def shakehandAnimation():
   i01.moveArm("right",6,73,55,16)
   i01.moveHand("left",50,50,40,20,20,90)
   i01.moveTorso(95,95,90)
-  if rightHandSensorActivated==1:
+  if rightHandSensorStarted==1:
     global rightThumbPressure
     global rightIndexPressure
     global rightMajeurePressure

@@ -10,7 +10,7 @@ def grabtheglass():
   i01.moveArm("left",77,85,45,15)
   i01.moveArm("right",48,91,72,20)
   i01.moveHand("left",180,138,140,164,180,50)
-  if rightHandSensorActivated==1:
+  if rightHandSensorStarted==1:
     global rightThumbPressure
     global rightIndexPressure
     global rightMajeurePressure
