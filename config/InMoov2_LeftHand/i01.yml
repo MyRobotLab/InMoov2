@@ -3,7 +3,7 @@ analogPinFromSoundCard: 53
 audioPollsBySeconds: 2
 audioSignalProcessing: false
 batteryInSystem: false
-customSound: false
+customSounds: false
 forceMicroOnIfSleeping: true
 healthCheckActivated: false
 healthCheckTimerMs: 60000
