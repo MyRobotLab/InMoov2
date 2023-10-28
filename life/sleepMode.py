@@ -58,7 +58,7 @@ def sleepModeWakeUp():
   if runtime.isStarted('i01.head'):
     i01_head_neck.setSpeed(50)
     i01_head_neck.moveToBlocking(i01_head_neck.getRest())
-  if i01.getConfig().customSounds==1:
+  if i01.getConfig().customSound==1:
     i01_audioPlayer=runtime.start('i01_audioPlayer','AudioFile')
     i01_audioPlayer.playFile('resource/InMoov2/system/sounds/Notifications/'+random.choice(os.listdir('resource/InMoov2/system/sounds/Notifications')),False)
   elif runtime.isStarted('i01.opencv'):
