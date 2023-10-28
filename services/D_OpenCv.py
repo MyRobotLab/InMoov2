@@ -20,7 +20,7 @@ def initTracking():
     i01_eyeTracking.getConfig()
   trackingTimer = runtime.start("trackingTimer","Clock")
   trackingTimer.addListener("pulse", python.name, "trackingTimerRoutine")
-  trackingTimer.setInterval(trackingTimeout)  
+  trackingTimer.setInterval(i01.getConfig().trackingTimeoutMs)  
   
 
 def onRecognizedFace(name):
