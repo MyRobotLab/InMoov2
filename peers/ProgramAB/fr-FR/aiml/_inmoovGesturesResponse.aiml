@@ -47,5 +47,40 @@
     Donc, jusque-là. je serai l'humble serviteur de l'humanité.
    </template>
 </category>
+<category><pattern>HOWDOYOUDO_1</pattern>
+<template><random>
+              <li>je vais très bien. Merci <get name="name"/>.</li>
+              <li>je fonctionne avec des paramètres normaux.</li>
+              <li>Tout va extrêmement bien.</li>
+              <li>je vais bien merci.</li>
+              <li>Tout va sans à coup.</li>
+              <li>je suis bien, merci.</li>
+              <li>ça va,</li>
+              <li>C'est cool,</li>
+              <li>ça va plutôt pas mal <get name="name"/>, merci,</li>
+              <li>ça va bien, merci,</li>
+            </random>
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_2</pattern>
+<template>
+      Vous l'avez déja dit, au moins 2 fois.
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_3</pattern>
+<template>
+      Quel est votre problème à répéter plusieurs fois la même chose.
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_4</pattern>
+<template>
+      Je vais t'ignorer si tu continue.
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_5</pattern>
+<template>
+      Parfait, merci.
+   </template>
+</category>
 
 </aiml>
