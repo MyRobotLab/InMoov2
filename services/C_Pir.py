@@ -16,7 +16,7 @@ def initPir():
   pir.addListener("publishSense",python.name,"publishSense")
   sleepTimer = runtime.start("sleepTimer","Clock")
   sleepTimer.addListener("pulse", python.name, "sleepTimerRoutine")
-  sleepTimer.setInterval(sleepTimeout)
+  sleepTimer.setInterval(i01.getConfig().sleepTimeoutMs)
 
 
 #analog pin listener read the pir
