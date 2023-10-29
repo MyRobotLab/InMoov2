@@ -31,7 +31,7 @@ def openNiInit():
     timeout=0
     #while not i01.RobotIsOpenNiCapturing:
     if runtime.isStarted('i01.fsm'):
-      while not i01_fsm.getCurrent()=="capturing":
+      while not i01_fsm.getCurrent()=="isTracking":
         sleep(1)
         timeout+=1
         if timeout>7:break
@@ -47,6 +47,8 @@ def openNiStop():
       i01_rightArm_shoulder.setRest(i01_rightArm_shoulder.getConfig().rest)
       if openNiRightShoulderInverted==0:
         i01_rightArm_shoulder.setInverted(False)
+    if runtime.isStarted('i01.fsm'):
+      i01_fsm.fire("awake")
 
 # if runtime.isStarted('i01.openni'):
 #   if i01_openni.getConfig().autoStart==1:
