@@ -1,5 +1,7 @@
 def stopTrackHumans():
   if runtime.isStarted("i01.opencv"):
+    if runtime.isStarted('i01.fsm'):
+      i01_fsm.fire("stopTrack")
     if (i01_opencv.isCapturing()):
       if runtime.isStarted("i01.headTracking"):
         i01_headTracking.disable()

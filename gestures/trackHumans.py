@@ -1,5 +1,7 @@
 def trackHumans():
   if runtime.isStarted('i01.opencv'):
+    if runtime.isStarted('i01.fsm'):
+      i01_fsm.fire("track")
     i01_head_rollNeck.setAutoDisable(False)
     i01_head_rollNeck.moveToBlocking(90)
     i01.setHeadSpeed(500.0,500.0,500.0,500.0,500.0)
