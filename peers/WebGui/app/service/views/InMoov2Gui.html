@@ -493,7 +493,7 @@
                 <tr> 
                     <td>
                         <label>flip video:</label>
-                        </td>{{peer.getPeerConfig(service, 'opencv').flip}}<td>
+                    </td><td>
                         <button ng-show="peer.getPeerConfig(service, 'opencv').flip"  class="btn btn-info" title="Enable vision upside down" ng-click="setPeerConfigValue('opencv', 'flip', false)">on</button>
                         <button ng-show="!peer.getPeerConfig(service, 'opencv').flip" class="btn btn-default" title="Enable vision upside down" ng-click="setPeerConfigValue('opencv', 'flip', true)">off</button>
                         </td>
