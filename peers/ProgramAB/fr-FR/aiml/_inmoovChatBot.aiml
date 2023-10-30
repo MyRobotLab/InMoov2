@@ -551,6 +551,10 @@
     <template>Je redémarre la session.
         <oob><mrl><service>i01.chatBot</service><method>reload</method></mrl></oob></template>
   </category>
+  <category><pattern>NORESP</pattern>
+    <template>
+      <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+  </category>
   
   <!-- fix for null topic -->
 
