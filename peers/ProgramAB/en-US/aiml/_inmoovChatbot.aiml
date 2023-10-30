@@ -152,18 +152,42 @@
 
 
 <category><pattern>NOTFACERECOGNIZED</pattern>
-      <template>I couldn't memorize your face because face recognizer is OFF in my vision settings. Set it ON in my vision settings.
-        <random>
-          <li>I restart, it's important.</li>
-          <li>I repeat.</li>
-        </random>
+      <template>I couldn't memorize your face because face recognizer is OFF in my vision settings. I can do it for you.
         <think>
-          <set name="topic">firstinit</set>
-          <set name="questionfirstinit">Would you like me to use my vision to memorise your face along your name ?</set>
+          <set name="topic">reStartVision</set>
+          <set name="questionfirstinit">Would you like me to try again ?</set>
         </think>
       <get name="questionfirstinit"/>
     </template>
 </category>
+
+<topic name="RESTARTVISION">
+<category><pattern># YES #</pattern><that># WOULD YOU LIKE ME TO TRY AGAIN #</that>
+<template>Ok, make sure you are facing the camera, and please don't wear glasses.<think>
+          <set name="topic">default</set>
+        </think><oob>
+          <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>i01.setConfigValue('openCVFaceRecognizerActivated', True), memorisePerson(u"<get name="name"/>")</param>
+          </mrl>
+        </oob> 
+        <think>
+          <set name="topic">default</set>
+        </think>
+    </template>
+</category></topic>
+
+<topic name="RESTARTVISION">
+<category><pattern># NO #</pattern><that># WOULD YOU LIKE ME TO TRY AGAIN #</that>
+<template>Ok, then we are done with our first contact.
+        <think>
+          <set name="topic">default</set>
+        </think>
+      <srai>SYSTEM_SAY_HELLO</srai>
+    </template>
+</category></topic>
+
 
 <category><pattern>GETREADY</pattern>
 <template>I am getting my vision set up. Get ready.

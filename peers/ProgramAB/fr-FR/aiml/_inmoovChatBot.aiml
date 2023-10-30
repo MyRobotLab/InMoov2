@@ -121,11 +121,7 @@
     </category></topic>
 
     <category><pattern>NOTFACERECOGNIZED</pattern>
-      <template>Je n'ai pas réussi à mémoriser ton visage car face recognizer est OFF dans les configurations de ma vision. Il faut cliquer sur facerecognizer ON dans la configuration de ma vision.
-        <random>
-          <li>Je recommence, c'est important.</li>
-          <li>Je répète.</li>
-        </random>
+      <template>Je n'ai pas réussi à mémoriser ton visage car face recognizer est OFF dans les configurations de ma vision. Je peux l'activer si tu le souhaites.
         <think>
           <set name="topic">reStartVision</set>
           <set name="questionfirstinit">Veut tu que je recommence ?</set>
@@ -141,7 +137,7 @@
               <mrl>
                 <service>python</service>
                 <method>exec</method>
-                <param>memorisePerson(u"<get name="name"/>")</param>
+                <param>i01.setConfigValue('openCVFaceRecognizerActivated', True), memorisePerson(u"<get name="name"/>")</param>
               </mrl>
             </oob> 
             <think>
@@ -554,6 +550,10 @@
   <category><pattern>REDÉMARRE LA SESSION</pattern>
     <template>Je redémarre la session.
         <oob><mrl><service>i01.chatBot</service><method>reload</method></mrl></oob></template>
+  </category>
+  <category><pattern>NORESP</pattern>
+    <template>
+      <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
   </category>
   
   <!-- fix for null topic -->

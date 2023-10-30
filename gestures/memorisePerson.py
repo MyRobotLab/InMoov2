@@ -40,15 +40,15 @@ def memorisePerson(name):
   if i01.getConfig().openCVFaceRecognizerActivated==1:
     print(name)
     if runtime.isStarted('i01.neoPixel'):
-      i01_neoPixel.setAnimation("Color Wipe", 100, 5, 10, 15) 
+      i01_neoPixel.clear()
+      i01_neoPixel.setAnimation("Color Wipe", 100, 5, 10, 15)
     if runtime.isStarted('i01.chatBot'):
+      opencv = i01.startPeer('opencv')
       if runtime.isStarted('i01.opencv'):
-        global i01_opencv
-        i01_opencv = runtime.start("i01.opencv","OpenCV")
-        i01_opencv.capture()
-        sleep(5)
-        i01_opencv.addFilter("FaceRecognizer")
-        i01_opencv.setActiveFilter("FaceRecognizer")
+        opencv.capture()
+        sleep(10)
+        opencv.addFilter("FaceRecognizer")
+        opencv.setActiveFilter("FaceRecognizer")
         # if runtime.isStarted('i01.head'):
         #   i01.setHeadSpeed(70, 70, 70)
         #   i01.moveHead(90,90,20)
@@ -57,7 +57,7 @@ def memorisePerson(name):
         #   sleep(2)
         #   i01.moveHead(90,90,90)
         # set the name on the filter that will be used for the saved examples
-        fr = i01_opencv.getFilter("FaceRecognizer")
+        fr = opencv.getFilter("FaceRecognizer")
         fr.setTrainName(unicode(name,'utf-8'))
         #fr.setTrainName(name)
         # set the filter to be in training mode (Where it learns new images)
@@ -67,8 +67,8 @@ def memorisePerson(name):
         fr.train()
         # after we've retrained the model.. start recognizing again
         fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
-        i01_opencv.removeFilters()
-        i01_opencv.stopCapture()
+        opencv.removeFilters()
+        opencv.stopCapture()
         i01_chatBot.getResponse("SYSTEM_SAY_HELLO")
         i01.finishedGesture()
       else:
@@ -81,8 +81,7 @@ def memorisePerson(name):
           i01_chatBot.getResponse("NOTFACERECOGNIZED")        
 
 def takeMyPicture(name):
-    i01.startPeer('opencv')
-    opencv = runtime.start('i01.opencv', 'OpenCV')
+    opencv = i01.startPeer('opencv')
     opencv.capture()
     i01_opencv.addFilter("SetImageROI")
     if runtime.isStarted('i01.chatBot'):
@@ -102,6 +101,7 @@ def takeMyPicture(name):
     print(photoFileName)
     sleep(2)
     opencv.stopCapture()
+    i01.releasePeer('opencv')
     picturePath='resource/ProgramAB/'
     shutil.move(photoFileName,picturePath)
     newName = unicode(name,'utf-8')+'.png'
