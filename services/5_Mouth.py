@@ -72,21 +72,8 @@ def onStartSpeaking(text):
 
     #force random move while speaking, to avoid conflict with random life gesture
     if i01.getConfig().robotCanMoveHeadWhileSpeaking==1:
-      if not runtime.isStarted('i01.random'):
-        i01.startPeer('random')
-        i01_random.disable('i01.moveLeftArm')
-        i01_random.disable('i01.moveRightArm')
-        i01_random.disable('i01.moveLeftHand')
-        i01_random.disable('i01.moveRightHand')
-        i01_random.disable('i01.moveTorso')
-        i01_random.disable('i01.setLeftArmSpeed')
-        i01_random.disable('i01.setRightArmSpeed')
-        i01_random.disable('i01.setLeftHandSpeed')
-        i01_random.disable('i01.setRightHandSpeed')
-        i01_random.disable('i01.setTorsoSpeed')
-        i01_random.enable()
-
-      else:
+      i01_random = i01.startPeer('random')
+      if runtime.isStarted('i01.random'):
         i01_random.disable('i01.moveLeftArm')
         i01_random.disable('i01.moveRightArm')
         i01_random.disable('i01.moveLeftHand')
