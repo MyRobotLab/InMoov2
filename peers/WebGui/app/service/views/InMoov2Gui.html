@@ -490,13 +490,13 @@
                         </span>
                     </td>
                 </tr>
-                <tr> 
+                <tr ng-show="peer.isPeerStarted(service, 'opencv')"> 
                     <td>
                         <label>flip video:</label>
                     </td><td>
                         <button ng-show="peer.getPeerConfig(service, 'opencv').flip"  class="btn btn-info" title="Enable vision upside down" ng-click="setPeerConfigValue('opencv', 'flip', false)">on</button>
                         <button ng-show="!peer.getPeerConfig(service, 'opencv').flip" class="btn btn-default" title="Enable vision upside down" ng-click="setPeerConfigValue('opencv', 'flip', true)">off</button>
-                        </td>
+                    </td>
                 </tr>
                 <tr ng-show="peer.isPeerStarted(service, 'opencv')">
                     <td>
@@ -507,8 +507,7 @@
                         <button title="To train, you will need to start, brain, mouth, ear" width="30" height="30" class="btn btn-info" ng-click="execScript('system/startScripts/i01_trainName_start.py')">train</button>
                     </td>
                 </tr>
-<!--                <tr ng-show="peer.isPeerStarted(service, 'opencv')"> -->
-                <tr>
+                <tr ng-show="peer.isPeerStarted(service, 'opencv')">
                     <td>
                         <img src="../Tracking.png"/>
                         <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'headTracking')"
@@ -522,8 +521,7 @@
                         <toggle width="100" height="28" ng-show="peer.isPeerStarted(service, 'headTracking')" ng-model="service.isHeadTracking" ng-change="!service.isHeadTracking?execScript('system/startScripts/i01_headTracking_stop.py'):execScript('system/startScripts/i01_headTracking_start.py')" on="Disable" off="Enable"/></toggle>
                     </td>
                 </tr>    
-<!--                <tr ng-show="peer.isPeerStarted(service, 'opencv')"> -->
-                <tr>
+                <tr ng-show="peer.isPeerStarted(service, 'opencv')">
                     <td>
                         <img src="../Tracking.png"/>
                         <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'eyeTracking')"
