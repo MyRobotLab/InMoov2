@@ -28,9 +28,9 @@ def openNiInit():
         i01_rightArm_shoulder.setInverted(True)
     i01_openni.capture()
     #worky open ni kinect detection
-    timeout=0
     #while not i01.RobotIsOpenNiCapturing:
     if runtime.isStarted('i01.fsm'):
+      timeout=0
       while not i01_fsm.getCurrent()=="isTracking":
         sleep(1)
         timeout+=1
