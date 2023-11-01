@@ -87,7 +87,8 @@ def onStartSpeaking(text):
         i01_random.enable()  
         if runtime.isStarted('i01.head'):
           if runtime.isStarted('i01.opencv'):
-              if not runtime.isStarted('i01.headTracking') or not runtime.isStarted('i01.eyeTracking'):
+            if runtime.isStarted('i01.fsm'):
+              if not i01_fsm.getCurrent()=="isTracking":
                   i01_random.addRandom(200, 1000, "i01", "setHeadSpeed", 8.0, 20.0, 8.0, 20.0, 8.0, 20.0)
                   i01_random.addRandom(100, 500, "i01", "moveHead", 70.0, 110.0, 65.0, 115.0, 70.0, 110.0)
                   i01_random.enable('i01.setHeadSpeed')
