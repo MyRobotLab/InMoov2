@@ -24,7 +24,7 @@ def publishSense(event):
   if runtime.isStarted("i01.pir"):
     #publishPin=1
     if event:
-      print "I should wake up"
+      print "pir detected something"
       #if not i01.RobotIsSleeping and i01.RobotIsStarted:
       if runtime.isStarted('i01.fsm'):
         if not i01_fsm.getCurrent()=="sleeping" and i01_fsm.getCurrent()=="awake" and "systemCheck": 
