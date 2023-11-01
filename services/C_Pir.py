@@ -27,7 +27,7 @@ def publishSense(event):
       print "I should wake up"
       #if not i01.RobotIsSleeping and i01.RobotIsStarted:
       if runtime.isStarted('i01.fsm'):
-        if not i01_fsm.getCurrent()=="sleeping" and i01_fsm.getCurrent()=="awake" or "systemCheck": 
+        if not i01_fsm.getCurrent()=="sleeping" and i01_fsm.getCurrent()=="awake" and "systemCheck": 
           #i01_pir.disable()
           humanDetected()
         
