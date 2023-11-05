@@ -2,12 +2,11 @@ def stopTrackHumans():
   if runtime.isStarted("i01.opencv"):
     if runtime.isStarted('i01.fsm'):
       i01_fsm.fire("stopTrack")
-    if (i01_opencv.isCapturing()):
-      if runtime.isStarted("i01.headTracking"):
-        i01_headTracking.disable()
-      if runtime.isStarted("i01.eyeTracking"):
-        i01_eyeTracking.disable()  
-      i01_head_rollNeck.setAutoDisable(True)
-      i01_opencv.removeFilter("FaceDetecDNN")
-      i01_opencv.stopCapture()
-      i01.finishedGesture()
+    if runtime.isStarted("i01.headTracking"):
+      i01_headTracking.disable()
+    if runtime.isStarted("i01.eyeTracking"):
+      i01_eyeTracking.disable()
+    i01_head_rollNeck.setAutoDisable(True)
+    i01_opencv.removeFilters()
+    i01_opencv.stopCapture()
+    i01.finishedGesture()
