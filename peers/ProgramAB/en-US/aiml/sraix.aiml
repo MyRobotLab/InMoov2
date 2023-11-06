@@ -195,7 +195,7 @@
 <template><sraix>SHOULD I BUY <star/></sraix></template>
 </category>
 <category><pattern>SRAIXFAILED *</pattern>
-<template>.<condition name="gpt3">
+<template><condition name="gpt3">
         <li value="enabled"><img src="../Gpt3.png"/>
         <oob>
           <mrl>
@@ -217,10 +217,10 @@
         <li>I am confused, I do not know what to answer.</li>
       </random>
       <random>
-        <li>Can you teach me?</li>
-        <li>I would like to learn if you know the answer.</li>
-        <li>I would like to learn, please teach me.</li>
-        <li>I am listening to you for to learn the answer.</li>
+        <li>Can you teach me? </li>
+        <li>I would like to learn if you know the answer. </li>
+        <li>I would like to learn, please teach me. </li>
+        <li>I am listening to you for to learn the answer. </li>
       </random><think><set name="topic">learnf</set></think><srai>LEARN SRAIXFAILED</srai>
         </li>
       </condition>
