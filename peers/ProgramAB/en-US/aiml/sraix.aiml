@@ -50,11 +50,36 @@
 <category><pattern>WHO IS *</pattern>
 <template><sraix><star/></sraix></template>
 </category>
+
 <category><pattern>WHO WAS *</pattern>
 <template><sraix><star/></sraix></template>
 </category>
 
+<category><pattern>WHO ARE THE *</pattern>
+<template><sraix><star/></sraix></template>
+</category>
+
 <category><pattern>WHAT IS A *</pattern>
+<template><sraix><star/></sraix></template>
+</category>
+
+<category><pattern>WHAT ARE *</pattern>
+<template><sraix><star/></sraix></template>
+</category>
+
+<category><pattern>WHY IS *</pattern>
+<template><sraix><star/></sraix></template>
+</category>
+
+<category><pattern>WHY WAS *</pattern>
+<template><sraix><star/></sraix></template>
+</category>
+
+<category><pattern>WHY WERE *</pattern>
+<template><sraix><star/></sraix></template>
+</category>
+
+<category><pattern>WHY ARE *</pattern>
 <template><sraix><star/></sraix></template>
 </category>
 
@@ -196,7 +221,7 @@
         <li>I would like to learn if you know the answer.</li>
         <li>I would like to learn, please teach me.</li>
         <li>I am listening to you for to learn the answer.</li>
-      </random><srai>LEARN SRAIXFAILED</srai>
+      </random><think><set name="topic">learnf</set></think><srai>LEARN SRAIXFAILED</srai>
         </li>
       </condition>
         </template>
