@@ -16,7 +16,7 @@ def initPir():
   pir.addListener("publishSense",python.name,"publishSense")
   sleepTimer = runtime.start("sleepTimer","Clock")
   sleepTimer.addListener("pulse", python.name, "sleepTimerRoutine")
-  sleepTimer.setInterval(sleepTimeout)
+  sleepTimer.setInterval(i01.getConfig().sleepTimeoutMs)
 
 
 #analog pin listener read the pir
@@ -24,10 +24,10 @@ def publishSense(event):
   if runtime.isStarted("i01.pir"):
     #publishPin=1
     if event:
-      print "I should wake up"
+      print "pir detected something"
       #if not i01.RobotIsSleeping and i01.RobotIsStarted:
       if runtime.isStarted('i01.fsm'):
-        if not i01_fsm.getCurrent()=="sleeping" and i01_fsm.getCurrent()=="awake" or "systemCheck": 
+        if not i01_fsm.getCurrent()=="sleeping" and i01_fsm.getCurrent()=="awake" and "systemCheck": 
           #i01_pir.disable()
           humanDetected()
         

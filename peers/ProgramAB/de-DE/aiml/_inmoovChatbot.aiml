@@ -151,15 +151,40 @@
 
 
 <category><pattern>NOTFACERECOGNIZED</pattern>
-      <template>Ich konnte mir Ihr Gesicht nicht merken, weil die Gesichtserkennung in meinen Seheinstellungen ausgeschaltet ist. Stellen Sie es in meinen Seheinstellungen auf EIN.        <random>
-          <li>Ich starte neu, es ist wichtig.</li>
-          <li>Ich wiederhole.</li>
-        </random>
+      <template>Ich konnte mir Ihr Gesicht nicht merken, weil die Gesichtserkennung in meinen Seheinstellungen ausgeschaltet ist. Ich kann es aktivieren, wenn Sie möchten.
         <think>
-          <set name="topic">firstinit</set>
+          <set name="topic">reStartVision</set>
+          <set name="questionfirstinit">Wollen sie dass ich wieder starte ?</set>
         </think>
         <get name="questionfirstinit"/></template>
-      </category>
+    </category>
+
+    <topic name="RESTARTVISION">
+    <category><pattern># JA #</pattern><that># WOLLEN SIE DASS ICH WIEDER STARTE #</that>
+    <template>Ok, stellen Sie sich vor meine Kamera und nehmen Sie bitte Ihre Brille ab, wenn Sie eine tragen.<think>
+              <set name="topic">default</set>
+            </think><oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>i01.setConfigValue('openCVFaceRecognizerActivated', True), memorisePerson(u"<get name="name"/>")</param>
+              </mrl>
+            </oob> 
+            <think>
+              <set name="topic">default</set>
+            </think>
+        </template>
+    </category></topic>
+
+    <topic name="RESTARTVISION">
+    <category><pattern># NEIN #</pattern><that># WOLLEN SIE DASS ICH WIEDER STARTE #</that>
+    <template>Ok, unser erster Kontakt ist hergestellt.
+            <think>
+              <set name="topic">default</set>
+            </think>
+          <srai>SYSTEM_SAY_HELLO</srai>
+        </template>
+    </category></topic>
 
 <category><pattern>GETREADY</pattern>
 <template>Ich setze meine Vision in die Tat um. Bereit machen.

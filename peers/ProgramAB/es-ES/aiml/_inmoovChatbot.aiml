@@ -179,17 +179,40 @@
 
 
     <category><pattern>NOTFACERECOGNIZED</pattern>
-      <template>No pude memorizar tu rostro porque el reconocedor de rostros está OFF en mi configuración de visión. Póngalo en ON en mi configuración de visión.
-        <random>
-          <li>Reinicio, es importante.</li>
-          <li>Repito.</li>
-        </random>
-        <think>
-          <set name="topic">startVision</set>
-          <set name="questionfirstinit">Te gustaría que use mi visión para memorizar tu cara junto con tu nombre?</set>
+      <template>No pude memorizar tu rostro porque el reconocedor de rostros está APAGADO en mi configuración de visión. Puedo activarlo si quieres.        <think>
+          <set name="topic">reStartVision</set>
+          <set name="questionfirstinit">¿ Quieres que empiece de nuevo ?</set>
         </think>
         <get name="questionfirstinit"/></template>
-      </category>
+    </category>
+
+    <topic name="RESTARTVISION">
+    <category><pattern># SÍ #</pattern><that># QUIERES QUE EMPEZAR DE NUEVO #</that>
+    <template>Ok, párate frente a mi cámara y quítate las gafas si las usas.
+            <think>
+              <set name="topic">default</set>
+            </think><oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>i01.setConfigValue('openCVFaceRecognizerActivated', True), memorisePerson(u"<get name="name"/>")</param>
+              </mrl>
+            </oob> 
+            <think>
+              <set name="topic">default</set>
+            </think>
+        </template>
+    </category></topic>
+
+    <topic name="RESTARTVISION">
+    <category><pattern># NO #</pattern><that># QUIERES QUE EMPEZAR DE NUEVO #</that>
+    <template>Ok, nuestro primer contacto está hecho. 
+            <think>
+              <set name="topic">default</set>
+            </think>
+          <srai>SYSTEM_SAY_HELLO</srai>
+        </template>
+    </category></topic>
 
     <category><pattern>GETREADY</pattern>
       <template>Estoy configurando mi visión. Prepararse.

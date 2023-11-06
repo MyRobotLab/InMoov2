@@ -121,16 +121,41 @@
     </category></topic>
 
     <category><pattern>NOTFACERECOGNIZED</pattern>
-      <template>Je n'ai pas réussi à mémoriser ton visage car face recognizer est OFF dans les configurations de ma vision. Il faut cliquer sur facerecognizer ON dans la configuration de ma vision.
-        <random>
-          <li>Je recommence, c'est important.</li>
-          <li>Je répète.</li>
-        </random>
+      <template>Je n'ai pas réussi à mémoriser ton visage car face recognizer est OFF dans les configurations de ma vision. Je peux l'activer si tu le souhaites.
         <think>
-          <set name="topic">firstinit</set>
+          <set name="topic">reStartVision</set>
+          <set name="questionfirstinit">Veut tu que je recommence ?</set>
         </think>
         <get name="questionfirstinit"/></template>
-      </category>
+    </category>
+
+    <topic name="RESTARTVISION">
+    <category><pattern># OUI #</pattern><that># VEUT TU QUE JE RECOMMENCE #</that>
+    <template>Ok, mets toi bien face à ma camera, et s'il te plait, enlèves tes lunettes si tu en portes.<think>
+              <set name="topic">default</set>
+            </think><oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>i01.setConfigValue('openCVFaceRecognizerActivated', True), memorisePerson(u"<get name="name"/>")</param>
+              </mrl>
+            </oob> 
+            <think>
+              <set name="topic">default</set>
+            </think>
+        </template>
+    </category></topic>
+
+    <topic name="RESTARTVISION">
+    <category><pattern># NON #</pattern><that># VEUT TU QUE JE RECOMMENCE #</that>
+    <template>Ok, notre premier contact est effectué.
+            <think>
+              <set name="topic">default</set>
+            </think>
+          <srai>SYSTEM_SAY_HELLO</srai>
+        </template>
+    </category></topic>
+  
 
     <category><pattern>GETREADY</pattern>
       <template>Je prépare ma caméra. Attention.
@@ -343,9 +368,15 @@
     </template>
   </category>
       <category>
-    <pattern>RÉVEILLE TOI</pattern>
+    <pattern>WAKE UP</pattern>
     <template>
       <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob>
+    </template>
+  </category>
+  <category>
+    <pattern>REVEILLE TOI</pattern>
+    <template>
+      <srai>WAKE UP</srai>
     </template>
   </category>
   <category>
@@ -519,6 +550,10 @@
   <category><pattern>REDÉMARRE LA SESSION</pattern>
     <template>Je redémarre la session.
         <oob><mrl><service>i01.chatBot</service><method>reload</method></mrl></oob></template>
+  </category>
+  <category><pattern>NORESP</pattern>
+    <template>
+      <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
   </category>
   
   <!-- fix for null topic -->
