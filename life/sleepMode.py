@@ -115,7 +115,7 @@ def sleepModeSleep():
     #switchOffAllNervo()
     if runtime.isStarted('i01.neoPixel'):i01_neoPixel.stopAnimation()
     sleep(2)
-    if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Color Wipe", 10, 12, 12, 20)
+    if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Larson Scanner", 17, 126, 57, 1)
     if runtime.isStarted('i01.audioPlayer'):
       i01_audioPlayer.stopPlaylist()
       i01_audioPlayer.stop()
@@ -131,7 +131,7 @@ def sleepModeSleep():
 def wakeUpModeInsult():
   if runtime.isStarted('i01.ear'):
     WaitXsecondBeforeRelaunchTracking=-10
-    i01_ear.setWakeWord(i01.getConfig().wakeWord)
+    i01_ear.setWakeWord(i01_ear.getConfig().wakeWord)
     i01_ear.setAwake(True)
     i01_ear.startRecording()
     if runtime.isStarted('i01.pir'):
@@ -253,7 +253,7 @@ def sleepTimerRoutine(timedata):
   #if RobotIsSleeping==0:
   if runtime.isStarted('i01.fsm'):
     if not i01_fsm.getCurrent()=="sleeping":
-      if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Larson Scanner", 17, 126, 57, 1)
+      if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Color Wipe", 17,  126, 57, 20)
       if runtime.isStarted("i01.pir"):
         i01_pir.disable()
         #pirControlerArduino.disablePin(pirPin)
@@ -262,8 +262,7 @@ def sleepTimerRoutine(timedata):
       #i01_ear.setAwake(True)
       if runtime.isStarted('i01.headTracking'):
         initTracking()   
-        trackingTimer.stopClock()
-    else:   
+        trackingTimer.stopClock()   
       sleepModeSleep()
   
 def trackingTimerRoutine(timedata):
