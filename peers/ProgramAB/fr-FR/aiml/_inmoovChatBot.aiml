@@ -563,4 +563,35 @@
   <template><think><set name="topic">default</set></think><srai><star /></srai></template>
   </category>
   </topic>
+
+  <category><pattern>J AI PÉTÉ COMMUNICATION</pattern>
+  <template><srai>GPT COMMUNICATION</srai></template>
+  </category>
+
+  <category><pattern>GPT COMMUNICATION</pattern>
+  <template>
+    <condition name="gpt3">
+      <li value="enabled">
+        <think><set name="topic">gptfull</set>
+               <set name="gptStop"></set></think>
+          Okay, je suis prêt. Si tu souhaites arréter la communication directe avec gpt, dis stop gpt.
+      </li>
+      <li>Le service GPT n'est pas démarré.</li>
+    </condition>
+  </template>
+  </category>
+
+  <topic name="GPTFULL">
+  <category><pattern>#</pattern>
+  <template><think><set name="gptStop"><star/></set></think>
+            <condition>
+            <li name="gptStop" value="STOP GPT">D'accord, retour sur program AB.
+                <think><set name="topic">default</set>
+                       <set name="gptStop"></set>
+                </think></li>
+            <li><img src="../Gpt3.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_gpt3.onText("<star/>")</param></mrl></oob></li>
+            </condition>
+  </template>
+  </category>
+  </topic>
 </aiml>
