@@ -574,7 +574,7 @@
       <li value="enabled">
         <think><set name="topic">gptfull</set>
                <set name="gptStop"></set></think>
-          Okay, je suis prêt. Si tu souhaites arréter la communication directe avec gpt, dis stop gpt.
+          Okay, je suis prêt. Si tu souhaites arrêter la communication directe avec g.p.t, dis stop gpt.
       </li>
       <li>Le service GPT n'est pas démarré.</li>
     </condition>
@@ -584,11 +584,19 @@
   <topic name="GPTFULL">
   <category><pattern>#</pattern>
   <template><think><set name="gptStop"><star/></set></think>
-            <condition>
-            <li name="gptStop" value="STOP GPT">D'accord, retour sur program AB.
+            <condition name="gptStop">
+            <li value="stop gpt">D'accord, retour sur program AB.
                 <think><set name="topic">default</set>
                        <set name="gptStop"></set>
                 </think></li>
+            <li value="stoppe j ai pété">D'accord, retour sur program AB.
+                <think><set name="topic">default</set>
+                       <set name="gptStop"></set>
+                </think></li>
+            <li value="stop j ai pété">D'accord, retour sur program AB.
+                <think><set name="topic">default</set>
+                       <set name="gptStop"></set>
+                </think></li>    
             <li><img src="../Gpt3.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_gpt3.onText("<star/>")</param></mrl></oob></li>
             </condition>
   </template>
