@@ -455,9 +455,9 @@
   <template>
     <condition name="gpt3">
       <li value="enabled"><img src="../Gpt3.png"/>
-        <think><set name="topic">gptfull</set></think>
-          Okay I am ready for that. If you want to get out, say stop gpt.
-        <srai>GPTFULL</srai>
+        <think><set name="topic">gptfull</set>
+               <set name="gptStop"></set></think>
+          Okay I am ready for that. If you want to get out say, stop gpt.
       </li>
       <li>I don't have gpt3 started.</li>
     </condition>
@@ -465,14 +465,15 @@
 </category>
 
 <topic name="GPTFULL">
-<category><pattern>*</pattern>
-  <template>
-    <oob><mrl><service>python</service><method>exec</method><param>i01_gpt3.onText("<star/>")</param></mrl></oob>
-  </template>
-</category>
-<category><pattern>STOP GPT</pattern>
-  <template>Ok back to program AB.
-    <think><set name="topic">default</set></think>
+<category><pattern>#</pattern>
+  <template><think><set name="gptStop"><star/></set></think>
+            <condition>
+            <li name="gptStop" value="STOP GPT">Ok, back to program AB.
+                <think><set name="topic">default</set>
+                       <set name="gptStop"></set>
+                </think></li>
+            <li><img src="../Gpt3.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_gpt3.onText("<star/>")</param></mrl></oob></li>
+            </condition>
   </template>
 </category>
 </topic>
