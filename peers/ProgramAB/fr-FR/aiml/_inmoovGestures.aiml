@@ -1044,12 +1044,12 @@
 </category>
 <category><pattern>TOURNE À GAUCHE</pattern>
   <template><img src="../arrow_left_green.png"/>
-    <oob><mrl><service>python</service><method>exec</method><param>motorsLeft()</param></mrl></oob>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsTurnLeft()</param></mrl></oob>
   </template>
 </category>
 <category><pattern>TOURNE À DROITE</pattern>
   <template><img src="../arrow_right_green.png"/>
-    <oob><mrl><service>python</service><method>exec</method><param>motorsRight()</param></mrl></oob>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsTurnRight()</param></mrl></oob>
   </template>
 </category>
 <category><pattern>ACCÉLÈRE</pattern>
