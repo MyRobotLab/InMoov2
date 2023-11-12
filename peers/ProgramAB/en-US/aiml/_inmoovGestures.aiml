@@ -110,13 +110,53 @@
 <template>Detaching my jaw servo.
         <oob><mrl><service>i01.head.jaw</service><method>disable</method></mrl></oob></template>
 </category>
-<category><pattern>ATTACH WHEEL</pattern>
-<template>I don't have a wheel to attach, sorry.
-        <oob><mrl><service>forwardServo</service><method>enable</method></mrl><mrl><service>directionServo</service><method>enable</method></mrl></oob></template>
+<category><pattern>START MOTORS</pattern>
+  <template>
+    <oob><mrl><service>python</service><method>exec</method><param>motorDual()</param></mrl></oob>
+  </template>
 </category>
-<category><pattern>DISCONNECT WHEEL</pattern>
-<template>I don't have a wheel.
-        <oob><mrl><service>directionServo</service><method>disable</method></mrl><mrl><service>forwardServo</service><method>disable</method></mrl></oob></template>
+<category><pattern>MOTOR_READY</pattern>
+  <template>My motors are started and ready.
+  </template>
+</category>
+<category><pattern>MOTOR_NOT_READY</pattern>
+  <template>My motors are not started.
+  </template>
+</category>
+<category><pattern>MOVE FORWARD</pattern>
+  <template><img src="../arrow_up_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsForward()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>MOVE BACKWARD</pattern>
+  <template><img src="../arrow_down_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsBackward()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>STOP MOVING</pattern>
+  <template><img src="../stop.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsStop()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>TURN LEFT</pattern>
+  <template><img src="../arrow_left_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsTurnLeft()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>TURN RIGHT</pattern>
+  <template><img src="../arrow_right_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsTurnRight()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>SPEED UP</pattern>
+  <template>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsSlowDown()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>SLOW DOWN</pattern>
+  <template>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsSpeedUp()</param></mrl></oob>
+  </template>
 </category>
 <category><pattern>SEARCH HUMANS</pattern>
 <template>I'm looking for faces.
