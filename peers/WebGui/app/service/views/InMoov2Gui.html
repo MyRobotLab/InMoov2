@@ -395,8 +395,8 @@
                     <td>
                         <div width="120" height="28">
                             <label>Speech Service Type</label>
-                            <select ng-disabled="peer.isPeerStarted(service, 'mouth')" class="form-control"
-                                ng-model="service.config.peers['mouth'].type" ng-change="setSpeechType()" id="language-select">
+                            <select class="form-control"
+                                ng-model="speechType" id="language-select">
                                 <option ng-repeat="speechType in speechTypes" value="{{getShortName(speechType)}}">
                                     {{getShortName(speechType)}}</option>
                             </select>
@@ -405,8 +405,8 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.mouth')">Save
-                            Mouth Config</button>
+                        <button class="btn btn-default" ng-click="msg.send('setSpeechType', speechType)">Set
+                            Speech Type</button>
                     </td>
                 </tr>                        
             </table>
@@ -493,7 +493,7 @@
                 <tr> 
                     <td>
                         <label>flip video:</label>
-                        </td>{{peer.getPeerConfig(service, 'opencv').flip}}<td>
+                        </td><td>
                         <button ng-show="peer.getPeerConfig(service, 'opencv').flip"  class="btn btn-info" title="Enable vision upside down" ng-click="setPeerConfigValue('opencv', 'flip', false)">on</button>
                         <button ng-show="!peer.getPeerConfig(service, 'opencv').flip" class="btn btn-default" title="Enable vision upside down" ng-click="setPeerConfigValue('opencv', 'flip', true)">off</button>
                         </td>

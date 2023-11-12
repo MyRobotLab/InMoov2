@@ -29,6 +29,8 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     $scope.languageSelected = null
     $scope.speakText = null
     $scope.toggleValue = true
+    
+    $scope.speechType = 'MarySpeech'
 
     $scope.activePanel = 'settings'
 
