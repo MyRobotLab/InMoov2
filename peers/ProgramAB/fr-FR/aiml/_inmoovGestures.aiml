@@ -1028,8 +1028,39 @@
 <template><srai>RACONTE UNE AUTRE HISTOIRE</srai></template>
 </category>
 <category><pattern>AVANCE</pattern>
-<template>D'accord.
-        <oob><mrl><service>python</service><method>exec</method><param>avance()</param></mrl></oob></template>
+  <template><img src="../arrow_up_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsForward()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>RECULE</pattern>
+  <template><img src="../arrow_down_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsBackward()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>ARRÊTE</pattern>
+  <template><img src="../stop.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsStop()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>TOURNE À GAUCHE</pattern>
+  <template><img src="../arrow_left_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsLeft()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>TOURNE À DROITE</pattern>
+  <template><img src="../arrow_right_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsRight()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>ACCÉLÈRE</pattern>
+  <template>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsSlowDown()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>RALENTI</pattern>
+  <template>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsSpeedUp()</param></mrl></oob>
+  </template>
 </category>
 <category><pattern>ENREGISTRE CETTE PERSONNE</pattern>
 <template>Oké, quel nom dois je mémoriser pour cette personne.
