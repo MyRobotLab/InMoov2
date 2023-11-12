@@ -1027,6 +1027,22 @@
 <category><pattern>DIS MOI UNE AUTRE HISTOIRE</pattern>
 <template><srai>RACONTE UNE AUTRE HISTOIRE</srai></template>
 </category>
+<category><pattern>DÉMARRE LES MOTEURS</pattern>
+<template><srai>MOTEUR ACTIVÉ</srai></template>
+</category>
+<category><pattern>MOTEUR ACTIVÉ</pattern>
+  <template>
+    <oob><mrl><service>python</service><method>exec</method><param>motorDual()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>MOTOR_READY</pattern>
+  <template>Mes moteurs sont prêt et activé.
+  </template>
+</category>
+<category><pattern>MOTOR_NOT_READY</pattern>
+  <template>Mes moteurs ne sont pas démarré.
+  </template>
+</category>
 <category><pattern>AVANCE</pattern>
   <template><img src="../arrow_up_green.png"/>
     <oob><mrl><service>python</service><method>exec</method><param>motorsForward()</param></mrl></oob>
