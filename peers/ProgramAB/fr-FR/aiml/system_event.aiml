@@ -321,6 +321,14 @@
     <template>Arrêt du capteur ultrasonique droit</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STARTED platform</pattern>
+    <template>Démarrage de la plateform mobile</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED platform</pattern>
+    <template>Arrêt de la plateform mobile</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT SHUTDOWN</pattern>
     <template>J'arrête my robot lab, veuillez patienter 10 secondes.</template>
   </category>
