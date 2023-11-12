@@ -555,6 +555,13 @@
     <template>
       <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
   </category>
+  <category><pattern>REPETITIONDETECTED</pattern>
+    <template><random>
+                <li>Tu l'as déjà dit.</li>
+                <li>Tu te répètes.</li>
+              </random>
+    </template>
+  </category>
   
   <!-- fix for null topic -->
 
