@@ -121,16 +121,41 @@
     </category></topic>
 
     <category><pattern>NOTFACERECOGNIZED</pattern>
-      <template>Je n'ai pas réussi à mémoriser ton visage car face recognizer est OFF dans les configurations de ma vision. Il faut cliquer sur facerecognizer ON dans la configuration de ma vision.
-        <random>
-          <li>Je recommence, c'est important.</li>
-          <li>Je répète.</li>
-        </random>
+      <template>Je n'ai pas réussi à mémoriser ton visage car face recognizer est OFF dans les configurations de ma vision. Je peux l'activer si tu le souhaites.
         <think>
-          <set name="topic">firstinit</set>
+          <set name="topic">reStartVision</set>
+          <set name="questionfirstinit">Veut tu que je recommence ?</set>
         </think>
         <get name="questionfirstinit"/></template>
-      </category>
+    </category>
+
+    <topic name="RESTARTVISION">
+    <category><pattern># OUI #</pattern><that># VEUT TU QUE JE RECOMMENCE #</that>
+    <template>Ok, mets toi bien face à ma camera, et s'il te plait, enlèves tes lunettes si tu en portes.<think>
+              <set name="topic">default</set>
+            </think><oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>i01.setConfigValue('openCVFaceRecognizerActivated', True), memorisePerson(u"<get name="name"/>")</param>
+              </mrl>
+            </oob> 
+            <think>
+              <set name="topic">default</set>
+            </think>
+        </template>
+    </category></topic>
+
+    <topic name="RESTARTVISION">
+    <category><pattern># NON #</pattern><that># VEUT TU QUE JE RECOMMENCE #</that>
+    <template>Ok, notre premier contact est effectué.
+            <think>
+              <set name="topic">default</set>
+            </think>
+          <srai>SYSTEM_SAY_HELLO</srai>
+        </template>
+    </category></topic>
+  
 
     <category><pattern>GETREADY</pattern>
       <template>Je prépare ma caméra. Attention.
@@ -343,9 +368,15 @@
     </template>
   </category>
       <category>
-    <pattern>RÉVEILLE TOI</pattern>
+    <pattern>WAKE UP</pattern>
     <template>
       <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob>
+    </template>
+  </category>
+  <category>
+    <pattern>REVEILLE TOI</pattern>
+    <template>
+      <srai>WAKE UP</srai>
     </template>
   </category>
   <category>
@@ -520,12 +551,55 @@
     <template>Je redémarre la session.
         <oob><mrl><service>i01.chatBot</service><method>reload</method></mrl></oob></template>
   </category>
+  <category><pattern>NORESP</pattern>
+    <template>
+      <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+  </category>
   
   <!-- fix for null topic -->
 
   <topic name="">
   <category><pattern>#</pattern>
   <template><think><set name="topic">default</set></think><srai><star /></srai></template>
+  </category>
+  </topic>
+
+  <category><pattern>J AI PÉTÉ COMMUNICATION</pattern>
+  <template><srai>GPT COMMUNICATION</srai></template>
+  </category>
+
+  <category><pattern>GPT COMMUNICATION</pattern>
+  <template>
+    <condition name="gpt3">
+      <li value="enabled">
+        <think><set name="topic">gptfull</set>
+               <set name="gptStop"></set></think>
+          Okay, je suis prêt. Si tu souhaites arrêter la communication directe avec g.p.t, dis stop gpt.
+      </li>
+      <li>Le service GPT n'est pas démarré.</li>
+    </condition>
+  </template>
+  </category>
+
+  <topic name="GPTFULL">
+  <category><pattern>#</pattern>
+  <template><think><set name="gptStop"><star/></set></think>
+            <condition name="gptStop">
+            <li value="stop gpt">D'accord, retour sur program AB.
+                <think><set name="topic">default</set>
+                       <set name="gptStop"></set>
+                </think></li>
+            <li value="stoppe j ai pété">D'accord, retour sur program AB.
+                <think><set name="topic">default</set>
+                       <set name="gptStop"></set>
+                </think></li>
+            <li value="stop j ai pété">D'accord, retour sur program AB.
+                <think><set name="topic">default</set>
+                       <set name="gptStop"></set>
+                </think></li>    
+            <li><img src="../Gpt3.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_gpt3.onText("<star/>")</param></mrl></oob></li>
+            </condition>
+  </template>
   </category>
   </topic>
 </aiml>

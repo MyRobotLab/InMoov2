@@ -10,7 +10,6 @@
 #i01_opencv = Runtime.create("i01.opencv", "OpenCV")
 def initOpencv():
   i01_opencv.getConfig()
-  if i01.getConfig().openCVFlipPicture==1:i01_opencv.addFilter("Flip")
   python.subscribe("i01.opencv", "publishRecognizedFace")
 
 def initTracking():
@@ -20,7 +19,7 @@ def initTracking():
     i01_eyeTracking.getConfig()
   trackingTimer = runtime.start("trackingTimer","Clock")
   trackingTimer.addListener("pulse", python.name, "trackingTimerRoutine")
-  trackingTimer.setInterval(trackingTimeout)  
+  trackingTimer.setInterval(i01.getConfig().trackingTimeoutMs)  
   
 
 def onRecognizedFace(name):

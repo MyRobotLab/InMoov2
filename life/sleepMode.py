@@ -19,12 +19,14 @@ if runtime.isStarted('i01.headTracking') or runtime.isStarted('i01.eyeTracking')
    trackingTimer.setInterval(i01.getConfig().trackingTimeoutMs)
 
 def sleepModeWakeUp():
-  #if runtime.isStarted('i01.fsm'):
-    #i01_fsm.fire("wake")
+  if runtime.isStarted('i01.fsm'):
+    i01_fsm.fire("wake")
+  if runtime.isStarted('i01.chatBot'):
+      i01_chatBot.setPredicate('botState', 'awake')  
   if runtime.isStarted('i01.mouth'):
     initMouth()
   if runtime.isStarted('i01.ear'):
-    initEar()
+    #initEar()
     i01_ear.setAwake(True)
     WaitXsecondBeforeRelaunchTracking=-10
     i01_ear.startRecording()
@@ -32,12 +34,13 @@ def sleepModeWakeUp():
     initPir()
     if i01.getConfig().pirWakeUp==1:
       sleepTimer.startClock()
-      i01_pir.disable()
+      #i01_ear.setWakeWordTimeout(i01_ear.getConfig().wakeWordIdleTimeoutSeconds)
+      i01_pir.enable()
     else:  
       i01_pir.disable()
   #if RobotIsStarted==1:
   #if runtime.isStarted('i01.fsm'):
-    #if i01_fsm.getCurrent()=="awake" or "systemCheck":
+    #if i01_fsm.getCurrent()=="awake":
     
   if runtime.isStarted('i01.imageDisplay'):
     i01_imageDisplay.closeAll()
@@ -58,10 +61,15 @@ def sleepModeWakeUp():
   if runtime.isStarted('i01.head'):
     i01_head_neck.setSpeed(50)
     i01_head_neck.moveToBlocking(i01_head_neck.getRest())
-  if i01.getConfig().customSounds==1:
-    i01_audioPlayer=runtime.start('i01_audioPlayer','AudioFile')
-    i01_audioPlayer.playFile('resource/InMoov2/system/sounds/Notifications/'+random.choice(os.listdir('resource/InMoov2/system/sounds/Notifications')),False)
+  if i01.getConfig().pirPlaySounds==1:
+    if runtime.isStarted("i01.audioPlayer"):
+      i01_audioPlayer.playFile('resource/InMoov2/system/sounds/Notifications/start.wav', False)
+  if i01.getConfig().customSound==1:
+    if runtime.isStarted("i01.audioPlayer"):
+      i01_audioPlayer.playFile('resource/InMoov2/system/sounds/Notifications/'+random.choice(os.listdir('resource/InMoov2/system/sounds/Notifications')),False)
   elif runtime.isStarted('i01.opencv'):
+    if i01.getConfig().pirEnableTracking==1:
+      trackHumans()
     if i01.getConfig().openCVFaceRecognizerActivated==1:
       facerecognizer()
     else:
@@ -76,61 +84,66 @@ def sleepModeSleep():
   if runtime.isStarted('i01.ear'):
     initEar()
     i01_ear.setAwake(False)
-    print("sleeping")
-    if runtime.isStarted('i01.headTracking'):
-      initTracking()
-      stopTrackHumans()
-    if runtime.isStarted('i01.opencv'):
-      i01_opencv.stopCapture()  
-    if runtime.isStarted('i01.imageDisplay'):
-      i01_imageDisplay.closeAll()
-    #i01_fsm.fire("sleep")
-    i01.halfSpeed()
-    rest()
-    i01.waitTargetPos()
-    #display sleeping robot on screen
-    if runtime.isStarted('i01.imageDisplay'):
-      i01_imageDisplay.display('resource/InMoov2/system/pictures/sleeping_2_1024-600.jpg')
-    #head down
-    if runtime.isStarted('i01.eyeLids'):
-      i01_head_eyelids.autoBlink(False)
-      i01_head_eyelidLeft.moveTo(180)
-      i01_head_eyelidRight.moveTo(180)
-    if runtime.isStarted('i01.head'):
-      i01_head_neck.setSpeed(40)
-      i01_head_neck.moveTo(10)
-    i01.waitTargetPos()
-    i01.disable()
-    #switchOffAllNervo()
-    if runtime.isStarted('i01.neoPixel'):i01_neoPixel.stopAnimation()
-    sleep(2)
-    if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Color Wipe", 10, 12, 12, 20)
-    if runtime.isStarted('i01.audioPlayer'):
-      i01_audioPlayer.stopPlaylist()
-      i01_audioPlayer.stop()
-    
-    #restart pir poling
-    if runtime.isStarted('i01.pir'):
-      if i01.getConfig().pirWakeUp==1:
-        initPir()
-        i01_pir.enable()
-      else:
-        i01_pir.disable()
+    #print("sleeping")
+  if runtime.isStarted('i01.headTracking'):
+    initTracking()
+    stopTrackHumans()
+  if runtime.isStarted('i01.opencv'):
+    i01_opencv.stopCapture()  
+  if runtime.isStarted('i01.imageDisplay'):
+    i01_imageDisplay.closeAll()
+  if runtime.isStarted('i01.fsm'):  
+    i01_fsm.fire("sleep")
+  if runtime.isStarted('i01.chatBot'):
+    i01_chatBot.setPredicate('botState', 'sleeping')
+  i01.halfSpeed()
+  rest()
+  i01.waitTargetPos()
+  #display sleeping robot on screen
+  if runtime.isStarted('i01.imageDisplay'):
+    i01_imageDisplay.display('resource/InMoov2/system/pictures/sleeping_2_1024-600.jpg')
+  #head down
+  if runtime.isStarted('i01.eyeLids'):
+    i01_head_eyelids.autoBlink(False)
+    i01_head_eyelidLeft.moveTo(180)
+    i01_head_eyelidRight.moveTo(180)
+  if runtime.isStarted('i01.head'):
+    i01_head_neck.setSpeed(40)
+    i01_head_neck.moveTo(10)
+  i01.waitTargetPos()
+  i01.disable()
+  #switchOffAllNervo()
+  if runtime.isStarted('i01.neoPixel'):i01_neoPixel.stopAnimation()
+  sleep(2)
+  if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Larson Scanner", 17, 126, 57, 1)
+  if runtime.isStarted('i01.audioPlayer'):
+    i01_audioPlayer.stopPlaylist()
+    i01_audioPlayer.stop()
+  
+  #restart pir poling
+  if runtime.isStarted('i01.pir'):
+    if i01.getConfig().pirWakeUp==1:
+      initPir()
+      i01_pir.enable()
+    else:
+      i01_pir.disable()
     
 def wakeUpModeInsult():
   if runtime.isStarted('i01.ear'):
     WaitXsecondBeforeRelaunchTracking=-10
-    i01_ear.setWakeWord('wake up')
+    i01_ear.setWakeWord(i01_ear.getConfig().wakeWord)
     i01_ear.setAwake(True)
     i01_ear.startRecording()
     if runtime.isStarted('i01.pir'):
       if i01.getConfig().pirWakeUp==1:
         initPir()
         sleepTimer.startClock()
+        #i01_ear.setWakeWordTimeout(i01_ear.getConfig().wakeWordIdleTimeoutSeconds)
       else:
         i01_pir.disable()
     if runtime.isStarted('i01.chatBot'):
       i01_chatBot.getResponse("FORGIVE ME")
+      i01_chatBot.setPredicate('botState', 'awake')
     #if RobotIsStarted==1:  
       if runtime.isStarted('i01.imageDisplay'):
         i01_imageDisplay.closeAll()
@@ -148,7 +161,8 @@ def wakeUpModeInsult():
     else:
       relax()
     #RobotIsSleeping=False
-    ##i01_fsm.fire("wake")
+    if runtime.isStarted('i01.fsm'):
+      i01_fsm.fire("wake")
     if runtime.isStarted('i01.neoPixel'):i01_neoPixel.stopAnimation()
     if runtime.isStarted('i01'):
       relax()
@@ -185,6 +199,10 @@ def sleepModeInsult():
     i01.disable()
     #switchOffAllNervo()
     sleep(2)
+    if runtime.isStarted('i01.fsm'):
+      i01_fsm.fire("sleep")
+    if runtime.isStarted('i01.chatBot'):
+      i01_chatBot.setPredicate('botState', 'sleeping')  
     #restart pir poling
     if runtime.isStarted('i01.pir'):
       if i01.getConfig().pirWakeUp==1:
@@ -205,7 +223,8 @@ def welcomeMessage():
     if runtime.isStarted('i01'):
       runtime.info("i01 is ready")
   #RobotIsStarted=True
-  ##i01_fsm.fire("systemCheck")
+    if runtime.isStarted('i01.fsm'):
+      i01_fsm.fire("wake")
 
 global WaitXsecondBeforeRelaunchTracking
 WaitXsecondBeforeRelaunchTracking=-10
@@ -216,30 +235,35 @@ def humanDetected():
   if runtime.isStarted('i01.pir'):
     if i01.getConfig().pirWakeUp==1:
       initPir()
-      sleepTimer.restartClock()  
-    if (not runtime.isStarted('i01_headTracking') and WaitXsecondBeforeRelaunchTracking>=5):
-      WaitXsecondBeforeRelaunchTracking=0
-      if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Larson Scanner", 255, 0, 255, 25)
-      if runtime.isStarted('i01.headTracking'):
-        initTracking()
-        if i01.getConfig().pirEnableTracking==1:
-          trackHumans()
-          trackingTimer.restartClock()
-      if i01.getConfig().openCVFaceRecognizerActivated==1:facerecognizer()
+      sleepTimer.restartClock()
+      #i01_ear.setWakeWordTimeout(i01_ear.getConfig().wakeWordIdleTimeoutSeconds)
+    if runtime.isStarted('i01.fsm'):  
+      if not i01_fsm.getCurrent()=="isTracking" and WaitXsecondBeforeRelaunchTracking>=5:
+        WaitXsecondBeforeRelaunchTracking=0
+        if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Larson Scanner", 255, 0, 255, 25)
+        if runtime.isStarted('i01.headTracking'):
+          initTracking()
+          if i01.getConfig().pirEnableTracking==1:
+            trackHumans()
+            trackingTimer.restartClock()
+        #if i01.getConfig().openCVFaceRecognizerActivated==1:facerecognizer()
+
     
 def sleepTimerRoutine(timedata):
   #if RobotIsSleeping==0:
-  #if not i01_fsm.getCurrent()=="sleeping":
-  if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Larson Scanner", 17, 126, 57, 1)
-  if runtime.isStarted("i01.pir"):
-    i01_pir.disable()
-    #pirControlerArduino.disablePin(pirPin)
-  #sleep function to call
-  sleepTimer.stopClock()
-  if runtime.isStarted('i01.headTracking'):
-    initTracking()   
-    trackingTimer.stopClock()
-  sleepModeSleep()
+  if runtime.isStarted('i01.fsm'):
+    if not i01_fsm.getCurrent()=="sleeping":
+      if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Color Wipe", 17,  126, 57, 20)
+      if runtime.isStarted("i01.pir"):
+        i01_pir.disable()
+        #pirControlerArduino.disablePin(pirPin)
+      #sleep function to call
+      sleepTimer.stopClock()
+      #i01_ear.setAwake(True)
+      if runtime.isStarted('i01.headTracking'):
+        initTracking()   
+        trackingTimer.stopClock()   
+      sleepModeSleep()
   
 def trackingTimerRoutine(timedata):
   global WaitXsecondBeforeRelaunchTracking

@@ -42,11 +42,12 @@ execfile('resource/InMoov2/services/9_neoPixel.py')
 execfile('resource/InMoov2/services/A_Chatbot.py')
 execfile('resource/InMoov2/services/C_Pir.py')
 execfile('resource/InMoov2/services/D_OpenCv.py')
+execfile('resource/InMoov2/services/E_OpenNi.py')
 #E_Oak.py ## WOULD REPLACE KINECT
 #G_Translator.py ## NEED FIXING FOR NIXIE
 execfile('resource/InMoov2/services/H_OpenWeatherMap.py')
 #J_SensorFinger.py ## NEED FIXING FOR NIXIE
-#execfile('resource/InMoov2/services/K_FiniteStateMachine.py')
+execfile('resource/InMoov2/services/K_FiniteStateMachine.py')
 
 ################################ 
 # INIT.3- inmoov loading

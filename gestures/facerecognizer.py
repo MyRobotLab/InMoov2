@@ -1,6 +1,6 @@
 def facerecognizer(): 
   #you need to train at least 2 FACES !
-  if faceRecognizerActivated==1:
+  if i01.getConfig().openCVFaceRecognizerActivated==1:
     if runtime.isStarted('i01.opencv'):
       i01_opencv.capture()
       i01_opencv.addFilter("FaceRecognizer")
