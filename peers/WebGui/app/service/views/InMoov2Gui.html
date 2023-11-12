@@ -718,6 +718,23 @@
                         <button ng-show="!service.config.neoPixelDownloadBlue" class="btn btn-default" title="Sets neopixel blue when downloading new version" ng-click="setConfigValue('neoPixelDownloadBlue', true)">off</button>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+                        <img src="../img/InMoov2/markerBlue_right.png"
+                            onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
+                            onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
+                            ng-click="filterPeers('motorRight')" /><img src="../img/InMoov2/markerBlue_left.png"
+                            onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
+                            onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
+                            ng-click="filterPeers(null)" />
+                        <img src="../MobilePlatform.png" />
+                        <label>Mobile Platform</label>
+                    </td>
+                    <td>
+                    <toggle width="38" height="35" ng-model="isPlatformStarted" ng-change="!isPlatformStarted?execScript('system/startScripts/i01_platform_stop.py'):execScript('system/startScripts/i01_platform_start.py')" on="" off=""/></toggle>
+                    </td>
+                </tr>
             </table>
 
             <!------------------------ extra end ------------------------------>
