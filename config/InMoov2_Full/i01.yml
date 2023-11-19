@@ -22,7 +22,7 @@ neoPixelBootGreen: true
 neoPixelDownloadBlue: true
 neoPixelErrorRed: true
 neoPixelFlashWhenSpeaking: true
-openCVFaceRecognizerActivated: tru
+openCVFaceRecognizerActivated: true
 peers:
   audioPlayer:
     autoStart: true
