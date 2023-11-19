@@ -50,7 +50,7 @@ def sleepModeWakeUp():
   if runtime.isStarted('i01.neoPixel'):
     i01_neoPixel.setAnimation("Larson Scanner", 255, 255, 0, 25)
     sleep(2)
-    i01_neoPixel.stopAnimation()
+    i01_neoPixel.clear()
   #optional switchon nervoboard
   #switchOnAllNervo()
   if runtime.isStarted('i01.eyeLids'):
@@ -73,7 +73,7 @@ def sleepModeWakeUp():
     if i01.getConfig().openCVFaceRecognizerActivated==1:
       facerecognizer()
     else:
-      welcomeMessage()     
+      welcomeMessage()
   else:
      welcomeMessage()
  
@@ -113,7 +113,7 @@ def sleepModeSleep():
   i01.waitTargetPos()
   i01.disable()
   #switchOffAllNervo()
-  if runtime.isStarted('i01.neoPixel'):i01_neoPixel.stopAnimation()
+  if runtime.isStarted('i01.neoPixel'):i01_neoPixel.clear()
   sleep(2)
   if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Larson Scanner", 17, 126, 57, 1)
   if runtime.isStarted('i01.audioPlayer'):
@@ -163,7 +163,7 @@ def wakeUpModeInsult():
     #RobotIsSleeping=False
     if runtime.isStarted('i01.fsm'):
       i01_fsm.fire("wake")
-    if runtime.isStarted('i01.neoPixel'):i01_neoPixel.stopAnimation()
+    if runtime.isStarted('i01.neoPixel'):i01_neoPixel.clear()
     if runtime.isStarted('i01'):
       relax()
       fullspeed()
@@ -274,4 +274,4 @@ def trackingTimerRoutine(timedata):
       initTracking()
       stopTrackHumans()
       trackingTimer.stopClock()
-    if runtime.isStarted('i01.neoPixel'):i01_neoPixel.stopAnimation()
+    if runtime.isStarted('i01.neoPixel'):i01_neoPixel.clear()
