@@ -27,7 +27,7 @@
 </category></topic>
 
 <category><pattern>SPEAK_BLOCK_INSULT</pattern>
-<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeInsult()</param></mrl></oob></template>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeInsult(), i01.setConfigValue('unlockInsult', 'FORGIVE ME')</param></mrl></oob></template>
 </category>
 <category><pattern>FORGIVE ME</pattern>
 <template><random>
