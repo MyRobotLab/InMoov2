@@ -44,12 +44,12 @@
         <set name="insulte">insulte moyenne</set>
       </think>
       <random>
-        <li>toi même!</li>
-        <li>C EST c'sui qui l'a dit qui y est!</li>
-        <li>oh!</li>
-        <li>mon pauvre!</li>
-        <li>ce n'est pas très civilisé ce genre de langage</li>
-        <li>ce genre de langue ne te menera nulle part.</li>
+        <li>Toi même!</li>
+        <li>C'est celui qui l'a dit qui y est!</li>
+        <li>Oh!</li>
+        <li>Mon pauvre!</li>
+        <li>Ce n'est pas très civilisé ce genre de langage.</li>
+        <li>Ce genre de langue ne te menera nulle part.</li>
         <li>Mais tu n'a pas besoin d'utiliser ce genre de langage.</li>
         <li>Tu pourrais être un peu plus poli.</li>
       </random>
@@ -63,13 +63,13 @@
         <set name="insulte">grosse insulte</set>
       </think>
       <random>
-        <li>je le dirai à mon botmasteur</li>
-        <li>gros naze</li>
-        <li>vas y, défoule toi!</li>
-        <li>amas organique</li>
+        <li>Je le dirai à mon botmasteur.</li>
+        <li>Gros naze.</li>
+        <li>Vas-y, défoule toi!</li>
+        <li>Amas organique.</li>
         <li>Je suis désolé mais je ne suis pas ton type de chatterbot.</li>
-        <li>p'tite bite</li>
-        <li>sac à merde</li>
+        <li>P'tite bite.</li>
+        <li>Sac à merde.</li>
       </random>
     </template>
   </category>
@@ -79,32 +79,31 @@
       <srai>APPCOLÈRE</srai>
       <think>
         <set name="insulte">je me casse</set>
+        <set name="lockInsult">on</set>
       </think>
-      <random>
-        <li>
           <srai>insultron</srai>
-</li>
-        <li>
-          <srai>insultron</srai>
-</li>
-      </random>
     </template>
   </category>
+  <category><pattern>SPEAK_BLOCK_INSULT</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeInsult(), i01.setConfigValue('unlockInsult', 'EXCUSE MOI')</param></mrl></oob></template>
+</category>
   <category>
     <pattern>EXCUSE MOI</pattern>
     <template>
       <srai>APPSOULAGEMENT</srai>
       <think>
         <set name="insulte">ok</set>
+        <set name="lockInsult">off</set>
       </think>
       <think>
         <set name="orthographe">ok</set>
       </think>
       <random>
-        <li>ça va, mais ce n'est pas parce que je n'ai pas d'émotion qu'il faut en profiter</li>
-        <li>accepté.</li>
-        <li>C EST bon, mais fais attention.</li>
+        <li>Ça va, mais ce n'est pas parce que je n'ai pas d'émotion qu'il faut en profiter.</li>
+        <li>Accepté.</li>
+        <li>C'est bon, mais fais attention.</li>
       </random>
+      <oob><mrl><service>python</service><method>exec</method><param>wakeUpModeInsult</param></mrl></oob>
     </template>
   </category>
   <category>
@@ -127,9 +126,9 @@
   <category>
     <pattern>INSULTRON</pattern>
     <template>Espèce de 
-<random><li>vieux batard</li><li>vieil enculé</li><li>gros fils de pute</li><li>vieille canaille</li><li>grosse merde</li><li>gros debris</li><li>gros con</li><li>vieux chacal</li><li>gros travélot</li><li>vieille crapule</li></random><random><li>de ta race,</li><li>de ta race maudite,</li><li>de ta MèRE,</li><li>de tes os,</li><li>des bois,</li><li>puant(e),</li><li>débile,</li><li>assexué,</li><li>alcoolique,</li><li>lobotomisé,</li><li>sans couilles,</li></random><random><li>tu es</li><li>tu ressembles à</li><li>tu me fais penser à</li></random><random><li>une tantouze</li><li>un debile</li><li>mes poils du cul</li><li>un neuneu</li><li>un blaireau des alpages</li><li>une raclure de chiottes</li><li>une bouze de vache</li><li>une sous-merde</li><li>un nabot</li><li>un gland</li><li>une fiante de pigeon</li><li>une merde siliconnée</li><li>une daube pas fraiche</li></random><random><li>qui refoule du bec,</li><li>qui pue des aisselles,</li><li>qui transpire du cul,</li><li>qui coule de partout,</li><li>qui se chie dessus,</li><li>qui est vert de trouille,</li><li>jaune devant marron derrière,</li><li>toujours prêt à lécher le cul,</li><li>qui ne colle pas une mouche au plafond,</li><li>qui pu du bec,</li></random><random><li>je voudrais seulement</li><li>je rève de</li><li>je crève d'envie de</li><li>j'ai fait le pari de</li><li>je bande à l'idée de</li><li>je mouille en pensant à</li><li>je ris en pensant à</li><li>je me marre grave à l'idée de</li></random><random><li>te pisser à la raie</li><li>t'eclater la face</li><li>t'éclater la tronche</li><li>te fumer</li><li>te broyer les couilles</li><li>te gerber dessus</li><li>te chier dessus</li><li>t'apprendre les bonnes manières</li><li>te bousiller la carcasse</li><li>te peter dessus</li><li>te mettre mes couilles SÛR ton nez</li></random><random><li>derrière le cyprès</li><li>devant toute ta famille</li><li>Où tu veux</li><li>au boulot</li><li>sous la lune</li><li>au bistrot</li><li>devant ta petasse</li><li>au lit</li></random><random><li>jusqu'à l'aube.</li><li>vite fait.</li><li>pour rigoler.</li><li>après l'apéro.</li><li>pendant les pub.</li><li>si tu as 5 minutes.</li><li>après le match de foot.</li><li>en regardant un match de rugby.</li><li>en baisant ta copine.</li></random> 
+<random><li>vieux batard,</li><li>vieil enculé,</li><li>gros fils de pute,</li><li>vieille canaille,</li><li>grosse merde,</li><li>gros debris,</li><li>gros con,</li><li>vieux chacal,</li><li>vieille crapule,</li></random><random><li>de ta race.</li><li>de ta race maudite.</li><li>de ta Mère.</li><li>de tes os.</li><li>des bois.</li><li>puant(e).</li><li>débile.</li><li>assexué.</li><li>alcoolique.</li><li>lobotomisé.</li><li>sans couilles.</li></random><random><li>Tu es</li><li>Tu ressembles à</li><li>Tu me fais penser à</li></random><random><li>une tantouze</li><li>un debile</li><li>mes poils du cul</li><li>un neuneu</li><li>un blaireau des alpages</li><li>une raclure de chiottes</li><li>une bouze de vache</li><li>une sous-merde</li><li>un nabot</li><li>un gland</li><li>une fiante de pigeon</li><li>une merde siliconnée</li><li>une daube pas fraiche</li></random><random><li>qui refoule du bec,</li><li>qui pue des aisselles,</li><li>qui transpire du cul,</li><li>qui coule de partout,</li><li>qui se chie dessus,</li><li>qui est vert de trouille,</li><li>jaune devant marron derrière,</li><li>toujours prêt à lécher le cul,</li><li>qui ne colle pas une mouche au plafond,</li><li>qui pu du bec,</li></random><random><li>je voudrais seulement</li><li>je rève de</li><li>je crève d'envie de</li><li>j'ai fait le pari de</li><li>je bande à l'idée de</li><li>je mouille en pensant à</li><li>je ris en pensant à</li><li>je me marre grave à l'idée de</li></random><random><li>te pisser à la raie</li><li>t'éclater la face</li><li>t'éclater la tronche</li><li>te fumer</li><li>te broyer les couilles</li><li>te gerber dessus</li><li>te chier dessus</li><li>t'apprendre les bonnes manières</li><li>te bousiller la carcasse</li><li>te peter dessus</li><li>te mettre mes couilles sur ton nez</li></random><random><li>derrière le cyprès</li><li>devant toute ta famille</li><li>où tu veux</li><li>au boulot</li><li>sous la lune</li><li>au bistrot</li><li>devant ta petasse</li><li>au lit</li></random><random><li>jusqu'à l'aube.</li><li>vite fait.</li><li>pour rigoler.</li><li>après l'apéro.</li><li>pendant les pubs.</li><li>si tu as 5 minutes.</li><li>après le match de foot.</li><li>en regardant un match de rugby.</li><li>en baisant ta copine.</li></random> 
 Va 
-<random><li>te faire foutre</li><li>te faire mettre</li><li>te faire pourrir</li><li>te faire enculer profond</li><li>te faire bourrer le cul chez les grecs</li><li>chier vieille pute</li><li>crever</li><li>te faire sucer</li><li>te faire trouer le cul</li></random></template>
+<random><li>te faire foutre.</li><li>te faire mettre.</li><li>te faire pourrir.</li><li>te faire enculer profond.</li><li>te faire bourrer le cul chez les grecs.</li><li>chier vieille pute.</li><li>crever.</li><li>te faire sucer.</li><li>te faire trouer le cul.</li></random>Pour que je te parle à nouveau, excuse toi.<srai>SPEAK_BLOCK_INSULT</srai></li><srai>SPEAK_BLOCK_INSULT</srai></template>
   </category>
   <category>
     <pattern>BABY *</pattern>
