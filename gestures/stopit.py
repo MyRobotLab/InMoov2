@@ -1,11 +1,10 @@
 def stopit():
+  if runtime.isStarted("i01.audioPlayer"):
+      i01_audioPlayer.stopPlaylist()
+      i01_audioPlayer.stop()
+  i01.stop()    
   lookinmiddle()
-  sleep(1)
+  sleep(0.2)
   relax()
-  i01_mouth.speak("yes")
-  #i01_mouth.speak(u"да")
-  if (data == "pause"):# пауза
-    i01_mouth.speak("yes")
-	#i01_mouth.speak(u"да")
   i01.finishedGesture()
 
