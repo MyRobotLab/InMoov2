@@ -67,7 +67,7 @@ def playsong():
   sleep(5)
   surrender()
   sleep(6)
-  i01.giving()
+  giving()
   sleep(6)
   i01.moveHead(60,90)
   fingerright()
