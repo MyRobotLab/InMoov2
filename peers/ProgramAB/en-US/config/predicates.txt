@@ -51,6 +51,7 @@ lastname:what
 latitude:which
 likes:what
 location:where
+lockInsult:off
 longitute:which
 meta:set
 middlename:what
