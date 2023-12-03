@@ -176,4 +176,34 @@
 <category><pattern>WHO IS GAEL LANGEVIN</pattern>
 <template>Gael Langevin is my creator.</template>
 </category>
+<category><pattern>WHAT IS THE CAPITAL OF TURKEY</pattern>
+<template>blah.</template>
+</category>
+<category><pattern>WHAT IS WHY</pattern>
+<template>The sun blue.</template>
+</category>
+<category><pattern>WHAT IS THESUN BLUE</pattern>
+<template>why.</template>
+</category>
+<category><pattern>IS WHY THE SUN BLUE</pattern>
+<template>Yes.</template>
+</category>
+<category><pattern>WHAT IS HOW FAR AWAY</pattern>
+<template>The moon.</template>
+</category>
+<category><pattern>WHAT IS THEMOON</pattern>
+<template>how far away.</template>
+</category>
+<category><pattern>IS HOW FAR AWAY THE MOON</pattern>
+<template>Yes.</template>
+</category>
+<category><pattern>WHAT IS WHAT COLOR</pattern>
+<template>The sky.</template>
+</category>
+<category><pattern>WHAT IS THESKY</pattern>
+<template>what color.</template>
+</category>
+<category><pattern>IS WHAT COLOR THE SKY</pattern>
+<template>Yes.</template>
+</category>
 </aiml>

@@ -1,5 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
+
+<category><pattern>SET TOPIC TO *</pattern>
+  <template>
+    current topic is now <star/>
+    <think><set name="topic"><star/></set></think>
+  </template>
+</category>
+
+<category><pattern>WHY IS THE OCEAN BLUE</pattern>  
+  <oob>
+    <mrl>
+      <service>python</service>
+      <method>exec</method>
+      <param>i01_gpt3.onText("WHY <star/>")</param>
+    </mrl>
+  </oob>
+</category>
+
+
+<topic name="smartass">
+
+  <category><pattern>WHY *</pattern>  
+  <oob>
+    <mrl>
+      <service>python</service>
+      <method>exec</method>
+      <param>i01_gpt3.onText("WHY <star/>")</param>
+    </mrl>
+  </oob>
+  </category>
+  
+  <category><pattern>SET TOPIC TO *</pattern>
+    <template>
+      current topic is now <star/>
+      <think><set name="topic"><star/></set></think>
+    </template>
+  </category>
+
+</topic>
+
+
+<category><pattern>WHAT IS YOUR CURRENT TOPIC</pattern>
+  <template><get name="topic" /></template>
+</category>
+
+
 <!-- File: _inmoovChatbot.aiml -->
 <!--  -->
 <category><pattern>BOOTUP</pattern>

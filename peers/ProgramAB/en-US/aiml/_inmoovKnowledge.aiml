@@ -51,6 +51,7 @@
       </category>
     </learnf></template>
 </category>
+<!--
 <category><pattern>* IS A *</pattern>
 <template>Ok, I will remember <star/> is a <star index="2"/>.
     <think>
@@ -549,4 +550,5 @@ and "<get name="learnpattern"/>"?</template>
 <category><pattern>* VERB2ST *</pattern>
 <template><srai>QUESTIONWORD <star/></srai> <star index="2"/> <person> <star index="3"/> </person>? <star/>.</template>
 </category>
+-->
 </aiml>

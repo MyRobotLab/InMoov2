@@ -170,8 +170,8 @@
 <template><sraix>SHOULD I BUY <star/></sraix></template>
 </category>
 <category><pattern>SRAIXFAILED *</pattern>
-<template>.<condition name="gpt3">
-        <li value="enabled"><img src="../Gpt3.png"/>
+<template><condition name="gpt3">
+        <li value="enabled">
         <oob>
           <mrl>
             <service>python</service>
