@@ -46,13 +46,15 @@ def smileClosed():
   cheeksU()
   upperLipD()
   lowerEyelidsU()
-  i01_head_jaw.rest()
+  if runtime.isStarted('i01.head'):
+    i01_head_jaw.rest()
 
 def smileOpen():
   cheeksU()
   lowerEyelidsU()
   upperLipU()
-  i01_head_jaw.moveTo(90)
+  if runtime.isStarted('i01.head'):
+    i01_head_jaw.moveTo(90)
 
 def sleeping():
   upperEyelidsClose()  
@@ -61,7 +63,8 @@ def surprise():
   browsU()
   upperLipU()
   forHeadU()
-  i01_head_jaw.moveTo(70)
+  if runtime.isStarted('i01.head'):
+    i01_head_jaw.moveTo(70)
 
 def suspicious():
   upperLipD()
