@@ -1036,11 +1036,11 @@
   </template>
 </category>
 <category><pattern>MOTOR_READY</pattern>
-  <template>Mes moteurs sont prêt et activé.
+  <template>Mes moteurs sont prêt et activés.
   </template>
 </category>
 <category><pattern>MOTOR_NOT_READY</pattern>
-  <template>Mes moteurs ne sont pas démarré.
+  <template>Mes moteurs ne sont pas démarrés.
   </template>
 </category>
 <category><pattern>AVANCE</pattern>
