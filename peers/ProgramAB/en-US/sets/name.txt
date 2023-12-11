@@ -320,6 +320,7 @@ Helen
 Brianne
 Kelsie
 Clarissa
+Loïne
 Lori
 Marina
 Adrianna
@@ -389,6 +390,7 @@ Keri
 Leanna
 Marlene
 Yolanda
+Yorhlie
 Beth
 Maribel
 Blanca
@@ -1877,6 +1879,7 @@ Winter
 Xochitl
 Yecenia
 Zaira
+Zaü
 Angelea
 Aurelia
 Denae
@@ -6586,6 +6589,7 @@ Evamarie
 Finesse
 Fraidy
 Frank
+Gael
 Gaelle
 Gennie
 Giannina
@@ -7809,6 +7813,7 @@ Shunta
 Sianna
 Sierria
 Soila
+Soizick
 Somone
 Sonata
 Starasia
