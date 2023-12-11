@@ -55,8 +55,11 @@ if i01.getConfig().forceMicroOnIfSleeping==1:
 
 # define the method that will stop the robot
 def restartListening():
+  if runtime.isStarted('i01.ear'):
     if not i01_ear.isListening():
       i01_ear.startListening()
       print("restarting listening")
     else:
-        pass
+      pass
+  else:
+      pass
