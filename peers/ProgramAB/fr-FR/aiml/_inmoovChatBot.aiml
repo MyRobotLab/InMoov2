@@ -553,7 +553,10 @@
   </category>
   <category><pattern>NORESP</pattern>
     <template>
-      <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+      <condition>
+            <li name="lockInsult" value="on"><oob><mrl><service>python</service><method>exec</method><param>wakeUpModeInsult()</param></mrl></oob></li>
+            <li name="lockInsult" value="off"><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></li>
+        </condition></template>
   </category>
   <category><pattern>REPETITIONDETECTED</pattern>
     <template><random>

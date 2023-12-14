@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+  <category>
+    <pattern>FACEXPRESSION</pattern>
+    <template>
+      <condition name="emotion">
+        <li value="neutral">
+          <think>
+            <set name="face">neutral</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/neutral.png"></img>
+</li>
+        <li value="anger">
+          <think>
+            <set name="face">anger</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/anger.png"></img>
+</li>
+        <li value="accomplice">
+          <think>
+            <set name="face">
+              <random>
+                <li>winkLeft</li>
+                <li>winkRight</li>
+              </random>
+            </set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/wink.png"></img>
+</li>
+        <li value="disgust">
+          <think>
+            <set name="face">disgust</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/disgust.png"></img>
+</li>
+        <li value="fear">
+          <think>
+            <set name="face">fear</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/fear.png"></img>
+</li>
+        <li value="smile">
+          <think>
+            <set name="face">
+              <random>
+                <li>smileClosed</li>
+                <li>smileOpen</li>
+              </random>
+            </set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/smileClosed.png"></img>      
+</li>
+        <li value="sad">
+          <think>
+            <set name="face">sad</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/sad.png"></img>
+</li>
+        <li value="surprise">
+          <think>
+            <set name="face">surprise</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/surprise.png"></img>
+</li>
+        <li value="suspicious">
+          <think>
+            <set name="face">suspicious</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/suspicious.png"></img>
+</li>
+        <li value="unamused">
+          <think>
+            <set name="face">unamused</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/unamused.png"></img>
+</li>
+      </condition>
+      <!--<think>
+            <set name="imgLink">../InMoov2/system/pictures/faceExpression//><get name="face"/>.png</set>
+          </think>
+      <img src="../InMoov2/system/pictures/faceExpression/<get name="face"/>.png" />-->
+      <oob><mrl><service>python</service><method>exec</method><param><get name="face"/>()</param></mrl></oob>
+    </template>
+  </category>
+
+  <category>
+    <pattern>APPNEUTRAL</pattern>
+    <template>
+      <think>
+        <set name="emotion">neutral</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPANGER</pattern>
+    <template>
+      <think>
+        <set name="emotion">anger</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPACCOMPLICE</pattern>
+    <template>
+      <think>
+        <set name="emotion">accomplice</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPDISGUST</pattern>
+    <template>
+      <think>
+        <set name="emotion">disgust</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPFEAR</pattern>
+    <template>
+      <think>
+        <set name="emotion">fear</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPSMILE</pattern>
+    <template>
+      <think>
+        <set name="emotion">smile</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPSAD</pattern>
+    <template>
+      <think>
+        <set name="emotion">sad</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPSUSPICIOUS</pattern>
+    <template>
+      <think>
+        <set name="emotion">suspicious</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPUNAMUSED</pattern>
+    <template>
+      <think>
+        <set name="emotion">unamused</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>CHANGE FACE EXPRESSIONS</pattern>
+    <template>yes, look.
+<random><li>Here I have no expression.<srai>APPNEUTRAL</srai></li><li>I look angry.<srai>APPANGER</srai></li><li>I am winking.<srai>APPACCOMPLICE</srai></li><li>I am disgust.<srai>APPDISGUST</srai></li><li>I am scared.<srai>APPFEAR</srai></li><li>I smile.<srai>APPSMILE</srai></li><li>I am sad.<srai>APPSAD</srai></li><li>I am suspicious.<srai>APPSUSPICIOUS</srai></li><li>I am unamused.<srai>APPUNAMUSED</srai></li></random></template>
+  </category>
+  <category>
+    <pattern># FACE EXPRESSION</pattern>
+    <template>
+      <srai>CHANGE FACE EXPRESSIONS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ANOTHER FACE</pattern>
+    <template>
+      <srai>CHANGE FACE EXPRESSIONS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAN YOU CHANGE OF FACE EXPRESSION</pattern>
+    <template>
+      <srai>CHANGE FACE EXPRESSIONS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAN YOU DO FACE EXPRESSIONS</pattern>
+    <template>
+      <srai>CHANGE FACE EXPRESSIONS</srai>
+    </template>
+  </category>
+</aiml>

@@ -43,3 +43,23 @@ def onRecognized(text):
       #if i01_chatBot.onText()=="SYSTEM_EVENT WAKE" and text!=lockPhrase:
         #i01_chatBot.getResponse(text)
         #humanDetected()
+
+if i01.getConfig().forceMicroOnIfSleeping==1:
+  watchMicro = runtime.start("watchMicro","Clock")
+  # set our watchMicro to fire if its not reset within a second
+  watchMicro.setInterval(60000) 
+  # add the stop command which will stop the robot from moving
+  watchMicro.addClockEvent("python","exec", "restartListening()")
+  # start the clock
+  watchMicro.startClock()
+
+# define the method that will stop the robot
+def restartListening():
+  if runtime.isStarted('i01.ear'):
+    if not i01_ear.isListening():
+      i01_ear.startListening()
+      print("restarting listening")
+    else:
+      pass
+  else:
+      pass

@@ -269,6 +269,12 @@
                         </select>
                     </td>
                 </tr>
+                    <td>
+                        <label>forceMicroOnIfSleeping:</label>
+                    </td><td>
+                        <button ng-show="service.config.forceMicroOnIfSleeping" class="btn btn-info" title="Enable the microphone to be always ON" ng-click="setConfigValue('forceMicroOnIfSleeping', false)">on</button>
+                        <button ng-show="!service.config.forceMicroOnIfSleeping" class="btn btn-default" title="Enable the microphone to be always ON" ng-click="setConfigValue('forceMicroOnIfSleeping', true)">off</button>
+                    </td>
                 <tr>
                     <td>
                         <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.ear')">Save Ear

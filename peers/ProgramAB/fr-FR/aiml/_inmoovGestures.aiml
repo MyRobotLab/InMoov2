@@ -1036,11 +1036,11 @@
   </template>
 </category>
 <category><pattern>MOTOR_READY</pattern>
-  <template>Mes moteurs sont prêt et activé.
+  <template>Mes moteurs sont prêt et activés.
   </template>
 </category>
 <category><pattern>MOTOR_NOT_READY</pattern>
-  <template>Mes moteurs ne sont pas démarré.
+  <template>Mes moteurs ne sont pas démarrés.
   </template>
 </category>
 <category><pattern>AVANCE</pattern>
@@ -1058,14 +1058,34 @@
     <oob><mrl><service>python</service><method>exec</method><param>motorsStop()</param></mrl></oob>
   </template>
 </category>
-<category><pattern>TOURNE À GAUCHE</pattern>
+<category><pattern>TOURNE A GAUCHE</pattern>
   <template><img src="../arrow_left_green.png"/>
     <oob><mrl><service>python</service><method>exec</method><param>motorsTurnLeft()</param></mrl></oob>
   </template>
 </category>
-<category><pattern>TOURNE À DROITE</pattern>
+<category><pattern>TOURNER À GAUCHE</pattern>
+  <template>
+    <srai>TOURNE A GAUCHE</srai>
+  </template>
+</category>
+<category><pattern>VA À GAUCHE</pattern>
+  <template>
+    <srai>TOURNE A GAUCHE</srai>
+  </template>
+</category>
+<category><pattern>TOURNE A DROITE</pattern>
   <template><img src="../arrow_right_green.png"/>
     <oob><mrl><service>python</service><method>exec</method><param>motorsTurnRight()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>TOURNER À DROITE</pattern>
+  <template>
+    <srai>TOURNE A DROITE</srai>
+  </template>
+</category>
+<category><pattern>VA À DROITE</pattern>
+  <template>
+    <srai>TOURNE A DROITE</srai>
   </template>
 </category>
 <category><pattern>ACCÉLÈRE</pattern>

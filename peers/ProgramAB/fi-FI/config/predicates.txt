@@ -1,4 +1,5 @@
 userDescription:Pas de fiche personnelle
 firstinit:unknown
 name:human
+lockInsult:off
 img:../service/img/user_unknown.png
