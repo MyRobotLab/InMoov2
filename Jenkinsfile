@@ -7,7 +7,8 @@ groupIdPath = groupId.replaceAll('\\.', '/')
 pipeline {
 
    // use linux for ssh or switch from ssh-agent to plain ssh
-   agent  { label 'linux' }
+   // agent  { label 'linux' }
+   agent any
 
     environment {
         VERSION = "${version}"
