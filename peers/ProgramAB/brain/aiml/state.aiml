@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>WHAT IS YOUR STATE</pattern>
+    <template>
+      <think>
+        <set name="first_init">started</set>
+      </think>
+      <think>
+        <set name="topic">first_init</set>
+      </think> Hello, This is my first initialisation. I
+      need some informations, I am listening, what is my name ?</template>
+  </category>
+
+
+</aiml>

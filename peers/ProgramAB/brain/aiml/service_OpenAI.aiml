@@ -1,33 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-      <category>
-            <pattern>WHAT IS THE TOPIC</pattern>
-            <template>Topic is <get name="topic" />
-            </template>
-      </category>
-      <category>
-            <pattern>SET THE TOPIC TO *</pattern>
-            <template>
-                  <think>
-                        <set name="topic">
-                              <star />
-                        </set>
-                  </think> OK, I
-                  have set the topic to <star />
-            </template>
-      </category>
-
-      <category>
-            <pattern>SET TOPIC TO *</pattern>
-            <template> current topic is now <star />
-              <think>
-                        <set name="topic">
-                              <star />
-                        </set>
-                  </think>
-            </template>
-      </category>
-
+<!-- FIXME - make a topic="OpenAI" -->
       <category>
             <pattern>BE A *</pattern>
             <template> I am now a <star />
@@ -200,50 +173,5 @@
                   </think>
                   </template>
             </category>
-
       </topic>
-
-      <category>
-            <pattern>SET MY NAME TO *</pattern>
-            <template> your name is now <star />
-              <think>
-                        <set name="name">
-                              <star />
-                        </set>
-                  </think>
-            </template>
-      </category>
-      <category>
-            <pattern>WHATS YOUR NAME</pattern>
-            <template>
-                  <srai>WHAT IS YOUR NAME</srai>
-            </template>
-      </category>
-      <category>
-            <pattern>YOUR NAME</pattern>
-            <template>
-                  <srai>WHAT IS YOUR NAME</srai>
-            </template>
-      </category>
-      <category>
-            <pattern>WHAT IS YOUR NAME</pattern>
-            <template>
-                  <random>
-                        <li>I am</li>
-                        <li>Call me</li>
-                        <li>My name is</li>
-                        <li>I am called</li>
-                        <li>People call me</li>
-                        <li>You can call me</li>
-                  </random>
-                  <condition name="customname">
-                        <li value="unknown">
-                              <get name="botname" />.</li>
-                        <li>
-                              <get name="customname" />.</li>
-                  </condition>
-            </template>
-      </category>
-
-
 </aiml>
