@@ -1,51 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-
-<category><pattern>SET TOPIC TO *</pattern>
-  <template>
-    current topic is now <star/>
-    <think><set name="topic"><star/></set></think>
-  </template>
-</category>
-
-<category><pattern>WHY IS THE OCEAN BLUE</pattern>  
-  <oob>
-    <mrl>
-      <service>python</service>
-      <method>exec</method>
-      <param>i01_gpt3.onText("WHY <star/>")</param>
-    </mrl>
-  </oob>
-</category>
-
-
-<topic name="smartass">
-
-  <category><pattern>WHY *</pattern>  
-  <oob>
-    <mrl>
-      <service>python</service>
-      <method>exec</method>
-      <param>i01_gpt3.onText("WHY <star/>")</param>
-    </mrl>
-  </oob>
-  </category>
-  
-  <category><pattern>SET TOPIC TO *</pattern>
-    <template>
-      current topic is now <star/>
-      <think><set name="topic"><star/></set></think>
-    </template>
-  </category>
-
-</topic>
-
-
-<category><pattern>WHAT IS YOUR CURRENT TOPIC</pattern>
-  <template><get name="topic" /></template>
-</category>
-
-
 <!-- File: _inmoovChatbot.aiml -->
 <!--  -->
 <category><pattern>BOOTUP</pattern>
@@ -64,7 +18,7 @@
       <think>
         <set name="topic">firstinit</set>
       </think>
-		Hello, This is my first initialization. I need some information, I am listening, what is my name ?</template>
+        Hello, This is my first initialisation. I need some informations, I am listening, what is my name ?</template>
 </category>
 <topic name="FIRSTINIT">
 <category><pattern>#</pattern><that># WHAT IS MY NAME #</that>
@@ -78,7 +32,7 @@
 
 <topic name="FIRSTINIT">
 <category><pattern>#</pattern><that># MAY I HAVE YOUR NAME #</that>
-<template><set name="questionfirstinit">if your name is <star/>, say yes or no</set>
+<template><set name="questionfirstinit">if your name is <star/> , say yes or no</set>
         <think>
           <set name="tmpname">
             <star/>
