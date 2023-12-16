@@ -3,7 +3,7 @@ analogPinFromSoundCard: 53
 audioPollsBySeconds: 2
 audioSignalProcessing: false
 batteryInSystem: false
-customSounds: false
+customSound: false
 forceMicroOnIfSleeping: true
 healthCheckActivated: false
 healthCheckTimerMs: 60000
@@ -23,7 +23,6 @@ neoPixelDownloadBlue: true
 neoPixelErrorRed: true
 neoPixelFlashWhenSpeaking: true
 openCVFaceRecognizerActivated: true
-openCVFlipPicture: false
 peers:
   audioPlayer:
     autoStart: true
