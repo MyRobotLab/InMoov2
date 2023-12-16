@@ -3,6 +3,7 @@ cameraIndex: 0
 capturing: false
 filters: {
   }
+flip: false  
 grabberType: OpenCV
 inputFile: null
 inputSource: camera

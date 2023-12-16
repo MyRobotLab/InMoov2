@@ -270,6 +270,12 @@
                         </select>
                     </td>
                 </tr>
+                    <td>
+                        <label>forceMicroOnIfSleeping:</label>
+                    </td><td>
+                        <button ng-show="service.config.forceMicroOnIfSleeping" class="btn btn-info" title="Enable the microphone to be always ON" ng-click="setConfigValue('forceMicroOnIfSleeping', false)">on</button>
+                        <button ng-show="!service.config.forceMicroOnIfSleeping" class="btn btn-default" title="Enable the microphone to be always ON" ng-click="setConfigValue('forceMicroOnIfSleeping', true)">off</button>
+                    </td>
                 <tr>
                     <td>
                         <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.ear')">Save Ear
@@ -395,9 +401,9 @@
                 <tr>
                     <td>
                         <div width="120" height="28">
-                            <label>Speech Type</label>
+                            <label>Speech Service Type</label>
                             <select class="form-control"
-                                ng-model="service.speechType"  id="language-select">
+                                ng-model="speechType" id="language-select">
                                 <option ng-repeat="speechType in speechTypes" value="{{getShortName(speechType)}}">
                                     {{getShortName(speechType)}}</option>
                             </select>
@@ -406,7 +412,8 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-default" ng-click="mrl.send('changeSpeechType', service.speechType)">Set Speech Type</button>
+                        <button class="btn btn-default" ng-click="msg.send('setSpeechType', speechType)">Set
+                            Speech Type</button>
                     </td>
                 </tr>                        
             </table>
@@ -708,6 +715,23 @@
                         </td><td>
                         <button ng-show="service.config.neoPixelDownloadBlue" class="btn btn-info" title="Sets neopixel blue when downloading new version" ng-click="setConfigValue('neoPixelDownloadBlue', false)">on</button>
                         <button ng-show="!service.config.neoPixelDownloadBlue" class="btn btn-default" title="Sets neopixel blue when downloading new version" ng-click="setConfigValue('neoPixelDownloadBlue', true)">off</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+                        <img src="../img/InMoov2/markerBlue_right.png"
+                            onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
+                            onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
+                            ng-click="filterPeers('motorRight')" /><img src="../img/InMoov2/markerBlue_left.png"
+                            onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
+                            onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
+                            ng-click="filterPeers(null)" />
+                        <img src="../MobilePlatform.png" />
+                        <label>Mobile Platform</label>
+                    </td>
+                    <td>
+                    <toggle width="38" height="35" ng-model="isPlatformStarted" ng-change="!isPlatformStarted?execScript('system/startScripts/i01_platform_stop.py'):execScript('system/startScripts/i01_platform_start.py')" on="" off=""/></toggle>
                     </td>
                 </tr>
             </table>

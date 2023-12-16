@@ -4,6 +4,7 @@ baby:who
 bestfriend:who
 birthday:when
 birthplace:where
+botname:worky
 boyfriend:who
 brother:who
 cat:what
@@ -32,8 +33,8 @@ favoritemovie:what
 favoritesong:what
 favoritesport:what
 favoritetvshow:what
+firstinit:ok
 firstname:what
-firstinit:unknown
 friend:who
 gender:unknown
 girlfriend:who
@@ -44,8 +45,11 @@ has:what
 he:who
 husband:who
 img:../service/img/user_unknown.png
+insultPoints:0
 isanumber:false
 it:what
+jsenabled:true
+lastUsername:grog
 lastname:what
 latitude:which
 likes:what
@@ -55,14 +59,15 @@ longitute:which
 meta:set
 middlename:what
 mother:who
-name:human
+name:grog
 nephew:who
 newcontact:unknown
-newpattern:NORESP
+newpattern:TEST_SRAIX_BUG
 niece:who
 orientation:unknown
 phonenumber:unknown
 province:which
+questionfirstinit:Would you like me to use my vision to memorise your face along your name, grog?
 religion:unknown
 residence:where
 road:which
@@ -73,8 +78,9 @@ son:who
 state:which
 status:what
 street:which
-there:where
 them:who
+there:where
+tmpname:grog
 topic:unknown
 town:which
 userDescription:no personal description

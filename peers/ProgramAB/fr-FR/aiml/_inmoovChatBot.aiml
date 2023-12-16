@@ -553,7 +553,17 @@
   </category>
   <category><pattern>NORESP</pattern>
     <template>
-      <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+      <condition>
+            <li name="lockInsult" value="on"><oob><mrl><service>python</service><method>exec</method><param>wakeUpModeInsult()</param></mrl></oob></li>
+            <li name="lockInsult" value="off"><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></li>
+        </condition></template>
+  </category>
+  <category><pattern>REPETITIONDETECTED</pattern>
+    <template><random>
+                <li>Tu l'as déjà dit.</li>
+                <li>Tu te répètes.</li>
+              </random>
+    </template>
   </category>
   
   <!-- fix for null topic -->
@@ -561,6 +571,45 @@
   <topic name="">
   <category><pattern>#</pattern>
   <template><think><set name="topic">default</set></think><srai><star /></srai></template>
+  </category>
+  </topic>
+
+  <category><pattern>J AI PÉTÉ COMMUNICATION</pattern>
+  <template><srai>GPT COMMUNICATION</srai></template>
+  </category>
+
+  <category><pattern>GPT COMMUNICATION</pattern>
+  <template>
+    <condition name="gpt3">
+      <li value="enabled">
+        <think><set name="topic">gptfull</set>
+               <set name="gptStop"></set></think>
+          Okay, je suis prêt. Si tu souhaites arrêter la communication directe avec g.p.t, dis stop gpt.
+      </li>
+      <li>Le service GPT n'est pas démarré.</li>
+    </condition>
+  </template>
+  </category>
+
+  <topic name="GPTFULL">
+  <category><pattern>#</pattern>
+  <template><think><set name="gptStop"><star/></set></think>
+            <condition name="gptStop">
+            <li value="stop gpt">D'accord, retour sur program AB.
+                <think><set name="topic">default</set>
+                       <set name="gptStop"></set>
+                </think></li>
+            <li value="stoppe j ai pété">D'accord, retour sur program AB.
+                <think><set name="topic">default</set>
+                       <set name="gptStop"></set>
+                </think></li>
+            <li value="stop j ai pété">D'accord, retour sur program AB.
+                <think><set name="topic">default</set>
+                       <set name="gptStop"></set>
+                </think></li>    
+            <li><img src="../Gpt3.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_gpt3.onText("<star/>")</param></mrl></oob></li>
+            </condition>
+  </template>
   </category>
   </topic>
 </aiml>

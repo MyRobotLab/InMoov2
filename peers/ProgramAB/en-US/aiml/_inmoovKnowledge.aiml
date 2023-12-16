@@ -2,6 +2,7 @@
 <aiml>
 <!-- File: _inmoovKnowledge.aiml -->
 <!--  -->
+
 <category><pattern>* MEANS *</pattern>
 <template><think>
         <set name="equalto">
@@ -34,6 +35,8 @@
           <star/> is already the same as <star index="2"/>.</li>
       </condition></template>
 </category>
+
+<topic name="LEARNF">
 <category><pattern>A * IS A *</pattern>
 <template>Ok, I will remember a <star/> is a <star index="2"/>.
     <learnf>
@@ -51,7 +54,6 @@
       </category>
     </learnf></template>
 </category>
-<!--
 <category><pattern>* IS A *</pattern>
 <template>Ok, I will remember <star/> is a <star index="2"/>.
     <think>
@@ -246,48 +248,8 @@
       </category>
     </learnf></template>
 </category>
-<category><pattern>*</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
-<template><srai>LEARN NEW RESPONSE <star/></srai></template>
-</category>
-<category><pattern>*</pattern><that>WHAT SHOULD I ANSWER</that>
-<template><srai>LEARN NEW RESPONSE <star/></srai></template>
-</category>
-<category><pattern>YOU _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
-<template><srai>LEARN NEW RESPONSE You <star/></srai></template>
-</category>
-<category><pattern>YOU _</pattern><that>WHAT SHOULD I ANSWER</that>
-<template><srai>LEARN NEW RESPONSE You <star/></srai></template>
-</category>
-<category><pattern>A _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
-<template><srai>LEARN NEW RESPONSE A <star/></srai></template>
-</category>
-<category><pattern>A _</pattern><that>WHAT SHOULD I ANSWER</that>
-<template><srai>LEARN NEW RESPONSE A <star/></srai></template>
-</category>
-<category><pattern>I _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
-<template><srai>LEARN NEW RESPONSE I <star/></srai></template>
-</category>
-<category><pattern>I _</pattern><that>WHAT SHOULD I ANSWER</that>
-<template><srai>LEARN NEW RESPONSE I <star/></srai></template>
-</category>
-<category><pattern>HE _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
-<template><srai>LEARN NEW RESPONSE He <star/></srai></template>
-</category>
-<category><pattern>HE _</pattern><that>WHAT SHOULD I ANSWER</that>
-<template><srai>LEARN NEW RESPONSE He <star/></srai></template>
-</category>
-<category><pattern>AN _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
-<template><srai>LEARN NEW RESPONSE An <star/></srai></template>
-</category>
-<category><pattern>AN _</pattern><that>WHAT SHOULD I ANSWER</that>
-<template><srai>LEARN NEW RESPONSE An <star/></srai></template>
-</category>
-<category><pattern>THAT _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
-<template><srai>LEARN NEW RESPONSE That <star/></srai></template>
-</category>
-<category><pattern>THAT _</pattern><that>WHAT SHOULD I ANSWER</that>
-<template><srai>LEARN NEW RESPONSE That <star/></srai></template>
-</category>
+</topic>
+
 <category><pattern>MY * S NAME IS *</pattern>
 <template><think>
         <set name="isfamiliarname">
@@ -399,12 +361,7 @@
         </li>
       </condition></template>
 </category>
-<category><pattern>MY _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
-<template><srai>LEARN NEW RESPONSE My <star/></srai></template>
-</category>
-<category><pattern>MY _</pattern><that>WHAT SHOULD I ANSWER</that>
-<template><srai>LEARN NEW RESPONSE My <star/></srai></template>
-</category>
+
 <category><pattern>LEARN NEW RESPONSE *</pattern>
 <template>OK.  Now whenever you say "<get name="newpattern"/>", I will respond with "<star/>".
     <learnf>
@@ -423,12 +380,7 @@
       </category>
     </learnf></template>
 </category>
-<category><pattern>IT _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
-<template><srai>LEARN NEW RESPONSE It <star/></srai></template>
-</category>
-<category><pattern>IT _</pattern><that>WHAT SHOULD I ANSWER</that>
-<template><srai>LEARN NEW RESPONSE It <star/></srai></template>
-</category>
+
 <category><pattern>BAD ANSWER</pattern>
 <template><think>
         <set name="newpattern">
@@ -438,6 +390,57 @@
     OK.  You said "<input index="2"/>" and I replied "<response/>".
     What should I say instead?</template>
 </category>
+
+<category><pattern>*</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
+<template><srai>LEARN NEW RESPONSE <star/></srai></template>
+</category>
+<category><pattern>MY _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
+<template><srai>LEARN NEW RESPONSE My <star/></srai></template>
+</category>
+<category><pattern>YOU _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
+<template><srai>LEARN NEW RESPONSE You <star/></srai></template>
+</category>
+<category><pattern>A _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
+<template><srai>LEARN NEW RESPONSE A <star/></srai></template>
+</category>
+<category><pattern>I _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
+<template><srai>LEARN NEW RESPONSE I <star/></srai></template>
+</category>
+<category><pattern>HE _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
+<template><srai>LEARN NEW RESPONSE He <star/></srai></template>
+</category>
+<category><pattern>AN _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
+<template><srai>LEARN NEW RESPONSE An <star/></srai></template>
+</category>
+<category><pattern>THAT _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
+<template><srai>LEARN NEW RESPONSE That <star/></srai></template>
+</category>
+<category><pattern>IT _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
+<template><srai>LEARN NEW RESPONSE It <star/></srai></template>
+</category>
+<category><pattern>SHE _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
+<template><srai>LEARN NEW RESPONSE She <star/></srai></template>
+</category>
+<category><pattern>SAY _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
+<template><srai>LEARN NEW RESPONSE <star/></srai></template>
+</category>
+<category><pattern>WE _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
+<template><srai>LEARN NEW RESPONSE We <star/></srai></template>
+</category>
+<category><pattern>WE _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
+<template><srai>LEARN NEW RESPONSE We <star/></srai></template>
+</category>
+<category><pattern>THE _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
+<template><srai>LEARN NEW RESPONSE The <star/></srai></template>
+</category>
+<category><pattern>THEY _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
+<template><srai>LEARN NEW RESPONSE They <star/></srai></template>
+</category>
+<category><pattern>NEVERMIND</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
+<template>Ok. We'll come back to that later.</template>
+</category>
+
+
 <category><pattern>LEARN SRAIXFAILED</pattern>
 <template><think>
         <set name="newpattern">
@@ -447,42 +450,53 @@
     You said "<input index="2"/>".
     What should I answer?</template>
 </category>
-<category><pattern>SHE _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
-<template><srai>LEARN NEW RESPONSE She <star/></srai></template>
+
+<category><pattern>*</pattern><that>WHAT SHOULD I ANSWER</that>
+<template><srai>LEARN NEW RESPONSE <star/></srai></template>
+</category>
+<category><pattern>MY _</pattern><that>WHAT SHOULD I ANSWER</that>
+<template><srai>LEARN NEW RESPONSE My <star/></srai></template>
+</category>
+<category><pattern>YOU _</pattern><that>WHAT SHOULD I ANSWER</that>
+<template><srai>LEARN NEW RESPONSE You <star/></srai></template>
+</category>
+<category><pattern>A _</pattern><that>WHAT SHOULD I ANSWER</that>
+<template><srai>LEARN NEW RESPONSE A <star/></srai></template>
+</category>
+<category><pattern>I _</pattern><that>WHAT SHOULD I ANSWER</that>
+<template><srai>LEARN NEW RESPONSE I <star/></srai></template>
+</category>
+<category><pattern>HE _</pattern><that>WHAT SHOULD I ANSWER</that>
+<template><srai>LEARN NEW RESPONSE He <star/></srai></template>
+</category>
+<category><pattern>AN _</pattern><that>WHAT SHOULD I ANSWER</that>
+<template><srai>LEARN NEW RESPONSE An <star/></srai></template>
+</category>
+<category><pattern>THAT _</pattern><that>WHAT SHOULD I ANSWER</that>
+<template><srai>LEARN NEW RESPONSE That <star/></srai></template>
+</category>
+<category><pattern>IT _</pattern><that>WHAT SHOULD I ANSWER</that>
+<template><srai>LEARN NEW RESPONSE It <star/></srai></template>
 </category>
 <category><pattern>SHE _</pattern><that>WHAT SHOULD I ANSWER</that>
 <template><srai>LEARN NEW RESPONSE She <star/></srai></template>
 </category>
-<category><pattern>SAY _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
-<template><srai>LEARN NEW RESPONSE <star/></srai></template>
-</category>
 <category><pattern>SAY _</pattern><that>WHAT SHOULD I ANSWER</that>
 <template><srai>LEARN NEW RESPONSE <star/></srai></template>
-</category>
-<category><pattern>WE _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
-<template><srai>LEARN NEW RESPONSE We <star/></srai></template>
 </category>
 <category><pattern>WE _</pattern><that>WHAT SHOULD I ANSWER</that>
 <template><srai>LEARN NEW RESPONSE We <star/></srai></template>
 </category>
-<category><pattern>THE _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
-<template><srai>LEARN NEW RESPONSE The <star/></srai></template>
-</category>
 <category><pattern>THE _</pattern><that>WHAT SHOULD I ANSWER</that>
 <template><srai>LEARN NEW RESPONSE The <star/></srai></template>
-</category>
-<category><pattern>THEY _</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
-<template><srai>LEARN NEW RESPONSE They <star/></srai></template>
 </category>
 <category><pattern>THEY _</pattern><that>WHAT SHOULD I ANSWER</that>
 <template><srai>LEARN NEW RESPONSE They <star/></srai></template>
 </category>
-<category><pattern>NEVERMIND</pattern><that>WHAT SHOULD I SAY INSTEAD</that>
-<template>Ok. We'll come back to that later.</template>
-</category>
 <category><pattern>NEVERMIND</pattern><that>WHAT SHOULD I ANSWER</that>
 <template>Ok. We'll come back to that later.</template>
 </category>
+
 <category><pattern>QUESTIONWORD NAME</pattern>
 <template>Who</template>
 </category>
@@ -550,5 +564,4 @@ and "<get name="learnpattern"/>"?</template>
 <category><pattern>* VERB2ST *</pattern>
 <template><srai>QUESTIONWORD <star/></srai> <star index="2"/> <person> <star index="3"/> </person>? <star/>.</template>
 </category>
--->
 </aiml>

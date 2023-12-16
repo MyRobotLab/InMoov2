@@ -174,6 +174,16 @@
 </category>
 
 <category>
+<pattern>SYSTEM_EVENT STARTED PLATFORM</pattern>
+<template>Starting plateform</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED PLATFORM</pattern>
+<template>Stopping plateform</template>
+</category>
+
+<category>
 <pattern>SYSTEM_EVENT SHUTDOWN</pattern>
 <template>Shutting down my robot lab, please wait 10 seconds.</template>
 </category>

@@ -1027,9 +1027,76 @@
 <category><pattern>DIS MOI UNE AUTRE HISTOIRE</pattern>
 <template><srai>RACONTE UNE AUTRE HISTOIRE</srai></template>
 </category>
+<category><pattern>DÉMARRE LES MOTEURS</pattern>
+<template><srai>MOTEUR ACTIVÉ</srai></template>
+</category>
+<category><pattern>MOTEUR ACTIVÉ</pattern>
+  <template>
+    <oob><mrl><service>python</service><method>exec</method><param>motorDual()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>MOTOR_READY</pattern>
+  <template>Mes moteurs sont prêt et activés.
+  </template>
+</category>
+<category><pattern>MOTOR_NOT_READY</pattern>
+  <template>Mes moteurs ne sont pas démarrés.
+  </template>
+</category>
 <category><pattern>AVANCE</pattern>
-<template>D'accord.
-        <oob><mrl><service>python</service><method>exec</method><param>avance()</param></mrl></oob></template>
+  <template><img src="../arrow_up_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsForward()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>RECULE</pattern>
+  <template><img src="../arrow_down_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsBackward()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>ARRÊTE</pattern>
+  <template><img src="../stop.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsStop()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>TOURNE A GAUCHE</pattern>
+  <template><img src="../arrow_left_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsTurnLeft()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>TOURNER À GAUCHE</pattern>
+  <template>
+    <srai>TOURNE A GAUCHE</srai>
+  </template>
+</category>
+<category><pattern>VA À GAUCHE</pattern>
+  <template>
+    <srai>TOURNE A GAUCHE</srai>
+  </template>
+</category>
+<category><pattern>TOURNE A DROITE</pattern>
+  <template><img src="../arrow_right_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsTurnRight()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>TOURNER À DROITE</pattern>
+  <template>
+    <srai>TOURNE A DROITE</srai>
+  </template>
+</category>
+<category><pattern>VA À DROITE</pattern>
+  <template>
+    <srai>TOURNE A DROITE</srai>
+  </template>
+</category>
+<category><pattern>ACCÉLÈRE</pattern>
+  <template>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsSlowDown()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>RALENTI</pattern>
+  <template>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsSpeedUp()</param></mrl></oob>
+  </template>
 </category>
 <category><pattern>ENREGISTRE CETTE PERSONNE</pattern>
 <template>Oké, quel nom dois je mémoriser pour cette personne.
