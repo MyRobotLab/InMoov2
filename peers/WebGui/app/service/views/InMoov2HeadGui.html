@@ -4,7 +4,7 @@
     height: 588px;
     /* border: 1px solid #000; */
     position: relative;
-    background-image: url("../img/InMoov2/HeadBackground.png");
+    background-image: url("../img/InMoov2/newHead.gif");
     z-index: 0;
     /* float: none; */
     }
@@ -28,42 +28,62 @@
             <div id="headIndicator" ng-show="isHead()" ng-click="setPanel('head')" class="rectangleHeadIndicatorActive preventHeadDragSelect">Head</div>
             <div id="headIndicator" ng-show="!isHead()" ng-click="setPanel('head')" class="rectangleHeadIndicator preventHeadDragSelect">Head</div>
 
-            <div id="eyelidRightButton" class="dotHeadButtons rightHeadSide preventHeadDragSelect" ng-click="setPanel('eyelidRight')">eyelidRight</div>
-            <div id="eyelidRightDot" class="dotHeadEnabled preventHeadDragSelect"></div>
-            <div id="eyelidRightLine" ng-show="isHead()" class="rightHeadLine preventHandDragSelect"></div>
+            <div id="eyelidRightUpperButton" class="dotHeadButtons rightHeadSide preventHeadDragSelect" ng-click="setPanel('eyelidRightUpper')">eyelidRightUpper</div>
+            <div id="eyelidRightUpperDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+            <div id="eyelidRightUpperLine" ng-show="isHead()" class="rightHeadLine preventHandDragSelect"></div>
 
-            <div id="eyeYButton" class="dotHeadButtons rightHeadSide preventHeadDragSelect" ng-click="setPanel('eyeY')">eyeY</div>
-            <div id="eyeYDot" class="dotHeadEnabled preventHeadDragSelect"></div>
-            <div id="eyeYLine" ng-show="isHead()" class="rightHeadLine preventHandDragSelect"></div>
-            <div id="eyeYArrowVertical" class="rightHeadSide preventHeadDragSelect"><img src="../img/InMoov2/arrow_vertical.png"/></div>
+            <div id="eyelidRightLowerButton" class="dotHeadButtons rightHeadSide preventHeadDragSelect" ng-click="setPanel('eyelidRightLower')">eyelidRightLower</div>
+            <div id="eyelidRightLowerDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+            <div id="eyelidRightLowerLine" ng-show="isHead()" class="rightHeadLine preventHandDragSelect"></div>
+
+            <div id="eyeRightLRButton" class="dotHeadButtons rightHeadSide preventHeadDragSelect" ng-click="setPanel('eyeRightLR')">eyeRightLR</div>
+            <div id="eyeRightLRDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+            <div id="eyeRightLRLine" ng-show="isHead()" class="rightHeadLine preventHandDragSelect"></div>
+
+            <div id="eyeRightUDButton" class="dotHeadButtons rightHeadSide preventHeadDragSelect" ng-click="setPanel('eyeRightUD')">eyeRightUD</div>
+            <div id="eyeRightUDDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+            <div id="eyeRightUDLine" ng-show="isHead()" class="rightHeadLine preventHandDragSelect"></div>
 
             <div id="jawButton" class="dotHeadButtons rightHeadSide preventHeadDragSelect" ng-click="setPanel('jaw')">jaw</div>
             <div id="jawDot" class="dotHeadEnabled preventHeadDragSelect"></div>
             <div id="jawLine" ng-show="isHead()" class="rightHeadLine preventHandDragSelect"></div>
 
             <!-- Left -->
-            <div id="eyelidLeftButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('eyelidLeft')">eyelidLeft</div>
-            <div id="eyelidLeftDot" class="dotHeadEnabled preventHeadDragSelect"></div>
-            <div id="eyelidLeftLine" ng-show="isHead()" class="leftHeadLine preventHandDragSelect"></div>
+            <div id="forHeadButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('forHead')">forHead</div>
+            <div id="forHeadDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+            <div id="forHeadLine" ng-show="isHead()" class="leftHeadLine preventHandDragSelect"></div>
+
+            <div id="eyelidLeftUpperButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('eyelidLeftUpper')">eyelidLeftUpper</div>
+            <div id="eyelidLeftUpperDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+            <div id="eyelidLeftUpperLine" ng-show="isHead()" class="leftHeadLine preventHandDragSelect"></div>
+
+            <div id="eyelidLeftLowerButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('eyelidLeftLower')">eyelidLeftLower</div>
+            <div id="eyelidLeftLowerDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+            <div id="eyelidLeftLowerLine" ng-show="isHead()" class="leftHeadLine preventHandDragSelect"></div>
 
             <div id="rotheadButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('rothead')">rothead</div>
             <div id="rotheadDot" class="dotHeadEnabled preventHeadDragSelect"></div>
             <div id="rotheadLine" ng-show="isHead()" class="leftHeadLine preventHandDragSelect"></div>
-            <div id="rotheadArrowHorizontal" class="leftHeadSide preventHeadDragSelect"><img src="../img/InMoov2/arrow_horizontal.png"/></div>
+
+            <div id="upperLipButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('upperLip')">upperLip</div>
+            <div id="upperLipDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+            <div id="upperLipLine" ng-show="isHead()" class="leftHeadLine preventHandDragSelect"></div>
 
             <div id="neckButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('neck')">neck</div>
             <div id="neckDot" class="dotHeadEnabled preventHeadDragSelect"></div>
             <div id="neckLine" ng-show="isHead()" class="leftHeadLine preventHandDragSelect"></div>
-            <div id="neckArrowVertical" class="leftHeadSide preventHeadDragSelect"><img src="../img/InMoov2/arrow_vertical.png"/></div>
 
             <div id="rollNeckButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('rollNeck')">rollNeck</div>
             <div id="rollNeckDot" class="dotHeadEnabled preventHeadDragSelect"></div>
             <div id="rollNeckLine" ng-show="isHead()" class="leftHeadLine preventHandDragSelect"></div>
 
-            <div id="eyeXButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('eyeX')">eyeX</div>
-            <div id="eyeXDot" class="dotHeadEnabled preventHeadDragSelect"></div>
-            <div id="eyeXLine" ng-show="isHead()" class="leftHeadLine preventHandDragSelect"></div>
-            <div id="eyeXArrowHorizontal" class="leftHeadSide preventHeadDragSelect"><img src="../img/InMoov2/arrow_horizontal.png"/></div>
+            <div id="eyeLeftLRButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('eyeLeftLR')">eyeLeftLR</div>
+            <div id="eyeLeftLRDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+            <div id="eyeLeftLRLine" ng-show="isHead()" class="leftHeadLine preventHandDragSelect"></div>
+
+            <div id="eyeLeftUDButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('eyeLeftUD')">eyeLeftUD</div>
+            <div id="eyeLeftUDDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+            <div id="eyeLeftUDLine" ng-show="isHead()" class="leftHeadLine preventHandDragSelect"></div>
 
             <div id="leftBackHeadButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="mrl.changeTab('i01')">Back</div>
             <div id="leftBackHeadArrow" class="leftBackHeadArrow preventHeadDragSelect"></div>
@@ -88,12 +108,36 @@
 </tr>
 </table>    
 <!------------------------ headGui end ------------------------------>
-<!------------------------ eyeY begin ------------------------------>
-<table ng-show="showPanel('eyeY')" class="inmoov-sub-panel table table-striped">    
+<!------------------------ forHead begin ------------------------------>
+<table ng-show="showPanel('forHead')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eyeY')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('forHead')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoov2Head.png"/>
+        <label>head is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
+    </td>
+</tr>    
+<tr>
+    <td>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.head.forHead')"></div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.forHead')">Save forHead Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------forHead end ------------------------------>
+<!------------------------ eyeLeftLR begin ------------------------------>
+<table ng-show="showPanel('eyeLeftLR')" class="inmoov-sub-panel table table-striped">    
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eyeLeftLR')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../InMoov2Head.png"/>
         <label>head is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -102,22 +146,46 @@
 </tr>
 <tr>
     <td>
-        <div class="tab-content" service-body panel="mrl.getPanel('i01.head.eyeY')"></div>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.head.eyeLeftLR')"></div>
     </td>
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.eyeY')">Save eyeY Config</button>
+        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.eyeLeftLR')">Save eyeLeftLR Config</button>
     </td>
 </tr>
 </table>
-<!------------------------ eyeY end ------------------------------>
-<!------------------------ eyeX begin ------------------------------>
-<table ng-show="showPanel('eyeX')" class="inmoov-sub-panel table table-striped">
+<!------------------------ eyeLeftLR end ------------------------------>
+<!------------------------ eyeLeftUD begin ------------------------------>
+<table ng-show="showPanel('eyeLeftUD')" class="inmoov-sub-panel table table-striped">    
 <tr>
     <td>
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eyeX')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eyeLeftUD')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoov2Head.png"/>
+        <label>head is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.head.eyeLeftUD')"></div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.eyeLeftUD')">Save eyeLeftUD Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ eyeLeftUD end ------------------------------>
+<!------------------------ eyeRightLR begin ------------------------------>
+<table ng-show="showPanel('eyeRightLR')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eyeRightLR')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../InMoov2Head.png"/>
         <label>head is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -126,16 +194,64 @@
 </tr>   
 <tr>
     <td>
-        <div class="tab-content" service-body panel="mrl.getPanel('i01.head.eyeX')"></div>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.head.eyeRightLR')"></div>
     </td>
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.eyeX')">Save eyeX Config</button>
+        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.eyeRightLR')">Save eyeRightLR Config</button>
     </td>
 </tr>
 </table>
-<!------------------------ eyeY end ------------------------------>
+<!------------------------ eyeRightLR end ------------------------------>
+<!------------------------ eyeRightUD begin ------------------------------>
+<table ng-show="showPanel('eyeRightUD')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eyeRightUD')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoov2Head.png"/>
+        <label>head is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
+    </td>
+</tr>   
+<tr>
+    <td>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.head.eyeRightUD')"></div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.eyeRightUD')">Save eyeRightUD Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ eyeRightUD end ------------------------------>
+<!------------------------ upperLip begin ------------------------------>
+<table ng-show="showPanel('upperLip')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('upperLip')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoov2Head.png"/>
+        <label>head is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
+    </td>
+</tr>    
+<tr>
+    <td>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.head.upperLip')"></div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.upperLip')">Save upperLip Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------ upperLip end ------------------------------>
 <!------------------------ rothead begin ------------------------------>
 <table ng-show="showPanel('rothead')" class="inmoov-sub-panel table table-striped">
 <tr>
@@ -266,55 +382,104 @@
 </tr>
 </table>
 <!------------------------ eyeLids end ------------------------------>
-<!------------------------ eyelidRight begin ------------------------------>
-<table ng-show="showPanel('eyelidRight')" class="inmoov-sub-panel table table-striped">
+<!------------------------ eyelidRightUpper begin ------------------------------>
+<table ng-show="showPanel('eyelidRightUpper')" class="inmoov-sub-panel table table-striped">
     <tr>
         <td>
             <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eyelidRight')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eyelidRightUpper')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
             <!--------------------------------------------------------------->
             <img src="../InMoov2Eyelids.png"/>
-            <label>eyelidRight is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>eyelidRightUpper is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
             <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
         </td>
     </tr>    
     <tr>
         <td>
-            <div class="tab-content" service-body panel="mrl.getPanel('i01.head.eyelidRight')"></div>
+            <div class="tab-content" service-body panel="mrl.getPanel('i01.head.eyelidRightUpper')"></div>
         </td>
     </tr>
     <tr>
         <td>
-            <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.eyelidRight')">Save eyelidRight Config</button>
+            <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.eyelidRightUpper')">Save eyelidRightUpper Config</button>
         </td>
 </tr>
 </table>
-<!------------------------ eyelidRight end ------------------------------>
-<!------------------------ eyelidLeft begin ------------------------------>
-<table ng-show="showPanel('eyelidLeft')" class="inmoov-sub-panel table table-striped">
+<!------------------------ eyelidRightUpper end ------------------------------>
+<!------------------------ eyelidLeftUpper begin ------------------------------>
+<table ng-show="showPanel('eyelidLeftUpper')" class="inmoov-sub-panel table table-striped">
     <tr>
         <td>
             <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eyelidLeft')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eyelidLeftUpper')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
             <!--------------------------------------------------------------->
             <img src="../InMoov2Eyelids.png"/>
-            <label>eyelidLeft is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>eyelidLeftUpper is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
             <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
         </td>
     </tr>    
     <tr>
         <td>
-            <div class="tab-content" service-body panel="mrl.getPanel('i01.head.eyelidLeft')"></div>
+            <div class="tab-content" service-body panel="mrl.getPanel('i01.head.eyelidLeftUpper')"></div>
         </td>
     </tr>
     <tr>
         <td>
-            <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.eyelidLeft')">Save eyelidLeft Config</button>
+            <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.eyelidLeftUpper')">Save eyelidLeftUpper Config</button>
             <!--msg.export('some-filename.py','webgui,python,servo01')-->
         </td>
 </tr>
 </table>
-<!------------------------ eyelidLeft end ------------------------------>
+<!------------------------ eyelidLeftUpper end ------------------------------>
+<!------------------------ eyelidRightLower begin ------------------------------>
+<table ng-show="showPanel('eyelidRightLower')" class="inmoov-sub-panel table table-striped">
+    <tr>
+        <td>
+            <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eyelidRightLower')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+            <!--------------------------------------------------------------->
+            <img src="../InMoov2Eyelids.png"/>
+            <label>eyelidRightLower is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
+        </td>
+    </tr>    
+    <tr>
+        <td>
+            <div class="tab-content" service-body panel="mrl.getPanel('i01.head.eyelidRightLower')"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.eyelidRightLower')">Save eyelidRightLower Config</button>
+        </td>
+</tr>
+</table>
+<!------------------------ eyelidRightLower end ------------------------------>
+<!------------------------ eyelidLeftLower begin ------------------------------>
+<table ng-show="showPanel('eyelidLeftLower')" class="inmoov-sub-panel table table-striped">
+    <tr>
+        <td>
+            <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+            <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('eyelidLeftLower')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+            <!--------------------------------------------------------------->
+            <img src="../InMoov2Eyelids.png"/>
+            <label>eyelidLeftLower is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
+        </td>
+    </tr>    
+    <tr>
+        <td>
+            <div class="tab-content" service-body panel="mrl.getPanel('i01.head.eyelidLeftLower')"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.eyelidLeftLower')">Save eyelidLeftLower Config</button>
+            <!--msg.export('some-filename.py','webgui,python,servo01')-->
+        </td>
+</tr>
+</table>
+<!------------------------ eyelidLeftUpper end ------------------------------>
 <!-- panels end -->
 </td></tr></table>
 <!--msg.export('some-filename.py','webgui,python,servo01')-->
