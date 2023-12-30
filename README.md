@@ -14,9 +14,12 @@ MORE INFO : http://myrobotlab.org/service/InMoov2
 stateDiagram
     [*] --> boot: boot started InMoov2 and finished processing configuration
     boot --> wake: wake
+    boot --> boot: !ready
     wake --> idle: idle
     wake --> firstInit: firstInit
     firstInit --> idle: idle
+    idle --> telepresence: telepresence_start
+    telepresence --> idle: telepresence_stop
     idle --> powerDown: powerDown
     idle --> sleep: sleep
     idle --> random: random
