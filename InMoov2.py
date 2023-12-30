@@ -52,41 +52,29 @@ def onPythonMessage(msg):
     """
     try:
 
-        method = msg.get("method")
-        sender = msg.get("sender")
-        data = msg.get("data")
+        method_name = msg.get('method')
+        sender = msg.get('sender')
+        params_array = msg.get('data', [])
+        params_array.insert(0, sender)
 
-        if data and len(data) > 0:
-            cmd = f"{method}('{sender}', (*{data})"
-            exec(cmd, globals())
-            # exec(method)(sender, data)
+        # Check if the method exists in the global namespace
+        if method_name in globals() and callable(globals()[method_name]):
+            cmd = f"result = {method_name}(*params_array)"
+            print(f'onPythonMessage cmd {cmd}')
+
+            # Execute the code with the globals parameter
+            exec_globals = globals()
+            exec_globals['params_array'] = params_array
+            exec(cmd, exec_globals)
+
+            # Access the result from the executed code
+            # result = exec_globals['result']
+            # print("Result:", result)  # Output the result (you can modify this as needed)
         else:
-            cmd = f"{method}('{sender}')"
-
-        print(f'onPythonMessage cmd {cmd}')
-        exec(cmd, globals())
+            print(f"Method '{method_name}' not found or not callable.")
 
     except Exception as e:
         print(e)
-
-
-def onHeartbeat(sender: str, heartbeat):
-    """onHeartbeat a incremental timer used to drive
-    state machines and other time based events.
-    Heartbeats here do not begin until after boot.
-
-    Args:
-        sender (string): the robot's name sending the heartbeat
-    """
-    print("onHeartbeat", sender)
-
-    robot = runtime.getService(sender)
-    neoPixel = robot.getPeer("neoPixel")
-
-    if neoPixel:
-        neoPixel.flash("heartbeat")
-    # if robot.getState() == "first_init":
-    #     robot.setRandomIdle()
 
 
 # FIXME - global method not name specific
@@ -434,6 +422,51 @@ class PythonRuntime(metaclass=SingletonMeta):
 
 
 python_runtime = PythonRuntime()
+
+
+def onHeartbeat(sender: str, heartbeat):
+    """onHeartbeat a incremental timer used to drive
+    state machines and other time based events.
+    Heartbeats here do not begin until after boot.
+
+    Args:
+        sender (string): the robot's name sending the heartbeat
+    """
+    print("onHeartbeat", sender, heartbeat)
+
+    robot = runtime.getService(sender)
+    neoPixel = robot.getPeer("neoPixel")
+
+    if neoPixel:
+        count = heartbeat.get("count")
+        if count % 2 == 0:
+            # for matrix
+            # neoPixel.setPixel(count % 128, 200, 23, 200)
+            neoPixel.setPixel(132, 240, 23, 170)
+            neoPixel.setPixel(133, 240, 100, 150)
+            neoPixel.setPixel(138, 240, 23, 170)
+            neoPixel.setPixel(139, 240, 100, 150)
+        else:
+            neoPixel.setPixel(132, 240, 100, 150)
+            neoPixel.setPixel(133, 240, 23, 170)
+            neoPixel.setPixel(138, 240, 100, 150)
+            neoPixel.setPixel(139, 240, 23, 170)
+
+        hash_code = hash(heartbeat.get("state"))
+        hex_hash = hex(hash_code)
+
+        # Extract the last 6 characters to ensure a 6-digit representation
+        state_hash = hex_hash[-6:]
+        print(state_hash)
+        neoPixel.setPixel(134, state_hash)
+        neoPixel.setPixel(135, state_hash)
+        neoPixel.setPixel(136, state_hash)
+        neoPixel.setPixel(137, state_hash)
+
+        # neoPixel.flash("success")
+    # if robot.getState() == "first_init":
+    #     robot.setRandomIdle()
+        neoPixel.writeMatrix()
 
 
 print('loaded InMoov2.py')
