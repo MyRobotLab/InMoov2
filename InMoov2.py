@@ -18,7 +18,6 @@
 # RELOAD SCRIPT
 # with open('src/main/resources/resource/InMoov2/InMoov2.py', 'r') as file:
 #     script_code = file.read()
-
 # exec(script_code)
 
 
@@ -52,17 +51,42 @@ def onPythonMessage(msg):
         msg (_type_): tunnelled message, with data message
     """
     try:
-        if len(msg.get("data")) > 0:
-            print(f'onPythonMessage  {msg.get("method")}({msg.get("sender")},({msg.get("data")})')
+
+        method = msg.get("method")
+        sender = msg.get("sender")
+        data = msg.get("data")
+
+        if data and len(data) > 0:
+            cmd = f"{method}('{sender}', (*{data})"
+            exec(cmd, globals())
+            # exec(method)(sender, data)
         else:
-            print(f'onPythonMessage  {msg.get("method")}({msg.get("sender")})')
-        # untunnelled msg
-        # untunnelled = msg.get[0]("data")
-        # print("untunnelled", untunnelled.get("method"), untunnelled.get("data"))
-        # exec(msg.method)(msg)
-        # exec(code, globals())
+            cmd = f"{method}('{sender}')"
+
+        print(f'onPythonMessage cmd {cmd}')
+        exec(cmd, globals())
+
     except Exception as e:
         print(e)
+
+
+def onHeartbeat(sender: str, heartbeat):
+    """onHeartbeat a incremental timer used to drive
+    state machines and other time based events.
+    Heartbeats here do not begin until after boot.
+
+    Args:
+        sender (string): the robot's name sending the heartbeat
+    """
+    print("onHeartbeat", sender)
+
+    robot = runtime.getService(sender)
+    neoPixel = robot.getPeer("neoPixel")
+
+    if neoPixel:
+        neoPixel.flash("heartbeat")
+    # if robot.getState() == "first_init":
+    #     robot.setRandomIdle()
 
 
 # FIXME - global method not name specific
@@ -347,24 +371,6 @@ def on_sensor_data(data):
     """
     print("on_sensor_data", data)
 
-
-def onHeartbeat(sender: str):
-    """onHeartbeat a incremental timer used to drive
-    state machines and other time based events.
-    Heartbeats here do not begin until after boot.
-
-    Args:
-        sender (string): the robot's name sending the heartbeat
-    """
-    print("onHeartbeat", sender)
-
-    robot = runtime.getService(sender)
-    neoPixel = robot.getPeer("neoPixel")
-
-    if neoPixel:
-        neoPixel.flash("heartbeat")
-    # if robot.getState() == "first_init":
-    #     robot.setRandomIdle()
 
 
 def onPredicate(predicate_event):
