@@ -26,8 +26,6 @@
 
 
 def onPythonMessage(msg):
-    # FIXME - don't know hot to fix yet
-    global python_runtime
     """Initial processing point for all messages.
     Messages are sent from the Java side to the Python side,
     then decoded and routed to the appropriate method.
@@ -37,7 +35,7 @@ def onPythonMessage(msg):
     e.g.
       onCallback('i01', data):
         # msg body
-    
+
     The preferred way would be to use a python side service class where self is the
     first parameter, and the service is returned from the registry.
 
@@ -53,9 +51,13 @@ def onPythonMessage(msg):
     try:
 
         method_name = msg.get('method')
-        sender = msg.get('sender')
-        params_array = msg.get('data', [])
-        params_array.insert(0, sender)
+        name = msg.get('sender')
+        params_array = msg.get('data')
+        if not params_array:
+            params_array = []
+
+        # first parameter will always be InMoov2 name
+        params_array.insert(0, name)
 
         # Check if the method exists in the global namespace
         if method_name in globals() and callable(globals()[method_name]):
@@ -78,16 +80,16 @@ def onPythonMessage(msg):
 
 
 # FIXME - global method not name specific
-def onStartSpeaking(sender, text):
+def onStartSpeaking(name, text):
     global runtime
 
     print("onStartSpeaking", text)
 
     # FIXME FIXME FIXME name delivered as a parameter or
     # make class that is created by the runtime with name
-    i01 = runtime.getService("i01")
+    robot = runtime.getService(name)
 
-    if i01:
+    if robot:
         # i01_neoPixel = i01.getPeer("neoPixel")
         # if i01_neoPixel and i01.getConfig().neoPixelFlashWhenSpeaking:
         # i01_neoPixel.setAnimation("Ironman", 255, 255, 255, 20)
@@ -98,44 +100,44 @@ def onStartSpeaking(sender, text):
         # if 'non ' in text or 'no ' in text or 'nicht ' in text or 'neen ' in text or text=="no" or text=="ei":No()
         
         # force random move while speaking, to avoid conflict with random life gesture
-        if i01.getConfig().robotCanMoveHeadWhileSpeaking:
-            i01_random = runtime.getService("i01.random")
-            if i01_random and i01.getState() != "tracking":
-                i01_random.disableAll()
-                i01_random.enable("i01.setHeadSpeed")
-                i01_random.enable("i01.moveHead")
-                i01_random.enable()
+        if robot.getConfig().robotCanMoveHeadWhileSpeaking:
+            random = robot.getPeer("random")
+            if random and robot.getState() != "tracking":
+                random.disableAll()
+                random.enable("i01.setHeadSpeed")
+                random.enable("i01.moveHead")
+                random.enable()
 
 
 # FIXME - global method not name specific
-def onEndSpeaking(sender, text):
+def onEndSpeaking(name, text):
     global runtime
     print('onEndSpeaking', text)
-    i01 = runtime.getService("i01")
-    i01_random = runtime.getService("i01.random")
-    if i01_random and i01.getState() != "tracking":
-        # i01_random.disable("i01.setHeadSpeed")
-        # i01_random.disable("i01.moveHead")
-        i01_random.disable()
+    robot = runtime.getService(name)
+    random = robot.getPeer("random")
+    if random and robot.getState() != "tracking":
+        # random.disable("i01.setHeadSpeed")
+        # random.disable("i01.moveHead")
+        random.disable()
 
     # if i01:
     #     if i01.getConfig().robotCanMoveHeadWhileSpeaking:
-    #         i01_random = runtime.getService("i01.random")
-    #         if i01_random:
-    #             i01_random.disable()
-    #             i01_random.enable('i01.moveLeftArm')
-    #             i01_random.enable('i01.moveRightArm')
-    #             i01_random.enable('i01.moveLeftHand')
-    #             i01_random.enable('i01.moveRightHand')
-    #             i01_random.enable('i01.moveTorso')
-    #             i01_random.enable('i01.setLeftArmSpeed')
-    #             i01_random.enable('i01.setRightArmSpeed')
-    #             i01_random.enable('i01.setLeftHandSpeed')
-    #             i01_random.enable('i01.setRightHandSpeed')
-    #             i01_random.enable('i01.setTorsoSpeed')
+    #         random = runtime.getService("i01.random")
+    #         if random:
+    #             random.disable()
+    #             random.enable('i01.moveLeftArm')
+    #             random.enable('i01.moveRightArm')
+    #             random.enable('i01.moveLeftHand')
+    #             random.enable('i01.moveRightHand')
+    #             random.enable('i01.moveTorso')
+    #             random.enable('i01.setLeftArmSpeed')
+    #             random.enable('i01.setRightArmSpeed')
+    #             random.enable('i01.setLeftHandSpeed')
+    #             random.enable('i01.setRightHandSpeed')
+    #             random.enable('i01.setTorsoSpeed')
     #             if runtime.isStarted('i01.head'):
-    #                 i01_random.addRandom(200, 1000, "i01", "setHeadSpeed", 8.0, 20.0, 8.0, 20.0, 8.0, 20.0)
-    #                 i01_random.addRandom(200, 1000, "i01", "moveHead", 70.0, 110.0, 65.0, 115.0, 70.0, 110.0)
+    #                 random.addRandom(200, 1000, "i01", "setHeadSpeed", 8.0, 20.0, 8.0, 20.0, 8.0, 20.0)
+    #                 random.addRandom(200, 1000, "i01", "moveHead", 70.0, 110.0, 65.0, 115.0, 70.0, 110.0)
     #         i01_neoPixel = runtime.getService('i01.neoPixel')
     #         if i01.getConfig().neoPixelFlashWhenSpeaking and runtime.isStarted("i01.neoPixel"):
     #             i01_neoPixel.clear()
@@ -143,20 +145,33 @@ def onEndSpeaking(sender, text):
 # Sensor events begin ========================================
 
 
-def on_pir_on(name):
+def onPirOn(name):
+    print(f'onPirOn("{name}")')
     robot = runtime.getService(name)
-    # FIXME - chatBot.getResponse("SYSTEM_EVENT on_start")
-    mouth = robot.getPeer("mouth")
-    mouth.speak("I feel your presence")
-    print('on_pir_on', name)
+    # FIXME - chatBot.getResponse("SYSTEM_EVENT onPirOn")
+    robot.speak("I feel your presence")
+
+    neoPixel = robot.getPeer("neoPixel")
+    if neoPixel:
+        neoPixel.setPixel(130, 120, 200, 150)
+        neoPixel.setPixel(131, 120, 200, 170)
+        neoPixel.setPixel(140, 120, 200, 150)
+        neoPixel.setPixel(141, 120, 200, 170)
+        neoPixel.writeMatrix()
 
 
-def on_pir_off(name):
+def onPirOff(name):
+    print(f'onPirOff("{name}")')
     robot = runtime.getService(name)
-    # FIXME - chatBot.getResponse("SYSTEM_EVENT on_start")
-    mouth = robot.getPeer("mouth")
-    mouth.speak("I'm so alone")
-    print('on_pir_off', name)
+    # FIXME - chatBot.getResponse("SYSTEM_EVENT onPirOff")
+    robot.speak("I'm so alone")
+    neoPixel = robot.getPeer("neoPixel")
+    if neoPixel:
+        neoPixel.setPixel(130, 0, 0, 0)
+        neoPixel.setPixel(131, 0, 0, 0)
+        neoPixel.setPixel(140, 0, 0, 0)
+        neoPixel.setPixel(141, 0, 0, 0)
+        neoPixel.writeMatrix()
 
 # Sensor events end ==========================================
 # Topic events begin ========================================
@@ -188,7 +203,7 @@ def onTopic(topic_event):
 # State change events begin ========================================
 
 
-def onStateChange(state_event):
+def onStateChange(name, state_event):
     """The main router for state changes
     it calls the appropriate method based on the state change
     Hooked to InMoov2.publishStateChange
@@ -196,12 +211,11 @@ def onStateChange(state_event):
     Args:
         data (InMoov2State): contains src and state
     """
+    print(f"onStateChange {name} {state_event}")
 
     # Python 2 unicode pain
-    state = str(state_event.state)
-    src = str(state_event.src)
-
-    robot = runtime.getService(src)
+    state = str(state_event.get("state"))
+    robot = runtime.getService(name)
 
     # leaving state changes
     fsm = robot.getPeer("fsm")
@@ -232,10 +246,8 @@ def onStateChange(state_event):
     if mouth:
         mouth.speak("leaving " + leavingState + " state and entering " + state)
 
-    print("on_state_change", src, state)
-
     # call the new state handler
-    eval("on_" + state + "('" + src + "')")
+    eval("on_" + state + "('" + name + "')")
 
 
 def on_start(name):
@@ -360,7 +372,6 @@ def on_sensor_data(data):
     print("on_sensor_data", data)
 
 
-
 def onPredicate(predicate_event):
     robot = runtime.getService(predicate_event.src)
     robot.info("predicate " + predicate_event.name + " changed to " + predicate_event.value)
@@ -401,56 +412,38 @@ def on_new_user(data):
     chatBot.setPredicate("botname", chatBot.getPredicate("human", "botname"))
 
 
-class SingletonMeta(type):
-    _instances = {}
-
-    def __call__(cls, *args, **kwargs):
-        if cls not in cls._instances:
-            cls._instances[cls] = super().__call__(*args, **kwargs)
-        return cls._instances[cls]
-
-
-class PythonRuntime(metaclass=SingletonMeta):
-    def __init__(self):
-        self.registry = {}
-
-    def register(self, name, service):
-        self.registry[name] = service
-
-    def get_service(self, name):
-        return self.registry[name]
-
-
-python_runtime = PythonRuntime()
-
-
-def onHeartbeat(sender: str, heartbeat):
+def onHeartbeat(name: str, heartbeat):
     """onHeartbeat a incremental timer used to drive
     state machines and other time based events.
     Heartbeats here do not begin until after boot.
 
     Args:
-        sender (string): the robot's name sending the heartbeat
+        name (string): the robot's name sending the heartbeat
     """
-    print("onHeartbeat", sender, heartbeat)
+    print(f"onHeartbeat {name} {heartbeat}")
 
-    robot = runtime.getService(sender)
+    robot = runtime.getService(name)
     neoPixel = robot.getPeer("neoPixel")
+    errors = heartbeat.get("errors")
+    count = heartbeat.get("count")
 
     if neoPixel:
-        count = heartbeat.get("count")
         if count % 2 == 0:
-            # for matrix
-            # neoPixel.setPixel(count % 128, 200, 23, 200)
+            # heartbeat tick
             neoPixel.setPixel(132, 240, 23, 170)
             neoPixel.setPixel(133, 240, 100, 150)
             neoPixel.setPixel(138, 240, 23, 170)
             neoPixel.setPixel(139, 240, 100, 150)
         else:
+            # heartbeat tock
             neoPixel.setPixel(132, 240, 100, 150)
             neoPixel.setPixel(133, 240, 23, 170)
             neoPixel.setPixel(138, 240, 100, 150)
             neoPixel.setPixel(139, 240, 23, 170)
+
+        if len(errors):
+            for i in range(0, len(errors)):
+                neoPixel.setPixel(118 + i, 240, 0, 0)
 
         hash_code = hash(heartbeat.get("state"))
         hex_hash = hex(hash_code)

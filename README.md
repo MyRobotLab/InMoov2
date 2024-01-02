@@ -16,24 +16,23 @@ stateDiagram
     boot --> wake: wake
     boot --> boot: !ready
     wake --> idle: idle
-    wake --> firstInit: firstInit
-    firstInit --> idle: idle
+    wake --> first_init: first_init
+    first_init --> idle: idle
     idle --> telepresence: telepresence_start
     telepresence --> idle: telepresence_stop
-    idle --> powerDown: powerDown
+    idle --> power_down: power_down
     idle --> sleep: sleep
     idle --> random: random
     random --> idle: idle
     sleep --> wake: wake
-    sleep --> powerDown: powerDown
-    powerDown --> shutdown: shutdown
+    sleep --> power_down: power_down
+    power_down --> shutdown: shutdown
     shutdown --> [*]
 ```
 
 ### boot
-Boot state starts after all configuration has processed.
-All services started and all errors during startup are reported,
-and the main heartbeat timer is started.
+Boot state is when all configuration is processing.
+All services will be started if configured before leaving this state.
 
 * set autoDisable true for all servos
 * copy over default config sets
@@ -43,20 +42,15 @@ and the main heartbeat timer is started.
 * start inactivity timer
 * start health check
 
-```python
-i01 = runtime.start("i01", "InMoov2")
-# or
-runtime.startConfig("myInMoovConfig")
-```
-
 
 ### wake
-Wake state
+Waking from slumber, sensors begin to flow in data and the robot should try to identify
+where it is and switch their attention to the person of focus.
 
 * if ear has been started, start listening
 
 
-### firstInit
+### first_init
 First init is the first time InMoov and the chatBot is started and
 the predicate first_init is set to true.
 
