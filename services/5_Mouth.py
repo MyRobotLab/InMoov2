@@ -93,9 +93,17 @@ def onStartSpeaking(text):
                   i01_random.addRandom(100, 500, "i01", "moveHead", 70.0, 110.0, 65.0, 115.0, 70.0, 110.0)
                   i01_random.enable('i01.setHeadSpeed')
                   i01_random.enable('i01.moveHead')
+                  i01_random.addRandom("randomBlink", 5000, 30000, "python", "exec", "blink()")
+                  i01_random.enable('randomBlink')
+                  i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "upperLipU()", "upperLipD()", "cheeksU()", "cheeksD()", "forheadsU()", "forheadsD()")
+                  i01_random.enable('randomFace')
 
           else:
               i01_random.addRandom(200, 1000, "i01", "setHeadSpeed", 8.0, 20.0, 8.0, 20.0, 8.0, 20.0)
               i01_random.addRandom(100, 500, "i01", "moveHead", 70.0, 110.0, 65.0, 115.0, 70.0, 110.0)
               i01_random.enable('i01.setHeadSpeed')
               i01_random.enable('i01.moveHead')
+              i01_random.addRandom("randomBlink", 5000, 30000, "python", "exec", "blink()")
+              i01_random.enable('randomBlink')
+              i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "upperLipU()", "upperLipD()", "cheeksU()", "cheeksD()", "forheadsU()", "forheadsD()")
+              i01_random.enable('randomFace')
