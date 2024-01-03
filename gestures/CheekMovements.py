@@ -177,7 +177,7 @@ def forheadsU():
 def forheadsD():
   if runtime.isStarted('i01.head.forheadLeft') and runtime.isStarted('i01.head.forheadRight'):
     i01_head_forheadRight.moveTo(0)
-    i01_head_forheadLeft.moveToo(0)
+    i01_head_forheadLeft.moveTo(0)
     sleep(0.01)
 
 #############################################
