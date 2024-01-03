@@ -1088,12 +1088,12 @@
     <srai>TOURNE A DROITE</srai>
   </template>
 </category>
-<category><pattern>ACCÉLÈRE</pattern>
+<category><pattern>RALENTI</pattern>
   <template>
     <oob><mrl><service>python</service><method>exec</method><param>motorsSlowDown()</param></mrl></oob>
   </template>
 </category>
-<category><pattern>RALENTI</pattern>
+<category><pattern>ACCÉLÈRE</pattern>
   <template>
     <oob><mrl><service>python</service><method>exec</method><param>motorsSpeedUp()</param></mrl></oob>
   </template>
