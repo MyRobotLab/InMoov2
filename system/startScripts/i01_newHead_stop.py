@@ -32,10 +32,10 @@ if runtime.isStarted('i01.head.eyelidRightLower'):
   runtime.release("i01.head.eyelidRightLower")
 
 ## stop the eyebrows
-if runtime.isStarted('i01.head.eyeBrowRight'):
-  runtime.release("i01.head.eyeBrowRight")
-if runtime.isStarted('i01.head.eyeBrowLeft'):
-  runtime.release("i01.head.eyeBrowLeft")
+if runtime.isStarted('i01.head.eyebrowRight'):
+  runtime.release("i01.head.eyebrowRight")
+if runtime.isStarted('i01.head.eyebrowLeft'):
+  runtime.release("i01.head.eyebrowLeft")
 
 
 ## stop the cheeks

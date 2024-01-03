@@ -35,8 +35,8 @@ if runtime.isStarted('i01.head.eyelidLeft') and runtime.isStarted('i01.head.eyel
   i01_head_eyelidRight.sync(i01_head_eyelidRightUpper)
 
 ## start the eyebrows
-i01_head_eyeBrowRight = runtime.start('i01.head.eyeBrowRight','Servo')
-i01_head_eyeBrowLeft = runtime.start('i01.head.eyeBrowLeft','Servo')
+i01_head_eyebrowRight = runtime.start('i01.head.eyebrowRight','Servo')
+i01_head_eyebrowLeft = runtime.start('i01.head.eyebrowLeft','Servo')
 
 ## start the cheeks
 i01_head_cheekRight = runtime.start('i01.head.cheekRight','Servo')
