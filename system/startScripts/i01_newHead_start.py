@@ -9,7 +9,6 @@
 ## start the eyes
 i01_head_eyeLeftUD = runtime.start('i01.head.eyeLeftUD','Servo')
 i01_head_eyeLeftLR = runtime.start('i01.head.eyeLeftLR','Servo')
-i01_head_eyeLeftUD = runtime.start('i01.head.eyeLeftUD','Servo')
 i01_head_eyeRightUD = runtime.start('i01.head.eyeRightUD','Servo')
 i01_head_eyeRightLR = runtime.start('i01.head.eyeRightLR','Servo')
 
