@@ -2,11 +2,11 @@
 
 def neutral():
   cheeksNeutral()
-  upperLipC()
+  upperLipNeutral()
   eyelidsNeutral()
   eyesC()
   browsC()
-  forHeadC()
+  forheadsNeutral()
 
 def anger():
   eyelidsHalfShut()
@@ -26,7 +26,7 @@ def blinkRight():
 
 def disgust():
   upperLipD()
-  forHeadD()
+  forheadsD()
   cheekRightU()
   browRightD()
   lowerEyelidRightClose()
@@ -35,7 +35,7 @@ def fear():
   eyelidsOpen()
   cheeksD()
   browsU()
-  forHeadU()
+  forheadsU()
 
 def sad():
   upperEyelidsClose()
@@ -62,13 +62,13 @@ def sleeping():
 def surprise():
   browsU()
   upperLipU()
-  forHeadU()
+  forheadsU()
   if runtime.isStarted('i01.head'):
     i01_head_jaw.moveTo(70)
 
 def suspicious():
   upperLipD()
-  forHeadD()
+  forheadsRULD()
   cheekLeftU()
   browsRULD()
   eyelidsLeftOpen()
@@ -82,7 +82,8 @@ def unamused():
 
 def wake():
   blink() 
-#def aah():
 
-#def bigAah():  
-
+#def contempt():
+#def anxiety():
+#def disapointment():
+#def helplessness():
