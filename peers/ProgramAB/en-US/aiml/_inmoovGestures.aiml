@@ -149,12 +149,12 @@
     <oob><mrl><service>python</service><method>exec</method><param>motorsTurnRight()</param></mrl></oob>
   </template>
 </category>
-<category><pattern>SPEED UP</pattern>
+<category><pattern>SLOW DOWN</pattern>
   <template>
     <oob><mrl><service>python</service><method>exec</method><param>motorsSlowDown()</param></mrl></oob>
   </template>
 </category>
-<category><pattern>SLOW DOWN</pattern>
+<category><pattern>SPEED UP</pattern>
   <template>
     <oob><mrl><service>python</service><method>exec</method><param>motorsSpeedUp()</param></mrl></oob>
   </template>
