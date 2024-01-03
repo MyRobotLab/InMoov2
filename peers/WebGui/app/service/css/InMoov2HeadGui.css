@@ -174,6 +174,12 @@
     top:228px;
 }
 
+#forheadRightDot{
+    position:absolute;
+    right:312px;
+    top:188px;
+}
+
 #jawDot{
     position:absolute;
     left: 261px;
@@ -212,6 +218,12 @@
     padding: 0px 55px;
     left: 128px;
     top: 232px;
+}
+#forheadRightLine{
+    border-width: 0 3px 0px 0;
+    padding: 80px 0px;
+    right: 394px;
+    top: 115px;
 }
 #jawLine{
     border-width: 0 0px 3px 0;
@@ -253,6 +265,14 @@
     background-color: #FF0000;
     animation: none;
 }
+#forheadRightButton{
+    right: 481px;
+    top: 177px;
+}
+#forheadRightButton:hover + #forheadRightDot{
+    background-color: #FF0000;
+    animation: none;
+}
 
 #jawButton{
     right: 474px;
@@ -288,7 +308,7 @@
     left:312px;
     top:329px;
 }
-#forHeadDot{
+#forheadLeftDot{
     position:absolute;
     left:312px;
     top:188px;
@@ -348,7 +368,7 @@
     left: 389px;
     top: 266px;
 }
-#forHeadLine{
+#forheadLeftLine{
     border-width: 0 3px 0px 0;
     padding: 70px 0px;
     left: 389px;
@@ -417,11 +437,11 @@
     animation: none;
 }
 
-#forHeadButton{
+#forheadLeftButton{
     left: 455px;
     top: 177px;
 }
-#forHeadButton:hover + #forHeadDot{
+#forheadLeftButton:hover + #forheadLeftDot{
     background-color: #FF0000;
     animation: none;
 }
