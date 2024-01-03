@@ -2,7 +2,7 @@
 
 ###BOTH CHEEKS###
 
-#CheeksNeutral()                    /       Rest Cheeks
+#cheeksNeutral()                    /       Rest Cheeks
 #cheeksC()                          /       Centers Cheeks
 #cheeksU()                          /       Raises Cheeks
 #cheeksD()                          /       Lowers Cheeks

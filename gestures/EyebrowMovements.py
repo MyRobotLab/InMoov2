@@ -11,8 +11,6 @@
 #browsC()                          /       Centers Eyebrows
 #browsU()                          /       Raises Eyebrows
 #browsD()                          /       Lowers Eyebrows
-#browinnerUouterD()                /       Raises Inner Eyebrows / Lowers Outer Eyebrows
-#browsouterUinnerD()               /       Raises Outer Eyebrows / Lowers Inner Eyebrows
 #browsLURD()                       /       Raises left Eyebrow   / Lowers right Eyebrow
 #browsRULD()                       /       Raises right Eyebrow  / Lowers left Eyebrow
 
@@ -20,14 +18,14 @@
 
 #browLeftC()                       /       Centers left Eyebrow
 #browLeftU()                       /       Raises left Eyebrow
-#BrowLeftD()                    /       Lowers left Eyebrow
+#BrowLeftD()                       /       Lowers left Eyebrow
 
 
 ###RIGHT EYEBROW ONLY### 
 
-#BrowRightC()                   /       Centers right Eyebrow
-#BrowRightU()                   /       Raises right Eyebrow
-#BrowRightD()                   /       Lowers right Eyebrow
+#browRightC()                   /       Centers right Eyebrow
+#browRightU()                   /       Raises right Eyebrow
+#browRightD()                   /       Lowers right Eyebrow
 
 ###BOTH EYEBROWS###
 def browsC():
