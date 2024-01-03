@@ -28,6 +28,10 @@
             <div id="headIndicator" ng-show="isHead()" ng-click="setPanel('head')" class="rectangleHeadIndicatorActive preventHeadDragSelect">Head</div>
             <div id="headIndicator" ng-show="!isHead()" ng-click="setPanel('head')" class="rectangleHeadIndicator preventHeadDragSelect">Head</div>
 
+            <div id="forheadRightButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('forheadRight')">forheadRight</div>
+            <div id="forheadRightDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+            <div id="forheadRightLine" ng-show="isHead()" class="leftHeadLine preventHandDragSelect"></div>
+
             <div id="eyelidRightUpperButton" class="dotHeadButtons rightHeadSide preventHeadDragSelect" ng-click="setPanel('eyelidRightUpper')">eyelidRightUpper</div>
             <div id="eyelidRightUpperDot" class="dotHeadEnabled preventHeadDragSelect"></div>
             <div id="eyelidRightUpperLine" ng-show="isHead()" class="rightHeadLine preventHandDragSelect"></div>
@@ -49,9 +53,9 @@
             <div id="jawLine" ng-show="isHead()" class="rightHeadLine preventHandDragSelect"></div>
 
             <!-- Left -->
-            <div id="forHeadButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('forHead')">forHead</div>
-            <div id="forHeadDot" class="dotHeadEnabled preventHeadDragSelect"></div>
-            <div id="forHeadLine" ng-show="isHead()" class="leftHeadLine preventHandDragSelect"></div>
+            <div id="forheadLeftButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('forheadLeft')">forheadLeft</div>
+            <div id="forheadLeftDot" class="dotHeadEnabled preventHeadDragSelect"></div>
+            <div id="forheadLeftLine" ng-show="isHead()" class="leftHeadLine preventHandDragSelect"></div>
 
             <div id="eyelidLeftUpperButton" class="dotHeadButtons leftHeadSide preventHeadDragSelect" ng-click="setPanel('eyelidLeftUpper')">eyelidLeftUpper</div>
             <div id="eyelidLeftUpperDot" class="dotHeadEnabled preventHeadDragSelect"></div>
@@ -108,12 +112,12 @@
 </tr>
 </table>    
 <!------------------------ headGui end ------------------------------>
-<!------------------------ forHead begin ------------------------------>
-<table ng-show="showPanel('forHead')" class="inmoov-sub-panel table table-striped">
+<!------------------------ forheadLeft begin ------------------------------>
+<table ng-show="showPanel('forheadLeft')" class="inmoov-sub-panel table table-striped">
 <tr>
     <td>
         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
-        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('forHead')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('forheadLeft')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
         <!--------------------------------------------------------------->
         <img src="../InMoov2Head.png"/>
         <label>head is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -122,16 +126,40 @@
 </tr>    
 <tr>
     <td>
-        <div class="tab-content" service-body panel="mrl.getPanel('i01.head.forHead')"></div>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.head.forheadLeft')"></div>
     </td>
 </tr>
 <tr>
     <td>
-        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.forHead')">Save forHead Config</button>
+        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.forheadLeft')">Save forheadLeft Config</button>
     </td>
 </tr>
 </table>
-<!------------------------forHead end ------------------------------>
+<!------------------------forheadLeft end ------------------------------>
+<!------------------------ forheadRight begin ------------------------------>
+<table ng-show="showPanel('forheadRight')" class="inmoov-sub-panel table table-striped">
+<tr>
+    <td>
+        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+        <img src="../img/InMoov2/markerBlue_right.png" onmouseover="this.src='../img/InMoov2/markerGreen_right.png';" onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14" ng-click="filterPeers('forheadRight')"/><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';" onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)"/>
+        <!--------------------------------------------------------------->
+        <img src="../InMoov2Head.png"/>
+        <label>head is:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img ng-src="{{(isHead)?'../../green.png':'../../red.png'}}"/>
+    </td>
+</tr>    
+<tr>
+    <td>
+        <div class="tab-content" service-body panel="mrl.getPanel('i01.head.forheadRight')"></div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.head.forheadRight')">Save forheadRight Config</button>
+    </td>
+</tr>
+</table>
+<!------------------------forheadRight end ------------------------------>
 <!------------------------ eyeLeftLR begin ------------------------------>
 <table ng-show="showPanel('eyeLeftLR')" class="inmoov-sub-panel table table-striped">    
 <tr>
