@@ -12,7 +12,7 @@ def anger():
   eyelidsHalfShut()
   upperLipU()
   cheeksD()
-  browsD()
+  browsD() 
 
 def blinkLeft():
   browLeftD()
