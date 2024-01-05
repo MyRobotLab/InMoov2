@@ -41,6 +41,18 @@
           </think>
           <img src="../InMoov2/system/pictures/faceExpression/fear.png"></img>
 </li>
+        <li value="sad">
+          <think>
+            <set name="face">sad</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/sad.png"></img>
+</li>
+        <li value="sleeping">
+          <think>
+            <set name="face">sleeping</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/sleeping.png"></img>
+</li>
         <li value="smile">
           <think>
             <set name="face">
@@ -51,12 +63,6 @@
             </set>
           </think>
           <img src="../InMoov2/system/pictures/faceExpression/smileClosed.png"></img>      
-</li>
-        <li value="sad">
-          <think>
-            <set name="face">sad</set>
-          </think>
-          <img src="../InMoov2/system/pictures/faceExpression/sad.png"></img>
 </li>
         <li value="surprise">
           <think>
@@ -70,11 +76,23 @@
           </think>
           <img src="../InMoov2/system/pictures/faceExpression/suspicious.png"></img>
 </li>
+        <li value="thinking">
+          <think>
+            <set name="face">thinking</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/thinking.png"></img>
+</li>
         <li value="unamused">
           <think>
             <set name="face">unamused</set>
           </think>
           <img src="../InMoov2/system/pictures/faceExpression/unamused.png"></img>
+</li>
+        <li value="wake">
+          <think>
+            <set name="face">wake</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/wake.png"></img>
 </li>
       </condition>
       <!--<think>
@@ -131,19 +149,28 @@
     </template>
   </category>
   <category>
-    <pattern>APPSMILE</pattern>
+    <pattern>APPSAD</pattern>
     <template>
       <think>
-        <set name="emotion">smile</set>
+        <set name="emotion">sad</set>
       </think>
       <srai>FACEXPRESSION</srai>
     </template>
   </category>
   <category>
-    <pattern>APPSAD</pattern>
+    <pattern>APPSLEEPING</pattern>
     <template>
       <think>
-        <set name="emotion">sad</set>
+        <set name="emotion">sleeping</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPSMILE</pattern>
+    <template>
+      <think>
+        <set name="emotion">smile</set>
       </think>
       <srai>FACEXPRESSION</srai>
     </template>
@@ -158,10 +185,28 @@
     </template>
   </category>
   <category>
+    <pattern>APPTHINKING</pattern>
+    <template>
+      <think>
+        <set name="emotion">thinking</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
     <pattern>APPUNAMUSED</pattern>
     <template>
       <think>
         <set name="emotion">unamused</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPWAKE</pattern>
+    <template>
+      <think>
+        <set name="emotion">wake</set>
       </think>
       <srai>FACEXPRESSION</srai>
     </template>
