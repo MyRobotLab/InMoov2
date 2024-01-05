@@ -1199,6 +1199,17 @@
 <category><pattern>SYSTEM_SEE_OBJECT</pattern>
 <template><srai>QUE VOIS TU</srai></template>
 </category>
+<category><pattern>LANCE L APPLICATION * </pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>openMyApp('<star/>')</param></mrl></oob></template>
+</category>
+<category>
+<pattern>CHECK_BINDING</pattern>
+  <template>
+    <javascript>function getUptime(){ var Runtime=Java.type ("org.myrobotlab.service.Runtime");
+return Runtime.getUptime();} getUptime();</javascript>
+  </template>
+</category>
+
 <!--This is for servoMixer gestures-->
 <category><pattern>EXECUTE LA GESTUELLE *</pattern>
 <template>Ok<oob><mrl><service>i01.servoMixer</service><method>playGesture</method><param><star/></param></mrl></oob></template>
