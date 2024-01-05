@@ -76,7 +76,7 @@ def suspicious():
 
 def thinking():
   forheadsU()
-  eyelidsU()
+  eyelidsOpen()
   eyesU()
 
 def unamused():
