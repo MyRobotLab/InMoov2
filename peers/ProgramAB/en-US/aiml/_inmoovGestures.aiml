@@ -1401,6 +1401,16 @@
 <category><pattern>CLOSE BOTH HANDS SLOWLY</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>CloseBothHandSlow()</param></mrl></oob></template>
 </category>
+<category><pattern>EXECUTE * </pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>openMyApp('<star/>')</param></mrl></oob></template>
+</category>
+<category>
+<pattern>CHECK_BINDING</pattern>
+  <template>
+    <javascript>function getUptime(){ var Runtime=Java.type ("org.myrobotlab.service.Runtime");
+return Runtime.getUptime();} getUptime();</javascript>
+  </template>
+</category>
 
 <!--This is for servoMixer gestures-->
 <category><pattern>DO GESTURE *</pattern>
