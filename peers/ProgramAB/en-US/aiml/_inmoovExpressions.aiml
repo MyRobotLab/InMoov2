@@ -215,7 +215,7 @@
   <category>
     <pattern>CHANGE FACE EXPRESSIONS</pattern>
     <template>yes, look.
-<random><li>Here I have no expression.<srai>APPNEUTRAL</srai></li><li>I look angry.<srai>APPANGER</srai></li><li>I am winking.<srai>APPACCOMPLICE</srai></li><li>I am disgust.<srai>APPDISGUST</srai></li><li>I am scared.<srai>APPFEAR</srai></li><li>I smile.<srai>APPSMILE</srai></li><li>I am sad.<srai>APPSAD</srai></li><li>I am suspicious.<srai>APPSUSPICIOUS</srai></li><li>I am unamused.<srai>APPUNAMUSED</srai></li></random></template>
+<random><li>Here I have no expression.<srai>APPNEUTRAL</srai></li><li>I look angry.<srai>APPANGER</srai></li><li>I am winking.<srai>APPACCOMPLICE</srai></li><li>I am disgust.<srai>APPDISGUST</srai></li><li>I am scared.<srai>APPFEAR</srai></li><li>I smile.<srai>APPSMILE</srai></li><li>I am sad.<srai>APPSAD</srai></li><li>I am suspicious.<srai>APPSUSPICIOUS</srai><li>I am thinking.<srai>APPTHINKING</srai></li></li><li>I am unamused.<srai>APPUNAMUSED</srai></li></random></template>
   </category>
   <category>
     <pattern># FACE EXPRESSION</pattern>
