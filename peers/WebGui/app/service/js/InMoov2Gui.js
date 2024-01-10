@@ -13,6 +13,10 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
 
     let firstTime = true
 
+    $scope.batteryLevel = 0
+    $scope.currentState = "boot"
+    $scope.systemEvent = null
+
     $scope.peer = peer
     $scope.mrl = mrl
     $scope.peerConfig = {}
@@ -265,12 +269,24 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
             _self.updateState(data)
             $scope.$apply()
             break
+        case 'onOnStateChange':
+            $scope.currentState = data
+            $scope.$apply()
+            break
+        case 'onSystemEvent':
+            $scope.systemEvent = data
+            $scope.$apply()
+            break
         case 'onServiceTypeNamesFromInterface':
             $scope.speechTypes = data.serviceTypes;
             $scope.$apply()
             break
         case 'onText':
             $scope.onText = data;
+            $scope.$apply()
+            break
+        case 'onBatteryLevel':
+            $scope.batteryLevel = data;
             $scope.$apply()
             break
         case 'onVoices':
@@ -357,9 +373,13 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     mrl.subscribe(mrl.getRuntime().name, 'getServiceTypeNamesFromInterface');
     mrl.subscribeToServiceMethod(_self.onMsg, mrl.getRuntime().name, 'getServiceTypeNamesFromInterface');
 
+    msg.subscribe('onStateChange')
+    msg.subscribe('publishSystemEvent')
+    
     msg.subscribe('getPeerConfig')
     msg.subscribe('publishText')
     msg.subscribe('publishPeerStarted')
+    msg.subscribe('publishBatteryLevel')
     msg.sendTo(mrl.getRuntime().name, 'getServiceTypeNamesFromInterface', 'SpeechSynthesis')
     msg.sendTo(mrl.getRuntime().name, 'publishConfigList')
     msg.send('getPeerConfig', 'opencv')
