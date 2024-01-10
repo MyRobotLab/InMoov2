@@ -250,40 +250,23 @@ def onStateChange(name, state_event):
     eval("on_" + state + "('" + name + "')")
 
 
-def on_start(name):
-    """Start is where all custom activity can begin.
-    It is the first state changed called after boot.
-    At this point InMoov2 service has started and andy
-    runtime configuration has been processed. 
-    The few services required to be running fsm chatBot and python
-    will be running.  Other services may need to be checked
-    e.g.
-      opencv = runtime.getService("i01.opencv")
-      if opencv:
-          .... do something
-    Args:
-        name (string): name of service
-    """
+def on_wake(name):
+    """Waking from slumber, sensors begin to flow in data and the robot should try to identify
+        where it is and switch their attention to the person of focus.
+
+        Args:
+            name (string): name of InMoov2 robot
+        """
     robot = runtime.getService(name)
     chatbot = robot.getPeer("chatBot")
-    # FIXME - chatBot.getResponse("SYSTEM_EVENT on_start")
-    mouth = robot.getPeer("mouth")
     fsm = robot.getPeer("fsm")
 
-    # iterate through all current started peers
-    # and add subscriptions to this service ?
-    # remove all the python subscriptions from InMoov2Config ?
+    chatbot.getResponse("WAKE_UP")
+    print("on_wake state change from", name)
 
-    # FIXME - chatBot.getResponse("SYSTEM_EVENT on_start")
-    if mouth:
-        mouth.speak("I am starting")
-    print("on_start state change from", name)
-    # TODO - make a boot report and give it - errors and warnings ?
-    # TODO - reporting in led display or verbal or wait for verbal
+    first_init = chatbot.getPredicate("human", "first_init")
 
-    # human by default is the first user and first predicate file
-    # on startup try to identify the user
-    if chatbot.getUsername() == "human":
+    if first_init == "human" or first_init == "started":
         # try to identify user go through FIRST_INIT
         fsm.fire("first_init")
     else:
@@ -307,19 +290,12 @@ def on_first_init(name):
     """
     robot = runtime.getService(name)
     chatbot = robot.getPeer("chatBot")
-    chatbot.getResponse("NEW_USER")
+    chatbot.getResponse("FIRST_INIT")
 
     # do anything else desired
     # generate picture data of the user
     # go through personal questionare
     # e.g. ask 
-
-
-def on_wake(name):
-    robot = runtime.getService(name)
-    chatbot = robot.getPeer("chatBot")
-    chatbot.getResponse("WAKE_UP")
-    print("on_wake state change from", name)
 
 
 def on_idle(name):
@@ -411,6 +387,9 @@ def on_new_user(data):
     chatBot.setUser(data[0]) # name
     chatBot.setPredicate("botname", chatBot.getPredicate("human", "botname"))
 
+def onClassification(name: str, classification):
+    print(f"onClassification {name} {classification}")
+    # get response hello classification.label if confidence > x
 
 def onHeartbeat(name: str, heartbeat):
     """onHeartbeat a incremental timer used to drive
