@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+      <category>
+            <pattern>WHAT IS THE TOPIC</pattern>
+            <template>Topic is <get name="topic" />
+            </template>
+      </category>
+      <category>
+            <pattern>SET THE TOPIC TO *</pattern>
+            <template>
+                  <think>
+                        <set name="topic">
+                              <star />
+                        </set>
+                  </think> OK, I
+                  have set the topic to <star />
+            </template>
+      </category>
+
+      <category>
+            <pattern>SET TOPIC TO *</pattern>
+            <template> current topic is now <star />
+              <think>
+                        <set name="topic">
+                              <star />
+                        </set>
+                  </think>
+            </template>
+      </category>
+
+      <category>
+            <pattern>BE A *</pattern>
+            <template> I am now a <star />
+              <think>
+                        <set name="topic">
+                              <star />
+                        </set>
+                  </think>
+            </template>
+      </category>
+
+      <category>
+            <pattern>BE *</pattern>
+            <template> I am now <star />
+              <think>
+                        <set name="topic">
+                              <star />
+                        </set>
+                  </think>
+            </template>
+      </category>
+
+
+      <topic name="Shakespeare">
+            <category>
+                  <pattern>*</pattern>
+                  <template>
+                        <oob>
+                        <mrl>
+                              <service>python</service>
+                              <method>exec</method>
+                              <param>i01_gpt3.setConfigValue("prefix", "answer me as a Shakespeare would:")</param>
+                        </mrl>
+                        <mrl>
+                              <service>python</service>
+                              <method>exec</method>
+                              <param>i01_gpt3.onText("<star />")</param>
+                        </mrl>
+                        </oob>
+                  </template>
+            </category>
+            <category>
+                  <pattern>SET TOPIC TO *</pattern>
+                  <template> current topic is now <star />
+                <think>
+                              <set name="topic">
+                                    <star />
+                              </set>
+                        </think>
+                  </template>
+            </category>
+      </topic>
+
+      <topic name="curmudgeon">
+            <category>
+                  <pattern>*</pattern>
+                  <template>
+                        <oob>
+                        <mrl>
+                              <service>python</service>
+                              <method>exec</method>
+                              <param>i01_gpt3.setConfigValue("prefix", "answer me as a grumpy curmudgeon would:")</param>
+                        </mrl>
+                        <mrl>
+                              <service>python</service>
+                              <method>exec</method>
+                              <param>i01_gpt3.onText("<star />")</param>
+                        </mrl>
+                        </oob>
+                  </template>
+            </category>
+            <category>
+                  <pattern>SET TOPIC TO *</pattern>
+                  <template> current topic is now <star />
+                <think>
+                              <set name="topic">
+                                    <star />
+                              </set>
+                        </think>
+                  </template>
+            </category>
+      </topic>
+
+      <topic name="pirate">
+            <category>
+                  <pattern>*</pattern>
+                  <template>
+                        <oob>
+                        <mrl>
+                              <service>python</service>
+                              <method>exec</method>
+                              <param>i01_gpt3.setConfigValue("prefix", "answer me as a pirate would:")</param>
+                        </mrl>
+                        <mrl>
+                              <service>python</service>
+                              <method>exec</method>
+                              <param>i01_gpt3.onText("<star />")</param>
+                        </mrl>
+                        </oob>
+                  </template>
+            </category>
+            <category>
+                  <pattern>SET TOPIC TO *</pattern>
+                  <template> current topic is now <star />
+                <think>
+                              <set name="topic">
+                                    <star />
+                              </set>
+                        </think>
+                  </template>
+            </category>
+      </topic>
+
+
+
+      <topic name="butler">
+            <category>
+                  <pattern>*</pattern>
+                  <template>
+                        <oob>
+                        <mrl>
+                              <service>python</service>
+                              <method>exec</method>
+                              <param>i01_gpt3.setConfigValue("prefix", "answer me as a butler would, always as sir:")</param>
+                        </mrl>
+                        <mrl>
+                              <service>python</service>
+                              <method>exec</method>
+                              <param>i01_gpt3.onText("<star />")</param>
+                        </mrl>
+                        </oob>
+                  </template>
+            </category>
+            <category>
+                  <pattern>SET TOPIC TO *</pattern>
+                  <template> current topic is now <star />
+                <think>
+                              <set name="topic">
+                                    <star />
+                              </set>
+                        </think>
+                  </template>
+            </category>
+      </topic>
+
+
+      <topic name="smartass">
+            <category>
+                  <pattern>*</pattern>
+                  <template>
+                        <oob>
+                        <mrl>
+                              <service>python</service>
+                              <method>exec</method>
+                              <param>i01_gpt3.setConfigValue("prefix", "answer me as a witty smart ass would:")</param>
+                        </mrl>
+                        <mrl>
+                              <service>python</service>
+                              <method>exec</method>
+                              <param>i01_gpt3.onText("<star />")</param>
+                        </mrl>
+                        </oob>
+                  </template>
+            </category>
+            <category>
+                  <pattern>SET TOPIC TO *</pattern>
+                  <template> current topic is now <star />
+                <think>
+                  <set name="topic"><star /></set>
+                  </think>
+                  </template>
+            </category>
+
+      </topic>
+
+      <category>
+            <pattern>SET MY NAME TO *</pattern>
+            <template> your name is now <star />
+              <think>
+                        <set name="name">
+                              <star />
+                        </set>
+                  </think>
+            </template>
+      </category>
+      <category>
+            <pattern>WHATS YOUR NAME</pattern>
+            <template>
+                  <srai>WHAT IS YOUR NAME</srai>
+            </template>
+      </category>
+      <category>
+            <pattern>YOUR NAME</pattern>
+            <template>
+                  <srai>WHAT IS YOUR NAME</srai>
+            </template>
+      </category>
+      <category>
+            <pattern>WHAT IS YOUR NAME</pattern>
+            <template>
+                  <random>
+                        <li>I am</li>
+                        <li>Call me</li>
+                        <li>My name is</li>
+                        <li>I am called</li>
+                        <li>People call me</li>
+                        <li>You can call me</li>
+                  </random>
+                  <condition name="customname">
+                        <li value="unknown">
+                              <get name="botname" />.</li>
+                        <li>
+                              <get name="customname" />.</li>
+                  </condition>
+            </template>
+      </category>
+
+
+</aiml>

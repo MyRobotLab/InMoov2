@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+      <category>
+            <pattern>BOOTUP</pattern>
+            <template>
+                  <think>
+                        <set name="topic">BootUp</set>
+                  </think>
+                  BOOTUP
+            </template>
+      </category>
+      <topic name="BootUp">
+            <category>
+                  <pattern>ERROR * </pattern>
+                  <template>ERROR <star/>
+                  </template>
+            </category>
+
+            <category>
+                  <pattern>ERRORREPORT</pattern>
+                  <template>ERRORREPORT</template>
+            </category>
+
+            <!-- leaving boot up state -->
+            <category>
+                  <pattern>SYSTEM_EVENT BootUpCompleted</pattern>
+                  <template>
+                        <think>
+                              <set name="topic">FirstInit</set>
+                        </think>
+                  BootUp completed moving to FirstInit
+                  </template>
+            </category>
+
+      </topic>
+</aiml>            
