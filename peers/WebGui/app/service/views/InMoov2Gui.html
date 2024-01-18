@@ -1043,6 +1043,41 @@
 <!------------------------ life service end ------------------------------>
 <!------------------------ InMoov begin ------------------------------>
 <table ng-show="showPanel('InMoov')" class="inmoov-sub-panel table table-striped">
+                <tr><td>
+            <img src="../InMoov2_Icon.png" />
+            <label>Quick Start</label>
+
+                <button class="btn btn-default" ng-show="!state.startFingerStarter"
+                    ng-click="msg.send('startPeers',['mouth', 'right', 'ear','rightHand','chatBot','htmlFilter']);state.startFingerStarter=true;">Start FingerStarter</button>
+                <button class="btn btn-info" ng-show="state.startFingerStarter"
+                    ng-click="msg.send('releasePeers',['ear','rightHand','chatBot','htmlFilter', 'right', 'mouth']);state.startFingerStarter=false;">Stop FingerStarter</button>                                
+
+                <button class="btn btn-default" ng-show="!state.startHead"
+                    ng-click="msg.send('startPeers',['mouth','right','left','ear','chatBot','htmlFilter','head','opencv']);state.startHead=true;">Start Head</button>
+                <button class="btn btn-info" ng-show="state.startHead"
+                    ng-click="msg.send('releasePeers',['ear','chatBot','htmlFilter','head','opencv','right','left','mouth']);state.startHead=false;">Stop Head</button>                                
+                
+                <button class="btn btn-default" ng-show="!state.startLeftHand"
+                    ng-click="msg.send('startPeers',['mouth','left','leftHand','ear','chatBot','htmlFilter','head']);state.startLeftHand=true;">Start Left Hand</button>
+                <button class="btn btn-info" ng-show="state.startLeftHand"
+                    ng-click="msg.send('releasePeers',['leftHand','ear','chatBot','htmlFilter','head','left','mouth']);state.startLeftHand=false;">Stop Left Hand</button>                                
+
+                <button class="btn btn-default" ng-show="!state.startLeftSide"
+                    ng-click="msg.send('startPeers',['mouth','htmlFilter','chatBot','ear','left','leftHand','leftArm','head','mouthControl','neoPixel','opencv','simulator']);state.startLeftSide=true;">Start Left Side</button>
+                <button class="btn btn-info" ng-show="state.startLeftSide"
+                    ng-click="msg.send('releasePeers',['htmlFilter','chatBot','ear','left','leftHand','leftArm','head','mouthControl','neoPixel','opencv','simulator','mouth']);state.startLeftSide=false;">Stop Left Side</button>                                
+                                
+                <button class="btn btn-default" ng-show="!state.startRightSide"
+                    ng-click="msg.send('startPeers',['mouth','htmlFilter','chatBot','ear','right','rightArm','head','mouthControl','neoPixel','opencv','rightHand','simulator']);state.startRightSide=true;">Start Right Side</button>
+                <button class="btn btn-info" ng-show="state.startRightSide"
+                    ng-click="msg.send('releasePeers',['htmlFilter','chatBot','ear','right','rightArm','head','mouthControl','neoPixel','opencv','rightHand','simulator','mouth']);state.startRightSide=false;">Stop Right Side</button>                                
+
+                <button class="btn btn-default" ng-show="!state.startFull"
+                    ng-click="msg.send('startPeers',['mouth','htmlFilter','chatBot','ear','left','right','rightArm','leftHand','leftArm','head','mouthControl','neoPixel','opencv','rightHand','simulator','torso','ultrasonicLeft','ultrasonicRight','imageDisplay']);state.startFull=true;">Start Full</button>
+                <button class="btn btn-info" ng-show="state.startFull"
+                    ng-click="msg.send('releasePeers',['htmlFilter','chatBot','ear','left','right','rightArm','leftHand','leftArm','head','mouthControl','neoPixel','opencv','rightHand','simulator','torso','ultrasonicLeft','ultrasonicRight','imageDisplay','mouth']);state.startFull=false;">Stop Full</button>                                
+                                
+                </td></tr>
     <tr>
         <td>
             <img src="../InMoov2_Icon.png" />
