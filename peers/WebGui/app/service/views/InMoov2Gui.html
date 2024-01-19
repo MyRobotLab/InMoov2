@@ -1073,9 +1073,9 @@
                     ng-click="msg.send('releasePeers',['htmlFilter','chatBot','ear','right','rightArm','head','mouthControl','neoPixel','opencv','rightHand','simulator','mouth']);state.startRightSide=false;">Stop Right Side</button>                                
 
                 <button class="btn btn-default" ng-show="!state.startFull"
-                    ng-click="msg.send('startPeers',['mouth','htmlFilter','chatBot','ear','left','right','rightArm','leftHand','leftArm','head','mouthControl','neoPixel','opencv','rightHand','simulator','torso','ultrasonicLeft','ultrasonicRight','imageDisplay']);state.startFull=true;">Start Full</button>
+                    ng-click="msg.send('startPeers',['mouth','htmlFilter','chatBot','ear','left','right','rightArm','leftHand','leftArm','head','mouthControl','neoPixel','opencv','rightHand','simulator','torso','pir','ultrasonicLeft','ultrasonicRight','imageDisplay']);state.startFull=true;">Start Full</button>
                 <button class="btn btn-info" ng-show="state.startFull"
-                    ng-click="msg.send('releasePeers',['htmlFilter','chatBot','ear','left','right','rightArm','leftHand','leftArm','head','mouthControl','neoPixel','opencv','rightHand','simulator','torso','ultrasonicLeft','ultrasonicRight','imageDisplay','mouth']);state.startFull=false;">Stop Full</button>                                
+                    ng-click="msg.send('releasePeers',['htmlFilter','chatBot','ear','left','right','rightArm','leftHand','leftArm','head','mouthControl','neoPixel','opencv','rightHand','simulator','torso','pir','ultrasonicLeft','ultrasonicRight','imageDisplay','mouth']);state.startFull=false;">Stop Full</button>                                
                                 
                 </td></tr>
     <tr>
