@@ -24,6 +24,8 @@
 # FOR SUBSCRIPTIONS WHOS DESTINATION IS PYTHON
 # SHOULD PROBABLY BE MAINTAINED HERE
 
+import json
+
 
 def onPythonMessage(msg):
     """Initial processing point for all messages.
@@ -50,9 +52,18 @@ def onPythonMessage(msg):
     """
     try:
 
+        if not isinstance(msg, dict):
+            # From Jython msg is a java object
+            # py4j is a dict because it gets decoded from json
+            # normalizing format
+            from org.myrobotlab.codec import CodecUtils
+            msg_json = CodecUtils.toJson(msg)
+            msg = json.loads(msg_json)
+
         method_name = msg.get('method')
         name = msg.get('sender')
         params_array = msg.get('data')
+
         if not params_array:
             params_array = []
 
