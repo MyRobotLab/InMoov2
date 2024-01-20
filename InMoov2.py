@@ -61,8 +61,8 @@ def onPythonMessage(msg):
 
         # Check if the method exists in the global namespace
         if method_name in globals() and callable(globals()[method_name]):
-            cmd = f"result = {method_name}(*params_array)"
-            print(f'onPythonMessage cmd {cmd}')
+            cmd = "result = {}(*params_array)".format(method_name)
+            print("onPythonMessage cmd {}".format(cmd))
 
             # Execute the code with the globals parameter
             exec_globals = globals()
@@ -73,7 +73,7 @@ def onPythonMessage(msg):
             # result = exec_globals['result']
             # print("Result:", result)  # Output the result (you can modify this as needed)
         else:
-            print(f"Method '{method_name}' not found or not callable.")
+            print("method {} not found or not callable.".format(method_name))
 
     except Exception as e:
         print(e)
@@ -146,7 +146,7 @@ def onEndSpeaking(name, text):
 
 
 def onPirOn(name):
-    print(f'onPirOn("{name}")')
+    print('onPirOn("{}")'.format(name))
     robot = runtime.getService(name)
     # FIXME - chatBot.getResponse("SYSTEM_EVENT onPirOn")
     robot.speak("I feel your presence")
@@ -161,7 +161,7 @@ def onPirOn(name):
 
 
 def onPirOff(name):
-    print(f'onPirOff("{name}")')
+    print('onPirOff("{}")'.format(name))
     robot = runtime.getService(name)
     # FIXME - chatBot.getResponse("SYSTEM_EVENT onPirOff")
     robot.speak("I'm so alone")
@@ -211,7 +211,7 @@ def onStateChange(name, state_event):
     Args:
         data (InMoov2State): contains src and state
     """
-    print(f"onStateChange {name} {state_event}")
+    print("onStateChange {} {}".format(name, state_event))
 
     # Python 2 unicode pain
     state = str(state_event.get("state"))
@@ -387,11 +387,13 @@ def on_new_user(data):
     chatBot.setUser(data[0]) # name
     chatBot.setPredicate("botname", chatBot.getPredicate("human", "botname"))
 
-def onClassification(name: str, classification):
-    print(f"onClassification {name} {classification}")
+
+def onClassification(name, classification):
+    print("onClassification {} {}".format(name, classification))
     # get response hello classification.label if confidence > x
 
-def onHeartbeat(name: str, heartbeat):
+
+def onHeartbeat(name, heartbeat):
     """onHeartbeat a incremental timer used to drive
     state machines and other time based events.
     Heartbeats here do not begin until after boot.
@@ -399,7 +401,7 @@ def onHeartbeat(name: str, heartbeat):
     Args:
         name (string): the robot's name sending the heartbeat
     """
-    print(f"onHeartbeat {name} {heartbeat}")
+    print("onHeartbeat {} {}".format(name, heartbeat))
 
     robot = runtime.getService(name)
     neoPixel = robot.getPeer("neoPixel")
