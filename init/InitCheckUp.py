@@ -6,8 +6,6 @@
 # INIT.1 - system dependencies
 ################################
 DEBUG=0
-log = runtime.start("log", "Log")
-runtime.setLogLevel("INFO")
 # libraries import
 execfile('resource/InMoov2/system/Import_Libraries.py')
 # common functions
@@ -63,8 +61,6 @@ execfile('resource/InMoov2/life/sleepMode.py')
 # INIT.4 - great, inmoov is alive
 ################################
 
-if DEBUG==1:runtime.setLogLevel("INFO")
-else:runtime.setLogLevel("ERROR")
 if runtime.isStarted('i01.neopixel'):    
   i01.setNeopixelAnimation("Flash Random", 0, 255, 0, 1)
   sleep(2)
