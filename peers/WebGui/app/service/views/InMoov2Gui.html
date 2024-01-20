@@ -1060,9 +1060,9 @@
                     ng-click="msg.send('releasePeers',['ear','chatBot','htmlFilter','head','opencv','mouth','log','servoMixer']);state.startHead=false;">Stop Head</button>                                
                 
                 <button class="btn btn-default" ng-show="!state.startLeftHand"
-                    ng-click="msg.send('startPeers',['log','mouth','leftHand','ear','chatBot','htmlFilter','head','servoMixer']);state.startLeftHand=true;">Start Left Hand</button>
+                    ng-click="msg.send('startPeers',['log','mouth','leftHand','ear','chatBot','htmlFilter','servoMixer']);state.startLeftHand=true;">Start Left Hand</button>
                 <button class="btn btn-info" ng-show="state.startLeftHand"
-                    ng-click="msg.send('releasePeers',['leftHand','ear','chatBot','htmlFilter','head','mouth','log','servoMixer']);state.startLeftHand=false;">Stop Left Hand</button>                                
+                    ng-click="msg.send('releasePeers',['leftHand','ear','chatBot','htmlFilter','mouth','log','servoMixer']);state.startLeftHand=false;">Stop Left Hand</button>                                
 
                 <button class="btn btn-default" ng-show="!state.startLeftSide"
                     ng-click="msg.send('startPeers',['log','mouth','htmlFilter','chatBot','ear','leftHand','leftArm','head','mouthControl','opencv','simulator','servoMixer']);state.startLeftSide=true;">Start Left Side</button>
