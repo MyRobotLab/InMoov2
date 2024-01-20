@@ -845,7 +845,7 @@
                         <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'oakd')"
                             ng-click="startPeer('oakd')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'oakd')"
-                            ng-click="release('oakd')">on</button>
+                            ng-click="releasePeer('oakd')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'oakd')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'oakd'))">
                                 <img src="settings.png" width="30" />
