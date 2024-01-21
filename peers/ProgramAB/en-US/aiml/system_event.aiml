@@ -72,13 +72,13 @@
 </category>
 
 <category>
-<pattern>SYSTEM_EVENT STARTED MOUTH.AUDIOFILE</pattern>
+<pattern>SYSTEM_EVENT STARTED MOUTH AUDIOFILE</pattern>
 <template>Starting mouth audioFile
 </template>
 </category>
 
 <category>
-<pattern>SYSTEM_EVENT STOPPED MOUTH.AUDIOFILE</pattern>
+<pattern>SYSTEM_EVENT STOPPED MOUTH AUDIOFILE</pattern>
 <template>Stopping mouth audioFile
 </template>
 </category>
