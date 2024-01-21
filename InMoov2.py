@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 # IMPORTANT - Jython could call overloaded methods, Py4j cannot !!!
 # names are guaranteed to be unique
 # the kluge of changing period to underscore
