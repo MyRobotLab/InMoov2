@@ -269,6 +269,7 @@ def on_wake(name):
         Args:
             name (string): name of InMoov2 robot
         """
+    print("on_wake", name)  
     robot = runtime.getService(name)
     chatbot = robot.getPeer("chatBot")
     fsm = robot.getPeer("fsm")
@@ -300,6 +301,7 @@ def on_first_init(name):
     Args:
         name (string): name of InMoov2 robot
     """
+    print("on_first_init", name)
     robot = runtime.getService(name)
     chatbot = robot.getPeer("chatBot")
     chatbot.getResponse("FIRST_INIT")
@@ -311,6 +313,7 @@ def on_first_init(name):
 
 
 def on_idle(name):
+    print("on_idle", name)
     robot = runtime.getService(name)
     mouth = robot.getPeer("mouth")
     mouth.speak("I am idle")
@@ -318,6 +321,7 @@ def on_idle(name):
 
 
 def on_random(name):
+    print("on_random", name)
     robot = runtime.getService(name)
     mouth = robot.getPeer("mouth")
     mouth.speak("I am doing random stuff")
@@ -325,6 +329,7 @@ def on_random(name):
 
 
 def on_sleep(name):
+    print("on_sleep", name)
     robot = runtime.getService(name)
     mouth = robot.getPeer("mouth")
     mouth.speak("I am going to sleep")
@@ -334,6 +339,7 @@ def on_sleep(name):
 
 
 def on_peer_started(name):
+    print("on_peer_started", name)
     robot = runtime.getService(name)
     mouth = robot.getPeer("mouth")
     mouth.speak("I am starting a new service")
@@ -342,6 +348,7 @@ def on_peer_started(name):
 
 
 def on_peer_released(name):
+    print("on_peer_released", name)
     robot = runtime.getService(name)
     mouth = robot.getPeer("mouth")
     mouth.speak("I am releasing a service")
@@ -361,6 +368,7 @@ def on_sensor_data(data):
 
 
 def onPredicate(predicate_event):
+    print('onPredicate', predicate_event)
     robot = runtime.getService(predicate_event.src)
     robot.info("predicate " + predicate_event.name + " changed to " + predicate_event.value)
     # mouth = robot.getPeer("mouth")
@@ -369,6 +377,7 @@ def onPredicate(predicate_event):
 
 
 def onSession(session_event):
+    print('onSession', session_event)  
     robot = runtime.getService(session_event.src)
     mouth = robot.getPeer("mouth")
     chatBot = robot.getPeer("chatBot")
@@ -379,6 +388,7 @@ def onSession(session_event):
 
 
 def onMessage(msg):
+    print('onMessage', msg)
     robot = runtime.getService(msg.sender)
     print("onMessage.method", msg.method)
     print("onMessage.data", msg.data)
@@ -421,6 +431,7 @@ def onHeartbeat(name, heartbeat):
     count = heartbeat.get("count")
 
     if neoPixel:
+        # This is Grog's neopixel matrix - it needs to be removed
         if count % 2 == 0:
             # heartbeat tick
             neoPixel.setPixel(132, 240, 23, 170)
