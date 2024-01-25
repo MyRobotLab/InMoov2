@@ -12,7 +12,8 @@ def printList_EN():
         "PICTURE ON THE LEFT SIDE", "PICTURE ON BOTH SIDES", "LOOK ON YOUR RIGHT SIDE", 
         "LOOK ON YOUR LEFT SIDE", "LOOK IN THE MIDDLE", "LOOK UP", "LOOK DOWN", 
         "TILT YOUR HEAD ON THE RIGHT SIDE", "TILT YOUR HEAD ON THE LEFT SIDE", 
-        "SHAKE HAND", "WHAT DO YOU SEE"
+        "SHAKE HAND", "WHAT DO YOU SEE", "PLAY MUSIC", "STOP MUSIC", "PLAY NEXT SONG", "PLAY RANDOM MUSIC",
+        "SEARCH YOUTUBE *","EXECUTE *","SWITCH TO FRENCH"
         ]
     for i in gesturesList:
         print(i)
@@ -30,7 +31,7 @@ def printList_FR():
         "PHOTO À GAUCHE", "PHOTO DES DEUX COTÉS", "REGARDE SUR TA DROITE",
         "REGARDE SUR TA GAUCHE", "REGARDE AU MILIEU", "REGARDE EN HAUT", "REGARDE EN BAS",
         "PENCHE LA TÊTE À DROITE", "PENCHE LA TÊTE À GAUCHE",
-        "SERRE LA MAIN", "QUE VOIS TU"
+        "SERRE LA MAIN", "QUE VOIS TU", "ENVOYER UN EMAIL A *", "LIRE LES MAILS DE *", "LIRE LES MESSAGES DE *"
         ]
     for i in gesturesList:
         print unicode(i,'utf-8')
