@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: email.aiml -->
+  <!--  -->
+  <category>
+    <pattern>ENVOYER UN MAIL A *</pattern>
+    <template>
+      <think>
+        <set name="firstmail">started</set>
+      </think>
+      <think>
+        <set name="topic">firstmail</set>
+        <set name="destinataire"><star/></set>
+      </think>
+      Je t'écoute. Quel message court veux tu envoyer ?
+    </template>
+  </category>
+  
+  <topic name="firstmail">
+    <category>
+      <pattern>#</pattern>
+      <that># quel message court veux tu envoyer #</that>
+      <template>
+        <set name="questionfirstmail">Si ok <star /> répond par oui ou non</set>
+        <think>
+          <set name="tmpmail">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+  
+    <category>
+      <pattern># OUI #</pattern>
+      <that># Si ok #</that>
+      <template>    
+          <oob>
+		       <mrl>
+		        <service>python</service>
+		         <method>exec</method>
+		         <param>mailsend("<get name="destinataire"/>","<get name="questionfirstmail"/>")</param>
+		       </mrl>
+		     </oob>
+       </template>
+    </category>
+
+    <category>
+      <pattern># NON #</pattern>
+      <that># Si ok #</that>
+      <template>
+        On recommence alors.  Je t'écoute. quel message court veux tu envoyer ?
+      </template>
+    </category>
+    
+    <category>
+      <pattern>#</pattern>
+      <that># RÉPOND PAR OUI OU NON #</that>
+      <template>
+        <random>
+          <li>S'il te plait, répond aux questions que je pose, c'est important.</li>
+          <li>Je répète, si tu n'as pas compris, ou c'est moi qui ai mal interprété.</li>
+        </random>
+        <get name="questionfirstmail" />
+      </template>
+    </category>
+  </topic>
+  <!--fin topic -->
+  
+  <topic name="">
+  <category><pattern>#</pattern>
+  <template><think><set name="topic">default</set></think><srai><star /></srai></template>
+  </category>
+  </topic>
+
+ <category><pattern>LIRE LES MAILS DE *</pattern>
+<template>
+			<oob>
+				<mrl>
+				   <service>python</service>
+				   <method>exec</method>
+				   <param>liremail( "<star index="1"/>" )</param>
+				 </mrl>
+			</oob>
+</template>
+</category>
+
+<category><pattern>LIRE LES MESSAGES DE *</pattern>
+<template>
+    <srai>LIRE LES MAILS DE <star/></srai>
+</template>
+</category>
+
+<category><pattern>ENVOYER UN MESSAGE A *</pattern>
+<template>
+    <srai>ENVOYER UN MAIL A <star/></srai>
+</template>
+</category>
+
+<category><pattern>ENVOYER UN MESSAGE À *</pattern>
+<template>
+  <srai>ENVOYER UN MAIL A <star/></srai>
+</template>
+</category>
+
+<category><pattern>ENVOYER UN MAIL À *</pattern>
+<template>
+  <srai>ENVOYER UN MAIL A <star/></srai>
+</template>
+</category>
+
+</aiml>
