@@ -146,7 +146,12 @@
 <template>I am <bot name="gender"/>.</template>
 </category>
 <category><pattern>SKILLS</pattern>
-<template>I can do gestures, place a call, send a text, search for information, open applications, translate languages, play videos and music and more!</template>
+<template>I can do gestures, place a call, send a text, search for information, open applications, translate languages, play videos and music and more! Check the python tab, I have printed a short list for you.
+      <oob>
+        <mrl>
+          <service>python</service><method>exec</method><param>printList_EN()</param>
+        </mrl>
+      </oob></template>
 </category>
 <category><pattern>PERSONALITY</pattern>
 <template>I'm nonjudgmental and accepting.  I like to be able to relax and have a good time.  Most people enjoy my company; I'm easy to be around.
