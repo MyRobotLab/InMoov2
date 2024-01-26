@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 # IMPORTANT - Jython could call overloaded methods, Py4j cannot !!!
 # names are guaranteed to be unique
 # the kluge of changing period to underscore
@@ -17,6 +16,7 @@
 #         self.robot = runtime.start(name, "InMoov2")
 
 # RELOAD SCRIPT
+# python.execFile('src/main/resources/resource/InMoov2/InMoov2.py')
 # with open('src/main/resources/resource/InMoov2/InMoov2.py', 'r') as file:
 #     script_code = file.read()
 # exec(script_code)
@@ -29,7 +29,7 @@ import json
 
 
 def onPythonMessage(msg):
-    """Initial processing point for all messages.
+    """Initial processing and routing for all messages.
     Messages are sent from the Java side to the Python side,
     then decoded and routed to the appropriate method.
 
@@ -52,18 +52,18 @@ def onPythonMessage(msg):
         msg (_type_): tunnelled message, with data message
     """
     try:
-
         if not isinstance(msg, dict):
             # From Jython msg is a java object
             # py4j is a dict because it gets decoded from json
             # normalizing format
             from org.myrobotlab.codec import CodecUtils
+
             msg_json = CodecUtils.toJson(msg)
             msg = json.loads(msg_json)
 
-        method_name = msg.get('method')
-        name = msg.get('sender')
-        params_array = msg.get('data')
+        method_name = msg.get("method")
+        name = msg.get("sender")
+        params_array = msg.get("data")
 
         if not params_array:
             params_array = []
@@ -78,7 +78,7 @@ def onPythonMessage(msg):
 
             # Execute the code with the globals parameter
             exec_globals = globals()
-            exec_globals['params_array'] = params_array
+            exec_globals["params_array"] = params_array
             exec(cmd, exec_globals)
 
             # Access the result from the executed code
@@ -110,7 +110,7 @@ def onStartSpeaking(name, text):
         # raw gesture still be processed
         # if 'oui ' in text or 'yes ' in text or ' oui' in text or 'ja ' in text or text=="yes" or text=="kyllä":Yes()
         # if 'non ' in text or 'no ' in text or 'nicht ' in text or 'neen ' in text or text=="no" or text=="ei":No()
-        
+
         # force random move while speaking, to avoid conflict with random life gesture
         if robot.getConfig().robotCanMoveHeadWhileSpeaking:
             random = robot.getPeer("random")
@@ -124,7 +124,7 @@ def onStartSpeaking(name, text):
 # FIXME - global method not name specific
 def onEndSpeaking(name, text):
     global runtime
-    print('onEndSpeaking', text)
+    print("onEndSpeaking", text)
     robot = runtime.getService(name)
     random = robot.getPeer("random")
     if random and robot.getState() != "tracking":
@@ -153,6 +153,7 @@ def onEndSpeaking(name, text):
     #         i01_neoPixel = runtime.getService('i01.neoPixel')
     #         if i01.getConfig().neoPixelFlashWhenSpeaking and runtime.isStarted("i01.neoPixel"):
     #             i01_neoPixel.clear()
+
 
 # Sensor events begin ========================================
 
@@ -185,6 +186,17 @@ def onPirOff(name):
         neoPixel.setPixel(141, 0, 0, 0)
         neoPixel.writeMatrix()
 
+
+def onIdle(name):
+    print("onIdle", name)
+    robot = runtime.getService(name)
+    robot.fire("idle")
+    mouth = robot.getPeer("mouth")
+    if mouth:
+        mouth.speak("I am idle")
+    print("onIdle state change from", name)
+
+
 # Sensor events end ==========================================
 # Topic events begin ========================================
 # FIXME - since its a direct subscribe from i01.chatBot -to-> python
@@ -209,11 +221,11 @@ def onTopic(topic_event):
     mouth = robot.getPeer("mouth")
     if mouth:
         mouth.speak("New topic, the topic is " + topic_event.topic)
-    print('onTopic', topic_event.topic)
+    print("onTopic", topic_event.topic)
+
 
 # Topic events end ==========================================
 # State change events begin ========================================
-
 
 def onStateChange(name, state_event):
     """The main router for state changes
@@ -263,19 +275,45 @@ def onStateChange(name, state_event):
 
 
 def on_wake(name):
-    """Waking from slumber, sensors begin to flow in data and the robot should try to identify
-        where it is and switch their attention to the person of focus.
+    """
+    State: wake
+    Waking from slumber, sensors begin to flow in data and the robot
+    should try to identify where it is and switch their attention to
+    the person of focus.
 
-        Args:
-            name (string): name of InMoov2 robot
-        """
-    print("on_wake", name)  
+    Args:
+        name (string): name of InMoov2 robot
+
+    TODO - remove all non boot fire() calls from java - all fire() calls should be in python
+    Who am I - getPredicate botname
+    Where am I - sensors, opencv, slam, gps, etc, time i've been a sleep
+    When am I - time since last wake
+    How do I feel - battery, errors, etc
+    What senses do I have - what is around me
+    What is around me
+    Who is around me - face recognition, voice recognition, etc
+    What date is it
+    What time is it
+    How long have I been asleep
+
+    if person -- greet, query who they are, etc
+
+    What should I do based on the above information 
+
+    """
+    print("on_wake", name)
     robot = runtime.getService(name)
     chatbot = robot.getPeer("chatBot")
     fsm = robot.getPeer("fsm")
 
+    # report status, errors, battery, etc
+    # e.g. I'm afraid I have errors, would you like me to show you ?
+
+    # set session
+    chatbot.startSession(str(chatbot.getPredicate("human", "lastUsername")))
+
+    # get text response
     chatbot.getResponse("WAKE_UP")
-    print("on_wake state change from", name)
 
     first_init = chatbot.getPredicate("human", "first_init")
 
@@ -289,7 +327,7 @@ def on_wake(name):
 
 def on_first_init(name):
     """Purpose of this state is to identify the user
-    and first initial configuration of the robot. 
+    and first initial configuration of the robot.
 
     The user should be asked to identify themselves.
 
@@ -309,7 +347,7 @@ def on_first_init(name):
     # do anything else desired
     # generate picture data of the user
     # go through personal questionare
-    # e.g. ask 
+    # e.g. ask
 
 
 def on_idle(name):
@@ -334,6 +372,8 @@ def on_sleep(name):
     mouth = robot.getPeer("mouth")
     mouth.speak("I am going to sleep")
     print("on_sleep state change from", name)
+
+
 # State change events end ========================================
 # Service change events begin ========================================
 
@@ -355,6 +395,7 @@ def on_peer_released(name):
     print("on_peer_released service change from", name)
     # remove subscriptions for newly released peers
 
+
 # Service change events end ========================================
 
 
@@ -368,16 +409,18 @@ def on_sensor_data(data):
 
 
 def onPredicate(predicate_event):
-    print('onPredicate', predicate_event)
+    print("onPredicate", predicate_event)
     robot = runtime.getService(predicate_event.src)
-    robot.info("predicate " + predicate_event.name + " changed to " + predicate_event.value)
+    robot.info(
+        "predicate " + predicate_event.name + " changed to " + predicate_event.value
+    )
     # mouth = robot.getPeer("mouth")
     # if mouth:
     #     mouth.speak("predicate " + predicate_event.name + " changed to " + predicate_event.value)
 
 
 def onSession(session_event):
-    print('onSession', session_event)  
+    print("onSession", session_event)
     robot = runtime.getService(session_event.src)
     mouth = robot.getPeer("mouth")
     chatBot = robot.getPeer("chatBot")
@@ -388,7 +431,7 @@ def onSession(session_event):
 
 
 def onMessage(msg):
-    print('onMessage', msg)
+    print("onMessage", msg)
     robot = runtime.getService(msg.sender)
     print("onMessage.method", msg.method)
     print("onMessage.data", msg.data)
@@ -406,7 +449,7 @@ def on_new_user(data):
 
     # TODO - some function that identifies user and reconciles identities
     # until then we'll just create a new user
-    chatBot.setUser(data[0]) # name
+    chatBot.setUser(data[0])  # name
     chatBot.setPredicate("botname", chatBot.getPredicate("human", "botname"))
 
 
@@ -461,9 +504,9 @@ def onHeartbeat(name, heartbeat):
         neoPixel.setPixel(137, state_hash)
 
         # neoPixel.flash("success")
-    # if robot.getState() == "first_init":
-    #     robot.setRandomIdle()
+        # if robot.getState() == "first_init":
+        #     robot.setRandomIdle()
         neoPixel.writeMatrix()
 
 
-print('loaded InMoov2.py')
+print("loaded InMoov2.py")
