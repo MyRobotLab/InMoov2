@@ -74,7 +74,9 @@ def onPythonMessage(msg):
         # Check if the method exists in the global namespace
         if method_name in globals() and callable(globals()[method_name]):
             cmd = "result = {}(*params_array)".format(method_name)
-            print("onPythonMessage cmd {}".format(cmd))
+            # filter out chatty heartbeat
+            if method_name != "onHeartbeat":
+                print("onPythonMessage cmd {}".format(cmd))
 
             # Execute the code with the globals parameter
             exec_globals = globals()
@@ -298,11 +300,18 @@ def on_wake(name):
 
     if person -- greet, query who they are, etc
 
-    What should I do based on the above information 
+    What should I do based on the above information
 
     """
     print("on_wake", name)
     robot = runtime.getService(name)
+
+    # determine the last person who was using the robot
+
+
+
+    lastUsername = robot.getPredicate("human", "lastUsername")
+
     chatbot = robot.getPeer("chatBot")
     fsm = robot.getPeer("fsm")
 
@@ -310,10 +319,10 @@ def on_wake(name):
     # e.g. I'm afraid I have errors, would you like me to show you ?
 
     # set session
-    chatbot.startSession(str(chatbot.getPredicate("human", "lastUsername")))
+    chatbot.startSession(lastUsername)
 
     # get text response
-    chatbot.getResponse("WAKE_UP")
+    chatbot.getResponse("ON_WAKE_READY")
 
     first_init = chatbot.getPredicate("human", "first_init")
 
@@ -466,7 +475,7 @@ def onHeartbeat(name, heartbeat):
     Args:
         name (string): the robot's name sending the heartbeat
     """
-    print("onHeartbeat {} {}".format(name, heartbeat))
+    # print("onHeartbeat {} {}".format(name, heartbeat))
 
     robot = runtime.getService(name)
     neoPixel = robot.getPeer("neoPixel")

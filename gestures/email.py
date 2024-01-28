@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 ## this need to be modified for multi language
 ## currently only works with the fr-FR bot
 import imaplib
