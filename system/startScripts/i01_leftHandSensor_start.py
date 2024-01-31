@@ -6,12 +6,12 @@
 
 import ConfigParser
 import os
-ThisServicePart = 'data/config/i01.leftHand.sensor.yml'
+ThisServicePart = 'data/InMoov2/i01.leftHand.sensor.config'
 
 def CheckFileExistLeft(File):
   if not os.path.isfile(File):
     execfile('resource/InMoov2/system/startScripts/i01_leftHandSensor_config.py')
-    i01.info("config file created : data/config/i01.leftHand.sensor.yml")
+    i01.info("config file created : data/InMoov2/i01.leftHand.sensor.config")
 
 CheckFileExistLeft(ThisServicePart)
 ThisServicePartConfig = ConfigParser.ConfigParser()
@@ -69,20 +69,20 @@ leftPinkyPressure=0
 
 if runtime.isStarted('i01.left'):
     leftHandSensorStarted = True
-    configFilename="data/InMoov2/i01.life.yml"
-    # open the file
-    file = open(configFilename, "r")
-    # read the file
-    text = file.read()
-    # search & replace the word
-    replaced_text = text.replace("leftHandSensorStarted=False", "leftHandSensorStarted=True")
+    # configFilename="data/InMoov2/i01.life.yml"
+    # # open the file
+    # file = open(configFilename, "r")
+    # # read the file
+    # text = file.read()
+    # # search & replace the word
+    # replaced_text = text.replace("leftHandSensorStarted=False", "leftHandSensorStarted=True")
 
-    # save the file
-    file = open(configFilename, "w")
-    file.write(replaced_text)
-    file.close()
+    # # save the file
+    # file = open(configFilename, "w")
+    # file.write(replaced_text)
+    # file.close()
 
-    execfile('resource/InMoov2/life/0_inmoovLife.py')
+    # execfile('resource/InMoov2/life/0_inmoovLife.py')
 
     try:
         # common left pin listener function
