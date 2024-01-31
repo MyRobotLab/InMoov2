@@ -35,7 +35,7 @@
 
 <table class="table table-striped">
     <tr>
-        <td colspan="2">&nbsp;{{onText}}
+        <td colspan="2">{{service.state}} {{onText}}
         </td>
     </tr>
     <tr>
@@ -98,6 +98,8 @@
                 <a id="helpGuiButton" class="helpGuiButtons preventGuiDragSelect"
                     href="https://inmoov.fr/inmoov2-in-nixie/" target="_blank">Help</a>
             </div>
+                        <br/>
+                        <input class="form-control" tabindex="2" type="text" ng-model="utterance" name="utterance" id="utterance" ng-init="" press-enter="getResponse(utterance)" placeholder="type here"/>                
         </td>
         <td>
             <!-- panels begin  -->
@@ -1165,6 +1167,9 @@
                 typeahead-min-length="0" />
             <button class="btn btn-default" ng-click="executeGesture(selectedGesture)">Execute</button>
             <button class="btn btn-default" ng-click="loadGestures()">Load Gestures</button>
+
+            <button class="btn btn-default" ng-click="msg.send('execScript')"><i class="glyphicon glyphicon-refresh"></i></button>
+                        
         </td>
     </tr>
 </table>

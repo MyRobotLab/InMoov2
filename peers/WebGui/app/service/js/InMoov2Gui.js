@@ -132,6 +132,11 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
         console.info('ret ' + ret);
     }
 
+    $scope.getResponse = function(utterance) {
+        msg.send('getResponse', utterance)
+        $scope.utterance = ""
+    }
+    
     let calculatButtonPos = function() {
         let angle = 234.5 * (Math.PI / 180)
         // (360 - 90) * (Math.PI / 180)
@@ -269,8 +274,8 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
             _self.updateState(data)
             $scope.$apply()
             break
-        case 'onOnStateChange':
-            $scope.currentState = data
+        case 'onStateChange':
+            $scope.service.state = data.state
             $scope.$apply()
             break
         case 'onSystemEvent':
@@ -375,7 +380,8 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
 
     msg.subscribe('onStateChange')
     msg.subscribe('publishSystemEvent')
-    
+
+    msg.subscribe('publishStateChange')
     msg.subscribe('getPeerConfig')
     msg.subscribe('publishText')
     msg.subscribe('publishPeerStarted')
