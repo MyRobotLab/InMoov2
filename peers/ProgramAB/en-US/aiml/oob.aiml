@@ -544,4 +544,37 @@
           </mrl>
         </oob></template>
 </category>
+<category>
+    <pattern>WHAT IS THE LATEST VERSION OF MRL</pattern>
+    <template>
+      <srai>MRL VERSION</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHAT IS THE LATEST VERSION OF MYROBOTLAB</pattern>
+    <template>
+      <srai>MRL VERSION</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>MRL VERSION</pattern>
+    <template>
+      The latest version of myrobotlab is <sraix><oob><mrl><service>runtime</service><method>getLatestVersion</method></mrl></oob></sraix>.
+      You can also ask me to, DOWNLOAD THE LATEST MYROBOTLAB VERSION.
+    </template>
+  </category>
+
+  <category>
+    <pattern>DOWNLOAD THE LATEST MYROBOTLAB VERSION</pattern>
+    <template>Okay, please check your download directory.<oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://build.myrobotlab.org:8443/job/myrobotlab/job/develop/lastSuccessfulBuild/artifact/target/myrobotlab.zip</param>
+          </mrl>
+        </oob>
+    </template>
+  </category>
 </aiml>
