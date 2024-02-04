@@ -301,13 +301,6 @@
          </mrl>
        </oob></template>
 </category>
-<category><pattern>NORESP</pattern>
-<template><condition>
-            <li name="lockInsult" value="on"><srai>APPWAKE</srai><oob><mrl><service>python</service><method>exec</method><param>wakeUpModeInsult()</param></mrl></oob></li>
-            <li name="lockInsult" value="off"><srai>APPWAKE</srai><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></li>
-        </condition></template>
-</category>
-
 <category><pattern>WAKE_UP</pattern>
 <template><random>
           <li>I am ready and listening.</li>
@@ -329,7 +322,7 @@
         </random></template>
 </category>
 <category><pattern>WAKE UP</pattern>
-<template><srai>APPWAKE</srai><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
 </category>
 <category><pattern>SHUTDOWN</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>
@@ -377,7 +370,7 @@
     </template>
 </category>
 <category><pattern>GO TO SLEEP</pattern>
-<template>okay<oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob><srai>APPSLEEPING</srai></template>
+<template>okay<oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
 </category>
 <category><pattern>DISABLE</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>disable()</param></mrl></oob></template>
@@ -453,11 +446,40 @@
 <template>
       <oob><mrl><service>i01_chatBot</service><method>reload</method></mrl></oob></template>
 </category>
+<category>
+<pattern>WHAT IS THE LATEST VERSION OF MRL</pattern>
+<template>
+    <srai>MRL VERSION</srai>
+</template>
+</category>
+<category>
+<pattern>WHAT IS THE LATEST VERSION OF MYROBOTLAB</pattern>
+<template>
+    <srai>MRL VERSION</srai>
+</template>
+</category>
+<category>
+<pattern>MRL VERSION</pattern>
+<template>
+      The latest version of myrobotlab is <sraix><oob><mrl><service>runtime</service><method>getLatestVersion</method></mrl></oob></sraix>.
+      You can also ask me to, DOWNLOAD THE LATEST MYROBOTLAB VERSION.
+</template>
+</category>
+<category>
+<pattern>DOWNLOAD THE LATEST MYROBOTLAB VERSION</pattern>
+<template>Okay, please check your download directory.<oob>
+    <mrl>
+        <service>webgui</service>
+        <method>startBrowser</method>
+        <param>https://build.myrobotlab.org:8443/job/myrobotlab/job/develop/lastSuccessfulBuild/artifact/target/myrobotlab.zip</param>
+    </mrl>
+    </oob>
+</template>
+</category>
 <topic name="">
 <category><pattern>#</pattern>
 <template><think><set name="topic">default</set></think><srai><star/></srai></template>
 </category></topic>
-
 <category><pattern>STOP YOUR GESTURE</pattern>
 <template>You have my attention.
       <oob><mrl><service>python</service><method>exec</method><param>stopingGesture()</param></mrl></oob></template>
