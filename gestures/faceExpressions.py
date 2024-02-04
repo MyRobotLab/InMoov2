@@ -25,11 +25,11 @@ def blinkRight():
   cheekRightU()
 
 def disgust():
-  upperLipD()
+  upperLipU()
   forheadsD()
+  lowerEyelidsClose()
   cheekRightU()
-  browRightD()
-  lowerEyelidRightClose()
+  browsD()
 
 def fear():
   eyelidsOpen()
@@ -39,7 +39,6 @@ def fear():
 
 def sad():
   upperEyelidsClose()
-  lowerEyelidsOpen()
   cheeksD()
 
 def smileClosed():
@@ -52,19 +51,19 @@ def smileClosed():
 def smileOpen():
   cheeksU()
   lowerEyelidsU()
-  upperLipU()
   if runtime.isStarted('i01.head'):
     i01_head_jaw.moveTo(90)
 
 def sleeping():
-  upperEyelidsClose()  
+  upperEyelidsClose()
+  lowerEyelidsClose()
 
 def surprise():
   browsU()
-  upperLipU()
+  upperEyelidsOpen()
   forheadsU()
   if runtime.isStarted('i01.head'):
-    i01_head_jaw.moveTo(70)
+    i01_head_jaw.moveTo(160)
 
 def suspicious():
   upperLipD()
@@ -77,7 +76,9 @@ def suspicious():
 def thinking():
   forheadsU()
   eyelidsOpen()
-  eyesU()
+  lowerEyelidsClose()
+  if runtime.isStarted('i01.head.eyeY'):
+    i01_head_eyeY.moveTo(120)
 
 def unamused():
   browRightD()
