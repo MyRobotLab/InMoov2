@@ -1,0 +1,7 @@
+firstinit:unknown
+insultPoints:0
+img:../service/img/user_unknown.png
+lockInsult:off
+name:human
+newpattern:NORESP
+userDescription:no personal description
