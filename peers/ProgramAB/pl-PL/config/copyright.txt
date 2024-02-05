@@ -1,0 +1,17 @@
+Plik: [filename]
+Autor: [botmaster]
+Ostatnio zmodyfikowany: [date]
+
+Ten plik AIML jest częścią bazy wiedzy [botname] [version] chatbota.
+
+Mózg [botname] podlega prawom autorskim i kopiowaniu; [YYYY] po [organization].
+
+Mózg [botname] jest udostępniany na warunkach Mniejszego Generała GNU
+Licencja publiczna, opublikowana przez Free Software Foundation.
+
+Ten plik jest rozpowszechniany BEZ ŻADNEJ GWARANCJI; nawet bez
+dorozumianej gwarancji WARTOŚCI HANDLOWEJ lub PRZYDATNOŚCI DO OKREŚLONEGO CELU.  
+
+Aby uzyskać więcej informacji, zobacz [url]
+
+
