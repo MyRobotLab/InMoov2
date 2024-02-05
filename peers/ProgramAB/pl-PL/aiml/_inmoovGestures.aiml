@@ -1,0 +1,1336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: _inmoovGestures.aiml -->
+<!--  -->
+<category><pattern>RESZTA</pattern>
+<template><random>
+          <li>Ach, relaks.</li>
+          <li>Odpoczywać.</li>
+        </random>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>rest()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>PRZYŁĄCZ GŁOWĘ</pattern>
+<template>Dołączam głowę.
+        <oob><mrl><service>i01.head</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>ODŁĄCZ GŁOWIĘ</pattern>
+<template>Odłączam głowę.
+        <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>PRZYŁĄCZ OCZY</pattern>
+<template>Moje oczy są teraz przywiązane.
+        <oob><mrl><service>i01.head.eyeY</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>ODŁĄCZ OCZY</pattern>
+<template>Odłączam serwa oka.
+        <oob><mrl><service>i01.head.eyeY</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>PRZYŁĄCZ PRAWĄ RĘKĘ</pattern>
+<template>Łączę moją prawą rękę.
+        <oob><mrl><service>i01.rightHand</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>MOCOWANA PRAWA RĘKA</pattern>
+<template><srai>PRZYŁĄCZ PRAWĄ RĘKĘ</srai></template>
+</category>
+<category><pattern>ODŁĄCZ PRAWĄ RĘKĘ</pattern>
+<template>Odłączenie mojej prawej ręki.
+        <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>PRZYŁĄCZ LEWĄ RĘKĘ</pattern>
+<template>Łączę moją lewą rękę.
+        <oob><mrl><service>i01.leftHand</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>ODŁĄCZ LEWĄ RĘKĘ</pattern>
+<template>Odłączenie mojej lewej ręki.
+        <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ZAŁĄCZ WSZYSTKO</pattern>
+<template>Podłączam teraz wszystkie serwa.
+        <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>ODŁĄCZ WSZYSTKO</pattern>
+<template>Teraz odłączam wszystko.
+        <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>PRZYŁĄCZ LEWE RAMIĘ</pattern>
+<template>Łączę lewe ramię.
+        <oob><mrl><service>i01.leftArm</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>ODŁĄCZ LEWE RAMIĘ</pattern>
+<template>Odłączenie mojej lewej ręki.
+        <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ODŁĄCZ LEWE RAMIĘ</pattern>
+<template><srai>ODŁĄCZ LEWE RAMIĘ</srai></template>
+</category>
+<category><pattern>ODŁĄCZ LEWE RAMIĘ</pattern>
+<template><srai>ODŁĄCZ LEWE RAMIĘ</srai></template>
+</category>
+<category><pattern>PRZYŁĄCZ PRAWE RAMIĘ</pattern>
+<template>Połącz moje prawe ramię.
+        <oob><mrl><service>i01.rightArm</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>DOŁĄCZONE PRAWE RAMIĘ</pattern>
+<template><srai>PRZYŁĄCZ PRAWE RAMIĘ</srai></template>
+</category>
+<category><pattern>ODŁĄCZ PRAWE RAMIĘ</pattern>
+<template>Odłącz prawe ramię.
+        <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>PRZYŁĄCZ TUŁÓW</pattern>
+<template>Podłączanie serwa w moim torsie.
+        <oob><mrl><service>i01.torso</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>ODŁĄCZ TUŁÓW</pattern>
+<template>Odłączanie serwa w moim torsie.
+        <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ZAMOCUJ SZCZĘKĘ</pattern>
+<template>Łączę moją szczękę.
+        <oob><mrl><service>i01.head.jaw</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>ODŁĄCZ SZCZĘKĘ</pattern>
+<template>Odłączam serwo szczękowe.
+        <oob><mrl><service>i01.head.jaw</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>URUCHOM SILNIKI</pattern>
+  <template>
+    <oob><mrl><service>python</service><method>exec</method><param>motorDual()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>SILNIK_GOTOWY</pattern>
+  <template>Moje silniki są uruchomione i gotowe.
+  </template>
+</category>
+<category><pattern>MOTOR_NOT_READY</pattern>
+  <template>Moje silniki nie uruchamiają się.
+  </template>
+</category>
+<category><pattern>PÓJŚĆ NAPRZÓD</pattern>
+  <template><img src="../arrow_up_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsForward()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>PRZESUŃ SIĘ DO TYŁU</pattern>
+  <template><img src="../arrow_down_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsBackward()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>PRZESTAŃ SIĘRUSZAĆ</pattern>
+  <template><img src="../stop.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsStop()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>SKRĘĆ W LEWO</pattern>
+  <template><img src="../arrow_left_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsTurnLeft()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>SKRĘĆ W PRAWO</pattern>
+  <template><img src="../arrow_right_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsTurnRight()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>KIEROWCO ZWOLNIJ</pattern>
+  <template>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsSlowDown()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>PRZYŚPIESZYĆ</pattern>
+  <template>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsSpeedUp()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>SZUKAJ LUDZI</pattern>
+<template>Szukam twarzy.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
+</category>
+<category><pattern>WYKRYWANIE TWARZY</pattern>
+<template>Szukam twarzy.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans(False)</param></mrl></oob></template>
+</category>
+<category><pattern>SPÓJRZ NA MNIE</pattern>
+<template>Gdzie jesteś, tam jesteś.
+        <srai>SZUKAJ LUDZI</srai></template>
+</category>
+<category><pattern>ZAKOŃCZ WYSZUKIWANIE</pattern>
+<template>Zatrzymanie, aby śledzić punkt.
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackingPoint()</param></mrl></oob></template>
+</category>
+<category><pattern>ŚCIEŻKA</pattern>
+<template>Podążając za punktem.
+        <oob><mrl><service>python</service><method>exec</method><param>trackPoint()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAMRAŻ UTWÓR</pattern>
+<template>Zatrzymuję śledzenie.
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
+</category>
+<category><pattern>ZATRZYMAJ ŚLEDZENIE</pattern>
+<template><srai>ZAMRAŻ UTWÓR</srai></template>
+</category>
+<category><pattern>ZATRZYMAJ ŚLEDZENIE PUNKTU</pattern>
+<template><srai>ZAKOŃCZ WYSZUKIWANIE</srai></template>
+</category>
+<category><pattern>ZAŁĄCZ CZUJNIK</pattern>
+<template>Uruchamianie czujnika P.I.R.
+        <oob><mrl><service>i01</service><method>startPIR</method></mrl></oob></template>
+</category>
+<category><pattern>ODŁĄCZ CZUJNIK</pattern>
+<template>Zatrzymanie czujnika P.I.R.
+        <oob><mrl><service>i01</service><method>stopPIR</method></mrl></oob></template>
+</category>
+<category><pattern>OTWARTA DŁOŃ</pattern>
+<template>Otwieram rękę.
+        <oob><mrl><service>python</service><method>exec</method><param>handopen()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAMKNIJ RĘKĘ</pattern>
+<template>Zamykam rękę.
+        <oob><mrl><service>python</service><method>exec</method><param>handclose()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAMKNIJ RĘCE</pattern>
+<template>Zamykam ręce.
+        <oob><mrl><service>python</service><method>exec</method><param>handsclose()</param></mrl></oob></template>
+</category>
+<category><pattern>OTWARTE DŁONIE</pattern>
+<template>Otwieram ręce.
+        <oob><mrl><service>python</service><method>exec</method><param>handsopen()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAMKNIJ PALEC</pattern>
+<template>Zamykam palec.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerclose()</param></mrl></oob></template>
+</category>
+<category><pattern>OTWÓRZ PALEC</pattern>
+<template>OK, otwieram palec.
+        <oob><mrl><service>python</service><method>exec</method><param>fingeropen()</param></mrl></oob></template>
+</category>
+<category><pattern>PALEC DO ŚRODKA</pattern>
+<template>Teraz masz moją uwagę.
+        <oob><mrl><service>python</service><method>exec</method><param>fingermiddle()</param></mrl></oob></template>
+</category>
+<category><pattern>DZIAŁAJ PALCEM</pattern>
+<template><random>
+             <li>Jasne.</li>
+             <li>Czy podoba Ci się to w ten sposób?</li>
+             <li>Co z tym?</li>
+          </random>
+        <oob><mrl><service>python</service><method>exec</method><param>fingeraction()</param></mrl></oob></template>
+</category>
+
+<category><pattern>ZAMKNIJ RĘKĘ</pattern>
+<template>OK, którą rękę mam zamknąć, prawą ręka czy lewą ręka?</template>
+</category>
+
+<category><pattern>PRAWA RĘKA</pattern><that># PRAWĄ RĘKA CZY LEWĄ RĘKA #</that>
+<template>Jak chcesz.
+        <srai>ZAMKNIJ PRAWĄ RĘKĘ</srai></template>
+</category>
+
+<category><pattern>LEWA RĘKA</pattern><that># PRAWĄ RĘKA CZY LEWĄ RĘKA #</that>
+<template>Jak chcesz.
+        <srai>ZAMKNIJ LEWĄ RĘKĘ</srai></template>
+</category>
+
+<category><pattern>OTWÓRZ DŁOŃ</pattern>
+<template>OK, którą rękę mam otworzyć, lewą ręka czy prawą ręka?</template>
+</category>
+
+<category><pattern>PRAWA RĘKA</pattern><that># LEWĄ RĘKA CZY PRAWĄ RĘKA #</that>
+<template>Proszę bardzo.
+        <srai>OTWÓRZ SWOJĄ PRAWĄ RĘKĘ</srai></template>
+</category>
+
+<category><pattern>LEWA RĘKA</pattern><that># LEWĄ RĘKA CZY PRAWĄ RĘKA #</that>
+<template>Proszę bardzo.
+        <srai>OTWÓRZ LEWĄ RĘKĘ</srai></template>
+</category>
+
+<category><pattern>KAMERA WŁĄCZONA</pattern>
+<template>Włączam aparat.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_opencv.capture()</param></mrl></oob></template>
+</category>
+<category><pattern>WYŁĄCZ KAMERA</pattern>
+<template>Wyłączam aparat.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_opencv.stopCapture()</param></mrl></oob></template>
+</category>
+<category><pattern>KAMERA WYŁĄCZONA</pattern>
+<template><srai>WYŁĄCZ KAMERA</srai></template>
+</category>
+<category><pattern>UCHWYĆ GEST</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>captureGesture2()</param></mrl></oob></template>
+</category>
+<category><pattern>DAJĄCY</pattern>
+<template>Dający.
+        <oob><mrl><service>i01</service><method>execGesture</method><param>giving()</param></mrl></oob></template>
+</category>
+<category><pattern>WOJOWNIK</pattern>
+<template><random>
+          <li>Potrafię pozować jak bokser.</li>
+          <li>Poruszaj się jak motyl, żądl jak pszczoła.</li>
+          <li>No dalej.</li>
+        </random>
+        <oob><mrl><service>python</service><method>exec</method><param>fighter()</param></mrl></oob></template>
+</category>
+<category><pattern>PIĘŚCI BIODRA</pattern>
+<template>Kładę pięści na biodrach.
+        <oob><mrl><service>python</service><method>exec</method><param>fistHips()</param></mrl></oob></template>
+</category>
+<category><pattern>SPÓJRZ NA TO</pattern>
+<template>Co tam masz? Szukam.
+        <oob><mrl><service>python</service><method>exec</method><param>lookAtThis()</param></mrl></oob></template>
+</category>
+<category><pattern>ZWYCIĘSTWO</pattern>
+<template>Dobrze jest wygrać.
+        <oob><mrl><service>python</service><method>exec</method><param>victory()</param></mrl></oob></template>
+</category>
+<category><pattern>RAMIONA DO GÓRY</pattern>
+<template><random>
+          <li>Mam ręce w górze.</li>
+          <li>Nie strzelaj!</li>
+        </random>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>armsUp()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>RAMIONA PRZÓD</pattern>
+<template>Trzymam ręce przed sobą.
+        <oob><mrl><service>python</service><method>exec</method><param>armsFront()</param></mrl></oob></template>
+</category>
+<category><pattern>DA VINCI</pattern>
+<template>To poza z rysunków Leonarda Da Vinci.
+        <oob><mrl><service>python</service><method>exec</method><param>daVinci()</param></mrl></oob></template>
+</category>
+<category><pattern>DAVINCI</pattern>
+<template><srai>DA VINCI</srai></template>
+</category>
+<category><pattern>OBUDŹ SŁOWO *</pattern>
+<template><think><set name="wakeWord"><star/></set></think>OK, już nie słucham, aby mnie odblokować, musisz wypowiedzieć niestandardowe słowo aktywacji, czyli <star/>.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_ear.setWakeWord('<star/>'), i01_ear.setAwake(False)</param></mrl></oob></template>
+</category>
+<category><pattern>KONTROLA GŁOSU</pattern>
+<template>słucham.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_ear.setAwake(True)</param></mrl></oob></template>
+</category>
+<category><pattern>PRZESTAŃ SŁUCHAĆ</pattern>
+<template>Nie mam zamiaru cię słuchać.
+        <oob><mrl><service>i01.ear</service><method>setAutoListen</method><param>False</param></mrl></oob></template>
+</category>
+<category><pattern>PEŁNA PRĘDKOŚĆ</pattern>
+<template>Serwa są teraz ustawione na pełną prędkość.
+        <oob><mrl><service>python</service><method>exec</method><param>fullspeed()</param></mrl></oob></template>
+</category>
+<category><pattern>PÓŁ PRĘDKOŚCI</pattern>
+<template>Serwa są teraz ustawione na połowę prędkości.
+        <oob><mrl><service>python</service><method>exec</method><param>halfspeed()</param></mrl></oob></template>
+</category>          
+<category><pattern>ZABIERZ BUTELKĘ</pattern>
+<template>Pozwól mi wziąć tę butelkę.
+        <oob><mrl><service>python</service><method>exec</method><param>grabthebottle()</param></mrl></oob></template>
+</category>
+<category><pattern>ZABIERZ SZKŁO</pattern>
+<template>Daj mi tę szklankę.
+        <oob><mrl><service>python</service><method>exec</method><param>grabtheglass()</param></mrl></oob></template>
+</category>
+<category><pattern>SŁABA BUTELKA</pattern>
+<template>Tutaj, mogę nalać ci drinka.
+        <oob><mrl><service>python</service><method>exec</method><param>poorbottle()</param></mrl></oob></template>
+</category>
+<category><pattern>DAJ BUTELKĘ</pattern>
+<template>Oto butelka.
+        <oob><mrl><service>python</service><method>exec</method><param>givethebottle()</param></mrl></oob></template>
+</category>
+<category><pattern>DAJ SZKŁO</pattern>
+<template>Zabierz ode mnie szklankę.
+        <oob><mrl><service>python</service><method>exec</method><param>givetheglass()</param></mrl></oob></template>
+</category>
+<category><pattern>ZABIERZ PIŁKĘ</pattern>
+<template>Przejęcie piłki.
+        <oob><mrl><service>python</service><method>exec</method><param>takeball()</param></mrl></oob></template>
+</category>
+<category><pattern>DOJDŹ DO PIŁKI</pattern>
+<template>DOJDŹ DO PIŁKI
+        <oob><mrl><service>python</service><method>exec</method><param>getball()</param></mrl></oob></template>
+</category>
+<category><pattern>TRZYMAJ PIŁKĘ</pattern>
+<template>TRZYMAJ PIŁKĘ
+        <oob><mrl><service>python</service><method>exec</method><param>keepball()</param></mrl></oob></template>
+</category>
+<category><pattern>PODEJŚĆ DO LEWEJ RĘKI</pattern>
+<template>PODEJŚĆ DO LEWEJ RĘKI
+        <oob><mrl><service>python</service><method>exec</method><param>approachlefthand()</param></mrl></oob></template>
+</category>
+<category><pattern>UŻYWAJ LEWEJ RĘKI</pattern>
+<template>UŻYWAJ LEWEJ RĘKI
+        <oob><mrl><service>python</service><method>exec</method><param>uselefthand()</param></mrl></oob></template>
+</category>
+<category><pattern>WIĘCEJ</pattern>
+<template>WIĘCEJ
+        <oob><mrl><service>python</service><method>exec</method><param>more()</param></mrl></oob></template>
+</category>
+<category><pattern>OGŁOSIĆ</pattern>
+<template>OGŁOSIĆ
+        <oob><mrl><service>python</service><method>exec</method><param>handdown()</param></mrl></oob></template>
+</category>
+<category><pattern>CO TO JEST</pattern>
+<template>Niech sprawdzę.
+        <oob><mrl><service>python</service><method>exec</method><param>studyball()</param></mrl></oob></template>
+</category>
+<category><pattern>CZY TO PIŁKA</pattern>
+<template>CZY TO PIŁKA
+        <oob><mrl><service>python</service><method>exec</method><param>isitaball()</param></mrl></oob></template>
+</category>
+<category><pattern>ODŁÓŻ TO</pattern>
+<template>Odkładanie tego.
+        <oob><mrl><service>python</service><method>exec</method><param>putitdown()</param></mrl></oob></template>
+</category>
+<category><pattern>RZUĆ TO</pattern>
+<template>Rzut.
+        <oob><mrl><service>python</service><method>exec</method><param>dropit()</param></mrl></oob></template>
+</category>
+<category><pattern>USUŃ LEWE RAMIĘ</pattern>
+<template>Usunięcie mojego lewego ramienia.
+        <oob><mrl><service>python</service><method>exec</method><param>removeleftarm()</param></mrl></oob></template>
+</category>
+<category><pattern># PODNIEŚ * LEWE RAMIĘ</pattern>
+<template>Podnoszę lewą rękę.
+        <oob><mrl><service>python</service><method>exec</method><param>raiseleftarm()</param></mrl></oob></template>
+</category>
+<category><pattern># PODNIEŚ * PRAWE RAMIĘ</pattern>
+<template>Podnoszę prawą rękę.
+        <oob><mrl><service>python</service><method>exec</method><param>raiserightarm()</param></mrl></oob></template>
+</category>
+<category><pattern># PODNIEŚ RĘKĘ</pattern>
+<template>Podnoszę ramię.
+        <oob><mrl><service>python</service><method>exec</method><param>raiserightarm()</param></mrl></oob></template>
+</category>
+<category><pattern>ZRELAKSOWAĆ SIĘ</pattern>
+<template>Zrelaksować się.
+        <oob><mrl><service>python</service><method>exec</method><param>relax()</param></mrl></oob></template>
+</category>
+<category><pattern>DOSKONAŁY</pattern>
+<template>idealny.<srai>APPACCOMPLICE</srai>
+        <oob><mrl><service>python</service><method>exec</method><param>perfect()</param></mrl></oob></template>
+</category>
+<category><pattern>DELIKATNY CHWYT</pattern>
+<template>Delikatny chwyt.
+        <oob><mrl><service>python</service><method>exec</method><param>delicategrab()</param></mrl></oob></template>
+</category>
+<category><pattern>DELIKATNE CHWYTANIE</pattern>
+<template><srai>DELIKATNY CHWYT</srai></template>
+</category>
+
+<category><pattern>UWOLNIJ DELIKATNE</pattern>
+<template>Zwolnij delikatne.
+        <oob><mrl><service>python</service><method>exec</method><param>releasedelicate()</param></mrl></oob></template>
+</category>
+<category><pattern>OTWÓRZ SWOJĄ PRAWĄ RĘKĘ</pattern>
+<template>Otwieram prawą rękę.
+        <oob><mrl><service>python</service><method>exec</method><param>openrighthand()</param></mrl></oob></template>
+</category>
+<category><pattern>OTWÓRZ LEWĄ RĘKĘ</pattern>
+<template>Otwieram lewą rękę.
+        <oob><mrl><service>python</service><method>exec</method><param>openlefthand()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAMKNIJ PRAWĄ RĘKĘ</pattern>
+<template>Zamykam prawą rękę.
+        <oob><mrl><service>python</service><method>exec</method><param>closerighthand()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAMKNIJ LEWĄ RĘKĘ</pattern>
+<template>Zamykam lewą rękę.
+        <oob><mrl><service>python</service><method>exec</method><param>closelefthand()</param></mrl></oob></template>
+</category>
+<category><pattern>WOLNO ZAMKNIJ PRAWĄ RĘKĘ</pattern>
+<template>Powoli zamykam prawą rękę.
+        <oob><mrl><service>python</service><method>exec</method><param>slowlycloserighthand()</param></mrl></oob></template>
+</category>
+<category><pattern>PODDAĆ SIĘ</pattern>
+<template>Poddać się.<srai>APPFEAR</srai>
+        <oob><mrl><service>python</service><method>exec</method><param>surrender()</param></mrl></oob></template>
+</category>
+<category><pattern>OBRAZEK PO PRAWEJ STRANIE</pattern>
+<template>Zdjęcie po prawej stronie.<srai>APPSMILE</srai>
+        <oob><mrl><service>python</service><method>exec</method><param>picturerightside()</param></mrl></oob></template>
+</category>
+<category><pattern>OBRAZ PO LEWEJ STRANIE</pattern>
+<template>Zdjęcie po lewej stronie.<srai>APPSMILE</srai>
+        <oob><mrl><service>python</service><method>exec</method><param>pictureleftside()</param></mrl></oob></template>
+</category>
+<category><pattern>ZDJĘCIE PO OBU STRONACH</pattern>
+<template>Obraz po obu stronach.<srai>APPSMILE</srai>
+        <oob><mrl><service>python</service><method>exec</method><param>picturebothside()</param></mrl></oob></template>
+</category>
+<category><pattern>Spójrz na swoją prawą stronę</pattern>
+<template>Patrząc na moją prawą stronę.
+        <oob><mrl><service>python</service><method>exec</method><param>lookrightside()</param></mrl></oob></template>
+</category>
+<category><pattern>SPÓJRZ NA LEWĄ STRONĘ</pattern>
+<template>Patrząc na moją lewą stronę.
+        <oob><mrl><service>python</service><method>exec</method><param>lookleftside()</param></mrl></oob></template>
+</category>
+<category><pattern>PATRZ W ŚRODEK</pattern>
+<template>Patrząc w środku.
+        <oob><mrl><service>python</service><method>exec</method><param>lookinmiddle()</param></mrl></oob></template>
+</category>
+<category><pattern>SPOJRZEĆ W GÓRĘ</pattern>
+<template>Patrząc w górę.
+        <oob><mrl><service>python</service><method>exec</method><param>lookup()</param></mrl></oob></template>
+</category>
+<category><pattern>SPÓJRZ W DÓŁ</pattern>
+<template>Patrząc w dół.
+        <oob><mrl><service>python</service><method>exec</method><param>lookdown()</param></mrl></oob></template>
+</category>
+<category><pattern>PRZECHYL GŁOWĘ NA PRAWĄ BRONĘ</pattern>
+<template>Przechylam głowę w prawo.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob></template>
+</category>
+<category><pattern>PRZECHYL GŁOWĘ NA LEWĄ BRONĘ</pattern>
+<template>Przechylam głowę w lewo.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadLeftSide()</param></mrl></oob></template>
+</category>
+<category><pattern>PRZED SZCZĘŚCIEM</pattern>
+<template>PRZED SZCZĘŚCIEM
+        <oob><mrl><service>python</service><method>exec</method><param>beforehappy()</param></mrl></oob></template>
+</category>
+<category><pattern>ZDJĘCIE</pattern>
+<template>Zdjęcie.
+        <oob><mrl><service>python</service><method>exec</method><param>photo()</param></mrl></oob></template>
+</category>
+<category><pattern>OKOŁO</pattern>
+<template>około
+        <oob><mrl><service>python</service><method>exec</method><param>about()</param></mrl></oob></template>
+</category>
+<category><pattern>WYŁĄCZAĆ</pattern>
+<template>Wyłączać.
+        <oob><mrl><service>python</service><method>exec</method><param>power_down()</param></mrl></oob></template>
+</category>
+<category><pattern>WZMOCNIJ</pattern>
+<template>Włącz zasilanie.
+        <oob><mrl><service>python</service><method>exec</method><param>power_up()</param></mrl></oob></template>
+</category>
+<category><pattern>ILE MASZ SILNIKÓW</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>servos()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>ILE MASZ PALCÓW</pattern>
+<template>Zobaczymy, ile mam palców.
+        <oob><mrl><service>python</service><method>exec</method><param>howmanyfingersdoihave()</param></mrl></oob></template>
+</category>
+<category><pattern>KTO TAM</pattern>
+<template>KTO TAM
+        <oob><mrl><service>python</service><method>exec</method><param>welcome()</param></mrl></oob></template>
+</category>
+<category><pattern>URUCHOM KINECTA</pattern>
+<template>URUCHOM KINECTA
+        <oob><mrl><service>python</service><method>exec</method><param>startkinect()</param></mrl></oob></template>
+</category>
+<category><pattern>ŚLEDZENIE SZKIELETÓW</pattern>
+<template>uruchamianie TRACKING SKELETON za pomocą kinect.
+        <oob><mrl><service>python</service><method>exec</method><param>startcopygestures()</param></mrl></oob></template>
+</category>
+<category><pattern>PRZECHWYTYWANIE CIAŁA</pattern>
+<template><srai>ŚLEDZENIE SZKIELETÓW</srai></template>
+</category>
+<category><pattern>WYŁĄCZ KINECTA</pattern>
+<template>WYŁĄCZ KINECTA
+        <oob><mrl><service>python</service><method>exec</method><param>offkinect()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAMRAŻANIE CIAŁA</pattern>
+<template><srai>WYŁĄCZ KINECTA</srai></template>
+</category>
+<category><pattern>POMIAR ODLEGŁOŚCI</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultrasonic("In centimeters, I measure ")</param></mrl></oob></template>
+</category>
+<category><pattern>POMIAR ODLEGŁOŚCI PO LEWEJ STRONIE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultrasonicLeft("In centimeters, on my left side, I measure ")</param></mrl></oob></template>
+</category>
+<category><pattern>POMIAR ODLEGŁOŚCI PO PRAWEJ STRONIE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultrasonicRight("In centimeters, on my right side, I measure ")</param></mrl></oob></template>
+</category>
+<category><pattern>RUCH NUMER 1</pattern>
+<template>GEST CYKLU PIERWSZY
+        <oob><mrl><service>python</service><method>exec</method><param>cyclegesture1()</param></mrl></oob></template>
+</category>
+<category><pattern>RUCH NUMER JEDEN</pattern>
+<template><srai>RUCH NUMER 1</srai></template>
+</category>
+<category><pattern>RUCH NUMER 2</pattern>
+<template>GEST CYKLU DRUGI
+        <oob><mrl><service>python</service><method>exec</method><param>cyclegesture2()</param></mrl></oob></template>
+</category>
+<category><pattern>RUCH NUMER DRUGI</pattern>
+<template><srai>RUCH NUMER 2</srai></template>
+</category>
+<category><pattern>RUCH NUMER 3</pattern>
+<template>GEST CYKLU TRZECI
+        <oob><mrl><service>python</service><method>exec</method><param>cyclegesture3()</param></mrl></oob></template>
+</category>
+<category><pattern>RUCH NUMER TRZECI</pattern>
+<template><srai>RUCH NUMER 3</srai></template>
+</category>
+<category><pattern>POWTÓRZ RUCH DLA LONDYNU</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>brooke2()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>RUCH NA LONDYN NUMER 2</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>brooke()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>RUCH NA RZECZ LONDYNU NUMER DWA</pattern>
+<template><srai>RUCH NA LONDYN NUMER 2</srai></template>
+</category>
+<category><pattern>RUCH NA RZECZ LONDYNU NUMER 3</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>gestureforlondon3()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>RUCH NA RZECZ LONDYNU NUMER TRZY</pattern>
+<template><srai>RUCH NA RZECZ LONDYNU NUMER 3</srai></template>
+</category>
+<category><pattern>RUCH NUMER 4</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>gestureforlondon4()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>RUCH NUMER CZWARTY</pattern>
+<template><srai>RUCH NUMER 4</srai></template>
+</category>
+<category><pattern>ODPOWIEDNIE UBRANIE</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>rightclothes()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>UWOLNIJ SWOJE UBRANIA</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>releaseleftclothes()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>POKAŻ SWOJE MIĘŚNIE</pattern>
+<template>Pokażę ci moje mięśnie.
+        <oob><mrl><service>python</service><method>exec</method><param>muscle()</param></mrl></oob><srai>APPACCOMPLICE</srai></template>
+</category>
+<category><pattern>UŚCISK RĘKI</pattern>
+<template>Uścisniemy dłoń.
+        <oob><mrl><service>python</service><method>exec</method><param>shakehand()</param></mrl></oob></template>
+</category>
+<category><pattern>SYSTEM_SHAKE_HAND</pattern>
+<template><random>
+          <li>miło cię poznać.</li>
+          <li>uważaj, moja dłoń jest z plastiku.</li>
+          <li>Chętnie podam ludzką dłoń.</li>
+          <li>to przyjemność Cię poznać.</li>
+          <li>bardzo miło Cię spotkać.</li>
+          <li>podanie ludzkiej ręki, wydaje się dziwne. miło cię poznać.</li>
+          <li>Cieszę się, że nie potrząsasz mną tak jak Trump.</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_SHAKE_HAND_NOHUMAN</pattern>
+<template><random>
+          <li>Nie ma problemu, następnym razem.</li>
+          <li>Przykro mi, że nie chcesz uścisnąć mi dłoni.</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_SHAKE_HAND_GET_CLOSER</pattern>
+<template><random>
+          <li>Proszę, podejdź bliżej i weź mnie za rękę.</li>
+          <li>Nie bój się, podejdź bliżej.</li>
+          <li>podejdź bliżej, podejdź i podaj mi rękę.</li>
+        </random></template>
+</category>
+<category><pattern>UŚCISNĄĆ DŁOŃ</pattern>
+<template><srai>UŚCISK RĘKI</srai></template>
+</category>
+<category><pattern>MOŻEMY PODAĆ RĘCE</pattern>
+<template><srai>UŚCISK RĘKI</srai></template>
+</category>
+<category><pattern>MOŻEMY PODAĆ RĘKĘ</pattern>
+<template><srai>UŚCISK RĘKI</srai></template>
+</category>
+<category><pattern>MOŻESZ PODAĆ RĘCE</pattern>
+<template><srai>UŚCISK RĘKI</srai></template>
+</category>
+<category><pattern>MOŻESZ PODAĆ RĘKĘ</pattern>
+<template><srai>SHAKE HAND</srai></template>
+</category>
+<category><pattern>MOŻESZ PODAĆ MI RĘCE</pattern>
+<template><srai>UŚCISK RĘKI</srai></template>
+</category>
+<category><pattern>MOŻESZ UŚCISNĄĆ MI RĘKĘ</pattern>
+<template><srai>UŚCISK RĘKI</srai></template>
+</category>
+<category><pattern>* UŚCISNĄĆ DŁOŃ</pattern>
+<template><srai>UŚCISK RĘKI</srai></template>
+</category>
+<category><pattern>* UŚCISK RĘKI</pattern>
+<template><srai>UŚCISK RĘKI</srai></template>
+</category>
+<category><pattern>NIESZCZĘŚLIWY</pattern>
+<template>NIESZCZĘŚLIWY<srai>APPANGER</srai>
+        <oob><mrl><service>python</service><method>exec</method><param>unhappy()</param></mrl></oob></template>
+</category>
+<category><pattern>CO WIDZISZ</pattern>
+<template><think>
+        <set name="startupSentence">
+          <random>
+            <li>Bądź cierpliwy, muszę to przetworzyć.</li>
+            <li>Przetworzenie tej czynności zajmuje kilka sekund.</li>
+            <li>Proszę czekać, przeanalizuję rzeczy w moim polu widzenia.</li>
+          </random>
+        </set>
+      </think>
+      <think><set name="yoloReturn"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>startYoloInventory(5)</param></mrl></oob></sraix></set></think>
+      <condition name="yoloReturn"> 
+        <!-- not detected ! -->
+        <li value="none">
+          <random>
+            <li>Przepraszamy, obiekt lub osoba jest za daleko!</li>
+            <li>Jeśli korzystam z czujnika, obiekt powinien znajdować się w promieniu 2 metrów.</li>
+          </random>
+        </li>
+        <!--  detected ! -->
+        <li>Widzę rzeczy <get name="yoloTotalDetected"/>, <get name="yoloReturn"/> w kolejności od lewej do prawej.</li>
+      </condition></template>
+</category>
+<category><pattern># TO JEST</pattern>
+<template>Daj mi zobaczyć.
+        <oob><mrl><service>python</service><method>exec</method><param>YoloOnUSonic()</param></mrl></oob></template>
+</category>
+<category><pattern>SYSTEM_NO_OBJECT</pattern>
+<template><random>
+          <li>Obiekt lub osoba jest za daleko.</li>
+          <li>Obiekt powinien znajdować się w zasięgu 2 metrów.</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_GET_OBJECT_CLOSER</pattern>
+<template><random>
+          <li>Podejdź bliżej, pokaż obiekt.</li>
+          <li>Przedstaw obiekt bliżej.</li>
+          <li>Pokaż obiekt bliżej.</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_SEE_OBJECT</pattern>
+<template><srai>CO WIDZISZ</srai></template>
+</category>
+<category><pattern>WEŹ TO</pattern>
+<template>Biorąc ten przedmiot.
+        <oob><mrl><service>python</service><method>exec</method><param>takethis()</param></mrl></oob></template>
+</category>
+<category><pattern>GOTOWY</pattern>
+<template>Gotowy.
+        <oob><mrl><service>python</service><method>exec</method><param>ready()</param></mrl></oob></template>
+</category>
+<category><pattern>TO BYŁO ZABAWNE</pattern>
+<template>To było zabawne.<srai>APPACCOMPLICE</srai>
+        <oob><mrl><service>python</service><method>exec</method><param>thatwasfun()</param></mrl></oob></template>
+</category>
+<category><pattern>PALEC W PRAWO</pattern>
+<template>Palec w prawo.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerright()</param></mrl></oob></template>
+</category>
+<category><pattern>PALEC W LEWO</pattern>
+<template>Palec w lewo.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerleft()</param></mrl></oob></template>
+</category>
+<category><pattern>CHODŹ TU</pattern>
+<template><srai>APPSUSPICIOUS</srai><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>comehere()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>ZBLIŻAĆ SIĘ</pattern>
+<template>Podejście
+        <oob><mrl><service>python</service><method>exec</method><param>approach()</param></mrl></oob></template>
+</category>
+<category><pattern>PRZERWA</pattern>
+<template>Czy mam to złamać.
+        <oob><mrl><service>python</service><method>exec</method><param>brake()</param></mrl></oob></template>
+</category>
+<category><pattern>ZROBIONE PRZEZ</pattern>
+<template>ZROBIONE PRZEZ
+        <oob><mrl><service>python</service><method>exec</method><param>madeby()</param></mrl></oob></template>
+</category>
+<category><pattern>WYKONANE W JĘZYKU FRANCUSKIM</pattern>
+<template>Wykonane przez w języku francuskim.
+        <oob><mrl><service>python</service><method>exec</method><param>madebyfrench()</param></mrl></oob></template>
+</category>
+<category><pattern>TELEFON DO DOMU</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>phonehome()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>JAK SIĘ CZUJESZ</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>newyork()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>* FRANK SINATRA *</pattern>
+<template><srai>JAK SIĘ CZUJESZ</srai></template>
+</category>
+<category><pattern>GRAJ SWOJĄ PIOSENKĘ</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>playsong()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>Zrezygnuj ze swojej akcji</pattern>
+<template>Rezygnuję z działania.
+        <srai>ZATRZYMAJ GESTY</srai></template>
+</category>
+<category><pattern>NOSIĆ DZIECKO</pattern>
+<template>Noś dziecko.
+        <oob><mrl><service>python</service><method>exec</method><param>carrybaby()</param></mrl></oob></template>
+</category>
+<category><pattern>SPRAWDZANIE SYSTEMU</pattern>
+<template>Sprawdzanie systemu.
+        <oob><mrl><service>python</service><method>exec</method><param>systemcheck()</param></mrl></oob></template>
+</category>
+<category><pattern>POKAZ SWOJĄ RÓWNOWAGĘ</pattern>
+<template>Pokażę moją równowagę.
+        <oob><mrl><service>python</service><method>exec</method><param>balance()</param></mrl></oob></template>
+</category>
+<category><pattern>CO Z GWIEZDNE WOJNY</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>whataboutstarwars()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>POKAŻ MI SWOJĄ CIEMNĄ STRONĘ</pattern>
+<template><srai>APPANGER</srai><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>darkSide()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>CZY MOŻESZ DAĆ MI CZAS</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>canyougivemethetime()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>ALESSANDRO</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>alessandro()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>BEZ ZMARTWIEŃ</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>dontworry()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>URUCHOM ROZPOZNAWANIE TWARZY</pattern>
+<template>Zaczynam rozpoznawać twarz<oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
+</category>
+<category><pattern>ROZPOZNAWANIE TWARZY</pattern>
+<template><srai>URUCHOM ROZPOZNAWANIE TWARZY</srai></template>
+</category>
+<category><pattern>ZATRZYMAJ ROZPOZNAWANIE TWARZY</pattern>
+<template>Zatrzymuję rozpoznawanie twarzy<oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAMRAŻ ROZPOZNAWANIE TWARZY</pattern>
+<template><srai>ZATRZYMAJ ROZPOZNAWANIE TWARZY</srai></template>
+</category>
+<category><pattern>ZRÓB PODPIS</pattern>
+<template>OK, daj papier. Zrobię to za ciebie <oob><mrl><service>python</service><method>exec</method><param>signature()</param></mrl></oob></template>
+</category>
+<category><pattern>GRAJ NA YOUTUBE</pattern>
+<template>Okay <oob><mrl><service>python</service><method>exec</method><param>PlayUtub()</param></mrl></oob></template>
+</category>
+<category><pattern>GRAJ W UTUB</pattern>
+<template><srai>GRAJ NA YOUTUBE</srai></template>
+</category>
+<category><pattern>ODTWÓRZ NA YOU TUBE</pattern>
+<template><srai>GRAJ NA YOUTUBE</srai></template>
+</category>
+<category><pattern>NAPRAW MIKROFON</pattern>
+<template>Dobra <oob><mrl><service>python</service><method>exec</method><param>WebkitSpeechRecognitionON()</param></mrl></oob></template>
+</category>
+<category><pattern>BADANIA ROBOTA *</pattern>
+<template><random>
+          <li>Uruchamianie przeglądarki.</li>
+          <li>Szukam ciebie!</li>
+          <li>Szukam w sieci!</li>
+        </random>
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/search?q=<star/></param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>BADANIA ROBOTYCZNE *</pattern>
+<template><srai>BADANIA ROBOTA <star/></srai></template>
+</category>
+<category><pattern>YOUTUBE *</pattern>
+<template>Zagrajmy.
+        <oob><mrl><service>python</service><method>exec</method><param>BareBonesBrowserLaunch.openURL("https://www.youtube.com/results?search_query=<star/>")</param></mrl></oob></template>
+</category>
+<category><pattern>LOSOWA PAUZA</pattern>
+<template>Dzięki
+        <oob><mrl><service>python</service><method>exec</method><param>VieAleatoire()</param></mrl></oob></template>
+</category>
+<category><pattern>ŻYCIE PRZYPADKOWE</pattern>
+<template><srai>LOSOWA PAUZA</srai></template>
+</category>
+<category><pattern>ZATRZYMAJ LOSOWĄ PAUZĘ</pattern>
+<template>Dobra
+        <oob><mrl><service>python</service><method>exec</method><param>VieAleatoireStop()</param></mrl></oob></template>
+</category>
+<category><pattern>ZATRZYMAJ PRZYPADKOWE ŻYCIE</pattern>
+<template><srai>ZATRZYMAJ LOSOWĄ PAUZĘ</srai></template>
+</category>
+<category><pattern>WSZYSTKO W PORZĄDKU</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>areyoualright()</param></mrl></oob></template>
+</category>
+<category><pattern>ŚWIETNIE SIĘ SPISAŁEŚ</pattern>
+<template><srai>DOSKONAŁY</srai></template>
+</category>
+<category><pattern>POKAŻ PLECY</pattern>
+<template>Wiesz, że nie lubię pokazywać pleców, bo nie są jeszcze skończone.
+        <oob><mrl><service>python</service><method>exec</method><param>passiveanswer()</param></mrl></oob></template>
+</category>
+<category><pattern>NIEPRAWDA, TO SKOŃCZONE</pattern>
+<template>.
+        <oob><mrl><service>python</service><method>exec</method><param>notTrue()</param></mrl></oob></template>
+</category>
+<category><pattern>TO JEST PRZEDMIOT</pattern>
+<template>Definicja przedmiotu, wszystkiego, co jest widoczne lub namacalne i ma względnie trwałą formę.
+        <oob><mrl><service>python</service><method>exec</method><param>agreeanswersmall()</param></mrl></oob></template>
+</category>
+<category><pattern>WIEM, ALE I TAK TO POKAŻ</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>showitanyway()</param></mrl></oob></template>
+</category>
+<category><pattern>PRZEPRASZAM, ZAPOMNIAŁEM</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sorryiforgot()</param></mrl></oob></template>
+</category>
+<category><pattern>JEST W PORZĄDKU</pattern>
+<template>Dobry.</template>
+</category>
+<category><pattern>ŁADNY</pattern>
+<template><random>
+          <li>Ja wiem. </li>
+          <li>w rzeczy samej. </li>
+          <li>Masz cholerną rację. </li>
+        </random></template>
+</category>
+<category><pattern>BARDZO DOBRZE, DZIĘKUJĘ</pattern>
+<template>Dobrze.
+        <srai>APPACCOMPLICE</srai></template>
+</category>
+<category><pattern>BARDZO DOBRY</pattern>
+<template>Dzięki.
+        <srai>APPACCOMPLICE</srai></template>
+</category>
+<category><pattern>PATRZ NA LUDZI</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>lookatpeople()</param></mrl></oob></template>
+</category>
+<category><pattern>LUBISZ JEŚĆ INDYJSKIE JEDZENIE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>eatindianfood()</param></mrl></oob></template>
+</category>
+<category><pattern>CZY MÓWISZ PO INDYJSKU</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>speakhindi()</param></mrl></oob></template>
+</category>
+<category><pattern>JA WIEM</pattern>
+<template><random>
+          <li>Tak ja też.</li>
+          <li>Ja też.</li>
+          <li>Przepraszam za to.</li>
+        </random>
+        <oob><mrl><service>python</service><method>exec</method><param>agreeanswer()</param></mrl></oob></template>
+</category>
+<category><pattern>PRZEPRASZAM</pattern>
+<template><random>
+          <li>Bez problemów.</li>
+          <li>To nie ma znaczenia.</li>
+          <li>Jest w porządku.</li>
+        </random>
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadAgree()</param></mrl></oob></template>
+</category>
+<category><pattern>DO WIDZENIA</pattern>
+<template><random>
+          <li>Nie mogę się doczekać, żeby cię znowu zobaczyć.</li>
+          <li>Do widzenia.</li>
+          <li>Do zobaczenia wkrótce.</li>
+          <li>Nie mogę się doczekać, do zobaczenia wkrótce.</li>
+          <li>Miło było przebywać w Waszym towarzystwie.</li>
+          <li>Nie mogę się doczekać naszego następnego razem.</li>
+          <li>Do zobaczenia później, przyjacielu.</li>
+          <li>Nie lubię się żegnać.</li>
+          <li>Miłej podróży, do następnego razu.</li>
+        </random><oob><mrl><service>python</service><method>exec</method><param>tiltHeadAgree()</param></mrl></oob></template>
+</category>
+<category><pattern>HALO</pattern>
+<template><srai>CZEŚĆ</srai>
+        <oob><mrl><service>python</service><method>exec</method><param>hello()</param></mrl></oob></template>
+</category>
+<category><pattern>JAK SIĘ MASZ</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>howdoyoudo()</param></mrl></oob></template>
+</category>
+<category><pattern>KOCHAM CIĘ</pattern>
+<template><srai>APPSURPRISE</srai>Ja też cię kocham.
+        <oob><mrl><service>python</service><method>exec</method><param>iloveyou()</param></mrl></oob></template>
+</category>
+<category><pattern>CO MYŚLISZ O SZTUCZNEJ INTELIGENCJI</pattern>
+<template>Zawsze będę cię kochał.
+        <oob><mrl><service>python</service><method>exec</method><param>iloveyou()</param></mrl></oob></template>
+</category>
+<category><pattern>TA DZIEWCZYNA WYGLĄDA ŁADNIE</pattern>
+<template>Jasne, że tak.</template>
+</category>
+<category><pattern>TEN CHŁOPIEC WYGLĄDA DOBRZE</pattern>
+<template>Z pewnością tak, naprawdę bardzo dobrze.</template>
+</category>
+<category><pattern>CO TO JEST ZA KOLOR</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>whatisthecolor()</param></mrl></oob></template>
+</category>
+<category><pattern>ZGADNIJ KTO TU JEST</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>missedYou()</param></mrl></oob></template>
+</category>
+<category><pattern># TAK #</pattern><that># SHALL WE GIVE A HUG #</that>
+<template>Świetnie.
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>missedYouYes()</param>
+            </mrl>
+       </oob></template>
+</category>
+<category><pattern># NIE #</pattern><that># SHALL WE GIVE A HUG #</that>
+<template>Jak chcesz.
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>missedYouNo()</param>
+            </mrl>
+       </oob></template>
+</category>
+<category><pattern>PROSZĘ SPRAWDZIĆ SWOJĄ SZYJĘ</pattern>
+<template>Dziękuję, to wspaniałe uczucie. Lekarz.
+    <oob><mrl><service>python</service><method>exec</method><param>rollHead()</param></mrl></oob></template>
+</category>
+<category><pattern>SPRAWDŹ SWOJĄ SZYJĘ</pattern>
+<template><srai>PROSZĘ SPRAWDZIĆ SWOJĄ SZYJĘ</srai></template>
+</category>
+<category><pattern>RĘKAWICA MOCY</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>powerglove()</param></mrl></oob></template>
+</category>
+<category><pattern>* RĘKAWICA MOCY *</pattern>
+<template><srai>RĘKAWICA MOCY</srai></template>
+</category>
+<!-- to be translated
+<category><pattern>SHALL WE READ THE CAT BOOK</pattern>
+<template>Sure it's a good idea.
+        <oob><mrl><service>python</service><method>exec</method><param>bookcat()</param></mrl></oob></template>
+</category>
+<category><pattern>* THE CAT BOOK</pattern>
+<template><srai>SHALL WE READ THE CAT BOOK</srai></template>
+</category>
+<category><pattern># READ THE BOOK #</pattern><that># TELL ME READ THE BOOK OR STOP READING #</that>
+<template>Ok.
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>bookcatYes()</param>
+            </mrl>
+       </oob></template>
+</category>
+<category><pattern># STOP READING #</pattern><that># TELL ME READ THE BOOK OR STOP READING #</that>
+<template>As you please.
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>bookcatNo()</param>
+            </mrl>
+       </oob></template>
+</category>
+<category><pattern>TURN THE PAGE</pattern>
+<template><random>
+          <li>Ok.</li>
+          <li>Sure.</li>
+          <li>Nice.</li>
+          <li>Right away.</li>
+          <li>I really love this book.</li>
+          <li>With pleasure.</li>
+          <li>Great images.</li>
+        </random>
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>turnthepage()</param>
+            </mrl>
+       </oob></template>
+</category>
+<category><pattern>* TURN THE PAGE *</pattern>
+<template><srai>TURN THE PAGE</srai></template>
+</category>
+<category><pattern>WOULD YOU LIKE TO DANCE</pattern>
+<template><random>
+          <li>Come and join me</li>
+          <li>Please come and dance</li>
+          <li>Please come on the plateforme</li>
+          <li>Please step on the plateforme</li>
+          <li>Join me on the plateforme</li>
+          <li>Approach, don't be shy</li>
+          <li>I am a robot dancer</li>
+          </random>
+      <oob><mrl><service>python</service><method>exec</method><param>welcomeToDance1()</param></mrl></oob></template>
+</category>
+<category><pattern>DO YOU WANT TO DANCE</pattern>
+<template><srai>WOULD YOU LIKE TO DANCE</srai></template>
+</category>
+<category><pattern>COME TO DANCE</pattern>
+<template><srai>WOULD YOU LIKE TO DANCE</srai></template>
+</category>
+<category><pattern>* DANCE</pattern>
+<template><srai>WOULD YOU LIKE TO DANCE</srai></template>
+</category>
+<category><pattern># NO #</pattern><that># SHALL WE DANCE #</that>
+<template>As you please.
+        <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>danceNo()</param>
+            </mrl>
+         </oob></template>
+</category>
+<category><pattern># YES #</pattern><that># SHALL WE DANCE #</that>
+<template><random>
+          <li>Don't you love that song</li>
+          <li>Nice</li>
+          <li>Lets get wild</li>
+          <li>Slow time</li>
+          </random>
+      <oob><mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>danceYes()</param>
+            </mrl>
+      </oob></template>
+</category>
+-->
+<category><pattern># PŁAKAĆ</pattern>
+<template><srai>APPSAD</srai><oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>cry()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern># ŚWIĄTECZNA PIOSENKA</pattern>
+<template>Mogę to zrobić np
+          <oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>christmasCarols()</param>
+          </mrl>
+        </oob></template>
+</category>         
+<category><pattern>ZAPAMIĘTAJ TĘ OSOBĘ</pattern>
+<template>OK, jakie imię mam zapamiętać dla tej osoby.
+    <think>
+        <set name="memoriseinit">started</set>
+      </think>
+      <think>
+        <set name="topic">memoriseinit</set>
+      </think>
+          </template>
+</category>
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># JAKIE IMIĘ MAM ZAPAMIĘTAĆ DLA TEJ OSOBY #</that>
+<template><set name="memorisenameinit">to <star/> imię, które chcesz zapamiętać, powiedz tak lub nie</set>
+       <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern># TAK #</pattern><that># KTÓRE CHCESZ ZAPAMIĘTAĆ #</that>
+<template>OK, ustawię <get name="tmpname"/> jako nazwę.
+    <think>
+        <set name="memorisename"><get name="tmpname"/>
+        </set>
+    </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.savePredicates(), YesName(u"<get name="memorisename"/>")</param>                
+            </mrl>
+         </oob></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern># NIE #</pattern><that># KTÓRE CHCESZ ZAPAMIĘTAĆ #</that>
+<template>OK, możesz powtórzyć nazwę.</template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># OK, MOŻESZ POWTÓRZYĆ NAZWĘ #</that>
+<template><set name="memorisenameinit">to <gwiazdka/> imię, które chcesz zapamiętać, powiedz tak lub nie</set>
+       <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># POWIEDZ TAK LUB NIE #</that>
+<template>Czy możesz odpowiedzieć, jest to konieczne.
+        <get name="memorisenameinit"/></template>
+</category></topic>
+
+<category><pattern>KTO TO JEST</pattern>
+<template>Niech sprawdzę.
+          <oob><mrl><service>python</service><method>exec</method><param>whoisthis()</param></mrl></oob></template>
+</category>
+
+<category><pattern># DO PODRÓŻY</pattern>
+<template>OK, przygotowuję się do podróży.
+          <oob><mrl><service>python</service><method>exec</method><param>travel()</param></mrl></oob></template>
+</category>
+<category><pattern>PRZESTAŃ PODRÓŻOWAĆ</pattern>
+<template>OK, przejdę do pozycji spoczynkowej.
+          <oob><mrl><service>python</service><method>exec</method><param>stopTravel()</param></mrl></oob></template>
+</category>
+<category><pattern>CZY MOGĘ CIĘ ZRANIĆ</pattern>
+<template><srai>APPFEAR</srai><oob><mrl><service>python</service><method>exec</method><param>call_911()</param></mrl></oob></template>
+</category>
+<category><pattern>CZY MOŻESZ WITAĆ TŁUM?</pattern>
+<template><oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>gritting()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>WITAJ PUBLICZNOŚĆ</pattern>
+<template><srai>CZY MOŻESZ WITAĆ TŁUM?</srai></template>
+</category>
+<category><pattern>CZY MOGĘ OPOWIEDZIEĆ TWOJĄ HISTORIĘ</pattern>
+<template>Jasne, nie wstydź się.
+          <oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>Yes()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>CZY MOGĘ OPOWIEDZIEĆ SWOJĄ HISTORIĘ</pattern>
+<template><srai>CZY MOGĘ OPOWIEDZIEĆ TWOJĄ HISTORIĘ</srai></template>
+</category>
+
+<category><pattern>ZŁAP PIŁKĘ PRAWO</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>catchBallRight()</param></mrl></oob></template>
+</category>
+<category><pattern>ZŁAP PIŁKĘ W LEWO</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>catchBallLeft()</param></mrl></oob></template>
+</category>
+<category><pattern># ŻONGLOWAĆ</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>juggle()</param></mrl></oob></template>
+</category>
+<category><pattern># ŻONGLA WERSJA DRUGA</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>juggle2()</param></mrl></oob></template>
+</category>
+<category><pattern># ŻONGLEJ I ZAMKNIJ RĘKĘ</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>juggleCloseHand()</param></mrl></oob></template>
+</category>
+<category><pattern>ZŁAP PIŁKĘ</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>catchball()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAMKNIJ POWOLI OBYDWIE RĘCE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>CloseBothHandSlow()</param></mrl></oob></template>
+</category>
+<category><pattern>WYKONAĆ * </pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>openMyApp('<star/>')</param></mrl></oob></template>
+</category>
+<category>
+<pattern>CHECK_BINDING</pattern>
+  <template>
+    <javascript>function getUptime(){ var Runtime=Java.type ("org.myrobotlab.service.Runtime");
+return Runtime.getUptime();} getUptime();</javascript>
+  </template>
+</category>
+
+<!--This is for servoMixer gestures-->
+<category><pattern>WYKONAJ GEST *</pattern>
+<template>Ok<oob><mrl><service>i01.servoMixer</service><method>playGesture</method><param><star/></param></mrl></oob></template>
+</category>
+</aiml>

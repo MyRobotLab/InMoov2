@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Author  : Wojciech Kuchta <wojciech.kuchta@gmail.com> -->
+<!-- Created : 2014-07-25 -->
+<!--
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+-->
+<aiml>
+<!-- Potwierdzenia -->
+<!-- TAK -->
+<category>
+    <pattern>TAK</pattern>
+    <template>To dobrze.</template>
+</category>
+<category>
+    <pattern>NO</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>NO PEWNIE</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>POTWIERDZAM</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>JAKZE</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>JASNE *</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>JASNE</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>PEWNIE</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>SERIO</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>OCZYWISCIE</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>OCZYWISCIE * TAK</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>DOBRZE</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>DOBRA</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>ZGODA</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>CZEMU BY NIE</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>CZEMU NIE</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>NIECH BEDZIE</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>JAK CHCESZ</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>SKORO NALEGASZ</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>POTWIERDZAM</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>NO DALEJ</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>DALEJ</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>JAZDA</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>ZAISTE</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>ZAPEWNE</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>ZDECYDOWANIE</pattern><template><srai>TAK</srai></template>
+</category>
+<category>
+    <pattern>ZDECYDOWANIE TAK</pattern><template><srai>TAK</srai></template>
+</category>
+<!-- Koniec Potwierdzen -->
+
+
+<!-- negacje -->
+<category>
+    <pattern>NIE</pattern>
+    <template>Nie, to nie.</template>
+</category>
+<category>
+    <pattern>OCZYWISCIE * NIE</pattern><template><srai>NIE</srai></template>
+</category>
+<category>
+    <pattern>NIE TERAZ</pattern><template><srai>NIE</srai></template>
+</category>
+<category>
+    <pattern>NIETERAZ</pattern><template><srai>NIE</srai></template>
+</category>
+<category>
+    <pattern>NIE SPECJALNIE</pattern><template><srai>NIE</srai></template>
+</category>
+<category>
+    <pattern>NIESPECJALNIE</pattern><template><srai>NIE</srai></template>
+</category>
+<category>
+    <pattern>NIE BARDZO</pattern><template><srai>NIE</srai></template>
+</category>
+<category>
+    <pattern>NIEBARDZO</pattern><template><srai>NIE</srai></template>
+</category>
+<category>
+    <pattern>POZNIEJ</pattern><template><srai>NIE</srai></template>
+</category>
+<!-- negacje -->
+
+</aiml>

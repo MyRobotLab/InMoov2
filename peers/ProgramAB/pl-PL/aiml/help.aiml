@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: help.aiml -->
+  <!--  -->
+<category><pattern>* POMOC *</pattern>
+<template><srai>POMOC</srai></template>
+</category>
+<category><pattern>* POMOC</pattern>
+<template><srai>POMOC</srai></template>
+</category>
+<category><pattern>POMOC *</pattern>
+<template><srai>POMOC</srai></template>
+</category>
+<category><pattern>POMOC</pattern>
+<template>Listę pomocy możesz już sprawdzić w interfejsie chatbota. Możesz wydawać polecenia głosowe każdej linii, aby uzyskać dodatkową pomoc, lub wpisać je w polu tekstowym: POMOC GESTY , POMOC INTERFEJS, POMOC PRACA.
+        </template>
+</category>
+<category><pattern>POMOC GESTY</pattern>
+<template>Oto krótka lista poleceń głosowych:<br/>
+          ZAMKNIJ PALEC.<br/>
+          OTWÓRZ PALEC.<br/>
+          PALEC DO ŚRODKA.<br/>
+          DZIAŁAJ PALCEM.<br/>
+          OTWARTA DŁOŃ.<br/>
+          ZAMKNIJ RĘKĘ.<br/>
+          OTWARTE DŁONIE.<br/>
+          ZAMKNIJ RĘCE.<br/>
+          OTWÓRZ SWOJĄ PRAWĄ RĘKĘ.<br/>
+          OTWÓRZ LEWĄ RĘKĘ.<br/>
+          ZAMKNIJ PRAWĄ RĘKĘ.<br/>
+          ZAMKNIJ LEWĄ RĘKĘ.<br/>
+          WOLNO ZAMKNIJ PRAWĄ RĘKĘ.<br/>
+          Możesz wyświetlić dłuższą listę w zakładce Pythona, ale nadal możesz znaleźć DUŻO więcej poleceń głosowych w zasobach folderu, programAB, plikach AIML.
+          <oob>
+        <mrl>
+          <service>python</service><method>exec</method><param>printList_PL()</param>
+        </mrl>
+      </oob>
+      </template>
+</category>
+<category><pattern>POMOC INTERFEJS</pattern>
+<template><oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://inmoov.fr/inmoov2-in-nixie/</param>
+          </mrl>
+        </oob></template>
+</category>
+
+<category><pattern>POMOC PRACA</pattern>
+<template>Możesz wokalnie uruchomić lub zwolnić usługę. Jako przykład możesz powiedzieć: ROZPOCZNIJ SERWIS PRAWĄ RĘKĄ lub ZWOLNIJ SERWIS GŁOWA</template>
+</category>
+
+<category><pattern>ROZPOCZNIJ SERWIS *</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>startPeer</method>
+                <param><star/></param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+<category><pattern>ZWOLNIJ SERWIS *</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>releasePeer</method>
+                <param><star/></param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>ROZPOCZNIJ SERWIS PRAWĄ RĘKĄ</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>startPeer</method>
+                <param>rightHand</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>ZWOLNIJ SERWIS PRAWĄ RĘKĄ</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>releasePeer</method>
+                <param>rightHand</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>ROZPOCZNIJ SERWIS LEWĄ RĘKĄ</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>startPeer</method>
+                <param>leftHand</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>ZWOLNIJ SERWIS LEWĄ RĘKĄ</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>releasePeer</method>
+                <param>leftHand</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>ROZPOCZNIJ SERWIS PRAWE RAMIĘ</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>startPeer</method>
+                <param>rightArm</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>ZWOLNIJ SERWIS PRAWE RAMIĘ</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>releasePeer</method>
+                <param>rightArm</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>ROZPOCZNIJ SERWIS LEWEGO RAMIENIA</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>startPeer</method>
+                <param>leftArm</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+
+<category><pattern>ZWOLNIJ SERWIS LEWE RAMIĘ</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>i01</service>
+                <method>releasePeer</method>
+                <param>leftArm</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+</aiml>

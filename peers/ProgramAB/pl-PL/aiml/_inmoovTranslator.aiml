@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: _inmoovTranslator.aiml -->
+<!--  -->
+<category><pattern>TŁUMACZENIE W *</pattern>
+<template><think>
+        <set name="topic">TRANSLATOR</set>
+      </think>
+      <think>
+        <set name="languetraduction">
+          <star/>
+        </set>
+      </think>
+      <li>
+        Tłumaczenie na <star/>, powiedz mi : przestań tłumaczyć, i przestanę.
+      </li></template>
+</category>
+<category><pattern>TŁUMACZENIE DO *</pattern>
+<template><srai>TŁUMACZENIE W <star index="1"/></srai></template>
+</category>
+<category><pattern>PRZETŁUMACZ * W *</pattern>
+<template><oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>translateText("<star index="1"/>","<star index="2"/>")</param>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>PRZETŁUMACZ * NA *</pattern>
+<template><srai>PRZETŁUMACZ <star index="1"/> W <star index="2"/></srai></template>
+</category>
+<category><pattern>AZURE_ERROR_1</pattern>
+<template>Przepraszamy, wystąpił problem z komunikacją z serwerem Azure, spróbuj ponownie i sprawdź klucz !</template>
+</category>
+<category><pattern>AZURE_ERROR_2 *</pattern>
+<template>Nie znam tego języka <star Index="1"/> lub składnia w pliku Azure jest niepoprawna !</template>
+</category>
+<category><pattern>AZURE_ERROR_3</pattern>
+<template>Wygląda na to, że mam problem z połączeniem się z serwerem .</template>
+</category>
+<topic name="TRANSLATOR">
+<category><pattern># PRZESTAŃ TŁUMACZYĆ #</pattern>
+<template><think>
+        <set name="topic">GESTURES</set>
+      </think>
+      <think>
+        <set name="languetraduction">en</set>
+      </think>
+      <li>OK, przestanę tłumaczyć, miło było mówić w tym języku</li></template>
+</category></topic>
+
+<topic name="TRANSLATOR">
+<category><pattern>#</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>translateText("<star index="1"/>","<get name="languetraduction"/>")</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+<category><pattern>PRZEŁĄCZ NA ANGIELSKI</pattern>
+    <template>Przechodzę na język angielski.
+    <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.setCurrentBotName("en-US"), runtime.setAllLocales("en-US"), i01_ear.getLocales(), i01_mouth.setVoice("Microsoft David Desktop"), i01_chatBot.startSession(str(i01_chatBot.getCurrentUserName())), i01_chatBot.setPredicate(str(i01_chatBot.getCurrentUserName()),"name",str(i01_chatBot.getCurrentUserName())), i01_chatBot.setPredicate(str(i01_chatBot.getCurrentUserName()),"botname",str(i01_chatBot.getPredicate(str(i01_chatBot.getCurrentUserName()))),"botname"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+        <think>
+          <set name="tmpname"><get name="name"/></set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession("human"), i01_chatBot.setPredicate("human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.savePredicates(), i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername"))), i01_chatBot.setPredicate(u"<get name="name"/>","img",u"../ProgramAB/<get name="name"/>.png"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+    </template>
+  </category>
+<category><pattern>PRZEŁĄCZ NA FRANCUSKI</pattern>
+<template>Przejście na język francuski.
+    <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.setCurrentBotName("fr-FR"), runtime.setAllLocales("fr-FR"), i01_ear.getLocales(), i01_mouth.setVoice("Microsoft Paul"), i01_chatBot.startSession(str(i01_chatBot.getCurrentUserName())), i01_chatBot.setPredicate(str(i01_chatBot.getCurrentUserName()),"name",str(i01_chatBot.getCurrentUserName())), i01_chatBot.setPredicate(str(i01_chatBot.getCurrentUserName()),"botname",str(i01_chatBot.getPredicate(str(i01_chatBot.getCurrentUserName()))),"botname"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+        <think>
+          <set name="tmpname"><get name="name"/></set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession("human"), i01_chatBot.setPredicate("human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.savePredicates(), i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername"))), i01_chatBot.setPredicate(u"<get name="name"/>","img",u"../ProgramAB/<get name="name"/>.png"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+</template>
+</category>
+
+<category><pattern>PRZEJDŹ NA NIEMIECKI</pattern>
+<template>Przejście na język niemiecki.
+    <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.setCurrentBotName("de-DE"), runtime.setAllLocales("de-DE"), i01_ear.getLocales(), i01_mouth.setVoice("Hans"), i01_chatBot.startSession(str(i01_chatBot.getCurrentUserName())), i01_chatBot.setPredicate(str(i01_chatBot.getCurrentUserName()),"name",str(i01_chatBot.getCurrentUserName())), i01_chatBot.setPredicate(str(i01_chatBot.getCurrentUserName()),"botname",str(i01_chatBot.getPredicate(str(i01_chatBot.getCurrentUserName()))),"botname"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+        <think>
+          <set name="tmpname"><get name="name"/></set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession("human"), i01_chatBot.setPredicate("human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.savePredicates(), i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername"))), i01_chatBot.setPredicate(u"<get name="name"/>","img",u"../ProgramAB/<get name="name"/>.png"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+</template>
+</category>
+
+</aiml>
