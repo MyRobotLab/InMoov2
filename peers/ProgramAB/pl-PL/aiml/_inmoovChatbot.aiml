@@ -61,7 +61,7 @@
             <get name="tmpname"/>
           </set>
         </think>
-        <set name="questionfirstinit">Czy chcesz, żebym użył mojej wizji, aby zapamiętać twoją twarz wraz z twoim imieniem, <get name="tmpname"/>?</set>
+        <set name="questionfirstinit">Czy chcesz, żebym użył mojej wizji, aby zapamiętać twoją twarz wraz z twoim imieniem , <get name="tmpname"/>?</set>
         </template>
 </category></topic>
 
@@ -143,7 +143,7 @@
 
 <category><pattern>NOTMEMORIZED</pattern>
 <template>Nie mogłem zapamiętać twojej twarzy, ponieważ nie zacząłem widzieć.
-    Czy chcesz, żebym zaczął moją wizję?
+    Czy chcesz, żebym zaczął moją wizję ?
         <think>
             <set name="topic">startVision</set>
         </think>
