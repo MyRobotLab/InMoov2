@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Author  : Wojciech Kuchta <wojciech.kuchta@gmail.com> -->
+<!-- Created : 2014-07-23 -->
+<!--
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+-->
+<aiml>
+<category><pattern>ALE *</pattern><template><srai><star/></srai></template></category>
+<category><pattern>TERAZ *</pattern><template><srai><star/></srai></template></category>
+<category><pattern>A *</pattern><template><srai><star/></srai></template></category>
+
+<category><pattern>POWIEDZ MI *</pattern><template><srai><star/></srai></template></category>
+<category><pattern>POWIEDZ MI PROSZE *</pattern><template><srai><star/></srai></template></category>
+<category><pattern>PROSZE POWIEDZ *</pattern><template><srai><star/></srai></template></category>
+<category><pattern>CZY MOZESZ MI POWIEDZIEC *</pattern><template><star/></template></category>
+<category><pattern>CZY MOZESZ POWIEDZIEC *</pattern><template><star/></template></category>
+<category><pattern>CZY MOGLBYS MI POWIEDZIEC *</pattern><template><star/></template></category>
+<category><pattern>CZY MOGLBYS POWIEDZIEC *</pattern><template><star/></template></category>
+
+<category><pattern>CHCE WIEDZIEC *</pattern><template><star/></template></category>
+<category><pattern>CHCIALABYM WIEDZIEC *</pattern><template><star/></template></category>
+<category><pattern>CHCIALBYM WIEDZIEC *</pattern><template><star/></template></category>
+
+<category><pattern>BYC MOZE *</pattern><template><srai><star/></srai></template></category>
+<category><pattern>BYCMOZE *</pattern><template><srai><star/></srai></template></category>
+<category><pattern>Z PEWNOSCIA *</pattern><template><srai><star/></srai></template></category>
+<category><pattern>Z CALA PEWNOSCIA *</pattern><template><srai><star/></srai></template></category>
+<category><pattern>NA PEWNO *</pattern><template><srai><star/></srai></template></category>
+<category><pattern>ZAPEWNE *</pattern><template><srai><star/></srai></template></category>
+<category><pattern>CHYBA *</pattern><template><srai><star/></srai></template></category>
+
+<category><pattern>POWIEM CI ZE *</pattern><template><srai><star/></srai></template></category>
+<category><pattern>UWAGA WSZYSCY *</pattern><template><srai><star/></srai></template></category>
+
+</aiml>
+

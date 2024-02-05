@@ -71,3 +71,23 @@ def printList_DE():
         "HAND SCHÜTTELN", "WAS SIEHST DU"]
     for i in gesturesList:
         print unicode(i,'utf-8')
+
+def printList_PL():
+    gesturesList = ["ZAMKNIJ PALEC", "OTWÓRZ PALEC", "PALEC DO ŚRODKA", 
+        "DZIAŁAJ PALCEM", "OTWARTA DŁOŃ", "ZAMKNIJ RĘKĘ", "OTWARTE DŁONIE", 
+        "ZAMKNIJ RĘCE", "OTWÓRZ SWOJĄ PRAWĄ RĘKĘ", "OTWÓRZ LEWĄ RĘKĘ", 
+        "ZAMKNIJ PRAWĄ RĘKĘ", "ZAMKNIJ LEWĄ RĘKĘ", 
+        "WOLNO ZAMKNIJ PRAWĄ RĘKĘ", "KAMERA WŁĄCZONA", "WYŁĄCZ KAMERA", "SZUKAJ LUDZI", 
+        "WYKRYWANIE TWARZY", "SPÓJRZ NA MNIE", "ZAKOŃCZ WYSZUKIWANIE", "ŚCIEŻKA", "ZAMRAŻ UTWÓR", 
+        "ZATRZYMAJ ŚLEDZENIE", "ZROBIĆ ZDJĘCIE", "UCHWYĆ GEST", "GRAJ MUZYKĘ", "ZATRZYMAJ MUZYKĘ",
+        "RESZTA", "DAJĄCY", "WOJOWNIK", "PIĘŚCI BIODRA", "SPÓJRZ NA TO", "ZWYCIĘSTWO", 
+        "RAMIONA DO GÓRY", "RAMIONA PRZÓD", "DA VINCI", "RUCH NUMER 3", "PRZESTAŃ SŁUCHAĆ", "KONTROLA GŁOSU", 
+        "PEŁNA PRĘDKOŚĆ", "PÓŁ PRĘDKOŚCI", "OBRAZEK PO PRAWEJ STRANIE", 
+        "OBRAZ PO LEWEJ STRANIE", "ZDJĘCIE PO OBU STRONACH", "SPÓJRZ NA SWOJĄ PRAWĄ STRONĘ", 
+        "SPÓJRZ NA LEWĄ STRONĘ", "PATRZ W ŚRODEK", "SPOJRZEĆ W GÓRĘ", "SPÓJRZ W DÓŁ", 
+        "PRZECHYL GŁOWĘ NA PRAWĄ BRONĘ", "PRZECHYL GŁOWĘ NA LEWĄ BRONĘ", 
+        "UŚCISK RĘKI", "CO WIDZISZ", "ODTWÓRZ NASTĘPNĄ PIOSENKĘ", "ODTWÓRZ LOSOWĄ MUZYKĘ",
+        "SZUKAJ W YOUTUBE *","WYKONAĆ *","PRZEJDŹ NA POLSKI", "PRZEŁĄCZ NA ANGIELSKI"
+        ]
+    for i in gesturesList:
+        print unicode(i,'utf-8')        

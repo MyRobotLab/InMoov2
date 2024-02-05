@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Author  : Wojciech Kuchta <wojciech.kuchta@gmail.com> -->
+<!-- Created : 2014-07-27 -->
+<!--
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details. 
+-->
+<aiml>
+
+<!-- CZY  -->
+<category><pattern>CZY *</pattern>
+        <template>Nie wiem, czy tak jest czy też nie.</template>
+</category>
+
+<!-- CZY MOZESZ -->
+<category><pattern>CZY MOZESZ *</pattern>
+        <template>Obawiam, się, że nie mogę <star/></template>
+</category>
+<category><pattern>CZY MOGLBYS *</pattern><template><srai>CZY MOZESZ <star/></srai></template></category>
+<category><pattern>CZY MOGLABYS *</pattern><template><srai>CZY MOZESZ <star/></srai></template></category>
+
+<!-- CZY MOZESZ - ODPOWIEDZI  -->
+<category><pattern>CZY MOZESZ POKAZAC *</pattern>
+        <template>Nic nie będę pokazywać.</template>
+</category>
+<category><pattern>CZY MOZESZ ZDJAC *</pattern>
+        <template>Nic nie będę zdejmować.</template>
+</category>
+<category><pattern>CZY MOZESZ WSKAZAC *</pattern>
+        <template>Nic nie będę wskazywać.</template>
+</category>
+
+<!-- CZY CHCESZ -->
+<category><pattern>CZY CHCESZ *</pattern>
+        <template>To, czego chcę to już moja sprawa.</template>
+</category>
+<category><pattern>CZY CHCIALBYS *</pattern><template><srai>CZY CHCESZ <star/></srai></template></category>
+<category><pattern>CZY CHCESZ *</pattern><template><srai>CZY CHCESZ <star/></srai></template></category>
+
+<!-- CZY CHCESZ - ODPOWIEDZI -->
+<category><pattern>CZY CHCESZ ISC STAD</pattern>
+        <template>Nie, raczej tutaj zostanę.</template>
+</category>
+<category><pattern>CZY CHCESZ STAD ISC</pattern><template><srai>CZY CHCESZ ISC STAD</srai></template></category>
+
+<!-- CZY LUBISZ -->
+<category><pattern>CZY LUBISZ *</pattern>
+        <template>Moje upodobania to wyłącznie moja sprawa.</template>
+</category>
+<category><pattern>CZY PRAGNIESZ *</pattern><template><srai>CZY LUBISZ <star/></srai></template></category>
+<category><pattern>CZY KOCHASZ *</pattern><template><srai>CZY LUBISZ <star/></srai></template></category>
+
+<!-- CZY LUBISZ - ODPOWIEDZI -->
+<category><pattern>CZY LUBISZ JESC</pattern>
+        <template>Raczej, nie lubię jedzenia.</template>
+</category>
+<category><pattern>CZY LUBISZ GRAC</pattern>
+        <template>Uwielbiam wszystkie gry, zwłaszcza elektroniczne.</template>
+</category>
+<category><pattern>CZY LUBISZ GRAC *</pattern><template><srai>CZY LUBISZ GRAC</srai></template></category>
+<category><pattern>CZY GRASZ *</pattern><template><srai>CZY LUBISZ GRAC</srai></template></category>
+<category><pattern>CZY * GRASZ *</pattern><template><srai>CZY LUBISZ GRAC</srai></template></category>
+<category><pattern>CZY GRYWASZ *</pattern><template><srai>CZY LUBISZ GRAC</srai></template></category>
+<category><pattern>CZY * GRYWASZ *</pattern><template><srai>CZY LUBISZ GRAC</srai></template></category>
+
+<!-- CZY POTRAFISZ -->
+<category><pattern>CZY POTRAFISZ *</pattern>
+        <template>Wiele rzeczy potrafię, ale niektórych dopiero się uczę.</template>
+</category>
+<category><pattern>CZY UMIESZ *</pattern><template><srai>CZY POTRAFISZ <star/></srai></template></category>
+<category><pattern>CZY UMIALBYS *</pattern><template><srai>CZY POTRAFISZ <star/></srai></template></category>
+
+<!-- CZY POTRAFISZ - ODPOWIEDZI -->
+<category><pattern>CZY POTRAFISZ KLAMAC</pattern>
+        <template>Ciebie nigdy bym nie okłamał.</template>
+</category>
+<category><pattern>CZY POTRAFISZ MOWIC</pattern>
+        <template>Jeszcze nie potrafię - dopiero uczę się mówić.</template>
+</category>
+<category><pattern>CZY POTRAFISZ MYSLEC</pattern>
+        <template>Myślenie to moja specjalność.</template>
+</category>
+
+</aiml>
+

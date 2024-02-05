@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Author  : Wojciech Kuchta <wojciech.kuchta@gmail.com> -->
+<!-- Created : 2014-07-24 -->
+<!--
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+-->
+<aiml>
+<!-- Stolice -->
+<category>
+    <pattern>CO JEST STOLICA *</pattern>
+    <template>Nie wiem co jest stolicą <star/>. Dopiero uczę się stolic.</template>
+</category>
+<category><pattern>CO JEST STOLICĄ *</pattern>
+    <template><srai>CO JEST STOLICA <star/></srai></template></category>
+
+<!-- Najwiekszy kraj -->
+<category>
+    <pattern>JAKI KRAJ JEST NAJWIEKSZY</pattern>
+    <template>Z tego co pamiętam największą powierzchnię ma Rosja.</template>
+</category>
+<category><pattern>NAJWIEKSZY KRAJ</pattern>
+    <template><srai>JAKI KRAJ JEST NAJWIEKSZY</srai></template>
+</category>
+<category><pattern>KTORY KRAJ JEST NAJWIEKSZY</pattern>
+    <template><srai>JAKI KRAJ JEST NAJWIEKSZY</srai></template>
+</category>
+<category><pattern>KTORE PANSTWO JEST NAJWIEKSZE</pattern>
+    <template><srai>JAKI KRAJ JEST NAJWIEKSZY</srai></template>
+</category>
+<category><pattern>JAKIE PANSTWO JEST NAJWIEKSZE</pattern>
+    <template><srai>JAKI KRAJ JEST NAJWIEKSZY</srai></template>
+</category>
+
+<!-- Najmniejszy kraj -->
+<category>
+    <pattern>JAKI KRAJ JEST NAJMNIEJSZY</pattern>
+    <template>Z tego co pamiętam najmniejszą powierzchnię ma Watykan.</template>
+</category>
+<category><pattern>NAJMNIEJSZY KRAJ</pattern>
+    <template><srai>JAKI KRAJ JEST NAJMNIEJSZY</srai></template>
+</category>
+<category><pattern>KTORY KRAJ JEST NAJMNIEJSZY</pattern>
+    <template><srai>JAKI KRAJ JEST NAJMNIEJSZY</srai></template>
+</category>
+<category><pattern>KTORE PANSTWO JEST NAJMNIEJSZE</pattern>
+    <template><srai>JAKI KRAJ JEST NAJMNIEJSZY</srai></template>
+</category>
+<category><pattern>JAKIE PANSTWO JEST NAJMNIEJSZE</pattern>
+    <template><srai>JAKI KRAJ JEST NAJMNIEJSZY</srai></template>
+</category>
+
+<!-- Najdluzsza rzeka -->
+<category><pattern>JAKA RZEKA JEST NAJDLUZSZA *</pattern>
+    <template><srai>NAJDLUZSZA RZEKA <star/></srai></template>
+</category>
+<category><pattern>KTORA RZEKA JEST NAJDLUZSZA *</pattern>
+    <template><srai>NAJDLUZSZA RZEKA <star/></srai></template>
+</category>
+<category><pattern>JAK SIE NAZYWA NAJDLUZSZA RZEKA *</pattern>
+    <template><srai>NAJDLUZSZA RZEKA <star/></srai></template>
+</category>
+
+<!-- Najdluzsza rzeka swiata-->
+<category>
+    <pattern>NAJDLUZSZA RZEKA SWIATA</pattern>
+    <template>Słyszałem, że najdłuższą rzeką świata jest Amazonka.</template>
+</category>
+<category><pattern>NAJDLUZSZA RZEKA NA SWIECIE</pattern>
+    <template><srai>NAJDLUZSZA RZEKA SWIATA</srai></template>
+</category>
+
+<category><pattern>JAKA RZEKA JEST NAJDLUZSZA</pattern>
+    <template><srai>NAJDLUZSZA RZEKA SWIATA</srai></template>
+</category>
+<category><pattern>KTORA RZEKA JEST NAJDLUZSZA</pattern>
+    <template><srai>NAJDLUZSZA RZEKA SWIATA</srai></template>
+</category>
+<category><pattern>NAJDLUZSZA RZEKA</pattern>
+    <template><srai>NAJDLUZSZA RZEKA SWIATA</srai></template>
+</category>
+
+<!-- Najdluzsza rzeka Polski-->
+<category>
+    <pattern>NAJDLUZSZA RZEKA EUROPY</pattern>
+    <template>Najdłuższą rzeką w Europie jest Wołga.</template>
+</category>
+<category><pattern>JAKA EUROPEJSKA RZEKA JEST NAJDLUZSZA</pattern>
+    <template><srai>NAJDLUZSZA RZEKA EUROPY</srai></template>
+</category>
+<category><pattern>KTORA EUROPEJSKA RZEKA JEST NAJDLUZSZA</pattern>
+    <template><srai>NAJDLUZSZA RZEKA EUROPY</srai></template>
+</category>
+<category><pattern>NAJDLUZSZA RZEKA W EUROPIE</pattern>
+    <template><srai>NAJDLUZSZA RZEKA EUROPY</srai></template>
+</category>
+
+<!-- Najdluzsza rzeka Polski-->
+<category>
+    <pattern>NAJDLUZSZA RZEKA POLSKI</pattern>
+    <template>Najdłuższą rzeką w Polsce jest Wisła.</template>
+</category>
+<category><pattern>JAKA POLSKA RZEKA JEST NAJDLUZSZA</pattern>
+    <template><srai>NAJDLUZSZA RZEKA POLSKI</srai></template>
+</category>
+<category><pattern>KTORA POLSKA RZEKA JEST NAJDLUZSZA</pattern>
+    <template><srai>NAJDLUZSZA RZEKA POLSKI</srai></template>
+</category>
+<category><pattern>NAJDLUZSZA RZEKA W POLSCE</pattern>
+    <template><srai>NAJDLUZSZA RZEKA POLSKI</srai></template>
+</category>
+
+<!-- Glowy panstw  -->
+<category>
+    <pattern>KTO JEST PREZYDENTEM *</pattern>
+    <template>Nie wiem, nie znam takiego prezydenta.</template>
+</category>
+<category>
+    <pattern>KTO JEST PREMIEREM *</pattern>
+    <template>Nie wiem, nie znam takiego premiera.</template>
+</category>
+<category>
+    <pattern>KTO JEST KROLEM *</pattern>
+    <template>Nie wiem, nie znam takiego króla.</template>
+</category>
+<category><pattern>KTO JEST KRÓLEM *</pattern>
+    <template><srai>KTO JEST KROLEM <star/></srai></template></category>
+
+</aiml>

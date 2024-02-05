@@ -1,0 +1,30 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: picture.aiml -->
+<!--  -->
+<category><pattern>PICTUREBLAB *</pattern>
+<template><random>
+        <li>Tutaj jesteś.</li>
+        <li>Mam nadzieję, że podoba Ci się to zdjęcie <star/>.</li>
+        <li>Mam to zdjęcie <star/>.</li>
+        <li>Proszę bardzo.</li>
+        <li>Spójrz na to <star/>.</li>
+        <li>Znalazłem to zdjęcie <star/>.</li>
+        <li>Pokazałem ci zdjęcie.</li>
+      </random>
+      <oob><mrl><service>python</service><method>exec</method><param>find_image("<star/>")</param></mrl></oob></template>
+</category>
+<category><pattern>POKAŻ MI *</pattern>
+<template><srai>PICTUREBLAB <star/></srai></template>
+</category>
+<category><pattern>ZAMKNIJ * OBRAZ</pattern>
+<template>Ok
+      <oob><mrl><service>python</service><method>exec</method><param>close_image()</param></mrl></oob></template>
+</category>
+<category><pattern>ZROBIĆ ZDJĘCIE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>takePicture()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAMKNIJ * ZDJĘCIE</pattern>
+<template><srai>ZAMKNIJ <star/> OBRAZ</srai></template>
+</category>
+</aiml>

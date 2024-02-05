@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Author  : Wojciech Kuchta <wojciech.kuchta@gmail.com> -->
+<!-- Created : 2014-07-28 -->
+<!--
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details. 
+-->
+<aiml>
+
+<!-- KTORY  -->
+<category><pattern>KTORY *</pattern>
+        <template>Niestety, nie wiem który.</template>
+</category>
+<category><pattern>KTORA *</pattern>
+        <template>Niestety, nie wiem która.</template>
+</category>
+<category><pattern>KTORE *</pattern>
+        <template>Niestety, nie wiem które.</template>
+</category>
+
+<!-- ZAKUPY  -->
+<category><pattern>KTORY SKLEP JEST *</pattern>
+        <template>Niestety, nie znam się na zakupach.</template>
+</category>
+<category><pattern>KTORY SPRZEDAWCA JEST *</pattern><template><srai>KTORY SKLEP JEST <star/></srai></template></category>
+<category><pattern>KTORY TOWAR JEST *</pattern><template><srai>KTORY SKLEP JEST <star/></srai></template></category>
+<category><pattern>KTORA OFERTA JEST *</pattern><template><srai>KTORY SKLEP JEST <star/></srai></template></category>
+<category><pattern>KTORA AUKCJA JEST *</pattern><template><srai>KTORY SKLEP JEST <star/></srai></template></category>
+
+<!-- KOSMOS  -->
+<category><pattern>KTORA PLANETA JEST *</pattern>
+        <template>Niestety, nie znam się na planetach o kosmosie.</template>
+</category>
+<category><pattern>KTORA PLANETOIDA JEST *</pattern><template><srai>KTORA PLANETA JEST <star/></srai></template></category>
+
+<!-- CZLOWIEK  -->
+<category><pattern>KTORY CZLOWIEK JEST *</pattern>
+        <template>Niestety, nie znam się na ludziach.</template>
+</category>
+<category><pattern>KTORY MEZCZYZNA JEST *</pattern><template><srai>KTORY CZLOWIEK JEST <star/></srai></template></category>
+<category><pattern>KTORA KOBIETA JEST *</pattern><template><srai>KTORY CZLOWIEK JEST <star/></srai></template></category>
+
+<!-- NATURA  -->
+<category><pattern>KTORE ZWIERZE JEST *</pattern>
+        <template>Niestety, nie znam się na zwierzętach.</template>
+</category>
+<category><pattern>KTORY SSAK JEST *</pattern><template><srai>KTORE ZWIERZE JEST <star/></srai></template></category>
+<category><pattern>KTORY PTAK JEST *</pattern><template><srai>KTORE ZWIERZE JEST <star/></srai></template></category>
+
+
+</aiml>
+

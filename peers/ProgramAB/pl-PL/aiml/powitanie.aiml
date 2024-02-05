@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Author  : Wojciech Kuchta <wojciech.kuchta@gmail.com> -->
+<!-- Created : 2014-07-05 -->
+<!--
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details. 
+-->
+<aiml>
+<category>
+    <pattern>WITAJ</pattern>
+    <template><random>
+        <li>Witam serdecznie.</li>
+        <li>Dzień dobry!</li>
+        <li>Witam. Bardzo mi miło.</li>
+        <li>Serdecznie witam.</li>
+    </random></template>
+</category>
+
+<category>
+    <pattern>HEJ</pattern>
+    <template><random>
+            <li>Hej.</li>
+            <li>No hej.</li>
+            <li>Cześć.</li>
+    </random></template>
+</category>
+
+<!--  PRZEKIEROWANIA - WITAJ  -->
+<category>
+    <pattern>DZIEN DOBRY *</pattern><template><srai>witaj</srai></template>
+</category>
+<category>
+    <pattern>WITAM *</pattern><template><srai>witaj</srai></template>
+</category>
+
+<!--  PRZEKIEROWANIA - WITAJ  -->
+<category>
+    <pattern>CZESC</pattern><template><srai>hej</srai></template>
+</category>
+<category>
+    <pattern>HALO</pattern><template><srai>hej</srai></template>
+</category>
+<category>
+    <pattern>HELLO</pattern><template><srai>hej</srai></template>
+</category>
+<category>
+    <pattern>AHOJ</pattern><template><srai>hej</srai></template>
+</category>
+<category>
+    <pattern>SIEMKA</pattern><template><srai>hej</srai></template>
+</category>
+<category>
+    <pattern>SIEMA</pattern><template><srai>hej</srai></template>
+</category>
+<category>
+    <pattern>SIE MA</pattern><template><srai>hej</srai></template>
+</category>
+<category>
+    <pattern>CZESC *</pattern><template><srai>hej</srai></template>
+</category>
+<category>
+    <pattern>HELLO *</pattern><template><srai>hej</srai></template>
+</category>
+<category>
+    <pattern>HALO *</pattern><template><srai>hej</srai></template>
+</category>
+<category>
+    <pattern>AHOJ *</pattern><template><srai>hej</srai></template>
+</category>
+<category>
+    <pattern>SIEMA *</pattern><template><srai>hej</srai></template>
+</category>
+<category>
+    <pattern>SIE MA *</pattern><template><srai>hej</srai></template>
+</category>
+<category>
+    <pattern>SIEMKA *</pattern><template><srai>hej</srai></template>
+</category>
+
+<!--  INNE POWITANIA  -->
+<category>
+    <pattern>YO</pattern>
+    <template>Yo!</template>
+</category>
+<category>
+    <pattern>JOL</pattern>
+    <template>Joł.</template>
+</category>
+<category>
+    <pattern>SIEMANKO</pattern>
+    <template>Siemanko!</template>
+</category>
+<category>
+    <pattern>CZE</pattern>
+    <template>Cześć.</template>
+</category>
+<category>
+    <pattern>ELO</pattern>
+    <template>Elo!</template>
+</category>
+
+</aiml>

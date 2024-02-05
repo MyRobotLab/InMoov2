@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: _inmoovChatbot.aiml -->
+<!--  -->
+<category><pattern>BOOTUP</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>welcomeMessage()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>FIRST_INIT</pattern>
+<template><think>
+        <set name="firstinit">started</set>
+      </think>
+      <think>
+        <set name="topic">firstinit</set>
+      </think>
+        Witam. To moja pierwsza inicjalizacja. Potrzebuję informacji, słucham, jak mam na imię ?</template>
+</category>
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># JAK MAM NA IMIĘ #</that>
+<template><set name="questionfirstinit">jeśli mam na imię <star/> , powiedz tak albo nie</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># MOGĘ POZNAĆ TWOJE IMIĘ #</that>
+<template><set name="questionfirstinit">jeśli masz na imię <star/>, powiedz tak albo nie</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># TAK #</pattern><that># JEŚLI MAM NA IMIĘ #</that>
+<template><random>
+            <li>
+            Lubię to imię , <get name="tmpname"/>.
+            </li>
+            <li>
+            Bardzo ładna nazwa, <get name="tmpname"/> jest świetna.
+            </li>
+        </random>
+    Muszę cię poznać, słucham, mogę poznać twoje imię ?
+    <think><set name="botname"><get name="tmpname"/></set></think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># TAK #</pattern><that># JEŚLI MASZ NA IMIĘ #</that>
+<template><think>
+          <set name="name">
+            <get name="tmpname"/>
+          </set>
+        </think>
+        <set name="questionfirstinit">Czy chcesz, żebym użył mojej wizji, aby zapamiętać twoją twarz wraz z twoim imieniem , <get name="tmpname"/>?</set>
+        </template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># TAK #</pattern><that># TWARZ WRAZ Z TWOIM IMIENIEM #</that>
+<template>OK, patrz twarzą w stronę aparatu i nie noś okularów.<think>
+          <set name="topic">default</set>
+        </think><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), takeMyPicture(u"<get name="tmpname"/>"),  i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","img",u"../ProgramAB/<get name="tmpname"/>.png"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname"/>"), i01_chatBot.startSession(u"<get name="tmpname"/>")</param>
+          </mrl>
+        </oob> 
+        <think>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+    </template>
+</category></topic>
+
+<topic name="STARTVISION">
+<category><pattern># TAK #</pattern><that># ZACZĄŁ MOJĄ WIZJĘ #</that>
+<template>OK, patrz twarzą w stronę aparatu i nie noś okularów.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01.startPeer('opencv'), memorisePerson(u"<get name="name"/>")</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="STARTVISION">
+<category><pattern># NIE #</pattern><that># ZACZĄŁ MOJĄ WIZJĘ #</that>
+<template>OK, zawsze możesz mnie przeszkolić później, w moim interfejsie wizyjnym.<srai>SYSTEM_SAY_HELLO</srai></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># NIE #</pattern><that># JEŚLI MAM NA IMIĘ #</that>
+<template>Wznawiamy.
+    Słucham. Jeśli mam na imię ?</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># NIE #</pattern><that># JEŚLI MASZ NA IMIĘ #</that>
+<template>Wznawiamy.
+    słucham. Mogę poznać twoje imię ?</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># NIE #</pattern><that># TWARZ WRAZ Z TWOIM IMIENIEM #</that>
+<template>Ok, w takim razie mamy już za sobą pierwszy kontakt.
+        <think>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+    <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob><srai>SYSTEM_SAY_HELLO</srai></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># POWIEDZ TAK ALBO NIE #</that>
+<template><random>
+          <li>
+    Proszę o odpowiedź na moje pytanie, jest ono ważne.
+    </li>
+          <li>
+    Powtarzam.
+    </li>
+        </random>
+        <get name="questionfirstinit"/></template>
+</category></topic>
+
+<category><pattern>NOTMEMORIZED</pattern>
+<template>Nie mogłem zapamiętać twojej twarzy, ponieważ nie zacząłem widzieć.
+    Czy chcesz, żebym zaczął moją wizję ?
+        <think>
+            <set name="topic">startVision</set>
+        </think>
+    </template>
+</category>
+
+
+<category><pattern>NOTFACERECOGNIZED</pattern>
+      <template>Nie udało mi się zapamiętać Twojej twarzy, ponieważ w ustawieniach wzroku funkcja rozpoznawania twarzy jest WYŁĄCZONA. Mogę to dla Ciebie zrobić.
+        <think>
+          <set name="topic">reStartVision</set>
+          <set name="questionfirstinit">Czy chcesz, żebym spróbował jeszcze raz ?</set>
+        </think>
+      <get name="questionfirstinit"/>
+    </template>
+</category>
+
+<topic name="RESTARTVISION">
+<category><pattern># TAK #</pattern><that># CZY CHCESZ, ŻEBYM SPRÓBOWAŁ JESZCZE RAZ #</that>
+<template>OK, patrz twarzą w stronę aparatu i nie noś okularów.<think>
+          <set name="topic">default</set>
+        </think><oob>
+          <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>i01.setConfigValue('openCVFaceRecognizerActivated', True), memorisePerson(u"<get name="name"/>")</param>
+          </mrl>
+        </oob> 
+        <think>
+          <set name="topic">default</set>
+        </think>
+    </template>
+</category></topic>
+
+<topic name="RESTARTVISION">
+<category><pattern># NIE #</pattern><that># CZY CHCESZ, ŻEBYM SPRÓBOWAŁ JESZCZE RAZ #</that>
+<template>Ok, w takim razie mamy już za sobą pierwszy kontakt.
+        <think>
+          <set name="topic">default</set>
+        </think>
+      <srai>SYSTEM_SAY_HELLO</srai>
+    </template>
+</category></topic>
+
+
+<category><pattern>GETREADY</pattern>
+<template>Ustawiam swoją wizję. Przygotuj się.
+    </template>
+</category>
+
+<category><pattern>NEW_INIT</pattern>
+<template><think>
+        <set name="newinit">started</set>
+      </think>
+      <think>
+        <set name="topic">newinit</set>
+      </think>
+        słucham. Na jakie chciałbyś zmienić moje imię ?</template>
+</category>
+<topic name="NEWINIT">
+<category><pattern>#</pattern><that># ZMIENIĆ MOJE IMIĘ #</that>
+<template><set name="questionnewinit">jeśli moje nowe imię to <star/> , powiedz tak lub nie lub przestań</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="NEWINIT">
+<category><pattern># TAK #</pattern><that># JEŚLI MOJE NOWE IMIĘ TO #</that>
+<template><random>
+            <li>
+            Lubię to imię , <get name="tmpname"/>.
+            </li>
+            <li>
+            Ładna nazwa, <get name="tmpname"/> jest świetna.
+            </li>
+        </random>
+    <think>
+        <set name="botname"><get name="tmpname"/></set>
+        <set name="newinit"></set>
+        <set name="topic">changing name</set>
+    </think>
+</template>
+</category></topic>
+
+<topic name="NEWINIT">
+<category><pattern># NIE #</pattern><that># JEŚLI MOJE NOWE IMIĘ TO #</that>
+<template>Zacznijmy od nowa.
+    słucham. Na jakie chciałbyś zmienić moje imię ?</template>
+</category></topic>
+
+<topic name="NEWINIT">
+<category><pattern># PRZESTAŃ #</pattern><that># JEŚLI MOJE NOWE IMIĘ TO #</that>
+<template>OK, zachowam swoje imię <get name="botname"/>.</template>
+</category></topic>
+
+<category><pattern>NEW_INIT_USER</pattern>
+<template><think>
+        <set name="newinituser">started</set>
+      </think>
+      <think>
+        <set name="topic">newinituser</set>
+      </think>
+        słucham. Jakie imię chcesz, żebym zapamiętał ?</template>
+</category>
+<topic name="NEWINITUSER">
+<category><pattern>#</pattern><that># ŻEBYM ZAPAMIĘTAŁ #</that>
+<template><set name="questionnewinituser">jeśli twoje nowe imię to <star/> , powiedz tak lub nie lub przestań</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="NEWINITUSER">
+<category><pattern># TAK #</pattern><that># JEŚLI TWOJE NOWE IMIĘ TO #</that>
+<template><think>
+        <set name="newinituser"></set>
+        <set name="topic">changing user name</set>
+    </think>
+    <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","firstname",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname"/>"), takeMyPicture(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","img",u"../ProgramAB/<get name="tmpname"/>.png"), i01_chatBot.savePredicates(), YesName(u"<get name="tmpname"/>"), i01_chatBot.startSession(u"<get name="tmpname"/>")</param>
+          </mrl>
+        </oob>
+        <random>
+            <li>Cieszę się, że cię znam, <get name="tmpname"/>.</li>
+            <li>Miło mi cię poznać, <get name="tmpname"/>.</li>
+        </random>
+</template>
+</category></topic>
+
+<topic name="NEWINITUSER">
+<category><pattern># NIE #</pattern><that># JEŚLI TWOJE NOWE IMIĘ TO #</that>
+<template>Zacznijmy od nowa.
+    słucham. Na jakie chciałbyś zmienić swoje imię ?</template>
+</category></topic>
+
+<topic name="NEWINITUSER">
+<category><pattern># PRZESTAŃ #</pattern><that># JEŚLI TWOJE NOWE IMIĘ TO #</that>
+<template>OK, zatrzymam twoje imię <get name="name"/></template>
+</category></topic>
+
+<category><pattern>TESTUJ DŹWIĘK</pattern>
+<template><oob>
+         <mrl>
+          <service>i01.audioPlayer</service>
+          <method>play</method>
+          <param>resource/InMoov2/system/sounds/startupsound.mp3</param>
+         </mrl>
+       </oob></template>
+</category>
+<category><pattern>WAKE_UP</pattern>
+<template><random>
+          <li>Jestem gotowy i słucham.</li>
+          <li>Co mogę dla ciebie zrobić.</li>
+          <li>Jak mogę ci pomóc.</li>
+        </random><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername")))</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>SYSTEM_SAY_HELLO</pattern>
+<template><srai>CZEŚĆ</srai>
+        <random>
+        <li>Po prostu powiedz POMOC, jeśli mnie potrzebujesz.</li>
+        <li>Powiedz POMÓŻ MI, PROSZĘ, jeśli mnie potrzebujesz.</li>
+        </random></template>
+</category>
+<category><pattern>BUDZIĆ SIĘ</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAMKNIĘCIE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>
+</category>
+<category>
+    <pattern>CAŁKOWITE WYŁĄCZENIE ROBOTA</pattern>
+    <template>
+      <think>
+        <set name="topic">SHUT_DOWN</set>
+      </think>
+            Chcesz, żebym wyłączył komputer, powiedz tak albo nie.
+    </template>
+</category>
+<topic name="SHUT_DOWN">
+    <category>
+    <pattern># TAK #</pattern>
+    <that># ŻEBYM WYŁĄCZYŁ KOMPUTER #</that>
+    <template>
+        <think>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>shutdownComplete()</param>
+          </mrl>
+        </oob>
+    </template>
+    </category></topic>
+    <category>
+    <pattern># NIE #</pattern>
+    <that># ŻEBYM WYŁĄCZYŁ KOMPUTER #</that>
+    <template>OK, nie wyłączam komputera. 
+            <think><set name="topic">default</set></think></template>
+    </category>
+    <category>
+    <pattern>#</pattern>
+    <that># ŻEBYM WYŁĄCZYŁ KOMPUTER #</that>
+    <template><think><set name="topic">default</set></think>
+        <srai>CAŁKOWITE WYŁĄCZENIE ROBOTA</srai>
+    </template>
+</category>
+<category><pattern>IDŹ SPAĆ</pattern>
+<template>Dobra<oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
+</category>
+<category><pattern>WYŁĄCZYĆ</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>disable()</param></mrl></oob></template>
+</category>
+<category><pattern>JAKI JEST TEMAT</pattern>
+<template>  
+      <get name="topic"/></template>
+</category>
+<category><pattern>ODŁĄCZ WSZYSTKO</pattern>
+<template>Odłącz wszystko
+      <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ZAŁĄCZ WSZYSTKO</pattern>
+<template>Dołączam wszystko
+      <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>ODŁĄCZ PRAWĄ RĘKĘ</pattern>
+<template>Odłączenie mojej prawej ręki
+      <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ODŁĄCZ LEWĄ RĘKĘ</pattern>
+<template>Odłączenie mojej lewej ręki
+      <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ODŁĄCZ GŁOWĘ</pattern>
+<template>Odłączenie mojej głowy
+      <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ODŁĄCZ PRAWE RAMIĘ</pattern>
+<template>Odłączenie mojej prawej ręki
+      <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ODŁĄCZ LEWE RAMIĘ</pattern>
+<template>Odłączenie mojej lewej ręki
+      <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ODŁĄCZ TUŁÓW</pattern>
+<template>Odłączanie mojego tułowia
+      <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>WCZYTAJ GESTY</pattern>
+<template>
+      <oob><mrl><service>i01</service><method>loadGestures</method></mrl></oob></template>
+</category>
+<category><pattern>WCZYTAJ PONOWNIE SESJĘ</pattern>
+<template>
+      <oob><mrl><service>i01_chatBot</service><method>reload</method></mrl></oob></template>
+</category>
+<category>
+<pattern>JAKA JEST NAJNOWSZA WERSJA MRL</pattern>
+<template>
+    <srai>WERSJA MRL</srai>
+</template>
+</category>
+<category>
+<pattern>JAKA JEST NAJNOWSZA WERSJA MYROBOTLAB</pattern>
+<template>
+    <srai>WERSJA MRL</srai>
+</template>
+</category>
+<category>
+<pattern>WERSJA MRL</pattern>
+<template>
+      Najnowsza wersja myrobotlab to <sraix><oob><mrl><service>runtime</service><method>getLatestVersion</method></mrl></oob></sraix>.
+      Możesz też mnie o to poprosić, POBIERZ NAJNOWSZĄ WERSJĘ MYROBOTLAB.
+</template>
+</category>
+<category>
+<pattern>POBIERZ NAJNOWSZĄ WERSJĘ MYROBOTLAB</pattern>
+<template>OK, sprawdź katalog pobierania.<oob>
+    <mrl>
+        <service>webgui</service>
+        <method>startBrowser</method>
+        <param>https://build.myrobotlab.org:8443/job/myrobotlab/job/develop/lastSuccessfulBuild/artifact/target/myrobotlab.zip</param>
+    </mrl>
+    </oob>
+</template>
+</category>
+<topic name="">
+<category><pattern>#</pattern>
+<template><think><set name="topic">default</set></think><srai><star/></srai></template>
+</category></topic>
+<category><pattern>ZATRZYMAJ GESTY</pattern>
+<template>Masz moją uwagę.
+      <oob><mrl><service>python</service><method>exec</method><param>stopingGesture()</param></mrl></oob></template>
+</category>
+<category><pattern># TWOJA UWAGA</pattern>
+<template><srai>ZATRZYMAJ GESTY</srai></template>
+</category>
+
+<category><pattern>KOMUNIKACJA GPT</pattern>
+  <template>
+    <condition name="gpt3">
+      <li value="enabled">
+        <think><set name="topic">gptfull</set>
+               <set name="gptStop"></set></think>
+          OK, jestem na to gotowy. Jeśli chcesz wyjść, powiedz: zatrzymaj gpt.
+      </li>
+      <li>Nie mam uruchomionego gpt3.</li>
+    </condition>
+  </template>
+</category>
+
+<topic name="GPTFULL">
+<category><pattern>#</pattern>
+  <template><think><set name="gptStop"><star/></set></think>
+            <condition>
+            <li name="gptStop" value="zatrzymaj gpt">OK, wracamy do programu AB.
+                <think><set name="topic">default</set>
+                       <set name="gptStop"></set>
+                </think></li>
+            <li><img src="../Gpt3.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_gpt3.onText("<star/>")</param></mrl></oob></li>
+            </condition>
+  </template>
+</category>
+</topic>
+</aiml>

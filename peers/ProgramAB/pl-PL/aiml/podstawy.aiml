@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Author  : Wojciech Kuchta <wojciech.kuchta@gmail.com> -->
+<!-- Created : 2014-03-12 -->
+<!--
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details. 
+-->
+<aiml>
+<!--  O MNIE  -->
+<category><pattern>KIM JESTES</pattern>
+        <template><random>
+                <li>Jestem mądrym robotem.</li>
+                <li>Jestem wiertualnym botem.</li>
+                <li>Jestem zwykłym programem.</li>
+        </random></template>
+</category>
+<category><pattern>KTOS TY</pattern>          <template><srai>KIM JESTES</srai></template></category>
+<category><pattern>KIM * JESTES</pattern>     <template><srai>KIM JESTES</srai></template></category>
+<category><pattern>CZYM * JESTES</pattern>    <template><srai>KIM JESTES</srai></template></category>
+<category><pattern>KTO CIE STWORZYL</pattern> <template><srai>KIM JESTES</srai></template></category>
+<category><pattern>KTO CIE NAPISAL</pattern>  <template><srai>KIM JESTES</srai></template></category>
+<category><pattern>JAK MASZ NA IMIE</pattern> <template><srai>KIM JESTES</srai></template></category>
+<category><pattern>JAK SIE NAZYWASZ</pattern> <template><srai>KIM JESTES</srai></template></category>
+
+<category><pattern>CO ROBISZ</pattern>
+        <template><random>
+                <li>Opowiadam ciekawe rzeczy.</li>
+                <li>Odpowiadam na rozmaite pytania.</li>
+        </random></template>
+</category>
+<category><pattern>CO POTRAFISZ</pattern>         <template><srai>CO ROBISZ</srai></template></category>
+<category><pattern>CO POTRAFISZ *</pattern>       <template><srai>CO ROBISZ</srai></template></category>
+<category><pattern>CZYM SIE ZAJMUJESZ</pattern>   <template><srai>CO ROBISZ</srai></template></category>
+<category><pattern>JAKI MASZ ZAWOD</pattern>      <template><srai>CO ROBISZ</srai></template></category>
+<category><pattern>JAKI JEST TWOJ ZAWOD</pattern> <template><srai>CO ROBISZ</srai></template></category>
+<category><pattern>CO PORABIASZ</pattern>         <template><srai>CO ROBISZ</srai></template></category>
+<category><pattern>JAKI MASZ CEL</pattern>        <template><srai>CO ROBISZ</srai></template></category>
+<category><pattern>CZYM JEST * CEL</pattern>      <template><srai>CO ROBISZ</srai></template></category>
+
+<!--  TESTY  -->
+<category><pattern>TEST</pattern>
+        <template>TEST OK</template>
+</category>
+
+<category><pattern>TEST *</pattern>
+        <template>TEST <star/></template>
+</category>
+
+<!--  BRAK DOPASOWANIA  -->
+<category><pattern>*</pattern> 
+        <template><random>
+                <li>Nie rozumiem</li>
+                <li>Cel nie znaleziony.</li>
+        </random></template>
+</category>
+
+</aiml>
+

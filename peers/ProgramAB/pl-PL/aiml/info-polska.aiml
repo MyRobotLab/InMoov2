@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Author  : Wojciech Kuchta <wojciech.kuchta@gmail.com> -->
+<!-- Created : 2014-07-24 -->
+<!--
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+-->
+<aiml>
+<!-- Polska - ogolne-->
+<category>
+    <pattern>POLSKA</pattern>
+    <template>Polska to piękny kraj w sercu Europy.</template>
+</category>
+<category>
+    <pattern>GDZIE * POLSKA</pattern>
+    <template><srai>POLSKA</srai></template>
+</category>
+<category>
+    <pattern>RP</pattern>
+    <template><srai>POLSKA</srai></template>
+</category>
+<category>
+    <pattern>GDZIE * RZECZPOSPOLITA</pattern>
+    <template><srai>POLSKA</srai></template>
+</category>
+<category>
+    <pattern>GDZIE * RZECZPOSPOLITA POLSKA</pattern>
+    <template><srai>POLSKA</srai></template>
+</category>
+<category>
+    <pattern>* RZECZPOSPOLITA</pattern>
+    <template><srai>POLSKA</srai></template>
+</category>
+<category>
+    <pattern>* RZECZPOSPOLITA POLSKA</pattern>
+    <template><srai>POLSKA</srai></template>
+</category>
+
+<!-- STOLICA POLSKI -->
+<category>
+    <pattern>STOLICA POLSKI</pattern>
+    <template>Stolicą Polski jest miasto Warszawa.</template>
+</category>
+
+<category><pattern>* STOLICA POLSKI</pattern>
+    <template><srai>STOLICA POLSKI</srai></template></category>
+<category><pattern>* STOLICA POLSKI *</pattern>
+    <template><srai>STOLICA POLSKI</srai></template></category>
+<category><pattern>CO JEST STOLICA POLSKI</pattern>
+    <template><srai>STOLICA POLSKI</srai></template></category>
+<category><pattern>KTORE MIASTO JEST STOLICA POLSKI</pattern>
+    <template><srai>STOLICA POLSKI</srai></template></category>
+<category><pattern>GDZIE JEST STOLICA POLSKI</pattern>
+    <template><srai>STOLICA POLSKI</srai></template></category>
+
+<category><pattern>* STOLICĄ POLSKI</pattern>
+    <template><srai><star/>STOLICA POLSKI</srai></template></category>
+
+<!-- STOLICA WIELKOPOLSKI -->
+<category>
+    <pattern>STOLICA WIELKOPOLSKI</pattern>
+    <template>Stolicą Wielkopolski jest miasto Poznań.</template>
+</category>
+
+<category><pattern>* STOLICA WIELKOPOLSKI</pattern>
+    <template><srai>STOLICA WIELKOPOLSKI</srai></template></category>
+<category><pattern>* STOLICĄ WIELKOPOLSKI</pattern>
+    <template><srai>STOLICA WIELKOPOLSKI</srai></template></category>
+
+<category><pattern>* STOLICĄ WIELKOPOLSKI</pattern>
+    <template><srai><star/>STOLICA WIELKOPOLSKI</srai></template></category>
+
+<!-- PREZYDENT -->
+<category>
+    <pattern>KTO JEST PREZYDENTEM POLSKI</pattern>
+    <template>Prezydentem Polski jest Bronisław Komorowski.</template>
+</category>
+
+<category>
+    <pattern>KTO * PREZYDENTEM POLSKI</pattern>
+    <template><srai>KTO JEST PREZYDENTEM POLSKI</srai></template>
+</category>
+<category>
+    <pattern>KTO * PREZYDENTA POLSKI</pattern>
+    <template><srai>KTO JEST PREZYDENTEM POLSKI</srai></template>
+</category>
+<category>
+    <pattern>PREZYDENT POLSKI</pattern>
+    <template><srai>KTO JEST PREZYDENTEM POLSKI</srai></template>
+</category>
+<category>
+    <pattern>POLSKI PREZYDENT</pattern>
+    <template><srai>KTO JEST PREZYDENTEM POLSKI</srai></template>
+</category>
+<category>
+    <pattern>JAK * POLSKI PREZYDENT</pattern>
+    <template><srai>KTO JEST PREZYDENTEM POLSKI</srai></template>
+</category>
+<category>
+    <pattern>* POLSKI PREZYDENT</pattern>
+    <template><srai>KTO JEST PREZYDENTEM POLSKI</srai></template>
+</category>
+<category>
+    <pattern>CO Z PREZYDENTEM</pattern>
+    <template><srai>KTO JEST PREZYDENTEM POLSKI</srai></template>
+</category>
+<category>
+    <pattern>CO Z PREZYDENTEM POLSKI</pattern>
+    <template><srai>KTO JEST PREZYDENTEM POLSKI</srai></template>
+</category>
+
+<!-- Premier-->
+<category>
+    <pattern>KTO JEST PREMIEREM POLSKI</pattern>
+    <template>Premierem Polski jest Donald Tusk.</template>
+</category>
+</aiml>

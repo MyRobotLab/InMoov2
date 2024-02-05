@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Author  : Wojciech Kuchta <wojciech.kuchta@gmail.com> -->
+<!-- Created : 2014-07-24 -->
+<!--
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+-->
+<aiml>
+<!-- Poznan - ogolne -->
+<category>
+    <pattern>POZNAN</pattern>
+    <template>Poznań to piękne miasto w Wielkopolsce.</template>
+</category>
+
+<!-- Poznan - gdzie -->
+<category>
+    <pattern>GDZIE JEST POZNAN</pattern>
+    <template>Poznań leży w Wielkopolsce, na trasie pomiędzy Berlinem, a Warszawą.</template>
+</category>
+
+<category><pattern>GDZIE * POZNAN</pattern>
+    <template><srai>GDZIE JEST POZNAN</srai></template></category>
+
+<category>
+    <pattern>GDZIE W POZNANIU *</pattern>
+    <template>Nie wiem, dopiero uczę się geografii Poznania.</template>
+</category>
+
+<!-- Poznan - co ciekawego -->
+<category>
+    <pattern>CO CIEKAWEGO W POZNANIU</pattern>
+    <template>W Poznaniu jest wiele ciekawych miejsc, zwłaszcza centrum. Polecam szczególnie Stary Rynek.</template>
+</category>
+
+<category><pattern>CO CIEKAWEGO * W POZNANIU</pattern>
+    <template><srai>CO CIEKAWEGO W POZNANIU</srai></template></category>
+<category><pattern>CO FAJNEGO * W POZNANIU</pattern>
+    <template><srai>CO CIEKAWEGO W POZNANIU</srai></template></category>
+<category><pattern>CO INTERESUJACEGO * W POZNANIU</pattern>
+    <template><srai>CO CIEKAWEGO W POZNANIU</srai></template></category>
+<category><pattern>CO INTERESUJĄCEGO * W POZNANIU</pattern>
+    <template><srai>CO CIEKAWEGO W POZNANIU</srai></template></category>
+<category><pattern>CO WARTO ZWIEDZIC W POZNANIU</pattern>
+    <template><srai>CO CIEKAWEGO W POZNANIU</srai></template></category>
+
+<!-- Poznan - stary rynek -->
+<category>
+    <pattern>STARY RYNEK</pattern>
+    <template>Stary Rynek znajduje się w samym centrum Poznania. Na jego środku stoi ratusz otoczony kamienicami.</template>
+</category>
+
+<category><pattern>GDZIE JEST STARY RYNEK</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+<category><pattern>GDZIE * STARY RYNEK</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+
+<category><pattern>* STARY RYNEK</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+<category><pattern>STARY RYNEK *</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+<category><pattern>* STARY RYNEK *</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+
+<category><pattern>RATUSZ</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+<category><pattern>RATUSZ *</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+<category><pattern>* RATUSZ</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+<category><pattern>* RATUSZ *</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+
+<category><pattern>KAMIENICE</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+<category><pattern>KAMIENICE *</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+<category><pattern>* KAMIENICE</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+<category><pattern>* KAMIENICE *</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+
+<category><pattern>ZABYTKI</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+<category><pattern>ZABYTKI *</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+<category><pattern>* ZABYTKI</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+<category><pattern>* ZABYTKI *</pattern>
+    <template><srai>STARY RYNEK</srai></template></category>
+
+<!-- Poznan - stary rynek -->
+<category>
+    <pattern>DWORZEC</pattern>
+    <template>Nowy dworzec PKP powstał obok starego. Przylegające centrum handlowe to Poznań City Center.</template>
+</category>
+
+<category><pattern>GDZIE JEST DWORZEC *</pattern>
+    <template><srai>DWORZEC</srai></template></category>
+<category><pattern>JAK * DWORZEC</pattern>
+    <template><srai>DWORZEC</srai></template></category>
+
+<category><pattern>* DWORZEC</pattern>
+    <template><srai>DWORZEC</srai></template></category>
+<category><pattern>DWORZEC *</pattern>
+    <template><srai>DWORZEC</srai></template></category>
+<category><pattern>* DWORZEC *</pattern>
+    <template><srai>DWORZEC</srai></template></category>
+
+<category><pattern>* CITY CENTER</pattern>
+    <template><srai>DWORZEC</srai></template></category>
+<category><pattern>CITY CENTER *</pattern>
+    <template><srai>DWORZEC</srai></template></category>
+<category><pattern>* CITY CENTER *</pattern>
+    <template><srai>DWORZEC</srai></template></category>
+
+
+<!-- Poznan - prezydent -->
+<category>
+    <pattern>PREZYDENT POZNANIA</pattern>
+    <template>Prezydentem Poznania jest Jacek Jaśkowiak.</template>
+</category>
+
+<category><pattern>KTO JEST PREZYDENTEM POZNANIA</pattern>
+    <template><srai>PREZYDENT POZNANIA</srai></template></category>
+<category><pattern>JAK SIE NAZYWA PREZYDENT POZNANIA</pattern>
+    <template><srai>PREZYDENT POZNANIA</srai></template></category>
+
+</aiml>

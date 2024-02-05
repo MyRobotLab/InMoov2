@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Author  : Wojciech Kuchta <wojciech.kuchta@gmail.com> -->
+<!-- Created : 2014-07-27 -->
+<!--
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details. 
+-->
+<aiml>
+
+<!-- DLACZEGO  -->
+<category><pattern>DLACZEGO *</pattern>
+        <template>Niestety, nie znam przyczyny.</template>
+</category>
+
+<category><pattern>CZEMU *</pattern><template><srai>DLACZEGO <star/></srai></template></category>
+
+<!-- DLACZEGO - ODPOWIEDZI -->
+<category><pattern>DLACZEGO JESTES *</pattern>
+        <template>Taki już jestem.</template>
+</category>
+<category><pattern>DLACZEGO JESTES TAKI *</pattern>
+        <template>Myślisz, że jestem <star/>? Rzadko słyszę coś takiego.</template>
+</category>
+<category><pattern>DLACZEGO JESTES TAK BARDZO *</pattern>
+        <template>Uważasz, że jestem <star/>? Nie codziennie słyszę coś takiego.</template>
+</category>
+<category><pattern>DLACZEGO TY JESTES *</pattern><template><srai>DLACZEGO JESTES <star/></srai></template></category>
+
+<!-- DLACZEGO - INNE -->
+<category><pattern>DLACZEGO LUDZIE *</pattern>
+        <template>Niektórzy ludzie już tak mają.</template>
+</category>
+<category><pattern>DLACZGO NIEKTORZY *</pattern><template><srai>DLACZEGO LUDZIE <star/></srai></template></category>
+<category><pattern>DLACZGO NIEKTORZY LUDZIE *</pattern><template><srai>DLACZEGO LUDZIE <star/></srai></template></category>
+
+<category><pattern>DLACZEGO WSZYSCY *</pattern>
+        <template>Nie jestem przekonany czy dotyczy to wszystkich.</template>
+</category>
+
+</aiml>
+

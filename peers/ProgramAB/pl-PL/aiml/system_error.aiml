@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  gael le 04/09/2023 -->
+  <!--  -->
+<category><pattern>ALERT</pattern>
+<template>
+      Alarm,
+   <oob><mrl><service>python</service><method>exec</method><param>errors()</param></mrl></oob></template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_IMAGE_DISPLAY_1</pattern>
+<template>
+      imageDisplay nie został uruchomiony.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENCV_1</pattern>
+<template>
+      Otwarte CV nie zostało uruchomione.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_1</pattern>
+<template>
+      Otwórz błąd klucza mapy pogody.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_2</pattern>
+<template>
+      otwarte miasto na mapie pogody jest nierozpoznane.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_3</pattern>
+<template>
+       otwarte jednostki mapy pogody nie zostały zdefiniowane.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_4</pattern>
+<template>
+       otwarta mapa pogody nie została uruchomiona lub może nie została skonfigurowana.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_PIR_1</pattern>
+<template>
+      P, I, R czujnik nie jest uruchomiony.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_LEFTHANDSENSOR_1</pattern>
+<template>
+      Nie można uruchomić lewego czujnika.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_RIGTHANDSENSOR_1</pattern>
+<template>
+      Nie można uruchomić prawego czujnika.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_LEFTHANDSENSOR_2</pattern>
+<template>
+      i01.left Nie znaleziono kontrolera dla lewego czujnika.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_RIGHTHANDSENSOR_2</pattern>
+<template>
+      i01.right Nie znaleziono kontrolera dla prawego czujnika.
+   </template>
+</category>
+</aiml>

@@ -2,7 +2,7 @@
 <aiml>
 <!-- File: _inmoovTranslator.aiml -->
 <!--  -->
-<category><pattern>TRANSLATION IN *</pattern>
+<category><pattern>TŁUMACZENIE W *</pattern>
 <template><think>
         <set name="topic">TRANSLATOR</set>
       </think>
@@ -12,13 +12,13 @@
         </set>
       </think>
       <li>
-        Translating in <star/>, tell me : stop translate, and I will stop
+        Tłumaczenie na <star/>, powiedz mi : przestań tłumaczyć, i przestanę.
       </li></template>
 </category>
-<category><pattern>TRANSLATION TO *</pattern>
-<template><srai>TRANSLATION IN <star index="1"/></srai></template>
+<category><pattern>TŁUMACZENIE DO *</pattern>
+<template><srai>TŁUMACZENIE W <star index="1"/></srai></template>
 </category>
-<category><pattern>TRANSLATE * IN *</pattern>
+<category><pattern>PRZETŁUMACZ * W *</pattern>
 <template><oob>
         <mrl>
           <service>python</service>
@@ -27,27 +27,27 @@
         </mrl>
       </oob></template>
 </category>
-<category><pattern>TRANSLATE * TO *</pattern>
-<template><srai>TRANSLATE <star index="1"/> IN <star index="2"/></srai></template>
+<category><pattern>PRZETŁUMACZ * NA *</pattern>
+<template><srai>PRZETŁUMACZ <star index="1"/> W <star index="2"/></srai></template>
 </category>
 <category><pattern>AZURE_ERROR_1</pattern>
-<template>Sorry there is a probleme of communication with the azure server, try again and check the key !</template>
+<template>Przepraszamy, wystąpił problem z komunikacją z serwerem Azure, spróbuj ponownie i sprawdź klucz !</template>
 </category>
 <category><pattern>AZURE_ERROR_2 *</pattern>
-<template>I don't know this language <star index="1"/>, or the syntax in the azure file is incorrect !</template>
+<template>Nie znam tego języka <star Index="1"/> lub składnia w pliku Azure jest niepoprawna !</template>
 </category>
 <category><pattern>AZURE_ERROR_3</pattern>
-<template>I seem to have trouble connecting myself to the server .</template>
+<template>Wygląda na to, że mam problem z połączeniem się z serwerem .</template>
 </category>
 <topic name="TRANSLATOR">
-<category><pattern># STOP TRANSLATE #</pattern>
+<category><pattern># PRZESTAŃ TŁUMACZYĆ #</pattern>
 <template><think>
         <set name="topic">GESTURES</set>
       </think>
       <think>
         <set name="languetraduction">en</set>
       </think>
-      <li>Okay, I will stop translating, it was nice speaking that language</li></template>
+      <li>OK, przestanę tłumaczyć, miło było mówić w tym języku</li></template>
 </category></topic>
 
 <topic name="TRANSLATOR">
@@ -60,8 +60,29 @@
           </mrl>
         </oob></template>
 </category></topic>
-<category><pattern>SWITCH TO FRENCH</pattern>
-<template>Switching to French.
+<category><pattern>PRZEŁĄCZ NA ANGIELSKI</pattern>
+    <template>Przechodzę na język angielski.
+    <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.setCurrentBotName("en-US"), runtime.setAllLocales("en-US"), i01_ear.getLocales(), i01_mouth.setVoice("Microsoft David Desktop"), i01_chatBot.startSession(str(i01_chatBot.getCurrentUserName())), i01_chatBot.setPredicate(str(i01_chatBot.getCurrentUserName()),"name",str(i01_chatBot.getCurrentUserName())), i01_chatBot.setPredicate(str(i01_chatBot.getCurrentUserName()),"botname",str(i01_chatBot.getPredicate(str(i01_chatBot.getCurrentUserName()))),"botname"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+        <think>
+          <set name="tmpname"><get name="name"/></set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession("human"), i01_chatBot.setPredicate("human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.savePredicates(), i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername"))), i01_chatBot.setPredicate(u"<get name="name"/>","img",u"../ProgramAB/<get name="name"/>.png"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+    </template>
+  </category>
+<category><pattern>PRZEŁĄCZ NA FRANCUSKI</pattern>
+<template>Przejście na język francuski.
     <oob>
           <mrl>
             <service>python</service>
@@ -82,35 +103,13 @@
 </template>
 </category>
 
-<category><pattern>SWITCH TO GERMAN</pattern>
-<template>Switching to German.
+<category><pattern>PRZEJDŹ NA NIEMIECKI</pattern>
+<template>Przejście na język niemiecki.
     <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
             <param>i01_chatBot.setCurrentBotName("de-DE"), runtime.setAllLocales("de-DE"), i01_ear.getLocales(), i01_mouth.setVoice("Hans"), i01_chatBot.startSession(str(i01_chatBot.getCurrentUserName())), i01_chatBot.setPredicate(str(i01_chatBot.getCurrentUserName()),"name",str(i01_chatBot.getCurrentUserName())), i01_chatBot.setPredicate(str(i01_chatBot.getCurrentUserName()),"botname",str(i01_chatBot.getPredicate(str(i01_chatBot.getCurrentUserName()))),"botname"), i01_chatBot.savePredicates()</param>
-          </mrl>
-        </oob>
-        <think>
-          <set name="tmpname"><get name="name"/></set>
-        </think>
-        <oob>
-          <mrl>
-            <service>python</service>
-            <method>exec</method>
-            <param>i01_chatBot.startSession("human"), i01_chatBot.setPredicate("human","lastUsername",u"<get name="tmpname"/>"), i01_chatBot.savePredicates(), i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername"))), i01_chatBot.setPredicate(u"<get name="name"/>","img",u"../ProgramAB/<get name="name"/>.png"), i01_chatBot.savePredicates()</param>
-          </mrl>
-        </oob>
-</template>
-</category>
-
-<category><pattern>SWITCH TO POLISH</pattern>
-<template>Switching to Polish.
-    <oob>
-          <mrl>
-            <service>python</service>
-            <method>exec</method>
-            <param>i01_chatBot.setCurrentBotName("pl-PL"), runtime.setAllLocales("pl-PL"), i01_ear.getLocales(), i01_mouth.setVoice("Paulina"), i01_chatBot.startSession(str(i01_chatBot.getCurrentUserName())), i01_chatBot.setPredicate(str(i01_chatBot.getCurrentUserName()),"name",str(i01_chatBot.getCurrentUserName())), i01_chatBot.setPredicate(str(i01_chatBot.getCurrentUserName()),"botname",str(i01_chatBot.getPredicate(str(i01_chatBot.getCurrentUserName()))),"botname"), i01_chatBot.savePredicates()</param>
           </mrl>
         </oob>
         <think>

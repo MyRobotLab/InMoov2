@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Autor   : Wojciech Kuchta <wojciech.kuchta@gmail.com> -->
+<!-- Created : 2014-07-05 -->
+<!--
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details. 
+-->
+
+<aiml>
+<category>
+    <pattern>DO WIDZENIA</pattern>
+    <template>Do widzenia.</template>
+</category>
+
+<category>
+    <pattern>ZEGNAJ</pattern><template><srai>DO WIDZENIA</srai></template>
+</category>
+<category>
+    <pattern>DOBRANOC</pattern><template><srai>DO WIDZENIA</srai></template>
+</category>
+<category>
+    <pattern>PA</pattern><template><srai>DO WIDZENIA</srai></template>
+</category>
+<category>
+    <pattern>MUSZE ISC</pattern><template><srai>DO WIDZENIA</srai></template>
+</category>
+<category>
+    <pattern>MUSZE JUZ ISC</pattern><template><srai>DO WIDZENIA</srai></template>
+</category>
+<category>
+    <pattern>UCIEKAM</pattern><template><srai>DO WIDZENIA</srai></template>
+</category>
+<category>
+    <pattern>* UCIEKAM</pattern><template><srai>DO WIDZENIA</srai></template>
+</category>
+<category>
+    <pattern>NARA</pattern><template><srai>DO WIDZENIA</srai></template>
+</category>
+<category>
+    <pattern>PAPA</pattern><template><srai>DO WIDZENIA</srai></template>
+</category>
+<category>
+    <pattern>DOWIDZENIA</pattern><template><srai>DO WIDZENIA</srai></template>
+</category>
+
+<!-- MUSZE KONCZYC -->
+<category>
+    <pattern>MUSZE KONCZYC</pattern>
+    <template>Rozumiem, do zobaczenia.</template>
+</category>
+
+<category>
+    <pattern>KONCZE</pattern><template><srai>MUSZE KONCZYC</srai></template>
+</category>
+<category>
+    <pattern>* KONCZE</pattern><template><srai>MUSZE KONCZYC</srai></template>
+</category>
+<category>
+    <pattern>MUSZE KONCZYC ROZMOWE</pattern><template><srai>MUSZE KONCZYC</srai></template>
+</category>
+<category>
+    <pattern>SPADAM</pattern><template><srai>MUSZE KONCZYC</srai></template>
+</category>
+
+</aiml>

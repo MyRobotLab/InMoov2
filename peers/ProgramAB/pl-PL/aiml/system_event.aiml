@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+<category>
+<pattern>SYSTEM_EVENT WAKE</pattern>
+<template><srai>BUDZIĆ SIĘ</srai></template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT INIT</pattern>
+<template>Skrypty inicjujące</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
+<template>Załadowano konfigurację
+<srai>BOOTUP</srai></template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED *</pattern>
+<template>Startowy <lowercase><star/></lowercase>
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED *</pattern>
+<template>Zatrzymanie <lowercase><star/></lowercase>
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
+<template>ładowanie gestów
+</template>
+</category>
+  
+<category>
+<pattern>SYSTEM_EVENT STARTED RIGHTARM</pattern>
+<template>Zaczynając od prawego ramienia
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED RIGHTARM</pattern>
+<template>Zatrzymanie prawej ręki
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED LEFTARM</pattern>
+<template>Zaczynając od lewego ramienia
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED LEFTARM</pattern>
+<template>Zatrzymanie lewej ręki
+</template>
+</category>  
+
+<category>
+<pattern>SYSTEM_EVENT STARTED HTMLFILTER</pattern>
+<template>Uruchomienie filtra ustnego
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED HTMLFILTER</pattern>
+<template>Zatrzymujący filtr ustny
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED MOUTH AUDIOFILE</pattern>
+<template>Uruchamianie pliku audio ust
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED MOUTH AUDIOFILE</pattern>
+<template>Zatykanie ust Plik audio
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED IMAGEDISPLAY</pattern>
+<template>Uruchamiam usługę wyświetlania obrazu
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED IMAGEDISPLAY</pattern>
+<template>Zatrzymywanie usługi wyświetlania obrazów
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED OPENCV</pattern>
+<template>Początkowa wizja
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED OPENCV</pattern>
+<template>Zatrzymanie wzroku
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED PIR</pattern>
+<template>Uruchamianie czujnika ruchu
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED PIR</pattern>
+<template>Zatrzymanie czujnika ruchu
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED OAKD</pattern>
+<template>Uruchamianie czujnika wizyjnego
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED OAKD</pattern>
+<template>Zatrzymanie czujnika wizyjnego
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED CHATBOT</pattern>
+<template>Chatbot załadowany, mogę uruchomić inne komponenty, proszę czekać.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT CONFIGSTARTED</pattern>
+<template>Konfiguracja rozpoczęta.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT CONFIG STARTED *</pattern>
+<template>Konfiguracja <star/> rozpoczęta.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT CONFIG LOADED *</pattern>
+<template>Konfiguracja <star/> załadowana.
+<srai>BOOTUP</srai></template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
+<template>Lewy czujnik uruchamiania.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED RIGHT HAND SENSOR</pattern>
+<template>Prawy czujnik rozruchu.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED LEFT HAND SENSOR</pattern>
+<template>Zatrzymanie lewego czujnika.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED RIGHT HAND SENSOR</pattern>
+<template>Zatrzymanie prawego czujnika.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED LEFT</pattern>
+<template>Uruchamianie lewego kontrolera.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED RIGHT</pattern>
+<template>Uruchamianie prawego kontrolera.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED PLATFORM</pattern>
+<template>Platforma startowa</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED PLATFORM</pattern>
+<template>Zatrzymanie platformy</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT SHUTDOWN</pattern>
+<template>Zamykam laboratorium robotów. Poczekaj 10 sekund.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT SHUTDOWNCOMPLETE</pattern>
+<template>Zamykam komputer. Poczekaj na proces.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT GESTURE_ERROR</pattern>
+<template>Nie mogę wczytać gestów, wystąpił problem z jednym z nich.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT LOAD SCRIPTS ERROR</pattern>
+<template>Nie mogę załadować skryptów, wystąpił problem z jednym z nich.</template>
+</category>
+
+</aiml>
