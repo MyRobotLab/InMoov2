@@ -199,6 +199,14 @@
     <template>Detener control de boca</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STARTED mouth audioFile</pattern>
+    <template>Iniciar control de boca audio</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED mouth audioFile</pattern>
+    <template>Detener control de boca audio</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED neoPixel</pattern>
     <template>Iniciar neoPixel</template>
   </category>
