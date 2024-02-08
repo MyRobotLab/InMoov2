@@ -6,7 +6,8 @@ def stopTrackHumans():
       i01_headTracking.disable()
     if runtime.isStarted("i01.eyeTracking"):
       i01_eyeTracking.disable()
-    i01_head_rollNeck.setAutoDisable(True)
+    if runtime.isStarted("i01.head"):
+      i01_head_rollNeck.setAutoDisable(True)
     i01_opencv.removeFilters()
     i01_opencv.stopCapture()
     i01.finishedGesture()
