@@ -37,18 +37,18 @@ def fear():
   browsU()
   forheadsU()
 
-def sad():
-  upperEyelidsClose()
-  cheeksD()
-
-def smileClosed():
+def happy():
   cheeksU()
   upperLipD()
   lowerEyelidsU()
   if runtime.isStarted('i01.head'):
-    i01_head_jaw.rest()
+    i01_head_jaw.rest()  
 
-def smileOpen():
+def sad():
+  upperEyelidsClose()
+  cheeksD()
+
+def smile():
   cheeksU()
   lowerEyelidsU()
   if runtime.isStarted('i01.head'):
