@@ -41,6 +41,12 @@
           </think>
           <img src="../InMoov2/system/pictures/faceExpression/fear.png"></img>
 </li>
+        <li value="happy">
+          <think>
+            <set name="face">happy</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/happy.png"></img>
+</li>
         <li value="sad">
           <think>
             <set name="face">sad</set>
@@ -55,14 +61,9 @@
 </li>
         <li value="smile">
           <think>
-            <set name="face">
-              <random>
-                <li>smileClosed</li>
-                <li>smileOpen</li>
-              </random>
-            </set>
+            <set name="face">smile</set>
           </think>
-          <img src="../InMoov2/system/pictures/faceExpression/smileClosed.png"></img>      
+          <img src="../InMoov2/system/pictures/faceExpression/smile.png"></img>      
 </li>
         <li value="surprise">
           <think>
@@ -102,6 +103,8 @@
       <oob><mrl><service>python</service><method>exec</method><param><get name="face"/>()</param></mrl></oob>
     </template>
   </category>
+
+<!-- -->
 
   <category>
     <pattern>APPNEUTRAL</pattern>
@@ -144,6 +147,15 @@
     <template>
       <think>
         <set name="emotion">fear</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPHAPPY</pattern>
+    <template>
+      <think>
+        <set name="emotion">happy</set>
       </think>
       <srai>FACEXPRESSION</srai>
     </template>
@@ -211,11 +223,13 @@
       <srai>FACEXPRESSION</srai>
     </template>
   </category>
+
+<!-- -->
   
   <category>
     <pattern>CHANGE FACE EXPRESSIONS</pattern>
     <template>yes, look.
-<random><li>Here I have no expression.<srai>APPNEUTRAL</srai></li><li>I look angry.<srai>APPANGER</srai></li><li>I am winking.<srai>APPACCOMPLICE</srai></li><li>I am disgust.<srai>APPDISGUST</srai></li><li>I am scared.<srai>APPFEAR</srai></li><li>I smile.<srai>APPSMILE</srai></li><li>I am sad.<srai>APPSAD</srai></li><li>I am suspicious.<srai>APPSUSPICIOUS</srai><li>I am thinking.<srai>APPTHINKING</srai></li></li><li>I am unamused.<srai>APPUNAMUSED</srai></li></random></template>
+<random><li>Here I have no expression.<srai>APPNEUTRAL</srai></li><li>I look angry.<srai>APPANGER</srai></li><li>I am winking.<srai>APPACCOMPLICE</srai></li><li>I am disgust.<srai>APPDISGUST</srai></li><li>I am scared.<srai>APPFEAR</srai></li><li>I am happy.<srai>APPHAPPY</srai></li><li>I smile.<srai>APPSMILE</srai></li><li>I am sad.<srai>APPSAD</srai></li><li>I am suspicious.<srai>APPSUSPICIOUS</srai></li><li>I am thinking.<srai>APPTHINKING</srai></li><li>I am unamused.<srai>APPUNAMUSED</srai></li></random></template>
   </category>
   <category>
     <pattern># FACE EXPRESSION</pattern>
@@ -239,6 +253,75 @@
     <pattern>CAN YOU DO FACE EXPRESSIONS</pattern>
     <template>
       <srai>CHANGE FACE EXPRESSIONS</srai>
+    </template>
+  </category>
+
+<!-- -->
+
+  <category>
+    <pattern>NEUTRAL</pattern>
+    <template>
+      <srai>APPNEUTRAL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ANGRY</pattern>
+    <template>
+      <srai>APPANGER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WINK</pattern>
+    <template>
+      <srai>APPACCOMPLICE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DISGUST</pattern>
+    <template>
+      <srai>APPDISGUST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FEAR</pattern>
+    <template>
+      <srai>APPFEAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HAPPY</pattern>
+    <template>
+      <srai>APPHAPPY</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SMILE</pattern>
+    <template>
+      <srai>APPSMILE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SAD</pattern>
+    <template>
+      <srai>APPSAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SUSPICIOUS</pattern>
+    <template>
+      <srai>APPSUSPICIOUS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>THINKING</pattern>
+    <template>
+      <srai>APPTHINKING</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>UNAMUSED</pattern>
+    <template>
+      <srai>APPUNAMUSED</srai>
     </template>
   </category>
 </aiml>
