@@ -227,32 +227,32 @@
 <!-- -->
   
   <category>
-    <pattern>CHANGE FACE EXPRESSIONS</pattern>
-    <template>yes, look.
-<random><li>Here I have no expression.<srai>APPNEUTRAL</srai></li><li>I look angry.<srai>APPANGER</srai></li><li>I am winking.<srai>APPACCOMPLICE</srai></li><li>I am disgust.<srai>APPDISGUST</srai></li><li>I am scared.<srai>APPFEAR</srai></li><li>I am happy.<srai>APPHAPPY</srai></li><li>I smile.<srai>APPSMILE</srai></li><li>I am sad.<srai>APPSAD</srai></li><li>I am suspicious.<srai>APPSUSPICIOUS</srai></li><li>I am thinking.<srai>APPTHINKING</srai></li><li>I am unamused.<srai>APPUNAMUSED</srai></li></random></template>
+    <pattern>ÄNDERN SIE DEN GESICHTSAUSDRUCK</pattern>
+    <template>ja Schau.
+<random><li>Hier habe ich keinen Ausdruck.<srai>APPNEUTRAL</srai></li><li>Ich sehe wütend aus.<srai>APPANGER</srai></li><li>Ich zwinkere.<srai>APPACCOMPLICE</srai></li><li>Ich bin angewidert.<srai>APPDISGUST</srai></li><li>Ich habe Angst.<srai>APPFEAR</srai></li><li>ich bin glücklich.<srai>APPHAPPY</srai></li><li>ich lächle.<srai>APPSMILE</srai></li><li>ich bin traurig.<srai>APPSAD</srai></li><li>ich bin misstrauisch.<srai>APPSUSPICIOUS</srai></li><li>Ich denke.<srai>APPTHINKING</srai></li><li>Ich bin nicht begeistert.<srai>APPUNAMUSED</srai></li></random></template>
   </category>
   <category>
-    <pattern># FACE EXPRESSION</pattern>
+    <pattern># GESICHTSAUSDRUCK</pattern>
     <template>
-      <srai>CHANGE FACE EXPRESSIONS</srai>
+      <srai>ÄNDERN SIE DEN GESICHTSAUSDRUCK</srai>
     </template>
   </category>
   <category>
-    <pattern>ANOTHER FACE</pattern>
+    <pattern>EIN ANDERES GESICHT</pattern>
     <template>
-      <srai>CHANGE FACE EXPRESSIONS</srai>
+      <srai>ÄNDERN SIE DEN GESICHTSAUSDRUCK</srai>
     </template>
   </category>
   <category>
-    <pattern>CAN YOU CHANGE OF FACE EXPRESSION</pattern>
+    <pattern>KÖNNEN SIE DEN GESICHTSAUSDRUCK ÄNDERN</pattern>
     <template>
-      <srai>CHANGE FACE EXPRESSIONS</srai>
+      <srai>ÄNDERN SIE DEN GESICHTSAUSDRUCK</srai>
     </template>
   </category>
   <category>
-    <pattern>CAN YOU DO FACE EXPRESSIONS</pattern>
+    <pattern>KÖNNEN SIE GESICHTSAUSDRÜCKE MACHEN</pattern>
     <template>
-      <srai>CHANGE FACE EXPRESSIONS</srai>
+      <srai>ÄNDERN SIE DEN GESICHTSAUSDRUCK</srai>
     </template>
   </category>
 
@@ -265,61 +265,61 @@
     </template>
   </category>
   <category>
-    <pattern>ANGRY</pattern>
+    <pattern>WÜTEND</pattern>
     <template>
       <srai>APPANGER</srai>
     </template>
   </category>
   <category>
-    <pattern>WINK</pattern>
+    <pattern>ZWINKERN</pattern>
     <template>
       <srai>APPACCOMPLICE</srai>
     </template>
   </category>
   <category>
-    <pattern>DISGUST</pattern>
+    <pattern>DER EKEL</pattern>
     <template>
       <srai>APPDISGUST</srai>
     </template>
   </category>
   <category>
-    <pattern>FEAR</pattern>
+    <pattern>FURCHT</pattern>
     <template>
       <srai>APPFEAR</srai>
     </template>
   </category>
   <category>
-    <pattern>HAPPY</pattern>
+    <pattern>GLÜCKLICH</pattern>
     <template>
       <srai>APPHAPPY</srai>
     </template>
   </category>
   <category>
-    <pattern>SMILE</pattern>
+    <pattern>LÄCHELN</pattern>
     <template>
       <srai>APPSMILE</srai>
     </template>
   </category>
   <category>
-    <pattern>SAD</pattern>
+    <pattern>TRAURIG</pattern>
     <template>
       <srai>APPSAD</srai>
     </template>
   </category>
   <category>
-    <pattern>SUSPICIOUS</pattern>
+    <pattern>VERDÄCHTIG</pattern>
     <template>
       <srai>APPSUSPICIOUS</srai>
     </template>
   </category>
   <category>
-    <pattern>THINKING</pattern>
+    <pattern>DENKEN</pattern>
     <template>
       <srai>APPTHINKING</srai>
     </template>
   </category>
   <category>
-    <pattern>UNAMUSED</pattern>
+    <pattern>UNBEGEISTERT</pattern>
     <template>
       <srai>APPUNAMUSED</srai>
     </template>

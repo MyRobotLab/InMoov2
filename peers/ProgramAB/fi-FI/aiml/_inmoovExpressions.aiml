@@ -227,99 +227,99 @@
 <!-- -->
   
   <category>
-    <pattern>CHANGE FACE EXPRESSIONS</pattern>
-    <template>yes, look.
-<random><li>Here I have no expression.<srai>APPNEUTRAL</srai></li><li>I look angry.<srai>APPANGER</srai></li><li>I am winking.<srai>APPACCOMPLICE</srai></li><li>I am disgust.<srai>APPDISGUST</srai></li><li>I am scared.<srai>APPFEAR</srai></li><li>I am happy.<srai>APPHAPPY</srai></li><li>I smile.<srai>APPSMILE</srai></li><li>I am sad.<srai>APPSAD</srai></li><li>I am suspicious.<srai>APPSUSPICIOUS</srai></li><li>I am thinking.<srai>APPTHINKING</srai></li><li>I am unamused.<srai>APPUNAMUSED</srai></li></random></template>
+    <pattern>MUUTA KASVOJEN ILMENTYMIÄ</pattern>
+    <template>kyllä, katso.
+<random><li>Tässä minulla ei ole ilmaisua.<srai>APPNEUTRAL</srai></li><li>Näytän vihaiselta.<srai>APPANGER</srai></li><li>minä silmää.<srai>APPACCOMPLICE</srai></li><li>Olen inho.<srai>APPDISGUST</srai></li><li>olen peloissani.<srai>APPFEAR</srai></li><li>olen iloinen.<srai>APPHAPPY</srai></li><li>hymyilen.<srai>APPSMILE</srai></li><li>olen surullinen.<srai>APPSAD</srai></li><li>Olen epäileväinen.<srai>APPSUSPICIOUS</srai></li><li>Ajattelen.<srai>APPTHINKING</srai></li><li>Olen huviton.<srai>APPUNAMUSED</srai></li></random></template>
   </category>
   <category>
-    <pattern># FACE EXPRESSION</pattern>
+    <pattern># KASVOJEN ILMENTÄMINEN</pattern>
     <template>
-      <srai>CHANGE FACE EXPRESSIONS</srai>
+      <srai>MUUTA KASVOJEN ILMENTYMIÄ</srai>
     </template>
   </category>
   <category>
-    <pattern>ANOTHER FACE</pattern>
+    <pattern>TOINEN KASVO</pattern>
     <template>
-      <srai>CHANGE FACE EXPRESSIONS</srai>
+      <srai>MUUTA KASVOJEN ILMENTYMIÄ</srai>
     </template>
   </category>
   <category>
-    <pattern>CAN YOU CHANGE OF FACE EXPRESSION</pattern>
+    <pattern>VOITKO MUUTTAA KASVOJEN ILMENTYMISTÄ</pattern>
     <template>
-      <srai>CHANGE FACE EXPRESSIONS</srai>
+      <srai>MUUTA KASVOJEN ILMENTYMIÄ</srai>
     </template>
   </category>
   <category>
-    <pattern>CAN YOU DO FACE EXPRESSIONS</pattern>
+    <pattern>VOITKO TEHDÄ KASVOILMOITUKSIA</pattern>
     <template>
-      <srai>CHANGE FACE EXPRESSIONS</srai>
+      <srai>MUUTA KASVOJEN ILMENTYMIÄ</srai>
     </template>
   </category>
 
 <!-- -->
 
   <category>
-    <pattern>NEUTRAL</pattern>
+    <pattern>NEUTRAALI</pattern>
     <template>
       <srai>APPNEUTRAL</srai>
     </template>
   </category>
   <category>
-    <pattern>ANGRY</pattern>
+    <pattern>VIHAINEN</pattern>
     <template>
       <srai>APPANGER</srai>
     </template>
   </category>
   <category>
-    <pattern>WINK</pattern>
+    <pattern>VINKKI</pattern>
     <template>
       <srai>APPACCOMPLICE</srai>
     </template>
   </category>
   <category>
-    <pattern>DISGUST</pattern>
+    <pattern>INHO</pattern>
     <template>
       <srai>APPDISGUST</srai>
     </template>
   </category>
   <category>
-    <pattern>FEAR</pattern>
+    <pattern>PELKO</pattern>
     <template>
       <srai>APPFEAR</srai>
     </template>
   </category>
   <category>
-    <pattern>HAPPY</pattern>
+    <pattern>ONNELLINEN</pattern>
     <template>
       <srai>APPHAPPY</srai>
     </template>
   </category>
   <category>
-    <pattern>SMILE</pattern>
+    <pattern>HYMY</pattern>
     <template>
       <srai>APPSMILE</srai>
     </template>
   </category>
   <category>
-    <pattern>SAD</pattern>
+    <pattern>SURULLINEN</pattern>
     <template>
       <srai>APPSAD</srai>
     </template>
   </category>
   <category>
-    <pattern>SUSPICIOUS</pattern>
+    <pattern>EPÄILYTTÄVÄ</pattern>
     <template>
       <srai>APPSUSPICIOUS</srai>
     </template>
   </category>
   <category>
-    <pattern>THINKING</pattern>
+    <pattern>AJATTELU</pattern>
     <template>
       <srai>APPTHINKING</srai>
     </template>
   </category>
   <category>
-    <pattern>UNAMUSED</pattern>
+    <pattern>HYÖTYMÄTÖNTÄ</pattern>
     <template>
       <srai>APPUNAMUSED</srai>
     </template>

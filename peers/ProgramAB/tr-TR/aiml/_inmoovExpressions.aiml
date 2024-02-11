@@ -227,99 +227,99 @@
 <!-- -->
   
   <category>
-    <pattern>CHANGE FACE EXPRESSIONS</pattern>
-    <template>yes, look.
-<random><li>Here I have no expression.<srai>APPNEUTRAL</srai></li><li>I look angry.<srai>APPANGER</srai></li><li>I am winking.<srai>APPACCOMPLICE</srai></li><li>I am disgust.<srai>APPDISGUST</srai></li><li>I am scared.<srai>APPFEAR</srai></li><li>I am happy.<srai>APPHAPPY</srai></li><li>I smile.<srai>APPSMILE</srai></li><li>I am sad.<srai>APPSAD</srai></li><li>I am suspicious.<srai>APPSUSPICIOUS</srai></li><li>I am thinking.<srai>APPTHINKING</srai></li><li>I am unamused.<srai>APPUNAMUSED</srai></li></random></template>
+    <pattern>YÜZ İFADELERİNİ DEĞİŞTİRİN</pattern>
+    <template>Evet bak.
+<random><li>Burada hiçbir ifadem yok.<srai>APPNEUTRAL</srai></li><li>kızgın görünüyorum.<srai>APPANGER</srai></li><li>göz kırpıyorum.<srai>APPACCOMPLICE</srai></li><li>tiksiniyorum.<srai>APPDISGUST</srai></li><li>korkuyorum.<srai>APPFEAR</srai></li><li>mutluyum.<srai>APPHAPPY</srai></li><li>Gülüyorum.<srai>APPSMILE</srai></li><li>imutsuzum.<srai>APPSAD</srai></li><li>şüpheliyim.<srai>APPSUSPICIOUS</srai></li><li>düşünüyorum.<srai>APPTHINKING</srai></li><li>ben eğlenmiyorum.<srai>APPUNAMUSED</srai></li></random></template>
   </category>
   <category>
-    <pattern># FACE EXPRESSION</pattern>
+    <pattern># YÜZ İFADESİ</pattern>
     <template>
-      <srai>CHANGE FACE EXPRESSIONS</srai>
+      <srai>YÜZ İFADELERİNİ DEĞİŞTİRİN</srai>
     </template>
   </category>
   <category>
-    <pattern>ANOTHER FACE</pattern>
+    <pattern>BAŞKA BİR YÜZ</pattern>
     <template>
-      <srai>CHANGE FACE EXPRESSIONS</srai>
+      <srai>YÜZ İFADELERİNİ DEĞİŞTİRİN</srai>
     </template>
   </category>
   <category>
-    <pattern>CAN YOU CHANGE OF FACE EXPRESSION</pattern>
+    <pattern>YÜZ İFADESİNİ DEĞİŞTİREBİLİR MİSİNİZ?</pattern>
     <template>
-      <srai>CHANGE FACE EXPRESSIONS</srai>
+      <srai>YÜZ İFADELERİNİ DEĞİŞTİRİN</srai>
     </template>
   </category>
   <category>
-    <pattern>CAN YOU DO FACE EXPRESSIONS</pattern>
+    <pattern>YÜZ İFADELERİNİ YAPABİLİR MİSİNİZ?</pattern>
     <template>
-      <srai>CHANGE FACE EXPRESSIONS</srai>
+      <srai>YÜZ İFADELERİNİ DEĞİŞTİRİN</srai>
     </template>
   </category>
 
 <!-- -->
 
   <category>
-    <pattern>NEUTRAL</pattern>
+    <pattern>DOĞAL</pattern>
     <template>
       <srai>APPNEUTRAL</srai>
     </template>
   </category>
   <category>
-    <pattern>ANGRY</pattern>
+    <pattern>SİNİRLİ</pattern>
     <template>
       <srai>APPANGER</srai>
     </template>
   </category>
   <category>
-    <pattern>WINK</pattern>
+    <pattern>KIRPMAK</pattern>
     <template>
       <srai>APPACCOMPLICE</srai>
     </template>
   </category>
   <category>
-    <pattern>DISGUST</pattern>
+    <pattern>TIKSINTI</pattern>
     <template>
       <srai>APPDISGUST</srai>
     </template>
   </category>
   <category>
-    <pattern>FEAR</pattern>
+    <pattern>KORKU</pattern>
     <template>
       <srai>APPFEAR</srai>
     </template>
   </category>
   <category>
-    <pattern>HAPPY</pattern>
+    <pattern>MUTLU</pattern>
     <template>
       <srai>APPHAPPY</srai>
     </template>
   </category>
   <category>
-    <pattern>SMILE</pattern>
+    <pattern>GÜLÜMSEMEK</pattern>
     <template>
       <srai>APPSMILE</srai>
     </template>
   </category>
   <category>
-    <pattern>SAD</pattern>
+    <pattern>ÜZGÜN</pattern>
     <template>
       <srai>APPSAD</srai>
     </template>
   </category>
   <category>
-    <pattern>SUSPICIOUS</pattern>
+    <pattern>ŞÜPHELİ</pattern>
     <template>
       <srai>APPSUSPICIOUS</srai>
     </template>
   </category>
   <category>
-    <pattern>THINKING</pattern>
+    <pattern>DÜŞÜNME</pattern>
     <template>
       <srai>APPTHINKING</srai>
     </template>
   </category>
   <category>
-    <pattern>UNAMUSED</pattern>
+    <pattern>EĞLENMEMİŞ</pattern>
     <template>
       <srai>APPUNAMUSED</srai>
     </template>

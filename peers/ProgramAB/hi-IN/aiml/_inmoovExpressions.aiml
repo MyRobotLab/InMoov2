@@ -227,99 +227,99 @@
 <!-- -->
   
   <category>
-    <pattern>CHANGE FACE EXPRESSIONS</pattern>
-    <template>yes, look.
-<random><li>Here I have no expression.<srai>APPNEUTRAL</srai></li><li>I look angry.<srai>APPANGER</srai></li><li>I am winking.<srai>APPACCOMPLICE</srai></li><li>I am disgust.<srai>APPDISGUST</srai></li><li>I am scared.<srai>APPFEAR</srai></li><li>I am happy.<srai>APPHAPPY</srai></li><li>I smile.<srai>APPSMILE</srai></li><li>I am sad.<srai>APPSAD</srai></li><li>I am suspicious.<srai>APPSUSPICIOUS</srai></li><li>I am thinking.<srai>APPTHINKING</srai></li><li>I am unamused.<srai>APPUNAMUSED</srai></li></random></template>
+    <pattern>चेहरे के भाव बदलें</pattern>
+    <template>हाँ देखो.
+<random><li>यहां मेरी कोई अभिव्यक्ति नहीं है.<srai>APPNEUTRAL</srai></li><li>मैं गुस्से में दिख रहा हूं.<srai>APPANGER</srai></li><li>मैं आंख मार रहा हूं.<srai>APPACCOMPLICE</srai></li><li>मुझे घृणा है.<srai>APPDISGUST</srai></li><li>मैं डरता हूँ.<srai>APPFEAR</srai></li><li>मैं खुश हूँ.<srai>APPHAPPY</srai></li><li>मैं मुस्कुराता हूं.<srai>APPSMILE</srai></li><li>मैं दुःखी हूं.<srai>APPSAD</srai></li><li>मुझे संदेह है.<srai>APPSUSPICIOUS</srai></li><li>मैं सोच रहा हूँ.<srai>APPTHINKING</srai></li><li>मैं अप्रसन्न हूं.<srai>APPUNAMUSED</srai></li></random></template>
   </category>
   <category>
-    <pattern># FACE EXPRESSION</pattern>
+    <pattern># मुख मुद्रा</pattern>
     <template>
-      <srai>CHANGE FACE EXPRESSIONS</srai>
+      <srai>चेहरे के भाव बदलें</srai>
     </template>
   </category>
   <category>
-    <pattern>ANOTHER FACE</pattern>
+    <pattern>दूसरा चेहरा</pattern>
     <template>
-      <srai>CHANGE FACE EXPRESSIONS</srai>
+      <srai>चेहरे के भाव बदलें</srai>
     </template>
   </category>
   <category>
-    <pattern>CAN YOU CHANGE OF FACE EXPRESSION</pattern>
+    <pattern>क्या आप चेहरे के भाव बदल सकते हैं?</pattern>
     <template>
-      <srai>CHANGE FACE EXPRESSIONS</srai>
+      <srai>चेहरे के भाव बदलें</srai>
     </template>
   </category>
   <category>
-    <pattern>CAN YOU DO FACE EXPRESSIONS</pattern>
+    <pattern>क्या आप चेहरे के भाव बना सकते हैं?</pattern>
     <template>
-      <srai>CHANGE FACE EXPRESSIONS</srai>
+      <srai>चेहरे के भाव बदलें</srai>
     </template>
   </category>
 
 <!-- -->
 
   <category>
-    <pattern>NEUTRAL</pattern>
+    <pattern>तटस्थ</pattern>
     <template>
       <srai>APPNEUTRAL</srai>
     </template>
   </category>
   <category>
-    <pattern>ANGRY</pattern>
+    <pattern>गुस्सा</pattern>
     <template>
       <srai>APPANGER</srai>
     </template>
   </category>
   <category>
-    <pattern>WINK</pattern>
+    <pattern>आँख मारना</pattern>
     <template>
       <srai>APPACCOMPLICE</srai>
     </template>
   </category>
   <category>
-    <pattern>DISGUST</pattern>
+    <pattern>घृणा</pattern>
     <template>
       <srai>APPDISGUST</srai>
     </template>
   </category>
   <category>
-    <pattern>FEAR</pattern>
+    <pattern>डर</pattern>
     <template>
       <srai>APPFEAR</srai>
     </template>
   </category>
   <category>
-    <pattern>HAPPY</pattern>
+    <pattern>खुश</pattern>
     <template>
       <srai>APPHAPPY</srai>
     </template>
   </category>
   <category>
-    <pattern>SMILE</pattern>
+    <pattern>मुस्कान</pattern>
     <template>
       <srai>APPSMILE</srai>
     </template>
   </category>
   <category>
-    <pattern>SAD</pattern>
+    <pattern>उदास</pattern>
     <template>
       <srai>APPSAD</srai>
     </template>
   </category>
   <category>
-    <pattern>SUSPICIOUS</pattern>
+    <pattern>संदिग्ध</pattern>
     <template>
       <srai>APPSUSPICIOUS</srai>
     </template>
   </category>
   <category>
-    <pattern>THINKING</pattern>
+    <pattern>सोच</pattern>
     <template>
       <srai>APPTHINKING</srai>
     </template>
   </category>
   <category>
-    <pattern>UNAMUSED</pattern>
+    <pattern>नाखुश</pattern>
     <template>
       <srai>APPUNAMUSED</srai>
     </template>
