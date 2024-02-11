@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+  <category>
+    <pattern>FACEXPRESSION</pattern>
+    <template>
+      <condition name="emotion">
+        <li value="neutral">
+          <think>
+            <set name="face">neutral</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/neutral.png"></img>
+</li>
+        <li value="anger">
+          <think>
+            <set name="face">anger</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/anger.png"></img>
+</li>
+        <li value="accomplice">
+          <think>
+            <set name="face">
+              <random>
+                <li>winkLeft</li>
+                <li>winkRight</li>
+              </random>
+            </set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/wink.png"></img>
+</li>
+        <li value="disgust">
+          <think>
+            <set name="face">disgust</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/disgust.png"></img>
+</li>
+        <li value="fear">
+          <think>
+            <set name="face">fear</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/fear.png"></img>
+</li>
+        <li value="happy">
+          <think>
+            <set name="face">happy</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/happy.png"></img>
+</li>
+        <li value="sad">
+          <think>
+            <set name="face">sad</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/sad.png"></img>
+</li>
+        <li value="sleeping">
+          <think>
+            <set name="face">sleeping</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/sleeping.png"></img>
+</li>
+        <li value="smile">
+          <think>
+            <set name="face">smile</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/smile.png"></img>      
+</li>
+        <li value="surprise">
+          <think>
+            <set name="face">surprise</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/surprise.png"></img>
+</li>
+        <li value="suspicious">
+          <think>
+            <set name="face">suspicious</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/suspicious.png"></img>
+</li>
+        <li value="thinking">
+          <think>
+            <set name="face">thinking</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/thinking.png"></img>
+</li>
+        <li value="unamused">
+          <think>
+            <set name="face">unamused</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/unamused.png"></img>
+</li>
+        <li value="wake">
+          <think>
+            <set name="face">wake</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/wake.png"></img>
+</li>
+      </condition>
+      <!--<think>
+            <set name="imgLink">../InMoov2/system/pictures/faceExpression//><get name="face"/>.png</set>
+          </think>
+      <img src="../InMoov2/system/pictures/faceExpression/<get name="face"/>.png" />-->
+      <oob><mrl><service>python</service><method>exec</method><param><get name="face"/>()</param></mrl></oob>
+    </template>
+  </category>
+
+<!-- -->
+
+  <category>
+    <pattern>APPNEUTRAL</pattern>
+    <template>
+      <think>
+        <set name="emotion">neutral</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPANGER</pattern>
+    <template>
+      <think>
+        <set name="emotion">anger</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPACCOMPLICE</pattern>
+    <template>
+      <think>
+        <set name="emotion">accomplice</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPDISGUST</pattern>
+    <template>
+      <think>
+        <set name="emotion">disgust</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPFEAR</pattern>
+    <template>
+      <think>
+        <set name="emotion">fear</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPHAPPY</pattern>
+    <template>
+      <think>
+        <set name="emotion">happy</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPSAD</pattern>
+    <template>
+      <think>
+        <set name="emotion">sad</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPSLEEPING</pattern>
+    <template>
+      <think>
+        <set name="emotion">sleeping</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPSMILE</pattern>
+    <template>
+      <think>
+        <set name="emotion">smile</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPSUSPICIOUS</pattern>
+    <template>
+      <think>
+        <set name="emotion">suspicious</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPTHINKING</pattern>
+    <template>
+      <think>
+        <set name="emotion">thinking</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPUNAMUSED</pattern>
+    <template>
+      <think>
+        <set name="emotion">unamused</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPWAKE</pattern>
+    <template>
+      <think>
+        <set name="emotion">wake</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+
+<!-- -->
+  
+  <category>
+    <pattern>VERANDER GEZICHTSUITDRUKKINGEN</pattern>
+    <template>Ja kijk.
+<random><li>Hier heb ik geen uitdrukking.<srai>APPNEUTRAL</srai></li><li>Ik kijk boos.<srai>APPANGER</srai></li><li>Ik knipoog.<srai>APPACCOMPLICE</srai></li><li>Ik ben walging.<srai>APPDISGUST</srai></li><li>ik ben bang.<srai>APPFEAR</srai></li><li>ik ben blij.<srai>APPHAPPY</srai></li><li>ik lach.<srai>APPSMILE</srai></li><li>Ik ben verdrietig.<srai>APPSAD</srai></li><li>Ik ben verdacht.<srai>APPSUSPICIOUS</srai></li><li>ik ben aan het denken.<srai>APPTHINKING</srai></li><li>Ik ben niet geamuseerd.<srai>APPUNAMUSED</srai></li></random></template>
+  </category>
+  <category>
+    <pattern># GEZICHTSUITDRUKKING</pattern>
+    <template>
+      <srai>VERANDER GEZICHTSUITDRUKKINGEN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EEN ANDER GEZICHT</pattern>
+    <template>
+      <srai>VERANDER GEZICHTSUITDRUKKINGEN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>KUN JE VAN GEZICHTSUITDRUKKING VERANDEREN</pattern>
+    <template>
+      <srai>VERANDER GEZICHTSUITDRUKKINGEN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>KUN JE GEZICHTSUITDRUKKING DOEN</pattern>
+    <template>
+      <srai>VERANDER GEZICHTSUITDRUKKINGEN</srai>
+    </template>
+  </category>
+
+<!-- -->
+
+  <category>
+    <pattern>NEUTRALE</pattern>
+    <template>
+      <srai>APPNEUTRAL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BOOS</pattern>
+    <template>
+      <srai>APPANGER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>KNIPPEREN</pattern>
+    <template>
+      <srai>APPACCOMPLICE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WALGING</pattern>
+    <template>
+      <srai>APPDISGUST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ANGST</pattern>
+    <template>
+      <srai>APPFEAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>VROLIJK</pattern>
+    <template>
+      <srai>APPHAPPY</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GLIMLACH</pattern>
+    <template>
+      <srai>APPSMILE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>VERDRIET</pattern>
+    <template>
+      <srai>APPSAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>VERDACHT</pattern>
+    <template>
+      <srai>APPSUSPICIOUS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DENKEN</pattern>
+    <template>
+      <srai>APPTHINKING</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ONGEAMUSEERD</pattern>
+    <template>
+      <srai>APPUNAMUSED</srai>
+    </template>
+  </category>
+</aiml>
