@@ -1401,6 +1401,9 @@
 <category><pattern>CLOSE BOTH HANDS SLOWLY</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>CloseBothHandSlow()</param></mrl></oob></template>
 </category>
+<category><pattern># EVIL</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>evilLaugh1()</param></mrl></oob></template>
+</category
 <category><pattern>EXECUTE * </pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>openMyApp('<star/>')</param></mrl></oob></template>
 </category>
