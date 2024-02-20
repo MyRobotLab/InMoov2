@@ -1403,7 +1403,7 @@
 </category>
 <category><pattern># EVIL</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>evilLaugh1()</param></mrl></oob></template>
-</category
+</category>
 <category><pattern>EXECUTE * </pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>openMyApp('<star/>')</param></mrl></oob></template>
 </category>
