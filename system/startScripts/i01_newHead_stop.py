@@ -6,6 +6,18 @@
 # uncomment for virtual hardware
 # Platform.setVirtual(True)
 
+################
+tempInMoov2html="resource/InMoov2/system/updater/temp/InMoov2HeadGui.html"
+InMoov2html="resource/WebGui/app/service/views/InMoov2HeadGui.html"
+
+tempInMoov2css="resource/InMoov2/system/updater/temp/InMoov2HeadGui.css"
+InMoov2css="resource/WebGui/app/service/css/InMoov2HeadGui.css"
+
+## We replace files
+import shutil
+shutil.copyfile(tempInMoov2html, InMoov2html)
+shutil.copyfile(tempInMoov2css, InMoov2css)
+
 ## stop the eyes
 if runtime.isStarted('i01.head.eyeLeftUD'):
   runtime.release("i01.head.eyeLeftUD")
@@ -55,3 +67,6 @@ if runtime.isStarted('i01.head.forheadRight'):
   runtime.release("i01.head.forheadRight")
 if runtime.isStarted('i01.head.forheadLeft'):
   runtime.release("i01.head.forheadLeft")
+
+head = runtime.getService('i01.head')
+head.broadcastState()
