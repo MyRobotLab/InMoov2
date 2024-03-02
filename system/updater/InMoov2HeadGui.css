@@ -1,0 +1,597 @@
+
+
+.preventHeadDragSelect{
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+.dotHeadDisabled{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #0042A4;
+    border-top: 2px solid #AFE1EC;
+    border-right: 2px solid #AFE1EC;
+    border-bottom: 2px solid #AFE1EC;
+    border-left: 2px solid #AFE1EC;
+    background-color: #7d7d7d;
+}
+
+.dotHeadEnabled{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #0042A4;
+    border-top: 2px solid #AFE1EC;
+    border-right: 2px solid #AFE1EC;
+    border-bottom: 2px solid #AFE1EC;
+    border-left: 2px solid #AFE1EC;
+    background-color: #00a5cb;
+    box-shadow: inset 0 0px 1px 1px rgb(255, 255, 255, 0.54);
+}
+
+@keyframes dotHeadActive {
+  0% { filter: saturate(200%) brightness(200%) drop-shadow(0px 0px 10px rgba(255, 0, 0, 0.6)); }
+  10% { background-color: #FF0000; }
+  50% {box-shadow: 0 0px 20px 6px rgb(250, 0, 0, 0.54), 0px 0px 10px 1px rgba(255, 133, 133, 0.92), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.54);}
+
+  90% { background-color: #d68080; }
+  100% { filter: none; }
+}
+
+.dotHeadActive{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #0042A4;
+    border-top: 2px solid #AFE1EC;
+    border-right: 2px solid #AFE1EC;
+    border-bottom: 2px solid #AFE1EC;
+    border-left: 2px solid #AFE1EC;
+    animation: dotHeadActive 2000ms infinite;
+}
+
+
+#headIndicator{
+    left:214px;
+    top:36px;
+    width: 200px;
+    height: 40px;
+}
+
+.rectangleHeadIndicator{
+    position:absolute;
+    display: table-cell;
+    border-radius: 5px;
+    background: #73AD21;
+    font-family: helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #17d6ed;
+    line-height: 40px;
+    background-image: linear-gradient(#001720, #01424c);
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 0 0 3px #3e2e2e, 0 0 20px #fff, 0 0 30px #00a5cb, 0 0 40px #74ace6, 0 0 50px #0042a4, 0 0 60px #3582f5, 0 0 70px #4954ff;
+    box-shadow: 0 0px 5px 2px rgb(218, 94, 94);
+    cursor:default;
+}
+
+.rectangleHeadIndicatorActive{
+    position:absolute;
+    display: table-cell;
+    border-radius: 5px;
+    background: #73AD21;
+    font-family: helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #17d6ed;
+    line-height: 40px;
+    background-image: linear-gradient(#001720, #01424c);
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 0 0 3px #3e2e2e, 0 0 20px #fff, 0 0 30px #00a5cb, 0 0 12px #74ace6, 0 0 50px #0042a4, 0 0 60px #3582f5, 0 0 70px #4954ff;
+    -webkit-filterg: saturate(200%)  drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
+    box-shadow: 0 0px 4px 3px rgb(21, 215, 237), 0px 0px 10px 1px rgb(255, 255, 255), 0px 0px 9px 3px rgb(21, 255, 0);
+}
+
+.dotHeadButtons{
+    position:absolute;
+    font-family: helvetica,sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    color: #29d4ff;
+    cursor: pointer;
+    display: inline-block;
+    /* 
+    overflow: hidden;
+    break the glow
+    */
+    height: 24px;
+    max-height: 24px;
+    text-shadow: 0 0 3px #414b4e, 0 0 7px #76bed3, 0 0 7px #8ddaefd9;
+}
+.dotHeadButtons:hover{
+    color: #FFFFFF;
+}
+.dotHeadButtons:active{
+    color: #FFFFFF;
+    text-shadow: 0 0 3px #414b4e, 0 0 10px #FFFFFF, 0 0 10px #FFFFFF, 0 0 10px #FFFFFF;
+}
+
+.dotHeadButtonsActive{
+    position:absolute;
+    font-family: helvetica,sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    color: #f38094;
+    cursor: pointer;
+    display: inline-block;
+    height: 24px;
+    max-height: 24px;
+    text-shadow: 0 0 3px #ff1414, 0 0 10px #FFFFFF;
+    cursor: default;
+}
+
+
+.leftHeadSide{
+    text-align: left;
+}
+
+.rightHeadSide{
+    text-align: right;
+}
+
+
+/* -------------------    Right head DOTs position --------------------*/
+
+#eyelidRightUpperDot{
+    position:absolute;
+    left:247px;
+    top: 207px;
+}
+
+#eyelidRightLowerDot{
+    position:absolute;
+    left:245px;
+    top: 271px;
+}
+
+#eyeRightLRDot{
+    position:absolute;
+    left:230px;
+    top:251px;
+}
+
+#eyeRightUDDot{
+    position:absolute;
+    left:229px;
+    top:228px;
+}
+
+#eyebrowRightDot{
+    position:absolute;
+    left:251px;
+    top:189px;
+}
+
+#cheekRightDot{
+    position:absolute;
+    left:231px;
+    top:353px;
+}
+
+#forheadRightDot{
+    position:absolute;
+    right:312px;
+    top:170px;
+}
+
+#jawDot{
+    position:absolute;
+    left: 261px;
+    top:378px;
+}
+
+/* -------------------    Right head LINEs position --------------------*/
+
+.rightHeadLine{
+    position:absolute;
+    border: solid #15d7ed;
+    display: inline-block;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+#eyelidRightUpperLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 36px;
+    left: 181px;
+    top: 212px;
+}
+#eyelidRightLowerLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 33px;
+    left: 180px;
+    top: 275px;
+}
+#eyeRightLRLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 58px;
+    left: 124px;
+    top: 255px;
+}
+#eyeRightUDLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 55px;
+    left: 128px;
+    top: 232px;
+}
+#eyebrowRightLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 55px;
+    left: 148px;
+    top: 193px;
+}
+#cheekRightLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 55px;
+    left: 128px;
+    top: 356px;
+}
+#forheadRightLine{
+    border-width: 0 3px 0px 0;
+    padding: 84px 0px;
+    right: 399px;
+    top: 93px;
+}
+#jawLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 56px;
+    left: 149px;
+    top: 383px;
+}
+/* -------------------    Right Head Buttons  --------------------*/
+
+#eyelidRightUpperButton{
+    right: 443px;
+    top: 196px;
+}
+#eyelidRightUpperButton:hover + #eyelidRightUpperDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#eyelidRightLowerButton{
+    right: 443px;
+    top: 257px;
+}
+#eyelidRightLowerButton:hover + #eyelidRightLowerDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#eyeRightLRButton{
+    right: 497px;
+    top: 238px;
+}
+#eyeRightLRButton:hover + #eyeRightLRDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#eyeRightUDButton{
+    right: 493px;
+    top: 216px;
+}
+#eyeRightUDButton:hover + #eyeRightUDDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#eyebrowRightButton{
+    right: 477px;
+    top: 177px;
+}
+#eyebrowRightButton:hover + #eyebrowRightDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#cheekRightButton{
+    right: 502px;
+    top: 341px;
+}
+#cheekRightButton:hover + #cheekRightDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#forheadRightButton{
+    right: 487px;
+    top: 159px;
+}
+#forheadRightButton:hover + #forheadRightDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+#jawButton{
+    right: 474px;
+    top: 366px;
+}
+#jawButton:hover + #jawDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+
+/* -------------------    Left Head DOTs position --------------------*/
+
+#eyelidLeftUpperDot{
+    position:absolute;
+    left: 365px;
+    top: 207px;
+}
+
+#eyelidLeftLowerDot{
+    position:absolute;
+    left: 361px;
+    top: 269px;
+}
+
+#rotheadDot{
+    position:absolute;
+    left:312px;
+    top:378px;
+}
+
+#upperLipDot{
+    position:absolute;
+    left:312px;
+    top:329px;
+}
+
+#forheadLeftDot{
+    position:absolute;
+    left:312px;
+    top:170px;
+}
+
+#eyeLeftLRDot{
+    position:absolute;
+    left: 374px;
+    top:251px;
+}
+
+#eyeLeftUDDot{
+    position:absolute;
+    left: 374px;
+    top:228px;
+}
+
+#eyebrowLeftDot{
+    position:absolute;
+    left:354px;
+    top:187px;
+}
+
+#cheekLeftDot{
+    position:absolute;
+    left:375px;
+    top:351px;
+}
+
+#rollNeckDot{
+    position:absolute;
+    left:358px;
+    top:403px;
+}
+
+#neckDot{
+    position:absolute;
+    left:302px;
+    top:451px;
+}
+
+/* -------------------    Left head LINEs position --------------------*/
+
+.leftHeadLine{
+    position:absolute;
+    border: solid #15d7ed;
+    display: inline-block;
+    transform: rotate(270deg);
+    z-index: -1;
+}
+#eyelidLeftUpperLine{
+    border-width: 0 3px 0px 0;
+    padding: 40px 0px;
+    left: 415px;
+    top: 174px;
+}
+#eyelidLeftLowerLine{
+    border-width: 0 3px 0px 0;
+    padding: 40px 0px;
+    left: 411px;
+    top: 236px;
+}
+#rotheadLine{
+    border-width: 0 3px 0px 0;
+    padding: 70px 0px;
+    left: 389px;
+    top: 315px;
+}
+#upperLipLine{
+    border-width: 0 3px 0px 0;
+    padding: 70px 0px;
+    left: 389px;
+    top: 266px;
+}
+#forheadLeftLine{
+    border-width: 0 3px 0px 0;
+    padding: 70px 0px;
+    left: 389px;
+    top: 104px;
+}
+#neckLine{
+    border-width: 0 3px 0px 0;
+    padding: 88px 0px;
+    left: 393px;
+    top: 370px;
+}
+#rollNeckLine{
+    border-width: 0 3px 0px 0;
+    padding: 45px 0px;
+    left: 413px;
+    top: 364px;
+}
+#eyeLeftLRLine{
+    border-width: 0 3px 0px 0;
+    padding: 35px 0px;
+    left: 418px;
+    top: 222px;
+}
+#eyeLeftUDLine{
+    border-width: 0 3px 0px 0;
+    padding: 35px 0px;
+    left: 418px;
+    top: 199px;
+}
+#eyebrowLeftLine{
+    border-width: 0 3px 0px 0;
+    padding: 47px 0px;
+    left: 409px;
+    top: 147px;
+}
+#cheekLeftLine{
+    border-width: 0 3px 0px 0;
+    padding: 35px 0px;
+    left: 418px;
+    top: 323px;
+}
+
+/* -------------------    Left Head Buttons --------------------*/
+
+#eyelidLeftUpperButton{
+    left: 455px;
+    top: 196px;
+}
+#eyelidLeftUpperButton:hover + #eyeLidLeftUpperDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+#eyelidLeftLowerButton{
+    left: 454px;
+    top: 259px;
+}
+#eyelidLeftLowerButton:hover + #eyeLidLeftLowerDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+#rotheadButton{
+    left: 457px;
+    top: 367px;
+}
+#rotheadButton:hover + #rotheadDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+#upperLipButton{
+    left: 457px;
+    top: 318px;
+}
+#upperLipButton:hover + #upperLipDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+#forheadLeftButton{
+    left: 455px;
+    top: 159px;
+}
+#forheadLeftButton:hover + #forheadLeftDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+#neckButton{   
+    left: 485px;
+    top: 439px;
+}
+#neckButton:hover + #neckDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+#rollNeckButton{
+    left: 456px;
+    top: 391px;
+}
+#rollNeckButton:hover + #rollNeckDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#eyeLeftLRButton{
+    left: 454px;
+    top: 240px;
+}
+#eyeLeftLRButton:hover + #eyeLeftLRDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#eyeLeftUDButton{
+    left: 454px;
+    top: 216px;
+}
+#eyeLeftUDButton:hover + #eyeLeftUDDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#eyebrowLeftButton{
+    left: 454px;
+    top: 177px;
+}
+#eyebrowLeftButton:hover + #eyebrowLeftDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#cheekLeftButton{
+    left: 457px;
+    top: 340px;
+}
+#cheekLeftButton:hover + #cheekLeftDot{
+    background-color: #FF0000;
+    animation: none;
+}
+
+/* -------------------    Left Back position --------------------*/
+
+#leftBackHeadButton{
+    left: 41px;
+    top: 528px;
+}
+#leftBackHeadButton:#leftBackHeadArrow{
+    background-color: #FF0000;
+    animation: none;
+}
+/* -------------------    Left Back Arrow position --------------------*/
+
+#leftBackHeadArrow{
+    border-top: 9px solid transparent;
+    border-right: 10px solid #29d4ff;
+    border-bottom: 9px solid transparent;
+    display: inline-block;
+    position:absolute;
+    left:29px;
+    top:534px;
+}
+
+/* -------------------    dna position --------------------*/
+
+#leftDnaHeadButton img{
+    position:absolute;
+    width:155px;
+    left: 33px;
+    top: 28px;
+}
