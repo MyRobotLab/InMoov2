@@ -174,16 +174,28 @@
     top:228px;
 }
 
+#eyebrowRightDot{
+    position:absolute;
+    left:251px;
+    top:189px;
+}
+
+#cheekRightDot{
+    position:absolute;
+    left:231px;
+    top:353px;
+}
+
 #forheadRightDot{
     position:absolute;
     right:312px;
-    top:188px;
+    top:170px;
 }
 
 #jawDot{
     position:absolute;
     left: 261px;
-    top:355px;
+    top:378px;
 }
 
 /* -------------------    Right head LINEs position --------------------*/
@@ -219,17 +231,29 @@
     left: 128px;
     top: 232px;
 }
+#eyebrowRightLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 55px;
+    left: 148px;
+    top: 193px;
+}
+#cheekRightLine{
+    border-width: 0 0px 3px 0;
+    padding: 0px 55px;
+    left: 128px;
+    top: 356px;
+}
 #forheadRightLine{
     border-width: 0 3px 0px 0;
-    padding: 80px 0px;
-    right: 394px;
-    top: 115px;
+    padding: 84px 0px;
+    right: 399px;
+    top: 93px;
 }
 #jawLine{
     border-width: 0 0px 3px 0;
     padding: 0px 56px;
-    left: 148px;
-    top: 360px;
+    left: 149px;
+    top: 383px;
 }
 /* -------------------    Right Head Buttons  --------------------*/
 
@@ -265,9 +289,25 @@
     background-color: #FF0000;
     animation: none;
 }
-#forheadRightButton{
-    right: 481px;
+#eyebrowRightButton{
+    right: 477px;
     top: 177px;
+}
+#eyebrowRightButton:hover + #eyebrowRightDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#cheekRightButton{
+    right: 502px;
+    top: 341px;
+}
+#cheekRightButton:hover + #cheekRightDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#forheadRightButton{
+    right: 487px;
+    top: 159px;
 }
 #forheadRightButton:hover + #forheadRightDot{
     background-color: #FF0000;
@@ -276,7 +316,7 @@
 
 #jawButton{
     right: 474px;
-    top: 343px;
+    top: 366px;
 }
 #jawButton:hover + #jawDot{
     background-color: #FF0000;
@@ -301,28 +341,45 @@
 #rotheadDot{
     position:absolute;
     left:312px;
-    top:377px;
+    top:378px;
 }
+
 #upperLipDot{
     position:absolute;
     left:312px;
     top:329px;
 }
+
 #forheadLeftDot{
     position:absolute;
     left:312px;
-    top:188px;
+    top:170px;
 }
+
 #eyeLeftLRDot{
     position:absolute;
     left: 374px;
     top:251px;
 }
+
 #eyeLeftUDDot{
     position:absolute;
     left: 374px;
     top:228px;
 }
+
+#eyebrowLeftDot{
+    position:absolute;
+    left:354px;
+    top:187px;
+}
+
+#cheekLeftDot{
+    position:absolute;
+    left:375px;
+    top:351px;
+}
+
 #rollNeckDot{
     position:absolute;
     left:358px;
@@ -372,7 +429,7 @@
     border-width: 0 3px 0px 0;
     padding: 70px 0px;
     left: 389px;
-    top: 124px;
+    top: 104px;
 }
 #neckLine{
     border-width: 0 3px 0px 0;
@@ -397,6 +454,18 @@
     padding: 35px 0px;
     left: 418px;
     top: 199px;
+}
+#eyebrowLeftLine{
+    border-width: 0 3px 0px 0;
+    padding: 47px 0px;
+    left: 409px;
+    top: 147px;
+}
+#cheekLeftLine{
+    border-width: 0 3px 0px 0;
+    padding: 35px 0px;
+    left: 418px;
+    top: 323px;
 }
 
 /* -------------------    Left Head Buttons --------------------*/
@@ -439,7 +508,7 @@
 
 #forheadLeftButton{
     left: 455px;
-    top: 177px;
+    top: 159px;
 }
 #forheadLeftButton:hover + #forheadLeftDot{
     background-color: #FF0000;
@@ -476,6 +545,22 @@
     top: 216px;
 }
 #eyeLeftUDButton:hover + #eyeLeftUDDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#eyebrowLeftButton{
+    left: 454px;
+    top: 177px;
+}
+#eyebrowLeftButton:hover + #eyebrowLeftDot{
+    background-color: #FF0000;
+    animation: none;
+}
+#cheekLeftButton{
+    left: 457px;
+    top: 340px;
+}
+#cheekLeftButton:hover + #cheekLeftDot{
     background-color: #FF0000;
     animation: none;
 }
