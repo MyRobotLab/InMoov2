@@ -3,11 +3,7 @@
 # categories: InMoov2
 # more info @: http://myrobotlab.org/service/InMoov
 #########################################
-# uncomment for virtual hardware
-# Platform.setVirtual(True)
 
-#runtime.release('i01.head')
-################
 newInMoov2html="resource/InMoov2/system/updater/InMoov2HeadGui.html"
 InMoov2html="resource/WebGui/app/service/views/InMoov2HeadGui.html"
 
