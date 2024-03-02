@@ -114,26 +114,28 @@ pipeline {
          }
       }
 
-    success {
+      success {
          echo "====== installing into repo ======"
-         
-         sshagent(credentials : ['myrobotlab2.pem']) {
-               sh 'scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ./target/${ARTIFACT_ID}-0.0.1-SNAPSHOT.zip ubuntu@repo.myrobotlab.org:/home/ubuntu'
-               sh '''
-                  ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@repo.myrobotlab.org sudo mvn install:install-file  -Dfile=${ARTIFACT_ID}-0.0.1-SNAPSHOT.zip \
-                        -DgroupId=${GROUP_ID} \
-                        -DartifactId=${ARTIFACT_ID} \
-                        -Dversion=${VERSION} \
-                        -Dpackaging=zip \
-                        -DlocalRepositoryPath=/repo/artifactory/myrobotlab/
-                  
-                  ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@repo.myrobotlab.org sudo mv \
-                  /repo/artifactory/myrobotlab/${GROUP_ID_PATH}/${ARTIFACT_ID}/maven-metadata-local.xml \
-                         /repo/artifactory/myrobotlab/${GROUP_ID_PATH}/${ARTIFACT_ID}/maven-metadata.xml
 
-               '''
+         // Assuming the Jenkins workspace directory is accessible and you have the required environment variables set
+         sh "cp ./target/${ARTIFACT_ID}-0.0.1-SNAPSHOT.zip /repo/artifactory/myrobotlab/${GROUP_ID_PATH}/${ARTIFACT_ID}/${ARTIFACT_ID}-0.0.1-SNAPSHOT.zip"
 
-         } // sshagent
-    } // success
+         // Run mvn install:install-file locally instead of over ssh
+         sh """
+            mvn install:install-file  -Dfile=./target/${ARTIFACT_ID}-0.0.1-SNAPSHOT.zip \
+                  -DgroupId=${GROUP_ID} \
+                  -DartifactId=${ARTIFACT_ID} \
+                  -Dversion=${VERSION} \
+                  -Dpackaging=zip \
+                  -DlocalRepositoryPath=/repo/artifactory/myrobotlab/
+         """
+
+         // Move maven-metadata-local.xml to maven-metadata.xml
+         sh """
+            mv /repo/artifactory/myrobotlab/${GROUP_ID_PATH}/${ARTIFACT_ID}/maven-metadata-local.xml \
+               /repo/artifactory/myrobotlab/${GROUP_ID_PATH}/${ARTIFACT_ID}/maven-metadata.xml
+         """
+      } // success
+
   } // post
 } // pipeline
