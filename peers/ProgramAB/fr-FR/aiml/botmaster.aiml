@@ -29,7 +29,7 @@
       </think>
       <condition>
         <li name="identity" value="botmasteur">
-          <srai>appadmiration</srai>Bien sûr mon Maître, que puis je faire pour toi 
+          <srai>APPHAPPY</srai>Bien sûr mon Maître, que puis je faire pour toi 
           <think>
           	<set name="oldtopic"><get name="topic" /></set>
           	<set name="topic">system</set>

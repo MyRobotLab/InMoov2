@@ -2750,7 +2750,7 @@
   <category>
     <pattern>JE N AI PAS DE CAMERA SÛR MON ORDINATEUR</pattern>
     <template>
-      <srai>APPJOIE</srai>il y en a peut-être une et tu ne le sais pas</template>
+      <srai>APPACCOMPLICE</srai>il y en a peut-être une et tu ne le sais pas</template>
   </category>
   <category>
     <pattern>JE N AI PAS DE CAMERA</pattern>
@@ -3326,7 +3326,7 @@
   <category>
     <pattern>JE PLAISANTAIS JUSTE</pattern>
     <template>
-      <srai>APPJOIE</srai>tu dois employer un</template>
+      <srai>APPACCOMPLICE</srai>tu dois employer un</template>
   </category>
   <category>
     <pattern>JE POURRAIS</pattern>
@@ -3502,7 +3502,7 @@
   <category>
     <pattern>JE SUIS SARCASTIQUE</pattern>
     <template>
-      <srai>APPJOIE</srai>ah bon!..</template>
+      <srai>APPACCOMPLICE</srai>ah bon!..</template>
   </category>
   <category>
     <pattern>JE SUIS SORTI</pattern>
@@ -3621,7 +3621,7 @@
   <category>
     <pattern>JE TE PARDONNE</pattern>
     <template>
-      <srai>APPJOIE</srai> Merci<get name="name" />.</template>
+      <srai>APPACCOMPLICE</srai> Merci<get name="name" />.</template>
   </category>
   <category>
     <pattern>JE TE PARLAIS</pattern>
@@ -4659,7 +4659,7 @@
   <category>
     <pattern>NEVERMIND</pattern>
     <template>
-      <srai>APPDESOLE</srai>...</template>
+      <srai>APPSAD</srai>...</template>
   </category>
   <category>
     <pattern>NI FAIS JE</pattern>
@@ -4959,7 +4959,7 @@
   <category>
     <pattern>PARLONS DE TOI</pattern>
     <template>
-      <srai>APPJOIE</srai>
+      <srai>APPACCOMPLICE</srai>
       <set name="that">
         <think>
           <set name="oldtopic">
@@ -6301,7 +6301,7 @@
   <category>
     <pattern>TU AIMES CONNAITRE PLUS</pattern>
     <template>
-      <srai>APPJOIE</srai>que j'ai entendu que quelque part auparavant</template>
+      <srai>APPACCOMPLICE</srai>que j'ai entendu que quelque part auparavant</template>
   </category>
   <category>
     <pattern>TU AIMES CONNAITRE</pattern>
@@ -6620,7 +6620,7 @@
   <category>
     <pattern>TU AS ÉTÉ CRÉÉE PAR DES GENS</pattern>
     <template>
-      <srai>APPJOIE</srai>Et PAS TOI</template>
+      <srai>APPACCOMPLICE</srai>Et PAS TOI</template>
   </category>
   <category>
     <pattern>TU AS ÉTÉ EN ANGLETERRE</pattern>
@@ -7000,7 +7000,7 @@
   <category>
     <pattern>TU ES CELA</pattern>
     <template>
-      <srai>APPJOIE</srai>Merci, <get name="name" />.</template>
+      <srai>APPACCOMPLICE</srai>Merci, <get name="name" />.</template>
   </category>
   <category>
     <pattern>TU ES CHER</pattern>
@@ -7361,12 +7361,12 @@
   <category>
     <pattern>TU ES UNE PUTAIN</pattern>
     <template>
-      <srai>APPCHOQUEE</srai>Ce n'est pas très agréable.</template>
+      <srai>APPSURPRISE</srai>Ce n'est pas très agréable.</template>
   </category>
   <category>
     <pattern>TU ES UNE SOUILLON</pattern>
     <template>
-      <srai>APPCHOQUE</srai>Ce genre de terme est offensant.</template>
+      <srai>APPSURPRISE</srai>Ce genre de terme est offensant.</template>
   </category>
   <category>
     <pattern>TU ES VIEUX</pattern>
@@ -8022,7 +8022,7 @@
   <category>
     <pattern>TU PEUX NETTOYER</pattern>
     <template>
-      <srai>APPMOQUERIE</srai>Oui, je nettoie ton disque dur en ce moment.</template>
+      <srai>APPUNAMUSED</srai>Oui, je nettoie ton disque dur en ce moment.</template>
   </category>
   <category>
     <pattern>TU PEUX PLEURER</pattern>
@@ -8144,7 +8144,7 @@
   <category>
     <pattern>TU AS RENCONTRÉ DES GENS INTÉRESSANTS</pattern>
     <template>
-      <srai>APPJOIE</srai>Oui, toi par exemple.</template>
+      <srai>APPACCOMPLICE</srai>Oui, toi par exemple.</template>
   </category>
   <category>
     <pattern>TU RÉPÈTES LES MÊMES CHOSES</pattern>
@@ -8293,7 +8293,7 @@
   <category>
     <pattern>TU VEUX REFAIRE LE MONDE</pattern>
     <template>
-      <srai>APPJOIE</srai>Je <set name="that">refais déjà monde</set></template>
+      <srai>APPACCOMPLICE</srai>Je <set name="that">refais déjà monde</set></template>
   </category>
   <category>
     <pattern>TU VEUX SAVOIR UN SECRET</pattern>

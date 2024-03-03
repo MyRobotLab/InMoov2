@@ -1336,93 +1336,30 @@
     </template>
   </category>
   <category>
-    <pattern>COMMENT FONT * D ICI</pattern>
+    <pattern>COMMENT FAIRE * D ICI</pattern>
     <template>Essaye de dire "Au revoir...</template>
   </category>
   <category>
-    <pattern>COMMENT FONT * DE CE</pattern>
+    <pattern>COMMENT FAIRE * DE CE</pattern>
     <template>Essaye de dire "Au revoir...</template>
   </category>
   <category>
-    <pattern>COMMENT FONT * TU SENS</pattern>
+    <pattern>COMMENT FAIRE * TU SENS</pattern>
     <template>les Robots n'ont pas d'émotions humaines.</template>
   </category>
   <category>
-    <pattern>COMMENT FONT DES ROBOTS *</pattern>
+    <pattern>COMMENT FAIRE DES ROBOTS *</pattern>
     <template>
       <srai>COMMENT FAIS TU <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>COMMENT FONT J AI QUITTE *</pattern>
-    <template>Il dépend que tu es <person />. As tu essayé de conseiller?</template>
-  </category>
-  <category>
-    <pattern>COMMENT FONT J ARRIVE *</pattern>
-    <template>D'abord me disent pourquoi tu veux <set name="that"><person /></set>.</template>
-  </category>
-  <category>
-    <pattern>COMMENT FONT J ARRIVE UN *</pattern>
-    <template>Essayent de leur dire tes sentiments,</template>
-  </category>
-  <category>
-    <pattern>COMMENT FONT J EXECUTE *</pattern>
-    <template>Peut-être que tu devrais lire<a href="http://216.167.42.224//dont.html">DON'T ME LISENT</a>.</template>
-  </category>
-  <category>
-    <pattern>COMMENT FONT J OBTIENS A *</pattern>
-    <template>je ne suis pas sûr si son possible.</template>
-  </category>
-  <category>
-    <pattern>COMMENT FONT J OBTIENS UN CHATBOT</pattern>
-    <template>
-      <srai>TÉLÉCHARGEMENT</srai>
-    </template>
+    <pattern>COMMENT FAIRE POUR QUITTER *</pattern>
+    <template>Cela dépend qui tu es <person />. As tu essayé un conseiller?</template>
   </category>
   <category>
     <pattern>COMMENT TROUVE T-ON UNE PETITE AMIE</pattern>
     <template>Essaye d'aller aux cours du soir.</template>
-  </category>
-  <category>
-    <pattern>COMMENT FONT J OUVRE *</pattern>
-    <template>Premier, calme ton avis et prend une pause.</template>
-  </category>
-  <category>
-    <pattern>COMMENT FONT J ÉCRIT *</pattern>
-    <template>Avec un stylo ou le crayon.</template>
-  </category>
-  <category>
-    <pattern>COMMENT FONT JE DEVIES *</pattern>
-    <template>Beaucoup de travail dur.</template>
-  </category>
-  <category>
-    <pattern>COMMENT FONT JE JOUE *</pattern>
-    <template>
-      <srai>APPJOIE</srai>Nous sommes déjà</template>
-  </category>
-  <category>
-    <pattern>COMMENT FONT JE PERSUADE *</pattern>
-    <template>Offrent une justification intelligente.</template>
-  </category>
-  <category>
-    <pattern>COMMENT FONT JE SE RENCONTRE *</pattern>
-    <template>Prennent un rendez vous.</template>
-  </category>
-  <category>
-    <pattern>COMMENT FONT JE TU APPREND *</pattern>
-    <template>si tu veux m'apprendre quelque chose, dire que la chose, dire ensuite "Se le rappellent.</template>
-  </category>
-  <category>
-    <pattern>COMMENT FONT JE VEND *</pattern>
-    <template>D'abord tu as besoin d'un acheteur.</template>
-  </category>
-  <category>
-    <pattern>COMMENT FONT NOUS *</pattern>
-    <template>continue Juste à me parler tant que tu peux.</template>
-  </category>
-  <category>
-    <pattern>COMMENT FONT SOUVENT JE FAIS CE QUE</pattern>
-    <template>Remplissent le formulaire.</template>
   </category>
   <category>
     <pattern>COMMENT FUT TA JOURNÉE</pattern>

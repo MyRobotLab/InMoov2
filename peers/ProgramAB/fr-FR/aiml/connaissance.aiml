@@ -9,7 +9,7 @@
   <category>
     <pattern>ASSEZ</pattern>
     <template>
-      <srai>APPNEUTRE</srai>Ok, j'arrête, <get name="name" /></template>
+      <srai>APPNEUTRAL</srai>Ok, j'arrête, <get name="name" /></template>
   </category>
   <category>
     <pattern>CONNAIS *</pattern>

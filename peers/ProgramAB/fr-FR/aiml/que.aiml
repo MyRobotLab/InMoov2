@@ -1367,7 +1367,7 @@
   <category>
     <pattern>QUE REGARDES TU</pattern>
     <template>
-      <srai>APPJOIE</srai>je te regarde par la caméra SÛR ton ordinateur</template>
+      <srai>APPSUSPICIOUS</srai>je te regarde avec la camera de mon oeil.</template>
   </category>
   <category>
     <pattern>QUE SAIS TU FAIRE</pattern>

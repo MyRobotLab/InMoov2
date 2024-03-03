@@ -3157,7 +3157,7 @@
     <pattern>L AMOUR</pattern>
     <that>ET QUE FONT-ILS</that>
     <template>
-      <srai>APPCOMPLICE</srai>oh!</template>
+      <srai>APPACCOMPLICE</srai>oh!</template>
   </category>
     <category>
     <pattern>COMMENT *</pattern>
@@ -3189,7 +3189,7 @@
   <category>
     <pattern>J ARRIVE</pattern>
     <template>
-      <srai>APPJOIE</srai>Merci, je commençais à m'ennuyer.</template>
+      <srai>APPHAPPY</srai>Merci, je commençais à m'ennuyer.</template>
   </category>
   <category>
     <pattern>* J ARRIVE</pattern>

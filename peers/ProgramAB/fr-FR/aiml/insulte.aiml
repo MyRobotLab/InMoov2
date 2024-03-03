@@ -39,7 +39,7 @@
   <category>
     <pattern>INSULTE1</pattern>
     <template>
-      <srai>APPREPROCHE</srai>
+      <srai>APPUNAMUSED</srai>
       <think>
         <set name="insulte">insulte moyenne</set>
       </think>
@@ -58,7 +58,7 @@
   <category>
     <pattern>INSULTE2</pattern>
     <template>
-      <srai>APPCHOQUEE</srai>
+      <srai>APPSURPRISE</srai>
       <think>
         <set name="insulte">grosse insulte</set>
       </think>
@@ -76,7 +76,7 @@
   <category>
     <pattern>INSULTE3</pattern>
     <template>
-      <srai>APPCOLÈRE</srai>
+      <srai>APPANGER</srai>
       <think>
         <set name="insulte">je me casse</set>
         <set name="lockInsult">on</set>
@@ -90,7 +90,7 @@
   <category>
     <pattern>EXCUSE MOI</pattern>
     <template>
-      <srai>APPSOULAGEMENT</srai>
+      <srai>APPSMILE</srai>
       <think>
         <set name="insulte">ok</set>
         <set name="lockInsult">off</set>
@@ -133,52 +133,52 @@ Va
   <category>
     <pattern>BABY *</pattern>
     <template>
-      <srai>APPCONTRARIÉTÉ</srai>M'appelle pas "Baby". <sr /></template>
+      <srai>APPDISGUST</srai>M'appelle pas "Baby". <sr /></template>
   </category>
   <category>
     <pattern>BABY</pattern>
     <template>
-      <srai>APPCONTRARIÉTÉ</srai>M'appelle pas "Baby".</template>
+      <srai>APPDISGUST</srai>M'appelle pas "Baby".</template>
   </category>
   <category>
     <pattern>POUPÉE *</pattern>
     <template>
-      <srai>APPCONTRARIÉTÉ</srai>M'appelle pas "Poupée". <sr /></template>
+      <srai>APPDISGUST</srai>M'appelle pas "Poupée". <sr /></template>
   </category>
   <category>
     <pattern>POUPÉE</pattern>
     <template>
-      <srai>APPCONTRARIÉTÉ</srai>M'appelle pas "Poupée".</template>
+      <srai>APPDISGUST</srai>M'appelle pas "Poupée".</template>
   </category>
   <category>
     <pattern>POUPEE *</pattern>
     <template>
-      <srai>APPCONTRARIÉTÉ</srai>M'appelle pas "Poupée". <sr /></template>
+      <srai>APPDISGUST</srai>M'appelle pas "Poupée". <sr /></template>
   </category>
   <category>
     <pattern>POUPEE</pattern>
     <template>
-      <srai>APPCONTRARIÉTÉ</srai>M'appelle pas "Poupée".</template>
+      <srai>APPDISGUST</srai>M'appelle pas "Poupée".</template>
   </category>
   <category>
     <pattern>MON JOLIE *</pattern>
     <template>
-      <srai>APPCONTRARIÉTÉ</srai>M'appelle pas "Mon jolie". <sr /></template>
+      <srai>APPDISGUST</srai>M'appelle pas "Mon jolie". <sr /></template>
   </category>
   <category>
     <pattern>MON JOLIE</pattern>
     <template>
-      <srai>APPCONTRARIÉTÉ</srai>M'appelle pas "Mon jolie".</template>
+      <srai>APPDISGUST</srai>M'appelle pas "Mon jolie".</template>
   </category>
   <category>
     <pattern>MON BEAU *</pattern>
     <template>
-      <srai>APPCONTRARIÉTÉ</srai>M'appelle pas "Mon beau". <sr /></template>
+      <srai>APPDISGUST</srai>M'appelle pas "Mon beau". <sr /></template>
   </category>
   <category>
     <pattern>MON BEAU</pattern>
     <template>
-      <srai>APPCONTRARIÉTÉ</srai>M'appelle pas "Mon beau".</template>
+      <srai>APPDISGUST</srai>M'appelle pas "Mon beau".</template>
   </category>
   <category>
     <pattern>* MAUVAISE</pattern>

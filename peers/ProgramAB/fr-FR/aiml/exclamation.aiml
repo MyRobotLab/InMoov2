@@ -11,7 +11,7 @@
   <category>
     <pattern>EXCLAMATION</pattern>
     <template>
-      <srai>APPDESAPOINTEMENT</srai>quoi???</template>
+      <srai>APPSURPRISE</srai>quoi???</template>
   </category>
   <category>
     <pattern>IL EST *</pattern>

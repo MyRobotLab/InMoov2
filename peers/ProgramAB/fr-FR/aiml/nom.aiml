@@ -751,24 +751,24 @@
     <pattern>JE NE SUIS PAS *</pattern>
     <that>C EST TOI</that>
     <template>
-      <srai>APPDESAPOINTEMENT</srai>ah pardon!</template>
+      <srai>APPSORRY</srai>ah pardon!</template>
   </category>
   <category>
     <pattern>JE NE M APPELLE PAS *</pattern>
     <that>C EST TOI</that>
     <template>
-      <srai>APPDESAPOINTEMENT</srai>ah pardon!</template>
+      <srai>APPSORRY</srai>ah pardon!</template>
   </category>
   <category>
     <pattern>JE NE SUIS PAS *</pattern>
     <that>SALUT</that>
     <template>
-      <srai>APPDESAPOINTEMENT</srai>ah pardon!</template>
+      <srai>APPSORRY</srai>ah pardon!</template>
   </category>
   <category>
     <pattern>JE NE M APPELLE PAS *</pattern>
     <that>SALUT</that>
     <template>
-      <srai>APPDESAPOINTEMENT</srai>ah pardon!</template>
+      <srai>APPSORRY</srai>ah pardon!</template>
   </category>
 </aiml>

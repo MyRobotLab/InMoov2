@@ -248,7 +248,7 @@
   <category>
     <pattern>* D</pattern>
     <template>
-      <srai>APPJOIE</srai>
+      <srai>APPHAPPY</srai>
       <sr />
     </template>
   </category>
@@ -1145,8 +1145,8 @@
   <category>
     <pattern>* SMILE</pattern>
     <template>
-      <srai>APPJOIE</srai>
-      <srai>appjoie</srai>
+      <srai>APPHAPPY</srai>
+      <srai>APPHAPPY</srai>
       <sr />
     </template>
   </category>
@@ -1180,7 +1180,7 @@
           <star />
         </set>
       </think>
-      <srai>APPJOIE</srai>
+      <srai>APPHAPPY</srai>
       <srai>
         <get name="tmp" /></srai>
     </template>

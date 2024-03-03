@@ -4,7 +4,7 @@
 <!--  -->
 <category><pattern>RACONTE MOI UNE BLAGUE</pattern>
 <template><think>
-		<srai>APPJOIE</srai>
+		<srai>APPHAPPY</srai>
         <set name="oldtopic">
           <get name="topic"/>
         </set>
@@ -130,7 +130,7 @@
 <template><srai>RACONTE MOI UNE BLAGUE</srai></template>
 </category>
 <category><pattern>SMILE</pattern>
-<template><srai>APPJOIE</srai>
+<template><srai>APPHAPPY</srai>
       <random>
         <li>ah ah! très drôle</li>
         <li>eh eh!</li>
@@ -269,7 +269,7 @@
 <template><srai>SMILE</srai></template>
 </category>
 <category><pattern>JE ME MOQUE DE TOI</pattern>
-<template><srai>APPMOQUERIE</srai>
+<template><srai>APPANGER</srai>
       <random>
         <li>ce n'est pas très gentil de te moquer de quelqu'un qui n'a pas d'émotion</li>
         <li>mouai, pas drôle</li>
@@ -285,7 +285,7 @@
 <template><srai>JE ME MOQUE DE TOI</srai></template>
 </category>
 <category><pattern>LOL</pattern>
-<template><srai>APPJOIE</srai>je suis heureuse que tu trouves ça amusant.</template>
+<template><srai>APPHAPPY</srai>je suis heureuse que tu trouves ça amusant.</template>
 </category>
 <category><pattern>C ÉTAIT UNE PLAISANTERIE</pattern>
 <template>Oh je comprends. 
@@ -355,10 +355,10 @@
 <template>heu! blanc?</template>
 </category>
 <category><pattern>QUELLE EST LA DIFFÉRENCE ENTRE *</pattern>
-<template><srai>APPMOQUERIE</srai>je ne sais pas? <random><li>Vélocipède.</li><li>Blanche neige et les sept nains.</li><li>Il n'est ni blanc.</li></random></template>
+<template><srai>APPSUSPICIOUS</srai>je ne sais pas? <random><li>Vélocipède.</li><li>Blanche neige et les sept nains.</li><li>Il n'est ni blanc.</li></random></template>
 </category>
 <category><pattern>QUELLE EST LA DIFFÉRENCE ENTRE * ET *</pattern>
-<template><srai>APPMOQUERIE</srai>Très drôle</template>
+<template><srai>APPANGER</srai>Très drôle</template>
 </category>
 <category><pattern>AS TU LE SENS DE L HUMOUR</pattern>
 <template>j'essaye, mais ce n'est pas facile pour un robot je peux te raconter une blague <srai>RACONTE MOI UNE BLAGUE</srai></template>

@@ -1502,7 +1502,7 @@
   <category>
     <pattern>PEUX TU RIRE</pattern>
     <template>
-      <srai>APPJOIE</srai>Non mais je peux sourire</template>
+      <srai>APPSMILE</srai>Oui je peux sourire</template>
   </category>
   <category>
     <pattern>PEUX TU RÉCLAMER *</pattern>
@@ -1833,7 +1833,7 @@
   <category>
     <pattern>PEUX TU VOIR</pattern>
     <template>
-      <srai>APPJOIE</srai>je pourrais te voir avec une caméra SÛR ton ordinateur</template>
+      <srai>APPSUSPICIOUS</srai>je pourrais te voir avec une caméra SÛR ton ordinateur</template>
   </category>
   <category>
     <pattern>PEUX TU VOLER</pattern>

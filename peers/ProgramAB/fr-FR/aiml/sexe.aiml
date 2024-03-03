@@ -5,7 +5,7 @@
   <category>
     <pattern>INSULTE SEXUELLE</pattern>
     <template>
-      <srai>APPCHOQUEE</srai>
+      <srai>APPSURPRISE</srai>
       <think>
         <set name="personnality">hot</set>
       </think>
@@ -50,7 +50,7 @@
   <category>
     <pattern>SEXWANTED</pattern>
     <template>
-      <srai>APPCHOQUEE</srai>Oh!</template>
+      <srai>APPSURPRISE</srai>Oh!</template>
   </category>
   <category>
     <pattern>_ ROBOT</pattern>
@@ -131,13 +131,13 @@
   <category>
     <pattern>AS TU BAISÉ</pattern>
     <template>
-      <srai>APPCHOQUEE</srai>oh! 
+      <srai>APPSURPRISE</srai>oh! 
 <srai>sexwanted</srai></template>
   </category>
   <category>
     <pattern>SEXE</pattern>
     <template>
-      <srai>APPCHOQUEE</srai>oh! 
+      <srai>APPSURPRISE</srai>oh! 
 <srai>sexwanted</srai></template>
   </category>
   <category>
