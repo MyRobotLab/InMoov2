@@ -5,7 +5,11 @@ angular.module('mrlapp.service.InMoov2HeadGui', []).controller('InMoov2HeadGuiCt
 
     $scope.mrl = mrl
     $scope.panel = mrl.getPanel('runtime')
-    
+    $scope.state = {
+        version: "V2",
+        styleSheet: "../service/css/InMoov2HeadGuiV2.css"
+    }
+
     $scope.activePanel = 'head'
 
     $scope.filterPeers = function(peerName) {
@@ -15,25 +19,18 @@ angular.module('mrlapp.service.InMoov2HeadGui', []).controller('InMoov2HeadGuiCt
             mrl.search("")
         }
     }
-    
-    $scope.isHead = function() {
-        if ($scope.service){
-            return $scope.service.name.includes("head")
-        }
-        return false
+
+    $scope.toggleVersion = function() {
+        $scope.state.styleSheet = ($scope.state.version == "V1") ? "../service/css/InMoov2HeadGuiV2.css" : "../service/css/InMoov2HeadGui.css"
+        $scope.state.version = ($scope.state.version == "V1") ? "V2" : "V1"
     }
+
 
     // GOOD TEMPLATE TO FOLLOW
     this.updateState = function(service) {
         $scope.service = service
-    }   
-
-    $scope.setActive = function(val) {
-        var index = array.indexOf(5);
-        if (index > -1) {
-            array.splice(index, 1);
-        }
     }
+
 
     $scope.getPeer = function(peerName) {
         let s = mrl.getService($scope.service.name + '.' + peerName + '@' + this.service.id)
@@ -45,25 +42,30 @@ angular.module('mrlapp.service.InMoov2HeadGui', []).controller('InMoov2HeadGuiCt
 
         // unselect active buttons by removing active class
         var container = document.querySelector("#containerHead2");
-        if (container!=null) {
+        if (container != null) {
             var matchesItems = container.querySelectorAll(".dotHeadActive");
-            for (var i = 0; i < matchesItems.length; i++) { matchesItems[i].classList.remove('dotHeadActive'); }
+            for (var i = 0; i < matchesItems.length; i++) {
+                matchesItems[i].classList.remove('dotHeadActive');
+            }
 
             var matchesItems = container.querySelectorAll(".dotHeadButtonsActive");
-            for (var i = 0; i < matchesItems.length; i++) { matchesItems[i].classList.remove('dotHeadButtonsActive'); matchesItems[i].classList.add('dotHeadButtons'); }
-        }     
+            for (var i = 0; i < matchesItems.length; i++) {
+                matchesItems[i].classList.remove('dotHeadButtonsActive');
+                matchesItems[i].classList.add('dotHeadButtons');
+            }
+        }
 
         // add activ class to dot ans button object
-        if (document.querySelector("#"+panelName+"Dot")!=null) {
-            document.querySelector("#"+panelName+"Dot").classList.add('dotHeadActive');
-            document.querySelector("#"+panelName+"Button").classList.add('dotHeadButtonsActive');
-        }   
+        if (document.querySelector("#" + panelName + "Dot") != null) {
+            document.querySelector("#" + panelName + "Dot").classList.add('dotHeadActive');
+            document.querySelector("#" + panelName + "Button").classList.add('dotHeadButtonsActive');
+        }
 
     }
 
     $scope.showPanel = function(panelName) {
         return $scope.activePanel == panelName
-    }        
+    }
 
     this.updateState($scope.service)
 
@@ -75,28 +77,13 @@ angular.module('mrlapp.service.InMoov2HeadGui', []).controller('InMoov2HeadGuiCt
             _self.updateState(data)
             $scope.$apply()
             break
-        case 'onServiceTypeNamesFromInterface':
-            $scope.speechTypes = data.serviceTypes;
-            $scope.$apply()
-            break
-        case 'onText':
-            $scope.onText = data;
-            $scope.$apply()
-            break
-            
+
         default:
             console.error("ERROR - unhandled method " + $scope.name + " " + inMsg.method)
             break
         }
     }
 
-    // FIXME FIXME FIXME - single simple subscribeTo(name, method) !!!
-    mrl.subscribe(mrl.getRuntime().name, 'getServiceTypeNamesFromInterface');
-    mrl.subscribeToServiceMethod(_self.onMsg, mrl.getRuntime().name, 'getServiceTypeNamesFromInterface');
-    msg.subscribe(this)
-
-    msg.subscribe('publishText')
     msg.subscribe(this)
 }
 ])
-
