@@ -48,6 +48,10 @@ def sad():
   upperEyelidsClose()
   cheeksD()
 
+def sorry():
+  browsU()
+  cheeksD()
+
 def smile():
   cheeksU()
   lowerEyelidsU()
