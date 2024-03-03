@@ -446,7 +446,6 @@
                                 <img src="settings.png" width="30" />
                             </a>
                         </span>
-                        <toggle width="30" height="28" ng-show="peer.isPeerStarted(service, 'head')"  ng-model="service.newHeadStarted" title="To start the extra head servos" ng-change="!service.newHeadStarted?execScript('system/startScripts/i01_newHead_stop.py'):execScript('system/startScripts/i01_newHead_start.py')" width="120" height="30" on="" off=""/>
                     </td>
                 </tr>
                 <tr ng-show="peer.isPeerStarted(service, 'head')">

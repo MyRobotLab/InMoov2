@@ -1,11 +1,11 @@
 <link type="text/css" rel="stylesheet" media="all" ng-href="{{state.styleSheet}}" />
 <div class="preventHeadDragSelect">
   <div ng-show="state.version == 'V1'">
+    <!-- v1 table begin -->
     <table class="table table-striped">
       <tr>
-        <td id="containerHead2-cell">
+        <td>
           <div id="containerHead2">
-            <!-- Right -->
             <div id="headIndicator" ng-click="setPanel('head')" class="rectangleHeadIndicatorActive">Head</div>
 
             <div id="eyelidRightButton" class="dotHeadButtons rightHeadSide" ng-click="setPanel('eyelidRight')">eyelidRight</div>
@@ -21,7 +21,6 @@
             <div id="jawDot" class="dotHeadEnabled"></div>
             <div id="jawLine" class="rightHeadLine"></div>
 
-            <!-- Left -->
             <div id="eyelidLeftButton" class="dotHeadButtons leftHeadSide" ng-click="setPanel('eyelidLeft')">eyelidLeft</div>
             <div id="eyelidLeftDot" class="dotHeadEnabled"></div>
             <div id="eyelidLeftLine" class="leftHeadLine preventHandDragSelect"></div>
@@ -49,8 +48,8 @@
             <div id="leftBackHeadArrow" class="leftBackHeadArrow"></div>
 
             <a id="leftDnaHeadButton" class="dotHeadButtons leftHeadSide" href="http://inmoov.fr/head-3/" target="_blank"><img src="../img/InMoov2/dna_Activ.png" /></a>
-          </div>
-        </td>
+          </div><!--end containerHead2 -->
+        </td><!--end containerHead2-cell -->
         <td>
           <!-- panels begin -->
           <!------------------------ headGui begin ------------------------------>
@@ -407,15 +406,16 @@
           <!-- panels end -->
         </td>
       </tr>
-    </table>
+    </table> <!-- v1 table end-->
   </div>
   <div ng-show="state.version == 'V2'">
+    <!-- v2 table begin -->
     <table class="table table-striped">
       <tr>
         <td colspan="2">&nbsp;{{onText}}</td>
       </tr>
       <tr>
-        <td id="containerHead2-cell">
+        <td>
           <div id="containerHead2">
             <!-- Right -->
             <div id="headIndicator" ng-click="setPanel('head')" class="rectangleHeadIndicatorActive">Head</div>
@@ -1246,8 +1246,7 @@
         </td>
       </tr>
     </table>
-    <!--msg.export('some-filename.py','webgui,python,servo01')-->
+    <!-- v2 table end -->
   </div>
-
   <button class="btn" ng-click="toggleVersion()">{{state.version}}</button>
 </div>
