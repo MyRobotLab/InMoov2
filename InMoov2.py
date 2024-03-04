@@ -5,16 +5,6 @@
 # isolate to callbacks
 # from py4j.java_gateway import JavaObject
 
-# unsuccessful attempt to modularize
-# class InMoov2(JavaObject):
-#     global runtime
-
-#     def __init__(self, name):
-#         # super().__init__(runtime.start(name, "InMoov2"))
-#         super().__init__("blah", handler.gateway)
-#         self.name = name
-#         self.robot = runtime.start(name, "InMoov2")
-
 # RELOAD SCRIPT
 # python.execFile('src/main/resources/resource/InMoov2/InMoov2.py')
 # with open('src/main/resources/resource/InMoov2/InMoov2.py', 'r') as file:
@@ -26,7 +16,7 @@
 # SHOULD PROBABLY BE MAINTAINED HERE
 
 import json
-
+import time
 
 def onPythonMessage(msg):
     """Initial processing and routing for all messages.
@@ -75,8 +65,8 @@ def onPythonMessage(msg):
         if method_name in globals() and callable(globals()[method_name]):
             cmd = "result = {}(*params_array)".format(method_name)
             # filter out chatty heartbeat
-            if method_name != "onHeartbeat":
-                print("onPythonMessage cmd {}".format(cmd))
+            # if method_name != "onHeartbeat" and method_name != "onPeak":
+            #     print("onPythonMessage cmd {}".format(cmd))
 
             # Execute the code with the globals parameter
             exec_globals = globals()
@@ -97,42 +87,36 @@ def onPythonMessage(msg):
 def onStartSpeaking(name, text):
     global runtime
 
-    print("onStartSpeaking", text)
+    # print("onStartSpeaking", text)
 
     # FIXME FIXME FIXME name delivered as a parameter or
     # make class that is created by the runtime with name
     robot = runtime.getService(name)
 
-    if robot:
-        # i01_neoPixel = i01.getPeer("neoPixel")
-        # if i01_neoPixel and i01.getConfig().neoPixelFlashWhenSpeaking:
-        # i01_neoPixel.setAnimation("Ironman", 255, 255, 255, 20)
+    # i01_neoPixel = i01.getPeer("neoPixel")
+    # if i01_neoPixel and i01.getConfig().neoPixelFlashWhenSpeaking:
+    # i01_neoPixel.setAnimation("Ironman", 255, 255, 255, 20)
 
-        # Great idea, but has hardcoded translations - this should be done in the language service but the
-        # raw gesture still be processed
-        # if 'oui ' in text or 'yes ' in text or ' oui' in text or 'ja ' in text or text=="yes" or text=="kyllä":Yes()
-        # if 'non ' in text or 'no ' in text or 'nicht ' in text or 'neen ' in text or text=="no" or text=="ei":No()
+    # Great idea, but has hardcoded translations - this should be done in the language service but the
+    # raw gesture still be processed
+    # if 'oui ' in text or 'yes ' in text or ' oui' in text or 'ja ' in text or text=="yes" or text=="kyllä":Yes()
+    # if 'non ' in text or 'no ' in text or 'nicht ' in text or 'neen ' in text or text=="no" or text=="ei":No()
 
-        # force random move while speaking, to avoid conflict with random life gesture
-        if robot.getConfig().robotCanMoveHeadWhileSpeaking:
-            random = robot.getPeer("random")
-            if random and robot.getState() != "tracking":
-                random.disableAll()
-                random.enable("i01.setHeadSpeed")
-                random.enable("i01.moveHead")
-                random.enable()
+    # force random move while speaking, to avoid conflict with random life gesture
+    if robot.getConfig().robotCanMoveHeadWhileSpeaking:
+        robot.enableRandomHead()
 
 
-# FIXME - global method not name specific
 def onEndSpeaking(name, text):
-    global runtime
-    print("onEndSpeaking", text)
+    # print("onEndSpeaking", text)
     robot = runtime.getService(name)
-    random = robot.getPeer("random")
-    if random and robot.getState() != "tracking":
-        # random.disable("i01.setHeadSpeed")
-        # random.disable("i01.moveHead")
-        random.disable()
+    robot.disableRandom()
+
+    # random = robot.getPeer("random")
+    # if random and robot.getState() != "tracking":
+    #     # random.disable("i01.setHeadSpeed")
+    #     # random.disable("i01.moveHead")
+    #     random.disable()
 
     # if i01:
     #     if i01.getConfig().robotCanMoveHeadWhileSpeaking:
@@ -163,6 +147,12 @@ def onEndSpeaking(name, text):
 def onPirOn(name):
     print('onPirOn("{}")'.format(name))
     robot = runtime.getService(name)
+    robot.setPredicate(name + ".pir", True)
+
+    # sleeping
+    if "sleep" == robot.getState():
+        robot.fire("wake")
+
     # FIXME - chatBot.getResponse("SYSTEM_EVENT onPirOn")
     robot.speak("I feel your presence")
 
@@ -178,6 +168,7 @@ def onPirOn(name):
 def onPirOff(name):
     print('onPirOff("{}")'.format(name))
     robot = runtime.getService(name)
+    robot.setPredicate(name + ".pir", False)
     # FIXME - chatBot.getResponse("SYSTEM_EVENT onPirOff")
     robot.speak("I'm so alone")
     neoPixel = robot.getPeer("neoPixel")
@@ -189,14 +180,6 @@ def onPirOff(name):
         neoPixel.writeMatrix()
 
 
-def onIdle(name):
-    print("onIdle", name)
-    robot = runtime.getService(name)
-    robot.fire("idle")
-    mouth = robot.getPeer("mouth")
-    if mouth:
-        mouth.speak("I am idle")
-    print("onIdle state change from", name)
 
 
 # Sensor events end ==========================================
@@ -245,28 +228,18 @@ def onStateChange(name, state_event):
 
     # leaving state changes
     fsm = robot.getPeer("fsm")
-    random = robot.getPeer("random")
     mouth = robot.getPeer("mouth")
     chatBot = robot.getPeer("chatBot")
 
     if fsm:
         leavingState = fsm.getPreviousState()
 
-    if random and leavingState == "random":
-        random.disable()
+    # A way to hook transitions from one state to another
+    if leavingState == "random":
+        robot.disableRandom()
 
     if chatBot:
         chatBot.setPredicate("state", state)
-
-    # if chatBot and leavingState == "first_init":
-    #     # move the botname from human predicates to new user predicates
-    #     # chatBot.setPredicate("botname", chatBot.getPredicate("human","botname")
-    #     # this sets the first user to be the one identified at the end of first_init
-    #     chatBot.setConfigValue("username", chatBot.getUsername())
-    #     # Not sure if this should only be maintained in predicates
-    #     # but config.username is the first session
-    #     # it is "modifying" config hower, which might be difficult to support
-    #     chatBot.save()
 
     # FIXME - chatBot.getResponse("SYSTEM_EVENT on_start")
     if mouth:
@@ -303,17 +276,34 @@ def on_wake(name):
     What should I do based on the above information
 
     """
-    print("on_wake", name)
+    # check time good morning, evening, etc
+    # use topic or not ?
+    # ON_WAKE_GREETING
+    # TODO - most common function getResponse getPredicate setPredicate
+
+    print("wake", name)
+
     robot = runtime.getService(name)
-
-    # determine the last person who was using the robot
-
-
-
-    lastUsername = robot.getPredicate("human", "lastUsername")
-
+    robot.setHeadSpeed(45, 45, 45)
+    robot.moveHead(90, 90, 90)
     chatbot = robot.getPeer("chatBot")
     fsm = robot.getPeer("fsm")
+    chatbot.getResponse("STATE_WAKE_BEGIN")
+
+    # sets predicates with system data
+    robot.systemCheck()
+    chatbot.getResponse("SYSTEM_REPORT")
+
+
+    # check if lastUsername is set - ie single default session
+    # check if setup has been done or dismissed
+    # determine the last person who was using the robot
+
+    # state_on_setup
+    # lastUsername = robot.getPredicate("human", "state_on_setup_name")
+    # print("lastUsername", lastUsername)
+    lastUsername = robot.getPredicate("human", "lastUsername")
+    print("lastUsername", lastUsername)
 
     # report status, errors, battery, etc
     # e.g. I'm afraid I have errors, would you like me to show you ?
@@ -322,19 +312,19 @@ def on_wake(name):
     chatbot.startSession(lastUsername)
 
     # get text response
-    chatbot.getResponse("ON_WAKE_READY")
+    chatbot.getResponse("STATE_WAKE_END")
 
-    first_init = chatbot.getPredicate("human", "first_init")
+    setup = chatbot.getPredicate("human", "setup")
 
-    if first_init == "human" or first_init == "started":
-        # try to identify user go through FIRST_INIT
-        fsm.fire("first_init")
+    if setup == "human" or setup == "started":
+        # try to identify user go through SETUP
+        fsm.fire("setup")
     else:
         # if user is known - go through WAKE_UP
-        fsm.fire("wake")
+        fsm.fire("idle")
 
 
-def on_first_init(name):
+def on_setup(name):
     """Purpose of this state is to identify the user
     and first initial configuration of the robot.
 
@@ -348,10 +338,15 @@ def on_first_init(name):
     Args:
         name (string): name of InMoov2 robot
     """
-    print("on_first_init", name)
+    print("on_setup", name)
     robot = runtime.getService(name)
     chatbot = robot.getPeer("chatBot")
-    chatbot.getResponse("FIRST_INIT")
+    # chatbot.getResponse("FIRST_INIT")
+    chatbot.getResponse("STATE_SETUP_BEGIN")
+
+    # if resuming a pause 
+    # chatbot.getResponse("STATE_SETUP_RESUME")
+    # YES, NO, LATER  (YES & NO are finalizing)
 
     # do anything else desired
     # generate picture data of the user
@@ -363,24 +358,36 @@ def on_idle(name):
     print("on_idle", name)
     robot = runtime.getService(name)
     mouth = robot.getPeer("mouth")
-    mouth.speak("I am idle")
+    if mouth:
+        mouth.speak("I am idle")
     print("on_idle state change from", name)
+
+
+def on_telepresence(name):
+    print("on_telepresence", name)    
 
 
 def on_random(name):
     print("on_random", name)
     robot = runtime.getService(name)
-    mouth = robot.getPeer("mouth")
-    mouth.speak("I am doing random stuff")
-    print("on_random state change from", name)
+    robot.getRespone("RANDOM")
+    random = robot.getPeer("random")
+    if random:
+        random.enable()
 
 
 def on_sleep(name):
     print("on_sleep", name)
     robot = runtime.getService(name)
-    mouth = robot.getPeer("mouth")
-    mouth.speak("I am going to sleep")
-    print("on_sleep state change from", name)
+    robot.getResponse("STATE_SLEEP")
+    robot.disableRandom()
+    # center and tilt head down
+    robot.setHeadSpeed(5, 5, 5)
+    robot.moveHead(10, 90, 90)
+
+
+def on_power_down(name):
+    print("on_power_down", name)
 
 
 # State change events end ========================================
@@ -478,10 +485,22 @@ def onHeartbeat(name, heartbeat):
     # print("onHeartbeat {} {}".format(name, heartbeat))
 
     robot = runtime.getService(name)
+    state = robot.getState()
     neoPixel = robot.getPeer("neoPixel")
-    errors = heartbeat.get("errors")
+    # errors = heartbeat.get("errors")
     count = heartbeat.get("count")
 
+    if robot.getState() == "idle":
+        current_time = int(time.time() * 1000)
+        time_in_idle = current_time - int(robot.getPredicate("idle.start"))
+        # FIXME - this should be a configurable value 15 minutes
+        # print("time_in_idle", time_in_idle)
+        if time_in_idle > 900000:
+            robot.fire("sleep")
+
+    #print("onHeartbeat", name, state, count)
+
+    # FIXME - this needs to be removed 
     if neoPixel:
         # This is Grog's neopixel matrix - it needs to be removed
         if count % 2 == 0:
@@ -497,25 +516,35 @@ def onHeartbeat(name, heartbeat):
             neoPixel.setPixel(138, 240, 100, 150)
             neoPixel.setPixel(139, 240, 23, 170)
 
-        if len(errors):
-            for i in range(0, len(errors)):
-                neoPixel.setPixel(118 + i, 240, 0, 0)
+        # if len(errors):
+        #     for i in range(0, len(errors)):
+        #         neoPixel.setPixel(118 + i, 240, 0, 0)
 
-        hash_code = hash(heartbeat.get("state"))
+        hash_code = hash(state)
         hex_hash = hex(hash_code)
 
         # Extract the last 6 characters to ensure a 6-digit representation
         state_hash = hex_hash[-6:]
-        print(state_hash)
+        # print(state, state_hash)
         neoPixel.setPixel(134, state_hash)
         neoPixel.setPixel(135, state_hash)
         neoPixel.setPixel(136, state_hash)
         neoPixel.setPixel(137, state_hash)
 
-        # neoPixel.flash("success")
-        # if robot.getState() == "first_init":
-        #     robot.setRandomIdle()
         neoPixel.writeMatrix()
+
+
+def onPeak(name, volume):
+    # print("onPeak", name, volume)
+    robot = runtime.getService(name)
+
+    # FIXME - remove this custom
+    neoMouth = runtime.getService("neoMouth")
+    # neoMouth.flash("speaking")
+    # neoMouth.clear()
+    neoMouth.setBrightness(int(volume))
+    neoMouth.fill(0, 183, 93)
+    # neoMouth.clear()
 
 
 print("loaded InMoov2.py")

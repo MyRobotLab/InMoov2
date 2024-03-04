@@ -16,19 +16,19 @@ stateDiagram
     boot --> wake: wake
     boot --> boot: !ready
     wake --> idle: idle
-    wake --> first_init: first_init
-    first_init --> idle: idle
+    wake --> setup: setup
+    setup --> idle: setup_end
+    setup --> idle: setup_paused
     idle --> telepresence: telepresence_start
     telepresence --> idle: telepresence_stop
     idle --> power_down: power_down
     idle --> sleep: sleep
-    idle --> first_init: first_init
+    idle --> setup: setup
     idle --> random: random
     random --> idle: idle
     sleep --> wake: wake
     sleep --> power_down: power_down
-    power_down --> shutdown: shutdown
-    shutdown --> [*]
+    power_down --> [*]
 ```
 
 ### boot
@@ -58,9 +58,9 @@ where it is and switch their attention to the person of focus.
 * Take physical inventory, e.g. how am i feeling, report errors if they exist
 
 
-### first_init
+### setup
 First init is the first time InMoov and the chatBot is started and
-the predicate first_init is set to true.
+the predicate setup is set to true.
 
 
 ## Web UI Style Guide
