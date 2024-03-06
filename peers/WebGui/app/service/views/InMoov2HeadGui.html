@@ -76,7 +76,7 @@
                 <tr>
                     <td>
                         <div class="tab-content" ng-if="mrl.getPanel(service.name + '.' + panelName)" service-body panel="mrl.getPanel(service.name + '.' + panelName)"></div>
-                        <button ng-show="!peer.isPeerStarted(service, panelName)" class="btn btn-default" ng-click="startPeer(panelName)">Start {{panelName}}</button>
+                        <button ng-if="!mrl.getPanel(service.name + '.' + panelName)" class="btn btn-default" ng-click="startPeer(panelName)">Start {{panelName}}</button>
                     </td>
                 </tr>
             </table>
@@ -209,7 +209,7 @@
                 <tr>
                     <td>
                         <div class="tab-content" ng-if="mrl.getPanel(service.name + '.' + panelName)" service-body panel="mrl.getPanel(service.name + '.' + panelName)"></div>
-                        <button ng-show="!peer.isPeerStarted(service, panelName)" class="btn btn-default" ng-click="startPeer(panelName)">Start {{panelName}}</button>
+                        <button ng-if="!mrl.getPanel(service.name + '.' + panelName)" class="btn btn-default" ng-click="startPeer(panelName)">Start {{panelName}}</button>
                     </td>
                 </tr>
             </table>
