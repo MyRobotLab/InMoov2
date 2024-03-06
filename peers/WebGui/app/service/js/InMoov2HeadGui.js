@@ -140,14 +140,14 @@ angular
                 onmouseout="this.src='../img/InMoov2/markerBlue_right.png';"
                 height="14"
                 ng-click="filter(null)"
-            />
-            <img
+            /><img
                 src="../img/InMoov2/markerBlue_left.png"
                 onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                 onmouseout="this.src='../img/InMoov2/markerBlue_left.png';"
                 height="18"
                 ng-click="filter(filterArg)"
             />
+            <img src="../InMoov2Head.png" />
         `,
     }
   })
