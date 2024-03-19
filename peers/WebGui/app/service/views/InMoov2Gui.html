@@ -1167,10 +1167,7 @@
                 uib-typeahead="gesture for gesture in service.gestures | filter:$viewValue | limitTo:100"
                 typeahead-min-length="0" />
             <button class="btn btn-default" ng-click="executeGesture(selectedGesture)">Execute</button>
-            <button class="btn btn-default" ng-click="loadGestures()">Load Gestures</button>
-
-            <button class="btn btn-default" ng-click="msg.send('execScript')"><i class="glyphicon glyphicon-refresh"></i></button>
-                        
+            <button class="btn btn-default" ng-click="loadGestures()">Reload Gestures</button>                        
         </td>
     </tr>
 </table>
