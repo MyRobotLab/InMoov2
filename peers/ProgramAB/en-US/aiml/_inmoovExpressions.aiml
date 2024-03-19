@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <!--  -->
   <!--  -->
@@ -242,99 +242,105 @@
 <!-- -->
   
   <category>
-    <pattern>MONTRE LES EXPRESSIONS DU VISAGE</pattern>
-    <template>Oui regarde.
-<random><li>Ici, je n'ai aucune expression.<srai>APPNEUTRAL</srai></li><li>J'ai l'air en colère.<srai>APPANGER</srai></li><li>je fais un clin d'œil.<srai>APPACCOMPLICE</srai></li><li>je suis dégoûté.<srai>APPDISGUST</srai></li><li>J'ai peur.<srai>APPFEAR</srai></li><li>Je suis content.<srai>APPHAPPY</srai></li><li>Je souris.<srai>APPSMILE</srai></li><li>Je suis triste.<srai>APPSAD</srai></li><li>Je suis suspicieux.<srai>APPSUSPICIOUS</srai></li><li>Je suis en train de penser.<srai>APPTHINKING</srai></li><li>Je ne suis pas amusé.<srai>APPUNAMUSED</srai></li></random></template>
+    <pattern>CHANGE FACE EXPRESSIONS</pattern>
+    <template>yes, look.
+<random><li>Here I have no expression.<srai>APPNEUTRAL</srai></li><li>I look angry.<srai>APPANGER</srai></li><li>I am winking.<srai>APPACCOMPLICE</srai></li><li>I am disgust.<srai>APPDISGUST</srai></li><li>I am scared.<srai>APPFEAR</srai></li><li>I am happy.<srai>APPHAPPY</srai></li><li>I smile.<srai>APPSMILE</srai></li><li>I am sad.<srai>APPSAD</srai></li><li>I am sorry.<srai>APPSORRY</srai></li><li>I am suspicious.<srai>APPSUSPICIOUS</srai></li><li>I am thinking.<srai>APPTHINKING</srai></li><li>I am unamused.<srai>APPUNAMUSED</srai></li></random></template>
   </category>
   <category>
-    <pattern>* EXPRESSION DU VISAGE</pattern>
+    <pattern># FACE EXPRESSION</pattern>
     <template>
-      <srai>MONTRE LES EXPRESSIONS DU VISAGE</srai>
+      <srai>CHANGE FACE EXPRESSIONS</srai>
     </template>
   </category>
   <category>
-    <pattern>UN AUTRE VISAGE</pattern>
+    <pattern>ANOTHER FACE</pattern>
     <template>
-      <srai>MONTRE LES EXPRESSIONS DU VISAGE</srai>
+      <srai>CHANGE FACE EXPRESSIONS</srai>
     </template>
   </category>
   <category>
-    <pattern>PEUT TU CHANGER D'EXPRESSION DU VISAGE</pattern>
+    <pattern>CAN YOU CHANGE OF FACE EXPRESSION</pattern>
     <template>
-      <srai>MONTRE LES EXPRESSIONS DU VISAGE</srai>
+      <srai>CHANGE FACE EXPRESSIONS</srai>
     </template>
   </category>
   <category>
-    <pattern>* EXPRESSIONS DE VISAGE</pattern>
+    <pattern>CAN YOU DO FACE EXPRESSIONS</pattern>
     <template>
-      <srai>MONTRE LES EXPRESSIONS DU VISAGE</srai>
+      <srai>CHANGE FACE EXPRESSIONS</srai>
     </template>
   </category>
 
 <!-- -->
 
   <category>
-    <pattern>NEUTRE</pattern>
+    <pattern>NEUTRAL</pattern>
     <template>
       <srai>APPNEUTRAL</srai>
     </template>
   </category>
   <category>
-    <pattern>EN COLÈRE</pattern>
+    <pattern>ANGRY</pattern>
     <template>
       <srai>APPANGER</srai>
     </template>
   </category>
   <category>
-    <pattern>CLIN D OEIL</pattern>
+    <pattern>WINK</pattern>
     <template>
       <srai>APPACCOMPLICE</srai>
     </template>
   </category>
   <category>
-    <pattern>DÉGOÛTER</pattern>
+    <pattern>DISGUST</pattern>
     <template>
       <srai>APPDISGUST</srai>
     </template>
   </category>
   <category>
-    <pattern>PEUR</pattern>
+    <pattern>FEAR</pattern>
     <template>
       <srai>APPFEAR</srai>
     </template>
   </category>
   <category>
-    <pattern>HEUREUX</pattern>
+    <pattern>HAPPY</pattern>
     <template>
       <srai>APPHAPPY</srai>
     </template>
   </category>
   <category>
-    <pattern>SOURIRE</pattern>
+    <pattern>SMILE</pattern>
     <template>
       <srai>APPSMILE</srai>
     </template>
   </category>
   <category>
-    <pattern>TRISTE</pattern>
+    <pattern>SAD</pattern>
     <template>
       <srai>APPSAD</srai>
     </template>
   </category>
   <category>
-    <pattern>SUSPECT</pattern>
+    <pattern>SORRY</pattern>
+    <template>
+      <srai>APPSORRY</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SUSPICIOUS</pattern>
     <template>
       <srai>APPSUSPICIOUS</srai>
     </template>
   </category>
   <category>
-    <pattern>PENSER</pattern>
+    <pattern>THINKING</pattern>
     <template>
       <srai>APPTHINKING</srai>
     </template>
   </category>
   <category>
-    <pattern>PAS AMUSÉ</pattern>
+    <pattern>UNAMUSED</pattern>
     <template>
       <srai>APPUNAMUSED</srai>
     </template>
