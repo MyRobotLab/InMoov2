@@ -55,10 +55,10 @@
 ###BOTH EYES###
 def eyesC():
   if runtime.isStarted('i01.head.eyeLeftUD') and runtime.isStarted('i01.head.eyeLeftLR') and runtime.isStarted('i01.head.eyeRightUD') and runtime.isStarted('i01.head.eyeRightLR'):
-    i01_head_eyeLeftUD.moveTo(90)
-    i01_head_eyeLeftLR.moveTo(90)
-    i01_head_eyeRightUD.moveTo(90)
-    i01_head_eyeRightLR.moveTo(90)
+    i01_head_eyeLeftUD.rest()
+    i01_head_eyeLeftLR.rest()
+    i01_head_eyeRightUD.rest()
+    i01_head_eyeRightLR.rest()
     sleep(0.01)
 
 def eyesU():
