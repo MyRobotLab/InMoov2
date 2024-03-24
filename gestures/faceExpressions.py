@@ -93,7 +93,32 @@ def unamused():
 def wake():
   blink() 
 
-#def contempt():
-#def anxiety():
-#def disapointment():
-#def helplessness():
+####Extra
+def contempt():
+  happy()
+def anxiety():
+  anger()
+def disapointment():
+  sad()
+def helplessness():
+  sorry()
+def chuckle():
+  smile()
+def grin():
+  smile()
+def grins():
+  smile()  
+def excited_face():
+  surprised()
+def nods():
+  yes()
+def excited():
+  surprised()
+def excitedly():
+  happy()
+def smiles():
+  smile()
+def smiling():
+  smile()  
+def smiling_face():
+  smile()
