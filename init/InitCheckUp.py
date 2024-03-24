@@ -46,6 +46,7 @@ execfile("resource/InMoov2/services/E_OpenNi.py")
 execfile("resource/InMoov2/services/H_OpenWeatherMap.py")
 # J_SensorFinger.py ## NEED FIXING FOR NIXIE
 # execfile('resource/InMoov2/services/K_FiniteStateMachine.py')
+execfile("resource/InMoov2/services/L_Gpt3.py")
 
 ################################
 # INIT.3- inmoov loading
