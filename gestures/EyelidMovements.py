@@ -19,6 +19,7 @@
 #eyelidsFullSpeed()
 #upperEyelidsOpen()         /       Open Upper Eyelids
 #upperEyelidsClose()        /       Close Upper Eyelids
+#upperEyelidsHalfShut()     /       Half Close Upper Eyelids
 #lowerEyelidsOpen()         /       Open Lower Eyelids
 #lowerEyelidsClose()        /       Close Lower Eyelids
 #lowerEyelidsU()            /       Half Close Lower Eyelids
@@ -53,18 +54,18 @@
 def blink():
   if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower') and runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
       i01_head_eyelidLeftUpper.moveTo(180)
-      i01_head_eyelidLeftLower.moveTo(180)
       i01_head_eyelidRightUpper.moveTo(180)
+      i01_head_eyelidLeftLower.moveTo(180)
       i01_head_eyelidRightLower.moveTo(180)
       sleep(0.1)
       i01_head_eyelidLeftUpper.moveTo(0)
-      i01_head_eyelidLeftLower.moveTo(0)
       i01_head_eyelidRightUpper.moveTo(0)
+      i01_head_eyelidLeftLower.moveTo(0)
       i01_head_eyelidRightLower.moveTo(0)
       sleep(0.1)
       i01_head_eyelidLeftUpper.rest()
-      i01_head_eyelidLeftLower.rest()
       i01_head_eyelidRightUpper.rest()
+      i01_head_eyelidLeftLower.rest()
       i01_head_eyelidRightLower.rest()
       sleep(0.1)
   
@@ -92,7 +93,7 @@ def eyelidsNeutral():
     i01_head_eyelidLeftLower.rest()
     i01_head_eyelidRightUpper.rest()
     i01_head_eyelidRightLower.rest()
-    sleep(0.1)
+    
   
 def eyelidsClose():
   if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower') and runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
@@ -100,7 +101,7 @@ def eyelidsClose():
     i01_head_eyelidLeftUpper.moveTo(0)
     i01_head_eyelidRightLower.moveTo(0)
     i01_head_eyelidLeftLower.moveTo(0)
-    sleep(0.1)
+    
   
 def eyelidsOpen():
   if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower') and runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
@@ -108,15 +109,15 @@ def eyelidsOpen():
     i01_head_eyelidLeftUpper.moveTo(180)
     i01_head_eyelidRightLower.moveTo(180)
     i01_head_eyelidLeftLower.moveTo(180)
-    sleep(0.1)
+    
 
 def eyelidsHalfShut():
   if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower') and runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
-    i01_head_eyelidLeftUpper.moveTo(80)
-    i01_head_eyelidLeftLower.moveTo(80)
-    i01_head_eyelidRightUpper.moveTo(80)
-    i01_head_eyelidRightLower.moveTo(80)
-    sleep(0.1)
+    i01_head_eyelidLeftUpper.moveTo(70)
+    i01_head_eyelidLeftLower.moveTo(70)
+    i01_head_eyelidRightUpper.moveTo(70)
+    i01_head_eyelidRightLower.moveTo(70)
+    
 
 def eyelidsHalfSpeed():
   if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower') and runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
@@ -132,35 +133,40 @@ def eyelidsFullSpeed():
     i01_head_eyelidRightUpper.setSpeed(180)
     i01_head_eyelidRightLower.setSpeed(180)
 
+def upperEyelidsHalfShut():
+  if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidRightUpper'):
+    i01_head_eyelidLeftUpper.moveTo(70)
+    i01_head_eyelidRightUpper.moveTo(70)   
+
 def upperEyelidsOpen():
   if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidRightUpper'):
     i01_head_eyelidLeftUpper.moveTo(180)
     i01_head_eyelidRightUpper.moveTo(180)
-    sleep(0.1)
+    
   
 def upperEyelidsClose():
   if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidRightUpper'):
     i01_head_eyelidLeftUpper.moveTo(0)
     i01_head_eyelidRightUpper.moveTo(0)
-    sleep(0.1)
+    
   
 def lowerEyelidsOpen():
   if runtime.isStarted('i01.head.eyelidLeftLower') and runtime.isStarted('i01.head.eyelidRightLower'):
     i01_head_eyelidLeftLower.moveTo(180)
     i01_head_eyelidRightLower.moveTo(180)
-    sleep(0.1)
+    
   
 def lowerEyelidsClose():
   if runtime.isStarted('i01.head.eyelidLeftLower') and runtime.isStarted('i01.head.eyelidRightLower'):
     i01_head_eyelidLeftLower.moveTo(0)
     i01_head_eyelidRightLower.moveTo(0)
-    sleep(0.1)
+    
 
 def lowerEyelidsU():
   if runtime.isStarted('i01.head.eyelidLeftLower') and runtime.isStarted('i01.head.eyelidRightLower'):
     i01_head_eyelidLeftLower.moveTo(110)
     i01_head_eyelidRightLower.moveTo(110)
-    sleep(0.1)
+    
   
   
 ###LEFT EYELIDS ONLY###   
@@ -192,44 +198,44 @@ def eyelidsLeftOpen():
   if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower'):
     i01_head_eyelidLeftUpper.moveTo(180)
     i01_head_eyelidLeftLower.moveTo(180)
-    sleep(0.1)
+    
 
 def eyelidsLeftClose():
   if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower'):
     i01_head_eyelidLeftUpper.moveTo(0)
     i01_head_eyelidLeftLower.moveTo(0)
-    sleep(0.1)
+    
 
 def eyelidsLeftHalfShut():
   if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower'):
-    i01_head_eyelidLeftUpper.moveTo(80)
-    i01_head_eyelidLeftLower.moveTo(80)
-    sleep(0.1)
+    i01_head_eyelidLeftUpper.moveTo(70)
+    i01_head_eyelidLeftLower.moveTo(70)
+    
   
 def upperEyelidLeftOpen():
   if runtime.isStarted('i01.head.eyelidLeftUpper'):
     i01_head_eyelidLeftUpper.moveTo(180)
-    sleep(0.1)
+    
   
 def upperEyelidLeftClose():
   if runtime.isStarted('i01.head.eyelidLeftUpper'):
     i01_head_eyelidLeftUpper.moveTo(0)
-    sleep(0.1)
+    
   
 def lowerEyelidLeftOpen():
   if runtime.isStarted('i01.head.eyelidLeftLower'):
     i01_head_eyelidLeftLower.moveTo(180)
-    sleep(0.1)
+    
   
 def lowerEyelidLeftClose():
   if runtime.isStarted('i01.head.eyelidLeftLower'):
     i01_head_eyelidLeftLower.moveTo(0)
-    sleep(0.1)
+    
 
 def lowerEyelidLeftU():
   if runtime.isStarted('i01.head.eyelidLeftLower'):
     i01_head_eyelidLeftLower.moveTo(130)
-    sleep(0.1)
+    
 
 ###RIGHT EYELIDS ONLY###
 def eyelidRightBlink():
@@ -260,41 +266,41 @@ def eyelidsRightOpen():
   if runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
     i01_head_eyelidRightUpper.moveTo(180)
     i01_head_eyelidRightLower.moveTo(180)
-    sleep(0.1)
+    
 
 def eyelidsRightClose():
   if runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
     i01_head_eyelidRightUpper.moveTo(0)
     i01_head_eyelidRightLower.moveTo(0)
-    sleep(0.1)
+    
 
 def eyelidsRightHalfShut():
   if runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
-    i01_head_eyelidRightUpper.moveTo(80)
-    i01_head_eyelidRightLower.moveTo(80)
-    sleep(0.1)  
+    i01_head_eyelidRightUpper.moveTo(70)
+    i01_head_eyelidRightLower.moveTo(70)
+      
   
 def upperEyelidRightOpen():
   if runtime.isStarted('i01.head.eyelidRightUpper'):
     i01_head_eyelidRightUpper.moveTo(180)
-    sleep(0.1)
+    
   
 def upperEyelidRightClose():
   if runtime.isStarted('i01.head.eyelidRightUpper'):
     i01_head_eyelidRightUpper.moveTo(0)
-    sleep(0.1)
+    
   
 def lowerEyelidRightOpen():
   if runtime.isStarted('i01.head.eyelidRightLower'):
     i01_head_eyelidRightLower.moveTo(180)
-    sleep(0.1)
+    
   
 def lowerEyelidRightClose():
   if runtime.isStarted('i01.head.eyelidRightLower'):
     i01_head_eyelidRightLower.moveTo(0)
-    sleep(0.1)
+    
 
 def lowerEyelidRightU():
   if runtime.isStarted('i01.head.eyelidRightLower'):
     i01_head_eyelidRightLower.moveTo(130)
-    sleep(0.1)  
+      
