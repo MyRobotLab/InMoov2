@@ -113,7 +113,7 @@ def onStartSpeaking(text):
     for word in words:
         if word.startswith('*') and word.endswith('*'):
             # Save the extracted word without asterisks
-            extracted_word = word.strip('*')+'()'
+            extracted_word = word.strip('*')
         else:
             filtered_words.append(word)
     
@@ -128,4 +128,5 @@ def onStartSpeaking(text):
         result = function_to_call()
         python.exec(result)
     else:
-        print("No function found matching the extracted word.")            
+        result = "No function found matching the extracted word."
+    result  
