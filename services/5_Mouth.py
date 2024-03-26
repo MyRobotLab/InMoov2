@@ -52,7 +52,13 @@ def onEndSpeaking(text):
         if runtime.isStarted('i01.head'):
           i01_random.addRandom(200, 1000, "i01", "setHeadSpeed", 8.0, 20.0, 8.0, 20.0, 8.0, 20.0)
           i01_random.addRandom(200, 1000, "i01", "moveHead", 70.0, 110.0, 65.0, 115.0, 70.0, 110.0)
-
+    if i01.getConfig().robotCanMoveHeadWhileSpeaking==0:
+      if runtime.isStarted('i01.random'):
+        if runtime.isStarted('i01.head'):
+          i01_random.disable('i01.setHeadSpeed')
+          i01_random.disable('i01.moveHead')
+          i01_random.disable('randomBlink')
+          i01_random.disable('randomFace')
     if i01.getConfig().neoPixelFlashWhenSpeaking==1 and runtime.isStarted('i01.neoPixel'):i01_neoPixel.clear()
   
 def onStartSpeaking(text):
