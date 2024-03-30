@@ -110,29 +110,34 @@ def onStartSpeaking(text):
               i01_random.enable('randomBlink')
               i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "upperLipU()", "upperLipD()", "cheeksU()", "cheeksD()", "forheadsU()", "forheadsD()")
               i01_random.enable('randomFace')
-            
-    # Splitting the text and filtering
-    words = text.split()
-    filtered_words = []
-    extracted_word = ""
-    
-    for word in words:
-        if word.startswith('*') and word.endswith('*'):
-            # Save the extracted word without asterisks
-            extracted_word = word.strip('*')
-        else:
-            filtered_words.append(word)
-    
-    # Joining the filtered words to form the filtered text
-    filtered_text = ' '.join(filtered_words)
-    #print(filtered_text)
-    #print(extracted_word)
-    
-    # Dynamically calling the function based on the extracted_word
-    function_to_call = globals().get(extracted_word)
-    if callable(function_to_call):
-        result = function_to_call()
-        python.exec(result)
-    else:
-        result = "No function found matching the extracted word."
-    result  
+
+
+def onFilterText(text):
+  # filter all you want here
+  # then publish to htmlfilter -> mouth
+  # Splitting the text and filtering
+  words = text.split()
+  filtered_words = []
+  extracted_word = ""
+  
+  for word in words:
+      if word.startswith('*') and word.endswith('*'):
+          # Save the extracted word without asterisks
+          extracted_word = word.strip('*')
+      else:
+          filtered_words.append(word)
+  
+  # Joining the filtered words to form the filtered text
+  filtered_text = ' '.join(filtered_words)
+  #print(filtered_text)
+  if runtime.isStarted('i01.mouth'):
+      i01_mouth.speak(filtered_text) 
+  #print(extracted_word)
+  
+  # Dynamically calling the function based on the extracted_word
+  function_to_call = globals().get(extracted_word)
+  if callable(function_to_call):
+      result = function_to_call()   
+  else:
+      result = "No function found matching the extracted word."
+      result
