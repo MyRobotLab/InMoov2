@@ -142,7 +142,7 @@ def grins():
 def excited_face():
   surprised()
 def nods():
-  yes()
+  Yes()
 def excited():
   surprised()
 def excitedly():
