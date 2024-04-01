@@ -12,28 +12,11 @@ def initMouth():
 # MRL SERVICE TWEAKS
 # ##############################################################################
 
-#analog pin listener use 
-# def publishMouthcontrolPinLeft(pins):
-#   global AudioInputValues
-#   global AudioInputRawValue
-
-#   for pin in range(0, len(pins)):
-#     #mouth control listener
-#     if runtime.isStarted('i01.head'):
-#       if AudioSignalProcessingCalibration:AudioInputValues.append(pins[pin].value)
-        
-#       if AudioSignalProcessing:
-#         if pins[pin].value>minAudioValue:
-#           i01_head_jaw.setSpeed(random.uniform(200,500))
-#           if not i01_head_jaw.isMoving():i01_head_jaw.moveTo(int(pins[pin].value))
- 
-#stop autolisten
 def onEndSpeaking(text):
   if runtime.isStarted('i01'):
     if i01.getConfig().robotCanMoveHeadWhileSpeaking==1:
       if runtime.isStarted('i01.random'):
         i01_random.disable('randomFace')
-        i01_random.disable()
         if runtime.isStarted('i01.leftArm'):
           i01_random.enable('i01.setLeftArmSpeed')
           i01_random.enable('i01.moveLeftArm')
@@ -102,10 +85,6 @@ def onStartSpeaking(text):
                   i01_random.enable('randomFace')
 
           else:
-              i01_random.addRandom(200, 1000, "i01", "setHeadSpeed", 8.0, 20.0, 8.0, 20.0, 8.0, 20.0)
-              i01_random.addRandom(100, 500, "i01", "moveHead", 70.0, 110.0, 65.0, 115.0, 70.0, 110.0)
-              i01_random.enable('i01.setHeadSpeed')
-              i01_random.enable('i01.moveHead')
               i01_random.addRandom("randomBlink", 5000, 30000, "python", "exec", "blink()")
               i01_random.enable('randomBlink')
               i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "upperLipU()", "upperLipD()", "cheeksU()", "cheeksD()", "forheadsU()", "forheadsD()")
@@ -137,7 +116,11 @@ def onFilterText(text):
   # Dynamically calling the function based on the extracted_word
   function_to_call = globals().get(extracted_word)
   if callable(function_to_call):
-      result = function_to_call()   
+      result = function_to_call()
+      result
   else:
       result = "No function found matching the extracted word."
       result
+    
+if runtime.isStarted('i01.mouth'):
+  initMouth()
