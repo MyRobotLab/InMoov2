@@ -40,7 +40,7 @@ def sleepModeWakeUp():
       i01_pir.disable()
   #if RobotIsStarted==1:
   #if runtime.isStarted('i01.fsm'):
-    #if i01_fsm.getCurrent()=="awake":
+    #if i01_fsm.getState()=="awake":
     
   if runtime.isStarted('i01.imageDisplay'):
     i01_imageDisplay.closeAll()
@@ -81,6 +81,8 @@ def sleepModeWakeUp():
 
 
 def sleepModeSleep():
+  if runtime.isStarted('i01.random'):
+    i01_random.disable()
   if runtime.isStarted('i01.ear'):
     initEar()
     i01_ear.setAwake(False)
@@ -235,7 +237,7 @@ def humanDetected():
       sleepTimer.restartClock()
       #i01_ear.setWakeWordTimeout(i01_ear.getConfig().wakeWordIdleTimeoutSeconds)
     if runtime.isStarted('i01.fsm'):  
-      if not i01_fsm.getCurrent()=="isTracking" and WaitXsecondBeforeRelaunchTracking>=5:
+      if not i01_fsm.getState()=="isTracking" and WaitXsecondBeforeRelaunchTracking>=5:
         WaitXsecondBeforeRelaunchTracking=0
         if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Larson Scanner", 255, 0, 255, 25)
         if runtime.isStarted('i01.headTracking'):
@@ -249,7 +251,7 @@ def humanDetected():
 def sleepTimerRoutine(timedata):
   #if RobotIsSleeping==0:
   if runtime.isStarted('i01.fsm'):
-    if not i01_fsm.getCurrent()=="sleeping":
+    if not i01_fsm.getState()=="sleeping":
       if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Color Wipe", 17,  126, 57, 20)
       if runtime.isStarted("i01.pir"):
         i01_pir.disable()
