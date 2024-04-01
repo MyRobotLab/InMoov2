@@ -40,7 +40,7 @@ def sleepModeWakeUp():
       i01_pir.disable()
   #if RobotIsStarted==1:
   #if runtime.isStarted('i01.fsm'):
-    #if i01_fsm.getState()=="awake":
+    #if i01_fsm.getState()=="idle":
     
   if runtime.isStarted('i01.imageDisplay'):
     i01_imageDisplay.closeAll()
@@ -251,7 +251,7 @@ def humanDetected():
 def sleepTimerRoutine(timedata):
   #if RobotIsSleeping==0:
   if runtime.isStarted('i01.fsm'):
-    if not i01_fsm.getState()=="sleeping":
+    if not i01_fsm.getState()=="sleep":
       if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Color Wipe", 17,  126, 57, 20)
       if runtime.isStarted("i01.pir"):
         i01_pir.disable()
