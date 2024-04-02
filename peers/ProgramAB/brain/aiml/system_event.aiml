@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+<category>
+<pattern>SYSTEM_EVENT WAKE</pattern>
+<template><srai>WAKE UP</srai></template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT INIT</pattern>
+<template>Initialisation scripts</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
+<template>Configuration loaded
+<srai>BOOTUP</srai></template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED *</pattern>
+<template>Starting <lowercase><star/></lowercase>
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED *</pattern>
+<template>Stopping <lowercase><star/></lowercase>
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
+<template>loading gestures
+</template>
+</category>
+  
+<category>
+<pattern>SYSTEM_EVENT STARTED RIGHTARM</pattern>
+<template>Starting right arm
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED RIGHTARM</pattern>
+<template>Stopping right arm
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED LEFTARM</pattern>
+<template>Starting left arm
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED LEFTARM</pattern>
+<template>Stopping left arm
+</template>
+</category>  
+
+<category>
+<pattern>SYSTEM_EVENT STARTED HTMLFILTER</pattern>
+<template>Starting mouth filter
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED HTMLFILTER</pattern>
+<template>Stopping mouth filter
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED MOUTH AUDIOFILE</pattern>
+<template>Starting mouth audioFile
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED MOUTH AUDIOFILE</pattern>
+<template>Stopping mouth audioFile
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED IMAGEDISPLAY</pattern>
+<template>Starting image display service
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED IMAGEDISPLAY</pattern>
+<template>Stopping image display service
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED OPENCV</pattern>
+<template>Starting vision
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED OPENCV</pattern>
+<template>Stopping vision
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED PIR</pattern>
+<template>Starting motion sensor
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED PIR</pattern>
+<template>Stopping motion sensor
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED OAKD</pattern>
+<template>Starting vision sensor
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED OAKD</pattern>
+<template>Stopping vision sensor
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED CHATBOT</pattern>
+<template>Chatbot loaded, I may start other components, please wait.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT CONFIGSTARTED</pattern>
+<template>Config started.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT CONFIG STARTED *</pattern>
+<template>Config <star/> started.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT CONFIG LOADED *</pattern>
+<template>Configuration <star/> loaded.
+<srai>BOOTUP</srai></template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
+<template>Starting left hand sensor.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED RIGHT HAND SENSOR</pattern>
+<template>Starting right hand sensor.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED LEFT HAND SENSOR</pattern>
+<template>Stopping left hand sensor.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED RIGHT HAND SENSOR</pattern>
+<template>Stopping right hand sensor.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED LEFT</pattern>
+<template>Starting left controller.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED RIGHT</pattern>
+<template>Starting right controller.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED PLATFORM</pattern>
+<template>Starting plateform</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED PLATFORM</pattern>
+<template>Stopping plateform</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT SHUTDOWN</pattern>
+<template>Shutting down my robot lab, please wait 10 seconds.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT SHUTDOWNCOMPLETE</pattern>
+<template>Shutting down my computer, please wait for the process.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT GESTURE_ERROR</pattern>
+<template>I cannot load the gestures, there is a problem with one of them.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT LOAD SCRIPTS ERROR</pattern>
+<template>I cannot load the scripts, there is a problem with one of them.</template>
+</category>
+
+</aiml>

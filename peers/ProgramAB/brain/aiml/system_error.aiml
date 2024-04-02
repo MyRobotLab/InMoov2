@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  gael le 04/09/2023 -->
+  <!--  -->
+<category><pattern>ALERT</pattern>
+<template>
+      Alert,
+   <oob><mrl><service>python</service><method>exec</method><param>errors()</param></mrl></oob></template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_IMAGE_DISPLAY_1</pattern>
+<template>
+      imageDisplay not started.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENCV_1</pattern>
+<template>
+      Open CV is not started.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_1</pattern>
+<template>
+      open weathermap key error.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_2</pattern>
+<template>
+      open weathermap town is unrecognized.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_3</pattern>
+<template>
+       open weathermap units not defined.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_OPENWEATHERMAP_4</pattern>
+<template>
+       open weathermap not started or maybe not configured.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_PIR_1</pattern>
+<template>
+      P, I, R sensor is not started.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_LEFTHANDSENSOR_1</pattern>
+<template>
+      Could not start left hand sensor.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_RIGTHANDSENSOR_1</pattern>
+<template>
+      Could not start right hand sensor.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_LEFTHANDSENSOR_2</pattern>
+<template>
+      i01.left controller not found for left hand sensor.
+   </template>
+</category>
+
+<category><pattern>SYSTEM_ERROR_RIGHTHANDSENSOR_2</pattern>
+<template>
+      i01.right controller not found for right hand sensor.
+   </template>
+</category>
+</aiml>

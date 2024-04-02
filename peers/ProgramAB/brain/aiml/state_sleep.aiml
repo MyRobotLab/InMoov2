@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>STATE_SLEEP</pattern>
+        <template>
+            <random>
+                <li>Going to sleep</li>
+                <li>I am very tired</li>
+                <li>Time to sleep</li>
+                <li>Nap time</li>
+                <li>Goodnight</li>
+                <li>Bye bye</li>
+            </random>
+        </template>
+    </category>
+</aiml>
