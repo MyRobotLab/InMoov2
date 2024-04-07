@@ -17,6 +17,33 @@
 
 import json
 import time
+import threading
+from datetime import datetime
+import thread
+import time
+import random
+import urllib, urllib2
+from urllib import urlretrieve
+import io
+import itertools
+import textwrap
+import codecs
+import socket
+import os
+import shutil
+import hashlib
+import csv
+import glob
+import ConfigParser
+import inspect
+
+
+from java.lang import String
+from org.myrobotlab.net import BareBonesBrowserLaunch
+from org.myrobotlab.arduino.Msg import MRLCOMM_VERSION
+import org.myrobotlab.framework.Platform as Platform
+import org.myrobotlab.service.Runtime as Runtime
+
 
 def onPythonMessage(msg):
     """Initial processing and routing for all messages.
@@ -180,8 +207,6 @@ def onPirOff(name):
         neoPixel.writeMatrix()
 
 
-
-
 # Sensor events end ==========================================
 # Topic events begin ========================================
 # FIXME - since its a direct subscribe from i01.chatBot -to-> python
@@ -211,6 +236,7 @@ def onTopic(topic_event):
 
 # Topic events end ==========================================
 # State change events begin ========================================
+
 
 def onStateChange(name, state_event):
     """The main router for state changes
@@ -294,7 +320,6 @@ def on_wake(name):
     robot.systemCheck()
     chatbot.getResponse("SYSTEM_REPORT")
 
-
     # check if lastUsername is set - ie single default session
     # check if setup has been done or dismissed
     # determine the last person who was using the robot
@@ -344,7 +369,7 @@ def on_setup(name):
     # chatbot.getResponse("FIRST_INIT")
     chatbot.getResponse("STATE_SETUP_BEGIN")
 
-    # if resuming a pause 
+    # if resuming a pause
     # chatbot.getResponse("STATE_SETUP_RESUME")
     # YES, NO, LATER  (YES & NO are finalizing)
 
@@ -364,7 +389,7 @@ def on_idle(name):
 
 
 def on_telepresence(name):
-    print("on_telepresence", name)    
+    print("on_telepresence", name)
 
 
 def on_random(name):
@@ -498,9 +523,9 @@ def onHeartbeat(name, heartbeat):
         if time_in_idle > 900000:
             robot.fire("sleep")
 
-    #print("onHeartbeat", name, state, count)
+    # print("onHeartbeat", name, state, count)
 
-    # FIXME - this needs to be removed 
+    # FIXME - this needs to be removed
     if neoPixel:
         # This is Grog's neopixel matrix - it needs to be removed
         if count % 2 == 0:

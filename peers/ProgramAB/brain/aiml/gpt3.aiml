@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>GPT COMMUNICATION</pattern>
+    <template>
+      <condition name="gpt3">
+        <li value="enabled">
+          <think>
+            <set name="topic">gptfull</set>
+            <set name="gptStop"></set>
+          </think>
+          <!-- There should be no English in this file, another programab should handle all
+          translations --> Okay I am ready for that. If you want to
+          get out say, stop gpt. </li>
+        <li>I don't have gpt3 started.</li>
+      </condition>
+    </template>
+  </category>
+
+  <topic name="GPTFULL">
+    <category>
+      <pattern>#</pattern>
+      <template>
+        <think>
+          <set name="gptStop">
+            <star />
+          </set>
+        </think>
+        <condition>
+          <li name="gptStop" value="stop gpt">
+            <!-- There should be no English in this file, another programab should handle all
+            translations --> Ok, back to program AB. <think>
+              <set name="topic">default</set>
+              <set name="gptStop"></set>
+            </think></li>
+          <li>
+            <img src="../Gpt3.png" />
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>i01_gpt3.onText("<star />")</param>
+              </mrl>
+            </oob>
+          </li>
+        </condition>
+      </template>
+    </category>
+  </topic>
+
+</aiml>
