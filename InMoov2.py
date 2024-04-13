@@ -564,11 +564,11 @@ def onPeak(name, volume):
     robot = runtime.getService(name)
 
     # FIXME - remove this custom
-    neoMouth = runtime.getService("neoMouth")
-    # neoMouth.flash("speaking")
-    # neoMouth.clear()
-    neoMouth.setBrightness(int(volume))
-    neoMouth.fill(0, 183, 93)
+    # neoMouth = runtime.getService("neoMouth")
+    # # neoMouth.flash("speaking")
+    # # neoMouth.clear()
+    # neoMouth.setBrightness(int(volume))
+    # neoMouth.fill(0, 183, 93)
     # neoMouth.clear()
 
 
