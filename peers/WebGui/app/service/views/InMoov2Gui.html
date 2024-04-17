@@ -463,6 +463,31 @@
                         <button ng-show="!service.config.robotCanMoveHeadWhileSpeaking" class="btn btn-default" title="Enable vision upside down" ng-click="setConfigValue('robotCanMoveHeadWhileSpeaking', true)">off</button>
                         </td>
                 </tr>
+                <tr ng-show="peer.isPeerStarted(service, 'mouth')">
+                    <td>
+                        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+                        <img src="../img/InMoov2/markerBlue_right.png"
+                            onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
+                            onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
+                            ng-click="filterPeers('mouth.audioFile')" /><img src="../img/InMoov2/markerBlue_left.png"
+                            onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
+                            onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
+                            ng-click="filterPeers(null)" />
+                        <img src="../peak.png" />
+                        <label>Mouth Peak</label>
+                    </td>
+                    <td>
+                        <button class="btn btn-default" title="Enable jaw movement while speaking" ng-show="!peer.isPeerStarted(service, 'mouth.audioFile')"
+                            ng-click="startPeer('mouth.audioFile')">off</button>
+                        <button class="btn btn-info" title="Enable jaw movement while speaking" ng-show="peer.isPeerStarted(service, 'mouth.audioFile')"
+                            ng-click="releasePeer('mouth.audioFile')">on</button>
+                        <span ng-show="peer.isPeerStarted(service, 'mouth.audioFile')">
+                            <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'mouth.audioFile'))">
+                                <img src="settings.png" width="30" />
+                            </a>
+                        </span>
+                    </td>
+                </tr>
                 <tr ng-show="peer.isPeerStarted(service, 'head')">
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
