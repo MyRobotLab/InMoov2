@@ -274,3 +274,5 @@ def trackingTimerRoutine(timedata):
       stopTrackHumans()
       trackingTimer.stopClock()
     if runtime.isStarted('i01.neoPixel'):i01_neoPixel.clear()
+
+print("sleepMode.py loaded")

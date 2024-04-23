@@ -70,3 +70,4 @@ def MoveBodyStopped():
 MoveBodyTimer.addListener("pulse", python.name, "MoveBody")
 MoveBodyTimer.addListener("clockStarted", python.name, "MoveBodyStart")  
 MoveBodyTimer.addListener("clockStopped", python.name, "MoveBodyStopped")
+print("MoveBodyRandomize.py loaded")

@@ -19,3 +19,5 @@ def shutdown():
   if runtime.isStarted('i01.neopixel'):  
     i01.stopNeopixelAnimation()
   runtime.shutdown()
+
+print("shutdown.py loaded")

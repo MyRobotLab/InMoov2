@@ -60,3 +60,5 @@ def MoveRandomStop():
 MoveRandomTimer.addListener("pulse", python.name, "MoveRandom")
 MoveRandomTimer.addListener("clockStopped", python.name, "MoveRandomStop")
 MoveRandomTimer.addListener("clockStarted", python.name, "MoveRandomStart")
+
+print("MoveRandomize.py loaded")

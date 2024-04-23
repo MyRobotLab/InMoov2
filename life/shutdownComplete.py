@@ -15,3 +15,5 @@ def shutdownComplete():
   sleep(2)
   runtime.execute("cmd.exe","/c","shutdown.exe /s /t 30 /f")
   shutdown()
+
+print("shutdownComplete.py loaded")

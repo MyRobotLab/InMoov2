@@ -18,7 +18,7 @@ if runtime.isStarted('i01'):
       try:
         if runtime.getBatteryLevel():
           batterieLevel = runtime.getBatteryLevel()
-          print "battery :",batterieLevel
+          print ("battery :",batterieLevel)
           errorBat=0
       except:
         pass
@@ -32,6 +32,8 @@ def heartbeat_def(timedata):
   if not errorBat:
     if runtime.getBatteryLevel():batterieLevel = runtime.getBatteryLevel()
   i01.setBatteryLevel(int(batterieLevel))
-  print "battery :",batterieLevel
+  print("battery :",batterieLevel)
   
   heartbeat.stopClock()
+
+print("HealthCheck.py loaded")

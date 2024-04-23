@@ -41,3 +41,4 @@ def MoveEyesStop():
 MoveEyesTimer.addListener("pulse", python.name, "MoveEyes")
 MoveEyesTimer.addListener("clockStarted", python.name, "MoveEyesStart")  
 MoveEyesTimer.addListener("clockStopped", python.name, "MoveEyesStop")
+print("MoveEyesRandomize.py loaded")

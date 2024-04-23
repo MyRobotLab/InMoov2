@@ -29,7 +29,7 @@ def MoveHead(timedata):
 #initial function
 def MoveHeadStart():
   
-  print "moveheadstart"
+  print("moveheadstart")
   if RobotCanMoveHeadRandom and RobotCanMoveRandom and not RobotIsSleeping and not i01_opencv.isCapturing():
     if not runtime.isStarted('i01.head'):MoveHeadTimer.stopClock()
     #if RobotCanMoveHeadWhileSpeaking==0:MoveHeadTimer.stopClock()
@@ -47,3 +47,4 @@ def MoveHeadStop():
 MoveHeadTimer.addListener("pulse", python.name, "MoveHead")
 MoveHeadTimer.addListener("clockStarted", python.name, "MoveHeadStart")  
 MoveHeadTimer.addListener("clockStopped", python.name, "MoveHeadStop")
+print("MoveHeadRandomize.py loaded")
