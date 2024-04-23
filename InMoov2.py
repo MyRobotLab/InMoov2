@@ -181,8 +181,9 @@ def onPirOn(name):
         robot.fire("wake")
 
     # FIXME - chatBot.getResponse("SYSTEM_EVENT onPirOn")
-    robot.speak("I feel your presence")
+    # robot.speak("I feel your presence")
 
+    # FIXME - "remove" this is custom
     neoPixel = robot.getPeer("neoPixel")
     if neoPixel:
         neoPixel.setPixel(130, 120, 200, 150)
@@ -197,7 +198,8 @@ def onPirOff(name):
     robot = runtime.getService(name)
     robot.setPredicate(name + ".pir", False)
     # FIXME - chatBot.getResponse("SYSTEM_EVENT onPirOff")
-    robot.speak("I'm so alone")
+    # robot.speak("I'm so alone")
+    # FIXME - "remove" this is custom
     neoPixel = robot.getPeer("neoPixel")
     if neoPixel:
         neoPixel.setPixel(130, 0, 0, 0)
@@ -230,7 +232,8 @@ def onTopic(topic_event):
     robot = runtime.getService(topic_event.src)
     mouth = robot.getPeer("mouth")
     if mouth:
-        mouth.speak("New topic, the topic is " + topic_event.topic)
+        # mouth.speak("New topic, the topic is " + topic_event.topic)
+        pass
     print("onTopic", topic_event.topic)
 
 
@@ -269,7 +272,8 @@ def onStateChange(name, state_event):
 
     # FIXME - chatBot.getResponse("SYSTEM_EVENT on_start")
     if mouth:
-        mouth.speak("leaving " + leavingState + " state and entering " + state)
+        # mouth.speak("leaving " + leavingState + " state and entering " + state)
+        pass
 
     # call the new state handler
     eval("on_" + state + "('" + name + "')")
@@ -307,18 +311,18 @@ def on_wake(name):
     # ON_WAKE_GREETING
     # TODO - most common function getResponse getPredicate setPredicate
 
-    print("wake", name)
+    print("on_wake", name)
 
     robot = runtime.getService(name)
     robot.setHeadSpeed(45, 45, 45)
     robot.moveHead(90, 90, 90)
     chatbot = robot.getPeer("chatBot")
     fsm = robot.getPeer("fsm")
-    chatbot.getResponse("STATE_WAKE_BEGIN")
+#    chatbot.getResponse("STATE_WAKE_BEGIN")
 
     # sets predicates with system data
     robot.systemCheck()
-    chatbot.getResponse("SYSTEM_REPORT")
+#    chatbot.getResponse("SYSTEM_REPORT")
 
     # check if lastUsername is set - ie single default session
     # check if setup has been done or dismissed
@@ -337,7 +341,7 @@ def on_wake(name):
     chatbot.startSession(lastUsername)
 
     # get text response
-    chatbot.getResponse("STATE_WAKE_END")
+#    chatbot.getResponse("STATE_WAKE_END")
 
     setup = chatbot.getPredicate("human", "setup")
 
@@ -367,7 +371,7 @@ def on_setup(name):
     robot = runtime.getService(name)
     chatbot = robot.getPeer("chatBot")
     # chatbot.getResponse("FIRST_INIT")
-    chatbot.getResponse("STATE_SETUP_BEGIN")
+#    chatbot.getResponse("STATE_SETUP_BEGIN")
 
     # if resuming a pause
     # chatbot.getResponse("STATE_SETUP_RESUME")
@@ -384,7 +388,8 @@ def on_idle(name):
     robot = runtime.getService(name)
     mouth = robot.getPeer("mouth")
     if mouth:
-        mouth.speak("I am idle")
+        # mouth.speak("I am idle")
+        pass
     print("on_idle state change from", name)
 
 
@@ -395,7 +400,7 @@ def on_telepresence(name):
 def on_random(name):
     print("on_random", name)
     robot = runtime.getService(name)
-    robot.getRespone("RANDOM")
+#    robot.getRespone("RANDOM")
     random = robot.getPeer("random")
     if random:
         random.enable()
@@ -404,7 +409,7 @@ def on_random(name):
 def on_sleep(name):
     print("on_sleep", name)
     robot = runtime.getService(name)
-    robot.getResponse("STATE_SLEEP")
+#    robot.getResponse("STATE_SLEEP")
     robot.disableRandom()
     # center and tilt head down
     robot.setHeadSpeed(5, 5, 5)
@@ -423,7 +428,7 @@ def on_peer_started(name):
     print("on_peer_started", name)
     robot = runtime.getService(name)
     mouth = robot.getPeer("mouth")
-    mouth.speak("I am starting a new service")
+    # mouth.speak("I am starting a new service")
     print("on_peer_started service change from", name)
     # add subscriptions for newly started peers
 
@@ -432,7 +437,7 @@ def on_peer_released(name):
     print("on_peer_released", name)
     robot = runtime.getService(name)
     mouth = robot.getPeer("mouth")
-    mouth.speak("I am releasing a service")
+    # mouth.speak("I am releasing a service")
     print("on_peer_released service change from", name)
     # remove subscriptions for newly released peers
 
@@ -466,7 +471,8 @@ def onSession(session_event):
     mouth = robot.getPeer("mouth")
     chatBot = robot.getPeer("chatBot")
     if mouth:
-        mouth.speak("new session with " + session_event.user)
+        pass
+        # mouth.speak("new session with " + session_event.user)
     # if chatBot:
     #     chatBot.setTopic("new_user")
 
