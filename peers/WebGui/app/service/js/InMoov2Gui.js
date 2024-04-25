@@ -21,6 +21,10 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     $scope.mrl = mrl
     $scope.peerConfig = {}
 
+    $scope.selected = {
+        configName: "default",
+    }
+
     $scope.servos = []
     $scope.sliders = []
 
@@ -80,48 +84,29 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
             mrl.search("")
         }
     }
-
-    $scope.loadConfig = function() {
-        console.info('loadConfig')
-        if ($scope.selectedConfig.length) {
-            for (let i = 0; i < $scope.selectedConfig.length; ++i) {
-                // msg.sendTo('runtime', 'load', 'data/config/' + $scope.selectedConfig[i] + '/runtime.yml')
-                msg.sendTo('runtime', 'setConfig', $scope.selectedConfig[i])
-                msg.sendTo('runtime', 'load', 'runtime')
-            }
-        }
+    $scope.deleteConfig = function() {
+        console.info('deleteConfig', $scope.selected.configName)
+        msg.sendTo('runtime', 'deleteConfig', $scope.selected.configName)
+        $scope.selected.configName = null; 
     }
 
     $scope.startConfig = function() {
-        console.info('startConfig')
-        if ($scope.selectedConfig.length) {
-            for (let i = 0; i < $scope.selectedConfig.length; ++i) {
-                msg.sendTo('runtime', 'startConfig', $scope.selectedConfig[i])
-            }
-        }
-    }
-
-    $scope.unsetConfig = function() {
-        console.info('unsetConfig')
-        msg.sendTo('runtime', 'unsetConfig')
+        console.info('startConfig', $scope.selected.configName)
+        msg.sendTo('runtime', 'startConfig', $scope.selected.configName)
     }
 
     $scope.releaseConfig = function() {
-        console.info('releaseConfig')
-        if ($scope.selectedConfig && $scope.selectedConfig.length) {
-            for (let i = 0; i < $scope.selectedConfig.length; ++i) {
-                // msg.sendTo('runtime', 'setConfig', $scope.selectedConfig[i])
-                msg.sendTo('runtime', 'releaseConfig', $scope.selectedConfig[i])
-            }
-        }
+        console.info('releaseConfig', $scope.selected.configName)
+        msg.sendTo('runtime', 'releaseConfig', $scope.selected.configName)
     }
 
     $scope.saveConfig = function() {
         console.info('saveConfig')
 
         let onOK = function() {
-            msg.sendTo('runtime', 'setConfig', $scope.service.configName)
-            msg.sendTo('runtime', 'saveConfig', $scope.service.configName)
+            msg.sendTo('runtime', 'setConfig', $scope.selected.configName)
+            msg.sendTo('runtime', 'saveConfig', $scope.selected.configName)
+            msg.sendTo('runtime', 'getConfigName')
         }
 
         let onCancel = function() {
@@ -321,12 +306,12 @@ angular.module('mrlapp.service.InMoov2Gui', []).controller('InMoov2GuiCtrl', ['$
     }
 
     $scope.setConfig = function() {
-        console.info('setConfig')
-        if ($scope.selectedConfig.length > 0) {
-            $scope.service.configName = $scope.selectedConfig[0]
-            msg.sendTo('runtime', 'setConfig', $scope.service.configName)
-        }
+        console.info('setConfig', $scope.selected.configName)
+        msg.sendTo('runtime', 'setConfig', $scope.selected.configName)
+        msg.sendTo('runtime', 'getConfig')
     }
+
+    
 
     $scope.loadGestures = function() {
         console.info('loadGestures')

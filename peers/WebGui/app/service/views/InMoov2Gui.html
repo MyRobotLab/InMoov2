@@ -1122,8 +1122,8 @@
             <label>Config</label>
             &nbsp;&nbsp;&nbsp;&nbsp;<img src="../peers.png" height="28" ng-click="filterPeers(null)" />
             <div class="form-group">
-                <select multiple class="form-control vertical-menu" ng-change="setConfig()" ng-model="selectedConfig"
-                    id="selectedConfig" title="configurations">
+                <select size="8" class="form-control vertical-menu" ng-change="setConfig()" ng-model="selected.configName"
+                    id="selected.configName" title="configurations">
                     <option ng-repeat="config in configList" ng-value="{{config}}">{{config}}</option>
                 </select>
             </div>
@@ -1132,6 +1132,8 @@
             <button class="btn btn-default" title="This will start a config set" ng-click="startConfig()">Start</button>
             <button class="btn btn-default" title="This will release a config set"
                 ng-click="releaseConfig()">Release</button>
+            <button class="btn btn-default" title="This will release a config set"
+                ng-click="deleteConfig()">Delete</button>
         </td>
     </tr>
     <tr>
