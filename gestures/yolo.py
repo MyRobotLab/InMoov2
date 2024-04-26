@@ -68,3 +68,7 @@ def enableYoloFor(duration):
     i01_opencv.disableFilter("yolo")
     i01_opencv.removeFilter('yolo')
     i01_opencv.stopCapture()
+
+
+def yolo():
+   enableYoloFor(50)
