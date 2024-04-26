@@ -63,6 +63,14 @@
     <template>Arrêt du lecteur audio</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STARTED mouth audioFile</pattern>
+    <template>Démarrage du lecteur audio pour la bouche</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED mouth audioFile</pattern>
+    <template>Arrêt du lecteur audio pour la bouche</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED chatBot</pattern>
     <template>Système de dialogue prêt, démarrage des autres composants</template>
   </category>
