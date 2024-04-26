@@ -38,7 +38,7 @@ def startYoloInventory(duration):
 def getYoloPosition(last_item_found):
   position = classifications.getPosition(last_item_found)
   # to not launch gesture, comment showObject :
-  print "Position of : ", last_item_found, position
+  print ("Position of : ", last_item_found, position)
   showObject(position)
   return position
 
@@ -71,4 +71,4 @@ def enableYoloFor(duration):
 
 
 def yolo():
-   enableYoloFor(50)
+   enableYoloFor(60)
