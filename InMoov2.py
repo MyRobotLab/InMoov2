@@ -14,35 +14,43 @@
 
 # FOR SUBSCRIPTIONS WHOS DESTINATION IS PYTHON
 # SHOULD PROBABLY BE MAINTAINED HERE
+from __future__ import print_function 
+from __future__ import division
+from __future__ import unicode_literals 
 
+import sys
+import os
 import json
 import time
 import threading
 from datetime import datetime
-import thread
+
 import time
 import random
-import urllib, urllib2
-from urllib import urlretrieve
+import urllib
 import io
 import itertools
 import textwrap
 import codecs
 import socket
-import os
 import shutil
 import hashlib
 import csv
 import glob
-import ConfigParser
 import inspect
 
+# Check Python version and import appropriate module
+if sys.version_info[0] == 2:
+    import thread
+else:
+    import _thread as thread
 
-from java.lang import String
-from org.myrobotlab.net import BareBonesBrowserLaunch
-from org.myrobotlab.arduino.Msg import MRLCOMM_VERSION
-import org.myrobotlab.framework.Platform as Platform
-import org.myrobotlab.service.Runtime as Runtime
+
+# from java.lang import String
+# from org.myrobotlab.net import BareBonesBrowserLaunch
+# from org.myrobotlab.arduino.Msg import MRLCOMM_VERSION
+# import org.myrobotlab.framework.Platform as Platform
+# import org.myrobotlab.service.Runtime as Runtime
 
 
 def onPythonMessage(msg):
@@ -109,8 +117,27 @@ def onPythonMessage(msg):
     except Exception as e:
         print(e)
 
+def onAudioStart(name, data):
+    """onAudioStart is a callback for when audioPlayer starts
+    it is rebroadcasted from InMoov2 AudioFile service.
+    """
+    print("onAudioStart", name, data)
+    robot = runtime.getService(name)
+    ear = robot.getPeer("ear")
+    if ear:
+        ear.stopListening()
 
-# FIXME - global method not name specific
+def onAudioEnd(name, data):
+    """onAudioEnd is a callback for when audioPlayer stops
+    it is rebroadcasted from InMoov2 AudioFile service.
+    """
+    print("onAudioEnd", name, data)
+    robot = runtime.getService(name)
+    ear = robot.getPeer("ear")
+    if ear:
+        ear.startListening()        
+
+
 def onStartSpeaking(name, text):
     global runtime
 
@@ -169,6 +196,16 @@ def onEndSpeaking(name, text):
 
 
 # Sensor events begin ========================================
+
+def onSense(name, sensed):
+    """onSense is a pir sensor event
+    which is rebroadcasted from InMoov2
+    SensorData.
+
+    Args:
+        sensed (boolean): True or False
+    """
+    print("onSense", sensed)
 
 
 def onPirOn(name):
@@ -278,7 +315,7 @@ def onStateChange(name, state_event):
     # call the new state handler
     eval("on_" + state + "('" + name + "')")
 
-
+# =============  STATE CHANGE EVENTS BEGIN ========================
 def on_wake(name):
     """
     State: wake
@@ -332,12 +369,12 @@ def on_wake(name):
     # lastUsername = robot.getPredicate("human", "state_on_setup_name")
     # print("lastUsername", lastUsername)
     lastUsername = robot.getPredicate("human", "lastUsername")
-    print("lastUsername", lastUsername)
 
     # report status, errors, battery, etc
     # e.g. I'm afraid I have errors, would you like me to show you ?
 
     # set session
+    print("startSession", lastUsername)
     chatbot.startSession(lastUsername)
 
     # get text response
@@ -345,9 +382,10 @@ def on_wake(name):
 
     setup = chatbot.getPredicate("human", "setup")
 
-    if setup == "human" or setup == "started":
+    if setup == "unknown" or setup == "human" or setup == "started":
         # try to identify user go through SETUP
-        fsm.fire("setup")
+        # fsm.fire("setup") - FIXME - disabled until ready for new setup
+        fsm.fire("idle")
     else:
         # if user is known - go through WAKE_UP
         fsm.fire("idle")
@@ -370,7 +408,7 @@ def on_setup(name):
     print("on_setup", name)
     robot = runtime.getService(name)
     chatbot = robot.getPeer("chatBot")
-    # chatbot.getResponse("FIRST_INIT")
+    chatbot.getResponse("STATE_SETUP_INTRODUCTION")
 #    chatbot.getResponse("STATE_SETUP_BEGIN")
 
     # if resuming a pause
@@ -380,7 +418,7 @@ def on_setup(name):
     # do anything else desired
     # generate picture data of the user
     # go through personal questionare
-    # e.g. ask
+    # setup hardware
 
 
 def on_idle(name):
@@ -419,8 +457,8 @@ def on_sleep(name):
 def on_power_down(name):
     print("on_power_down", name)
 
+# =============  STATE CHANGE EVENTS END ========================
 
-# State change events end ========================================
 # Service change events begin ========================================
 
 
@@ -466,6 +504,10 @@ def onPredicate(predicate_event):
 
 
 def onSession(session_event):
+    """
+    Args:
+        session_event (_type_): _description_
+    """
     print("onSession", session_event)
     robot = runtime.getService(session_event.src)
     mouth = robot.getPeer("mouth")
