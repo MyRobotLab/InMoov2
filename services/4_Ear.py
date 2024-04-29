@@ -44,8 +44,7 @@ def onRecognized(text):
         #i01_chatBot.getResponse(text)
         #humanDetected()
 
-# if we need to restart the ear - we should find root problem
-if False:
+if i01.getConfig().forceMicroOnIfSleeping==1:
   watchMicro = runtime.start("watchMicro","Clock")
   # set our watchMicro to fire if its not reset within a second
   watchMicro.setInterval(60000) 
