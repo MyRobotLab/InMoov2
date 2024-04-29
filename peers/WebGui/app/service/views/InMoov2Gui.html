@@ -183,8 +183,11 @@
                 <tr ng-show="peer.isPeerStarted(service, 'chatBot')">
                     <td>
                         <button class="btn btn-default" ng-click="mrl.sendTo('runtime', 'export', 'i01.gpt3')">Save
-                            gpt3 Config</button>
+                            GPT3 Config</button>
                     </td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-default" ng-click="msg.send('execScript')">Reload InMoov2.py</button></td>
                 </tr>
             </table>
             <!------------------------ chatBot end ------------------------------>
