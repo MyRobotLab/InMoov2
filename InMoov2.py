@@ -608,16 +608,18 @@ def onHeartbeat(name, heartbeat):
 
 
 def onPeak(name, volume):
-    # print("onPeak", name, volume)
+    print("onPeak", name, volume)
     robot = runtime.getService(name)
 
     # FIXME - remove this custom
-    # neoMouth = runtime.getService("neoMouth")
-    # # neoMouth.flash("speaking")
-    # # neoMouth.clear()
-    # neoMouth.setBrightness(int(volume))
-    # neoMouth.fill(0, 183, 93)
-    # neoMouth.clear()
+    neoMouth = runtime.getService("neoMouth")
+    if neoMouth:
+        neoMouth.fill(0, 183, 93)
+        neoMouth.setBrightness(10 * int(volume)) 
+#        neoMouth.flash("speaking")
+        # neoMouth.clear()
+        # neoMouth.fill(0, 183, 93)
+        # neoMouth.clear()
 
 
 print("loaded InMoov2.py")
