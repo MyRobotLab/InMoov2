@@ -96,6 +96,18 @@
 </category>
 
 <category>
+<pattern>SYSTEM_EVENT STARTED OAKD</pattern>
+<template>Starting oak
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED OAKD</pattern>
+<template>Stopping oak
+</template>
+</category>
+
+<category>
 <pattern>SYSTEM_EVENT STARTED OPENCV</pattern>
 <template>Starting vision
 </template>
