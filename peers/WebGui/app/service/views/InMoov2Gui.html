@@ -689,6 +689,23 @@
                         <img src="../img/InMoov2/markerBlue_right.png"
                             onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
+                            ng-click="filterPeers('controller4')" /><img src="../img/InMoov2/markerBlue_left.png"
+                            onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
+                            onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18"
+                            ng-click="filterPeers(null)" />
+                        <img src="../Adafruit16CServoDriver.png" />
+                        <label>Pca9685</label>
+                    </td>
+                    <td>
+                        <toggle width="38" height="35" ng-model="isPCA9685Started" ng-change="!isPCA9685Started?execScript('system/startScripts/i01_pca9685_stop.py'):execScript('system/startScripts/i01_pca9685_start.py')" on="" off=""/></toggle>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
+                        <img src="../img/InMoov2/markerBlue_right.png"
+                            onmouseover="this.src='../img/InMoov2/markerGreen_right.png';"
+                            onmouseout="this.src='../img/InMoov2/markerBlue_right.png';" height="14"
                             ng-click="filterPeers('random')" /><img src="../img/InMoov2/markerBlue_left.png" onmouseover="this.src='../img/InMoov2/markerGreen_left.png';"
                             onmouseout="this.src='../img/InMoov2/markerBlue_left.png';" height="18" ng-click="filterPeers(null)" />
                         <img src="../Random.png" />
