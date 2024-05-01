@@ -216,6 +216,14 @@
     <template>Arrêt du neoPixel</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STARTED oakd</pattern>
+    <template>Démarrage de l'oak</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED oakd</pattern>
+    <template>Arrêt de l'oak</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED openWeatherMap</pattern>
     <template>Démarrage openWeatherMap</template>
   </category>
