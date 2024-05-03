@@ -61,6 +61,35 @@ def sad():
   sleep(1)
   neutral()
 
+def sigh():
+  if runtime.isStarted('i01.head.eyeLeftUD') and runtime.isStarted('i01.head.eyeLeftLR') and runtime.isStarted('i01.head.eyeRightUD') and runtime.isStarted('i01.head.eyeRightLR'):
+    i01_head_eyeLeftUD.setSpeed(20)
+    i01_head_eyeLeftLR.setSpeed(20)
+    i01_head_eyeRightUD.setSpeed(20)
+    i01_head_eyeRightLR.setSpeed(20)
+    ##
+    i01_head_eyeLeftUD.moveTo(130)
+    i01_head_eyeLeftLR.moveTo(130)
+    i01_head_eyeRightUD.moveTo(130)
+    i01_head_eyeRightLR.moveTo(130)
+    sleep(0.1)
+    i01_head_eyeLeftUD.setMaxSpeed()
+    i01_head_eyeLeftLR.setMaxSpeed()
+    i01_head_eyeRightUD.setMaxSpeed()
+    i01_head_eyeRightLR.setMaxSpeed()
+  if runtime.isStarted('i01.head'):
+    i01_head_neck.moveTo(0)
+  if runtime.isStarted('i01.audioPlayer'):
+    i01_audioPlayer.setVolume(0.8)
+    sleep(0.1)
+    i01_audioPlayer.playFile('resource/InMoov2/system/sounds/Sigh_nose.wav')
+    sleep(0.1)
+    i01_audioPlayer.setVolume(1)    
+  sleep(3)
+  if runtime.isStarted('i01.head'):
+    i01_head_neck.moveTo(90)
+  neutral()
+
 def sorry():
   browsU()
   cheeksD()
@@ -131,6 +160,10 @@ def anxiety():
   anger()
 def disapointment():
   sad()
+def frown():
+  sad()  
+def gasp():
+  surprise()  
 def helplessness():
   sorry()
 def chuckle():
@@ -138,13 +171,13 @@ def chuckle():
 def grin():
   smile()
 def grins():
-  smile()  
+  smile()
 def excited_face():
-  surprised()
+  surprise()
 def nods():
   Yes()
 def excited():
-  surprised()
+  surprise()
 def excitedly():
   happy()
 def smiles():
@@ -153,7 +186,11 @@ def smiling():
   smile()  
 def smiling_face():
   smile()
+def surprised():
+  surprise()  
 def wink():
   winkLeft()
 def winks():
-  winkRight()    
+  winkRight()
+def wow():
+  surprise()
