@@ -249,6 +249,14 @@
     <template>Arrêt d'openni</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STARTED pca9685</pattern>
+    <template>Démarrage de la carte pca 9685</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED pca9685</pattern>
+    <template>Arrêt de la carte pca 9685</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED pid</pattern>
     <template>Démarrage de pid</template>
   </category>
