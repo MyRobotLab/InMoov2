@@ -252,6 +252,15 @@
   </category>
 
   <category>
+    <pattern>SYSTEM_EVENT STARTED pca9685</pattern>
+    <template>Starten der PCA 9685-Karte</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED pca9685</pattern>
+    <template>Abkündigung der PCA 9685-Karte</template>
+  </category>
+
+  <category>
     <pattern>SYSTEM_EVENT STARTED pid</pattern>
     <template>pid starten</template>
   </category>
