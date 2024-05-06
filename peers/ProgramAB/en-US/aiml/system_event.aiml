@@ -132,14 +132,14 @@
 </category>
 
 <category>
-<pattern>SYSTEM_EVENT STARTED OAKD</pattern>
-<template>Starting vision sensor
+<pattern>SYSTEM_EVENT STARTED PCA9685</pattern>
+<template>Starting pca 9685
 </template>
 </category>
 
 <category>
-<pattern>SYSTEM_EVENT STOPPED OAKD</pattern>
-<template>Stopping vision sensor
+<pattern>SYSTEM_EVENT STOPPED PCA9685</pattern>
+<template>Stopping pca 9685
 </template>
 </category>
 
