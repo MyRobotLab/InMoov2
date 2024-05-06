@@ -96,6 +96,18 @@
 </category>
 
 <category>
+<pattern>SYSTEM_EVENT STARTED OAKD</pattern>
+<template>Począwszy od dębu
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED OAKD</pattern>
+<template>Zatrzymanie dębu
+</template>
+</category>
+
+<category>
 <pattern>SYSTEM_EVENT STARTED OPENCV</pattern>
 <template>Początkowa wizja
 </template>
@@ -106,6 +118,17 @@
 <template>Zatrzymanie wzroku
 </template>
 </category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED PCA9685</pattern>
+<template>Zaczynając od PCA 9685
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED PCA9685</pattern>
+<template>Zatrzymywanie PCA 9685
+</template>
 
 <category>
 <pattern>SYSTEM_EVENT STARTED PIR</pattern>
