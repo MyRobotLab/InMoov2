@@ -228,6 +228,14 @@
     <template>openni durdur</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STARTED pca9685</pattern>
+    <template>PCA 9685 kartını başlatma</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED pca9685</pattern>
+    <template>PCA 9685 kartının durdurulması</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED pid</pattern>
     <template>pid başlat</template>
   </category>
