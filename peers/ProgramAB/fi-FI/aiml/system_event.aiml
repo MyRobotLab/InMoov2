@@ -234,6 +234,14 @@
     <template>openni pysäytetty</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STARTED pca9685</pattern>
+    <template>PCA 9685 -kortin käynnistäminen</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED pca9685</pattern>
+    <template>PCA 9685 -kortin lopettaminen</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED pid</pattern>
     <template>pid käynnistetty</template>
   </category>
