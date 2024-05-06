@@ -235,6 +235,14 @@
     <template>openni stoppen</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STARTED pca9685</pattern>
+    <template>Starten van de PCA 9685-kaart</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED pca9685</pattern>
+    <template>Stopzetting van de PCA 9685-kaart</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED pid</pattern>
     <template>pid starten</template>
   </category>

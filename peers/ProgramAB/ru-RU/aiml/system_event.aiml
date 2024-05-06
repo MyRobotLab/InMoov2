@@ -228,6 +228,14 @@
     <template>остановить openni</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STARTED pca9685</pattern>
+    <template>Запуск карты PCA 9685</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED pca9685</pattern>
+    <template>Прекращение выпуска карты PCA 9685</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED pid</pattern>
     <template>запустить pid</template>
   </category>

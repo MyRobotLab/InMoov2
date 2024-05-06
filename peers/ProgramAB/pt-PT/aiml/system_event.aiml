@@ -228,6 +228,14 @@
     <template>parar openni</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STARTED pca9685</pattern>
+    <template>Iniciando a placa PCA 9685</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED pca9685</pattern>
+    <template>Descontinuação da placa PCA 9685</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED pid</pattern>
     <template>pid starten</template>
   </category>
