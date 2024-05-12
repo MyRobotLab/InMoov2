@@ -9,7 +9,26 @@
 if runtime.isStarted('i01.opencv'):
     if not runtime.isStarted('i01.headTracking'):
         i01_opencv.removeFilters()
+        ## sync the eyes with the default i01.eyes
+        if runtime.isStarted('i01.head') and runtime.isStarted('i01.head.eyeLeftLR') and runtime.isStarted('i01.head.eyeRightLR') and runtime.isStarted('i01.head.eeyeLeftUD') and runtime.isStarted('i01.head.eyeRightUD'):
+            i01_head_eyeX.sync(i01_head_eyeLeftLR)
+            i01_head_eyeX.sync(i01_head_eyeRightLR)
+            i01_head_eyeY.sync(i01_head_eyeLeftUD)
+            i01_head_eyeY.sync(i01_head_eyeRightUD)
         i01_eyeTracking.enable()
-    else:i01_eyeTracking.enable()
+    else:
+        if runtime.isStarted('i01.head') and runtime.isStarted('i01.head.eyeLeftLR') and runtime.isStarted('i01.head.eyeRightLR') and runtime.isStarted('i01.head.eeyeLeftUD') and runtime.isStarted('i01.head.eyeRightUD'):
+            i01_head_eyeX.sync(i01_head_eyeLeftLR)
+            i01_head_eyeX.sync(i01_head_eyeRightLR)
+            i01_head_eyeY.sync(i01_head_eyeLeftUD)
+            i01_head_eyeY.sync(i01_head_eyeRightUD)
+        i01_eyeTracking.enable()
+
 else:
-    i01_eyeTracking.enable()
+    ## sync the eyes with the default i01.eyes
+    if runtime.isStarted('i01.head') and runtime.isStarted('i01.head.eyeLeftLR') and runtime.isStarted('i01.head.eyeRightLR') and runtime.isStarted('i01.head.eeyeLeftUD') and runtime.isStarted('i01.head.eyeRightUD'):
+      i01_head_eyeX.sync(i01_head_eyeLeftLR)
+      i01_head_eyeX.sync(i01_head_eyeRightLR)
+      i01_head_eyeY.sync(i01_head_eyeLeftUD)
+      i01_head_eyeY.sync(i01_head_eyeRightUD)
+    i01_eyeTracking.enable() 
