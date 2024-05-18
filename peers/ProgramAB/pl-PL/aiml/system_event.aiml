@@ -72,6 +72,16 @@
 </category>
 
 <category>
+<pattern>SYSTEM_EVENT STARTED log</pattern>
+<template>Uruchamianie usługi dziennika</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED log</pattern>
+<template>Zatrzymywanie usługi dziennika</template>
+</category>
+
+<category>
 <pattern>SYSTEM_EVENT STARTED MOUTH AUDIOFILE</pattern>
 <template>Uruchamianie pliku audio ust
 </template>
