@@ -192,6 +192,14 @@
     <template>Arrêt de la main gauche</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STARTED log</pattern>
+    <template>Démarrage du service log</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED log</pattern>
+    <template>Arrêt du service log</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED mouth</pattern>
     <template>Démarrage de la bouche</template>
   </category>
