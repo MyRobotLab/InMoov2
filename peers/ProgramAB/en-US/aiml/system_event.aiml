@@ -72,6 +72,18 @@
 </category>
 
 <category>
+<pattern>SYSTEM_EVENT STARTED LOG</pattern>
+<template>Starting log service
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED LOG</pattern>
+<template>Stopping log service
+</template>
+</category>
+
+<category>
 <pattern>SYSTEM_EVENT STARTED MOUTH AUDIOFILE</pattern>
 <template>Starting mouth audioFile
 </template>
