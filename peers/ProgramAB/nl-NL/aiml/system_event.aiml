@@ -186,6 +186,14 @@
     <pattern>SYSTEM_EVENT STOPPED leftHand</pattern>
     <template>linker hand stoppen</template>
   </category>
+    <category>
+    <pattern>SYSTEM_EVENT STARTED log</pattern>
+    <template>De logservice starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED log</pattern>
+    <template>De logservice stoppen</template>
+  </category>
   <category>
     <pattern>SYSTEM_EVENT STARTED mouth</pattern>
     <template>mond starten</template>
