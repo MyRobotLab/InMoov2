@@ -179,6 +179,14 @@
     <template>停止左手</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STARTED log</pattern>
+    <template>启动log</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED log</pattern>
+    <template>停止log</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED mouth</pattern>
     <template>启动嘴巴</template>
   </category>
