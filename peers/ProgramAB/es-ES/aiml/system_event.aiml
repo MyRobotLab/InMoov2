@@ -183,6 +183,14 @@
     <template>Detener mano izquierda</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STARTED log</pattern>
+    <template>Iniciando el servicio de registro</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED log</pattern>
+    <template>Detener el servicio de registro</template>
+  </category>  
+  <category>
     <pattern>SYSTEM_EVENT STARTED mouth</pattern>
     <template>Iniciar boca</template>
   </category>
