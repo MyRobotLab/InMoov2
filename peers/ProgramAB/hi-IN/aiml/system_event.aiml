@@ -188,6 +188,15 @@
   </category>
 
   <category>
+    <pattern>SYSTEM_EVENT STARTED log</pattern>
+    <template>लॉग सेवा प्रारंभ करना</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED log</pattern>
+    <template>लॉग सेवा बंद करना</template>
+  </category>  
+
+  <category>
     <pattern>SYSTEM_EVENT STARTED mouth</pattern>
     <template>मुँह शुरू करें</template>
   </category>
