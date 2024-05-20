@@ -16,14 +16,14 @@
         </li>
         <li>
         <random>
-        <li>I don't know the answer.</li>
-        <li>I used my lifeline to ask another robot, but he didn't know.</li>
-        <li>I asked another robot, but he didn't know.</li>
-        <li>Sorry, nothing found in web services.</li>
-        <li>I'm unable to find the answer from web services.</li>
-        <li>None of the other robots can tell me the answer.</li>
-        <li>I can't find an answer.</li>
-        <li>I am confused, I do not know what to answer.</li>
+        <li>Ich kenne die Antwort nicht.</li>
+        <li>Ich benutzte meine Rettungsleine, um einen anderen Roboter zu fragen, aber er wusste es nicht.</li>
+        <li>Ich habe einen anderen Roboter gefragt, aber er wusste es nicht.</li>
+        <li>Leider wurde in den Webdiensten nichts gefunden.</li>
+        <li>Ich kann die Antwort von Webdiensten nicht finden.</li>
+        <li>Keiner der anderen Roboter kann mir die Antwort sagen.</li>
+        <li>Ich kann keine Antwort finden.</li>
+        <li>Ich bin verwirrt, ich weiß nicht, was ich antworten soll.</li>
       </random>
       </li>
       </condition>
