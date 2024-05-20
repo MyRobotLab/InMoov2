@@ -164,21 +164,20 @@
                         <label>GPT</label>
                     </td>
                     <td>
-                        <!--
-                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'gpt3')"
-                            ng-click="execScript('system/startScripts/i01_gpt3_start.py')">off</button>
-                        <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'gpt3')"
-                            ng-click="execScript('system/startScripts/i01_gpt3_stop.py')">on</button>
-                    
-                        -->
-                    <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'gpt3')" 
+                        <button class="btn btn-default" ng-show="!peer.isPeerStarted(service, 'gpt3')" 
                             ng-click="startPeer('gpt3')">off</button>
                         <button class="btn btn-info" ng-show="peer.isPeerStarted(service, 'gpt3')"
                             ng-click="releasePeer('gpt3')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'gpt3')">
                             <img src="settings.png" width="30" title="Open" ng-click="mrl.changeTab(peer.getActualName(service, 'gpt3'))"/>
                         </span>
-                    </td>
+                        <button class="btn btn-default" title="Enable gpt3 through the chatBot" ng-show="peer.isPeerStarted(service, 'gpt3')" 
+                            ng-click="mrl.changeTab(peer.getActualName(service, 'chatBot'));execScript('system/startScripts/i01_gpt3_start.py')">Enable</button>
+                        <button class="btn btn-default" title="Disable gpt3 through the chatBot" ng-show="peer.isPeerStarted(service, 'gpt3')"
+                            ng-click="execScript('system/startScripts/i01_gpt3_stop.py')">Disable</button>
+                        <!--<button class="btn btn-default ng-hide" ng-show="predicates['gpt3'] != 'enabled'" ng-click="msg.setPredicate('gpt3', 'enabled');msg.getPredicates()" style="">Disabled</button>
+                        <button class="btn btn-info" ng-show="predicates['gpt3'] == 'enabled'" ng-click="msg.setPredicate('gpt3', '');msg.getPredicates()" style="">Enabled</button>-->
+                    </td>      
                 </tr>        
                 <tr ng-show="peer.isPeerStarted(service, 'chatBot')">
                     <td>
@@ -186,9 +185,9 @@
                             GPT3 Config</button>
                     </td>
                 </tr>
-                <tr>
+                <!--<tr>
                     <td><button class="btn btn-default" ng-click="msg.send('execScript')">Reload InMoov2.py</button></td>
-                </tr>
+                </tr>-->
             </table>
             <!------------------------ chatBot end ------------------------------>
             <!------------------------ arm begin ------------------------------>
