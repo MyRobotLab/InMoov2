@@ -40,7 +40,14 @@
 </category>
 
 <category><pattern>*</pattern>
-<template>Ich habe keine Antwort auf diese Frage</template>
+<template><condition name="gpt3">
+        <li value="enabled">
+        <sraix><star/></sraix>
+        </li>
+        <li>
+        Ich habe keine Antwort auf diese Frage
+        </li>
+      </condition></template>
 </category>
 
 <category><pattern>*</pattern><that>WIE SOLL ICH DICH NENNEN</that>
