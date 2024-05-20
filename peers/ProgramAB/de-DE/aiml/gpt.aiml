@@ -6,6 +6,9 @@
 <category><pattern>SRAIXFAILED *</pattern>
 <template><condition name="gpt3">
         <li value="enabled"><img src="../Gpt3.png"/>
+        <think>
+          <set name="topic"><star/></set>
+        </think>
         <oob>
           <mrl>
             <service>python</service>
