@@ -25,6 +25,7 @@
         <li>I can't find an answer.</li>
         <li>I am confused, I do not know what to answer.</li>
       </random>
+      </li>
       </condition>
         </template>
 </category>
