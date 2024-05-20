@@ -29,7 +29,7 @@
         </template>
 </category>
 
-<category><pattern>GPT COMMUNICATION</pattern>
+<category><pattern>GPT KOMMUNIKATION</pattern>
   <template>
     <condition name="gpt3">
       <li value="enabled">
