@@ -172,7 +172,7 @@
                             <img src="settings.png" width="30" title="Open" ng-click="mrl.changeTab(peer.getActualName(service, 'gpt3'))"/>
                         </span>
                         <button class="btn btn-default" title="Enable gpt3 through the chatBot" ng-show="peer.isPeerStarted(service, 'gpt3')" 
-                            ng-click="mrl.changeTab(peer.getActualName(service, 'chatBot'));execScript('system/startScripts/i01_gpt3_start.py')">Enable</button>
+                            ng-click="execScript('system/startScripts/i01_gpt3_start.py')">Enable</button>
                         <button class="btn btn-default" title="Disable gpt3 through the chatBot" ng-show="peer.isPeerStarted(service, 'gpt3')"
                             ng-click="execScript('system/startScripts/i01_gpt3_stop.py')">Disable</button>
                         <!--<button class="btn btn-default ng-hide" ng-show="predicates['gpt3'] != 'enabled'" ng-click="msg.setPredicate('gpt3', 'enabled');msg.getPredicates()" style="">Disabled</button>
