@@ -63,4 +63,29 @@
       </condition>
         </template>
 </category>
+
+<category><pattern>COMUNICACIÓN GPT</pattern>
+  <template>
+    <condition name="gpt3">
+      <li value="enabled">
+        <think><set name="topic">gptfull</set>
+               <set name="gptStop"></set></think>
+          Bien, estoy listo para eso. Si quieres salir, di, deja de gpt.      </li>
+      <li>I don't have gpt3 started.</li>
+    </condition>
+  </template>
+</category>
+
+<topic name="GPTFULL">
+<category><pattern>#</pattern>
+  <template><think><set name="gptStop"><star/></set></think>
+            <condition>
+            <li name="gptStop" value="deja de gpt">Ok, volvamos al programa AB.
+                <think><set name="topic">default</set>
+                       <set name="gptStop"></set>
+                </think></li>
+            <li><img src="../Gpt3.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_gpt3.onText("<star/>")</param></mrl></oob></li>
+            </condition>
+  </template>
+</category>
 </aiml>
