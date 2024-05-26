@@ -71,7 +71,7 @@
         <think><set name="topic">gptfull</set>
                <set name="gptStop"></set></think>
           Bien, estoy listo para eso. Si quieres salir, di, deja de gpt.      </li>
-      <li>I don't have gpt3 started.</li>
+      <li>No tengo gpt3 habilitado.</li>
     </condition>
   </template>
 </category>
