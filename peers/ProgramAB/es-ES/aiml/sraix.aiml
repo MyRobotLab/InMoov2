@@ -6,16 +6,6 @@
   <pattern>*</pattern>
     <template>
       <think>
-        <set name="what">
-          <star />
-        </set>
-      </think>
-      <think>
-        <set name="courant">
-          <star />
-        </set>
-      </think>
-      <think>
         <set name="topic">
           <star />
         </set>
@@ -26,19 +16,21 @@
 
 
 <category><pattern>WIKI</pattern>
-<template><sraix><get name="courant"/></sraix>
+<template><sraix><get name="topic"/></sraix>
         </template>
 </category>
 
 <category><pattern>SRAIXFAILED *</pattern>
-<template>.<condition name="gpt3">
+<template><condition name="gpt3">
         <li value="enabled"><img src="../Gpt3.png"/>
+        <think>
+          <set name="topic"><star/></set>
+        </think>
         <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_gpt3.onText(u"<condition name="askGpt3">
-        <li><get name="askGpt3" /> <get name="courant" /></li> <li value="unknown"><get name="what" /></li></condition>")</param>
+            <param>i01_gpt3.onText("<star/>")</param>
           </mrl>
         </oob>
         </li>
@@ -70,7 +62,7 @@
       <li value="enabled">
         <think><set name="topic">gptfull</set>
                <set name="gptStop"></set></think>
-          Bien, estoy listo para eso. Si quieres salir, di, deja de gpt.      </li>
+          Bien, estoy listo para eso. Si quieres salir, di, deja de gpt.</li>
       <li>No tengo gpt3 habilitado.</li>
     </condition>
   </template>
