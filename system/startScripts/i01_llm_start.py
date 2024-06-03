@@ -10,3 +10,4 @@ if runtime.isStarted('i01.llm'):
     if runtime.isStarted('i01.chatBot'):
         i01_chatBot.setPredicate("llm", "enabled")
         i01_chatBot.savePredicates()
+    L_Llm()    
