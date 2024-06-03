@@ -574,7 +574,7 @@
   </category>
   </topic>
 
-  <category><pattern>LARGE LANGUAGE COMMUNICATION</pattern>
+  <category><pattern>LARGE LANGAGE COMMUNICATION</pattern>
   <template>
     <condition name="llm">
       <li value="enabled">
@@ -582,7 +582,7 @@
                <set name="llmStop"></set></think>
           Okay, je suis prêt. Si tu souhaites arrêter la communication directe avec le large language, dis stop large language.
       </li>
-      <li>Le service LLM n'est pas démarré.</li>
+      <li>Le service LLM n'est pas activé.</li>
     </condition>
   </template>
   </category>
