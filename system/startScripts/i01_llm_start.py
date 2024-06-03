@@ -10,4 +10,4 @@ if runtime.isStarted('i01.llm'):
     if runtime.isStarted('i01.chatBot'):
         i01_chatBot.setPredicate("llm", "enabled")
         i01_chatBot.savePredicates()
-    L_Llm()    
+    execfile("resource/InMoov2/services/L_Llm.py")    
