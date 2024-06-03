@@ -574,40 +574,28 @@
   </category>
   </topic>
 
-  <category><pattern>J AI PÉTÉ COMMUNICATION</pattern>
-  <template><srai>GPT COMMUNICATION</srai></template>
-  </category>
-
-  <category><pattern>GPT COMMUNICATION</pattern>
+  <category><pattern>LARGE LANGUAGE COMMUNICATION</pattern>
   <template>
-    <condition name="gpt3">
+    <condition name="llm">
       <li value="enabled">
-        <think><set name="topic">gptfull</set>
-               <set name="gptStop"></set></think>
-          Okay, je suis prêt. Si tu souhaites arrêter la communication directe avec g.p.t, dis stop gpt.
+        <think><set name="topic">llmfull</set>
+               <set name="llmStop"></set></think>
+          Okay, je suis prêt. Si tu souhaites arrêter la communication directe avec le large language, dis stop large language.
       </li>
-      <li>Le service GPT n'est pas démarré.</li>
+      <li>Le service LLM n'est pas démarré.</li>
     </condition>
   </template>
   </category>
 
-  <topic name="GPTFULL">
+  <topic name="LLMFULL">
   <category><pattern>#</pattern>
-  <template><think><set name="gptStop"><star/></set></think>
-            <condition name="gptStop">
-            <li value="stop gpt">D'accord, retour sur program AB.
+  <template><think><set name="llmStop"><star/></set></think>
+            <condition name="llmStop">
+            <li value="stop large language">D'accord, retour sur program AB.
                 <think><set name="topic">default</set>
-                       <set name="gptStop"></set>
-                </think></li>
-            <li value="stoppe j ai pété">D'accord, retour sur program AB.
-                <think><set name="topic">default</set>
-                       <set name="gptStop"></set>
-                </think></li>
-            <li value="stop j ai pété">D'accord, retour sur program AB.
-                <think><set name="topic">default</set>
-                       <set name="gptStop"></set>
+                       <set name="llmStop"></set>
                 </think></li>    
-            <li><img src="../Gpt3.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_gpt3.onText("<star/>")</param></mrl></oob></li>
+            <li><img src="../Llm.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_llm.onText("<star/>")</param></mrl></oob></li>
             </condition>
   </template>
   </category>
