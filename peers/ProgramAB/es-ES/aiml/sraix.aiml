@@ -56,36 +56,15 @@
         </template>
 </category>
 
-<category><pattern>COMUNICACIÓN GPT</pattern>
-  <template>
-    <condition name="gpt3">
-      <li value="enabled">
-        <think><set name="topic">gptfull</set>
-               <set name="gptStop"></set></think>
-          Bien, estoy listo para eso. Si quieres salir, di, deja de gpt.</li>
-      <li>No tengo gpt3 habilitado.</li>
-    </condition>
-  </template>
-</category>
-
-<topic name="GPTFULL">
-<category><pattern>#</pattern>
-  <template><think><set name="gptStop"><star/></set></think>
-            <condition>
-            <li name="gptStop" value="deja de gpt">Ok, volvamos al programa AB.
-                <think><set name="topic">default</set>
-                       <set name="gptStop"></set>
-                </think></li>
-            <li><img src="../Gpt3.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_gpt3.onText("<star/>")</param></mrl></oob></li>
-            </condition>
-  </template>
-</category>
-</topic>
 <category><pattern>COMUNICACIÓN LLM</pattern>
   <template>
+    <condition name="llm">
+      <li value="enabled">
         <think><set name="topic">llmfull</set>
                <set name="llmStop"></set></think>
-          Bien, estoy listo para eso. Si quieres salir, di, deja de llm.
+          Bien, estoy listo para eso. Si quieres salir, di, deja de llm.</li>
+      <li>No tengo llm habilitado.</li>
+    </condition>
   </template>
 </category>
 
@@ -102,4 +81,5 @@
   </template>
 </category>
 </topic>
+
 </aiml>
