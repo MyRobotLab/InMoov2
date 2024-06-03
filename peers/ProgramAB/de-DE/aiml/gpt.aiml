@@ -4,8 +4,8 @@
 <!-- gpt -->
 
 <category><pattern>SRAIXFAILED *</pattern>
-<template><condition name="gpt3">
-        <li value="enabled"><img src="../Gpt3.png"/>
+<template><condition name="llm">
+        <li value="enabled"><img src="../Llm.png"/>
         <think>
           <set name="topic"><star/></set>
         </think>
@@ -13,7 +13,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_gpt3.onText("<star/>")</param>
+            <param>i01_llm.onText("<star/>")</param>
           </mrl>
         </oob>
         </li>
@@ -33,26 +33,26 @@
         </template>
 </category>
 
-<category><pattern>GPT KOMMUNIKATION</pattern>
+<category><pattern>LLM KOMMUNIKATION</pattern>
   <template>
-    <condition name="gpt3">
+    <condition name="llm">
       <li value="enabled">
-        <think><set name="topic">gptfull</set>
-               <set name="gptStop"></set></think>
-          Okay, dafür bin ich bereit. Wenn Sie raus wollen, sagen Sie, stoppen Sie gpt.      </li>
-      <li>Ich habe gpt3 nicht gestartet.</li>
+        <think><set name="topic">llmfull</set>
+               <set name="llmStop"></set></think>
+          Okay, dafür bin ich bereit. Wenn Sie raus wollen, sagen Sie, stoppen Sie llm.      </li>
+      <li>Ich habe llm nicht gestartet.</li>
     </condition>
   </template>
 </category>
 
-<topic name="GPTFULL">
+<topic name="LLMFULL">
 <category><pattern>#</pattern>
-  <template><think><set name="gptStop"><star/></set></think>
+  <template><think><set name="llmStop"><star/></set></think>
             <condition>
-            <li name="gptStop" value="stoppen Sie gpt">Ok, zurück zum Programm AB.                <think><set name="topic">default</set>
-                       <set name="gptStop"></set>
+            <li name="llmStop" value="stoppen Sie llm">Ok, zurück zum Programm AB.                <think><set name="topic">default</set>
+                       <set name="llmStop"></set>
                 </think></li>
-            <li><img src="../Gpt3.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_gpt3.onText("<star/>")</param></mrl></oob></li>
+            <li><img src="../Llm.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_llm.onText("<star/>")</param></mrl></oob></li>
             </condition>
   </template>
 </category>
