@@ -192,6 +192,14 @@
     <template>Arrêt de la main gauche</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STARTED llm</pattern>
+    <template>Démarrage du model large langage</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED llm</pattern>
+    <template>Arrêt du model large langage</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED log</pattern>
     <template>Démarrage du service log</template>
   </category>
