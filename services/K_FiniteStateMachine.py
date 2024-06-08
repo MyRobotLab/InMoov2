@@ -3,13 +3,14 @@
 #                 FINITE STATE MACHINE SERVICE FILE
 # ##############################################################################
 
-i01_fsm = i01.startPeer('fsm')
+
+fsm = runtime.getService('i01.fsm')
 def initFsm():
-    i01_fsm.getConfig()
+    fsm.getConfig()
 
 if runtime.isStarted('i01.fsm'):
     initFsm()
-    i01_fsm.addTransition("idle","track","isTracking")
-    i01_fsm.addTransition("isTracking","stopTrack","idle")
-    print(i01_fsm.getState())
+    fsm.addTransition("idle","track","isTracking")
+    fsm.addTransition("isTracking","stopTrack","idle")
+    print(fsm.getState())
     sleep(1)

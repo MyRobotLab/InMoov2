@@ -8,9 +8,10 @@
 # ##############################################################################
 
 #i01_opencv = Runtime.create("i01.opencv", "OpenCV")
+opencv = runtime.getService('i01.opencv')
 def initOpencv():
-  i01_opencv.getConfig()
-  python.subscribe("i01.opencv", "publishRecognizedFace")
+  opencv.getConfig()
+  python.subscribe("opencv", "publishRecognizedFace")
 
 def initTracking():
   if runtime.isStarted('i01.headTracking'):
@@ -28,9 +29,9 @@ def onRecognizedFace(name):
   if runtime.isStarted('i01.opencv'):
     if runtime.isStarted('i01.chatBot'):
       i01_chatBot.startSession(unicode(name,'utf-8'))
-      i01_opencv.removeFilter("FaceRecognizer")
+      opencv.removeFilter("FaceRecognizer")
       i01_chatBot.getResponse("SYSTEM_SAY_HELLO")
-      i01_opencv.stopCapture()
+      opencv.stopCapture()
       print("recognized:" + name)
   else:
     if runtime.isStarted('i01.chatBot'):
