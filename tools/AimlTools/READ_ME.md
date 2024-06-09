@@ -1,6 +1,7 @@
 The AIML_Assistant.jar is a small app to create your own aiml files.
 
 1-Double click on it start and use the app.
+
 #####################################################################
 
 These tools converts your aiml to csv and vice versa for easy edition into Word or OpenOffice.
