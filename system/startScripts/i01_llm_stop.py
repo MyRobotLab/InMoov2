@@ -6,6 +6,15 @@
 # uncomment for virtual hardware
 # Platform.setVirtual(True) 
 
-if runtime.isStarted('i01.chatBot'):
-   i01_chatBot.setPredicate("llm","")
-   i01_chatBot.savePredicates()
+llm = runtime.getService('i01.chatBot')
+if chatBot:
+   chatBot.setPredicate("llm","")
+   chatBot.savePredicates()
+
+llm = runtime.getService('i01.llm')
+if llm:
+   config = llm.getConfig()
+   config.system = ''
+   llm.apply(config)
+   llm.save()
+   llm.broadcastState()
