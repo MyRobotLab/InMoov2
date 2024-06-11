@@ -186,7 +186,15 @@
   <category>
     <pattern>SYSTEM_EVENT STOPPED log</pattern>
     <template>Parando o serviço de log</template>
-  </category>  
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED llm</pattern>
+    <template>Iniciar llm</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED llm</pattern>
+    <template>Parar llm</template>
+  </category>
   <category>
     <pattern>SYSTEM_EVENT STARTED mouth</pattern>
     <template>iniciar boca</template>
