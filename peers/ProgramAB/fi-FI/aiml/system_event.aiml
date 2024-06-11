@@ -191,6 +191,14 @@
   <category>
     <pattern>SYSTEM_EVENT STOPPED log</pattern>
     <template>Lokipalvelun pysäyttäminen</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED llm</pattern>
+    <template>llm:n käynnistys</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED llm</pattern>
+    <template>llm:n pysähtyminen</template>
   </category>  
   <category>
     <pattern>SYSTEM_EVENT STARTED mouth</pattern>
