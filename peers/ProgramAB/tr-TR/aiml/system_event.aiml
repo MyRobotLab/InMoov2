@@ -184,6 +184,14 @@
     <template>Günlük hizmetini başlatma</template>
 </category>
 <category>
+    <pattern>SYSTEM_EVENT STARTED llm</pattern>
+    <template>llm başlatılıyor</template>
+</category>
+<category>
+    <pattern>SYSTEM_EVENT STOPPED llm</pattern>
+    <template>llm durduruluyor</template>
+  </category>
+<category>
     <pattern>SYSTEM_EVENT STOPPED leap</pattern>
     <template>Günlük hizmetini durdurma</template>
   </category>
