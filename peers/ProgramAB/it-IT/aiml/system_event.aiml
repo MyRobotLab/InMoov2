@@ -192,7 +192,16 @@
   <category>
     <pattern>SYSTEM_EVENT STOPPED log</pattern>
     <template>Arresto del servizio di registro</template>
-  </category>  
+  </category>
+
+  <category>
+    <pattern>SYSTEM_EVENT STARTED llm</pattern>
+    <template>Avvio di llm</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED llm</pattern>
+    <template>Fermo di llm</template>
+  </category>
 
   <category>
     <pattern>SYSTEM_EVENT STARTED mouth</pattern>
