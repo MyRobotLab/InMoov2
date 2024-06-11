@@ -187,6 +187,14 @@
     <template>停止log</template>
   </category>
   <category>
+    <pattern>SYSTEM_EVENT STARTED llm</pattern>
+    <template>启动llm</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED llm</pattern>
+    <template>停止llm</template>
+  </category>
+  <category>
     <pattern>SYSTEM_EVENT STARTED mouth</pattern>
     <template>启动嘴巴</template>
   </category>
