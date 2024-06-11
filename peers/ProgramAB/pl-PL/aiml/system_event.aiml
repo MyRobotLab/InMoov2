@@ -34,6 +34,16 @@
 <template>ładowanie gestów
 </template>
 </category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED gpt3</pattern>
+<template>gpt3 początek</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED gpt3</pattern>
+<template>gpt3 bezpieczniki</template>
+</category>
   
 <category>
 <pattern>SYSTEM_EVENT STARTED RIGHTARM</pattern>
@@ -79,6 +89,16 @@
 <category>
 <pattern>SYSTEM_EVENT STOPPED log</pattern>
 <template>Zatrzymywanie usługi dziennika</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED llm</pattern>
+<template>llm początek</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED llm</pattern>
+<template>llm bezpieczniki</template>
 </category>
 
 <category>
