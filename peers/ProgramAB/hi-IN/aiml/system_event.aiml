@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- InMoov2 system events translated by gpt3 :) -->
+
 <aiml>
   <category>
     <pattern>SYSTEM_EVENT WAKE</pattern>
@@ -194,6 +194,15 @@
   <category>
     <pattern>SYSTEM_EVENT STOPPED log</pattern>
     <template>लॉग सेवा बंद करना</template>
+  </category>
+
+  <category>
+    <pattern>SYSTEM_EVENT STARTED llm</pattern>
+    <template>llm शुरू करें</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED llm</pattern>
+    <template>llm बंद करें</template>
   </category>  
 
   <category>
