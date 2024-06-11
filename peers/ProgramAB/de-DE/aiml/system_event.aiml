@@ -207,6 +207,15 @@
   </category>
 
   <category>
+    <pattern>SYSTEM_EVENT STARTED llm</pattern>
+    <template>llm starten</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED llm</pattern>
+    <template>llm stoppen</template>
+  </category>
+
+  <category>
     <pattern>SYSTEM_EVENT STARTED mouth</pattern>
     <template>Mund starten</template>
   </category>
