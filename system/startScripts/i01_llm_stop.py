@@ -14,7 +14,7 @@ if chatBot:
 llm = runtime.getService('i01.llm')
 if llm:
    config = llm.getConfig()
-   config.system = ''
+   config.system = "You are a helpful robot."
    llm.apply(config)
    llm.save()
    llm.broadcastState()
