@@ -12,7 +12,7 @@ if llm:
   es = 'es-ES'
   de = 'de-DE'
   it = 'it-IT'
-  if setSystem == '':
+  if setSystem == "You are a helpful robot.":
     config = llm.getConfig()
     if runtime.getLocale().getTag() == en:
       config.system = u"You are {{BotName}} a safe AI assistant, your description {{Description}}.\
