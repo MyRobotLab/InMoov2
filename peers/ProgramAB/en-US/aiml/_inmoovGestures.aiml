@@ -1056,7 +1056,7 @@
         </random>
         <oob><mrl><service>python</service><method>exec</method><param>agreeanswer()</param></mrl></oob></template>
 </category>
-<category><pattern>SORRY</pattern>
+<category><pattern>I AM SORRY</pattern>
 <template><random>
           <li>No problems.</li>
           <li>It doesn't matter.</li>
