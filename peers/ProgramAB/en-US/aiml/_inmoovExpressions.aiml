@@ -53,6 +53,12 @@
           </think>
           <img src="../InMoov2/system/pictures/faceExpression/sad.png"></img>
 </li>
+        <li value="sigh">
+          <think>
+            <set name="face">sigh</set>
+          </think>
+          <img src="../InMoov2/system/pictures/faceExpression/sigh.png"></img>
+</li>
         <li value="sorry">
           <think>
             <set name="face">sorry</set>
@@ -176,6 +182,15 @@
     </template>
   </category>
   <category>
+    <pattern>APPSIGH</pattern>
+    <template>
+      <think>
+        <set name="emotion">sigh</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
     <pattern>APPSORRY</pattern>
     <template>
       <think>
@@ -244,7 +259,7 @@
   <category>
     <pattern>CHANGE FACE EXPRESSIONS</pattern>
     <template>yes, look.
-<random><li>Here I have no expression.<srai>APPNEUTRAL</srai></li><li>I look angry.<srai>APPANGER</srai></li><li>I am winking.<srai>APPACCOMPLICE</srai></li><li>I am disgust.<srai>APPDISGUST</srai></li><li>I am scared.<srai>APPFEAR</srai></li><li>I am happy.<srai>APPHAPPY</srai></li><li>I smile.<srai>APPSMILE</srai></li><li>I am sad.<srai>APPSAD</srai></li><li>I am sorry.<srai>APPSORRY</srai></li><li>I am suspicious.<srai>APPSUSPICIOUS</srai></li><li>I am thinking.<srai>APPTHINKING</srai></li><li>I am unamused.<srai>APPUNAMUSED</srai></li></random></template>
+<random><li>Here I have no expression.<srai>APPNEUTRAL</srai></li><li>I look angry.<srai>APPANGER</srai></li><li>I am winking.<srai>APPACCOMPLICE</srai></li><li>I am disgust.<srai>APPDISGUST</srai></li><li>I am scared.<srai>APPFEAR</srai></li><li>I am happy.<srai>APPHAPPY</srai></li><li>I smile.<srai>APPSMILE</srai></li><li>I am sad.<srai>APPSAD</srai></li><li>I am sorry.<srai>APPSORRY</srai></li><li>I am suspicious.<srai>APPSUSPICIOUS</srai></li><li>I am thinking.<srai>APPTHINKING</srai></li><li>I am unamused.<srai>APPUNAMUSED</srai></li><li>I am sighing.<srai>APPSIGH</srai></li></random></template>
   </category>
   <category>
     <pattern># FACE EXPRESSION</pattern>
@@ -319,6 +334,12 @@
     <pattern>SAD</pattern>
     <template>
       <srai>APPSAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SIGH</pattern>
+    <template>
+      <srai>APPSIGH</srai>
     </template>
   </category>
   <category>
