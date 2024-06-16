@@ -7,6 +7,12 @@
 
 ###///EYE MOVEMENT LIST///###
 
+###BOTH EYES SPEED###
+
+#eyesFullSpeed()
+#eyesHalfSpeed()
+#eyesLowSpeed()
+
 ###BOTH EYES###
 #eyesC()               /     Centers both eyes
 #eyesU()               /     Looks up
@@ -52,6 +58,30 @@
 #eyeRightOuterSpin()   /     right eye - Spin Outwards
 
 
+###BOTH EYES SPEED###
+def eyesFullSpeed():
+  if runtime.isStarted('i01.head.eyeLeftUD') and runtime.isStarted('i01.head.eyeLeftLR') and runtime.isStarted('i01.head.eyeRightUD') and runtime.isStarted('i01.head.eyeRightLR'):
+    i01_head_eyeLeftUD.setSpeed(500)
+    i01_head_eyeLeftLR.setSpeed(500)
+    i01_head_eyeRightUD.setSpeed(500)
+    i01_head_eyeRightLR.setSpeed(500)
+
+def eyesHalfSpeed():
+  if runtime.isStarted('i01.head.eyeLeftUD') and runtime.isStarted('i01.head.eyeLeftLR') and runtime.isStarted('i01.head.eyeRightUD') and runtime.isStarted('i01.head.eyeRightLR'):
+    i01_head_eyeLeftUD.setSpeed(200)
+    i01_head_eyeLeftLR.setSpeed(200)
+    i01_head_eyeRightUD.setSpeed(200)
+    i01_head_eyeRightLR.setSpeed(200)
+
+def eyesLowSpeed():
+  if runtime.isStarted('i01.head.eyeLeftUD') and runtime.isStarted('i01.head.eyeLeftLR') and runtime.isStarted('i01.head.eyeRightUD') and runtime.isStarted('i01.head.eyeRightLR'):
+    i01_head_eyeLeftUD.setSpeed(20)
+    i01_head_eyeLeftLR.setSpeed(20)
+    i01_head_eyeRightUD.setSpeed(20)
+    i01_head_eyeRightLR.setSpeed(20)
+
+
+#############################################
 ###BOTH EYES###
 def eyesC():
   if runtime.isStarted('i01.head.eyeLeftUD') and runtime.isStarted('i01.head.eyeLeftLR') and runtime.isStarted('i01.head.eyeRightUD') and runtime.isStarted('i01.head.eyeRightLR'):

@@ -19,11 +19,17 @@ def faceMove(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, pos10, pos11,
 
 def neutral():
   cheeksNeutral()
+  cheeksFullSpeed()
   upperLipNeutral()
+  upperLipFullSpeed()
   eyelidsNeutral()
+  eyelidsFullSpeed()
   eyesC()
+  eyesFullSpeed()
   browsC()
+  browsFullSpeed()
   forheadsNeutral()
+  forheadsFullSpeed()
 
 def anger():
   forheadsU()    
@@ -64,13 +70,14 @@ def fear():
   neutral()
 
 def happy():
+  cheeksLowSpeed()
   cheeksU()
   upperLipD()
   lowerEyelidsU()
   if runtime.isStarted('i01.head'):
     i01_head_jaw.rest()
   sleep(1)
-  neutral()  
+  neutral()
 
 def sad():
   upperEyelidsClose()
@@ -114,13 +121,18 @@ def sorry():
   neutral()
 
 def smile():
+  cheeksHalfSpeed()
   cheeksU()
-  lowerEyelidsU()
+  lowerEyelidsClose()
   if runtime.isStarted('i01.head'):
-    i01_head_jaw.moveTo(90)
-  sleep(0.2)
+    i01_head_jaw.moveTo(110)
+  sleep(1)
+  eyelidsLowSpeed()
+  lowerEyelidsU()
+  cheeksC()
   if runtime.isStarted('i01.head'):
     i01_head_jaw.rest()
+  sleep(0.5)
   neutral()  
 
 def sleeping():

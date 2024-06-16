@@ -7,6 +7,12 @@
 
 ###///EYELID MOVEMENT LIST///###
 
+###BOTH EYELIDS SPEED###
+
+#eyelidsFullSpeed()
+#eyelidsHalfSpeed()
+#eyelidsLowSpeed()
+
 ###BOTH EYELIDS###
 
 #blink()                    /       Blinks Eyelids
@@ -49,8 +55,30 @@
 #lowerEyelidRightU()        /       Half Close Lower right Eyelid
 
 
-###BOTH EYELIDS###
+###BOTH EYELIDS SPEED###
+def eyelidsFullSpeed():
+  if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower') and runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
+    i01_head_eyelidLeftUpper.setSpeed(500)
+    i01_head_eyelidRightUpper.setSpeed(500)
+    i01_head_eyelidLeftLower.setSpeed(500)
+    i01_head_eyelidRightLower.setSpeed(500)
 
+def eyelidsHalfSpeed():
+  if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower') and runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
+    i01_head_eyelidLeftUpper.setSpeed(200)
+    i01_head_eyelidRightUpper.setSpeed(200)
+    i01_head_eyelidLeftLower.setSpeed(200)
+    i01_head_eyelidRightLower.setSpeed(200)
+
+def eyelidsLowSpeed():
+  if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower') and runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
+    i01_head_eyelidLeftUpper.setSpeed(20)
+    i01_head_eyelidRightUpper.setSpeed(20)
+    i01_head_eyelidLeftLower.setSpeed(20)
+    i01_head_eyelidRightLower.setSpeed(20)
+
+#############################################
+###BOTH EYEBROWS###  
 def blink():
   if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower') and runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
       i01_head_eyelidLeftUpper.moveTo(180)
@@ -164,8 +192,8 @@ def lowerEyelidsClose():
 
 def lowerEyelidsU():
   if runtime.isStarted('i01.head.eyelidLeftLower') and runtime.isStarted('i01.head.eyelidRightLower'):
-    i01_head_eyelidLeftLower.moveTo(110)
-    i01_head_eyelidRightLower.moveTo(110)
+    i01_head_eyelidLeftLower.moveTo(50)
+    i01_head_eyelidRightLower.moveTo(50)
     
   
   

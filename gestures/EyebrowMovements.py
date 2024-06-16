@@ -5,8 +5,13 @@
 # i01_head_eyebrowRight.PIN(11)
 # i01_head_eyebrowLeft.PIN(14)
 
-###BOTH EYEBROWS###
+###BOTH EYEBROWS SPEED###
 
+#browsFullSpeed()
+#browsHalfSpeed()
+#browsLowSpeed()
+
+###BOTH EYEBROWS###
 
 #browsC()                          /       Centers Eyebrows
 #browsU()                          /       Raises Eyebrows
@@ -27,6 +32,24 @@
 #browRightU()                   /       Raises right Eyebrow
 #browRightD()                   /       Lowers right Eyebrow
 
+###BOTH EYEBROWS SPEED###
+def browsFullSpeed():
+  if runtime.isStarted('i01.head.eyebrowLeft') and runtime.isStarted('i01.head.eyebrowRight'):
+    i01_head_eyebrowRight.setSpeed(500)
+    i01_head_eyebrowLeft.setSpeed(500)
+
+def browsHalfSpeed():
+  if runtime.isStarted('i01.head.eyebrowLeft') and runtime.isStarted('i01.head.eyebrowRight'):
+    i01_head_eyebrowRight.setSpeed(200)
+    i01_head_eyebrowLeft.setSpeed(200)
+
+def browsLowSpeed():
+  if runtime.isStarted('i01.head.eyebrowLeft') and runtime.isStarted('i01.head.eyebrowRight'):      
+    i01_head_eyebrowRight.setSpeed(20)
+    i01_head_eyebrowLeft.setSpeed(20)
+
+
+#############################################
 ###BOTH EYEBROWS###
 def browsC():
   if runtime.isStarted('i01.head.eyebrowLeft') and runtime.isStarted('i01.head.eyebrowRight'):

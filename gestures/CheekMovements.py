@@ -1,5 +1,11 @@
 ###///MOUTH MOVEMENT LIST///###
 
+###BOTH CHEEKS SPEED###
+
+#cheeksFullSpeed()
+#cheeksHalfSpeed()
+#cheeksLowSpeed()
+
 ###BOTH CHEEKS###
 
 #cheeksNeutral()                    /       Rest Cheeks
@@ -23,12 +29,25 @@
 #cheekRightU()                   /       Raises right Cheek
 #cheekRightD()                   /       Lowers right Cheek
 
+
+###UPPER LIP SPEED###
+
+#upperLipFullSpeed()
+#upperLipHalfSpeed()
+#upperLipLowSpeed()
+
 ###UPPER LIP###
 
 #upperLipNeutral()               /       Rest UpperLip
 #upperLipC()                     /       Centers UpperLip
 #upperLipU()                     /       Raises UpperLip
 #upperLipD()                     /       Lowers UpperLip
+
+###BOTH FORHEADS SPEED###
+
+#forheadsFullSpeed()
+#forheadsHalfSpeed()
+#forheadsLowSpeed()
 
 ###BOTH FORHEADS###
 
@@ -54,16 +73,30 @@
 #forheadLeftD()                 /       Lowers left forhead
 
 
+###BOTH CHEEKS SPEED###
+def cheeksFullSpeed():
+  if runtime.isStarted('i01.head.cheekLeft') and runtime.isStarted('i01.head.cheekRight'):
+    i01_head_cheekRight.setSpeed(500)
+    i01_head_cheekLeft.setSpeed(500)
+
+def cheeksHalfSpeed():
+  if runtime.isStarted('i01.head.cheekLeft') and runtime.isStarted('i01.head.cheekRight'):
+    i01_head_cheekRight.setSpeed(200)
+    i01_head_cheekLeft.setSpeed(200)
+
+def cheeksLowSpeed():
+  if runtime.isStarted('i01.head.cheekLeft') and runtime.isStarted('i01.head.cheekRight'):
+    i01_head_cheekRight.setSpeed(20)
+    i01_head_cheekLeft.setSpeed(20)
+
+
+#############################################
+
 ###BOTH CHEEKS###
 def cheeksNeutral():
   if runtime.isStarted('i01.head.cheekLeft') and runtime.isStarted('i01.head.cheekRight'):
     i01_head_cheekRight.rest()
     i01_head_cheekLeft.rest()
-
-def cheeksC():
-  if runtime.isStarted('i01.head.cheekLeft') and runtime.isStarted('i01.head.cheekRight'):
-    i01_head_cheekRight.moveTo(90)
-    i01_head_cheekLeft.moveTo(90)
 
 def cheeksU():
   if runtime.isStarted('i01.head.cheekLeft') and runtime.isStarted('i01.head.cheekRight'):
@@ -76,6 +109,10 @@ def cheeksD():
     i01_head_cheekRight.moveTo(0)
     i01_head_cheekLeft.moveTo(0)
     
+def cheeksC():
+  if runtime.isStarted('i01.head.cheekLeft') and runtime.isStarted('i01.head.cheekRight'):
+    i01_head_cheekRight.moveTo(90)
+    i01_head_cheekLeft.moveTo(90)
 
 #############################################
 
@@ -114,7 +151,7 @@ def cheekLeftD():
     i01_head_cheekLeft.moveTo(0)
     
   
-  ###RIGHT CHEEK ONLY###
+###RIGHT CHEEK ONLY###
 
 def cheekRightNeutral():
   if runtime.isStarted('i01.head.cheekRight'):
@@ -134,8 +171,24 @@ def cheekRightU():
 def cheekRightD():
   if runtime.isStarted('i01.head.cheekRight'):
     i01_head_cheekRight.moveTo(0)
-    
 
+#############################################
+
+###UPPER LIP SPEED###
+def upperLipFullSpeed():
+  if runtime.isStarted('i01.head.upperLip'):
+    i01_head_upperLip.setSpeed(500)
+
+def upperLipHalfSpeed():
+  if runtime.isStarted('i01.head.upperLip'):
+    i01_head_upperLip.setSpeed(200)
+
+def upperLipLowSpeed():
+  if runtime.isStarted('i01.head.upperLip'):
+    i01_head_upperLip.setSpeed(20)
+
+
+###UPPER LIP ONLY###
 def upperLipNeutral():
   if runtime.isStarted('i01.head.upperLip'):
     i01_head_upperLip.rest()
@@ -155,8 +208,25 @@ def upperLipD():
   if runtime.isStarted('i01.head.upperLip'):
     i01_head_upperLip.moveTo(0)
 
+#############################################
 
-###BOTH FORHEADS###
+###BOTH FORHEADS SPEED###
+def forheadsFullSpeed():
+  if runtime.isStarted('i01.head.forheadLeft') and runtime.isStarted('i01.head.forheadRight'):
+    i01_head_forheadRight.setSpeed(500)
+    i01_head_forheadLeft.setSpeed(500)
+
+def forheadsHalfSpeed():
+  if runtime.isStarted('i01.head.forheadLeft') and runtime.isStarted('i01.head.forheadRight'):
+    i01_head_forheadRight.setSpeed(200)
+    i01_head_forheadLeft.setSpeed(200)
+
+def forheadsLowSpeed():
+  if runtime.isStarted('i01.head.forheadLeft') and runtime.isStarted('i01.head.forheadRight'):
+    i01_head_forheadRight.setSpeed(20)
+    i01_head_forheadLeft.setSpeed(20)
+
+###BOTH FORHEADS###    
 
 def forheadsNeutral():
   if runtime.isStarted('i01.head.forheadLeft') and runtime.isStarted('i01.head.forheadRight'):
