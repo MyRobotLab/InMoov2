@@ -1,4 +1,4 @@
-def happy():
+def happy_1():
   #i01.startedGesture()
   if runtime.isStarted('i01.head'):
     i01.setHeadSpeed(22.0, 22.0)
