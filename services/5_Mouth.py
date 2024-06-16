@@ -91,13 +91,13 @@ def onStartSpeaking(text):
                     i01_random.enable('i01.moveHead')
                     i01_random.addRandom("randomBlink", 5000, 30000, "python", "exec", "blink()")
                     i01_random.enable('randomBlink')
-                    i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "upperLipU()", "upperLipD()", "cheeksU()", "cheeksD()", "forheadsU()", "forheadsD()")
+                    i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "forheadsU()", "forheadsD()")
                     i01_random.enable('randomFace')
 
             else:
                 i01_random.addRandom("randomBlink", 5000, 30000, "python", "exec", "blink()")
                 i01_random.enable('randomBlink')
-                i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "upperLipU()", "upperLipD()", "cheeksU()", "cheeksD()", "forheadsU()", "forheadsD()")
+                i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "forheadsU()", "forheadsD()")
 
 def onFilterText(text):
   # filter all you want here
