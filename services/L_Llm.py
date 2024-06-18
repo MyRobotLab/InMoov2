@@ -12,6 +12,8 @@ if llm:
   es = 'es-ES'
   de = 'de-DE'
   it = 'it-IT'
+  llm.removeListener('publishText', 'i01.htmlFilter')
+  python.subscribe(llm.getName(), "publishText", "onFilterText")
   if setSystem == "You are a helpful robot.":
     config = llm.getConfig()
     if runtime.getLocale().getTag() == en:
