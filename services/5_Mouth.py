@@ -69,13 +69,13 @@ def onStartSpeaking(text):
                   i01_random.enable('i01.moveHead')
                   i01_random.addRandom("randomBlink", 5000, 30000, "python", "exec", "blink()")
                   i01_random.enable('randomBlink')
-                  i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "forheadsU()", "forheadsD()")
+                  i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "halfSpeedFaceMove()")
                   i01_random.enable('randomFace')
 
           else:
               i01_random.addRandom("randomBlink", 5000, 30000, "python", "exec", "blink()")
               i01_random.enable('randomBlink')
-              i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "forheadsU()", "forheadsD()")
+              i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "halfSpeedFaceMove()")
               i01_random.enable('randomFace')
       else:
         i01_random = i01.startPeer('random')
@@ -91,13 +91,13 @@ def onStartSpeaking(text):
                     i01_random.enable('i01.moveHead')
                     i01_random.addRandom("randomBlink", 5000, 30000, "python", "exec", "blink()")
                     i01_random.enable('randomBlink')
-                    i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "forheadsU()", "forheadsD()")
+                    i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "halfSpeedFaceMove()")
                     i01_random.enable('randomFace')
 
             else:
                 i01_random.addRandom("randomBlink", 5000, 30000, "python", "exec", "blink()")
                 i01_random.enable('randomBlink')
-                i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "forheadsU()", "forheadsD()")
+                i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "halfSpeedFaceMove()")
 
 def onFilterText(text):
   # filter all you want here
@@ -119,7 +119,7 @@ def onFilterText(text):
   #print(filtered_text)
   if runtime.isStarted('i01.mouth'):
       i01_mouth.speak(filtered_text) 
-  #print(extracted_word)
+  print(extracted_word)
   
   # Dynamically calling the function based on the extracted_word
   function_to_call = globals().get(extracted_word)
