@@ -81,10 +81,6 @@ def eyelidsLowSpeed():
 ###BOTH EYEBROWS###  
 def blink():
   if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower') and runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
-      i01_head_eyelidLeftUpper.moveTo(180)
-      i01_head_eyelidRightUpper.moveTo(180)
-      i01_head_eyelidLeftLower.moveTo(180)
-      i01_head_eyelidRightLower.moveTo(180)
       sleep(0.1)
       i01_head_eyelidLeftUpper.moveTo(0)
       i01_head_eyelidRightUpper.moveTo(0)

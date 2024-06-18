@@ -17,6 +17,23 @@ def faceMove(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, pos10, pos11,
   sleep(2.5)
   neutral()
 
+def bodyMove(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, pos10, pos11, pos12, pos13):
+  i01_head_rothead.moveTo(pos1)
+  i01_head_neck.moveTo(pos2)
+  i01_head_rollNeck.moveTo(pos3)
+  i01_leftArm_omoplate.moveTo(pos4)
+  i01_leftArm_shoulder.moveTo(pos5)
+  i01_leftArm_rotate.moveTo(pos6)
+  i01_leftArm_bicep.moveTo(pos7)
+  i01_rightArm_omoplate.moveTo(pos8)
+  i01_rightArm_shoulder.moveTo(pos9)
+  i01_rightArm_rotate.moveTo(pos10)
+  i01_rightArm_bicep.moveTo(pos11)
+  i01_torso_topStom.moveTo(pos12)
+  i01_torso_midStom.moveTo(pos13)
+  sleep(2.5)
+  rest()  
+
 def neutral():
   cheeksNeutral()
   cheeksFullSpeed()
@@ -31,8 +48,36 @@ def neutral():
   forheadsNeutral()
   forheadsFullSpeed()
 
+def neutralHalfSpeed():
+  cheeksNeutral()
+  cheeksHalfSpeed()
+  upperLipNeutral()
+  upperLipHalfSpeed()
+  eyelidsNeutral()
+  eyelidsHalfSpeed()
+  eyesC()
+  eyesHalfSpeed()
+  browsC()
+  browsHalfSpeed()
+  forheadsNeutral()
+  forheadsHalfSpeed()  
+
+def neutralLowSpeed():
+  cheeksNeutral()
+  cheeksLowSpeed()
+  upperLipNeutral()
+  upperLipLowSpeed()
+  eyelidsNeutral()
+  eyelidsLowSpeed()
+  eyesC()
+  eyesLowSpeed()
+  browsC()
+  browsLowSpeed()
+  forheadsNeutral()
+  forheadsLowSpeed()  
+
 def anger():
-  forheadsU()    
+  forheadsU()
   eyelidsHalfShut()
   upperLipU()
   cheeksD()
@@ -59,7 +104,7 @@ def disgust():
   cheekRightU()
   browsD()
   sleep(1)
-  neutral()
+  neutralHalfSpeed()
 
 def fear():
   eyelidsOpen()
@@ -70,12 +115,19 @@ def fear():
   neutral()
 
 def happy():
+  browsHalfSpeed()
+  browsU()
   cheeksLowSpeed()
   cheeksU()
-  upperLipD()
-  lowerEyelidsU()
-  if runtime.isStarted('i01.head'):
+  upperLipC()
+  eyelidsLowSpeed()
+  lowerEyelidsClose()
+  if runtime.isStarted("i01.head"):
     i01_head_jaw.rest()
+  sleep(1)
+  browsC()
+  eyelidsNeutral()
+  cheeksNeutral()
   sleep(1)
   neutral()
 
@@ -104,19 +156,22 @@ def sigh():
   if runtime.isStarted('i01.head'):
     i01_head_neck.moveTo(0)
   if runtime.isStarted('i01.audioPlayer'):
-    i01_audioPlayer.setVolume(0.8)
     sleep(0.1)
     i01_audioPlayer.playFile('resource/InMoov2/system/sounds/Sigh_nose.wav')
     sleep(0.1)
-    i01_audioPlayer.setVolume(1)    
   sleep(3)
   if runtime.isStarted('i01.head'):
     i01_head_neck.moveTo(90)
   neutral()
 
 def sorry():
+  browsHalfSpeed()
   browsU()
+  cheeksLowSpeed()
   cheeksD()
+  sleep(0.8)
+  browsC()
+  cheeksC()
   sleep(0.5)
   neutral()
 
@@ -125,15 +180,14 @@ def smile():
   cheeksU()
   lowerEyelidsClose()
   if runtime.isStarted('i01.head'):
-    i01_head_jaw.moveTo(110)
+    i01_head_jaw.moveTo(100)
   sleep(1)
-  eyelidsLowSpeed()
-  lowerEyelidsU()
+  cheeksLowSpeed()
   cheeksC()
   if runtime.isStarted('i01.head'):
     i01_head_jaw.rest()
   sleep(0.5)
-  neutral()  
+  neutral()
 
 def sleeping():
   upperEyelidsClose()
@@ -148,7 +202,7 @@ def surprise():
   sleep(0.5)
   if runtime.isStarted('i01.head'):
     i01_head_jaw.rest()
-  neutral()
+  neutralHalfSpeed()
 
 def suspicious():
   upperLipD()
@@ -163,25 +217,75 @@ def suspicious():
 def thinking():
   browsD()
   forheadsU()
-  upperEyelidsHalfShut()
+  eyelidsHalfSpeed()
+  lowerEyelidsClose()
   if runtime.isStarted('i01.head.eyeY'):
-    i01_head_eyeY.moveTo(140)
+    i01_head_eyeY.moveTo(130)
+  if runtime.isStarted('i01.head.eyeX'):
+    i01_head_eyeX.moveTo(130)
   sleep(1.5)
   if runtime.isStarted('i01.head.eyeY'):
     i01_head_eyeY.rest()
+  if runtime.isStarted('i01.head.eyeX'):
+    i01_head_eyeX.rest()
   neutral()
 
 def unamused():
   browRightD()
   forheadsLURD()
+  eyelidsLowSpeed()
   eyelidsHalfShut()
+  eyesLowSpeed()
   eyesR()
+  cheeksLowSpeed()
   cheeksD()
   sleep(1.5)
-  neutral()
+  neutralHalfSpeed()
+unamused()
 
 def wake():
-  blink() 
+  blink()
+
+def lowSpeedFaceMove():
+  browsLowSpeed()
+  browRightD()
+  forheadsLowSpeed()
+  forheadsLURD()
+  sleep(1)
+  browsU()
+  forheadsU()
+  cheeksLowSpeed()
+  cheeksC()
+  sleep(1)
+  neutralLowSpeed()
+  i01.finishedGesture()
+
+def halfSpeedFaceMove():
+  browsHalfSpeed()
+  browRightD()
+  forheadsHalfSpeed()
+  forheadsLURD()
+  sleep(0.5)
+  cheeksHalfSpeed()
+  cheeksC()
+  sleep(1)
+  neutralHalfSpeed()
+  i01.finishedGesture()
+
+def fullSpeedFaceMove():
+  browsU()
+  forheadsU()
+  cheeksFullSpeed()
+  cheeksC()
+  sleep(1)
+  browsFullSpeed()
+  browRightD()
+  forheadsFullSpeed()
+  forheadsLURD()
+  sleep(1)
+  neutral()
+  i01.finishedGesture()
+
 
 def contempt():
   happy()
