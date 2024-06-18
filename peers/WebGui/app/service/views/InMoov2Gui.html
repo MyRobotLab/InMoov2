@@ -450,6 +450,10 @@
                                 <img src="settings.png" width="30" />
                             </a>
                         </span>
+                        <button class="btn btn-default" title="Enable audio peak to actuate the jaw and upperlip servo" ng-show="peer.isPeerStarted(service, 'mouth.audioFile')" 
+                            ng-click="execScript('system/startScripts/i01_audioPeak_start.py')">Enable</button>
+                        <button class="btn btn-default" title="Disable audio peak to actuate the jaw and upperlip servo" ng-show="peer.isPeerStarted(service, 'mouth.audioFile')"
+                            ng-click="execScript('system/startScripts/i01_audioPeak_stop.py')">Disable</button>
                     </td>
                 </tr>
             </table>
@@ -506,7 +510,7 @@
                     <td>
                         <button class="btn btn-default" title="Enable jaw movement while speaking" ng-show="!peer.isPeerStarted(service, 'mouthControl')"
                             ng-click="startPeer('mouthControl')">off</button>
-                        <button class="btn btn-info" title="Enable jaw movement while speaking" ng-show="peer.isPeerStarted(service, 'mouthControl')"
+                        <button class="btn btn-info" title="Enable jaw and movement while speaking" ng-show="peer.isPeerStarted(service, 'mouthControl')"
                             ng-click="releasePeer('mouthControl')">on</button>
                         <span ng-show="peer.isPeerStarted(service, 'mouthControl')">
                             <a href="" ng-click="mrl.changeTab(peer.getActualName(service, 'mouthControl'))">
