@@ -40,7 +40,7 @@
 </category>
 
 <category><pattern>*</pattern>
-<template><condition name="gpt3">
+<template><condition name="llm">
         <li value="enabled">
         <sraix><star/></sraix>
         </li>
