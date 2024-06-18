@@ -331,19 +331,19 @@
   </category>
 <category><pattern>CUAL ES *</pattern>
   <template><think>
-            <set name="askGpt3">Cual es</set>
+            <set name="askLlm">Cual es</set>
             <set name="learn">enabled</set>
          </think><srai><star/></srai></template>
 </category>
 <category><pattern>CUÁLES SON *</pattern>
   <template><think>
-            <set name="askGpt3">Cuáles son</set>
+            <set name="askLlm">Cuáles son</set>
             <set name="learn">enabled</set>
          </think><srai><star/></srai></template>
 </category>
 <category><pattern>QUE SON *</pattern>
   <template><think>
-            <set name="askGpt3">Que son</set>
+            <set name="askLlm">Que son</set>
             <set name="learn">enabled</set>
          </think><srai><star/></srai></template>
 </category>
@@ -1155,13 +1155,13 @@
 
 <category><pattern>QUÉ ES *</pattern>
 <template><think>
-            <set name="askGpt3">Qué es</set>
+            <set name="askLlm">Qué es</set>
             <set name="learn">enabled</set>
          </think><srai><star/></srai></template>
 </category>
 <category><pattern>QUÉ ES * *</pattern>
 <template><think>
-            <set name="askGpt3">Qué es <star index="1"/></set>
+            <set name="askLlm">Qué es <star index="1"/></set>
             <set name="learn">enabled</set>
          </think><srai><star index="2"/></srai></template>
 </category>
@@ -1236,13 +1236,13 @@
   </category>
   <category><pattern>QUIÉN ES *</pattern>
 <template><think>
-            <set name="askGpt3">Quién es</set>
+            <set name="askLlm">Quién es</set>
             <set name="learn">enabled</set>
          </think><srai><star/></srai></template>
 </category>
 <category><pattern>QUIÉN ES * *</pattern>
 <template><think>
-            <set name="askGpt3">Quién es <star index="1"/></set>
+            <set name="askLlm">Quién es <star index="1"/></set>
             <set name="learn">enabled</set>
          </think><srai><star index="2"/></srai></template>
 </category>
