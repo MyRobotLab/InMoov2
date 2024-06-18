@@ -458,28 +458,28 @@
 <template><srai>ZATRZYMAJ GESTY</srai></template>
 </category>
 
-<category><pattern>KOMUNIKACJA GPT</pattern>
+<category><pattern>KOMUNIKACJA DUŻO JĘZYKOWA</pattern>
   <template>
-    <condition name="gpt3">
+    <condition name="llm">
       <li value="enabled">
-        <think><set name="topic">gptfull</set>
-               <set name="gptStop"></set></think>
-          OK, jestem na to gotowy. Jeśli chcesz wyjść, powiedz: zatrzymaj gpt.
+        <think><set name="topic">llmfull</set>
+               <set name="llmStop"></set></think>
+          OK, jestem na to gotowy. Jeśli chcesz wyjść, powiedz: przestań używać dużego języka.
       </li>
-      <li>Nie mam uruchomionego gpt3.</li>
+      <li>Nie mam uruchomionego usługa modelu dużego języka.</li>
     </condition>
   </template>
 </category>
 
-<topic name="GPTFULL">
+<topic name="LLMFULL">
 <category><pattern>#</pattern>
-  <template><think><set name="gptStop"><star/></set></think>
+  <template><think><set name="llmStop"><star/></set></think>
             <condition>
-            <li name="gptStop" value="zatrzymaj gpt">OK, wracamy do programu AB.
+            <li name="llmStop" value="przestań używać dużego języka">OK, wracamy do programu AB.
                 <think><set name="topic">default</set>
-                       <set name="gptStop"></set>
+                       <set name="llmStop"></set>
                 </think></li>
-            <li><img src="../Gpt3.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_gpt3.onText("<star/>")</param></mrl></oob></li>
+            <li><img src="../Llm.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_llm.onText("<star/>")</param></mrl></oob></li>
             </condition>
   </template>
 </category>
