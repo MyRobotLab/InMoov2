@@ -18,11 +18,4 @@
   <template>Arrêt d'OpenWeatherMap</template>
 </category>
 
-<category><pattern>STARTINGGPT3</pattern>
-  <template>Démarrage de GPT3</template>
-</category>
-
-<category><pattern>STOPPINGGPT3</pattern>
-  <template>Arrêt de GPT3</template>
-</category>
 </aiml>

@@ -330,7 +330,7 @@
             </set>
             <set name="courant"><star/></set>
             <set name="topic"><star/></set>
-            <set name="askGpt3">Qui est</set>
+            <set name="askLlm">Qui est</set>
             <set name="determinantinterogatif">Qui est</set>
             <set name="learn">enabled</set>
                 </think>

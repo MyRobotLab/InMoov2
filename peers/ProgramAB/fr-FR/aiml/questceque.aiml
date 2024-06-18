@@ -20,7 +20,7 @@ Et si on commandait une pizza.
             <!--<set name="courant"><star/></set>
             <set name="topic"><star/></set>-->
             <set name="determinantinterogatif">Qu'est ce que</set>
-            <set name="askGpt3">Qu'est ce que</set>
+            <set name="askLlm">Qu'est ce que</set>
             <set name="learn">enabled</set>
          </think><srai><star/></srai></template>
 </category>
@@ -29,7 +29,7 @@ Et si on commandait une pizza.
             <!--<set name="courant"><star/></set>
             <set name="topic"><star/></set>-->
             <set name="determinantinterogatif">Qu'est ce que</set>
-            <set name="askGpt3">Qu'est ce qu</set>
+            <set name="askLlm">Qu'est ce qu</set>
             <set name="learn">enabled</set>
          </think><srai><star/></srai></template>
 </category>
