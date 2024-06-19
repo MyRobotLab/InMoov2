@@ -1,36 +1,42 @@
 ###///FACE EXPRESSIONS LIST///###
 
 def faceMove(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, pos10, pos11, pos12, pos13):
-  i01_head_eyeX.moveTo(pos1)
-  i01_head_eyeY.moveTo(pos2)
-  i01_head_eyelidLeftUpper.moveTo(pos3)
-  i01_head_eyelidLeftLower.moveTo(pos4)
-  i01_head_eyelidRightUpper.moveTo(pos5)
-  i01_head_eyelidRightLower.moveTo(pos6)
-  i01_head_eyebrowRight.moveTo(pos7)
-  i01_head_eyebrowLeft.moveTo(pos8)
-  i01_head_cheekRight.moveTo(pos9)
-  i01_head_cheekLeft.moveTo(pos10)
-  i01_head_upperLip.moveTo(pos11)
-  i01_head_forheadRight.moveTo(pos12)
-  i01_head_forheadLeft.moveTo(pos13)
+  if runtime.isStarted('i01.head'):
+    i01_head_eyeX.moveTo(pos1)
+    i01_head_eyeY.moveTo(pos2)
+    i01_head_eyelidLeftUpper.moveTo(pos3)
+    i01_head_eyelidLeftLower.moveTo(pos4)
+    i01_head_eyelidRightUpper.moveTo(pos5)
+    i01_head_eyelidRightLower.moveTo(pos6)
+    i01_head_eyebrowRight.moveTo(pos7)
+    i01_head_eyebrowLeft.moveTo(pos8)
+    i01_head_cheekRight.moveTo(pos9)
+    i01_head_cheekLeft.moveTo(pos10)
+    i01_head_upperLip.moveTo(pos11)
+    i01_head_forheadRight.moveTo(pos12)
+    i01_head_forheadLeft.moveTo(pos13)
   sleep(2.5)
   neutral()
 
+
 def bodyMove(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, pos10, pos11, pos12, pos13):
-  i01_head_rothead.moveTo(pos1)
-  i01_head_neck.moveTo(pos2)
-  i01_head_rollNeck.moveTo(pos3)
-  i01_leftArm_omoplate.moveTo(pos4)
-  i01_leftArm_shoulder.moveTo(pos5)
-  i01_leftArm_rotate.moveTo(pos6)
-  i01_leftArm_bicep.moveTo(pos7)
-  i01_rightArm_omoplate.moveTo(pos8)
-  i01_rightArm_shoulder.moveTo(pos9)
-  i01_rightArm_rotate.moveTo(pos10)
-  i01_rightArm_bicep.moveTo(pos11)
-  i01_torso_topStom.moveTo(pos12)
-  i01_torso_midStom.moveTo(pos13)
+  if runtime.isStarted('i01.head'):
+    i01_head_rothead.moveTo(pos1)
+    i01_head_neck.moveTo(pos2)
+    i01_head_rollNeck.moveTo(pos3)
+  if runtime.isStarted('i01.leftArm'):  
+    i01_leftArm_omoplate.moveTo(pos4)
+    i01_leftArm_shoulder.moveTo(pos5)
+    i01_leftArm_rotate.moveTo(pos6)
+    i01_leftArm_bicep.moveTo(pos7)
+  if runtime.isStarted('i01.rightArm'):  
+    i01_rightArm_omoplate.moveTo(pos8)
+    i01_rightArm_shoulder.moveTo(pos9)
+    i01_rightArm_rotate.moveTo(pos10)
+    i01_rightArm_bicep.moveTo(pos11)
+  if runtime.isStarted('i01.torso'):
+    i01_torso_topStom.moveTo(pos12)
+    i01_torso_midStom.moveTo(pos13)
   sleep(2.5)
   rest()  
 
