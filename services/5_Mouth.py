@@ -99,36 +99,44 @@ def onStartSpeaking(text):
                 i01_random.enable('randomBlink')
                 i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "halfSpeedFaceMove()")
 
+import re
 def onFilterText(text):
-  # filter all you want here
-  # then publish to htmlfilter -> mouth
-  # Splitting the text and filtering
-  words = text.split()
-  filtered_words = []
-  extracted_word = ""
-  
-  for word in words:
-      if word.startswith('*') and word.endswith('*'):
-          # Save the extracted word without asterisks
-          extracted_word = word.strip('*')
-      else:
-          filtered_words.append(word)
-  
-  # Joining the filtered words to form the filtered text
-  filtered_text = ' '.join(filtered_words)
-  #print(filtered_text)
-  if runtime.isStarted('i01.mouth'):
-      i01_mouth.speak(filtered_text) 
-  print(extracted_word)
-  
-  # Dynamically calling the function based on the extracted_word
-  function_to_call = globals().get(extracted_word)
-  if callable(function_to_call):
-      result = function_to_call()
-      result   
-  else:
-      result = "No function found matching the extracted word."
-      result
+    function_pattern = re.compile(r"\*(\w+)(\((.*?)\))?\*")
+    matches = function_pattern.findall(text)
+
+    filtered_text = text
+    extracted_word = ""
+    params = []
+
+    for match in matches:
+        extracted_word = match[0]
+        param_str = match[2]
+
+        if param_str:
+            try:
+                # Evaluate the parameter string as a tuple
+                params = eval('(%s)' % param_str)
+            except Exception as e:
+                print("Error parsing parameters: {}".format(e))
+                params = []
+        else:
+            params = []
+        function_call_str = "*{}({})*".format(extracted_word, param_str) if param_str else "*{}*".format(extracted_word)
+        filtered_text = filtered_text.replace(function_call_str, "")
+    print("Filtered Text:", filtered_text.strip())
+    if runtime.isStarted('i01.mouth'):
+      i01_mouth.speak(filtered_text)
+    print("Extracted Word:", extracted_word)
+    print("Parameters:", params)
+    function_to_call = globals().get(extracted_word)
+    if callable(function_to_call):
+        try:
+            result = function_to_call(*params)
+        except TypeError as e:
+            result = "Error calling function {}: {}".format(extracted_word, e)
+    else:
+        result = "No function found matching '{}'".format(extracted_word)
+    print(result)
 
 if runtime.isStarted('i01.mouth'):
   initMouth()
