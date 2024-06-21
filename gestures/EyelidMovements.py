@@ -80,13 +80,13 @@ def eyelidsLowSpeed():
 #############################################
 ###BOTH EYEBROWS###  
 def blink():
+  eyelidsFullSpeed()
   if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower') and runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
-      sleep(0.1)
       i01_head_eyelidLeftUpper.moveTo(0)
       i01_head_eyelidRightUpper.moveTo(0)
       i01_head_eyelidLeftLower.moveTo(0)
       i01_head_eyelidRightLower.moveTo(0)
-      sleep(0.1)
+      sleep(0.2)
       i01_head_eyelidLeftUpper.rest()
       i01_head_eyelidRightUpper.rest()
       i01_head_eyelidLeftLower.rest()
@@ -95,11 +95,6 @@ def blink():
   
 def winkBoth():
   if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower') and runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
-    i01_head_eyelidLeftUpper.moveTo(180)
-    i01_head_eyelidLeftLower.moveTo(180)
-    i01_head_eyelidRightUpper.moveTo(180)
-    i01_head_eyelidRightLower.moveTo(180)
-    sleep(0.1)
     i01_head_eyelidLeftUpper.moveTo(0)
     i01_head_eyelidLeftLower.moveTo(0)
     i01_head_eyelidRightUpper.moveTo(0)
@@ -196,9 +191,6 @@ def lowerEyelidsU():
 ###LEFT EYELIDS ONLY###   
 def eyelidLeftBlink():
   if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower'):
-    i01_head_eyelidLeftUpper.moveTo(180)
-    i01_head_eyelidLeftLower.moveTo(180)
-    sleep(0.1)
     i01_head_eyelidLeftUpper.moveTo(0)
     i01_head_eyelidLeftLower.moveTo(0)
     sleep(0.1)
@@ -208,9 +200,6 @@ def eyelidLeftBlink():
   
 def winkLeft():
   if runtime.isStarted('i01.head.eyelidLeftUpper') and runtime.isStarted('i01.head.eyelidLeftLower'):
-    i01_head_eyelidLeftUpper.moveTo(180)
-    i01_head_eyelidLeftLower.moveTo(180)
-    sleep(0.1)
     i01_head_eyelidLeftUpper.moveTo(0)
     i01_head_eyelidLeftLower.moveTo(0)
     sleep(1)
@@ -264,9 +253,6 @@ def lowerEyelidLeftU():
 ###RIGHT EYELIDS ONLY###
 def eyelidRightBlink():
   if runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
-    i01_head_eyelidRightUpper.moveTo(180)
-    i01_head_eyelidRightLower.moveTo(180)
-    sleep(0.1)
     i01_head_eyelidRightUpper.moveTo(0)
     i01_head_eyelidRightLower.moveTo(0)
     sleep(0.1)
@@ -276,9 +262,6 @@ def eyelidRightBlink():
   
 def winkRight():
   if runtime.isStarted('i01.head.eyelidRightUpper') and runtime.isStarted('i01.head.eyelidRightLower'):
-    i01_head_eyelidRightUpper.moveTo(180)
-    i01_head_eyelidRightLower.moveTo(180)
-    sleep(0.1)
     i01_head_eyelidRightUpper.moveTo(0)
     i01_head_eyelidRightLower.moveTo(0)
     sleep(1)
