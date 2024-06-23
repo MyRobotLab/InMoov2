@@ -8,7 +8,9 @@
 
 audioFile = runtime.getService('i01.mouth.audioFile')
 if audioFile:
-    audioFile.removeListener('publishPeak', 'i01.head.jaw')
-    audioFile.removeListener('publishPeak', 'i01.head.upperLip')
+    config = audioFile.getConfig()
+    audioFile.removeListener('publishPeak', 'i01.head.jaw', 'moveTo')
+    audioFile.removeListener('publishPeak', 'i01.head.upperLip', 'moveTo')
     audioFile.save()
+    audioFile.apply(config)
     audioFile.broadcastState()
