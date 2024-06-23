@@ -12,7 +12,6 @@ if llm:
   es = 'es-ES'
   de = 'de-DE'
   it = 'it-IT'
-  llm.removeListener('publishText', 'i01.htmlFilter', 'onText')
   python.subscribe(llm.getName(), "publishText", "onFilterText")
   if setSystem == "You are a helpful robot.":
     config = llm.getConfig()
@@ -61,6 +60,7 @@ if llm:
  La data è {{Data}}.\
  L'ora è le {{Time}}.\
  Il tuo nome è {{UserName}}, posso trovare informazioni su di te e sulla tua vita in {{Predicates}}."
+    llm.removeListener('publishText', 'i01.htmlFilter', 'onText')  
     llm.save()  
     llm.apply(config)
     llm.broadcastState()
