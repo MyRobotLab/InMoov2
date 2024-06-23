@@ -12,7 +12,7 @@ if llm:
   es = 'es-ES'
   de = 'de-DE'
   it = 'it-IT'
-  llm.removeListener('publishText', 'i01.htmlFilter')
+  llm.removeListener('publishText', 'i01.htmlFilter', 'onText')
   python.subscribe(llm.getName(), "publishText", "onFilterText")
   if setSystem == "You are a helpful robot.":
     config = llm.getConfig()
@@ -61,8 +61,8 @@ if llm:
  La data è {{Data}}.\
  L'ora è le {{Time}}.\
  Il tuo nome è {{UserName}}, posso trovare informazioni su di te e sulla tua vita in {{Predicates}}."
+    llm.save()  
     llm.apply(config)
-    llm.save()
     llm.broadcastState()
   if chatBot:
     llm.addInput("UserName", unicode(chatBot.getConfig().currentUserName,'utf-8'))
