@@ -4,7 +4,7 @@
   <!--  -->
 <category><pattern>ALERT</pattern>
 <template>
-      Alerta,   <oob><mrl><service>python</service><method>exec</method><param>errors()</param></mrl></oob></template>
+      Alerta,  </template>
 </category>
 
 <category><pattern>SYSTEM_ERROR_IMAGE_DISPLAY_1</pattern>
