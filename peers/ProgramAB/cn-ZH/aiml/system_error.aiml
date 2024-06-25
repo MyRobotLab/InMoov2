@@ -3,9 +3,8 @@
   <!--  gael le 04/09/2023 -->
   <!--  -->
 <category><pattern>ALERT</pattern>
-<template>
-      警报,
-   <oob><mrl><service>python</service><method>exec</method><param>errors()</param></mrl></oob></template>
+<template>警报,
+  </template>
 </category>
 
 <category><pattern>SYSTEM_ERROR_IMAGE_DISPLAY_1</pattern>
