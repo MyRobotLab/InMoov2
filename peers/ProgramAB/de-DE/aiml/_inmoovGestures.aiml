@@ -115,7 +115,7 @@
 </category>
 <category><pattern>ERFASSEN SIE DIESE GESTE</pattern>
 <template>Ich fange diese Geste ein.
-        <oob><mrl><service>i01</service><method>captureGesture</method></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>captureGesture2()</param></mrl></oob></template>
 </category>
 <category><pattern>GEBEN</pattern>
 <template>Geben.
