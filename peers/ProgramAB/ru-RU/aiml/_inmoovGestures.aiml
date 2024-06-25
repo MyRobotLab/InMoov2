@@ -339,7 +339,7 @@
 </category>
 <category><pattern>ЗАХВАТИТЬ ЖЕСТ</pattern>
 <template>Я фиксирую этот жест.
-        <oob><mrl><service>i01</service><method>captureGesture</method></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>captureGesture2()</param></mrl></oob></template>
 </category>
 <category><pattern>ПРИСВОИТЬ</pattern>
 <template>Присвоил.
