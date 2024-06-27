@@ -5,10 +5,10 @@ def facerecognizer():
       i01_opencv.capture()
       i01_opencv.addFilter("FaceRecognizer")
       i01_opencv.setActiveFilter("FaceRecognizer")
-      fr = i01_opencv.getFilter("FaceRecognizer")
-      fr.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
-      fr.train()# it takes some time to train and be able to recognize face
-      fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
+      facereco = i01_opencv.getFilter("FaceRecognizer")
+      facereco.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
+      facereco.train()# it takes some time to train and be able to recognize face
+      facereco.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
       python.subscribe("i01.opencv", "publishRecognizedFace")
     else:
       i01.warn('facerecognizer not starting because no opencv')
