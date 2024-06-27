@@ -28,7 +28,8 @@ def YesName(name):
       fr.train()
       # after we've retrained the model.. start recognizing again
       fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
-      opencv.removeFilters()
+      opencv.removeFilter("FaceRecognizer")
+      sleep(1)
       opencv.stopCapture()
       i01_chatBot.getResponse("SYSTEM_SAY_HELLO")
       i01.finishedGesture()
@@ -45,7 +46,7 @@ def memorisePerson(name):
       opencv = i01.startPeer('opencv')
       if runtime.isStarted('i01.opencv'):
         opencv.capture()
-        sleep(10)
+        sleep(5)
         opencv.addFilter("FaceRecognizer")
         opencv.setActiveFilter("FaceRecognizer")
         # if runtime.isStarted('i01.head'):
@@ -66,7 +67,8 @@ def memorisePerson(name):
         fr.train()
         # after we've retrained the model.. start recognizing again
         fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
-        opencv.removeFilters()
+        opencv.removeFilter("FaceRecognizer")
+        sleep(1)
         opencv.stopCapture()
         i01_chatBot.getResponse("SYSTEM_SAY_HELLO")
         i01.finishedGesture()
