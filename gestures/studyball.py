@@ -117,14 +117,9 @@ def studyball():
   else:
     i01.moveHand("left",180,150,180,180,180,164)
   i01.moveHand("right",105,81,78,57,62,105)
-  i01.speakBlocking("I will start tracking the object")
-  #i01.speakBlocking(u"Я начну отслеживать объект")
+  i01_chatBot.getResponse("STUDYBALL_1")
   fullspeed()
-  #trackPoint()
   sleep(2)
-  #i01.speakBlocking("you need to set the point")
-  #i01.speakBlocking(u"Вам нужно установить точку")
   #Now we use Use Yolo
-  i01.speakBlocking("I think it is a ball")
-  #i01.speakBlocking(u"Я думаю, что это мяч")
+  i01_chatBot.getResponse("STUDYBALL_2")
   i01.finishedGesture()
