@@ -85,9 +85,12 @@ def takeMyPicture(name):
     opencv = i01.startPeer('opencv')
     opencv.capture()
     opencv.addFilter("SetImageROI")
-    if runtime.isStarted('i01.chatBot'):
-      i01_chatBot.getResponse("GETREADY")
     sleep(10)# Add delay if opencv error recordFrame()
+    #protect_counter = 0
+    #while opencv.getBase64Image() is None and protect_counter < 60:
+      #protect_counter+=1
+      if runtime.isStarted('i01.chatBot'):
+        i01_chatBot.getResponse("GETREADY")
     rect = i01_opencv.getFilter("SetImageROI") 
     # changing parameters
     x=0
