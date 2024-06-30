@@ -81,5 +81,15 @@
       Parfait, merci.
    </template>
 </category>
+<category><pattern>STUDYBALL_1</pattern>
+    <template>
+      J'analyse cet objet.
+   </template>
+</category>
+<category><pattern>STUDYBALL_2</pattern>
+    <template>
+      Je pense que c'est une balle.
+   </template>
+</category>
 
 </aiml>
