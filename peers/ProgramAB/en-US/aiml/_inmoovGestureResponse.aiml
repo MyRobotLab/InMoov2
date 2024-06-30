@@ -75,5 +75,15 @@
       Great, thank you.
    </template>
 </category>
+<category><pattern>STUDYBALL_1</pattern>
+    <template>
+      I will start tracking the object.
+   </template>
+</category>
+<category><pattern>STUDYBALL_2</pattern>
+    <template>
+      I think it is a ball.
+   </template>
+</category>
 
 </aiml>
