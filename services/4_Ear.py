@@ -42,7 +42,7 @@ def onRecognized(text):
       #if i01_chatBot.onText()=="SYSTEM_EVENT WAKE" and unicode(text,'utf-8')==lockPhrase:sleepModeWakeUp()
       #if i01_chatBot.onText()=="SYSTEM_EVENT WAKE" and text!=lockPhrase:
         #i01_chatBot.getResponse(text)
-        #humanDetected()
+    humanDetected()
 
 if i01.getConfig().forceMicroOnIfSleeping==1:
   watchMicro = runtime.start("watchMicro","Clock")
