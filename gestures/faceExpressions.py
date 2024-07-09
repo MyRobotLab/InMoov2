@@ -247,7 +247,6 @@ def unamused():
   cheeksD()
   sleep(1.5)
   neutralHalfSpeed()
-unamused()
 
 def wake():
   blink()
