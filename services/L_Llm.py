@@ -78,3 +78,27 @@ def onPredicate(predicateEvent):
     llm.addInput(predicateEvent.name, predicateEvent.value)
 
 python.subscribe('i01.chatBot','publishPredicate')
+
+def describeImage(prompt):
+  llmImg = runtime.start('i01.llmImg', 'LLM')
+  opencv = runtime.start('i01.opencv', 'OpenCV')
+
+  opencv.capture()
+  sleep(1.5)
+  cfg = llmImg.getConfig()
+  cfg.url = "http://localhost:11434/api/generate"
+  cfg.model = "llava"
+  llmImg.apply(cfg)
+  llmImg.broadcastState()
+
+  while opencv.getBase64Image() is None:
+    sleep(1)
+
+  img = opencv.getBase64Image()
+  sleep(2)
+  response = llmImg.getImageResponse(img, prompt)
+      
+  #print(response.msg) 
+  #i01_mouth.speakBlocking(response.msg)
+  opencv.stopCapture()
+  i01_htmlFilter.subscribe(llmImg.getName(), "publishText", "onText")
