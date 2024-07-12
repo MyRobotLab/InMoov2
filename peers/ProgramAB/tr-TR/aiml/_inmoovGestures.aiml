@@ -340,7 +340,7 @@
 <template><srai># KALDIR <star/> SOL KOL</srai></template>
 </category>
 <category><pattern># KALDIR * SAĞ KOL</pattern>
-<şablon>Sağ kolumu kaldırıyorum.
+<template>Sağ kolumu kaldırıyorum.
         <oob><mrl><service>python</service><method>exec</method><param>raiserightarm()</param></mrl></oob></template>
 </category>
 <category><pattern>KALDIRMA * SAĞ KOL</pattern>
