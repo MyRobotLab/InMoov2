@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>SYSTEM_EVENT WAKE</pattern>
+    <template>
+      <srai>WAKE UP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT INIT</pattern>
+    <template>துவக்க துவக்கம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
+    <template>அமைவு முடிந்தது
+    </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
+    <template>சைகைகளை இறக்குமதி செய்கிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIGSTARTED</pattern>
+    <template>அமைப்பைத் தொடங்குகிறது.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIG STARTED *</pattern>
+    <template>அமைப்பைத் தொடங்குகிறது <star />. <srai>BOOTUP</srai></template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT CONFIG LOADED *</pattern>
+    <template><star /> உள்ளமைவு தொடங்கியது.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
+    <template>இடது கை உணரிகளைத் தொடங்குதல்.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED RIGHT HAND SENSOR</pattern>
+    <template>வலது கை உணரிகளைத் தொடங்குதல்.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED LEFT HAND SENSOR</pattern>
+    <template>இடது சென்சார் பணிநிறுத்தம்.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED RIGHT HAND SENSOR</pattern>
+    <template>வலது சென்சார் பணிநிறுத்தம்.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED LEFT</pattern>
+    <template>இடது கட்டுப்படுத்தியைத் தொடங்குகிறது.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED RIGHT</pattern>
+    <template>சரியான கட்டுப்படுத்தியைத் தொடங்குதல்.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED audioPlayer</pattern>
+    <template>ஆடியோ பிளேயரைத் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED audioPlayer</pattern>
+    <template>ஆடியோ பிளேயரை நிறுத்துகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED mouth audioFile</pattern>
+    <template>வாய் ஆடியோ பிளேயரைத் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED mouth audioFile</pattern>
+    <template>வாய்க்காக ஆடியோ பிளேயரை நிறுத்துகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED chatBot</pattern>
+    <template>உரையாடல் அமைப்பு தயாராக உள்ளது, மற்ற கூறுகளின் தொடக்கம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED chatBot</pattern>
+    <template>சாட்போட் பணிநிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED controller3</pattern>
+    <template>தொடக்கக் கட்டுப்படுத்தி மூன்று</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED controller3</pattern>
+    <template>கட்டுப்படுத்தி மூன்றின் பணிநிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED controller4</pattern>
+    <template>தொடக்கக் கட்டுப்படுத்தி நான்கு</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED controller4</pattern>
+    <template>கட்டுப்படுத்தி நான்கின் பணிநிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED ear</pattern>
+    <template>காதுகளைத் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED ear</pattern>
+    <template>காதுகளை நிறுத்துதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED eyeTracking</pattern>
+    <template>கண் கண்காணிப்பைத் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED eyeTracking</pattern>
+    <template>கண் கண்காணிப்பை நிறுத்துதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED fsm</pattern>
+    <template>எஃப்எஸ்எம் தொடங்குகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED fsm</pattern>
+    <template>fsm ஐ நிறுத்துகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED gpt3</pattern>
+    <template>gpt3 தொடங்குகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED gpt3</pattern>
+    <template>gpt3 ஐ நிறுத்துகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED llm</pattern>
+    <template>பரந்த மொழி மாதிரியைத் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED llm</pattern>
+    <template>பரந்த மொழி மாதிரியை நிறுத்துதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED head</pattern>
+    <template>முதல் தொடக்கம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED head</pattern>
+    <template>தலை நிறுத்து</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED headTracking</pattern>
+    <template>தலை கண்காணிப்பைத் தொடங்குகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED headTracking</pattern>
+    <template>தலை கண்காணிப்பை நிறுத்துகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED htmlFilter</pattern>
+    <template>html வடிப்பானைத் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED htmlFilter</pattern>
+    <template>html வடிகட்டியை நிறுத்துகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED imageDisplay</pattern>
+    <template>படக் காட்சியைத் தொடங்குகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED imageDisplay</pattern>
+    <template>படக் காட்சியை நிறுத்துகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED leap</pattern>
+    <template>லீப் ஸ்டார்ட்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED leap</pattern>
+    <template>பாய்ச்சலை நிறுத்துதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED left</pattern>
+    <template>இடது கட்டுப்படுத்தியைத் தொடங்குகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED left</pattern>
+    <template>இடது கன்ட்ரோலர் பணிநிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED leftArm</pattern>
+    <template>இடது கை தொடக்கம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED leftArm</pattern>
+    <template>இடது கை நிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED leftHand</pattern>
+    <template>இடது கை தொடக்கம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED leftHand</pattern>
+    <template>இடது கை நிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED log</pattern>
+    <template>பதிவு சேவையைத் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED log</pattern>
+    <template>பதிவு சேவையை நிறுத்துதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED mouth</pattern>
+    <template>வாய் ஆரம்பம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED mouth</pattern>
+    <template>வாய் நிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED mouthControl</pattern>
+    <template>வாய் கட்டுப்பாட்டைத் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED mouthControl</pattern>
+    <template>வாய் கட்டுப்பாட்டை நிறுத்துதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED neoPixel</pattern>
+    <template>நியோபிக்சலைத் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED neoPixel</pattern>
+    <template>neoPixel ஐ நிறுத்துகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED oakd</pattern>
+    <template>ஓக் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED oakd</pattern>
+    <template>ஓக் நிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED openWeatherMap</pattern>
+    <template>OpenWeatherMap ஐத் தொடங்குகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED openWeatherMap</pattern>
+    <template>OpenWeatherMap ஐ நிறுத்துகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED opencv</pattern>
+    <template>பார்வையைத் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED opencv</pattern>
+    <template>பார்வை நிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED openni</pattern>
+    <template>ஓபன்னி தொடங்குகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED openni</pattern>
+    <template>திறந்த நிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED pca9685</pattern>
+    <template>PCA 9685 கார்டைத் தொடங்குகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED pca9685</pattern>
+    <template>பிசிஏ 9685 கார்டை நிறுத்துதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED pid</pattern>
+    <template>PID தொடக்கம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED pid</pattern>
+    <template>pid பணிநிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED pir</pattern>
+    <template>மோஷன் சென்சார் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED pir</pattern>
+    <template>மோஷன் சென்சார் பணிநிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED random</pattern>
+    <template>சீரற்ற பயன்முறை தொடக்கம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED random</pattern>
+    <template>சீரற்ற பயன்முறை பணிநிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED right</pattern>
+    <template>சரியான கட்டுப்படுத்தியைத் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED right</pattern>
+    <template>வலது கட்டுப்படுத்தி பணிநிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED rightArm</pattern>
+    <template>வலது கை ஆரம்பம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED rightArm</pattern>
+    <template>வலது கை நிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED rightHand</pattern>
+    <template>வலது கை தொடக்கம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED rightHand</pattern>
+    <template>வலது கை நிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED servoMixer</pattern>
+    <template>சர்வோ மிக்சரைத் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED servoMixer</pattern>
+    <template>சர்வோ கலவை பணிநிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED simulator</pattern>
+    <template>சிமுலேட்டரைத் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED simulator</pattern>
+    <template>சிமுலேட்டரை நிறுத்துதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED torso</pattern>
+    <template>உடற்பகுதி ஆரம்பம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED torso</pattern>
+    <template>உடற்பகுதி நிறுத்து</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED ultrasonicLeft</pattern>
+    <template>இடது மீயொலி சென்சார் தொடங்குகிறது</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED ultrasonicLeft</pattern>
+    <template>இடது அல்ட்ராசோனிக் சென்சார் பணிநிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED ultrasonicRight</pattern>
+    <template>சரியான அல்ட்ராசோனிக் சென்சார் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED ultrasonicRight</pattern>
+    <template>வலது அல்ட்ராசோனிக் சென்சார் பணிநிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STARTED platform</pattern>
+    <template>மொபைல் தளத்தைத் தொடங்குதல்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT STOPPED platform</pattern>
+    <template>மொபைல் இயங்குதளத்தின் பணிநிறுத்தம்</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT SHUTDOWN</pattern>
+    <template>எனது ரோபோ ஆய்வகத்தை நிறுத்துகிறேன், 10 வினாடிகள் காத்திருக்கவும்.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT SHUTDOWNCOMPLETE</pattern>
+    <template>நான் எனது கணினியை மூடுகிறேன், செயல்முறைக்கு காத்திருக்கவும்.</template>
+  </category>
+  <category>
+    <pattern>SYSTEM_EVENT GESTURE_ERROR</pattern>
+    <template>என்னால் சைகைகளை ஏற்ற முடியவில்லை, அவற்றில் ஒன்றில் சிக்கல் உள்ளது.</template>
+  </category>
+</aiml>

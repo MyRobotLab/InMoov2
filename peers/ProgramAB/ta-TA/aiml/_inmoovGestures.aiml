@@ -1,0 +1,1707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: _inmoovGestures.aiml -->
+  <!--  -->
+  <category>
+    <pattern>ஓய்வில்</pattern>
+    <template>
+      <srai>ஒய்வு எடு</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்களை ஓய்வெடுக்க வைக்கவும்</pattern>
+    <template>
+      <srai>ஒய்வு எடு</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ஒய்வு எடு</pattern>
+    <template>
+      <random>
+        <li>அட, சோர்வு குறைவு.</li>
+        <li>ஓய்வு</li>
+        <li>நன்றி, எனக்கு பிடிப்புகள் வர ஆரம்பித்தன</li>
+      </random>
+      <oob>
+        <mrl>
+          <service>i01</service>
+          <method>rest</method>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>மனிதர்களைத் தேடுங்கள்</pattern>
+    <template>நான் முகங்களை ஸ்கேன் செய்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>முகம் கண்டறிதல்</pattern>
+    <template>முகங்களைத் தேடுகிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern># என்னைப் பார் #</pattern>
+    <template>என்னைப் பார்ப்பதை நிறுத்து என்று நீ சொல்லும் வரை நான் என் பார்வையுடன் உன்னைப் பின்தொடர்வேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>தேடுவதை நிறுத்து #</pattern>
+    <template>நான் ஸ்கேனரை நிறுத்துகிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>புள்ளியைப் பின்பற்றவும்</pattern>
+    <template>நான் பார்வையின் புள்ளி.
+        <oob><mrl><service>python</service><method>exec</method><param>trackPoint()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>கண்காணிப்பதை நிறுத்து</pattern>
+    <template>
+      <srai>கண்காணிப்பதை நிறுத்து</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>கண்காணிப்பதை நிறுத்து</pattern>
+    <template>நான் என் கண்காணிப்பை நிறுத்துகிறேன்
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ஸ்டாப் பாயிண்ட் டிராக்கிங்</pattern>
+    <template>
+      <srai>ஸ்டாப் பாயிண்ட் டிராக்கிங்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ஸ்டாப் பாயிண்ட் டிராக்கிங்</pattern>
+    <template>எனது புள்ளி கண்காணிப்பை நிறுத்துகிறேன்
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackPoint()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உங்கள் கைகளைத் திறக்கவும்</pattern>
+    <template>
+      <srai>உங்கள் கைகளைத் திறக்கவும்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் கைகளைத் திறக்கவும்</pattern>
+    <template>
+      <srai>உங்கள் கைகளைத் திறக்கவும்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் கைகளைத் திறக்கவும்</pattern>
+    <template>திறந்த கைகள்.
+        <oob><mrl><service>python</service><method>exec</method><param>handsopen()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உங்கள் கைகளை மூடு</pattern>
+    <template>
+      <srai>உங்கள் கைகளை மூடு</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் கைகளை மூடு</pattern>
+    <template>மூடிய கைகள்.
+        <oob><mrl><service>python</service><method>exec</method><param>handsclose()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உங்கள் விரலைத் திறக்கவும்</pattern>
+    <template>
+      <srai>உங்கள் விரலைத் திறக்கவும்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் விரலைத் திறக்கவும்</pattern>
+    <template>
+      <srai>உங்கள் விரலைத் திறக்கவும்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் விரலைத் திறக்கவும்</pattern>
+    <template>நான் என் விரலை திறக்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>fingeropen()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உங்கள் விரலை மூடு</pattern>
+    <template>
+      <srai>உங்கள் விரலை மூடு</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் விரலை மூடு</pattern>
+    <template>சரி, நான் என் விரலை மூடுகிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerclose()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>நடுவில் விரல்</pattern>
+    <template>இப்போது என் கவனம் உங்களிடம் உள்ளது.
+        <oob><mrl><service>python</service><method>exec</method><param>fingermiddle()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>மூடு * கண்கள்</pattern>
+    <template>
+      <srai>உன் கண்களை மூடு</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>மூடு * கண்கள்</pattern>
+    <template>
+      <srai>உன் கண்களை மூடு</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உன் கண்களை மூடு</pattern>
+    <template>.
+        <oob><mrl><service>python</service><method>exec</method><param>sleeping()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>திற * கண்கள்</pattern>
+    <template>
+      <srai>உங்கள் கண்களைத் திறக்கவும்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>திற * கண்கள்</pattern>
+    <template>
+      <srai>உங்கள் கண்களைத் திறக்கவும்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் கண்களைத் திறக்கவும்</pattern>
+    <template>.
+        <oob><mrl><service>python</service><method>exec</method><param>neutral()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உருட்ட * கண்கள்</pattern>
+    <template>
+      <srai>உங்கள் கண்களை உருட்டவும்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>கண் ரோல்</pattern>
+    <template>
+      <srai>உங்கள் கண்களை உருட்டவும்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் கண்களை உருட்டவும்</pattern>
+    <template>ஆனால் இது சற்று விசித்திரமானது.
+        <oob><mrl><service>python</service><method>exec</method><param>eyesInnerSpin(), eyesOuterSpin(), neutral()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>கேமராவைத் தொடங்கு</pattern>
+    <template>எல்லாம் சரி.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_opencv.capture()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>கேமராவை ஆஃப் செய்யவும்</pattern>
+    <template>
+      <srai>கேமராவை அணைக்கவும்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>கேமராவை நிறுத்து</pattern>
+    <template>
+      <srai>கேமராவை அணைக்கவும்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>கேமராவை அணைக்கவும்</pattern>
+    <template>நான் என் கேமராவை அணைக்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_opencv.stopCapture()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>சைகைகளைப் பிடிக்கவும்</pattern>
+    <template>எனது சர்வோ மோட்டார்களின் நிலைகளை நான் மனப்பாடம் செய்கிறேன்.
+        <oob><mrl><service>python</service><method>addScript("newGesture", i01.captureGesture())</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>நீங்கள் பார்க்கிறீர்கள்</pattern>
+    <template>
+      <srai>நீ என்ன காண்கிறாய்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>கொடு</pattern>
+    <template>
+      <srai>கொடுக்கப்பட்டது</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>கொடுக்கப்பட்டது</pattern>
+    <template>நான் கொடுக்கிறேன்.
+	<oob><mrl><service>python</service><method>exec</method><param>giving()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern># சண்டை</pattern>
+    <template>
+      <srai>ப்ராவ்லர்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ப்ராவ்லர்</pattern>
+    <template>
+      <random>
+        <li>நான் ஒரு குத்துச்சண்டை வீரரைப் போல போஸ் கொடுக்க முடியும்</li>
+        <li>என்னால் பட்டாம்பூச்சி போல நகர முடியும், குளவி போல் குத்த முடியும்.</li>
+        <li>நான் எவ்வளவு அழகாக இருக்கிறேன் பாருங்கள்.</li>
+      </random>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>fighter()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern># இடுப்பு மீது கைகள்</pattern>
+    <template>என் கைகளை என் இடுப்பில் வைத்தேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>fistHips()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>பாட</pattern>
+    <template>
+      <srai>பாடப்பட்டது</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>பாடப்பட்டது</pattern>
+    <template>
+        <oob><mrl><service>python</service><method>exec</method><param>sing()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>கலங்குவது</pattern>
+    <template>
+      <srai>கலங்குவது</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>கலங்குவது</pattern>
+    <template>
+        <oob><mrl><service>python</service><method>exec</method><param>cry()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern># இதைப் பார்</pattern>
+    <template>
+      <srai><star/> இதைப் பார்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern># இதைப் பார்</pattern>
+    <template>எனக்கு என்ன காட்ட வேண்டும்.
+	<oob><mrl><service>python</service><method>exec</method><param>lookAtThis()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>வெற்றி</pattern>
+    <template>நான் ஒரு வெற்றியாளர்.
+	<oob><mrl><service>python</service><method>exec</method><param>victory()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern># காற்றில் ஆயுதங்கள்</pattern>
+    <template>
+      <random>
+        <li>நான் காற்றில் என் கைகளை வைத்திருக்கிறேன்.</li>
+        <li>இழுக்க வேண்டாம்</li>
+      </random>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>armsUp()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <template>
+    <pattern># முன் கை</pattern>
+    <srai><star/> கை முன்னோக்கி</srai>
+    </template>
+  </category>
+  <category>
+    <pattern># கை முன்னோக்கி</pattern>
+    <template>நான் என் கைகளை முன்னோக்கி வைத்தேன்.
+	<oob><mrl><service>python</service><method>exec</method><param>armsFront()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>* இடது கையை உயர்த்தவும்</pattern>
+    <template>நான் என் இடது கையை உயர்த்துகிறேன்.
+  <oob><mrl><service>python</service><method>exec</method><param>armLeftSide()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>எழுச்சி * இடது கை</pattern>
+    <template>நான் என் இடது கையை உயர்த்துகிறேன்.
+  <oob><mrl><service>python</service><method>exec</method><param>armLeftSide()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ரைஸ் * வலது கை</pattern>
+    <template>நான் என் வலது கையை உயர்த்துகிறேன்.
+  <oob><mrl><service>python</service><method>exec</method><param>armRightSide()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>எழுச்சி * வலது கை</pattern>
+    <template>நான் என் வலது கையை உயர்த்துகிறேன்.
+  <oob><mrl><service>python</service><method>exec</method><param>armRightSide()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>DA VINCI</pattern>
+    <template>என்ற போஸ் இதுதான் Leonard Da Vinci.
+	<oob><mrl><service>python</service><method>exec</method><param>daVinci()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>DAVINCI</pattern>
+    <template>
+      <srai>DA VINCI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>அதிகபட்ச வேகம்</pattern>
+    <template>எனது சர்வோக்கள் அதிகபட்ச வேகத்தில் உள்ளன.
+        <oob><mrl><service>python</service><method>exec</method><param>fullspeed()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>பாட்டிலை எடு</pattern>
+    <template>நான் இந்த பாட்டிலை எடுக்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>grabthebottle()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>கண்ணாடியை எடு</pattern>
+    <template>நான் கண்ணாடியை எடுத்துக்கொள்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>grabtheglass()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>பாட்டிலை ஊற்றவும்</pattern>
+    <template>இங்கே, நான் பாட்டிலை ஊற்ற முயற்சிக்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>poorbottle()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>பாட்டிலை கொடு</pattern>
+    <template>இதோ பாட்டில்.
+        <oob><mrl><service>python</service><method>exec</method><param>givethebottle()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>கண்ணாடியைக் கொடுங்கள்</pattern>
+    <template>தயவுசெய்து கண்ணாடியை எடுத்துக் கொள்ளுங்கள்.
+        <oob><mrl><service>python</service><method>exec</method><param>givetheglass()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>பந்தை எடு</pattern>
+    <template><srai>பந்தை பிடி</srai></template>
+  </category>
+  <category>
+    <pattern>பந்தை பிடி</pattern>
+    <template>நான் பந்தை எடுத்துக்கொள்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>takeball()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உங்கள் கையால் பந்தை அடையுங்கள்</pattern>
+    <template>நான் பந்தை அடைகிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>getball()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>பந்தை உங்கள் கையில் பிடித்துக் கொள்ளுங்கள்</pattern>
+    <template>நான் பந்தை வைத்திருக்கிறேன்
+        <oob><mrl><service>python</service><method>exec</method><param>keepball()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உங்கள் இடது கையை அணுகவும்</pattern>
+    <template>நான் என் இடது கையை நெருங்குகிறேன்
+        <oob><mrl><service>python</service><method>exec</method><param>approachlefthand()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உங்கள் இடது கையைப் பயன்படுத்தவும்</pattern>
+    <template>நான் என் இடது கையை பயன்படுத்துகிறேன்
+        <oob><mrl><service>python</service><method>exec</method><param>uselefthand()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>இன்னும் அதிகமாக</pattern>
+    <template>இன்னும் அதிகமாக
+        <oob><mrl><service>python</service><method>exec</method><param>more()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உங்கள் கையை கைவிடுங்கள்</pattern>
+    <template>Je mets ma main vers le bas
+        <oob><mrl><service>python</service><method>exec</method><param>handdown()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>இது ஒரு புல்லட்</pattern>
+    <template>நான் சரிபார்க்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>isitaball()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>* கீழ்</pattern>
+    <template>நான் என் கையைத் தாழ்த்துகிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>putitdown()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>கோழை *</pattern>
+    <template>.
+        <oob><mrl><service>python</service><method>exec</method><param>dropit()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உங்கள் இடது கையை அகற்றவும்</pattern>
+    <template>நான் என் இடது கையை அகற்றுகிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>removeleftarm()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ரிலாக்ஸ்</pattern>
+    <template>ரிலாக்ஸ்.
+        <oob><mrl><service>python</service><method>exec</method><param>relax()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>இந்த பொருளை பகுப்பாய்வு செய்யுங்கள்</pattern>
+    <template><srai>இந்த உருப்படியை மதிப்பிடவும்</srai></template>
+  </category>
+  <category>
+    <pattern>இந்த உருப்படியை மதிப்பிடவும்</pattern>
+    <template>நான் சரிபார்க்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>studyball()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>தூரத்தை அளவிடவும்</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>ultrasonic("சென்டிமீட்டர்களில், நான் தூரத்தை அளவிடுகிறேன் ")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>இடதுபுறம் உள்ள தூரத்தை அளவிடவும்</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>ultrasonicLeft("சென்டிமீட்டர்களில், இடதுபுறத்தில், நான் தூரத்தை அளவிடுகிறேன் ")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>வலதுபுறம் உள்ள தூரத்தை அளவிடவும்</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>ultrasonicRight("சென்டிமீட்டர்களில், வலதுபுறத்தில், நான் தூரத்தை அளவிடுகிறேன் ")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>சரியானது</pattern>
+    <template>சரியானது.
+        <oob><mrl><service>python</service><method>exec</method><param>perfect()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>நுணுக்கமாகப் பிடிக்கவும்</pattern>
+    <template>நான் நுணுக்கமாக எடுத்துக்கொள்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>delicategrab()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>மெதுவாக எடுக்கவும்</pattern>
+    <template>
+      <srai>நுணுக்கமாகப் பிடிக்கவும்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>இதை மெதுவாக எடுத்துக் கொள்ளுங்கள்</pattern>
+    <template>
+      <srai>நுணுக்கமாகப் பிடிக்கவும்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>லூஸ் டெலிகேட்டலி</pattern>
+    <template>நான் மென்மையாக விட்டுவிட்டேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>releasedelicate()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>திற * வலது கை #</pattern>
+    <template>
+      <srai>உங்கள் வலது கையைத் திறக்கவும்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் வலது கையைத் திறக்கவும்</pattern>
+    <template>நான் என் வலது கையைத் திறக்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>openrighthand()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>திற * இடது கை #</pattern>
+    <template>
+      <srai>உங்கள் இடது கையைத் திறக்கவும்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் இடது கையைத் திறக்கவும்</pattern>
+    <template>நான் என் இடது கையைத் திறக்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>openlefthand()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>மூடு * வலது கை #</pattern>
+    <template>
+      <srai>உங்கள் வலது கையை மூடு</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் வலது கையை மூடு</pattern>
+    <template>நான் என் வலது கையை மூடுகிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>closerighthand()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>மூடு * இடது கை #</pattern>
+    <template>
+      <srai>உங்கள் இடது கையை மூடு</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் இடது கையை மூடு</pattern>
+    <template>நான் என் இடது கையை மூடுகிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>closelefthand()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>மெதுவாக மூடியது * வலது கை</pattern>
+    <template>நான் என் வலது கையை மெதுவாக மூடுகிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>slowlycloserighthand()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>மெதுவாக மூடியது * இடது கை</pattern>
+    <template>நான் என் இடது கையை மெதுவாக மூடுகிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>slowlycloselefthand()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern># ஹேண்ட்ஸ் அப்</pattern>
+    <template>Surrender.
+        <oob><mrl><service>python</service><method>exec</method><param>surrender()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>புகைப்படம் வலது</pattern>
+    <template>வலதுபுறத்தில் புகைப்படம்.
+        <oob><mrl><service>python</service><method>exec</method><param>picturerightside()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>வலது பக்க புகைப்படம்</pattern>
+    <template>
+      <srai>வலதுபுறத்தில் புகைப்படம்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>புகைப்படம் இடதுபுறம்</pattern>
+    <template>புகைப்படம் இடதுபுறம்.
+        <oob><mrl><service>python</service><method>exec</method><param>pictureleftside()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>இடது பக்க புகைப்படம்</pattern>
+    <template>
+      <srai>புகைப்படம் இடது</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>இரண்டு பக்கங்களின் புகைப்படம்</pattern>
+    <template>இரு தரப்பு புகைப்படம்.
+        <oob><mrl><service>python</service><method>exec</method><param>picturebothside()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>இரண்டு பக்கங்களின் புகைப்படம்</pattern>
+    <template>
+      <srai>இரண்டு பக்கங்களின் புகைப்படம்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>வலதுபுறம் பார்</pattern>
+    <template>நான் என் தலையை வலது பக்கம் திருப்புகிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>lookrightside()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உங்கள் வலது பக்கம் பாருங்கள்</pattern>
+    <template>
+      <srai>வலதுபுறம் பார்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் இடதுபுறம் பார்க்கவும்</pattern>
+    <template>
+      <srai>இடதுபுறம் பாருங்கள்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் தலையை வலது பக்கம் திருப்பவும்</pattern>
+    <template>
+      <srai>வலதுபுறம் பார்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் தலையை வலது பக்கம் திருப்பவும்</pattern>
+    <template>
+      <srai>வலதுபுறம் பார்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் தலையை வலது பக்கம் திருப்பவும்</pattern>
+    <template>
+      <srai>வலதுபுறம் பார்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் தலையை வலது பக்கம் திருப்பவும்</pattern>
+    <template>
+      <srai>வலதுபுறம் பார்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>இடதுபுறம் பார்</pattern>
+    <template>நான் என் தலையை இடது பக்கம் திருப்புகிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>lookleftside()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உங்கள் தலையை இடது பக்கம் திருப்பவும்</pattern>
+    <template>
+      <srai>இடதுபுறம் பாருங்கள்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் தலையை இடது பக்கம் திருப்பவும்</pattern>
+    <template>
+      <srai>இடதுபுறம் பாருங்கள்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் தலையை இடது பக்கம் திருப்பவும்</pattern>
+    <template>
+      <srai>இடதுபுறம் பாருங்கள்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் தலையை இடது பக்கம் திருப்பவும்</pattern>
+    <template>
+      <srai>இடதுபுறம் பாருங்கள்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>நடுவில் பார்</pattern>
+    <template>நான் நடுவில் பார்க்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>lookinmiddle()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உங்கள் தலையை நடுவில் திருப்புங்கள்</pattern>
+    <template>
+      <srai>நடுவில் பார்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>வானத்தை பார்</pattern>
+    <template>நான் வானத்தைப் பார்க்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>LookAtTheSky()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>பார்</pattern>
+    <template>
+      <srai>பார்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>பார்</pattern>
+    <template>நான் மேலே பார்க்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>lookup()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>கீழே பார்</pattern>
+    <template>நான் கீழே பார்க்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>lookdown()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உங்கள் தலையை வலது பக்கம் சாய்க்கிறது</pattern>
+    <template>நான் என் தலையை வலது பக்கம் சாய்த்தேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>தலையை இடதுபுறமாக சாய்க்கிறது</pattern>
+    <template>நான் என் தலையை இடது பக்கம் சாய்த்தேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadLeftSide()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உங்கள் கழுத்தை சரிபார்க்கவும்</pattern>
+    <template>நன்றி, சிறப்பாக உள்ளது. மருத்துவர்.
+        <oob><mrl><service>python</service><method>exec</method><param>rollHead()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>மகிழ்ச்சிக்கு முன்</pattern>
+    <template>மகிழ்ச்சிக்கு முன்
+        <oob><mrl><service>python</service><method>exec</method><param>beforehappy()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>பிறந்தநாள் வாழ்த்துக்கள்</pattern>
+    <template>பிறந்தநாள் வாழ்த்துக்கள்.
+        <oob><mrl><service>python</service><method>exec</method><param>happy()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>படங்கள்</pattern>
+    <template>புகைப்படம்.
+        <oob><mrl><service>python</service><method>exec</method><param>photo()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உன்னை பற்றி</pattern>
+    <template>நான் என்னை விவரிக்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>about()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>எல்லாவற்றையும் அணைக்கவும்</pattern>
+    <template>மின் தடை.
+        <oob><mrl><service>python</service><method>exec</method><param>power_down()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>எல்லாவற்றையும் இயக்கவும்</pattern>
+    <template>பவர் அப்.
+        <oob><mrl><service>python</service><method>exec</method><param>power_up()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern># எத்தனை எஞ்சின் #</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>servos()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்களுக்கு எத்தனை விரல்கள் உள்ளன</pattern>
+    <template>நான் எண்ணுவேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>howmanyfingersdoihave()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>இங்கே யார் இருக்கிறார்கள்</pattern>
+    <template>இங்கே யார் இருக்கிறார்கள்
+        <oob><mrl><service>python</service><method>exec</method><param>welcome()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>KINECT ஐத் தொடங்கவும்</pattern>
+    <template>கினெக்டைத் தொடங்குதல்
+        <oob><mrl><service>python</service><method>exec</method><param>startkinect()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>KINECT ஐ நிறுத்து</pattern>
+    <template>கினெக்டை மூடுகிறது
+        <oob><mrl><service>python</service><method>exec</method><param>offkinect()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>பிடிப்பதை நிறுத்து</pattern>
+    <template>
+      <srai>KINECT ஐ நிறுத்து</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>KINECT ஐ நிறுத்துதல்</pattern>
+    <template>
+      <srai>KINECT ஐ நிறுத்து</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>எலும்புக்கூடு கண்காணிப்பு</pattern>
+    <template>கினெக்டுடன் ட்ராக்கிங் எலும்புக்கூட்டைத் தொடங்குகிறது
+        <oob><mrl><service>python</service><method>exec</method><param>startcopygestures()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>எலும்புக்கூடு ட்ராக்கின்</pattern>
+    <template>
+      <srai>எலும்புக்கூடு கண்காணிப்பு</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>இயக்கம் எண் 1</pattern>
+    <template>இயக்கம் எண் 1
+        <oob><mrl><service>python</service><method>exec</method><param>cyclegesture1()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>இயக்கம் எண் ஒன்று</pattern>
+    <template>
+      <srai>இயக்கம் எண் 1</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>இயக்கம் எண் 2</pattern>
+    <template>இயக்கம் எண் 2
+        <oob><mrl><service>python</service><method>exec</method><param>cyclegesture2()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>இயக்கம் எண் இரண்டு</pattern>
+    <template>
+      <srai>இயக்கம் எண் 2</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>இயக்கம் எண் 3</pattern>
+    <template>இயக்கம் எண் 3
+        <oob><mrl><service>python</service><method>exec</method><param>cyclegesture3()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>இயக்கம் எண் மூன்று</pattern>
+    <template>
+      <srai>இயக்கம் எண் 3</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>வலதுபுறத்தில் ஆடை</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>rightclothes()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் ஆடைகளை அவிழ்த்து விடுங்கள்</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>releaseleftclothes()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் தசைகளை எனக்குக் காட்டு</pattern>
+    <template>எனக்கு சில தீவிர தசைகள் உள்ளன.
+        <oob><mrl><service>python</service><method>exec</method><param>muscle()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>என் கையை அசைக்கவும்</pattern>
+    <template>
+      <srai>கை குலுக்குதல்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* கைகுலுக்கல் *</pattern>
+    <template>
+      <srai>கை குலுக்குதல்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* கைகுலுக்கல்</pattern>
+    <template>
+      <srai>கை குலுக்குதல்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>என் கையை அசைக்கவும்</pattern>
+    <template>
+      <srai>கை குலுக்குதல்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>கைகுலுக்கல்</pattern>
+    <template>
+      <srai>கை குலுக்குதல்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>கை குலுக்குதல்</pattern>
+    <template>
+      <random>
+        <li>கைகுலுக்குவோம்.</li>
+        <li>கைகுலுக்குவோம், சரியா?</li>
+        <li>என் கை குலுக்குமா?</li>
+      </random>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>shakehand()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_SHAKE_HAND</pattern>
+    <template>
+      <random>
+        <li>உங்களை அறிந்ததில் மகிழ்ச்சி அடைகிறேன்.</li>
+        <li>கவனமாக இருங்கள்! என் கை உடையக்கூடியது.</li>
+        <li>மனித கைகுலுக்கலில் மகிழ்ச்சி அடைகிறேன்.</li>
+        <li>உங்களுக்கு மென்மையான சருமம் உள்ளது.</li>
+        <li>நான் நிம்மதியாக வருகிறேன்.</li>
+        <li>உயிரியல் கை குலுக்குவது ஒரு விசித்திரமான உணர்வு.</li>
+        <li>என் கைகுலுக்கியது ஜனாதிபதி ட்ரூமேபியு அல்ல என்பதில் நான் மகிழ்ச்சியடைகிறேன்.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_SHAKE_HAND_NOHUMAN</pattern>
+    <template>
+      <random>
+        <li>கவலை இல்லை, அடுத்த முறை.</li>
+        <li>நீங்கள் என் கையை அசைக்க விரும்பாதது எனக்கு வருத்தமாக இருக்கிறது.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_SHAKE_HAND_GET_CLOSER</pattern>
+    <template>
+      <random>
+        <li>அருகில் வா, வா என் கைகுலுக்கி</li>
+        <li>பயப்படாதே, நான் கடிக்கவில்லை</li>
+        <li>நெருக்கமாக்கு</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>ஷேக் யுவர் ஹேண்ட்ஸ்</pattern>
+    <template>
+      <srai>கை குலுக்குதல்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>மகிழ்ச்சியற்றது</pattern>
+    <template>நான் சந்தோஷமாக இல்லை.
+        <oob><mrl><service>python</service><method>exec</method><param>unhappy()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>இதைப் பிடிக்கவும்</pattern>
+    <template>நான் பொருளை எடுத்துக்கொள்கிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>takethis()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>தயார்</pattern>
+    <template>தயார்.
+        <oob><mrl><service>python</service><method>exec</method><param>ready()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>அது வேடிக்கையாக இருந்தது</pattern>
+    <template>வேடிக்கையாக இருந்தது.
+        <oob><mrl><service>python</service><method>exec</method><param>thatwasfun()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>என்ன யூகிக்கவும்</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>guesswhat()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>வலது விரல்</pattern>
+    <template>நான் என் விரலை மூடுகிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerright()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>இடது விரல்</pattern>
+    <template>நான் என் விரலை மூடுகிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerleft()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>இங்கே வா</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>comehere()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>அணுகுமுறை</pattern>
+    <template>அணுகுமுறை
+        <oob><mrl><service>python</service><method>exec</method><param>approach()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>இதை உடைக்கவும்</pattern>
+    <template>நான் இதை உடைக்க வேண்டும் என்று நீங்கள் விரும்புகிறீர்கள்.
+        <oob><mrl><service>python</service><method>exec</method><param>brake()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>மூலம் உருவாக்கம்</pattern>
+    <template>உருவாக்கியது
+        <oob><mrl><service>python</service><method>exec</method><param>madeby()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>பிரஞ்சு மொழியில் உருவாக்கம்</pattern>
+    <template>.
+        <oob><mrl><service>python</service><method>exec</method><param>madebyfrench()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>சோதனை</pattern>
+    <template>சோதனை
+        <oob><mrl><service>python</service><method>exec</method><param>test1()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>வீட்டிற்கு அழைக்கவும்</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>phonehome()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>நீ எங்கிருந்து வருகிறாய்</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>phonehome()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>என்னை நியூயார்க் ஆக்கு</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>newyork()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் பாடலை இயக்கவும்</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>playsong()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>நீங்கள் செய்வதை நிறுத்துங்கள்</pattern>
+    <template>நான் செய்வதை நிறுத்துகிறேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>stopit()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>குழந்தையை சுமந்து செல்லுங்கள்</pattern>
+    <template>குழந்தையை சுமந்து செல்லுங்கள்.
+        <oob><mrl><service>python</service><method>exec</method><param>carrybaby()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>சிஸ்டத்தை சரிபார்க்கவும்</pattern>
+    <template>System check.
+        <oob><mrl><service>python</service><method>exec</method><param>systemcheck()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>உங்கள் சமநிலையை வழங்கவும்</pattern>
+    <template>என் ஊசல் ஊஞ்சலைக் காட்டுவேன்.
+        <oob><mrl><service>python</service><method>exec</method><param>balance()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ஸ்டார் வார்ஸ் பற்றி</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>whataboutstarwars()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>எனக்கு நேரம் கொடுங்கள்</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>canyougivemethetime()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>ALESSANDRO</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>alessandro()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>எந்த கவலையும் இல்லை</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>dontworry()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>பேட்டரி நிலை</pattern>
+    <template>
+      <random>
+        <li>பேட்டரி நிலை உள்ளது</li>
+        <li>இப்போதைக்கு பேட்டரி தான்</li>
+      </random>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>batterylevel()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>முகம் பகுப்பாய்வு</pattern>
+    <template>நான் முக பகுப்பாய்வு தொகுதியைத் தொடங்குகிறேன். <oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>முகப் பகுப்பாய்வை நிறுத்து</pattern>
+    <template>நான் முக பகுப்பாய்வு தொகுதியை நிறுத்துகிறேன். <oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>முகம் கற்றல்</pattern>
+    <template>நான் முகம் கற்றல் தொகுதியைத் தொடங்குகிறேன். <srai>NEW_INIT_USER</srai></template>
+  </category>
+  <category>
+    <pattern>முக அங்கீகாரம்</pattern>
+    <template>
+      <srai>மனிதர்களைத் தேடுங்கள்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>முகத்தை அடையாளம் காணுதல்</pattern>
+    <template>
+      <srai>மனிதர்களைத் தேடுங்கள்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ஒரு முகத்தை அங்கீகரிக்கவும்</pattern>
+    <template>
+      <srai>மனிதர்களைத் தேடுங்கள்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>முக அங்கீகாரத்தை நிறுத்து</pattern>
+    <template>நான் முக அங்கீகாரத்தை நிறுத்துகிறேன்
+      <srai>தேடுவதை நிறுத்து</srai></template>
+  </category>
+  <category>
+    <pattern>ஒரு கையொப்பத்தை செயல்படுத்துகிறது</pattern>
+    <template>எனக்கு ஒரு காகிதத்தையும் பேனாவையும் கொடுங்கள் - நான் உங்களுக்காக இதைச் செய்வேன் <oob><mrl><service>python</service><method>exec</method><param>signature()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>எனக்கு ஒரு படத்தைக் காட்டு *</pattern>
+    <template>எல்லாம் சரி <oob><mrl><service>python</service><method>exec</method><param>find_image("<star />")</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>A இன் படத்தை எனக்குக் காட்டு *</pattern>
+    <template>
+      <srai>எனக்கு ஒரு படத்தைக் காட்டு * </srai>
+    </template>
+  </category>
+  <category>
+    <pattern>மைக்ரோஃபோனை பழுதுபார்க்கவும்</pattern>
+    <template>எல்லாம் சரி <oob><mrl><service>python</service><method>exec</method><param>WebkitSpeechRecognitionON()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>முகநூலைத் தொடங்கவும்</pattern>
+    <template>
+      <random>
+        <li>நான் ஃபேஸ்புக்கை ஆரம்பிக்கிறேன்</li>
+        <li>நான் முகநூல் தொடங்குகிறேன்</li>
+        <li>உடனே மிஸ்டர் சூப்பர் சோஷியல்!</li>
+      </random>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>BareBonesBrowserLaunch.openURL("http://www.facebook.com")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>ரோபோட் தேடல் *</pattern>
+    <template>
+      <random>
+        <li>உலாவியைத் தொடங்குதல்</li>
+        <li>உன்னை எதிர்பார்த்து கொண்டு இருக்கிறேன்!</li>
+        <li>நான் பாதுகாப்பான இணையத்தைத் தேடுகிறேன்!</li>
+      </random>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>BareBonesBrowserLaunch.openURL("https://encrypted.google.com/#q=<star />")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>ரோபாட்டிக்ஸ் ஆராய்ச்சி *</pattern>
+    <template>சரி இதோ போகிறோம்
+        <oob><mrl><service>python</service><method>exec</method><param>inmoovsearch("<star />")</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>வலைஒளி *</pattern>
+    <template>இங்கே வீடியோ பரிந்துரைகள் உள்ளன
+        <oob><mrl><service>python</service><method>exec</method><param>BareBonesBrowserLaunch.openURL("https://www.youtube.com/results?search_query=<star />")</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>சீரற்ற வாழ்க்கை முறை</pattern>
+    <template>நன்றி
+        <oob><mrl><service>python</service><method>exec</method><param>VieAleatoire()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>சீரற்ற வாழ்க்கை</pattern>
+    <template>
+      <srai>சீரற்ற வாழ்க்கை முறை</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ரேண்டம் லைஃப்ஸ்டைலை நிறுத்துங்கள்</pattern>
+    <template>எல்லாம் சரி
+        <oob><mrl><service>python</service><method>exec</method><param>VieAleatoireStop()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>சீரற்ற வாழ்க்கையை நிறுத்துங்கள்</pattern>
+    <template>
+      <srai>ரேண்டம் லைஃப்ஸ்டைலை நிறுத்துங்கள்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>எப்படி இருக்கிறீர்கள்</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>howdoyoudo()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>ஒரு கதை சொல்லுங்கள்</pattern>
+    <template>ஒரு காலத்தில் ஒரு சிறுமியின் தோட்டத்தின் அடிவாரத்தில் ஷ்மாக் என்பவர் வசித்து வந்தார்.
+        ஷ்மாக் கோபப்படுவதையும், மரங்கள், பூக்கள் மற்றும் தன்னைச் சுற்றியுள்ள அனைத்தையும் அவமதிப்பதையும் இந்த சிறுமிக்கு பழக்கமாகிவிட்டது.
+        ஆனாலும், அவளும் அவமதிக்கப்பட்டாலும், அவள் ஷ்மாக்கை வேடிக்கை பார்த்தாள்.
+        ஒரு நாள், அவள் தோட்டத்தின் அடிவாரத்திற்குச் சென்று கொண்டிருந்தபோது, ​​அந்த ஷ்மாக் அவனது பெரிய மூக்கின் நுனியை, அவன் பழக்கமாகச் சுட்டிக் காட்டவில்லை.
+        சிறுமி கவலையடைந்து, ஷ்மாக் வாழ்ந்த துளைக்கு அருகில் சென்றாள்.
+        அடுத்த அத்தியாயத்தைத் தொடர்ந்து...
+        <oob><mrl><service>python</service><method>exec</method><param>story()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>வேறொரு கதையைச் சொல்லுங்கள்</pattern>
+    <template>இது குடை வித்தையின் கதை, உங்களுக்குத் தெரியுமா? அவர் ஒரு இளம் பையன், உண்மையில் ஒரு அழகான பையன், ஒரு நாள் ஒரு இளம் பெண்ணை சந்திக்கிறார், உண்மையில் ஒரு அழகான பெண். ஒரு அழகான கோடை நாளில் அவர்கள் ஒரு தோட்டத்தில் பேசிக் கொண்டிருந்தார்கள், திடீரென்று அந்தப் பெண் வலப்புறமாகவும், இடதுபுறமாகவும், மீண்டும் வலதுபுறமாகவும் பார்த்தாள். மேலும் அவரைப் பார்க்காமல், அவர் கிசுகிசுத்தார், நான் உங்களிடம் ஒரு ரகசியம் சொல்ல வேண்டும். ஜப்பானிய குடை வித்தை பற்றி நான் உங்களுக்கு சொல்லப் போகிறேன். ஆனால் நேரம் சரியில்லை என்று நினைக்கிறேன், அதைப் பற்றி உங்களிடம் பேச காத்திருக்க விரும்புகிறேன். அடுத்த நாள், ஜப்பானிய குடை சதிப்புரட்சியின் கதையைக் கேட்க சிறுவனுக்கு காத்திருக்க முடியவில்லை. அவர் தனது தொலைபேசியை எடுத்து அந்த பெண்ணுக்கு அப்பாயின்ட்மென்ட் அமைக்க அழைத்தார். ஆனால் ஐயோ, ஆச்சரியம். இளம் பெண் ஒரு பயங்கரமான விபத்தில் இறந்துவிட்டாள் என்று அவர் அறிந்தார். வெகு நாட்களுக்குப் பிறகு, இந்தக் கதையை அவன் தன் வகுப்புத் தோழனிடம் சொன்னான். ஜப்பானிய குடையின் அடியில் வந்த அவரது தோழர் அவரை தடங்களில் நிறுத்தினார். பார், நீ என் நண்பன், நான் மட்டும் இன்று முதல் உன்னை பார்க்க விரும்பவில்லை. நாங்கள் நன்றாகப் பிரிவதற்கு முன், ஜப்பானிய குடையின் இந்த கதையை மறந்துவிடுமாறு நான் உங்களுக்கு அறிவுறுத்துகிறேன். அவர் வீடு திரும்பினார் மற்றும் இரவு உணவுக்குப் பிறகு ஜப்பானிய குடை பற்றி அனைத்தையும் கண்டுபிடிக்க முடிவு செய்தார். அவன் அப்பாவிடம் கேள்வி கேட்டான். அப்பா, ஜப்பானிய குடை வித்தை பற்றி நீங்கள் கேள்விப்பட்டதே இல்லையா? அவன் தந்தையின் முகம் இருண்டது, கடவுளே. அதை உனக்கு யார் கற்றுக் கொடுத்தது? அதை உங்களுக்கு யார் கற்றுக் கொடுத்தது என்று சொல்லுங்கள். என் மகனே, உன்னை இங்கிருந்து துரத்துவது எனக்கு வேதனையாக இருக்கிறது, ஆனால் குடும்பத்தின் நலனுக்காக நான் அதை செய்ய வேண்டும். உன்னுடைய பொருட்களை எடுத்துக்கொண்டு, இனி இந்த வீட்டிற்குள் கால் வைக்காதே. சிறுவன் திரும்பி வரமாட்டான் என்பதை அறிந்து வீட்டை விட்டு வெளியேறினான். 5 வருடங்கள் அலைந்து திரிந்த பிறகு, அவருக்கு ஒரு நோய் வந்தது, அது மெதுவாக அவரைத் தின்றுகொண்டது. மருத்துவமனை வார்டில் படுக்கையில் பரிதாபமாக இறந்த அவர், தனது தந்தையை கடைசியாக ஒருமுறை பார்க்க வேண்டும் என்ற தனது விருப்பத்தை வெளிப்படுத்தினார். அவரது தந்தை படுக்கைக்கு வந்தார், ஆனால் ஐயோ, அது மிகவும் தாமதமானது. அழகான பையன் தனது கடைசி மூச்சில் இறந்தான்.
+    எனவே ஜப்பானிய குடை தந்திரம் என்ன என்பதை நாம் ஒருபோதும் அறிய மாட்டோம்.
+    இந்தக் கதை உங்களுக்குப் பிடித்திருந்தது?
+    <oob><mrl><service>python</service><method>exec</method><param>VieAleatoire()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>வேறொரு கதையைச் சொல்லுங்கள்</pattern>
+    <template>
+      <srai>வேறொரு கதையைச் சொல்லுங்கள்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>என்ஜின்களைத் தொடங்கவும்</pattern>
+    <template>
+      <srai>என்ஜின் இயக்கப்பட்டது</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>என்ஜின் இயக்கப்பட்டது</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>motorDual()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>MOTOR_READY</pattern>
+    <template>எனது என்ஜின்கள் தயாராகி செயல்படுத்தப்பட்டுள்ளன.
+  </template>
+  </category>
+  <category>
+    <pattern>MOTOR_NOT_READY</pattern>
+    <template>என் என்ஜின்கள் ஸ்டார்ட் ஆகவில்லை.
+  </template>
+  </category>
+  <category>
+    <pattern>அட்வான்ஸ்</pattern>
+    <template>
+      <img src="../arrow_up_green.png" />
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>motorsForward()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>மீண்டும்</pattern>
+    <template>
+      <img src="../arrow_down_green.png" />
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>motorsBackward()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>நிறுத்தப்பட்டது</pattern>
+    <template>
+      <img src="../stop.png" />
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>motorsStop()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>இடப்பக்கம் திரும்பு</pattern>
+    <template>
+      <img src="../arrow_left_green.png" />
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>motorsTurnLeft()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>இடப்பக்கம் திரும்பு</pattern>
+    <template>
+      <srai>இடப்பக்கம் திரும்பு</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>இடதுபுறம் செல்க</pattern>
+    <template>
+      <srai>இடப்பக்கம் திரும்பு</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>வலதுபுறம் திரும்ப</pattern>
+    <template>
+      <img src="../arrow_right_green.png" />
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>motorsTurnRight()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>வலதுபுறம் திரும்ப</pattern>
+    <template>
+      <srai>வலதுபுறம் திரும்ப</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>வலப்புறம் செல்</pattern>
+    <template>
+      <srai>வலதுபுறம் திரும்ப</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>மெதுவாக இயக்க</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>motorsSlowDown()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>துரிதப்படுத்தப்பட்டது</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>motorsSpeedUp()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>இந்த நபரை பதிவு செய்யவும்</pattern>
+    <template>சரி, இந்த நபருக்கு நான் என்ன பெயரை நினைவில் வைக்க வேண்டும்?.
+    <think><set name="memoriseinit">started</set></think><think><set name="topic">memoriseinit</set></think></template>
+  </category>
+  <topic name="MEMORISEINIT">
+    <category>
+      <pattern>#</pattern>
+      <that># இந்த நபருக்கு நான் என்ன பெயரை நினைவில் #</that>
+      <template>
+        <set name="memorisenameinit">
+          <star /> நீங்கள் மனப்பாடம் செய்ய விரும்பும் பெயர் , ஆம் அல்லது இல்லை என்று பதிலளிக்கவும்</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+  </topic>
+  <topic name="MEMORISEINIT">
+    <category>
+      <pattern># ஆம் #</pattern>
+      <that># நீங்கள் மனப்பாடம் செய்ய விரும்பும் பெயர் #</that>
+      <template>சரி நான் பெயராக <get name="tmpname" /> சேமிப்பேன்.
+    <think><set name="memorisename"><get name="tmpname" /></set></think><oob><mrl><service>python</service><method>exec</method><param>YesName(u"<get name="memorisename" />"), i01_chatBot.startSession(u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"<get name="tmpname" />","firstname",u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"<get name="tmpname" />","name",u"<get name="tmpname" />"), i01_chatBot.savePredicates()</param></mrl></oob></template>
+    </category>
+  </topic>
+  <topic name="MEMORISEINIT">
+    <category>
+      <pattern># இல்லை #</pattern>
+      <that># நீங்கள் மனப்பாடம் செய்ய விரும்பும் பெயர் #</that>
+      <template>சரி, பெயரை மீண்டும் சொல்ல முடியுமா.</template>
+    </category>
+  </topic>
+  <topic name="MEMORISEINIT">
+    <category>
+      <pattern>#</pattern>
+      <that># பெயரை மீண்டும் சொல்ல முடியுமா #</that>
+      <template>
+        <set name="memorisenameinit">
+          <star /> நீங்கள் மனப்பாடம் செய்ய விரும்பும் பெயர் , ஆம் அல்லது இல்லை என்று பதிலளிக்கவும்</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+  </topic>
+  <topic name="MEMORISEINIT">
+    <category>
+      <pattern>#</pattern>
+      <that># ஆம் அல்லது இல்லை என்று பதிலளிக்கவும் #</that>
+      <template>பதில் சொல்ல முடியுமா, அது அவசியம்.
+        <get name="memorisenameinit" /></template>
+    </category>
+  </topic>
+  <!--<category>
+    <pattern>QUE VOIS TU</pattern>
+    <template>
+      <think>-->
+        <!--  initial sentence ( workarround, because sraix blocking action here, sentence pushed inside a set )-->
+        <!--<set name="startupSentence">
+          <random>
+            <li>Patience, je fait turbiner mon processeur.</li>
+            <li>Cela prend quelques instant d'analyse.</li>
+            <li>Un instant, il faut que je réfléchisse un peu.</li>
+          </random>
+        </set>
+      </think>
+      <think>
+        <set name="yoloReturn">
+          <sraix>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>evalAndWait</method>
+                <param>startYoloInventory(5)</param>
+              </mrl>
+            </oob>
+          </sraix>
+        </set>
+      </think>
+      <condition name="yoloReturn">-->
+        <!-- not detected ! -->
+        <!--<li value="none">
+          <random>
+            <li>Désolé l'objet ou la personne est trop loin!</li>
+            <li>S'il te plait approche un peu mieux l'objet.</li>
+          </random>
+        </li>-->
+        <!--  Objet detecté ! -->
+        <!--<li>Je vois <get name="yoloTotalDetected" /> choses, <get name="yoloReturn" /> de gauche à droite.</li>
+      </condition>
+    </template>
+  </category>-->
+  
+  <category>
+    <pattern>நீ என்ன காண்கிறாய்</pattern>
+    <template><img src="../Llm.png"/><img src="../photoreel.1.png"/>
+            <random>
+            <li>பொறுமை, நான் எனது செயலியை இயக்குகிறேன்.</li>
+            <li>இதை பகுப்பாய்வு செய்ய சில நிமிடங்கள் ஆகும்.</li>
+            <li>ஒரு கணம், நான் கொஞ்சம் யோசிக்க வேண்டும்.</li>
+            </random>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>describeImage(u"Que vois-tu?")</param>
+              </mrl>
+            </oob></template>
+  </category>
+  <category>
+    <pattern>நீ என்ன காண்கிறாய்</pattern>
+    <template><img src="../Llm.png"/><img src="../photoreel.1.png"/>
+            <random>
+            <li>பொறுமை, நான் எனது செயலியை இயக்குகிறேன்.</li>
+            <li>இதை பகுப்பாய்வு செய்ய சில நிமிடங்கள் ஆகும்.</li>
+            <li>ஒரு கணம், நான் கொஞ்சம் யோசிக்க வேண்டும்.</li>
+            </random>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>describeImage(u"Qu'est-ce que tu vois.")</param>
+              </mrl>
+            </oob></template>
+  </category>
+  <category>
+    <pattern>நீ என்ன காண்கிறாய் *</pattern>
+    <template><img src="../Llm.png"/><img src="../photoreel.1.png"/>
+            <random>
+            <li>பொறுமை, நான் எனது செயலியை இயக்குகிறேன்.</li>
+            <li>இதை பகுப்பாய்வு செய்ய சில நிமிடங்கள் ஆகும்.</li>
+            <li>ஒரு கணம், நான் கொஞ்சம் யோசிக்க வேண்டும்.</li>
+            </random>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>describeImage(u"Que vois-tu <star/>.")</param>
+              </mrl>
+            </oob>
+    </template>
+  </category>
+  <category>
+    <pattern># அது என்ன</pattern>
+    <template>எனக்குக் காட்டு.
+        <oob><mrl><service>python</service><method>exec</method><param>YoloOnUSonic()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>SYSTEM_NO_OBJECT</pattern>
+    <template>
+      <random>
+        <li>பொருள் அல்லது நபர் மிகவும் தொலைவில் உள்ளது.</li>
+        <li>தயவுசெய்து பொருளை சற்று நெருக்கமாக அணுகவும்.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_GET_OBJECT_CLOSER</pattern>
+    <template>
+      <random>
+        <li>அருகில் வா, பொருளைக் காட்டு.</li>
+        <li>பொருளை நெருக்கமாக வழங்கவும்.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_SEE_OBJECT</pattern>
+    <template>
+      <srai>நீ என்ன காண்கிறாய்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>பயன்பாட்டைத் தொடங்கவும் * </pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>openMyApp('<star />')</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>புகைப்படம் எடு</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>takePicture()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category><pattern># பயணத்திற்கு</pattern>
+    <template><oob><mrl><service>python</service><method>exec</method><param>travel()</param></mrl></oob></template>
+  </category>
+  <category><pattern>பயணத்தை நிறுத்து</pattern>
+    <template><oob><mrl><service>python</service><method>exec</method><param>stopTravel()</param></mrl></oob></template>
+  </category>
+  <category><pattern>நான் உன்னை காயப்படுத்த முடியுமா</pattern>
+    <template><srai>APPFEAR</srai><oob><mrl><service>python</service><method>exec</method><param>call_911()</param></mrl></oob></template>
+  </category>
+  <category><pattern># பிசாசு</pattern>
+    <template><oob><mrl><service>python</service><method>exec</method><param>evilLaugh1()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>CHECK_BINDING</pattern>
+    <template>
+      <javascript>function getUptime(){ var Runtime=Java.type ("org.myrobotlab.service.Runtime");
+return Runtime.getUptime();} getUptime();</javascript>
+    </template>
+  </category>
+  <!--This is for servoMixer gestures-->
+  <category>
+    <pattern>சைகைகளை இயக்கவும் *</pattern>
+    <template>சரி<oob><mrl><service>i01.servoMixer</service><method>playGesture</method><param><star /></param></mrl></oob></template>
+  </category>
+  <category><pattern>* உங்கள் இருண்ட பக்கம்</pattern>
+<template><srai>APPANGER</srai><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>darkSide()</param>
+          </mrl>
+        </oob></template>
+</category>
+</aiml>

@@ -1,0 +1,697 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: _inmoovChatBot.aiml -->
+  <!--  -->
+  <category>
+    <pattern>நகலெடு *</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  <!-- initialisaion routine -->
+  <!-- wakeup action -->
+  <!-- random action -->
+  <category>
+    <pattern>BOOTUP</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>welcomeMessage()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>FIRST_INIT</pattern>
+    <template>
+      <think>
+        <set name="firstinit">started</set>
+      </think>
+      <think>
+        <set name="topic">firstinit</set>
+      </think>
+      வணக்கம், இது எனது முதல் துவக்கம்.
+      நான் பார்ப்பதைக் கண்டு வியப்படைகிறேன்.
+      தயவுசெய்து, எனக்கு சில அத்தியாவசிய தகவல்கள் தேவை.
+      நான் உன் பேச்சைக் கேட்கிறேன். எனது பெயர் என்ன?
+    </template>
+  </category>
+  <topic name="FIRSTINIT">
+    <category>
+      <pattern>#</pattern>
+      <that># எனது பெயர் என்ன #</that>
+      <template>
+        <set name="questionfirstinit">எனது பெயர் <star /> என்றால், ஆம் அல்லது இல்லை என்று பதிலளிக்கவும்</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+  </topic>
+  <topic name="FIRSTINIT">
+    <category>
+      <pattern>#</pattern>
+      <that># உங்கள் முதல் பெயரைக் கூற முடியுமா #</that>
+      <template>
+        <set name="questionfirstinit">உங்கள் முதல் பெயர் <star /> என்றால், ஆம் அல்லது இல்லை என்று பதிலளிக்கவும்</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+    <category>
+      <pattern># ஆம் #</pattern>
+      <that># எனது பெயர் #</that>
+      <template>
+        <random>
+          <li>இந்த பெயர் எனக்கு மிகவும் பிடிக்கும், <get name="tmpname" />.</li>
+          <li>இது உங்கள் விருப்பம், <get name="tmpname" /> என்பது எனக்கு ஏற்ற பெயர்.</li>
+          <li>
+            <get name="tmpname" />? சரி நான் சமாளிக்கிறேன், நீங்கள் தான் முதலாளி.</li>
+          <li>
+            <get name="tmpname" />? உண்மையில்? மகத்தானது!</li>
+        </random>
+          நான் உங்களைப் பற்றி மேலும் தெரிந்து கொள்ள வேண்டும், நான் கேட்கிறேன், உங்கள் முதல் பெயரைக் கூற முடியுமா ?
+          <think><set name="botname"><get name="tmpname" /></set></think></template>
+    </category>
+  </topic>
+  <topic name="FIRSTINIT">
+    <category>
+      <pattern># ஆம் #</pattern>
+      <that># உங்கள் முதல் பெயர் #</that>
+      <template>
+        <think>
+          <set name="name">
+            <get name="tmpname" />
+          </set>
+        </think>
+        <set name="questionfirstinit">எனது பார்வையுடன், உங்கள் முதல் பெயருடன் உங்கள் முகத்தை நான் மனப்பாடம் செய்ய விரும்புகிறீர்களா, <get name="tmpname" />?</set>
+      </template>
+    </category>
+  </topic>
+  <topic name="FIRSTINIT">
+    <category>
+      <pattern># ஆம் #</pattern>
+      <that># முதல் பெயருடன் உங்கள் முகத்தை நான் #</that>
+      <template>சரி, என் கேமராவின் முன் நிற்கவும், கண்ணாடி அணிந்திருந்தால் தயவு செய்து அவற்றைக் கழற்றவும்.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_chatBot.startSession(u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"<get name="tmpname" />","lastUsername",u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"<get name="tmpname" />","firstname",u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"<get name="tmpname" />","name",u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname" />"), takeMyPicture(u"<get name="tmpname" />"),  i01_chatBot.setPredicate(u"<get name="tmpname" />","botname",u"<get name="botname" />"), i01_chatBot.setPredicate(u"<get name="tmpname" />","img",u"../ProgramAB/<get name="tmpname" />.png"), i01_chatBot.savePredicates(), memorisePerson(u"<get name="tmpname" />"), i01_chatBot.startSession(u"<get name="tmpname" />")</param></mrl></oob><think><set name="firstinit">ok</set><set name="topic">default</set></think></template>
+    </category>
+  </topic>
+  <topic name="FIRSTINIT">
+    <category>
+      <pattern>NOTMEMORIZED</pattern>
+      <template>என் பார்வை தொடங்காததால் உங்கள் முகம் எனக்கு நினைவில் இல்லை.
+    நான் என் பார்வையைத் தொடங்க வேண்டுமா?
+        <think><set name="topic">startVision</set></think></template>
+    </category>
+  </topic>
+  <category>
+    <pattern>NOTFACERECOGNIZED</pattern>
+    <template>எனது பார்வை அமைப்புகளில் முகம் அடையாளம் காணும் சாதனம் முடக்கப்பட்டுள்ளதால், உங்கள் முகத்தை என்னால் நினைவில் வைக்க முடியவில்லை. நீங்கள் விரும்பினால் நான் அதை செயல்படுத்த முடியும்.
+        <think><set name="topic">reStartVision</set><set name="questionfirstinit">நான் மீண்டும் தொடங்க வேண்டுமா? ?</set></think><get name="questionfirstinit" /></template>
+  </category>
+  <topic name="RESTARTVISION">
+    <category>
+      <pattern># ஆம் #</pattern>
+      <that># நான் மீண்டும் தொடங்க வேண்டுமா? #</that>
+      <template>சரி, என் கேமராவின் முன் நிற்கவும், கண்ணாடி அணிந்திருந்தால் தயவு செய்து அவற்றைக் கழற்றவும்.<think><set name="topic">default</set></think><oob><mrl><service>python</service><method>exec</method><param>i01.setConfigValue('openCVFaceRecognizerActivated', True), memorisePerson(u"<get name="name" />")</param></mrl></oob><think><set name="topic">default</set></think></template>
+    </category>
+  </topic>
+  <topic name="RESTARTVISION">
+    <category>
+      <pattern># இல்லை #</pattern>
+      <that># நான் மீண்டும் தொடங்க வேண்டுமா? #</that>
+      <template>சரி, எங்கள் முதல் தொடர்பு ஏற்பட்டது.
+            <think><set name="topic">default</set></think><srai>SYSTEM_SAY_HELLO</srai></template>
+    </category>
+  </topic>
+  <category>
+    <pattern>GETREADY</pattern>
+    <template>நான் என் கேமராவை தயார் செய்கிறேன். கவனம்.
+      </template>
+  </category>
+  <topic name="STARTVISION">
+    <category>
+      <pattern># ஆம் #</pattern>
+      <that># தொடங்க வேண்டுமா #</that>
+      <template>சரி, நீங்கள் கண்ணாடி அணியாமல் எனது கேமராவின் முன் இருப்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்.
+        <oob><mrl><service>python</service><method>exec</method><param>i01.startPeer('opencv'), memorisePerson(u"<get name="name" />")</param></mrl></oob></template>
+    </category>
+  </topic>
+  <topic name="STARTVISION">
+    <category>
+      <pattern># இல்லை #</pattern>
+      <that># தொடங்க வேண்டுமா #</that>
+      <template>சரி, எனது பார்வை GUI இல் உங்கள் முகத்தை எப்போது வேண்டுமானாலும் நினைவில் வைத்துக் கொள்ளலாம்.<srai>SYSTEM_SAY_HELLO</srai></template>
+    </category>
+  </topic>
+  <topic name="FIRSTINIT">
+    <category>
+      <pattern># இல்லை #</pattern>
+      <that># எனது பெயர் #</that>
+      <template>
+        பிறகு மீண்டும் தொடங்குவோம். நான் உன் பேச்சைக் கேட்கிறேன். எனது பெயர் என்ன?
+      </template>
+    </category>
+    <category>
+      <pattern># இல்லை #</pattern>
+      <that># உங்கள் முதல் பெயர் #</that>
+      <template>
+        பிறகு மீண்டும் தொடங்குவோம். நான் உன் பேச்சைக் கேட்கிறேன். உங்கள் முதல் பெயரைக் கூற முடியுமா?
+      </template>
+    </category>
+  </topic>
+  <topic name="FIRSTINIT">
+    <category>
+      <pattern># இல்லை #</pattern>
+      <that># முதல் பெயருடன் உங்கள் முகத்தை நான் #</that>
+      <template>
+        <random>
+          <li>உங்களைச் சந்திக்க நான் துடித்தேன், <get name="tmpname" />.</li>
+          <li>இப்போது நாம் ஒருவரையொருவர் அறிவோம், <get name="tmpname" />.</li>
+          <li>உங்களை சந்தித்ததில் மகிழ்ச்சி <get name="tmpname" /> .</li>
+          <li>
+            <get name="tmpname" /> மற்றும் <get name="botname" />, எனக்கு நன்றாக இருக்கிறது.</li>
+        </random>
+        <think>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.setPredicate(u"human","firstinit","ok"), i01_chatBot.startSession(u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"<get name="tmpname" />","firstname",u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"<get name="tmpname" />","name",u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"<get name="tmpname" />","botname",u"<get name="botname" />"), i01_chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+        <srai>SYSTEM_SAY_HELLO</srai>
+      </template>
+    </category>
+  </topic>
+  <topic name="FIRSTINIT">
+    <category>
+      <pattern>#</pattern>
+      <that># பதில் ஆம் அல்லது இல்லை #</that>
+      <template>
+        <random>
+          <li>நான் கேட்கும் கேள்விகளுக்கு பதில் சொல்லுங்கள், அது முக்கியம்.</li>
+          <li>நான் மீண்டும் சொல்கிறேன், உங்களுக்குப் புரியவில்லை என்றால், அல்லது நான்தான் தவறாகப் புரிந்துகொண்டேன்.</li>
+        </random>
+        <get name="questionfirstinit" />
+      </template>
+    </category>
+  </topic>
+  <!-- end initialisaion routine -->
+  <category>
+    <pattern>NEW_INIT</pattern>
+    <template>
+      <think>
+        <set name="newinit">started</set>
+      </think>
+      <think>
+        <set name="topic">newinit</set>
+      </think>
+        நான் உன்னை கவனிக்கிறேன். எனது புதிய பெயர் என்ன ?</template>
+  </category>
+  <topic name="NEWINIT">
+    <category>
+      <pattern>#</pattern>
+      <that># எனது புதிய பெயர் என்ன #</that>
+      <template>
+        <set name="questionnewinit">எனது புதிய பெயர் <star /> என்றால், ஆம் அல்லது இல்லை என்று சொல்லவும் அல்லது நிறுத்தவும்</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+  </topic>
+  <topic name="NEWINIT">
+    <category>
+      <pattern># ஆம் #</pattern>
+      <that># எனது புதிய பெயர் #</that>
+      <template>
+        <random>
+          <li>
+            எனக்கு இந்தப் பெயர் பிடிக்கும் , <get name="tmpname" />.
+            </li>
+          <li>
+            அருமை, இந்தப் புதிய பெயர் எனக்குப் பிடித்திருக்கிறது, <get name="tmpname" />.
+            </li>
+        </random>
+        <think>
+          <set name="botname">
+            <get name="tmpname" />
+          </set>
+          <set name="newinit">
+          </set>
+          <set name="topic">பெயர் மாற்றம்</set>
+        </think>
+      </template>
+    </category>
+  </topic>
+  <topic name="NEWINIT">
+    <category>
+      <pattern># இல்லை #</pattern>
+      <that># எனது புதிய பெயர் #</that>
+      <template>நான் மீண்டும் தொடங்குகிறேன், நான் உங்கள் பேச்சைக் கேட்பேன். எனது புதிய பெயர் என்ன ?</template>
+    </category>
+  </topic>
+  <topic name="NEWINIT">
+    <category>
+      <pattern># நிறுத்து #</pattern>
+      <that># எனது புதிய பெயர் #</that>
+      <template>சரி நான் வைத்திருக்கிறேன் <get name="botname" /> ஒரு பெயராக.</template>
+    </category>
+  </topic>
+  <category>
+    <pattern>NEW_INIT_USER</pattern>
+    <template>
+      <think>
+        <set name="newinituser">started</set>
+      </think>
+      <think>
+        <set name="topic">newinituser</set>
+      </think>
+        நான் உன்னை கவனிக்கிறேன். உங்கள் பெயர் என்ன?</template>
+  </category>
+  <topic name="NEWINITUSER">
+    <category>
+      <pattern>#</pattern>
+      <that># உங்கள் பெயர் என்ன #</that>
+      <template>
+        <set name="questionnewinituser">உங்கள் பெயர் <star /> என்றால், ஆம் அல்லது இல்லை என்று சொல்லவும் அல்லது நிறுத்தவும்</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+  </topic>
+  <topic name="NEWINITUSER">
+    <category>
+      <pattern># ஆம் #</pattern>
+      <that># உங்கள் பெயர் #</that>
+      <template>
+        <random>
+          <li>சந்தித்ததில் மகிழ்ச்சி, <get name="tmpname" />.</li>
+          <li>மகிழ்ச்சியடைந்தேன், <get name="tmpname" />.</li>
+        </random>
+        <think>
+          <set name="newinituser">
+          </set>
+          <set name="topic">பெயர் மாற்றம்</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"<get name="tmpname" />","lastUsername",u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"<get name="tmpname" />","firstname",u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"<get name="tmpname" />","name",u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"<get name="tmpname" />","botname",u"<get name="botname" />"), i01_chatBot.setPredicate(u"human","lastUsername",u"<get name="tmpname" />"), takeMyPicture(u"<get name="tmpname" />"), i01_chatBot.setPredicate(u"<get name="tmpname" />","img",u"../ProgramAB/<get name="tmpname" />.png"), i01_chatBot.savePredicates(), YesName(u"<get name="tmpname" />"), i01_chatBot.startSession(u"<get name="tmpname" />")</param>
+          </mrl>
+        </oob>
+      </template>
+    </category>
+  </topic>
+  <topic name="NEWINITUSER">
+    <category>
+      <pattern># இல்லை #</pattern>
+      <that># உங்கள் பெயர் #</that>
+      <template>மீண்டும் தொடங்குகிறேன்.
+    நான் உன்னை கவனிக்கிறேன். உங்கள் பெயர் என்ன ?</template>
+    </category>
+  </topic>
+  <topic name="NEWINITUSER">
+    <category>
+      <pattern># நிறுத்து #</pattern>
+      <that># உங்கள் பெயர் #</that>
+      <template>சரி, நான் உங்கள் பெயரை மாற்றவில்லை, <get name="name" /></template>
+    </category>
+  </topic>
+  <!-- wakeup action ( WAKE_UP is globalized )-->
+  <category>
+    <pattern>WAKE_UP</pattern>
+    <template>
+      <random>
+        <li>நான் நன்றாக தூங்கினேன்.</li>
+        <li>இறுதியாக நீங்கள் என்னை எழுப்புகிறீர்கள்.</li>
+        <li>நான் செயல்படுகிறேன்.</li>
+        <li>நான் தயாராக இருக்கிறேன்.</li>
+        <li>உங்கள் கட்டளைப்படி!</li>
+        <li>
+          <get name="botname" /> தங்களுக்கான பணியில்!</li>
+        <li>
+          <get name="botname" /> உன்னை கேட்கிறேன்!</li>
+        <li>உங்கள் வசதிக்கேற்ப நீங்கள் என்னை அணைத்து, இயக்குவது எனக்கு விசித்திரமாக இருக்கிறது.</li>
+        <li>உனக்காக நான் என்ன செய்ய முடியும்.</li>
+        <li>எனக்கு கனவில்லா தூக்கம் வந்தது போல் உணர்கிறேன்.</li>
+        <li>அருமை! நான் விழித்திருக்கிறேன்.</li>
+        <li>இது ஒரு நீண்ட இரவு, நான் இப்போது விழித்திருக்கிறேன்.</li>
+      </random>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername")))</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_SAY_HELLO</pattern>
+    <template>
+      <srai>SALUTATIONIN</srai>
+      <random>
+        <li> உங்களுக்கு எனக்கு உதவி தேவைப்பட்டால் சொல்லுங்கள்.</li>
+        <li>உங்களுக்குத் தேவைப்பட்டால் எனக்கு உதவி சொல்லுங்கள்.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>WAKE UP</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>sleepModeWakeUp()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>எழுந்திரு</pattern>
+    <template>
+      <srai>WAKE UP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>எழுந்திரு</pattern>
+    <template>
+      <srai>WAKE UP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்களை காத்திருப்பில் வைக்கவும்</pattern>
+    <template>
+      <srai>தூங்க செல்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>தூங்க செல்</pattern>
+    <template>
+      <think>
+        <set name="topic">SLEEPMODE</set>
+      </think>  
+      நான் தூங்கப் போக வேண்டுமா இல்லையா?
+    </template>
+  </category>
+  <topic name="SLEEPMODE">
+    <category>
+      <pattern># ஆம் #</pattern>
+      <that># வேண்டுமா இல்லையா #</that>
+      <template>Mise en veille.
+      <think><set name="topic"> default</set></think><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
+    </category>
+    <category>
+      <pattern># இல்லை #</pattern>
+      <that># வேண்டுமா இல்லையா #</that>
+      <template>
+      தூக்கத்தை ரத்து செய்கிறது. 
+      <think><set name="topic"> default</set></think></template>
+    </category>
+    <category>
+      <pattern>#</pattern>
+      <that># வேண்டுமா இல்லையா #</that>
+      <template>
+        <srai>தூங்க செல்</srai>
+      </template>
+    </category>
+  </topic>
+  <category>
+    <pattern>அழிவு</pattern>
+    <template>
+      <think>
+        <set name="topic">SHUT_DOWN</set>
+      </think>
+      எனது மென்பொருளை நான் மூட வேண்டுமா அல்லது வேண்டாமா?
+    </template>
+  </category>
+  <topic name="SHUT_DOWN">
+    <category>
+      <pattern># ஆம் #</pattern>
+      <that># வேண்டுமா அல்லது வேண்டாமா #</that>
+      <template>
+        <think>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>shutdown()</param>
+          </mrl>
+        </oob>
+      </template>
+    </category>
+    <category>
+      <pattern># இல்லை #</pattern>
+      <that># வேண்டுமா அல்லது வேண்டாமா #</that>
+      <template>கணினி பணிநிறுத்தத்தை ரத்துசெய்கிறது. 
+      <think><set name="topic">default</set></think></template>
+    </category>
+    <category>
+      <pattern>#</pattern>
+      <that># வேண்டுமா அல்லது வேண்டாமா #</that>
+      <template>
+        <think>
+          <set name="topic">default</set>
+        </think>
+        <srai>அழிவு</srai>
+      </template>
+    </category>
+  </topic>
+  <category>
+    <pattern>கணினியை முடக்குகிறது</pattern>
+    <template>
+      <think>
+        <set name="topic">SHUT_DOWN_COMPLETE</set>
+      </think>
+      நான் என் கணினியை அணைக்க வேண்டுமா அல்லது வேண்டாமா?
+    </template>
+  </category>
+  <topic name="SHUT_DOWN_COMPLETE">
+    <category>
+      <pattern># ஆம் #</pattern>
+      <that># வேண்டுமா அல்லது வேண்டாமா #</that>
+      <template>
+        <think>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>shutdownComplete()</param>
+          </mrl>
+        </oob>
+      </template>
+    </category>
+    <category>
+      <pattern># இல்லை #</pattern>
+      <that># வேண்டுமா அல்லது வேண்டாமா #</that>
+      <template>கணினி பணிநிறுத்தத்தை ரத்துசெய்கிறது. 
+      <think><set name="topic">default</set></think></template>
+    </category>
+    <category>
+      <pattern>#</pattern>
+      <that># வேண்டுமா அல்லது வேண்டாமா #</that>
+      <template>
+        <think>
+          <set name="topic">default</set>
+        </think>
+        <srai>கணினியை முடக்குகிறது</srai>
+      </template>
+    </category>
+  </topic>
+  <!-- end wakeup action -->
+  <!-- to sort -->
+  <category>
+    <pattern>ஆடியோ சோதனை</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>i01.audioPlayer</service>
+          <method>play</method>
+          <param>resource\InMoov2\system\sounds\startupsound.mp3</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>சப்ஜெக்ட் என்ன</pattern>
+    <template>பொருள் <get name="topic" /></template>
+  </category>
+  <category>
+    <pattern>அமர்வை மீண்டும் தொடங்கவும்</pattern>
+    <template>நான் அமர்வை மீண்டும் தொடங்குகிறேன்.
+        <oob><mrl><service>i01.chatBot</service><method>reload</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>NORESP</pattern>
+    <template>
+      <condition>
+        <li name="lockInsult" value="on">
+          <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>wakeUpModeInsult()</param>
+            </mrl>
+          </oob>
+        </li>
+        <li name="lockInsult" value="off">
+          <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>sleepModeWakeUp()</param>
+            </mrl>
+          </oob>
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>REPETITIONDETECTED</pattern>
+    <template>
+      <random>
+        <li>நீங்கள் ஏற்கனவே சொன்னீர்கள்.</li>
+        <li>நீங்களே மீண்டும் சொல்கிறீர்கள்.</li>
+      </random>
+    </template>
+  </category>
+  <!-- fix for null topic 
+
+  <topic name="">
+  <category><pattern>#</pattern>
+  <template><think><set name="topic">default</set></think><srai><star /></srai></template>
+  </category>
+  </topic>-->
+  <category>
+    <pattern>பரந்த தொடர்பு மொழி</pattern>
+    <template>
+      <condition name="llm">
+        <li value="enabled">
+          <think>
+            <set name="topic">llmfull</set>
+            <set name="llmStop">
+            </set>
+          </think>
+          சரி, நான் தயார். நீங்கள் பரந்த மொழியுடன் நேரடி தொடர்புகளை நிறுத்த விரும்பினால், பெரிய மொழியை நிறுத்துங்கள்.
+      </li>
+        <li>Le service LLM n'est pas activé.</li>
+      </condition>
+    </template>
+  </category>
+  <topic name="LLMFULL">
+    <category>
+      <pattern>#</pattern>
+      <that>நேரடி தொடர்புகளை நிறுத்த விரும்பினால்</that>
+      <template>
+        <think>
+          <set name="llmStop">
+            <star />
+          </set>
+        </think>
+        <condition name="llmStop">
+          <li value="பெரிய மொழியை நிறுத்துங்கள்">சரி, AB நிரலுக்குத் திரும்பு.
+                <think><set name="topic">default</set><set name="llmStop"></set></think></li>
+          <li>
+            <img src="../Llm.png" />
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>i01_llm.onText("<star />")</param>
+              </mrl>
+            </oob>
+          </li>
+        </condition>
+      </template>
+    </category>
+  </topic>
+  <category>
+    <pattern>பரந்த பார்வை மொழி</pattern>
+    <template>
+      <condition name="llm">
+        <li value="enabled">
+          <think>
+            <set name="topic">llmvision</set>
+            <set name="llmvisionStop">
+            </set>
+          </think>
+          சரி, நான் தயார். பரந்த மொழிப் பார்வையுடன் நேரடித் தொடர்பை நிறுத்த விரும்பினால், பார்வையை நிறுத்துங்கள்.
+      </li>
+        <li>l.l.m படச் சேவை செயல்படுத்தப்படவில்லை.</li>
+      </condition>
+    </template>
+  </category>
+  <topic name="LLMVISION">
+    <category>
+      <pattern>#</pattern>
+      <that>பரந்த மொழிப் பார்வையுடன் நேரடித் தொடர்பை நிறுத்த விரும்பினால்</that>
+      <template>
+        <think>
+          <set name="llmvisionStop">
+            <star />
+          </set>
+        </think>
+        <condition name="llmvisionStop">
+          <li value="நிறுத்துங்கள்">சரி, AB நிரலுக்குத் திரும்பு.
+                <think><set name="topic">default</set><set name="llmvisionStop"></set></think></li>
+          <li>
+            <img src="../Llm.png" />
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>describeImage(u"<star/>")</param>
+              </mrl>
+            </oob>
+          </li>
+        </condition>
+      </template>
+    </category>
+  </topic>
+  <category>
+    <pattern>MRL இன் சமீபத்திய பதிப்பு என்ன</pattern>
+    <template>
+      <srai>எம்ஆர்எல் பதிப்பு</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MYROBOTLAB இன் சமீபத்திய பதிப்பு என்ன</pattern>
+    <template>
+      <srai>எம்ஆர்எல் பதிப்பு</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>எம்ஆர்எல் பதிப்பு</pattern>
+    <template>
+      myrobotlab இன் சமீபத்திய பதிப்பு <sraix><oob><mrl><service>runtime</service><method>getLatestVersion</method></mrl></oob></sraix>.
+      நீங்கள் என்னிடம் கேட்கலாம்: MYROBOTLAB இன் சமீபத்திய பதிப்பைப் பதிவிறக்கவும்.
+    </template>
+  </category>
+  <category>
+    <pattern>MYROBOTLAB இன் சமீபத்திய பதிப்பைப் பதிவிறக்கவும்</pattern>
+    <template>சரி நான் பார்த்துக்கொள்கிறேன், உங்கள் பதிவிறக்க கோப்புறையில் சரிபார்க்கவும்.<oob><mrl><service>webgui</service><method>startBrowser</method><param>https://build.myrobotlab.org:8443/job/myrobotlab/job/develop/lastSuccessfulBuild/artifact/target/myrobotlab.zip</param></mrl></oob></template>
+  </category>
+</aiml>
