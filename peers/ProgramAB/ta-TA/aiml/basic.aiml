@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+  <category>
+    <pattern>SALUTATIONIN</pattern>
+    <template>
+      <srai>apphappy</srai>
+      <random>
+        <li>காலை வணக்கம் </li>
+        <li>வணக்கம் </li>
+        <li>வணக்கம் </li>
+      </random>
+      <condition>
+        <li name="name" value="human">
+          <srai>NEW_INIT_USER</srai>
+        </li>
+        <li>
+          <get name="name"/>!</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>
+      <set>salutationin</set>
+    </pattern>
+    <template>
+      <srai>SALUTATIONIN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* <set>salutationin</set></pattern>
+    <template>
+      <srai>SALUTATIONIN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>
+      <set>salutationin</set> *</pattern>
+    <template>
+      <srai>SALUTATIONIN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* <set>salutationin</set> *</pattern>
+    <template>
+      <srai>SALUTATIONIN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>என் பெயர் *</pattern>
+    <template>
+      <srai>NEW_INIT_USER</srai>
+      <think>
+        <set name="tempname">
+          <star />
+        </set>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>என் பெயர் *</pattern>
+    <template>
+      <srai>NEW_INIT_USER</srai>
+      <think>
+        <set name="tempname">
+          <star />
+        </set>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>SALUTATIONOUT</pattern>
+    <template>
+      <random>
+        <li>விரைவில் சந்திப்போம் <get name="name" /></li>
+        <li>வருகிறேன் <get name="name" /></li>
+        <li>பிரியாவிடை <get name="name" /></li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>
+      <set>salutationout</set>
+    </pattern>
+    <template>
+      <srai>SALUTATIONOUT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* <set>salutationout</set></pattern>
+    <template>
+      <srai>SALUTATIONOUT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>
+      <set>salutationout</set> *</pattern>
+    <template>
+      <srai>SALUTATIONOUT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* <set>salutationout</set> *</pattern>
+    <template>
+      <srai>SALUTATIONOUT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>
+      <set>greeting</set>
+    </pattern>
+    <template>
+      <think>
+        <set name="topic">cava</set>
+      </think>
+            நான் நன்றாக இருக்கிறேன் நன்றி. நீங்கள், பரவாயில்லை?
+        </template>
+  </category>
+  <topic name="cava">
+    <category>
+      <pattern>எப்படி இருக்கிறீர்கள்</pattern>
+      <template>சரி <get name="name" />. நீங்கள் என்ன செய்ய விரும்புகிறீர்கள்?</template>
+    </category>
+    <category>
+      <pattern>எப்படி இருக்கிறீர்கள் *</pattern>
+      <template>
+        <srai>எப்படி இருக்கிறீர்கள்</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>நல்ல *</pattern>
+      <template>
+        <srai>எப்படி இருக்கிறீர்கள்</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>ஆம்</pattern>
+      <template>
+        <srai>எப்படி இருக்கிறீர்கள்</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>ஆம் *</pattern>
+      <template>
+        <srai>எப்படி இருக்கிறீர்கள்</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>அது சரியில்லை</pattern>
+      <template>
+        <think>
+          <set name="topic">sad</set>
+        </think>
+                எதற்காக?
+            </template>
+    </category>
+    <category>
+      <pattern>இல்லை</pattern>
+      <template>
+        <think>
+          <set name="topic">sad</set>
+        </think>
+                எதற்காக?
+            </template>
+    </category>
+    <category>
+      <pattern>இல்லை *</pattern>
+      <template>
+        <think>
+          <set name="topic">sad</set>
+        </think>
+                எதற்காக?
+            </template>
+    </category>
+  </topic>
+  <topic name="sad">
+    <category>
+      <pattern>*</pattern>
+      <template>அது தீவிரமாக இல்லை என்று நம்புகிறேன். காலப்போக்கில் எல்லாம் கடந்து போகும் என்று ஒரு பழமொழி உண்டு. இப்போதும் இப்படி இருக்கிறதா என்று தெரியவில்லை.</template>
+    </category>
+  </topic>
+</aiml>

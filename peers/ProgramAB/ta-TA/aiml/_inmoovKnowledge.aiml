@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: _inmoovKnowledge.aiml-->
+  <!--  -->
+  <category>
+    <pattern>
+      <set>determinantinterogatif</set> # </pattern><that>எனக்கு தெரியாது</that>
+    <template>
+      <think>
+        <set name="determinantinterogatif">
+          <star index="1" />
+        </set>
+        <set name="courant">
+          <star index="2" />
+        </set>
+      </think>
+      <condition name="llm">
+        <li value="enabled">
+          <sraix>
+            <star index="1" />
+            <star index="2" />
+          </sraix>
+        </li>
+        <li>
+          <srai>
+            <star index="2" />
+          </srai>
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>*</pattern>
+    <template>
+      <think>
+        <set name="courant">
+          <star />
+        </set>
+      </think>
+      <condition name="llm">
+        <li value="enabled">
+          <sraix>
+            <star />
+          </sraix>
+        </li>
+        <li>
+          <sraix>
+            <star />
+          </sraix>
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>SRAIXFAILED *</pattern>
+    <template>
+      <condition name="llm">
+        <li value="enabled">
+          <img src="../Llm.png" />
+          <think>
+            <set name="topic">
+              <star />
+            </set>
+          </think>
+          <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>i01_llm.onText(u"<star />")</param>
+            </mrl>
+          </oob>
+        </li>
+        <li>
+          <think>
+            <set name="topic">learnf</set>
+          </think>
+          <srai>SYSTEM_LEARNING</srai>
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_WIKIDATA_CATEGORIE <set>articles</set> * <set>articles</set> *</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>getProperty("<star index="3" /> ", "<star index="4" />", "<star index="1" /> ", "<star index="2" />","DIT ","SYSTEM_LEARNING" )</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_WIKIDATA_CATEGORIE *</pattern>
+    <template>
+      <srai>SYSTEM_LEARNING</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_LEARNING</pattern>
+    <template>
+      <condition name="articles">
+        <li value="unknown">
+        </li>
+        <li>
+          <get name="articles" />
+        </li>
+      </condition>
+      <get name="courant" />?
+    <random><li>இந்த பதில் என்னிடம் இல்லை என்பதை ஒப்புக்கொள்கிறேன்.</li><li>மன்னிக்கவும் எனக்கி தெரியாது.</li><li>நான் அறிய விரும்புகிறேன்.</li><li>நான் என் நாக்கை பூனைக்குக் கொடுக்கிறேன்.</li></random>
+    உங்களுக்கு ஏதாவது யோசனை இருந்தால் இப்போதே சொல்லுங்கள்.</template>
+  </category>
+  <category>
+    <pattern>$இது _</pattern>
+    <that># உங்களுக்கு ஏதாவது யோசனை இருந்தால் சொல்லுங்கள் #</that>
+    <template>
+      <srai>
+        <condition name="articles">
+          <li value="unknown">
+          </li>
+          <li>
+            <get name="articles" />
+          </li>
+        </condition>
+        <get name="courant" /> கிழக்கு <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>அது இருந்தது _</pattern>
+    <that># உங்களுக்கு ஏதாவது யோசனை இருந்தால் சொல்லுங்கள் #</that>
+    <template>
+      <srai>
+        <condition name="articles">
+          <li value="unknown">
+          </li>
+          <li>
+            <get name="articles" />
+          </li>
+        </condition>
+        <get name="courant" /> இருந்தது <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>இதன் அர்த்தம் _</pattern>
+    <that># உங்களுக்கு ஏதாவது யோசனை இருந்தால் சொல்லுங்கள் #</that>
+    <template>
+      <srai>
+        <condition name="articles">
+          <li value="unknown">
+          </li>
+          <li>
+            <get name="articles" />
+          </li>
+        </condition>
+        <get name="courant" /> கிழக்கு <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>
+      <set>articles</set> _ $கிழக்கு <set>articles</set> _</pattern>
+    <that># உங்களுக்கு ஏதாவது யோசனை இருந்தால் சொல்லுங்கள் #</that>
+    <template>
+      <think>
+        <set name="articles2">
+          <star index="3" />
+        </set>
+      </think>
+      <srai>
+        <star index="1" />
+        <star index="2" /> கிழக்கு <star index="4" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ கிழக்கு _</pattern>
+    <that># உங்களுக்கு ஏதாவது யோசனை இருந்தால் சொல்லுங்கள் #</that>
+    <template>
+      <!--<condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>-->
+      <condition name="articles2">
+        <li value="unknown">
+          <think>
+            <set name="courant2">
+              <star index="2" />
+            </set>
+          </think>
+        </li>
+        <li>
+          <think>
+            <set name="courant2">
+              <get name="articles2" />
+              <star index="2" />
+            </set>
+          </think>
+        </li>
+      </condition>
+      <condition name="topic">
+        <li value="unknown">
+          <think>
+            <set name="topic">
+              <get name="courant" />
+            </set>
+          </think>
+        </li>
+      </condition>
+      <random>
+        <li>இனிமேல் நான் அதை அறிவேன் <star index="1" /> கிழக்கு <get name="courant2" />.</li>
+        <li>அதை அறிந்து மகிழ்ச்சி அடைகிறேன் <star index="1" /> கிழக்கு <get name="courant2" />.</li>
+      </random>
+      <learnf>
+        <category>
+          <pattern>
+            <eval>
+              <get name="courant" />
+            </eval>
+          </pattern>
+          <template>
+            <eval>
+              <get name="courant2" />
+            </eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif" />
+              <star index="1" />
+            </eval>
+          </pattern>
+          <template>
+            <eval>
+              <get name="courant2" />
+            </eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif" />
+              <star index="2" />
+            </eval>
+          </pattern>
+          <template>இது இருக்கலாம் <eval><star index="1" /></eval> உதாரணத்திற்கு.</template>
+        </category>
+        <category>
+          <pattern># அதுதானா <eval><star index="1" /></eval> கிழக்கு <eval><get name="courant2" /></eval></pattern>
+          <template>ஆம், <random><li>நிச்சயமாக</li><li>வெளிப்படையாக</li><li>நான் நினைக்கிறேன்</li></random>.</template>
+        </category>
+      </learnf>
+      <think>
+        <set name="articles">
+          <get name="null" />
+        </set>
+        <set name="courant">
+          <get name="null" />
+        </set>
+        <set name="courant2">
+          <get name="null" />
+        </set>
+        <set name="articles2">
+          <get name="null" />
+        </set>
+        <set name="learn">
+          <get name="null" />
+        </set>
+        <set name="tmp">
+          <get name="null" />
+        </set>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>_ இருந்தது _</pattern>
+    <that># உங்களுக்கு ஏதாவது யோசனை இருந்தால் சொல்லுங்கள் #</that>
+    <template>
+      <!--<condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>-->
+      <condition name="articles2">
+        <li value="unknown">
+          <think>
+            <set name="courant2">
+              <star index="2" />
+            </set>
+          </think>
+        </li>
+        <li>
+          <think>
+            <set name="courant2">
+              <get name="articles2" />
+              <star index="2" />
+            </set>
+          </think>
+        </li>
+      </condition>
+      <condition name="topic">
+        <li value="unknown">
+          <think>
+            <set name="topic">
+              <get name="courant" />
+            </set>
+          </think>
+        </li>
+      </condition>
+      <random>
+        <li>நன்றி எனக்கு தெரியும் <star index="1" /> இருந்தது <get name="courant2" />.</li>
+        <li>இப்போது எனக்கு அது தெரியும் <star index="1" /> இருந்தது <get name="courant2" />.</li>
+      </random>
+      <learnf>
+        <category>
+          <pattern>
+            <eval>
+              <get name="courant" />
+            </eval>
+          </pattern>
+          <template>
+            <eval>
+              <get name="courant2" />
+            </eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif" />
+              <star index="1" />
+            </eval>
+          </pattern>
+          <template>
+            <eval>
+              <get name="courant2" />
+            </eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif" />
+              <star index="2" />
+            </eval>
+          </pattern>
+          <template>ஒருவேளை அது இருந்திருக்கலாம் <eval><star index="1" /></eval> உதாரணத்திற்கு.</template>
+        </category>
+        <category>
+          <pattern># அதுதானா <eval><star index="1" /></eval> இருந்தது <eval><get name="courant2" /></eval></pattern>
+          <template>ஆம், <random><li>நிச்சயமாக</li><li>வெளிப்படையாக</li><li>நான் நினைக்கிறேன்</li></random>.</template>
+        </category>
+      </learnf>
+      <think>
+        <set name="articles">
+          <get name="null" />
+        </set>
+        <set name="courant">
+          <get name="null" />
+        </set>
+        <set name="courant2">
+          <get name="null" />
+        </set>
+        <set name="articles2">
+          <get name="null" />
+        </set>
+        <set name="learn">
+          <get name="null" />
+        </set>
+        <set name="tmp">
+          <get name="null" />
+        </set>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>_  உள்ளன _</pattern>
+    <that># உங்களுக்கு ஏதாவது யோசனை இருந்தால் சொல்லுங்கள் #</that>
+    <template>
+      <!--<condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>-->
+      <condition name="articles2">
+        <li value="unknown">
+          <think>
+            <set name="courant2">
+              <star index="2" />
+            </set>
+          </think>
+        </li>
+        <li>
+          <think>
+            <set name="courant2">
+              <get name="articles2" />
+              <star index="2" />
+            </set>
+          </think>
+        </li>
+      </condition>
+      <condition name="topic">
+        <li value="unknown">
+          <think>
+            <set name="topic">
+              <get name="courant" />
+            </set>
+          </think>
+        </li>
+      </condition>
+      <random>
+        <li>நன்றி எனக்கு தெரியும் <star index="1" /> உள்ளன <get name="courant2" />.</li>
+        <li>இப்போது எனக்கு அது தெரியும் <star index="1" /> உள்ளன <get name="courant2" />.</li>
+      </random>
+      <learnf>
+        <category>
+          <pattern>
+            <eval>
+              <get name="courant" />
+            </eval>
+          </pattern>
+          <template>
+            <eval>
+              <get name="courant2" />
+            </eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif" />
+              <star index="1" />
+            </eval>
+          </pattern>
+          <template>
+            <eval>
+              <get name="courant2" />
+            </eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif" />
+              <star index="2" />
+            </eval>
+          </pattern>
+          <template>இவை இருக்கலாம் <eval><star index="1" /></eval> உதாரணத்திற்கு.</template>
+        </category>
+        <category>
+          <pattern># அதுதானா <eval><star index="1" /></eval> உள்ளன <eval><get name="courant2" /></eval></pattern>
+          <template>ஆம், <random><li>நிச்சயமாக</li><li>வெளிப்படையாக</li><li>நான் நினைக்கிறேன்</li></random>.</template>
+        </category>
+      </learnf>
+      <think>
+        <set name="articles">
+          <get name="null" />
+        </set>
+        <set name="courant">
+          <get name="null" />
+        </set>
+        <set name="courant2">
+          <get name="null" />
+        </set>
+        <set name="articles2">
+          <get name="null" />
+        </set>
+        <set name="learn">
+          <get name="null" />
+        </set>
+        <set name="tmp">
+          <get name="null" />
+        </set>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>_ அந்த _</pattern>
+    <that># உங்களுக்கு ஏதாவது யோசனை இருந்தால் சொல்லுங்கள் #</that>
+    <template>
+      <!--<condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>-->
+      <condition name="articles2">
+        <li value="unknown">
+          <think>
+            <set name="courant2">
+              <star index="2" />
+            </set>
+          </think>
+        </li>
+        <li>
+          <think>
+            <set name="courant2">
+              <get name="articles2" />
+              <star index="2" />
+            </set>
+          </think>
+        </li>
+      </condition>
+      <condition name="topic">
+        <li value="unknown">
+          <think>
+            <set name="topic">
+              <get name="courant" />
+            </set>
+          </think>
+        </li>
+      </condition>
+      <random>
+        <li>இனிமேல் நான் அதை அறிவேன் <star index="1" /> அந்த <get name="courant2" />.</li>
+        <li>அதை அறிந்து மகிழ்ச்சி அடைகிறேன் <star index="1" /> அந்த <get name="courant2" />.</li>
+      </random>
+      <learnf>
+        <category>
+          <pattern>
+            <eval>
+              <get name="courant" />
+            </eval>
+          </pattern>
+          <template>
+            <eval>
+              <get name="courant2" />
+            </eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif" />
+              <star index="1" />
+            </eval>
+          </pattern>
+          <template>
+            <eval>
+              <get name="courant2" />
+            </eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif" />
+              <star index="2" />
+            </eval>
+          </pattern>
+          <template>இது இருக்கலாம் <eval><star index="1" /></eval> உதாரணத்திற்கு.</template>
+        </category>
+        <category>
+          <pattern># செய் <eval><star index="1" /></eval> அந்த <eval><get name="courant2" /></eval></pattern>
+          <template>ஆம், <random><li>நிச்சயமாக</li><li>வெளிப்படையாக</li><li>நான் நினைக்கிறேன்</li></random>.</template>
+        </category>
+      </learnf>
+      <think>
+        <set name="articles">
+          <get name="null" />
+        </set>
+        <set name="courant">
+          <get name="null" />
+        </set>
+        <set name="courant2">
+          <get name="null" />
+        </set>
+        <set name="articles2">
+          <get name="null" />
+        </set>
+        <set name="learn">
+          <get name="null" />
+        </set>
+        <set name="tmp">
+          <get name="null" />
+        </set>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>_ இது _</pattern>
+    <that># உங்களுக்கு ஏதாவது யோசனை இருந்தால் சொல்லுங்கள் #</that>
+    <template>
+      <!--<condition name="articles">
+        <li value="unknown"> </li>
+        <li><get name="articles"/></li>
+      </condition>-->
+      <condition name="articles2">
+        <li value="unknown">
+          <think>
+            <set name="courant2">
+              <star index="2" />
+            </set>
+          </think>
+        </li>
+        <li>
+          <think>
+            <set name="courant2">
+              <get name="articles2" />
+              <star index="2" />
+            </set>
+          </think>
+        </li>
+      </condition>
+      <condition name="topic">
+        <li value="unknown">
+          <think>
+            <set name="topic">
+              <get name="courant" />
+            </set>
+          </think>
+        </li>
+      </condition>
+      <random>
+        <li>இனிமேல் நான் அதை அறிவேன் <star index="1" /> இது <get name="courant2" />.</li>
+        <li>அதை அறிந்து மகிழ்ச்சி அடைகிறேன் <star index="1" /> இது <get name="courant2" />.</li>
+      </random>
+      <learnf>
+        <category>
+          <pattern>
+            <eval>
+              <get name="courant" />
+            </eval>
+          </pattern>
+          <template>
+            <eval>
+              <get name="courant2" />
+            </eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif" />
+              <star index="1" />
+            </eval>
+          </pattern>
+          <template>
+            <eval>
+              <get name="courant2" />
+            </eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif" />
+              <star index="2" />
+            </eval>
+          </pattern>
+          <template>இது இருக்கலாம் <eval><star index="1" /></eval> உதாரணத்திற்கு.</template>
+        </category>
+        <category>
+          <pattern># செய் <eval><star index="1" /></eval> இது <eval><get name="courant2" /></eval></pattern>
+          <template>ஆம், <random><li>நிச்சயமாக</li><li>வெளிப்படையாக</li><li>நான் நினைக்கிறேன்</li></random>.</template>
+        </category>
+      </learnf>
+      <think>
+        <set name="articles">
+          <get name="null" />
+        </set>
+        <set name="courant">
+          <get name="null" />
+        </set>
+        <set name="courant2">
+          <get name="null" />
+        </set>
+        <set name="articles2">
+          <get name="null" />
+        </set>
+        <set name="learn">
+          <get name="null" />
+        </set>
+        <set name="tmp">
+          <get name="null" />
+        </set>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>_</pattern>
+    <that># உங்களுக்கு ஏதாவது யோசனை இருந்தால் சொல்லுங்கள் #</that>
+    <template>
+      <srai>
+        <condition name="articles">
+          <li value="unknown">
+          </li>
+          <li>
+            <get name="articles" />
+          </li>
+        </condition>
+        <get name="courant" /> இது <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern># இல்லை #</pattern>
+    <that># உங்களுக்கு ஏதாவது யோசனை இருந்தால் சொல்லுங்கள் #</that>
+    <template>
+      <random>
+        <li>சரி, கவலைப்பட வேண்டாம், இந்த முறை நான் எதையும் கற்றுக்கொள்ள மாட்டேன்.</li>
+        <li>மிகவும் மோசமானது, புதிதாக ஏதாவது கற்றுக் கொள்ள வேண்டும் என்று எதிர்பார்த்தேன்.</li>
+      </random>
+      <think>
+        <set name="articles">
+          <get name="null" />
+        </set>
+        <set name="courant">
+          <get name="null" />
+        </set>
+        <set name="courant2">
+          <get name="null" />
+        </set>
+        <set name="articles2">
+          <get name="null" />
+        </set>
+        <set name="learn">
+          <get name="null" />
+        </set>
+        <set name="tmp">
+          <get name="null" />
+        </set>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern># நான் இல்லை #</pattern>
+    <that># உங்களுக்கு ஏதாவது யோசனை இருந்தால் சொல்லுங்கள் #</that>
+    <template>
+      <srai># இல்லை #</srai>
+    </template>
+  </category>
+  <category>
+    <pattern># ஐ என் #</pattern>
+    <that># உங்களுக்கு ஏதாவது யோசனை இருந்தால் சொல்லுங்கள் #</that>
+    <template>
+      <srai># இல்லை #</srai>
+    </template>
+  </category>
+  <category>
+    <pattern># ஐடியா இல்லை #</pattern>
+    <that># உங்களுக்கு ஏதாவது யோசனை இருந்தால் சொல்லுங்கள் #</that>
+    <template>
+      <srai># இல்லை #</srai>
+    </template>
+  </category>
+  <category>
+    <pattern># <set>determinantinterogatif</set> # <set>possessifs</set> # $எனக்கு தெரியாது</pattern>
+    <template>
+      <condition name="articles">
+        <li value="unknown" />
+        <li>
+          <star index="3" />
+        </li>
+      </condition>
+      <person>
+        <star index="4" />
+      </person>
+      <star index="5" />?
+    <random><li>இது சற்றே தெளிவற்ற கேள்வி, என்னால் அதற்கு பதில் சொல்ல முடியாது.</li> <li>என்னிடம் அந்த பதில் இல்லை என்பதை ஒப்புக்கொள்கிறேன்.</li><li>உங்களுக்குத் தெரிந்தால், எனக்கு எந்த யோசனையும் இல்லை.</li></random></template>
+  </category>
+  <category>
+    <pattern>நபர் *</pattern>
+    <template>
+      <person>
+        <star />
+      </person>
+    </template>
+  </category>
+  <category>
+    <pattern>_ அர்த்தம் _</pattern>
+    <that># உங்களுக்கு ஏதாவது யோசனை இருந்தால் சொல்லுங்கள் #</that>
+    <template>
+      <think>
+        <set name="equalto">
+          <srai>
+            <star /> கிழக்கு <star index="2" /></srai>
+        </set>
+      </think>
+      <condition name="equalto">
+        <li value="false">
+        சரி, நீங்கள் "<star />" என்று சொன்னால், அர்த்தம் "<star index="2" />". எனக்கு இப்போது நன்றாக புரிகிறது.
+        <learnf><category><pattern><eval><star /></eval></pattern><template><srai><eval><star index="2" /></eval></srai></template></category><category><pattern><eval><star /></eval> _</pattern><template><srai><eval><star index="2" /></eval><star /></srai></template></category><category><pattern>_ <eval><star /></eval></pattern><template><srai><star /><eval><star index="2" /></eval></srai></template></category><category><pattern>_ <eval><star /></eval> *</pattern><template><srai><star /><eval><star index="2" /></eval><star index="2" /></srai></template></category></learnf></li>
+        <li>இந்த தகவலுக்கு நன்றி.</li>
+      </condition>
+    </template>
+  </category>
+</aiml>

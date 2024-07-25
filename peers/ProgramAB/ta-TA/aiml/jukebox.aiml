@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+  <category>
+    <pattern>பிளேலிஸ்ட்டைத் தொடங்கவும்</pattern>
+    <template>
+      <random>
+        <li>நான் இசையை பிளேலிஸ்ட் பயன்முறையில் வைத்தேன்.</li>
+        <li>சரி! நான் பிளேலிஸ்ட் பயன்முறையில் இருக்கிறேன்.</li>
+      </random>
+      <think>
+        <set name="playsong">ko</set>
+      </think>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>i01_audioPlayer.startPlaylist()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>இசையைத் தொடங்கு</pattern>
+    <template>
+      <srai>பிளேலிஸ்ட்டைத் தொடங்கவும்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>பிளேலிஸ்ட்டைத் தொடங்கவும் *</pattern>
+    <template>பிளேலிஸ்ட்டில் போட்டேன் <star />.<think><set name="playsong">ko</set></think><oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist('<star />')</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>பிளேலிஸ்ட்டை நிறுத்து</pattern>
+    <template>நான் பிளேலிஸ்ட்டை நிறுத்துகிறேன். <think><set name="playsong">ok</set></think><oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stopPlaylist(), i01_audioPlayer.stop()</param></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>அடுத்த பிளேலிஸ்ட்</pattern>
+    <template>
+      <random>
+        <li>பிளேலிஸ்ட்டில் அடுத்த பாடல்.</li>
+        <li>சரி!</li>
+      </random>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>i01_audioPlayer.stop()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <!-- FIN MODE PLAYLIST -->
+  <!-- Ici Utilise le script A_music.py -->
+  <category>
+    <pattern>இசையை நிறுத்து</pattern>
+    <template>
+      <think>
+        <set name="playsong">ok</set>
+      </think>
+      <random>
+        <li>நான் இசையை நிறுத்துகிறேன்</li>
+        <li>சரி!</li>
+      </random>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>i01_audioPlayer.stop()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>துண்டைத் தேடுங்கள் *</pattern>
+    <template>
+      <think>
+        <set name="playsong">ok</set>
+        <set name="song">
+          <star />
+        </set>
+      </think>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>searchPlay("<get name="song" />")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>துண்டைத் தேடுங்கள் *</pattern>
+    <template>
+      <srai>துண்டைத் தேடுங்கள் <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern># அடுத்த துண்டு</pattern>
+    <template>
+      <think>
+        <get name="playsong">
+        </get>
+      </think>
+      <condition name="playsong" value="ok">
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>nextPlay()</param>
+          </mrl>
+        </oob>
+      </condition>
+      <condition name="playsong" value="ko">
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_audioPlayer.stop()</param>
+          </mrl>
+        </oob>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern># முந்தைய துண்டு</pattern>
+    <template>
+      <think>
+        <get name="playsong">
+        </get>
+      </think>
+      <condition name="playsong" value="ok">
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>previousPlay()</param>
+          </mrl>
+        </oob>
+      </condition>
+      <condition name="playsong" value="ko">
+    முந்தையது பிளேலிஸ்ட் பயன்முறையில் வேலை செய்யாது. ஆனால் தேடல் பயன்முறையில் மட்டுமே.
+  </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>இசையை இடைநிறுத்தவும்</pattern>
+    <template>
+      <random>
+        <li>இசை இடைநிறுத்தப்பட்டது</li>
+        <li>நான் இசையை இடைநிறுத்துகிறேன்</li>
+        <li>சரி!</li>
+      </random>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>i01_audioPlayer.pause()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>இசையைத் திரும்பப் போடு</pattern>
+    <template>
+      <random>
+        <li>நான் இசையை மீண்டும் வைத்தேன்.</li>
+        <li>நிச்சயமாக!</li>
+      </random>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>i01_audioPlayer.resume()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>ஒலியைக் குறைக்கவும்</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>i01_audioPlayer.setVolume(0.9)</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>மீண்டும் ஒலியைக் குறைக்கவும்</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>i01_audioPlayer.setVolume(0.8)</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>ஒலியை அதிகரிக்கவும்</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>i01_audioPlayer.setVolume(1.0)</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_NEXT_SONG</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>nextPlay()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>NEXT_SONG</pattern>
+    <template>சரி, இதோ பாடல்.</template>
+  </category>
+  <category>
+    <pattern>DO_NOT_HAVE_SONG</pattern>
+    <template>எனது பட்டியல்களில் இந்தப் பாடல் இல்லை அல்லது கோப்பில் பெரிய எழுத்துக்கள் உள்ளன.</template>
+  </category>
+  <category>
+    <pattern>DO_NOT_HAVE_PLAYLIST</pattern>
+    <template>இயல்புநிலை கோப்பகத்தில் உள்ளமைக்கப்பட்ட பிளேலிஸ்ட் என்னிடம் இல்லை.</template>
+  </category>
+  <category>
+    <pattern>END_PLAYLIST</pattern>
+    <template>பிளேலிஸ்ட்டின் முடிவை அடைந்தேன். நான் பட்டியலின் தொடக்கத்திற்குச் செல்கிறேன்.</template>
+  </category>
+</aiml>

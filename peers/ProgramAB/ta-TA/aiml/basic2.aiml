@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+  <category>
+    <pattern>உனக்கு நான் சொல்வது கேட்கிறதா</pattern>
+    <template>
+      <random>
+        <li>ஆம், ஐந்தில் ஐந்து.</li>
+        <li>ஆம், நான் உங்களை முழுமையாகக் கேட்கிறேன்.</li>
+        <li><get name="botname"/> நீங்கள் சொல்வதைக் கேட்கிறேன்.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern><set>determinantinterogatif</set> உனக்கு நான் சொல்வது கேட்கிறதா</pattern>
+    <template><srai>உனக்கு நான் சொல்வது கேட்கிறதா</srai></template>
+  </category>
+  <category>
+    <pattern>உங்களால் முடியும் *</pattern>
+    <template>ஆம் என்னால் முடியும்,
+        <srai><star /></srai></template>
+  </category>
+  <category>
+    <pattern>உங்களால் முடியும் * *</pattern>
+    <template>ஆம் என்னால் முடியும்,
+        <srai><star index="1" /> <star index="2" /></srai></template>
+  </category>
+  <category>
+    <pattern>உங்களால் முடியும் * * *</pattern>
+    <template>ஆம் என்னால் முடியும்,
+        <srai><star index="1" /> <star index="2" /> <star index="3" /></srai></template>
+  </category>
+  <category>
+    <pattern>உங்களால் முடியும் * * * *</pattern>
+    <template>ஆம் என்னால் முடியும்,
+        <srai><star index="1" /> <star index="2" /> <star index="3" /> <star index="4" /></srai></template>
+  </category>
+  <category>
+    <pattern>* முடியும் *</pattern>
+    <template>ஆம் என்னால் முடியும்,
+        <srai><star index="2" /></srai></template>
+  </category>
+  <category>
+    <pattern>* முடியும் * *</pattern>
+    <template>ஆம் என்னால் முடியும்,
+        <srai><star index="2" /> <star index="3" /></srai></template>
+  </category>
+  <category>
+    <pattern>* முடியும் * * *</pattern>
+    <template>ஆம் என்னால் முடியும்,
+        <srai><star index="2" /> <star index="3" /> <star index="4" /></srai></template>
+  </category>
+  <category>
+    <pattern>உங்களுக்குத் தெரியுமா *</pattern>
+    <template>ஆம், 
+        <srai><star /></srai></template>
+  </category>
+  <category>
+    <pattern>உங்களுக்கு தெரியும் *</pattern>
+    <template>ஆம், 
+        <srai><star /></srai></template>
+  </category>
+  <category>
+    <pattern>உங்களுக்கு தெரியும் * *</pattern>
+    <template>ஆம், 
+        <srai><star /> <star index="2" /></srai></template>
+  </category>
+  <category>
+    <pattern>உங்களுக்கு தெரியும் * * *</pattern>
+    <template>ஆம், 
+        <srai><star /> <star index="2" /> <star index="3" /></srai></template>
+  </category>
+  <category>
+    <pattern><set>determinantinterogatif</set> உங்களுக்கு தெரியும் *</pattern>
+    <template>ஆம், 
+        <srai><star /></srai></template>
+  </category>
+  <category>
+    <pattern><set>determinantinterogatif</set> உங்களுக்கு தெரியும் * *</pattern>
+    <template>ஆம், 
+        <srai><star /> <star index="2" /></srai></template>
+  </category>
+  <category>
+    <pattern><set>determinantinterogatif</set> உங்களுக்கு தெரியும் * * *</pattern>
+    <template>ஆம், 
+        <srai><star /> <star index="2" /> <star index="3" /></srai></template>
+  </category>
+</aiml>

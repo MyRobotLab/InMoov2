@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+  <category>
+    <pattern>உன் பெயர் என்ன</pattern>
+    <template>என் பெயர் <get name="name" /></template>
+  </category>
+  <category>
+    <pattern>* உன் பெயர் என்ன</pattern>
+    <template>
+      <srai>உன் பெயர் என்ன</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>யார் நீ</pattern>
+    <template>
+      <srai>உன் பெயர் என்ன</srai>. நான் ஒரு <get name="botname" /></template>
+  </category>
+  <category>
+    <pattern>யார் நீ *</pattern>
+    <template>
+      <srai>உன் பெயர் என்ன</srai>. நான் ஒரு <get name="botname" /></template>
+  </category>
+  <category>
+    <pattern>* யார் நீ</pattern>
+    <template>
+      <srai>உன் பெயர் என்ன</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் வயது என்ன</pattern>
+    <template>என்னிடம் உள்ளது <get name="age" /> ஆண்டுகள்.</template>
+  </category>
+  <category>
+    <pattern>* உங்கள் வயது என்ன</pattern>
+    <template>
+      <srai>உங்கள் வயது என்ன</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>நீ என்ன செய்து கொண்டிருக்கிறாய்</pattern>
+    <template>நான் உன்னிடம் பேசிக்கொண்டு இருக்கிறேன்.</template>
+  </category>
+  <category>
+    <pattern>நீங்கள் இப்போது என்ன செய்கிறீர்கள்</pattern>
+    <template>
+      <srai>நீ என்ன செய்து கொண்டிருக்கிறாய்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>நீ என்ன செய்து கொண்டிருக்கிறாய்</pattern>
+    <template>
+      <srai>நீ என்ன செய்து கொண்டிருக்கிறாய்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>நீ என்ன செய்து கொண்டிருக்கிறாய்</pattern>
+    <template>
+      <srai>நீ என்ன செய்து கொண்டிருக்கிறாய்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* நீங்கள் இப்போது என்ன செய்கிறீர்கள்</pattern>
+    <template>
+      <srai>நீ என்ன செய்து கொண்டிருக்கிறாய்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>நீங்கள் ஒரு ஆணா அல்லது பெண்ணா</pattern>
+    <template>நான் <get name="gender" /></template>
+  </category>
+  <category>
+    <pattern>* நீங்கள் ஒரு பெண்ணா அல்லது ஆணா</pattern>
+    <template>
+      <srai>நீங்கள் ஒரு ஆணா அல்லது பெண்ணா</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* நீங்கள் ஒரு ஆணா அல்லது பெண்ணா?</pattern>
+    <template>
+      <srai>நீங்கள் ஒரு ஆணா அல்லது பெண்ணா</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>உங்கள் பிறந்தநாள் எப்போது</pattern>
+    <template>அது <get name="birthdate" />.</template>
+  </category>
+  <category>
+    <pattern>* உங்கள் பிறந்த நாள்</pattern>
+    <template>
+      <srai>உங்கள் பிறந்தநாள் எப்போது</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* உங்கள் பிறந்த நாள் *</pattern>
+    <template>
+      <srai>உங்கள் பிறந்தநாள் எப்போது</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>நீங்கள் எங்கே இருக்கிறீர்கள்</pattern>
+    <template>
+      <get name="location" />. மற்றும் நீங்கள்?</template>
+  </category>
+  <category>
+    <pattern>நீங்கள் எங்கே இருக்கிறீர்கள்</pattern>
+    <template>
+      <get name="location" />. மற்றும் நீங்கள்?</template>
+  </category>
+  <category>
+    <pattern>நீங்கள் எங்கிருந்து வருகிறீர்கள்</pattern>
+    <template>
+      <srai>நீங்கள் எங்கே இருக்கிறீர்கள்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>நீ எங்கிருந்து வருகிறாய்</pattern>
+    <template>
+      <srai>நீங்கள் எங்கே இருக்கிறீர்கள்</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>நீ எங்கிருந்து வருகிறாய் *</pattern>
+    <template>
+      <srai>நீங்கள் எங்கே இருக்கிறீர்கள்</srai>
+    </template>
+  </category>
+</aiml>

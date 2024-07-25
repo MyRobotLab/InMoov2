@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  gael le 04/09/2023 -->
+  <!--  -->
+  <category>
+    <pattern>ALERT</pattern>
+    <template>
+      எச்சரிக்கை,
+   <!--<oob><mrl><service>python</service><method>exec</method><param>errors()</param></mrl></oob>--></template>
+  </category>
+  <category>
+    <pattern>SYSTEM_ERROR_IMAGE_DISPLAY_1</pattern>
+    <template>
+      imageDisplay தொடங்கப்படவில்லை.
+         </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_ERROR_OPENCV_1</pattern>
+    <template>
+      Open CV தொடங்கப்படவில்லை.
+         </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_ERROR_OPENWEATHERMAP_1</pattern>
+    <template>
+      அணுகல் விசை பிழை open weathermap.
+         </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_ERROR_OPENWEATHERMAP_2</pattern>
+    <template>
+      திறந்த வானிலை வரைபடத்தில் தேர்ந்தெடுக்கப்பட்ட நகரம் அங்கீகரிக்கப்படவில்லை.
+   </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_ERROR_OPENWEATHERMAP_3</pattern>
+    <template>
+       திறந்த வானிலை வரைபட அலகுகள் வரையறுக்கப்படவில்லை.
+   </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_ERROR_OPENWEATHERMAP_4</pattern>
+    <template>
+       திறந்த வானிலை வரைபடம் தொடங்கப்படவில்லை அல்லது கட்டமைக்கப்படவில்லை.
+   </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_ERROR_PIR_1</pattern>
+    <template>
+      பி, ஐ, ஆர் சென்சார் தொடங்கப்படவில்லை.
+   </template>
+  </category>
+</aiml>

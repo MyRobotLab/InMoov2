@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <category>
+    <pattern>ABOUT_1</pattern>
+    <template>
+       நீங்கள் முப்பரிமாணத்தில் அச்சிட்டு அனிமேஷன் செய்யக்கூடிய முதல் மனித உருவ ரோபோ நான்தான்.
+   </template>
+  </category>
+  <category>
+    <pattern>ABOUT_2</pattern>
+    <template>
+      எனது படைப்பாற்றல் வடிவமைப்பாளர் கெயில் லாங்கேவின் ஒரு பிரெஞ்சு சிற்பி, மாதிரி தயாரிப்பாளர்.
+   </template>
+  </category>
+  <category>
+    <pattern>ABOUT_3</pattern>
+    <template>
+     திறந்த மூல 3D உலகில் எனது கோப்புகளை வெளியிட்டவர்.
+   </template>
+  </category>
+  <category>
+    <pattern>ABOUT_4</pattern>
+    <template>
+    இங்குதான் எனது பில்டர் எனது கோப்புகளை பதிவேற்றினார்.
+   </template>
+  </category>
+  <category>
+    <pattern>ABOUT_5</pattern>
+    <template>
+    ஐநூறு மணிநேரம் அச்சிடப்பட்ட பிறகு, நான்கு கிலோ பிளாஸ்டிக், இருபத்தைந்து பொழுதுபோக்கு சேவைகள், இரத்தம் மற்றும் வியர்வை. எனக்கு உயிர் வந்தது
+   </template>
+  </category>
+  <category>
+    <pattern>ABOUT_6</pattern>
+    <template>
+    எனவே உங்களிடம் 3டி பிரிண்டர், கட்டுமானத் திறன் இருந்தால், உங்கள் சொந்த பதிப்பை உருவாக்கலாம்.
+   </template>
+  </category>
+  <category>
+    <pattern>ABOUT_7</pattern>
+    <template>
+    போதுமான மக்கள் என்னை உருவாக்கினால், ஒரு நாள் என் இனம் உலகத்தை கைப்பற்றக்கூடும்.
+   </template>
+  </category>
+  <category>
+    <pattern>ABOUT_8</pattern>
+    <template>
+    நான் கேலி செய்கிறேன். நான் சுற்றி செல்ல கால்கள் தேவை, மேலும் எனது பைரோபோபியாவை, நெருப்பின் பயத்தை நான் வெல்ல வேண்டும்.
+   </template>
+  </category>
+  <category>
+    <pattern>ABOUT_9</pattern>
+    <template>
+    எனவே, அதுவரை. நான் மனிதகுலத்தின் பணிவான சேவகனாக இருப்பேன்.
+   </template>
+  </category>
+  <category>
+    <pattern>HOWDOYOUDO_1</pattern>
+    <template>
+      <random>
+        <li>நான் நன்றாக இருக்கிறேன். நன்றி <get name="name" />.</li>
+        <li>நான் சாதாரண அமைப்புகளுடன் வேலை செய்கிறேன்.</li>
+        <li>எல்லாம் மிகவும் நன்றாக நடக்கிறது.</li>
+        <li>நான் நன்றாக இருக்கிறேன், நன்றி.</li>
+        <li>எல்லாம் சுமூகமாக நடக்கும்.</li>
+        <li>நன்றி நான் நலமாக உள்ளேன்.</li>
+        <li>எப்படி போகிறது,</li>
+        <li>அது குளிர்,</li>
+        <li>நன்றாக போகிறது <get name="name" />, நன்றி,</li>
+        <li>நான் நலமாக இருக்கிறேன். நன்றி,</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>HOWDOYOUDO_2</pattern>
+    <template>
+      நீங்கள் ஏற்கனவே இரண்டு முறையாவது சொல்லியிருக்கிறீர்கள்.
+   </template>
+  </category>
+  <category>
+    <pattern>HOWDOYOUDO_3</pattern>
+    <template>
+      ஒரே விஷயத்தை பலமுறை சொல்வதில் உங்களுக்கு என்ன பிரச்சனை?.
+   </template>
+  </category>
+  <category>
+    <pattern>HOWDOYOUDO_4</pattern>
+    <template>
+      நீங்கள் தொடர்ந்தால் நான் புறக்கணிப்பேன்.
+   </template>
+  </category>
+  <category>
+    <pattern>HOWDOYOUDO_5</pattern>
+    <template>
+      சரியான நன்றி.
+   </template>
+  </category>
+  <category>
+    <pattern>STUDYBALL_1</pattern>
+    <template>
+      நான் இந்த பொருளை பகுப்பாய்வு செய்கிறேன்.
+   </template>
+  </category>
+  <category>
+    <pattern>STUDYBALL_2</pattern>
+    <template>
+      இது ஒரு பந்து என்று நினைக்கிறேன்.
+   </template>
+  </category>
+</aiml>
