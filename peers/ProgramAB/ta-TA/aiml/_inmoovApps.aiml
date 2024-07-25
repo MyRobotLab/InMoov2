@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!-- kids game 1 -->
+  <category>
+    <pattern> # வார்த்தைகளை விளையாடு # </pattern>
+    <template>
+      <think>
+        <set name="topic">playwordsgame</set>
+      </think>
+      <random>
+        <li>
+    ஆந்தை! நான் உன்னுடன் கற்றுக் கொள்ள விரும்புகிறேன். நீங்கள் எந்த வார்த்தையைக் கற்றுக்கொள்ள விரும்புகிறீர்கள்?
+    </li>
+        <li>
+    உங்களுக்குத் தெரிந்த பல வார்த்தைகள் எனக்குத் தெரியுமா? தொடருங்கள், முயற்சி செய்யுங்கள்!
+    </li>
+        <li>
+    உலகில் உள்ள ஒவ்வொரு வார்த்தையும் எனக்குத் தெரியும்! சாதாரணமாக, நான் ஒரு ரோபோ. போகலாம்.
+    </li>
+      </random>
+      <li>
+  சொல்லுங்க, விளையாட்டுகளை நிறுத்து! நிறுத்து
+  </li>
+    </template>
+  </category>
+  <topic name="playwordsgame">
+    <category>
+      <pattern>*</pattern>
+      <template>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>PlayWithWords("<star index="1" />")</param>
+          </mrl>
+        </oob>
+      </template>
+    </category>
+  </topic>
+  <!-- end kids game -->
+  <!-- rockpaperscissors game -->
+  <category>
+    <pattern># கல் இலை உளி #</pattern>
+    <template>
+      <srai># சிஃபோமி #</srai>
+    </template>
+  </category>
+  <category>
+    <pattern># சிஃபோமி #</pattern>
+    <template>
+      <think>
+        <set name="topic">rockpaperscissors</set>
+      </think>
+      <think>
+        <set name="rockpaperscissorsHumanPoints">0</set>
+      </think>
+      <think>
+        <set name="rockpaperscissorsRobotPoints">0</set>
+      </think>
+      <random>
+        <li>
+    சிஃபோமி விளையாடுவோம்!
+    </li>
+        <li>
+    எனக்கு இந்த விளையாட்டு பிடிக்கும்!
+    </li>
+      </random>
+      <li>
+  வெற்றி பெற 3 புள்ளிகள்! சொல்லுங்கள், விளையாட்டுகளை நிறுத்துங்கள்! நிறுத்து. நீ ஆரம்பி. கல் இலை அல்லது உளி என்று சொல்லுங்கள்.
+  </li>
+    </template>
+  </category>
+  <topic name="rockpaperscissors">
+    <category>
+      <pattern>பாறை</pattern>
+      <template>
+        <random>
+          <li>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>paper()</param>
+              </mrl>
+            </oob>
+        என்னிடம் ஒரு இலை உள்ளது மன்னிக்கவும் அது கல்லை மறைக்கிறது!
+        <think><set name="rockpaperscissorsRobotPoints"><javascript>
+        eval( <get name="rockpaperscissorsRobotPoints" /> + 1 );
+        </javascript></set></think></li>
+          <li>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>scissors()</param>
+              </mrl>
+            </oob>
+        என்னிடம் கத்தரிக்கோல் உள்ளது, உங்கள் கல் அவற்றை உடைத்தது.
+        <think><set name="rockpaperscissorsHumanPoints"><javascript>
+        eval( <get name="rockpaperscissorsHumanPoints" /> + 1 );
+        </javascript></set></think></li>
+          <li>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>rock()</param>
+              </mrl>
+            </oob>
+        எனக்கும் ஒரு கல் இருக்கிறது.
+</li>
+        </random>
+        <srai>SYSTEM_COUNT_POINTS</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>இலை</pattern>
+      <template>
+        <random>
+          <li>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>scissors()</param>
+              </mrl>
+            </oob>
+        மன்னிக்கவும் என்னிடம் கத்தரிக்கோல் உள்ளது, அவர்கள் காகிதத்தை வெட்டினார்கள்!
+        <think><set name="rockpaperscissorsRobotPoints"><javascript>
+        eval( <get name="rockpaperscissorsRobotPoints" /> + 1 );
+        </javascript></set></think></li>
+          <li>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>rock()</param>
+              </mrl>
+            </oob>
+        வாழ்த்துக்கள், என்னிடம் ஒரு கல் உள்ளது, உங்கள் காகிதம் அதை உள்ளடக்கியது.
+        <think><set name="rockpaperscissorsHumanPoints"><javascript>
+        eval( <get name="rockpaperscissorsHumanPoints" /> + 1 );
+        </javascript></set></think></li>
+          <li>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>paper()</param>
+              </mrl>
+            </oob>
+        என்னிடம் ஒரு தாள் உள்ளது.
+</li>
+        </random>
+        <srai>SYSTEM_COUNT_POINTS</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>கத்தரிக்கோல்</pattern>
+      <template>
+        <srai>உளி</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>உளி</pattern>
+      <template>
+        <random>
+          <li>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>rock()</param>
+              </mrl>
+            </oob>
+        என்னிடம் ஒரு பாறை உள்ளது, மன்னிக்கவும் அது கத்தரிக்கோலை உடைக்கிறது! 
+        <think><set name="rockpaperscissorsRobotPoints"><javascript>
+        eval( <get name="rockpaperscissorsRobotPoints" /> + 1 );
+        </javascript></set></think></li>
+          <li>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>paper()</param>
+              </mrl>
+            </oob>
+        என்னிடம் ஒரு தாள் உள்ளது, உங்கள் கத்தரிக்கோல் அதை வெட்டியது
+        <think><set name="rockpaperscissorsHumanPoints"><javascript>
+        eval( <get name="rockpaperscissorsHumanPoints" /> + 1 );
+        </javascript></set></think></li>
+          <li>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>scissors()</param>
+              </mrl>
+            </oob>
+        சமத்துவம், எனக்கும் கத்தரிக்கோல் உள்ளது.
+</li>
+        </random>
+        <srai>SYSTEM_COUNT_POINTS</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>SYSTEM_COUNT_POINTS</pattern>
+      <template>
+        <li>
+          <get name="rockpaperscissorsHumanPoints" /> உங்களுக்கான புள்ளிகள்.</li>
+        <li>
+          <get name="rockpaperscissorsRobotPoints" /> எனக்கு புள்ளிகள்.</li>
+        <condition>
+          <li name="rockpaperscissorsRobotPoints" value="3">நான் வெற்றி பெற்றேன்! <random><li>நான் மிகவும் திறமையானவன்</li><li>அது மிகவும் எளிதாக இருந்தது</li><li>அழாதே</li></random>. மீண்டும் விளையாடுவோம்! அல்லது விளையாட்டுகளை நிறுத்துங்கள் என்று சொல்லுங்கள். <srai>கல் இலை உளி</srai></li>
+          <li name="rockpaperscissorsHumanPoints" value="3">நீ வென்றாய்! <random><li>வாழ்த்துகள்</li><li>நீங்கள் ஏமாற்றிவிட்டீர்கள் என்று நினைக்கிறேன்</li><li>நீங்கள் மிகவும் வலிமையானவர்</li></random>. மீண்டும் விளையாடுவோம்! அல்லது விளையாட்டுகளை நிறுத்துங்கள் என்று சொல்லுங்கள். <srai>கல் இலை உளி</srai></li>
+          <li>. தொடரவும்.</li>
+        </condition>
+      </template>
+    </category>
+    <category>
+      <pattern>*</pattern>
+      <template>
+      எனக்கு புரியவில்லை, ஸ்டோன் லீஃப் அல்லது கத்தரிக்கோல் என்று சொல்லுங்கள்.
+      </template>
+    </category>
+  </topic>
+  <!-- end rockpaperscissors  -->
+  <category>
+    <pattern>விளையாட்டுகளை நிறுத்து</pattern>
+    <template>
+      <think>
+        <set name="topic">default</set>
+      </think>
+      <li>
+    விரைவில் சந்திப்போம், நான் விளையாட விரும்புகிறேன்!
+</li>
+    </template>
+  </category>
+</aiml>
