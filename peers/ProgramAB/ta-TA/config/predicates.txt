@@ -1,0 +1,6 @@
+llm:
+name:
+botname:
+botState:
+lockInsult:off
+topic:
