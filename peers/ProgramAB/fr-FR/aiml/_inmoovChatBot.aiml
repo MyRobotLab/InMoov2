@@ -629,7 +629,7 @@
           <mrl>
             <service>webgui</service>
             <method>startBrowser</method>
-            <param>https://build.myrobotlab.org:8443/job/myrobotlab/job/develop/lastSuccessfulBuild/artifact/target/myrobotlab.zip</param>
+            <param>https://myrobotlab-repo.s3.us-east-1.amazonaws.com/myrobotlab.zip</param>
           </mrl>
         </oob>
     </template>
