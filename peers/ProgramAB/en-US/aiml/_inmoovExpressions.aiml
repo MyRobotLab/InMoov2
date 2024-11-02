@@ -218,6 +218,15 @@
     </template>
   </category>
   <category>
+    <pattern>APPSURPRISE</pattern>
+    <template>
+      <think>
+        <set name="emotion">surprise</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
     <pattern>APPSUSPICIOUS</pattern>
     <template>
       <think>
