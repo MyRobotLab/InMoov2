@@ -74,6 +74,24 @@ jobs:
           </project>
           EOF
 
+      - name: Generate and upload maven-metadata.xml file
+        run: |
+          TIMESTAMP=$(date +"%Y%m%d%H%M%S")
+          cat > target/maven-metadata.xml <<EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <metadata>
+            <groupId>fr.inmoov</groupId>
+            <artifactId>inmoov2</artifactId>
+            <versioning>
+              <release>${{ env.artifact-version }}</release>
+              <versions>
+                <version>${{ env.artifact-version }}</version>
+              </versions>
+              <lastUpdated>$TIMESTAMP</lastUpdated>
+            </versioning>
+          </metadata>
+          EOF
+
       - name: Upload to S3.
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -81,6 +99,10 @@ jobs:
           AWS_REGION: "us-east-1"
           # s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/2.0.1897/inmoov2-2.0.1897.zip
         run: |
+
+          S3_METADATA_URI="s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/maven-metadata.xml"
+          aws s3 cp "target/maven-metadata.xml" "$S3_METADATA_URI"
+
           S3_POM_URI="s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/${{ env.artifact-version }}/inmoov2-${{ env.artifact-version }}.pom"
           aws s3 cp "target/pom-${{ env.artifact-version }}.xml" "$S3_POM_URI"
 
