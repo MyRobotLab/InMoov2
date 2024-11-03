@@ -22,7 +22,9 @@ def sleepModeWakeUp():
   if runtime.isStarted('i01.fsm'):
     i01_fsm.fire("wake")
   if runtime.isStarted('i01.chatBot'):
-      i01_chatBot.setPredicate('botState', 'awake')  
+      i01_chatBot.setPredicate('botState', 'awake')
+  if runtime.isStarted('i01.llm'):
+    i01_llm.wake()   
   if runtime.isStarted('i01.mouth'):
     initMouth()
   if runtime.isStarted('i01.ear'):
