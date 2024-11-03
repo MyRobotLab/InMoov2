@@ -30,8 +30,9 @@ jobs:
         id: increment-version
         run: |
           BASE_VERSION="2.0"
+          BUILD_INCREMENT=1900
           BUILD_NUMBER=${{ github.run_number }}
-          NEW_VERSION="${BASE_VERSION}.${BUILD_NUMBER}"
+          NEW_VERSION="${BASE_VERSION}.$((BUILD_INCREMENT + BUILD_NUMBER))"
           echo "New version: $NEW_VERSION"
           echo "artifact-version=$NEW_VERSION" >> $GITHUB_ENV
 
