@@ -51,6 +51,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Ensure target directory exists and print contents
+        run: |
+          if [ ! -d "target" ]; then
+            echo "Target directory not found!" && exit 1
+          fi
+          echo "Contents of target directory:" 
+          ls -l target
+
       - name: Rename artifact to include version
         run: |
           ZIP_FILE=$(find target -name "inmoov2-*.zip" | head -n 1)
