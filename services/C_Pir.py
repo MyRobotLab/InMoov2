@@ -27,9 +27,10 @@ def publishSense(event):
       print "pir detected something"
       #if not i01.RobotIsSleeping and i01.RobotIsStarted:
       if runtime.isStarted('i01.fsm'):
-        if not i01_fsm.getState()=="sleep" and i01_fsm.getState()=="idle" and "setup" and "wake": 
+        if i01_fsm.getState()=="idle" or "setup" or "wake":
           #i01_pir.disable()
           humanDetected()
+          print "pir detected something 1"
         
         #wakeup action
         #if i01.RobotIsSleeping:
