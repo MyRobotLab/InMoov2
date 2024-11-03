@@ -29,9 +29,13 @@ jobs:
       - name: Increment version and build with Maven
         id: increment-version
         run: |
+          START_VERSION="2.0.1903"
           CURRENT_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
-          echo "Current version: $CURRENT_VERSION"
-          NEW_VERSION=$(echo $CURRENT_VERSION | awk -F '.' '{print $1"."$2"."$3+1}')
+          if [[ "$CURRENT_VERSION" == "0.0.1-SNAPSHOT" ]]; then
+            NEW_VERSION=$START_VERSION
+          else
+            NEW_VERSION=$(echo $CURRENT_VERSION | awk -F '.' '{print $1"."$2"."$3+1}')
+          fi
           echo "New version: $NEW_VERSION"
           echo "artifact-version=$NEW_VERSION" >> $GITHUB_ENV
 
@@ -44,7 +48,7 @@ jobs:
     if: success()
 
     steps:
-      - name: Checkout code.
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Upload to S3
@@ -63,3 +67,12 @@ jobs:
       - name: Verify artifact upload
         run: |
           aws s3 ls s3://your-bucket-name/maven-repo/path/to/artifact/
+
+      - name: Create Git tag for version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git tag -a "v${{ env.artifact-version }}" -m "Release version ${{ env.artifact-version }}"
+          git push origin "v${{ env.artifact-version }}"
