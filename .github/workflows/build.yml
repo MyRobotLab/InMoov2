@@ -87,9 +87,9 @@ jobs:
           S3_URI="s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/${{ env.artifact-version }}/inmoov2-${{ env.artifact-version }}.zip"
           aws s3 cp "target/inmoov2-${{ env.artifact-version }}.zip" "$S3_URI"
 
-      - name: Verify artifact upload
-        run: |
-          aws s3 ls "s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/${{ env.artifact-version }}"
+      # - name: Verify artifact upload
+      #   run: |
+      #     aws s3 ls "s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/${{ env.artifact-version }}"
 
       - name: Create Git tag for version
         env:
