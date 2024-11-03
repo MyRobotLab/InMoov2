@@ -89,7 +89,7 @@ jobs:
 
       - name: Verify artifact upload
         run: |
-          aws s3 ls "s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/${{ env.artifact-version }}""
+          aws s3 ls "s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/${{ env.artifact-version }}"
 
       - name: Create Git tag for version
         env:
