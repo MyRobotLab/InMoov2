@@ -81,7 +81,7 @@ jobs:
           AWS_REGION: "us-east-1"
           # s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/2.0.1897/inmoov2-2.0.1897.zip
         run: |
-          S3_POM_URI="s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/${{ env.artifact-version }}/pom-${{ env.artifact-version }}.xml"
+          S3_POM_URI="s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/${{ env.artifact-version }}/inmoov2-${{ env.artifact-version }}.pom"
           aws s3 cp "target/pom-${{ env.artifact-version }}.xml" "$S3_POM_URI"
 
           S3_URI="s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/${{ env.artifact-version }}/inmoov2-${{ env.artifact-version }}.zip"
@@ -89,7 +89,7 @@ jobs:
 
       - name: Verify artifact upload
         run: |
-          aws s3 ls s3://your-bucket-name/maven-repo/path/to/artifact/
+          aws s3 ls "s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/${{ env.artifact-version }}""
 
       - name: Create Git tag for version
         env:
