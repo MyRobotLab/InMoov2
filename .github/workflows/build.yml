@@ -40,7 +40,7 @@ jobs:
           echo "artifact-version=$NEW_VERSION" >> $GITHUB_ENV
 
       - name: Build and test with Maven
-        run: mvn clean install --batch-mode -Dartifact.version=${{ env.artifact-version }}
+        run: mvn clean install assembly:single --batch-mode -Dartifact.version=${{ env.artifact-version }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -57,7 +57,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-east-1"
         run: |
-          FILE_PATH=$(find target -name "*.jar" | head -n 1)
+          FILE_PATH=$(find target -name "*.zip" | head -n 1)
           if [ -z "$FILE_PATH" ]; then
             echo "Artifact not found!" && exit 1
           fi
