@@ -65,7 +65,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-east-1"
         run: |
-          S3_URI="s3://your-bucket-name/maven-repo/path/to/artifact/"
+          S3_URI="s3://myrobotlab-repo/inmoov2-${{ env.artifact-version }}.zip"
           aws s3 cp "target/inmoov2-${{ env.artifact-version }}.zip" "$S3_URI"
 
       - name: Verify artifact upload
