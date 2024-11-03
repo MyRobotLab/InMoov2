@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build-and-test:
+  build-test-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -42,16 +42,7 @@ jobs:
       - name: Build and test with Maven
         run: mvn clean install assembly:single --batch-mode -Dartifact.version=${{ env.artifact-version }}
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build-and-test
-    if: success()
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Ensure target directory exists and print contents
+      - name: Print contents of target directory
         run: |
           if [ ! -d "target" ]; then
             echo "Target directory not found!" && exit 1
@@ -61,7 +52,7 @@ jobs:
 
       - name: Rename artifact to include version
         run: |
-          ZIP_FILE=$(find target -name "inmoov2-*.zip" | head -n 1)
+          ZIP_FILE=$(find target -name "*.zip" | head -n 1)
           if [ -z "$ZIP_FILE" ]; then
             echo "Artifact not found!" && exit 1
           fi
