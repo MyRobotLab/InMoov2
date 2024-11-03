@@ -29,13 +29,9 @@ jobs:
       - name: Increment version and build with Maven
         id: increment-version
         run: |
-          START_VERSION="2.0.1903"
-          CURRENT_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
-          if [[ "$CURRENT_VERSION" == "0.0.1-SNAPSHOT" ]]; then
-            NEW_VERSION=$START_VERSION
-          else
-            NEW_VERSION=$(echo $CURRENT_VERSION | awk -F '.' '{print $1"."$2"."$3+1}')
-          fi
+          BASE_VERSION="2.0"
+          BUILD_NUMBER=${{ github.run_number }}
+          NEW_VERSION="${BASE_VERSION}.${BUILD_NUMBER}"
           echo "New version: $NEW_VERSION"
           echo "artifact-version=$NEW_VERSION" >> $GITHUB_ENV
 
@@ -117,7 +113,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          if git tag -l | grep -q "v${{ env.artifact-version }}"; then
+            echo "Tag v${{ env.artifact-version }} already exists. Skipping tag creation."
+          else
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git tag -a "v${{ env.artifact-version }}" -m "Release version ${{ env.artifact-version }}"
           git push origin "v${{ env.artifact-version }}"
+          fi
