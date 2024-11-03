@@ -43,7 +43,7 @@ jobs:
     if: success()
 
     steps:
-      - name: Checkout code
+      - name: Checkout code.
         uses: actions/checkout@v3
 
       - name: Upload to S3
