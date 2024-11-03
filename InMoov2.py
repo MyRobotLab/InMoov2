@@ -52,6 +52,13 @@ else:
 # import org.myrobotlab.framework.Platform as Platform
 # import org.myrobotlab.service.Runtime as Runtime
 
+def printx(format_string, *args):
+    import datetime
+    current_time = datetime.datetime.now().strftime("%H:%M:%S")
+    formatted_message = format_string % args  # Using old % formatting suitable for Python 2.7
+    print("%s: %s" % (current_time, formatted_message))
+
+
 
 def onPythonMessage(msg):
     """Initial processing and routing for all messages.
@@ -76,6 +83,7 @@ def onPythonMessage(msg):
     Args:
         msg (_type_): tunnelled message, with data message
     """
+    # print("onPythonMessage", msg)
     try:
         if not isinstance(msg, dict):
             # From Jython msg is a java object
@@ -95,6 +103,10 @@ def onPythonMessage(msg):
 
         # first parameter will always be InMoov2 name
         params_array.insert(0, name)
+
+        # filter out chatty heartbeat and peak
+        if method_name != "onHeartbeat" and method_name != "onPeak":
+            printx("%s", method_name)
 
         # Check if the method exists in the global namespace
         if method_name in globals() and callable(globals()[method_name]):
@@ -139,6 +151,8 @@ def onAudioEnd(name, data):
 
 
 def onStartSpeaking(name, text):
+    print("onStartSpeaking", text)
+
     global runtime
 
     # print("onStartSpeaking", text)
@@ -162,7 +176,7 @@ def onStartSpeaking(name, text):
 
 
 def onEndSpeaking(name, text):
-    # print("onEndSpeaking", text)
+    print("onEndSpeaking", text)
     robot = runtime.getService(name)
     robot.disableRandom()
 
@@ -197,41 +211,33 @@ def onEndSpeaking(name, text):
 
 # Sensor events begin ========================================
 
-def onSense(name, sensed):
-    """onSense is a pir sensor event
-    which is rebroadcasted from InMoov2
-    SensorData.
-
-    Args:
-        sensed (boolean): True or False
-    """
-    print("onSense", sensed)
-
-
 def onPirOn(name):
-    print('onPirOn("{}")'.format(name))
+    current_time = datetime.now().strftime("%H:%M:%S")
+    print('onPirOn("{}") at {}'.format(name, current_time))
     robot = runtime.getService(name)
-    robot.setPredicate(name + ".pir", True)
+    if robot:
+        robot.setPredicate(name + ".pir", True)
 
-    # sleeping
-    if "sleep" == robot.getState():
-        robot.fire("wake")
+        # sleeping
+        if "sleep" == robot.getState():
+            robot.fire("wake")
 
-    # FIXME - chatBot.getResponse("SYSTEM_EVENT onPirOn")
-    # robot.speak("I feel your presence")
+        # FIXME - chatBot.getResponse("SYSTEM_EVENT onPirOn")
+        # robot.speak("I feel your presence")
 
-    # FIXME - "remove" this is custom
-    neoPixel = robot.getPeer("neoPixel")
-    if neoPixel:
-        neoPixel.setPixel(130, 120, 200, 150)
-        neoPixel.setPixel(131, 120, 200, 170)
-        neoPixel.setPixel(140, 120, 200, 150)
-        neoPixel.setPixel(141, 120, 200, 170)
-        neoPixel.writeMatrix()
+        # FIXME - "remove" this is custom
+        neoPixel = robot.getPeer("neoPixel")
+        if neoPixel:
+            neoPixel.setPixel(130, 120, 200, 150)
+            neoPixel.setPixel(131, 120, 200, 170)
+            neoPixel.setPixel(140, 120, 200, 150)
+            neoPixel.setPixel(141, 120, 200, 170)
+            neoPixel.writeMatrix()
 
 
 def onPirOff(name):
-    print('onPirOff("{}")'.format(name))
+    current_time = datetime.now().strftime("%H:%M:%S")
+    print('onPirOff("{}") at {}'.format(name, current_time))
     robot = runtime.getService(name)
     robot.setPredicate(name + ".pir", False)
     # FIXME - chatBot.getResponse("SYSTEM_EVENT onPirOff")
@@ -264,6 +270,7 @@ def onTopic(topic_event):
     Args:
         topic (_type_): _description_
     """
+    print("onTopic", topic_event.topic)
     # FIXME - find a solution for the hardcoded name !
     # route through inmoov add name as field
     robot = runtime.getService(topic_event.src)
@@ -271,7 +278,6 @@ def onTopic(topic_event):
     if mouth:
         # mouth.speak("New topic, the topic is " + topic_event.topic)
         pass
-    print("onTopic", topic_event.topic)
 
 
 # Topic events end ==========================================
@@ -519,17 +525,6 @@ def onSession(session_event):
     #     chatBot.setTopic("new_user")
 
 
-def onMessage(msg):
-    print("onMessage", msg)
-    robot = runtime.getService(msg.sender)
-    print("onMessage.method", msg.method)
-    print("onMessage.data", msg.data)
-    robot.info("onMessage.method " + msg.method)
-    robot.info("onMessage.data " + str(msg.data))
-    # eval(msg.method)(msg.data
-    # auto invoke method
-    # expand parameters ?
-
 
 def on_new_user(data):
     print("on_new_user", data)
@@ -568,6 +563,7 @@ def onHeartbeat(name, heartbeat):
         time_in_idle = current_time - int(robot.getPredicate("idle.start"))
         # FIXME - this should be a configurable value 15 minutes
         # print("time_in_idle", time_in_idle)
+        # FIXME - configurable value
         if time_in_idle > 900000:
             robot.fire("sleep")
 
@@ -608,7 +604,7 @@ def onHeartbeat(name, heartbeat):
 
 
 def onPeak(name, volume):
-    print("onPeak", name, volume)
+    # print("onPeak", name, volume)
     robot = runtime.getService(name)
 
     # FIXME - remove this custom
