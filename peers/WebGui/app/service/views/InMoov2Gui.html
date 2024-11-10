@@ -783,6 +783,14 @@
                         <button ng-show="!service.config.neoPixelDownloadBlue" class="btn btn-default" title="Sets neopixel blue when downloading new version" ng-click="setConfigValue('neoPixelDownloadBlue', true)">off</button>
                     </td>
                 </tr>
+                <tr ng-show="peer.isPeerStarted(service, 'neopixel')">
+                        <td>
+                            <label>neopixelFlashOnPir:</label>
+                            </td><td>
+                        <button ng-show="service.config.flashOnPir" class="btn btn-info" title="Pir flash neopixel when pir switching states" ng-click="setConfigValue('flashOnPir', false)">on</button>
+                        <button ng-show="!service.config.flashOnPir" class="btn btn-default" title="Pir flash neopixel when pir switching states" ng-click="setConfigValue('flashOnPir', true)">off</button>
+                        </td>
+                    </tr>
                 <tr>
                     <td>
                         <!------THIS FOR THE HOVER ICON WITH PEERS----------------------->
