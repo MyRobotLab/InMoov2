@@ -238,10 +238,14 @@ def humanDetected():
       initPir()
       sleepTimer.restartClock()
       #i01_ear.setWakeWordTimeout(i01_ear.getConfig().wakeWordIdleTimeoutSeconds)
+  if runtime.isStarted('i01.neoPixel'):
+    if i01.getConfig().flashOnPir==False:
+      i01_neoPixel.setAnimation("Larson Scanner", 255, 0, 255, 25)
+      sleep(2)
+      i01_neoPixel.clear()
     if runtime.isStarted('i01.fsm'):  
       if not i01_fsm.getState()=="isTracking" and WaitXsecondBeforeRelaunchTracking>=5:
         WaitXsecondBeforeRelaunchTracking=0
-        if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Larson Scanner", 255, 0, 255, 25)
         if runtime.isStarted('i01.headTracking'):
           initTracking()
           if i01.getConfig().pirEnableTracking==1:
