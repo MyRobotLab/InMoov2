@@ -214,6 +214,11 @@ def sleepModeInsult():
 def welcomeMessage():
   if runtime.isStarted('i01.mouth'):
     initMouth()
+  if runtime.isStarted('i01.fsm'):
+    i01_fsm.fire("wake")
+  if runtime.isStarted('i01.ear'):
+    i01_ear.setAwake(True)
+    i01_ear.startRecording()  
   if runtime.isStarted('i01.chatBot'):
     if str(i01_chatBot.getPredicate("human","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("human","firstinit"))=="started":
       i01_chatBot.setPredicate("human","topic","default")
@@ -223,9 +228,6 @@ def welcomeMessage():
   else:
     if runtime.isStarted('i01'):
       runtime.info("i01 is ready")
-  #RobotIsStarted=True
-    if runtime.isStarted('i01.fsm'):
-      i01_fsm.fire("wake")
 
 global WaitXsecondBeforeRelaunchTracking
 WaitXsecondBeforeRelaunchTracking=-10
