@@ -69,7 +69,7 @@ def sleepModeWakeUp():
   if i01.getConfig().customSound==1:
     if runtime.isStarted("i01.audioPlayer"):
       i01_audioPlayer.playFile('resource/InMoov2/system/sounds/Notifications/'+random.choice(os.listdir('resource/InMoov2/system/sounds/Notifications')),False)
-  elif runtime.isStarted('i01.opencv'):
+  if runtime.isStarted('i01.opencv'):
     if i01.getConfig().pirEnableTracking==1:
       trackHumans()
     if i01.getConfig().openCVFaceRecognizerActivated==1:
@@ -240,24 +240,23 @@ def humanDetected():
       initPir()
       sleepTimer.restartClock()
       #i01_ear.setWakeWordTimeout(i01_ear.getConfig().wakeWordIdleTimeoutSeconds)
-  if runtime.isStarted('i01.neoPixel'):
-    if i01.getConfig().flashOnPir==False:
-      i01_neoPixel.setAnimation("Larson Scanner", 255, 0, 255, 25)
-      sleep(2)
-      i01_neoPixel.clear()
-    if runtime.isStarted('i01.fsm'):  
-      if not i01_fsm.getState()=="isTracking" and WaitXsecondBeforeRelaunchTracking>=5:
-        WaitXsecondBeforeRelaunchTracking=0
-        if runtime.isStarted('i01.headTracking'):
-          initTracking()
-          if i01.getConfig().pirEnableTracking==1:
-            trackHumans()
-            trackingTimer.restartClock()
-        #if i01.getConfig().openCVFaceRecognizerActivated==1:facerecognizer()
-
+  if i01.getConfig().flashOnPir==False:
+    print "pir detected something"
+  if runtime.isStarted('i01.fsm'):
+    if not i01_fsm.getState()=="isTracking" and WaitXsecondBeforeRelaunchTracking>=5:
+      WaitXsecondBeforeRelaunchTracking=0
+      if runtime.isStarted('i01.headTracking'):
+        initTracking()
+        if i01.getConfig().pirEnableTracking==1:
+          trackHumans()
+          trackingTimer.restartClock()
+      #if i01.getConfig().openCVFaceRecognizerActivated==1:facerecognizer()
+    else:
+      i01_fsm.fire("idle")
+      #print "idle state"
+      #print WaitXsecondBeforeRelaunchTracking
     
 def sleepTimerRoutine(timedata):
-  #if RobotIsSleeping==0:
   if runtime.isStarted('i01.fsm'):
     if not i01_fsm.getState()=="sleep":
       if runtime.isStarted('i01.neoPixel'):i01_neoPixel.setAnimation("Color Wipe", 17,  126, 57, 20)
@@ -274,13 +273,15 @@ def sleepTimerRoutine(timedata):
   
 def trackingTimerRoutine(timedata):
   global WaitXsecondBeforeRelaunchTracking
-  print "trackingTimer stopped"
-  if i01_opencv.isTracking():
-    WaitXsecondBeforeRelaunchTracking=-5
-    if runtime.isStarted('i01.headTracking'):
-      initTracking()
-      stopTrackHumans()
-      trackingTimer.stopClock()
-    if runtime.isStarted('i01.neoPixel'):i01_neoPixel.clear()
+  if runtime.isStarted('i01.fsm'):
+    if i01_fsm.getState()=="isTracking":
+      WaitXsecondBeforeRelaunchTracking=-5
+      if runtime.isStarted('i01.headTracking'):
+        initTracking()
+        stopTrackHumans()
+        #print "trackingTimer stopped"
+        #print WaitXsecondBeforeRelaunchTracking
+        trackingTimer.stopClock()
+      if runtime.isStarted('i01.neoPixel'):i01_neoPixel.clear()
 
 print("sleepMode.py loaded")
