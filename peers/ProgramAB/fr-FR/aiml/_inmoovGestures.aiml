@@ -136,19 +136,49 @@
 <template>Je mémorise les positions de mes servo moteurs.
         <oob><mrl><service>python</service><method>exec</method><param>captureGesture2()</param></mrl></oob></template>
 </category>
-<category><pattern>QUE VOIS TU</pattern>
-<template><think>
-        <!--  initial sentence ( workarround, because sraix blocking action here, sentence pushed inside a set )-->
-          <set name="startupSentence">
+<category>
+    <pattern>QUE VOIS TU</pattern>
+    <template><condition name="llm">
+        <li value="enabled">
+          <img src="../Llm.png"/><img src="../photoreel.1.png"/>
             <random>
-              <li>Veuillez patienter.</li>
-              <li>ça va prendre quelques secondes pour l'analyse.</li>
-              <li>Je regarde dans mon champs de vision.</li>
+            <li>Patience, je fait turbiner mon processeur.</li>
+            <li>Cela prend quelques instant d'analyse.</li>
+            <li>Un instant, il faut que je réfléchisse un peu.</li>
             </random>
-          </set>
-        </think>
-        <think><set name="yoloReturn"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>startYoloInventory(5)</param></mrl></oob></sraix></set></think>
-        <condition name="yoloReturn"> 
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>describeImage(u"Que vois-tu?")</param>
+              </mrl>
+            </oob>
+      </li>
+      <li>
+          <think>
+        <!--  initial sentence ( workarround, because sraix blocking action here, sentence pushed inside a set )-->
+        <set name="startupSentence">
+          <random>
+            <li>Patience, je fait turbiner mon processeur.</li>
+            <li>Cela prend quelques instant d'analyse.</li>
+            <li>Un instant, il faut que je réfléchisse un peu.</li>
+          </random>
+        </set>
+      </think>
+      <think>
+        <set name="yoloReturn">
+          <sraix>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>evalAndWait</method>
+                <param>startYoloInventory(5)</param>
+              </mrl>
+            </oob>
+          </sraix>
+        </set>
+      </think>
+      <condition name="yoloReturn"> 
           <!-- not detected ! -->
           <li value="none">
             <random>
@@ -158,7 +188,9 @@
           </li>
           <!--  detected ! -->
           <li>Je vois <get name="yoloTotalDetected"/> choses, <get name="yoloReturn"/> dans l'ordre, de gauche à droite.</li>
-        </condition></template>
+        </condition>
+    </li>
+  </condition></template>
 </category>
 <category><pattern>CHERCHE <set>articles</set> *</pattern>
 <template><srai>QUE VOIS TU</srai>
