@@ -151,22 +151,21 @@ def describeImage(prompt):
   llmImg = runtime.start('i01.llmImg', 'LLM')
   opencv = runtime.start('i01.opencv', 'OpenCV')
 
-  opencv.capture()
-  sleep(1.5)
   cfg = llmImg.getConfig()
-  cfg.url = "http://localhost:11434/api/generate"
+  cfg.url = "http://localhost:11434"
   cfg.model = "llava"
+  python.subscribe(llmImg.getName(), "publishText", "onFilterText")
   llmImg.apply(cfg)
+  llmImg.save()
   llmImg.broadcastState()
 
-  while opencv.getBase64Image() is None:
-    sleep(1)
+  # make a subscription
+  i01_llmImg.subscribe('i01.opencv','publishImage')
 
-  img = opencv.getBase64Image()
-  sleep(2)
-  response = llmImg.getImageResponse(img, prompt)
-      
-  #print(response.msg) 
-  #i01_mouth.speakBlocking(response.msg)
+  # capture and save an image
+  # the save image will be publishImage and be sent
+  # to the llmImg
+  opencv.capture()
+  opencv.saveImage()
+  sleep(0.1)
   opencv.stopCapture()
-  i01_htmlFilter.subscribe(llmImg.getName(), "publishText", "onText")
