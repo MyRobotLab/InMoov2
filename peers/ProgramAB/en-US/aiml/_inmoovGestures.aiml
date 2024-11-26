@@ -743,7 +743,24 @@
         <oob><mrl><service>python</service><method>exec</method><param>unhappy()</param></mrl></oob></template>
 </category>
 <category><pattern>WHAT DO YOU SEE</pattern>
-<template><think>
+<template><condition name="llm">
+        <li value="enabled">
+          <img src="../Llm.png"/><img src="../photoreel.1.png"/>
+            <random>
+            <li>Be patient, I need to process.</li>
+            <li>This takes a few seconds to process.</li>
+            <li>Please wait, I will analyse things in my field of view.</li>
+            </random>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>describeImage(u"Describe this image")</param>
+              </mrl>
+            </oob>
+      </li>
+      <li>
+        <think>
       <!--  initial sentence ( workarround, because sraix blocking action here, sentence pushed inside a set )-->
         <set name="startupSentence">
           <random>
@@ -764,6 +781,8 @@
         </li>
         <!--  detected ! -->
         <li>I see <get name="yoloTotalDetected"/> things, <get name="yoloReturn"/> in order, from left to right.</li>
+      </condition>
+      </li>
       </condition></template>
 </category>
 <category><pattern># THIS IS</pattern>
