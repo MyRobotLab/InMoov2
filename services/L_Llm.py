@@ -154,7 +154,7 @@ def describeImage(prompt):
   cfg = llmImg.getConfig()
   cfg.url = "http://localhost:11434"
   cfg.model = "llava"
-  python.subscribe(llmImg.getName(), "publishText", "onFilterText")
+  i01_htmlFilter.subscribe(llmImg.getName(), "publishText", "onText")
   llmImg.apply(cfg)
   llmImg.save()
   llmImg.broadcastState()
