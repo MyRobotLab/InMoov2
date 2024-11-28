@@ -881,6 +881,49 @@
         <oob><mrl><service>python</service><method>exec</method><param>thatwasfun()</param></mrl></oob></template>
     </category>
 
+    <category><pattern>QUE VES</pattern>
+      <template><condition name="llm">
+        <li value="enabled">
+          <img src="../Llm.png"/><img src="../photoreel.1.png"/>
+            <random>
+            <li>Ten paciencia, necesito procesar.</li>
+            <li>Esto tarda unos segundos en procesarse..</li>
+            <li>Por favor espera, analizaré las cosas en mi campo de visión..</li>
+            </random>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>describeImage(u"Describe esta imagen")</param>
+              </mrl>
+            </oob>
+      </li>
+      <li>
+        <think>
+      <!--  initial sentence ( workarround, because sraix blocking action here, sentence pushed inside a set )-->
+        <set name="startupSentence">
+          <random>
+            <li>Ten paciencia, necesito procesar.</li>
+            <li>Esto tarda unos segundos en procesarse..</li>
+            <li>Por favor espera, analizaré las cosas en mi campo de visión..</li>
+          </random>
+        </set>
+      </think>
+      <think><set name="yoloReturn"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>startYoloInventory(5)</param></mrl></oob></sraix></set></think>
+      <condition name="yoloReturn"> 
+        <!-- not detected ! -->
+        <li value="none">
+          <random>
+            <li>Lo siento, el objeto o la persona está demasiado lejos!</li>
+            <li>Por favor, el objeto debe estar dentro de un rango de 2 metros, si uso mi sensor.</li>
+          </random>
+        </li>
+        <!--  detected ! -->
+        <li>Veo <get name="yoloTotalDetected"/> cosas, <get name="yoloReturn"/> en orden, de izquierda a derecha.</li>
+      </condition>
+      </li>
+      </condition></template>
+    </category>
 
     <category>
       <pattern>ADIVINA QUÉ</pattern>
