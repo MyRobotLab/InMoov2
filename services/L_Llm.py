@@ -1,26 +1,28 @@
 # -- coding: utf-8 --
 llm = runtime.getService('i01.llm')
 chatBot = runtime.getService('i01.chatBot')
+en = 'en-US'
+fi = 'fi-FI'
+fr = 'fr-FR'
+hi = 'hi-IN'
+es = 'es-ES'
+de = 'de-DE'
+it = 'it-IT'
+nl = 'nl-NL'
+pl = 'pl-PL'
+pt = 'pt-PT'
+ru = 'ru-RU'
+tr = 'tr-TR'
 if llm:
   llm.clearInputs()
   llm.getConfig()
   setSystem = llm.getConfig().system
   runtime.getConfig()
-  en = 'en-US'
-  fi = 'fi-FI'
-  fr = 'fr-FR'
-  hi = 'hi-IN'
-  es = 'es-ES'
-  de = 'de-DE'
-  it = 'it-IT'
-  nl = 'nl-NL'
-  pl = 'pl-PL'
-  pt = 'pt-PT'
-  ru = 'ru-RU'
-  tr = 'tr-TR'
   python.subscribe(llm.getName(), "publishText", "onFilterText")
+  config = llm.getConfig()
+  if config.url == "http://localhost:11434" or "http://localhost:11434/v1/chat/completions":
+      config.url = "http://localhost:11434/api/generate"
   if setSystem == "You are a helpful robot.":
-    config = llm.getConfig()
     if runtime.getLocale().getTag() == en:
       config.system = u"You are {{BotName}} a safe AI assistant.\
  When you see a system_event you simply don't say anything about it.\
@@ -148,24 +150,68 @@ def onPredicate(predicateEvent):
 python.subscribe('i01.chatBot','publishPredicate')
 
 def describeImage(prompt):
-  llmImg = runtime.start('i01.llmImg', 'LLM')
-  opencv = runtime.start('i01.opencv', 'OpenCV')
+  if runtime.isStarted('i01.llmImg'):
+    llmImg = runtime.getService('i01.llmImg')
+    opencv = runtime.start('i01.opencv', 'OpenCV')
+    # make a subscription
+    i01_llmImg.subscribe('i01.opencv','publishImage')
+    #img = i01_llmImg.subscribe('i01.opencv','publishImage')
+    #response = llmImg.getImageResponse(img,prompt)
+    #llmImg.invoke("getResponse",["Always respond in french with a short description.", [img]])
+    # capture and save an image
+    # the save image will be publishImage and be sent
+    # to the llmImg
+    opencv.capture()
+    opencv.saveImage()
+    sleep(0.1)
+    opencv.stopCapture()
 
-  cfg = llmImg.getConfig()
-  cfg.url = "http://localhost:11434"
-  cfg.model = "llava"
-  i01_htmlFilter.subscribe(llmImg.getName(), "publishText", "onText")
-  llmImg.apply(cfg)
-  llmImg.save()
-  llmImg.broadcastState()
-
-  # make a subscription
-  i01_llmImg.subscribe('i01.opencv','publishImage')
-
-  # capture and save an image
-  # the save image will be publishImage and be sent
-  # to the llmImg
-  opencv.capture()
-  opencv.saveImage()
-  sleep(0.1)
-  opencv.stopCapture()
+  else:
+    llmImg = runtime.start('i01.llmImg', 'LLM')
+    opencv = runtime.start('i01.opencv', 'OpenCV')
+    cfg = llmImg.getConfig()
+    if runtime.getLocale().getTag() == en:
+      cfg.defaultImagePrompt = u"What do you see?"
+    if runtime.getLocale().getTag() == fi:
+      cfg.defaultImagePrompt = u"Vastaa aina suomeksi. Mitä näet?"
+    if runtime.getLocale().getTag() == fr:
+      cfg.defaultImagePrompt = u"Réponds toujours en Français. Que vois-tu?"
+    if runtime.getLocale().getTag() == hi:
+      cfg.defaultImagePrompt = u"हमेशा हिंदी में जवाब दें. आप क्या देखते हैं?"
+    if runtime.getLocale().getTag() == es:
+      cfg.defaultImagePrompt = u"Responde siempre en español. ¿Qué ves?"
+    if runtime.getLocale().getTag() == de:
+      cfg.defaultImagePrompt = u"Antworten Sie immer auf Deutsch. Was siehst du??"
+    if runtime.getLocale().getTag() == it:
+      cfg.defaultImagePrompt = u"Rispondi sempre in italiano. Cosa vedi??"
+    if runtime.getLocale().getTag() == nl:
+      cfg.defaultImagePrompt = u"Reageer altijd in het Nederlands. Wat zie je?"
+    if runtime.getLocale().getTag() == pl:
+      cfg.defaultImagePrompt = u"Zawsze odpowiadaj po polsku. Co widzisz?"
+    if runtime.getLocale().getTag() == pt:
+      cfg.defaultImagePrompt = u"Sempre responda em português. O que você vê?"
+    if runtime.getLocale().getTag() == ru:
+      cfg.defaultImagePrompt = u"Всегда отвечайте на русском языке. Что ты видишь?"
+    if runtime.getLocale().getTag() == tr:
+      cfg.defaultImagePrompt = u"Daima Türkçe yanıt verin. Ne görüyorsun?"        
+    if cfg.url == "http://localhost:11434/api/generate" or "http://localhost:11434/v1/chat/completions":
+      cfg.url = "http://localhost:11434"
+    if cfg.model == None or "llama2" or "llama3" or "phi3" or "mistral" or "mixtral":
+      cfg.model = "llava"
+    if cfg.stream == "false":
+      cfg.stream = "true"
+    #python.subscribe(llmImg.getName(), "publishText", "onFilterText")
+    i01_htmlFilter.subscribe(llmImg.getName(), "publishText", "onText")
+    llmImg.apply(cfg)
+    llmImg.save()
+    llmImg.broadcastState()
+    # make a subscription
+    i01_llmImg.subscribe('i01.opencv','publishImage')
+    # capture and save an image
+    # the save image will be publishImage and be sent
+    # to the llmImg
+    opencv.capture()
+    opencv.saveImage()
+    sleep(0.1)
+    opencv.stopCapture()
+  
