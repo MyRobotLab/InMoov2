@@ -1186,32 +1186,6 @@
 <template>Peut-tu répondre, c'est nécessaire.
         <get name="memorisenameinit"/></template>
 </category></topic>
-	
-<category><pattern>QUE VOIS TU</pattern>
-<template><think>
-      <!--  initial sentence ( workarround, because sraix blocking action here, sentence pushed inside a set )-->
-        <set name="startupSentence">
-                <random>
-            <li>Patience, je fait turbiner mon processeur.</li>
-            <li>Cela prend quelques instant d'analyse.</li>
-            <li>Un instant, il faut que je réfléchisse un peu.</li>
-          </random>
-          </set>
-      </think>
-      <think><set name="yoloReturn"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>startYoloInventory(5)</param></mrl></oob></sraix></set></think>
-      <condition name="yoloReturn"> 
-        <!-- not detected ! -->
-        <li value="none">
-          <random>
-            <li>Désolé l'objet ou la personne est trop loin!</li>
-            <li>S'il te plait approche un peu mieux l'objet.</li>
-          </random>
-        </li>
-        <!--  Objet detecté ! -->
-        <li>Je vois <get name="yoloTotalDetected"/> choses, <get name="yoloReturn"/> de gauche à droite.</li>
-      </condition>
-      </template>
-</category>
 <category><pattern># CE QUE C EST</pattern>
 <template>Fait moi voir.
         <oob><mrl><service>python</service><method>exec</method><param>YoloOnUSonic()</param></mrl></oob></template>
