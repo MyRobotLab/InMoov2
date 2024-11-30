@@ -1,6 +1,4 @@
 # -- coding: utf-8 --
-llm = runtime.getService('i01.llm')
-chatBot = runtime.getService('i01.chatBot')
 en = 'en-US'
 fi = 'fi-FI'
 fr = 'fr-FR'
@@ -13,133 +11,138 @@ pl = 'pl-PL'
 pt = 'pt-PT'
 ru = 'ru-RU'
 tr = 'tr-TR'
-if llm:
-  llm.clearInputs()
-  llm.getConfig()
-  setSystem = llm.getConfig().system
-  runtime.getConfig()
-  python.subscribe(llm.getName(), "publishText", "onFilterText")
-  config = llm.getConfig()
-  if config.url == "http://localhost:11434" or "http://localhost:11434/v1/chat/completions":
-      config.url = "http://localhost:11434/api/generate"
-  if setSystem == "You are a helpful robot.":
-    if runtime.getLocale().getTag() == en:
-      config.system = u"You are {{BotName}} a safe AI assistant.\
- When you see a system_event you simply don't say anything about it.\
- Your answers are polite and sometimes short.\
- You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
- The current time is {{Time}}.\
- The current date is {{Date}}.\
- My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
- This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
-    if runtime.getLocale().getTag() == fi:
-      config.system = u"Always respond in Finnish. You are {{BotName}} a safe AI assistant.\
- When you see a system_event you simply don't say anything about it.\
- Your answers are polite and sometimes short.\
- You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
- The current time is {{Time}}.\
- The current date is {{Date}}.\
- My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
- This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
-    if runtime.getLocale().getTag() == fr:
-      config.system = u"Always respond in French. You are {{BotName}} a safe AI assistant.\
- When you see a system_event you simply don't say anything about it.\
- Your answers are polite and sometimes short.\
- You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
- The current time is {{Time}}.\
- The current date is {{Date}}.\
- My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
- This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
-    if runtime.getLocale().getTag() == hi:
-      config.system = u"Always respond in Hindi. You are {{BotName}} a safe AI assistant.\
- When you see a system_event you simply don't say anything about it.\
- Your answers are polite and sometimes short.\
- You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
- The current time is {{Time}}.\
- The current date is {{Date}}.\
- My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
- This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
-    if runtime.getLocale().getTag() == es:
-      config.system = u"Always respond in Spanish. You are {{BotName}} a safe AI assistant.\
- When you see a system_event you simply don't say anything about it.\
- Your answers are polite and sometimes short.\
- You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
- The current time is {{Time}}.\
- The current date is {{Date}}.\
- My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
- This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
-    if runtime.getLocale().getTag() == de:
-      config.system = u"Always respond in German. You are {{BotName}} a safe AI assistant.\
- When you see a system_event you simply don't say anything about it.\
- Your answers are polite and sometimes short.\
- You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
- The current time is {{Time}}.\
- The current date is {{Date}}.\
- My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
- This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
-    if runtime.getLocale().getTag() == it:
-      config.system = u"Always respond in Italian. You are {{BotName}} a safe AI assistant.\
- When you see a system_event you simply don't say anything about it.\
- Your answers are polite and sometimes short.\
- You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
- The current time is {{Time}}.\
- The current date is {{Date}}.\
- My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
- This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
-    if runtime.getLocale().getTag() == nl:
-      config.system = u"Always respond in Dutch. You are {{BotName}} a safe AI assistant.\
- When you see a system_event you simply don't say anything about it.\
- Your answers are polite and sometimes short.\
- You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
- The current time is {{Time}}.\
- The current date is {{Date}}.\
- My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
- This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
-    if runtime.getLocale().getTag() == pl:
-      config.system = u"Always respond in Polish. You are {{BotName}} a safe AI assistant.\
- When you see a system_event you simply don't say anything about it.\
- Your answers are polite and sometimes short.\
- You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
- The current time is {{Time}}.\
- The current date is {{Date}}.\
- My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
- This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
-    if runtime.getLocale().getTag() == pt:
-      config.system = u"Always respond in Portuguese. You are {{BotName}} a safe AI assistant.\
- When you see a system_event you simply don't say anything about it.\
- Your answers are polite and sometimes short.\
- You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
- The current time is {{Time}}.\
- The current date is {{Date}}.\
- My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
- This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
-    if runtime.getLocale().getTag() == ru:
-      config.system = u"Always respond in Russian. You are {{BotName}} a safe AI assistant.\
- When you see a system_event you simply don't say anything about it.\
- Your answers are polite and sometimes short.\
- You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
- The current time is {{Time}}.\
- The current date is {{Date}}.\
- My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
- This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
-    if runtime.getLocale().getTag() == tr:
-      config.system = u"Always respond in Turkish. You are {{BotName}} a safe AI assistant.\
- When you see a system_event you simply don't say anything about it.\
- Your answers are polite and sometimes short.\
- You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
- The current time is {{Time}}.\
- The current date is {{Date}}.\
- My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
- This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
-    llm.removeListener('publishText', 'i01.htmlFilter', 'onText')  
-    llm.save()  
-    llm.apply(config)
-    llm.broadcastState()
-  if chatBot:
-    llm.addInput("UserName", unicode(chatBot.getConfig().currentUserName,'utf-8'))
-    llm.addInput("BotName", unicode(chatBot.getPredicate(chatBot.getCurrentUserName(),"botname"),'utf-8'))
-    llm.addInput("Predicates", unicode(chatBot.getPredicates(),'utf-8'))
-    llm.addInput("Properties", unicode(chatBot.getBotProperties(),'utf-8'))
+def initLlm():
+  llm = runtime.getService('i01.llm')
+  chatBot = runtime.getService('i01.chatBot')
+  if runtime.isStarted('i01.llm'):
+    llm.clearInputs()
+    llm.getConfig()
+    setSystem = llm.getConfig().system
+    runtime.getConfig()
+    python.subscribe(llm.getName(), "publishText", "onFilterText")
+    config = llm.getConfig()
+    if config.url == "http://localhost:11434" or "http://localhost:11434/v1/chat/completions":
+        config.url = "http://localhost:11434/api/generate"
+    if setSystem == "You are a helpful robot.":
+      if runtime.getLocale().getTag() == en:
+        config.system = u"You are {{BotName}} a safe AI assistant.\
+   When you see a system_event you simply don't say anything about it.\
+   Your answers are polite and sometimes short.\
+   You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
+   The current time is {{Time}}.\
+   The current date is {{Date}}.\
+   My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
+   This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
+      if runtime.getLocale().getTag() == fi:
+        config.system = u"Always respond in Finnish. You are {{BotName}} a safe AI assistant.\
+   When you see a system_event you simply don't say anything about it.\
+   Your answers are polite and sometimes short.\
+   You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
+   The current time is {{Time}}.\
+   The current date is {{Date}}.\
+   My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
+   This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
+      if runtime.getLocale().getTag() == fr:
+        config.system = u"Always respond in French. You are {{BotName}} a safe AI assistant.\
+   When you see a system_event you simply don't say anything about it.\
+   Your answers are polite and sometimes short.\
+   You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
+   The current time is {{Time}}.\
+   The current date is {{Date}}.\
+   My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
+   This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
+      if runtime.getLocale().getTag() == hi:
+        config.system = u"Always respond in Hindi. You are {{BotName}} a safe AI assistant.\
+   When you see a system_event you simply don't say anything about it.\
+   Your answers are polite and sometimes short.\
+   You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
+   The current time is {{Time}}.\
+   The current date is {{Date}}.\
+   My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
+   This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
+      if runtime.getLocale().getTag() == es:
+        config.system = u"Always respond in Spanish. You are {{BotName}} a safe AI assistant.\
+   When you see a system_event you simply don't say anything about it.\
+   Your answers are polite and sometimes short.\
+   You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
+   The current time is {{Time}}.\
+   The current date is {{Date}}.\
+   My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
+   This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
+      if runtime.getLocale().getTag() == de:
+        config.system = u"Always respond in German. You are {{BotName}} a safe AI assistant.\
+   When you see a system_event you simply don't say anything about it.\
+   Your answers are polite and sometimes short.\
+   You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
+   The current time is {{Time}}.\
+   The current date is {{Date}}.\
+   My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
+   This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
+      if runtime.getLocale().getTag() == it:
+        config.system = u"Always respond in Italian. You are {{BotName}} a safe AI assistant.\
+   When you see a system_event you simply don't say anything about it.\
+   Your answers are polite and sometimes short.\
+   You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
+   The current time is {{Time}}.\
+   The current date is {{Date}}.\
+   My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
+   This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
+      if runtime.getLocale().getTag() == nl:
+        config.system = u"Always respond in Dutch. You are {{BotName}} a safe AI assistant.\
+   When you see a system_event you simply don't say anything about it.\
+   Your answers are polite and sometimes short.\
+   You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
+   The current time is {{Time}}.\
+   The current date is {{Date}}.\
+   My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
+   This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
+      if runtime.getLocale().getTag() == pl:
+        config.system = u"Always respond in Polish. You are {{BotName}} a safe AI assistant.\
+   When you see a system_event you simply don't say anything about it.\
+   Your answers are polite and sometimes short.\
+   You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
+   The current time is {{Time}}.\
+   The current date is {{Date}}.\
+   My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
+   This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
+      if runtime.getLocale().getTag() == pt:
+        config.system = u"Always respond in Portuguese. You are {{BotName}} a safe AI assistant.\
+   When you see a system_event you simply don't say anything about it.\
+   Your answers are polite and sometimes short.\
+   You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
+   The current time is {{Time}}.\
+   The current date is {{Date}}.\
+   My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
+   This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
+      if runtime.getLocale().getTag() == ru:
+        config.system = u"Always respond in Russian. You are {{BotName}} a safe AI assistant.\
+   When you see a system_event you simply don't say anything about it.\
+   Your answers are polite and sometimes short.\
+   You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
+   The current time is {{Time}}.\
+   The current date is {{Date}}.\
+   My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
+   This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
+      if runtime.getLocale().getTag() == tr:
+        config.system = u"Always respond in Turkish. You are {{BotName}} a safe AI assistant.\
+   When you see a system_event you simply don't say anything about it.\
+   Your answers are polite and sometimes short.\
+   You can use one of these along your responses [*disgust*, *fear*, *sorry*, *suspicious*, *thinking*, *wink*, *wow*, *smile*, *sad*, *happy*, *surprise*, *anger*, *contempt*, *anxiety*, *disapointment*, *frown*, *gasp*, *helplessness*, *chuckle*] to produce face expressions. Don't use emoji. The current date is {{Date}}.\
+   The current time is {{Time}}.\
+   The current date is {{Date}}.\
+   My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
+   This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
+      llm.removeListener('publishText', 'i01.htmlFilter', 'onText')  
+      llm.save()  
+      llm.apply(config)
+      llm.broadcastState()
+    if chatBot:
+      llm.addInput("UserName", unicode(chatBot.getConfig().currentUserName,'utf-8'))
+      llm.addInput("BotName", unicode(chatBot.getPredicate(chatBot.getCurrentUserName(),"botname"),'utf-8'))
+      llm.addInput("Predicates", unicode(chatBot.getPredicates(),'utf-8'))
+      llm.addInput("Properties", unicode(chatBot.getBotProperties(),'utf-8'))
+
+initLlm()
 
 def onPredicate(predicateEvent):
   #print('onPredicate', predicateEvent)
@@ -154,9 +157,9 @@ def describeImage(prompt):
     llmImg = runtime.getService('i01.llmImg')
     opencv = runtime.start('i01.opencv', 'OpenCV')
     # make a subscription
-    i01_llmImg.subscribe('i01.opencv','publishImage')
-    #img = i01_llmImg.subscribe('i01.opencv','publishImage')
-    #response = llmImg.getImageResponse(img,prompt)
+    #i01_llmImg.subscribe('i01.opencv','publishImage')
+    pic = i01_llmImg.subscribe('i01.opencv','publishImage')
+    response = llmImg.getImageResponse(pic,prompt)
     #llmImg.invoke("getResponse",["Always respond in french with a short description.", [img]])
     # capture and save an image
     # the save image will be publishImage and be sent
@@ -165,6 +168,7 @@ def describeImage(prompt):
     opencv.saveImage()
     sleep(0.1)
     opencv.stopCapture()
+    DisplayPic(pic)
 
   else:
     llmImg = runtime.start('i01.llmImg', 'LLM')
