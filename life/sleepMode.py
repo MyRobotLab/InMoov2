@@ -240,8 +240,6 @@ def humanDetected():
       initPir()
       sleepTimer.restartClock()
       #i01_ear.setWakeWordTimeout(i01_ear.getConfig().wakeWordIdleTimeoutSeconds)
-  if i01.getConfig().flashOnPir==False:
-    print "pir detected something"
   if runtime.isStarted('i01.fsm'):
     if not i01_fsm.getState()=="isTracking" and WaitXsecondBeforeRelaunchTracking>=5:
       WaitXsecondBeforeRelaunchTracking=0
