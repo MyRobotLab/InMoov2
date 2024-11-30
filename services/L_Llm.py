@@ -157,9 +157,9 @@ def describeImage(prompt):
     llmImg = runtime.getService('i01.llmImg')
     opencv = runtime.start('i01.opencv', 'OpenCV')
     # make a subscription
-    #i01_llmImg.subscribe('i01.opencv','publishImage')
-    pic = i01_llmImg.subscribe('i01.opencv','publishImage')
-    response = llmImg.getImageResponse(pic,prompt)
+    i01_llmImg.subscribe('i01.opencv','publishImage')
+    #img = i01_llmImg.subscribe('i01.opencv','publishImage')
+    #response = llmImg.getImageResponse(img,prompt)
     #llmImg.invoke("getResponse",["Always respond in french with a short description.", [img]])
     # capture and save an image
     # the save image will be publishImage and be sent
@@ -168,7 +168,7 @@ def describeImage(prompt):
     opencv.saveImage()
     sleep(0.1)
     opencv.stopCapture()
-    DisplayPic(pic)
+    
 
   else:
     llmImg = runtime.start('i01.llmImg', 'LLM')
