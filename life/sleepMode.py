@@ -228,6 +228,8 @@ def welcomeMessage():
   else:
     if runtime.isStarted('i01'):
       runtime.info("i01 is ready")
+  if runtime.isStarted('i01.llm'):
+    initLlm()     
 
 global WaitXsecondBeforeRelaunchTracking
 WaitXsecondBeforeRelaunchTracking=-10
