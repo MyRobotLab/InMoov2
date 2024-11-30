@@ -1069,6 +1069,14 @@
                 </tr>
                 <tr>
                     <td>
+                        <label>Report On Boot</label>
+                        </td><td>
+                        <button ng-show="service.config.reportOnBoot" class="btn btn-info" title="Enable InMoov to report/speak each started service" ng-click="setConfigValue('reportOnBoot', false)">on</button>
+                        <button ng-show="!service.config.reportOnBoot" class="btn btn-default" title="Enable InMoov to report/speak each started service" ng-click="setConfigValue('reportOnBoot', true)">off</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <label>Custom Sounds</label>
                     </td><td>
                         <button ng-show="service.config.customSound" class="btn btn-info" title="Custom sounds on events" ng-click="setConfigValue('customSound', false)">on</button>

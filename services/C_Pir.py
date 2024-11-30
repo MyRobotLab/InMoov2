@@ -23,8 +23,9 @@ def initPir():
 def publishSense(event):
   if runtime.isStarted("i01.pir"):
     if event:
-      print "pir detected something"
       initPir()
+      if i01.getConfig().flashOnPir==0:
+        print "pir detected something"
       if runtime.isStarted('i01.fsm'):
         if i01_fsm.getState()=="idle" or "setup" or "wake":
           #i01_pir.disable()
