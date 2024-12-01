@@ -33,10 +33,12 @@ def publishSense(event):
         #wakeup action
         if i01_fsm.getState()=="sleep":
           i01_pir.disable()
-          sleepModeWakeUp()
+          #below is done via InMoov2 java onPirOn()
+          #sleepModeWakeUp()
       else:
         i01_pir.disable()
-        sleepModeWakeUp()
+        #below is done via InMoov2 java onPirOn()
+        #sleepModeWakeUp()
 
 # def publishPirOn():
 #   if runtime.isStarted("i01.pir"):
