@@ -123,6 +123,8 @@ def onFilterText(text):
             params = []
         function_call_str = "*{}({})*".format(extracted_word, param_str) if param_str else "*{}*".format(extracted_word)
         filtered_text = filtered_text.replace(function_call_str, "")
+    # Now filter multiple **    
+    text = re.sub(r'\*\*(?!\*)', '', text)  
     print("Filtered Text:", filtered_text.strip())
     if runtime.isStarted('i01.mouth'):
       i01_mouth.speak(filtered_text)
