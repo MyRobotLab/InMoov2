@@ -259,14 +259,17 @@
 <template>Désormais je n'écoute plus, pour reprendre contrôle dites <get name="MagicCommandToWakeUp"/>. Le mot clé peut être configuré dans ire . config
         <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method><param><get name="MagicCommandToWakeUp"/></param></mrl></oob></template>
 </category>
-<category><pattern>COMMANDE VOCALE</pattern>
-<template>J'écoute à nouveau.
-        <oob><mrl><service>i01.ear</service><method>clearLock</method></mrl></oob></template>
-</category>
-<category><pattern>ARRÊTE D ÉCOUTER</pattern>
-<template>Je coupe mon micro.
-        <oob><mrl><service>i01.ear</service><method>setAutoListen</method><param>False</param></mrl></oob></template>
-</category>
+<!--<category>
+    UTILISER LE WAKEWORD
+    <pattern>COMMANDE VOCALE</pattern>
+    <template>J'écoute à nouveau.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_ear.setAwake(True)</param></mrl></oob></template>
+  </category>-->
+  <category>
+    <pattern>ARRÊTE D'ÉCOUTER</pattern>
+    <template>Je coupe mon micro.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_ear.setAwake(False)</param></mrl></oob></template>
+  </category>
 <category><pattern>VITESSE MAXI</pattern>
 <template>Mes servo sont en vitesse maximum.
         <oob><mrl><service>python</service><method>exec</method><param>fullspeed()</param></mrl></oob></template>
@@ -322,7 +325,7 @@
 <template>Je mets ma main vers le bas
         <oob><mrl><service>python</service><method>exec</method><param>handdown()</param></mrl></oob></template>
 </category>
-<category><pattern>EST CE UNE BALLE</pattern>
+<category><pattern>EST-CE UNE BALLE</pattern>
 <template>Je vais vérifier.
         <oob><mrl><service>python</service><method>exec</method><param>isitaball()</param></mrl></oob></template>
 </category>
@@ -342,7 +345,7 @@
 <template>Relax.
         <oob><mrl><service>python</service><method>exec</method><param>relax()</param></mrl></oob></template>
 </category>
-<category><pattern>QU EST CE QUE C EST</pattern>
+<category><pattern>QU'EST-CE QUE C'EST</pattern>
 <template>Je vérifie.
         <oob><mrl><service>python</service><method>exec</method><param>studyball()</param></mrl></oob></template>
 </category>
@@ -397,7 +400,7 @@
 <template>Je ferme doucement ma main gauche.
         <oob><mrl><service>python</service><method>exec</method><param>slowlycloselefthand()</param></mrl></oob></template>
 </category>
-<category><pattern># MAINS EN L AIR</pattern>
+<category><pattern># MAINS EN L'AIR</pattern>
 <template>Surrender.
         <oob><mrl><service>python</service><method>exec</method><param>surrender()</param></mrl></oob></template>
 </category>
@@ -506,7 +509,7 @@
 <template>Photo.
         <oob><mrl><service>python</service><method>exec</method><param>photo()</param></mrl></oob></template>
 </category>
-<category><pattern>A PROPOS DE TOI</pattern>
+<category><pattern>À PROPOS DE TOI</pattern>
 <template>Je vais me décrire.
         <oob><mrl><service>python</service><method>exec</method><param>about()</param></mrl></oob></template>
 </category>
@@ -530,11 +533,11 @@
           </mrl>
         </oob></template>
 </category>
-<category><pattern>COMBIEN DE DOIGTS AS TU</pattern>
+<category><pattern>COMBIEN DE DOIGTS AS-TU</pattern>
 <template>Je vais compter.
         <oob><mrl><service>python</service><method>exec</method><param>howmanyfingersdoihave()</param></mrl></oob></template>
 </category>
-<category><pattern>QUI EST LA</pattern>
+<category><pattern>QUI EST LÀ</pattern>
 <template>Qui est la
         <oob><mrl><service>python</service><method>exec</method><param>welcome()</param></mrl></oob></template>
 </category>
@@ -742,7 +745,7 @@
 <template>Création par
         <oob><mrl><service>python</service><method>exec</method><param>madeby()</param></mrl></oob></template>
 </category>
-<category><pattern>CRÉATION EN FRANçAIS</pattern>
+<category><pattern>CRÉATION EN FRANÇAIS</pattern>
 <template>.
         <oob><mrl><service>python</service><method>exec</method><param>madebyfrench()</param></mrl></oob></template>
 </category>
@@ -759,7 +762,7 @@
           </mrl>
         </oob></template>
 </category>
-<category><pattern>D OÙ VIENS TU</pattern>
+<category><pattern>D'OÙ VIENS TU</pattern>
 <template><oob>
           <mrl>
             <service>python</service>
@@ -811,7 +814,7 @@
           </mrl>
         </oob></template>
 </category>
-<category><pattern>DONNE MOI L HEURE</pattern>
+<category><pattern>DONNE MOI L'HEURE</pattern>
 <template><oob>
           <mrl>
             <service>python</service>
@@ -829,7 +832,7 @@
           </mrl>
         </oob></template>
 </category>
-<category><pattern>PAS D INQUIÉTUDE</pattern>
+<category><pattern>PAS D'INQUIÉTUDE</pattern>
 <template><oob>
           <mrl>
             <service>python</service>
@@ -854,7 +857,7 @@
 <category><pattern>ANALYSE DE VISAGE</pattern>
 <template>Je démarre le module d'analyse des visages. <oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
 </category>
-<category><pattern>ARRÊTE L ANALYSE DE VISAGE</pattern>
+<category><pattern>ARRÊTE L'ANALYSE DE VISAGE</pattern>
 <template>J'arrête le module d'analyse des visages. <oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
 </category>
 <category><pattern>APPRENTISSAGE DE VISAGE</pattern>
@@ -920,7 +923,7 @@
         </oob></template>
 </category>
 <category><pattern>ROBOTIQUE RECHERCHE *</pattern>
-<template>D'accord C EST parti
+<template>D'accord c'est parti
         <oob><mrl><service>python</service><method>exec</method><param>inmoovsearch("<star/>")</param></mrl></oob></template>
 </category>
 <category><pattern>YOUTUBE *</pattern>
@@ -1037,7 +1040,7 @@
 <template>Je déconnecte mon capteur P.I.R.
         <oob><mrl><service>i01</service><method>stopPIR</method></mrl></oob></template>
 </category>
-<category><pattern>COMMENT VAS TU</pattern>
+<category><pattern>COMMENT VAS-TU</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>howdoyoudo()</param></mrl></oob></template>
 </category>
 <category><pattern>RACONTE UNE HISTOIRE</pattern>
@@ -1205,7 +1208,7 @@
 <category><pattern>SYSTEM_SEE_OBJECT</pattern>
 <template><srai>QUE VOIS TU</srai></template>
 </category>
-<category><pattern>LANCE L APPLICATION * </pattern>
+<category><pattern>LANCE L'APPLICATION * </pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>openMyApp('<star/>')</param></mrl></oob></template>
 </category>
 <category>
