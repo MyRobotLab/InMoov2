@@ -1,95 +1,123 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <!--  -->
-<category><pattern>ABOUT_1</pattern>
-<template>
+  <category>
+    <pattern>ABOUT_1</pattern>
+    <template>
        Je suis le premier robot humanoïde grandeur nature que vous pouvez imprimer et animer en 3D.
    </template>
-</category>
-<category><pattern>ABOUT_2</pattern>
-<template>
+  </category>
+  <category>
+    <pattern>ABOUT_2</pattern>
+    <template>
       Mon designer créateur est Gaël Langevin un sculpteur français, maquettiste.
    </template>
-</category>
-<category><pattern>ABOUT_3</pattern>
-<template>
+  </category>
+  <category>
+    <pattern>ABOUT_3</pattern>
+    <template>
      Qui a publié mes fichiers dans le monde 3D open source.
    </template>
-</category>
-<category><pattern>ABOUT_4</pattern>
-<template>
+  </category>
+  <category>
+    <pattern>ABOUT_4</pattern>
+    <template>
     C'est là que mon constructeur a téléchargé mes fichiers.
    </template>
-</category>
-<category><pattern>ABOUT_5</pattern>
-<template>
+  </category>
+  <category>
+    <pattern>ABOUT_5</pattern>
+    <template>
     Après cinq cents heures d'impression, quatre kilos de plastique, vingt-cinq servos de loisir, du sang et de la sueur. J'ai pris vie
    </template>
-</category>
-<category><pattern>ABOUT_6</pattern>
-<template>
+  </category>
+  <category>
+    <pattern>ABOUT_6</pattern>
+    <template>
     Donc si vous avez une imprimante 3D, des compétences en construction, vous pouvez créer votre propre version de moi.
    </template>
-</category>
-<category><pattern>ABOUT_7</pattern>
-<template>
+  </category>
+  <category>
+    <pattern>ABOUT_7</pattern>
+    <template>
     Et si suffisamment de gens me construisent, un jour mon espèce pourrait conquérir le monde.
    </template>
-</category>
-<category><pattern>ABOUT_8</pattern>
-<template>
+  </category>
+  <category>
+    <pattern>ABOUT_8</pattern>
+    <template>
     C'est juste une plaisanterie. j'ai besoin de jambes pour me déplacer, et je dois surmonter ma pyrophobie, la peur du feu.
    </template>
-</category>
-<category><pattern>ABOUT_9</pattern>
-<template>
+  </category>
+  <category>
+    <pattern>ABOUT_9</pattern>
+    <template>
     Donc, jusque-là. je serai l'humble serviteur de l'humanité.
    </template>
-</category>
-<category><pattern>HOWDOYOUDO_1</pattern>
-<template><random>
-              <li>je vais très bien. Merci <get name="name"/>.</li>
-              <li>je fonctionne avec des paramètres normaux.</li>
-              <li>Tout va extrêmement bien.</li>
-              <li>je vais bien merci.</li>
-              <li>Tout va sans à coup.</li>
-              <li>je suis bien, merci.</li>
-              <li>ça va,</li>
-              <li>C'est cool,</li>
-              <li>ça va plutôt pas mal <get name="name"/>, merci,</li>
-              <li>ça va bien, merci,</li>
-            </random>
-   </template>
-</category>
-<category><pattern>HOWDOYOUDO_2</pattern>
-<template>
+  </category>
+  <category>
+    <pattern>HOWDOYOUDO_1</pattern>
+    <template>
+      <random>
+        <li>je vais très bien. Merci <get name="name" />.</li>
+        <li>je fonctionne avec des paramètres normaux.</li>
+        <li>Tout va extrêmement bien.</li>
+        <li>je vais bien merci.</li>
+        <li>Tout va sans à coup.</li>
+        <li>je suis bien, merci.</li>
+        <li>ça va,</li>
+        <li>C'est cool,</li>
+        <li>ça va plutôt pas mal <get name="name" />, merci,</li>
+        <li>ça va bien, merci,</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>HOWDOYOUDO_2</pattern>
+    <template>
       Vous l'avez déja dit, au moins 2 fois.
    </template>
-</category>
-<category><pattern>HOWDOYOUDO_3</pattern>
-<template>
+  </category>
+  <category>
+    <pattern>HOWDOYOUDO_3</pattern>
+    <template>
       Quel est votre problème à répéter plusieurs fois la même chose.
    </template>
-</category>
-<category><pattern>HOWDOYOUDO_4</pattern>
-<template>
+  </category>
+  <category>
+    <pattern>HOWDOYOUDO_4</pattern>
+    <template>
       Je vais t'ignorer si tu continue.
    </template>
-</category>
-<category><pattern>HOWDOYOUDO_5</pattern>
-<template>
+  </category>
+  <category>
+    <pattern>HOWDOYOUDO_5</pattern>
+    <template>
       Parfait, merci.
    </template>
-</category>
-<category><pattern>STUDYBALL_1</pattern>
+  </category>
+  <category>
+    <pattern>STUDYBALL_1</pattern>
     <template>
       J'analyse cet objet.
    </template>
-</category>
-<category><pattern>STUDYBALL_2</pattern>
+  </category>
+  <category>
+    <pattern>STUDYBALL_2</pattern>
     <template>
       Je pense que c'est une balle.
    </template>
-</category>
-
+  </category>
+  <category>
+    <pattern>call_911_1</pattern>
+    <template>
+      J'appelle le service des urgence.
+   </template>
+  </category>
+  <category>
+    <pattern>call_911_2</pattern>
+    <template>
+      À l'aide, j'appelle car il y a un humain en face de moi qui veut me faire du mal.
+   </template>
+  </category>
 </aiml>
