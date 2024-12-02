@@ -1,6 +1,7 @@
 def call_911():
   #i01.startedGesture()
-  i01.speakBlocking("I am calling 9.1.1.")
+  if runtime.isStarted('i01.chatBot'):
+    i01_chatBot.getResponse("call_911_1")
   i01.setHandSpeed("left", 500.0, 500.0, 500.0, 500.0, 500.0, 500.0)
   i01.setHandSpeed("right", 500.0, 500.0, 500.0, 500.0, 500.0, 500.0)
   i01.setArmSpeed("left", 500.0, 500.0, 500.0, 500.0)
@@ -21,8 +22,9 @@ def call_911():
   sleep(0.5)
   i01_audioPlayer.playFileBlocking('resource/InMoov2/system/sounds/911.mp3')
   sleep(0.5)
-  i01.speakBlocking("Help, I am calling because there is a human that wants to hurt me!!")
+  if runtime.isStarted('i01.chatBot'):
+    i01_chatBot.getResponse("call_911_2")
   i01.moveHead(90,90)
-  sleep(0.2)
+  sleep(0.5)
   i01.finishedGesture()
   relax()
