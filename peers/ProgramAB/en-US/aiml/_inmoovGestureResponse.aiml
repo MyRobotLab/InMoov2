@@ -85,5 +85,17 @@
       I think it is a ball.
    </template>
 </category>
+<category>
+    <pattern>call_911_1</pattern>
+    <template>
+      I am calling 911.
+   </template>
+  </category>
+  <category>
+    <pattern>call_911_2</pattern>
+    <template>
+      Help, I am calling because there is a human that wants to hurt me!
+   </template>
+  </category>
 
 </aiml>
