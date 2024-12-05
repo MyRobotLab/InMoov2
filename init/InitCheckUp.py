@@ -62,12 +62,11 @@ execfile("resource/InMoov2/life/sleepMode.py")
 # INIT.4 - great, inmoov is alive
 ################################
 
-if runtime.isStarted("i01.neopixel"):
-    i01.setNeopixelAnimation("Flash Random", 0, 255, 0, 1)
-    sleep(2)
-    i01.stopNeopixelAnimation()
-    sleep(1)
-    i01.setNeopixelAnimation("Flash Random", 0, 255, 50, 10)
+if runtime.isStarted("i01.neoPixel"):
+    if i01.getConfig().neoPixelDownloadBlue==1:
+        i01_neoPixel.setAnimation("Color Wipe", 10, 204, 243, 50)
+        sleep(4)
+        i01_neoPixel.clear()
 sleep(1)
 welcomeMessage()
 print("initCheckUp.py loaded")
