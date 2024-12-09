@@ -176,6 +176,13 @@
           <li>Was kann ich für Dich tun.</li>
           <li>Womit kann ich Ihnen behilflich sein.</li>
         </random>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername"))), healthCheckSequence()</param>
+        </mrl>
+      </oob>
       </template>
 </category>
 <category>

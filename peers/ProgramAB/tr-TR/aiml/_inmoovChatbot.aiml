@@ -118,7 +118,14 @@
           <li>Hazırım ve dinliyorum.</li>
           <li>Sizin için ne yapabilirim.</li>
           <li>Size nasıl yardım edebilirim.</li>
-        </random></template>
+        </random>
+       <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername"))), healthCheckSequence()</param>
+        </mrl>
+      </oob></template>
 </category>
 <category><pattern>SYSTEM_SAY_HELLO</pattern>
 <template><srai>HI</srai></template>

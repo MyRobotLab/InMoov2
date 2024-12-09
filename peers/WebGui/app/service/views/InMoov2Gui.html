@@ -1091,6 +1091,14 @@
                         <button ng-show="!service.config.heartbeat"  width="30" height="30" class="btn btn-default" title="Checks health and battery level" ng-click="msg.send('startHeartbeat');msg.send('setConfigValue','heartbeat',true);msg.send('broadcastState')">off</button>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <label>Health Check Sequence</label>
+                        </td><td>
+                        <button ng-show="service.config.healthCheckActivated" title="The robot execute servo checking when starting" class="btn btn-info" ng-click="msg.send('setConfigValue','healthCheckActivated',false);msg.send('broadcastState')">on</button>
+                        <button ng-show="!service.config.healthCheckActivated"  width="30" height="30" class="btn btn-default" title="The robot execute servo checking when starting" ng-click="msg.send('setConfigValue','healthCheckActivated',true);msg.send('broadcastState')">off</button>
+                    </td>
+                </tr>
                 <!--<tr>
                     <td>
                         <label>Heart Beat flash</label>

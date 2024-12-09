@@ -322,7 +322,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession("<get name="lastUsername"/>")</param>
+            <param>i01_chatBot.startSession("<get name="lastUsername"/>"), healthCheckSequence()</param>
           </mrl>
         </oob></template>
 </category>
