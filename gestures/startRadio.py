@@ -18,7 +18,7 @@ def stopRadio():
         print("Radio stopped")
         audiocfg = audioPlayer.getConfig()
         if audiocfg.stream == 1:
-            audiocfg.stream = 1
+            audiocfg.stream = 0
             audioPlayer.save()
             audioPlayer.apply(audiocfg)
             audioPlayer.broadcastState()
