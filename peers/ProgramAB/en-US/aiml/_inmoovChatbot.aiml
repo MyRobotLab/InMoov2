@@ -316,7 +316,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername")))</param>
+            <param>i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername"))), healthCheckSequence()</param>
           </mrl>
         </oob></template>
 </category>
