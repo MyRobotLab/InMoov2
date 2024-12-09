@@ -393,6 +393,13 @@
           <li>मै आप के लिये क्य कर सक्त हु।</li>
           <li>में आपकी कैसे मदद कर सकता हूं।</li>
         </random>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername"))), healthCheckSequence()</param>
+        </mrl>
+      </oob>
     </template>
   </category>
   <category>
