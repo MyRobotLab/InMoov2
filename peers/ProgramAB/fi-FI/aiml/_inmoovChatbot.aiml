@@ -130,6 +130,13 @@
           <li>Mitä voin tehdä puolestasi?</li>
           <li>Kuinka voisin auttaa sinua?</li>
         </random>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername"))), healthCheckSequence()</param>
+        </mrl>
+      </oob>
       </template>
 </category>
 <category><pattern>SYSTEM_SAY_HELLO</pattern>
