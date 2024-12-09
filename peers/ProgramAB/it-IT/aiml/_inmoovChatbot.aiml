@@ -116,7 +116,13 @@
 <template><random>
           <li>Sono ai tuoi ordini: ti ascolto.</li>
           <li>Cosa vuoi che faccia.</li>
-        </random></template>
+        </random><oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername"))), healthCheckSequence()</param>
+        </mrl>
+      </oob></template>
 </category>
 <category><pattern>SYSTEM_NEW_VERSION</pattern>
 <template><think><set name="topic">updater</set></think>
