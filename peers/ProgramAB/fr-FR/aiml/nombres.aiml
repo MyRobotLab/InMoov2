@@ -1,94 +1,239 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!--  -->
-<!--  -->
-<category><pattern>RND *</pattern>
-<template><javascript>
-myMath = Math.floor(Math.random() * <star index="1"/>);
-myMath = myMath / Math.pow(10, 0);
-myMath = myMath.toString();
-myMath;
+<!-- Modification lecagnois 2/12/2024  pour tete V2-->
+<category>
+<pattern> * TABLES DE MULTIPLICATION</pattern>
+	<template>Oui , j'ai appris à compter , interroge moi.
+		<srai>APPSMILE</srai>
+	</template>
+</category>
+<category>
+<pattern> * COMPTER</pattern>
+	<template>Bien sûr ,  interroge moi , tu peux utiliser le mot calcul pour le résultat.
+		<srai>APPTHINKING</srai>
+	</template>
+</category>
 
-</javascript></template>
+<!--  MULTIPLICATION -->
+<category>
+<pattern>* X *</pattern>
+<template>
+ <random>
+		<li>C'est simple <get name="name" />, la réponse est : </li>
+		<li> </li>
+		<li>Je pense que le résultat est :</li>
+		<li>Mon dieu, les mathématiques sont si facile avec toi, voici la réponse : </li>
+ </random>
+	<javascript>
+		myMath = eval( <star index="1"/> * <star index="2"/> );
+		myMath;
+	</javascript>
+	<srai>APPSURPRISE</srai>
+</template>
 </category>
-<category><pattern>* X *</pattern>
-<template><srai><star index="1"/> MULTIPLIÉ PAR <star index="2"/></srai></template>
+<category>
+<pattern>* FOIS *</pattern>
+<template> 
+	<srai><star index="1"/> X <star index="2"/></srai>
+	<srai>APPSMILE</srai>
+</template>
 </category>
-<category><pattern>* MULTIPLIÉ PAR *</pattern>
-<template><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>mathX("<star index="1"/>","<star index="2"/>")</param></mrl></oob></sraix></template>
+<category>
+<pattern>* PAR *</pattern>
+<template> 
+	<srai><star index="1"/> X <star index="2"/></srai>
+	<srai>APPTHINKING</srai>
+</template>
 </category>
-<category><pattern>* PLUS *</pattern>
-<template><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>mathPlus("<star index="1"/>","<star index="2"/>")</param></mrl></oob></sraix></template>
+<category>
+<pattern>CALCUL * X *</pattern>
+<template> 
+	<srai><star index="1"/> X <star index="2"/></srai>
+	<srai>APPSURPRISE</srai>
+</template>
 </category>
-<category><pattern>* MOINS *</pattern>
-<template><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>mathMinus("<star index="1"/>","<star index="2"/>")</param></mrl></oob></sraix></template>
+<category>
+<pattern>MULTIPLIE * X *</pattern>
+<template> 
+	<srai><star index="1"/> X <star index="2"/></srai>
+	<srai>APPTHINKING</srai>
+</template>
 </category>
-<category><pattern>* DIVISÉ PAR *</pattern>
-<template><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>mathDivide("<star index="1"/>","<star index="2"/>")</param></mrl></oob></sraix></template>
+
+<!-- ADDITION -->
+<category>
+<pattern>* PLUS *</pattern>
+<template>
+ <random>
+		<li>C'est simple <get name="name" />, la réponse est : </li>
+		<li> </li>
+		<li>Je pense que le résultat est :</li>
+		<li>Facile c'est une simple addition, voici la réponse : </li>
+ </random>
+	<javascript>
+		myMath = eval( <star index="1"/> + <star index="2"/> );
+		myMath;
+	</javascript>
+	<srai>APPSURPRISE</srai>
+</template>
 </category>
-<category><pattern>EST CE UN NOMBRE *</pattern>
-<template><think>
-        <srai>testnombre <star/></srai>
-      </think></template>
+<category>
+<pattern>CALCUL * PLUS *</pattern>
+<template> 
+	<srai><star index="1"/> PLUS <star index="2"/></srai>
+	<srai>APPTHINKING</srai>
+</template>
 </category>
-<category><pattern>EST CE QUE * EST UN NOMBRE</pattern>
-<template><think>
-        <srai>testnombre <star/></srai>
-      </think></template>
+<category>
+<pattern>ADDITIONNE * PLUS *</pattern>
+<template> 
+	<srai><star index="1"/> PLUS <star index="2"/></srai>
+	<srai>APPSMILE</srai>
+</template>
 </category>
-<category><pattern>ALPHA *</pattern>
-<template><star/> n'est pas un nombre</template>
+
+<!-- SOUSTRAIRE -->
+<category>
+<pattern>* - *</pattern>
+<template>
+ <random>
+		<li>C'est simple <get name="name" />, la réponse est : </li>
+		<li> </li>
+		<li>Je pense que le résultat est :</li>
+		<li>Mon dieu, c'est une simple soustraction, voici la réponse : </li>
+ </random>
+	<javascript>
+		myMath = eval( <star index="1"/> - <star index="2"/> );
+		myMath;
+	</javascript>
+	<srai>APPSURPRISE</srai>
+</template>
 </category>
-<category><pattern>NUMBER *</pattern>
-<template><star/> est un nombre</template>
+<category><pattern>CALCUL * - *</pattern>
+<template> 
+	<srai><star index="1"/> - <star index="2"/></srai>
+	<srai>APPTHINKING</srai>
+</template>
 </category>
-<category><pattern>TESTER LE NOMBRE *</pattern>
-<template><srai>testnombre <star/></srai>
-<condition>     
-  <li name="cestunnombre" value="nb"><srai>number <get name="lenombre"/></srai></li>
-  <li><srai>alpha <get name="lenombre"/></srai></li>
-</condition></template>
+<category><pattern>SOUSTRAIT * - *</pattern>
+<template>
+	<srai><star index="1"/> - <star index="2"/></srai>
+	<srai>APPSMILE</srai>
+</template>
 </category>
-<category><pattern>TESTNOMBRE *</pattern>
-<template><think>
-        <set name="lenombre">
-          <star/>
-        </set>
-      </think>
-      <think>
-        <set name="cestunnombre">
-          <sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>is_number_for_aiml("<star index="1"/>")</param></mrl></oob></sraix>
-        </set>
-      </think></template>
+
+<!-- DIVISER -->
+<category><pattern>* / *</pattern>
+<template>
+ <random>
+		<li>C'est simple <get name="name" />, la réponse est : </li>
+		<li> </li>
+		<li>Je pense que le résultat est :</li>
+		<li>Mon dieu, c'est une simple division, voici la réponse : </li>
+ </random>
+<javascript>
+		myMath = eval( <star index="1"/> / <star index="2"/> );
+		myMath = myMath*100;
+		myMath = Math.round(myMath);
+		myMath = myMath/100;
+		myMath;
+    </javascript>
+	<oob><mrl><service>python</service><method>exec</method><param>surprise()</param></mrl></oob>
+	</template>
 </category>
-<category><pattern>RND100</pattern>
-<template><srai>RND 100</srai></template>
+<category><pattern>CALCUL * / *</pattern>
+<template>
+	<srai><star index="1"/> / <star index="2"/></srai>
+	<srai>APPTHINKING</srai>
+</template>
 </category>
-<category><pattern>RND90</pattern>
-<template><srai>RND 90</srai></template>
+<category><pattern>DIVISE * PAR *</pattern>
+<template>
+	<srai><star index="1"/> / <star index="2"/></srai>
+	<srai>APPSMILE</srai>
+</template>
 </category>
-<category><pattern>RND80</pattern>
-<template><srai>RND 80</srai></template>
+
+<!-- POURCENTAGE -->
+<category><pattern>* POURCENTS DE *</pattern>
+<template>
+ <random>
+		<li>C'est simple <get name="name" />, la réponse est : </li>
+		<li> </li>
+		<li>Je pense que le résultat est :</li>
+ </random>
+<javascript>
+		myMath = eval( <star index="1"/> * <star index="2"/> / 100);
+		myMath;
+    </javascript>
+	POURCENTS
+	</template>
 </category>
-<category><pattern>RND70</pattern>
-<template><srai>RND 70</srai></template>
+
+<category><pattern>DONNE MOI LES NOMBRES PREMIERS</pattern>
+<template>2, 3, 5, 7, 11, 13, 17, 19 etc... Un nombre premier est donc un nombre dont ses seuls diviseurs sont 1 et lui-même.</template>
 </category>
-<category><pattern>RND60</pattern>
-<template><srai>RND 60</srai></template>
-</category>
-<category><pattern>RND50</pattern>
-<template><srai>RND 50</srai></template>
-</category>
-<category><pattern>RND40</pattern>
-<template><srai>RND 40</srai></template>
-</category>
-<category><pattern>RND30</pattern>
-<template><srai>RND 30</srai></template>
-</category>
-<category><pattern>RND20</pattern>
-<template><srai>RND 20</srai></template>
-</category>
-<category><pattern>RND10</pattern>
-<template><srai>RND 10</srai></template>
+
+<!-- TABLE -->
+<category>
+<pattern>* TABLE DE *</pattern>
+<template>
+	Attends, je réfléchi un peu <get name="name" />.
+	<srai>APPTHINKING</srai>
+	Voici la table de multiplication de <star index="2"/> .
+	<star index="2"/> fois 1 :
+	<javascript>
+			myMath = eval( <star index="2"/> * 1 );
+			myMath;
+	</javascript>
+	: <star index="2"/> fois 2 :
+	<javascript>
+			myMath = eval( <star index="2"/> * 2 );
+			myMath;
+	</javascript>
+	: <star index="2"/> fois 3 :
+	<javascript>
+			myMath = eval( <star index="2"/> * 3 );
+			myMath;
+	</javascript>
+	: <star index="2"/> fois 4 :
+	<javascript>
+			myMath = eval( <star index="2"/> * 4 );
+			myMath;
+	</javascript>
+	: <star index="2"/> fois 5 :
+	<javascript>
+			myMath = eval( <star index="2"/> * 5 );
+			myMath;
+	</javascript>
+	: <star index="2"/> fois 6 :
+	<javascript>
+			myMath = eval( <star index="2"/> * 6 );
+			myMath;
+	</javascript>
+	: <star index="2"/> fois 7 :
+	<javascript>
+			myMath = eval( <star index="2"/> * 7 );
+			myMath;
+	</javascript>
+	: <star index="2"/> fois 8 :
+	<javascript>
+			myMath = eval( <star index="2"/> * 8 );
+			myMath;
+	</javascript>
+	: <star index="2"/> fois 9 :
+	<javascript>
+			myMath = eval( <star index="2"/> * 9 );
+			myMath;
+	</javascript>
+	: <star index="2"/> fois 10 :
+	<javascript>
+			myMath = eval( <star index="2"/> * 10 );
+			myMath;
+	</javascript>
+	: J'ai de bon souvenir de mon école primaire, tu trouves pas .
+	<srai>APPSMILE</srai>
+</template>
 </category>
 </aiml>
