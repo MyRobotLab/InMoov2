@@ -241,6 +241,8 @@
     <pattern>END_PLAYLIST</pattern>
     <template>Je suis arrivé à la fin de la playlist. Je remonte au début de la liste.</template>
   </category>
+
+   <!-- AIML POUR ECOUTER LA RADIO -->
   <category>
     <pattern>* RADIO *</pattern>
     <template>Okay, je lance la radio <star index="2"/>.
@@ -258,12 +260,75 @@
       <li value="rire et chansons">
           <think><set name="radio">"http://cdn.nrjaudio.fm/adwz1/fr/30407/mp3_128.mp3?origine=fluxradios"</set></think>
       </li>
+      <li value="france">
+          <think><set name="radio">"http://icecast.radiofrance.fr/francemusiqueconcertsradiofrance-midfi.mp3"</set></think>
+      </li>
+      <li value="chérie fm">
+          <think><set name="radio">"http://cdn.nrjaudio.fm/adwz1/fr/55495/mp3_128.mp3"</set></think>
+      </li>
+      <li value="europe 1">
+          <think><set name="radio">"http://wr.lmn.fm/e1-wr5.mp3"</set></think>
+      </li>
+      <li value="jazz">
+          <think><set name="radio">"http://jazz-wr01.ice.infomaniak.ch/jazz-wr01-128.mp3"</set></think>
+      </li>
+      <li value="nostalgie">
+          <think><set name="radio">"http://cdn.nrjaudio.fm/adwz1/fr/30605/mp3_128.mp3?"</set></think>
+      </li>
+      <li value="nrj">
+          <think><set name="radio">"http://cdn.nrjaudio.fm/adwz2/fr/30001/mp3_128.mp3?origine=fluxradios"</set></think>
+      </li>
+      <li value="rfm">
+          <think><set name="radio">"http://stream.rfm.fr/rfm-wr4.mp3"</set></think>
+      </li>
     </condition>
       <oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
           <param>startRadio(<get name="radio"/>)</param>
+        </mrl>
+      </oob>
+    <srai>APPSMILE</srai>
+    </template>
+  </category>
+
+ <category>
+    <pattern>* MUSIQUE CLASSIQUE</pattern>
+    <template>Voici une radio classique.
+	 <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>startRadio("http://icecast.radiofrance.fr/francemusiqueconcertsradiofrance-midfi.mp3")</param>
+        </mrl>
+      </oob>
+    <srai>APPSMILE</srai>
+    </template>
+  </category>
+
+ <category>
+    <pattern>* MUSIQUE DE JAZZ</pattern>
+    <template>Voici une radio de jazz
+	 <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>startRadio("http://jazz-wr01.ice.infomaniak.ch/jazz-wr01-128.mp3")</param>
+        </mrl>
+      </oob>
+    <srai>APPSMILE</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* MUSIQUE DE FILM</pattern>
+    <template>Voici une station radio de musique de films
+	 <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>startRadio("http://icecast.radiofrance.fr/francemusiquelabo-midfi.mp3")</param>
         </mrl>
       </oob>
     <srai>APPSMILE</srai>
@@ -290,4 +355,26 @@
     <srai>STOP LA RADIO</srai>
     </template>
   </category>
+
+  <category>
+    <pattern>STOPPE LA RADIO</pattern>
+    <template>
+    <srai>STOP LA RADIO</srai>
+    </template>
+  </category>
+ <category>
+ 
+    <pattern>STOPPE LA MUSIQUE</pattern>
+    <template>
+    <srai>STOP LA RADIO</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>ÉTEINS LA RADIO</pattern>
+    <template>
+    <srai>STOP LA RADIO</srai>
+    </template>
+  </category>
+
 </aiml>
