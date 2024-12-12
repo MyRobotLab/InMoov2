@@ -330,12 +330,12 @@
           <li> dormí bien.</li>
           <li> finalmente me despiertas.</li>
           <li> estoy operacional.</li>
-        </random>
+        </random><oob>
         <mrl>
             <service>python</service>
             <method>exec</method>
             <param>i01_chatBot.startSession(str(i01_chatBot.getPredicate("human","lastUsername"))), healthCheckSequence()</param>
-          </mrl>
+          </mrl></oob>
     </template>
   </category>
   
