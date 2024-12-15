@@ -255,11 +255,13 @@
 <category><pattern>DAVINCI</pattern>
 <template><srai>DA VINCI</srai></template>
 </category>
-<category><pattern>MANUEL</pattern>
-<template>Désormais je n'écoute plus, pour reprendre contrôle dites <get name="MagicCommandToWakeUp"/>. Le mot clé peut être configuré dans ire . config
-        <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method><param><get name="MagicCommandToWakeUp"/></param></mrl></oob></template>
-</category>
 <!--<category>
+  UTILISER LE WAKEWORD
+    <pattern>MANUEL</pattern>
+    <template>Désormais je n'écoute plus, pour reprendre contrôle dites <get name="MagicCommandToWakeUp"/>. Le mot clé peut être configuré dans ire . config
+        <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method><param><get name="MagicCommandToWakeUp"/></param></mrl></oob></template>
+  </category>
+  <category>
     UTILISER LE WAKEWORD
     <pattern>COMMANDE VOCALE</pattern>
     <template>J'écoute à nouveau.
@@ -269,7 +271,7 @@
     <pattern>ARRÊTE D'ÉCOUTER</pattern>
     <template>Je coupe mon micro.
         <oob><mrl><service>python</service><method>exec</method><param>i01_ear.setAwake(False)</param></mrl></oob></template>
-  </category>
+  </category>>
 <category><pattern>VITESSE MAXI</pattern>
 <template>Mes servo sont en vitesse maximum.
         <oob><mrl><service>python</service><method>exec</method><param>fullspeed()</param></mrl></oob></template>
