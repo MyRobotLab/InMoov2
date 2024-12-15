@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <!--  -->
-  <!--  -->
+  <!-- modification lecagnois le 10/12/2024  -->
   <category>
     <pattern>DÉMARRE LA PLAYLIST</pattern>
     <template>
@@ -28,15 +28,25 @@
     </template>
   </category>
   <category>
-    <pattern>DÉMARRE LA PLAYLIST *</pattern>
-    <template>Je mets la playlist <star />.<think><set name="playsong">ko</set></think><oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist('<star />')</param></mrl></oob></template>
+    <pattern> * LA PLAYLIST *</pattern>
+    <template>Je mets la playlist <star index="2"/>.
+     <think><set name="playsong">ko</set></think>
+        <oob>
+            <mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist('<star index="2"/>')</param></mrl>
+        </oob>
+    </template>
   </category>
-  <category>
+    <category>
     <pattern>ARRÊTE LA PLAYLIST</pattern>
-    <template>J'arrête la Playlist . <think><set name="playsong">ok</set></think><oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stopPlaylist(), i01_audioPlayer.stop()</param></mrl></oob></template>
+    <template>J'arrête la Playlist . 
+      <think><set name="playsong">ok</set></think>
+         <oob>
+             <mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stopPlaylist(), i01_audioPlayer.stop()</param></mrl>
+        </oob>
+     </template>
   </category>
   <category>
-    <pattern>PLAYLIST SUIVANT</pattern>
+    <pattern>PLAYLIST SUIVANTE</pattern>
     <template>
       <random>
         <li>Morceau suivant de la playlist.</li>
@@ -52,7 +62,7 @@
     </template>
   </category>
   <!-- FIN MODE PLAYLIST -->
-  <!-- Ici Utilise le script A_music.py -->
+  <!-- Ici Utilise les scripts i01.audioPlayer.py -->
   <category>
     <pattern>ARRÊTE LA MUSIQUE</pattern>
     <template>
@@ -89,15 +99,22 @@
         </mrl>
       </oob>
     </template>
-  </category>
+  </category> 
   <category>
     <pattern>RECHERCHE LE MORCEAU *</pattern>
     <template>
       <srai>CHERCHE LE MORCEAU <star /></srai>
     </template>
   </category>
+  
   <category>
-    <pattern># MORCEAU SUIVANT</pattern>
+    <pattern>MORCEAU SUIVANT</pattern>
+    <template>
+      <srai> * MORCEAU SUIVANT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern> * MORCEAU SUIVANT</pattern>
     <template>
       <think>
         <get name="playsong">
@@ -123,8 +140,14 @@
       </condition>
     </template>
   </category>
+    <category>
+    <pattern>MORCEAU PRÉCÉDENT</pattern>
+    <template>
+      <srai>* MORCEAU PRÉCÉDENT</srai>
+    </template>
+  </category>
   <category>
-    <pattern># MORCEAU PRÉCÉDENT</pattern>
+    <pattern> * MORCEAU PRÉCÉDENT</pattern>
     <template>
       <think>
         <get name="playsong">
@@ -231,7 +254,7 @@
   </category>
   <category>
     <pattern>DO_NOT_HAVE_SONG</pattern>
-    <template>Je n'ai pas ce morceau dans mes listes, ou bien le fichier contient des majuscules.</template>
+    <template>Je n'ai pas ce morceau dans mes listes.</template>
   </category>
   <category>
     <pattern>DO_NOT_HAVE_PLAYLIST</pattern>
@@ -241,46 +264,54 @@
     <pattern>END_PLAYLIST</pattern>
     <template>Je suis arrivé à la fin de la playlist. Je remonte au début de la liste.</template>
   </category>
+  
+   <category>
+    <pattern>DO_NOT_HAVE_RADIO</pattern>
+    <template>Je ne connais pas cette radio.</template>
+  </category>
+   <category>
+    <pattern>BEGIN_PLAYLIST</pattern>
+    <template>Tu est déjà au début de la playlist. Je reste au début de la liste.</template>
+  </category>
+   <category>
+    <pattern> * NOMS DES PLAYLISTS</pattern>
+    <template> 
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>authorPlaylist()</param>
+        </mrl>
+      </oob>
+	</template>
+  </category>
+  <category>
+   <pattern>* AUTEURS DE PLAYLIST</pattern>
+    <template>
+    <srai>* NOMS DES PLAYLISTS</srai>
+    </template>
+  </category>
 
    <!-- AIML POUR ECOUTER LA RADIO -->
   <category>
     <pattern>* RADIO *</pattern>
-    <template>Okay, je lance la radio <star index="2"/>.
+    <template>Okay, je cherche la radio <star index="2"/>.
       <think><set name="radio"><star index="2"/></set></think>
-      <condition name="radio">
-      <li value="france info">
-          <think><set name="radio">"http://direct.franceinfo.fr/live/franceinfo-midfi.mp3"</set></think>
-      </li>
-      <li value="france inter">
-          <think><set name="radio">"http://direct.franceinter.fr/live/franceinter-midfi.mp3"</set></think>
-      </li>
-      <li value="fip">
-          <think><set name="radio">"http://direct.fipradio.fr/live/fip-webradio4.mp3"</set></think>
-      </li>
-      <li value="rire et chansons">
-          <think><set name="radio">"http://cdn.nrjaudio.fm/adwz1/fr/30407/mp3_128.mp3?origine=fluxradios"</set></think>
-      </li>
-      <li value="france">
-          <think><set name="radio">"http://icecast.radiofrance.fr/francemusiqueconcertsradiofrance-midfi.mp3"</set></think>
-      </li>
-      <li value="chérie fm">
-          <think><set name="radio">"http://cdn.nrjaudio.fm/adwz1/fr/55495/mp3_128.mp3"</set></think>
-      </li>
-      <li value="europe 1">
-          <think><set name="radio">"http://wr.lmn.fm/e1-wr5.mp3"</set></think>
-      </li>
-      <li value="jazz">
-          <think><set name="radio">"http://jazz-wr01.ice.infomaniak.ch/jazz-wr01-128.mp3"</set></think>
-      </li>
-      <li value="nostalgie">
-          <think><set name="radio">"http://cdn.nrjaudio.fm/adwz1/fr/30605/mp3_128.mp3?"</set></think>
-      </li>
-      <li value="nrj">
-          <think><set name="radio">"http://cdn.nrjaudio.fm/adwz2/fr/30001/mp3_128.mp3?origine=fluxradios"</set></think>
-      </li>
-      <li value="rfm">
-          <think><set name="radio">"http://stream.rfm.fr/rfm-wr4.mp3"</set></think>
-      </li>
+     <condition name="radio">
+      <li value="france info"><think><set name="radio">"http://direct.franceinfo.fr/live/franceinfo-midfi.mp3"</set></think></li>
+      <li value="france inter"><think><set name="radio">"http://direct.franceinter.fr/live/franceinter-midfi.mp3"</set></think></li>
+      <li value="fip"><think><set name="radio">"http://direct.fipradio.fr/live/fip-webradio4.mp3"</set></think></li>
+      <li value="rire et chansons"><think><set name="radio">"http://cdn.nrjaudio.fm/adwz1/fr/30407/mp3_128.mp3?origine=fluxradios"</set></think></li>
+      <li value="france"><think><set name="radio">"http://icecast.radiofrance.fr/francemusiqueconcertsradiofrance-midfi.mp3"</set></think></li>
+      <li value="chérie fm"><think><set name="radio">"http://cdn.nrjaudio.fm/adwz1/fr/55495/mp3_128.mp3"</set></think></li>
+      <li value="europe 1"><think><set name="radio">"http://wr.lmn.fm/e1-wr5.mp3"</set></think></li>
+      <li value="jazz"><think><set name="radio">"http://jazz-wr01.ice.infomaniak.ch/jazz-wr01-128.mp3"</set></think></li>
+      <li value="nostalgie"><think><set name="radio">"http://cdn.nrjaudio.fm/adwz1/fr/30605/mp3_128.mp3?"</set></think></li>
+      <li value="nrj"><think><set name="radio">"http://cdn.nrjaudio.fm/adwz2/fr/30001/mp3_128.mp3?origine=fluxradios"</set></think></li>
+      <li value="rfm"><think><set name="radio">"http://rfm.lmn.fm/rfm.mp3"</set></think></li>
+      <li value="rtl"><think><set name="radio">"http://streaming.radio.rtl.fr:80/rtl-1-44-128?listen=webCwsBCggNCQgLDQUGBAcGBg"</set></think></li>
+      <li value="france bleu"><think><set name="radio">"http://direct.francebleu.fr/live/fbazur-midfi.mp3"</set></think></li>
+	  <li value="*" ><think><set name="radio">" "</set></think></li>
     </condition>
       <oob>
         <mrl>
@@ -295,7 +326,7 @@
 
  <category>
     <pattern>* MUSIQUE CLASSIQUE</pattern>
-    <template>Voici une radio classique.
+    <template>Voici de la musique classique.
 	 <oob>
         <mrl>
           <service>python</service>
@@ -309,7 +340,7 @@
 
  <category>
     <pattern>* MUSIQUE DE JAZZ</pattern>
-    <template>Voici une radio de jazz
+    <template>Voici de la musique de jazz
 	 <oob>
         <mrl>
           <service>python</service>
@@ -320,10 +351,51 @@
     <srai>APPSMILE</srai>
     </template>
   </category>
+  
+   <category>
+    <pattern>* MUSIQUE GROOVE</pattern>
+    <template>Voici de la musique groove
+	 <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>startRadio("http://jazz-wr08.ice.infomaniak.ch/jazz-wr08-128.mp3")</param>
+        </mrl>
+      </oob>
+    <srai>APPSMILE</srai>
+    </template>
+  </category>
+   <category>
+    <pattern>* MUSIQUE ROCK</pattern>
+    <template>Voici de la musique de rock
+	 <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>startRadio("http://icecast.skyrock.net/s/natio_mp3_128k")</param>
+        </mrl>
+      </oob>
+    <srai>APPSMILE</srai>
+    </template>
+  </category>
+  
+   <category>
+    <pattern>* MUSIQUE POP</pattern>
+    <template>Voici de la musique pop
+	 <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>startRadio("https://scdn.nrjaudio.fm/adwz1/fr/56373/mp3_128.mp3?")</param>
+        </mrl>
+      </oob>
+    <srai>APPSMILE</srai>
+    </template>
+  </category>
 
   <category>
     <pattern>* MUSIQUE DE FILM</pattern>
-    <template>Voici une station radio de musique de films
+    <template>Voici de la musique de films
 	 <oob>
         <mrl>
           <service>python</service>
