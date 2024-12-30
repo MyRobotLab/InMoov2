@@ -25,4 +25,10 @@ import csv
 import glob
 import ConfigParser
 import inspect
-
+import smtplib
+import imaplib
+import re
+import email.mime.image
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
