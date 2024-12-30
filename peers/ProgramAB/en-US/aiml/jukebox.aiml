@@ -185,7 +185,7 @@
 
   <category><pattern>* AUTHOR * PLAYLIST</pattern>
     <template>
-      <srai><star> NAME <star index="2"/> PLAYLIST</srai>
+      <srai><star/> NAME <star index="2"/> PLAYLIST</srai>
     </template>
   </category>
 
