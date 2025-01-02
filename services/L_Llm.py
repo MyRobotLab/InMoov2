@@ -220,8 +220,9 @@ def describeImage(prompt):
       cfg.model = "llava"
     if cfg.stream == "false":
       cfg.stream = "true"
-    #python.subscribe(llmImg.getName(), "publishText", "onFilterText")
-    i01_htmlFilter.subscribe(llmImg.getName(), "publishText", "onText")
+    python.subscribe(llmImg.getName(), "publishText", "onFilterText")
+    #i01_htmlFilter.subscribe(llmImg.getName(), "publishText", "onText")
+    llmImg.removeListener('publishText', 'i01.htmlFilter', 'onText')
     llmImg.apply(cfg)
     llmImg.save()
     llmImg.broadcastState()
