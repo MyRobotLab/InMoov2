@@ -53,6 +53,10 @@ if i01.getConfig().forceMicroOnIfSleeping==1:
   # start the clock
   watchMicro.startClock()
 
+if runtime.isStarted("watchMicro"):
+  if i01.getConfig().forceMicroOnIfSleeping==0:
+    runtime.release("watchMicro")   
+
 # define the method that will stop the robot
 def restartListening():
   if runtime.isStarted('i01.ear'):
