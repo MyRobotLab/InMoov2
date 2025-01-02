@@ -6,7 +6,7 @@
 # uncomment for virtual hardware
 # Platform.setVirtual(True) 
 
-llm = runtime.getService('i01.chatBot')
+chatBot = runtime.getService('i01.chatBot')
 if chatBot:
    chatBot.setPredicate("llm","")
    chatBot.savePredicates()
