@@ -155,20 +155,36 @@ python.subscribe('i01.chatBot','publishPredicate')
 def describeImage(prompt):
   if runtime.isStarted('i01.llmImg'):
     llmImg = runtime.getService('i01.llmImg')
-    opencv = runtime.start('i01.opencv', 'OpenCV')
-    # make a subscription
-    i01_llmImg.subscribe('i01.opencv','publishImage')
-    #img = i01_llmImg.subscribe('i01.opencv','publishImage')
-    #response = llmImg.getImageResponse(img,prompt)
-    #llmImg.invoke("getResponse",["Always respond in french with a short description.", [img]])
-    # capture and save an image
-    # the save image will be publishImage and be sent
-    # to the llmImg
-    opencv.capture()
-    opencv.saveImage()
-    sleep(0.1)
-    opencv.stopCapture()
-    
+    if runtime.isStarted('i01.opencv'):
+      opencv = runtime.getService('i01.opencv')
+      if opencv.isCapturing():
+        # make a subscription
+        i01_llmImg.subscribe('i01.opencv','publishImage')
+        # capture and save an image
+        # the save image will be publishImage and be sent
+        # to the llmImg
+        opencv.saveImage()
+      else:  
+        # make a subscription
+        i01_llmImg.subscribe('i01.opencv','publishImage')
+        # capture and save an image
+        # the save image will be publishImage and be sent
+        # to the llmImg
+        opencv.capture()
+        opencv.saveImage()
+        sleep(0.1)
+        opencv.stopCapture()
+    else:
+      opencv = runtime.start('i01.opencv', 'OpenCV')
+      # make a subscription
+      i01_llmImg.subscribe('i01.opencv','publishImage')
+      # capture and save an image
+      # the save image will be publishImage and be sent
+      # to the llmImg
+      opencv.capture()
+      opencv.saveImage()
+      sleep(0.1)
+      opencv.stopCapture()
 
   else:
     llmImg = runtime.start('i01.llmImg', 'LLM')
