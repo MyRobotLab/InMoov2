@@ -48,16 +48,25 @@ if i01.getConfig().forceMicroOnIfSleeping==1:
   watchMicro = runtime.start("watchMicro","Clock")
   # set our watchMicro to fire if its not reset within a second
   watchMicro.setInterval(60000) 
-  # add the stop command which will stop the robot from moving
   watchMicro.addClockEvent("python","exec", "restartListening()")
   # start the clock
   watchMicro.startClock()
+if i01.getConfig().forceMicroOnIfSleeping==0:
+  runtime.release("watchMicro")  
 
-if runtime.isStarted("watchMicro"):
-  if i01.getConfig().forceMicroOnIfSleeping==0:
-    runtime.release("watchMicro")   
+def earON():
+    ear = runtime.start("i01.ear","WebkitSpeechRecognition")
+    # this needs the library to be loaded and may not work in Linux, Mac
+    subprocess.call(["data/F5.exe"])
+    ear.startListening()
 
-# define the method that will stop the robot
+    
+def earOFF():
+    runtime.release("i01.ear")
+    i01.invoke("publishEvent", "STOPPED EAR")
+
+
+# define the method that will restart the listening
 def restartListening():
   if runtime.isStarted('i01.ear'):
     if not i01_ear.isListening():
