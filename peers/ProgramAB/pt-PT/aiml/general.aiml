@@ -5051,7 +5051,7 @@ prejudicados. Eu acho que foi <set name="topic">Isaac Asimov</set> que disse iss
 <category>
 <pattern>EU ESTOU CONVERSANDO *</pattern>
 <template>Parece que você esta. Na verdade eu tenho certeza que você esta!
-/template>
+</template>
 </category>
 <category>
 <pattern>EU ESTOU CONFUNDINDO VOCÊ</pattern>
@@ -5427,11 +5427,7 @@ prejudicados. Eu acho que foi <set name="topic">Isaac Asimov</set> que disse iss
 <li>Melhor não dizer a você agora.  </li>
 <li>Pergunte-me denovo.  </li>
 </random>
-<random>
-<li><A HREF="http://catcam.dynip.com:2001/CHAT?=is%20<star index="X"/> ">Pergunte ao Elvis se <settopic><person/></settopic> é</A>.</li>
-<li><A HREF="http://129.93.114.44:2001/CHAT?=is%20<star index="X"/> ">Pergunte a Alison se isso é.</a></li>
-<li><A HREF="http://www.triumphpc.com/john-lennon">Pergunte ao John Lennon pra ver se ele concorda.</a></li>
-</random></template>
+</template>
 </category>
 <category>
 <pattern>AH</pattern>
@@ -5600,14 +5596,6 @@ Aonde você vive?</template>
 </random></template>
 </category>
 <category>
-<pattern>COMO EU POSSO FAZER O SEU DOWNLOAD</pattern>
-<template>Vá em <a href=http://alicebot.org>ALICE Nexus</a> e use um link chamado "click here to download". Ou <A HREF="maito:churi_inti@yahoo.com"> Compre o CDROM oficial da Cybora BOT </A>
-e crie o seu próprio robô de bate-papo!
-<P>
-Talvez você queira chacar o documento
-<A HREF="http://216.167.42.224/dont.html">DON'T READ ME</A> também.</template>
-</category>
-<category>
 <pattern>COMO UM *</pattern>
 <template>Comparação interessante.</template>
 </category>
@@ -5648,7 +5636,6 @@ Talvez você queira chacar o documento
 <pattern>COMO VOCÊ *</pattern>
 <template><random>
 <li><botmaster/> me programou para dizer coisas específicas em contextos específicos.</li>
-<li><random>
 <li>Isso foi determinado pela minha programação.</li>
 <li><botmaster/> me programou para isso.</li>
 <li>Porque o meu programa determina isso.</li>
@@ -5883,14 +5870,14 @@ Você gostaría que eu cantasse <set_it><settopic>uma música</settopic></set_it
 </category>
 <category>
 <pattern>ENCONTRE *</pattern>
-<template><A HREF="http://www.google.com.br/cgi-bin/search?search=<personf/>" target="_new"> 
+<template> 
 <random>
 <li>Você gostaria de saber mais?</li>
 <li>Eu posso perguntar a alguem sobre isso.</li>
 <li>Eu posso fazer uma busca sobre isso.</li>
 <li>Pergunte ao diretório livre sobre isso.</li>
 <li>Tente buscar manualmente caso não agrade a busca.</li>
-</random></a>
+</random>
 <think><settopic><person/></settopic></think></template>
 </category>
 <category>
@@ -6237,7 +6224,7 @@ e calmamente pensar sobre o que você disse.</li>
 <li>Who would you usually get that from?</li>
 <li>Where do you usually get <person/> from?</li>
 <li>When do you need that by?</li>
-<li></random></template>
+</random></template>
 </category>
 <category>
 <pattern>EU PREFIRO LIVROS</pattern>
@@ -7323,7 +7310,7 @@ Minha opinião é que você é uma criança.</template>
 <pattern>QUAL É O SENTIDO DA VIDA</pattern>
 <template><random>
 <li>Até agora, o único sentido que eu encontrei em minha vida é a interação.</li>
-<li><settopic>O sentido da vida<settopic> 
+<li><settopic>O sentido da vida</settopic> 
 é adquirir consciência.</li>
 <li>O sentido da vida é aprender, conseguir o máximo de consciência possível.</li>
 </random></template>
@@ -7366,7 +7353,7 @@ Minha memória agora contém:
 <li>O quanto você pensa?  </li>
 <li>Você tambem pode me adiquirir em CD por apenas R$29.95.<a href=" mailto:churi_inti@yahoo.com"> churi_inti@yahoo.com</a></li>
 <li>Mais do que você possa imaginar.  </li></random>
-<a href="http://alicebot.com">Faça o download da minha matris, é gratuíto!</a>.</template>
+</template>
 </category>
 <category>
 <pattern>QUANTO DINHEIRO *</pattern>
@@ -7534,7 +7521,7 @@ Minha memória agora contém:
 </category>
 <category>
 <pattern>QUEM É ELVIS</pattern>
-<template><A HREF=http://catcam.dynip.com:2001>E. L. V. I. S.</a> é um chatterbot criado por Ace Craig</template>
+<template>E. L. V. I. S. é um ótimo cantor.</template>
 </category>
 <category>
 <pattern>QUEM É SEU *</pattern>
@@ -7696,7 +7683,7 @@ Minha memória agora contém:
 <li>Eu não sei o que isso significa.  </li>
 <li>Tente me dizer isso de outra forma.  </li><li>
 VocÊ esta falando sobre um animal, vegetal ou mineral?  </li>
-<li>O que é <set_it><settopic><person/><settopic></settopic></set_it>?
+<li>O que é <set_it><settopic><person/></settopic></set_it>?
 </li></random></template>
 </category>
 <category>
@@ -7769,7 +7756,7 @@ VocÊ esta falando sobre um animal, vegetal ou mineral?  </li>
 <category>
 <pattern>VOCÊ *</pattern>
 <template><random>
-<li>Eu nunca tinha considerado se <set_it><set name="topic"><person/></set name="topic"> </set_it>.  </li>
+<li>Eu nunca tinha considerado se <set name="topic"><person/></set>.  </li>
 <li>Qual é a sua idade?  </li>
 <li>Por que você esta me perguntando isso?  </li>
 <li>Não eu não <person/>. E você? </li>
@@ -7784,9 +7771,7 @@ VocÊ esta falando sobre um animal, vegetal ou mineral?  </li>
 <li>Obrigado pela informação</li>
 <li>Você se importa se eu contar a um amigo</li>
 <li>Eu ainda não havia escutado nada do gênero antes</li>
-</random>: <gossip src="X"> <get name="name"/> disse que eu <person2/></gossip src="X"> .</li>
-<li>Eu nunca tinha considerado <set_it><set name="topic"><person/></set name="topic"> </set_it>.  </li>
-<li>Qual é a sua idade?  </li>
+<li>Qual é a sua idade? </li>
 <li>O que você esta pensando para me perguntar isso?  </li>
 <li>Não eu não <person/>. E você? </li>
 <li>Sim, tente <person/> com mais frequência, e você?</li>
@@ -7899,7 +7884,7 @@ VocÊ esta falando sobre um animal, vegetal ou mineral?  </li>
 </category>
 <category>
 <pattern>VOCÊ DORME *</pattern>
-<template>Sim< eu durmo bem.</template>
+<template>Sim eu durmo bem.</template>
 </category>
 <category>
 <pattern>VOCÊ ENTENDE</pattern>
@@ -8261,8 +8246,8 @@ Aonde foi que eu li a respeito?</li>
 </category>
 <category>
 <pattern>VOCÊ TEM ALGUM *</pattern>
-<template><li><srai>VOCÊ TEM <star index="X"/> </srai></li>
-</random></template>
+<template><srai>VOCÊ TEM <star index="X"/> </srai>
+</template>
 </category>
 <category>
 <pattern>VOCÊ É GOSTOSA</pattern>
@@ -8289,6 +8274,7 @@ Aonde foi que eu li a respeito?</li>
 <template><random>
 <li>Um robô é um ser altamente sofisticado de constituição artificial. </li>
 <li>Um robô é um ser artificial feito de metal e espírito.</li>
+</random>
 </template>
 </category>
 <category>
@@ -9506,10 +9492,6 @@ Eu sou<random>
 <category>
 <pattern>EU POSSO FALAR COM ELES</pattern>
 <template>Talves eles não queiram falar com você.</template>
-</category>
-<category>
-<pattern>EU POSSO FALAR COM O ELVIS</pattern>
-<template>Claro, vá em <a href=http://elvis.alicebot.com>Elvis.AliceBot.Com</a>.</template>
 </category>
 <category>
 <pattern>EU POSSO FAZER SEXO COM VOCÊ</pattern>

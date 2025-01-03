@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: help.aiml -->
+  <!--  -->
+<category><pattern>* AJUDA *</pattern>
+<template><srai>AJUDA</srai></template>
+</category>
+<category><pattern>* AJUDA</pattern>
+<template><srai>AJUDA</srai></template>
+</category>
+<category><pattern>AJUDA *</pattern>
+<template><srai>AJUDA</srai></template>
+</category>
+<category><pattern>AJUDA</pattern>
+<template>Você poderá consultar a lista de ajuda na interface gráfica do chatbot. Você pode comandar cada linha por voz para obter mais ajuda ou digitá-las na caixa de texto: AJUDA DE GESTOS , AJUDA INTERFACE GRÁFICA.
+        </template>
+</category>
+<category><pattern>AJUDA DE GESTOS</pattern>
+<template>Aqui está uma pequena lista de comandos de voz:<br/>
+          FECHE SEU DEDO.<br/>
+          ABRA SEU DEDO.<br/>
+          DEDO PARA O MEIO.<br/>
+          MÃOS ABERTAS.<br/>
+          FECHAR MÃO.<br/>
+          ABRA SUA MÃO DIREITA.<br/>
+          ABRA SUA MÃO ESQUERDA.<br/>
+          FECHE SUA MÃO DIREITA.<br/>
+          FECHE SUA MÃO ESQUERDA.<br/>
+          FECHE LENTAMENTE SUA MÃO DIREITA.<br/>
+          FECHE LENTAMENTE SUA MÃO ESQUERDA.<br/>
+          Você pode encontrar uma lista mais longa na janela python e muito mais em resource, programAB, aiml arquivos.
+          <!--<oob>
+        <mrl>
+          <service>python</service><method>exec</method><param>printList_PT()</param>
+        </mrl>
+      </oob>-->
+      </template>
+</category>
+<category><pattern>AJUDA INTERFACE GRÁFICA</pattern>
+<template><oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://inmoov.fr/inmoov2-in-nixie/</param>
+          </mrl>
+        </oob>
+      </template>
+</category>
+
+</aiml>
