@@ -153,6 +153,30 @@
 <template>Fechando minha mão.
         <oob><mrl><service>python</service><method>exec</method><param>handclose()</param></mrl></oob></template>
 </category>
+<category><pattern>ABRA SUA MÃO DIREITA</pattern>
+<template>Abrindo minha mão direita.
+        <oob><mrl><service>python</service><method>exec</method><param>openrighthand()</param></mrl></oob></template>
+</category>
+<category><pattern>ABRA SUA MÃO ESQUERDA</pattern>
+<template>Abrindo minha mão esquerda.
+        <oob><mrl><service>python</service><method>exec</method><param>openlefthand()</param></mrl></oob></template>
+</category>
+<category><pattern>FECHE SUA MÃO DIREITA</pattern>
+<template>Fechando minha mão direita.
+        <oob><mrl><service>python</service><method>exec</method><param>closerighthand()</param></mrl></oob></template>
+</category>
+<category><pattern>FECHE SUA MÃO ESQUERDA</pattern>
+<template>Fechando minha mão esquerda.
+        <oob><mrl><service>python</service><method>exec</method><param>closelefthand()</param></mrl></oob></template>
+</category>
+<category><pattern>FECHE LENTAMENTE SUA MÃO DIREITA</pattern>
+<template>Slowly closing my right hand.
+        <oob><mrl><service>python</service><method>exec</method><param>slowlycloserighthand()</param></mrl></oob></template>
+</category>
+<category><pattern>FECHE LENTAMENTE SUA MÃO ESQUERDA</pattern>
+<template>Fechando lentamente minha mão esquerda.
+        <oob><mrl><service>python</service><method>exec</method><param>slowlycloselefthand()</param></mrl></oob></template>
+</category>
 <category><pattern>FECHE AS MÃOS</pattern>
 <template>Fechando minhas mãos.
         <oob><mrl><service>python</service><method>exec</method><param>handsclose()</param></mrl></oob></template>
