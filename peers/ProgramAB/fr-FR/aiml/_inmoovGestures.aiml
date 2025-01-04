@@ -256,7 +256,8 @@
 <template><srai>DA VINCI</srai></template>
 </category>
 <category><pattern>ACTIVE LES OREILLES</pattern>
-<template><oob>
+<template>Je démarre mon micro.
+      <oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
