@@ -29,7 +29,7 @@ def initEar():
     if runtime.getLocale().getTag() == fi:
       i01_ear.setWakeWord(u'herää')
     if runtime.getLocale().getTag() == fr:
-      i01_ear.setWakeWord(u'réveille toi')
+      i01_ear.setWakeWord(u'réveille-toi')
     if runtime.getLocale().getTag() == hi:
       i01_ear.setWakeWord(u'उठो')
     if runtime.getLocale().getTag() == es:
