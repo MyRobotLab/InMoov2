@@ -255,6 +255,20 @@
 <category><pattern>DAVINCI</pattern>
 <template><srai>DA VINCI</srai></template>
 </category>
+<category><pattern>ACTIVE LES OREILLES</pattern>
+<template><oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>earON()</param>
+        </mrl>
+      </oob>
+      <srai>APPHAPPY</srai>
+</template>
+</category>
+<category><pattern>DÉMARRE LES OREILLES</pattern>
+<template><srai>ACTIVE LES OREILLES</srai></template>
+</category>
 <!--<category>
   UTILISER LE WAKEWORD
     <pattern>MANUEL</pattern>
