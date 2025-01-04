@@ -255,7 +255,7 @@
 <category><pattern>DAVINCI</pattern>
 <template><srai>DA VINCI</srai></template>
 </category>
-<category><pattern>ACTIVE LES OREILLES</pattern>
+<category><pattern>ACTIVE * OREILLES</pattern>
 <template>Je démarre mon micro.
       <oob>
         <mrl>
@@ -267,8 +267,8 @@
       <srai>APPHAPPY</srai>
 </template>
 </category>
-<category><pattern>DÉMARRE LES OREILLES</pattern>
-<template><srai>ACTIVE LES OREILLES</srai></template>
+<category><pattern>DÉMARRE * OREILLES</pattern>
+<template><srai>ACTIVE <star/> OREILLES</srai></template>
 </category>
 <!--<category>
   UTILISER LE WAKEWORD
