@@ -267,11 +267,28 @@
     <template>J'écoute à nouveau.
         <oob><mrl><service>python</service><method>exec</method><param>i01_ear.setAwake(True)</param></mrl></oob></template>
   </category>-->
-  <category>
-    <pattern>ARRÊTE D'ÉCOUTER</pattern>
-    <template>Je coupe mon micro.
-        <oob><mrl><service>python</service><method>exec</method><param>i01_ear.setAwake(False)</param></mrl></oob></template>
-  </category>>
+<category>
+<pattern>ARRÊTE D ÉCOUTER</pattern>
+<template>Je coupe mon micro.
+        <oob><mrl><service>python</service><method>exec</method><param>earOFF()</param></mrl></oob></template>
+        <srai>APPHAPPY</srai>
+</category>
+<category>
+<pattern>STOPPE LES OREILLES</pattern>
+<template><srai>ARRÊTE D'ÉCOUTER</srai></template>
+</category>
+<category><pattern>STOP LES OREILLES</pattern>
+<template><srai>ARRÊTE D ÉCOUTER</srai></template>
+</category>
+<category><pattern>DÉSACTIVE LES OREILLES</pattern>
+<template><srai>ARRÊTE D ÉCOUTER</srai></template>
+</category>
+<category><pattern>ARRÊT DES OREILLES</pattern>
+<template><srai>ARRÊTE D'ÉCOUTER</srai></template>
+</category>
+<category><pattern>ARRÊTE LES OREILLES</pattern>
+<template><srai>ARRÊTE D ÉCOUTER</srai></template>
+</category>
 <category><pattern>VITESSE MAXI</pattern>
 <template>Mes servo sont en vitesse maximum.
         <oob><mrl><service>python</service><method>exec</method><param>fullspeed()</param></mrl></oob></template>
