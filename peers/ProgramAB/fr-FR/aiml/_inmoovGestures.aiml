@@ -289,19 +289,19 @@
         <srai>APPHAPPY</srai>
 </category>
 <category>
-<pattern>STOPPE LES OREILLES</pattern>
+<pattern>STOPPE * OREILLES</pattern>
 <template><srai>ARRÊTE D'ÉCOUTER</srai></template>
 </category>
-<category><pattern>STOP LES OREILLES</pattern>
+<category><pattern>STOP * OREILLES</pattern>
 <template><srai>ARRÊTE D ÉCOUTER</srai></template>
 </category>
-<category><pattern>DÉSACTIVE LES OREILLES</pattern>
+<category><pattern>DÉSACTIVE * OREILLES</pattern>
 <template><srai>ARRÊTE D ÉCOUTER</srai></template>
 </category>
-<category><pattern>ARRÊT DES OREILLES</pattern>
+<category><pattern>ARRÊT * OREILLES</pattern>
 <template><srai>ARRÊTE D'ÉCOUTER</srai></template>
 </category>
-<category><pattern>ARRÊTE LES OREILLES</pattern>
+<category><pattern>ARRÊTE * OREILLES</pattern>
 <template><srai>ARRÊTE D ÉCOUTER</srai></template>
 </category>
 <category><pattern>VITESSE MAXI</pattern>
