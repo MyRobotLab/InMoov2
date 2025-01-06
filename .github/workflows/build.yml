@@ -37,11 +37,6 @@ jobs:
           echo "artifact-version=$NEW_VERSION" >> $GITHUB_ENV
           echo "$NEW_VERSION" > version.txt  # Create version.txt
 
-      - name: Move version.txt to target directory
-        run: |
-          mkdir -p target
-          mv version.txt target/version.txt
-
       - name: Build and test with Maven
         run: mvn clean install assembly:single --batch-mode -Dartifact.version=${{ env.artifact-version }}
 
@@ -61,11 +56,6 @@ jobs:
           fi
           NEW_ZIP_NAME="target/inmoov2-${{ env.artifact-version }}.zip"
           mv "$ZIP_FILE" "$NEW_ZIP_NAME"
-
-      - name: Upload version.txt to S3
-        run: |
-          S3_VERSION_URI="s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/version.txt"
-          aws s3 cp "target/version.txt" "$S3_VERSION_URI"
 
       - name: Generate and upload POM file
         run: |
