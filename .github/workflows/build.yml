@@ -35,7 +35,12 @@ jobs:
           NEW_VERSION="${BASE_VERSION}.$((BUILD_INCREMENT + BUILD_NUMBER))"
           echo "New version: $NEW_VERSION"
           echo "artifact-version=$NEW_VERSION" >> $GITHUB_ENV
-          echo "$NEW_VERSION" > version.txt
+          echo "$NEW_VERSION" > version.txt  # Create version.txt
+
+      - name: Move version.txt to target directory
+        run: |
+          mkdir -p target
+          mv version.txt target/version.txt
 
       - name: Build and test with Maven
         run: mvn clean install assembly:single --batch-mode -Dartifact.version=${{ env.artifact-version }}
