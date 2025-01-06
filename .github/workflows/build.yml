@@ -9,12 +9,11 @@ jobs:
   build-test-deploy:
     runs-on: ubuntu-latest
 
-    # steps
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up JDK 11.
+      - name: Set up JDK 11
         uses: actions/setup-java@v3
         with:
           java-version: "11"
@@ -27,7 +26,7 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-maven
 
-      - name: Increment version and build with Maven
+      - name: Increment version and create version.txt
         id: increment-version
         run: |
           BASE_VERSION="2.0"
@@ -36,6 +35,7 @@ jobs:
           NEW_VERSION="${BASE_VERSION}.$((BUILD_INCREMENT + BUILD_NUMBER))"
           echo "New version: $NEW_VERSION"
           echo "artifact-version=$NEW_VERSION" >> $GITHUB_ENV
+          echo "$NEW_VERSION" > version.txt
 
       - name: Build and test with Maven
         run: mvn clean install assembly:single --batch-mode -Dartifact.version=${{ env.artifact-version }}
@@ -45,7 +45,7 @@ jobs:
           if [ ! -d "target" ]; then
             echo "Target directory not found!" && exit 1
           fi
-          echo "Contents of target directory:" 
+          echo "Contents of target directory:"
           ls -l target
 
       - name: Rename artifact to include version
@@ -56,6 +56,11 @@ jobs:
           fi
           NEW_ZIP_NAME="target/inmoov2-${{ env.artifact-version }}.zip"
           mv "$ZIP_FILE" "$NEW_ZIP_NAME"
+
+      - name: Upload version.txt to S3
+        run: |
+          S3_VERSION_URI="s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/version.txt"
+          aws s3 cp "target/version.txt" "$S3_VERSION_URI"
 
       - name: Generate and upload POM file
         run: |
@@ -90,12 +95,11 @@ jobs:
           </metadata>
           EOF
 
-      - name: Upload to S3.
+      - name: Upload to S3
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-east-1"
-          # s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/2.0.1897/inmoov2-2.0.1897.zip
         run: |
 
           S3_METADATA_URI="s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/maven-metadata.xml"
@@ -106,10 +110,6 @@ jobs:
 
           S3_URI="s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/${{ env.artifact-version }}/inmoov2-${{ env.artifact-version }}.zip"
           aws s3 cp "target/inmoov2-${{ env.artifact-version }}.zip" "$S3_URI"
-
-      # - name: Verify artifact upload
-      #   run: |
-      #     aws s3 ls "s3://myrobotlab-repo/artifactory/myrobotlab/fr/inmoov/inmoov2/${{ env.artifact-version }}"
 
       - name: Create Git tag for version
         env:
