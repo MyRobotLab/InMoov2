@@ -214,7 +214,7 @@ def describeImage(prompt):
       cfg.defaultImagePrompt = u"Всегда отвечайте на русском языке. Что ты видишь?"
     if runtime.getLocale().getTag() == tr:
       cfg.defaultImagePrompt = u"Daima Türkçe yanıt verin. Ne görüyorsun?"        
-    if cfg.url == "http://localhost:11434/api/generate" or "http://localhost:11434/v1/chat/completions":
+    if cfg.url == "http://localhost:11434/api/generate" or cfg.url == "http://localhost:11434/v1/chat/completions":
       cfg.url = "http://localhost:11434"
     if cfg.model == None or "llama2" or "llama3" or "phi3" or "mistral" or "mixtral":
       cfg.model = "llava"
