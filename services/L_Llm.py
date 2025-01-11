@@ -21,7 +21,7 @@ def initLlm():
     runtime.getConfig()
     python.subscribe(llm.getName(), "publishText", "onFilterText")
     config = llm.getConfig()
-    if config.url == "http://localhost:11434" or "http://localhost:11434/v1/chat/completions":
+    if config.url == "http://localhost:11434" or config.url == "http://localhost:11434/v1/chat/completions":
         config.url = "http://localhost:11434/api/generate"
     if setSystem == "You are a helpful robot.":
       if runtime.getLocale().getTag() == en:
