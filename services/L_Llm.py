@@ -191,7 +191,7 @@ def describeImage(prompt):
     opencv = runtime.start('i01.opencv', 'OpenCV')
     cfg = llmImg.getConfig()
     if runtime.getLocale().getTag() == en:
-      cfg.defaultImagePrompt = u"What do you see?"
+      cfg.defaultImagePrompt = u"What is this image?"
     if runtime.getLocale().getTag() == fi:
       cfg.defaultImagePrompt = u"Vastaa aina suomeksi. Mitä näet?"
     if runtime.getLocale().getTag() == fr:
@@ -223,8 +223,8 @@ def describeImage(prompt):
     #python.subscribe(llmImg.getName(), "publishText", "onFilterText")
     #i01_htmlFilter.subscribe(llmImg.getName(), "publishText", "onText")
     #llmImg.removeListener('publishText', 'i01.htmlFilter', 'onText')
-    llmImg.apply(cfg)
     llmImg.save()
+    llmImg.apply(cfg)
     llmImg.broadcastState()
     # make a subscription
     i01_llmImg.subscribe('i01.opencv','publishImage')
