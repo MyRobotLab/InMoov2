@@ -21,7 +21,7 @@ def initLlm():
     runtime.getConfig()
     python.subscribe(llm.getName(), "publishText", "onFilterText")
     config = llm.getConfig()
-    if config.url == "null" or config.url == "http://localhost:11434" or config.url == "http://localhost:11434/v1/chat/completions":
+    if config.url == "null" or "http://localhost:11434" or "http://localhost:11434/v1/chat/completions":
         config.url = "http://localhost:11434/api/generate"
     if setSystem == "You are a helpful robot.":
       if runtime.getLocale().getTag() == en:
@@ -132,10 +132,10 @@ def initLlm():
    The current date is {{Date}}.\
    My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
    This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
-      llm.removeListener('publishText', 'i01.htmlFilter', 'onText')  
-      llm.save()  
-      llm.apply(config)
-      llm.broadcastState()
+    llm.removeListener('publishText', 'i01.htmlFilter', 'onText')  
+    llm.save()  
+    llm.apply(config)
+    llm.broadcastState()
     if chatBot:
       llm.addInput("UserName", unicode(chatBot.getConfig().currentUserName,'utf-8'))
       llm.addInput("BotName", unicode(chatBot.getPredicate(chatBot.getCurrentUserName(),"botname"),'utf-8'))
@@ -220,9 +220,9 @@ def describeImage(prompt):
       cfg.model = "llava"
     if cfg.stream == "false":
       cfg.stream = "true"
-    python.subscribe(llmImg.getName(), "publishText", "onFilterText")
+    #python.subscribe(llmImg.getName(), "publishText", "onFilterText")
     #i01_htmlFilter.subscribe(llmImg.getName(), "publishText", "onText")
-    llmImg.removeListener('publishText', 'i01.htmlFilter', 'onText')
+    #llmImg.removeListener('publishText', 'i01.htmlFilter', 'onText')
     llmImg.apply(cfg)
     llmImg.save()
     llmImg.broadcastState()
