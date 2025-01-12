@@ -221,7 +221,7 @@ def describeImage(prompt):
     if cfg.stream == "false":
       cfg.stream = "true"
     #python.subscribe(llmImg.getName(), "publishText", "onFilterText")
-    #i01_htmlFilter.subscribe(llmImg.getName(), "publishText", "onText")
+    i01_htmlFilter.subscribe(llmImg.getName(), "publishText", "onText")
     #llmImg.removeListener('publishText', 'i01.htmlFilter', 'onText')
     llmImg.save()
     llmImg.apply(cfg)
