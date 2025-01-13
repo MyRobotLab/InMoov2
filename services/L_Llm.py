@@ -22,7 +22,8 @@ def initLlm():
     python.subscribe(llm.getName(), "publishText", "onFilterText")
     config = llm.getConfig()
     if config.url == "null" or "http://localhost:11434" or "http://localhost:11434/v1/chat/completions":
-        config.url = "http://localhost:11434/api/generate"
+      config.url = "http://localhost:11434/api/generate"
+      runtime.warn('url is set by default to a localhost')
     if setSystem == "You are a helpful robot.":
       if runtime.getLocale().getTag() == en:
         config.system = u"You are {{BotName}} a safe AI assistant.\
@@ -216,6 +217,7 @@ def describeImage(prompt):
       cfg.defaultImagePrompt = u"Daima Türkçe yanıt verin. Ne görüyorsun?"        
     if cfg.url == "null" or "http://localhost:11434/api/generate" or cfg.url == "http://localhost:11434/v1/chat/completions":
       cfg.url = "http://localhost:11434"
+      runtime.warn('url is set by default to a localhost')
     if cfg.model == "null" or cfg.model=="llama2" or cfg.model=="llama3" or cfg.model=="phi3" or cfg.model=="mistral" or cfg.model=="mixtral":
       cfg.model = "llava"
     if cfg.stream == "false":
