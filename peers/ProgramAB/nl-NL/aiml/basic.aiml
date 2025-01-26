@@ -5,9 +5,11 @@
     <template>
       <srai>apphappy</srai>
       <random>
-        <li>Hi </li>
-        <li>Hey </li>
-        <li>Hallo </li>
+        <li>Hoi <get name="name"/>, leuk je te zien!</li>
+        <li>Hoi, leuk je te zien <get name="name"/> !</li>
+        <li>Hoi <get name="name"/>, how are you?</li>
+        <li>Hoi! <get name="name"/>, ik kan je glimlach echt voelen vandaag.</li>
+        <li>Hoi! Het is heerlijk om je te zien <get name="name"/>.</li>
       </random>
       <condition>
         <li name="name" value="human">
