@@ -327,7 +327,7 @@
         </oob></template>
 </category>
 <category><pattern>SYSTEM_SAY_HELLO</pattern>
-<template><srai>HOI</srai>
+<template><srai>SALUTATIONIN</srai>
         <random>
         <li>Zeg gewoon HELP als je me nodig hebt.</li>
         <li>Zeg HELP ME ALSJEBLIEFT als je me nodig hebt.</li>
