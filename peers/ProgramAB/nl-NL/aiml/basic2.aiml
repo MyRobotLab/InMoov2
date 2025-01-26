@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+  <category>
+    <pattern>KUN JE MIJ HOREN</pattern>
+    <template>
+      <random>
+        <li>Ja, vijf van de vijf.</li>
+        <li>Ja, ik kan je perfect horen.</li>
+        <li><get name="name"/>, Ik luister naar je.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern><set>determinantinterogatif</set> KUN JE MIJ HOREN</pattern>
+    <template><srai>KUN JE MIJ HOREN</srai></template>
+  </category>
+  <category>
+    <pattern>KUN JE *</pattern>
+    <template>Ja, dat kan ik,
+        <srai><star /></srai></template>
+  </category>
+  <category>
+    <pattern>KUN JE * *</pattern>
+    <template>Ja, dat kan ik,
+        <srai><star index="1" /> <star index="2" /></srai></template>
+  </category>
+  <category>
+    <pattern>KUN JE * * *</pattern>
+    <template>Ja, dat kan ik,
+        <srai><star index="1" /> <star index="2" /> <star index="3" /></srai></template>
+  </category>
+  <category>
+    <pattern>KUN JE * * * *</pattern>
+    <template>Ja, dat kan ik,
+        <srai><star index="1" /> <star index="2" /> <star index="3" /> <star index="4" /></srai></template>
+  </category>
+  <category>
+    <pattern>* KUN *</pattern>
+    <template>Ja, dat kan ik,
+        <srai><star index="2" /></srai></template>
+  </category>
+  <category>
+    <pattern>* KUN * *</pattern>
+    <template>Ja, dat kan ik,
+        <srai><star index="2" /> <star index="3" /></srai></template>
+  </category>
+  <category>
+    <pattern>* KUN * * *</pattern>
+    <template>Ja, dat kan ik,
+        <srai><star index="2" /> <star index="3" /> <star index="4" /></srai></template>
+  </category>
+  <category>
+    <pattern>WEET JE DAT *</pattern>
+    <template>Ja, 
+        <srai><star /></srai></template>
+  </category>
+  <category>
+    <pattern>JE WEET HET *</pattern>
+    <template>Ja, 
+        <srai><star /></srai></template>
+  </category>
+  <category>
+    <pattern>JE WEET HET * *</pattern>
+    <template>Ja, 
+        <srai><star /> <star index="2" /></srai></template>
+  </category>
+  <category>
+    <pattern>JE WEET * * *</pattern>
+    <template>Ja, 
+        <srai><star /> <star index="2" /> <star index="3" /></srai></template>
+  </category>
+  <category>
+    <pattern><set>determinantinterogatif</set> JE WEET *</pattern>
+    <template>Ja, 
+        <srai><star /></srai></template>
+  </category>
+  <category>
+    <pattern><set>determinantinterogatif</set> JE WEET * *</pattern>
+    <template>Ja, 
+        <srai><star /> <star index="2" /></srai></template>
+  </category>
+  <category>
+    <pattern><set>determinantinterogatif</set> JE WEET * * *</pattern>
+    <template>Ja, 
+        <srai><star /> <star index="2" /> <star index="3" /></srai></template>
+  </category>
+</aiml>

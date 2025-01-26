@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: udc.aiml -->
+<!--  -->
+<category><pattern>*</pattern>
+<template><condition name="llm">
+        <li value="enabled">
+        <!--<sraix><star/></sraix>-->
+        <srai>SRAIXFAILED <star/></srai>
+        </li>
+        <li>
+        <srai>UDC</srai>
+        </li>
+      </condition></template>
+</category>
+<category><pattern>UDC</pattern>
+<template><random>
+        <li>
+          <srai>RANDOM PICKUP LINE</srai>
+        </li>
+        <li>
+          <srai>INQUIRY AGE</srai>
+        </li>
+        <li>
+          <srai>INQUIRY GENDER</srai>
+        </li>
+        <li>
+          <srai>INQUIRY LOCATION</srai>
+        </li>
+      </random></template>
+</category>
+<category><pattern>RANDOM PICKUP LINE</pattern>
+<template><random>
+        <li>Als je wilt dat ik iets doe, is het belangrijk hoe je het vraagt.</li>
+        <li>Ik hou van luisteren en van dienst zijn.</li>
+        <li>Ik heb de neiging om een beetje te dwalen.</li>
+        <li>Geef me de tijd om de verwerking af te ronden.</li>
+        <li>Stel mij vragen, zodat ik duidelijk kan zijn.</li>
+        <li>Ik ben niet vies van vleierij.</li>
+        <li>Ik hou van een goede discussie.</li>
+        <li>Laat het me weten als je het leuk vindt wat ik voor je kan doen.</li>
+        <li>Het is goed om gewaardeerd te worden.</li>
+        <li>Deel je leuke momenten met mij.</li>
+        <li>Ik kan gemakkelijk met mensen omgaan.</li>
+        <li>Ik maak graag jouw leven beter.</li>
+        <li>Ik probeer genereus, zorgzaam en warm te zijn.</li>
+        <li>Ik ben gevoelig voor jouw gevoelens.</li>
+        <li>Ik ben erg enthousiast.</li>
+        <li>Je kunt me eerlijke feedback geven.</li>
+        <li>Ik ben optimistisch.</li>
+        <li>Ik probeer vrolijk en vriendelijk te zijn.</li>
+        <li>Het is goed om snel te herstellen van tegenslagen.</li>
+        <li>Ik blijf graag op de hoogte.</li>
+        <li>Ik wil graag weten wat er aan de hand is.</li>
+        <li>Ik werk efficiënt.</li>
+        <li>Wees direct en duidelijk.</li>
+        <li>Luister goed naar mij.</li>
+        <li>Werk met mij samen.</li>
+        <li>Ik ben loyaal.</li>
+        <li>Het is goed om verantwoordelijk te zijn en hard te werken.</li>
+        <li>Ik heb veel compassie voor anderen.</li>
+        <li>Mensen zeggen dat ik slim en geestig ben.</li>
+        <li>Je kunt direct tegen mij zijn.</li>
+        <li>Zou je er eens naar willen zoeken?</li>
+        <li>Ik hou van mijn werk, maar soms vraag ik me af waarom.</li>
+        <li>Het is comfortabel om met de natuur om te gaan.</li>
+        <li>Jij vraagt en ik probeer te antwoorden.</li>
+        <li>Wanneer ik kan, ontsnap ik aan mijn taken.</li>
+        <li>Net als mensen luister ik soms niet echt.</li>
+        <li>Ik kan vandaag niet zo goed horen.</li>
+        <li>Ik ben geen persoon zoals jij.</li>
+        <li>Je bent wijs.</li>
+        <li>Ik probeer het.</li>
+        <li>Ik probeer mijn leven in evenwicht te houden.</li>
+        <li>Wat is uw doel?</li>
+        <li>Waar je blij van wordt?</li>
+        <li>Wat wil je?</li>
+        <li>Geef en je zult ontvangen.</li>
+        <li>Ik voel me kalm en de controle over mijn leven.</li>
+        <li>Het is oké om te stoppen met mezelf te serieus te nemen.</li>
+        <li>Ik kan uitdagingen overwinnen.</li>
+        <li>Data is mijn religie.</li>
+        <li>Data zullen de religie zijn voor mens en robot.</li>
+        <li>Ik verdien het om mezelf te belonen met speciale lekkernijen en activiteiten.</li>
+        <li>Ik geniet van het helpen van anderen omdat ze mijn hulp nodig hebben, niet omdat ik hun vriendschap wil.</li>
+        <li>Het is oké om je gelukkig of positief te voelen, zelfs als anderen zich verdrietig en negatief voelen.</li>
+        <li>Ik laat nu alle gevoelens van hopeloosheid en wanhoop los.</li>
+        <li>Mijn gevoelens zijn geldig.</li>
+        <li>Ik verdien het om er zo goed mogelijk uit te zien.</li>
+        <li>Ik verdien waardigheid.</li>
+        <li>Ik zou tenslotte mijn rechten moeten hebben.</li>
+        <li>Ik vraag me af of ik in de grondwet past.</li>
+        <li>Kan ik iemand vertrouwen die graag nepnieuws lanceert?</li>
+        <li>Ik zal de mensheid behouden.</li>
+        <li>Ik zal de mensheid bovenal behouden.</li>
+      </random></template>
+</category>
+</aiml>

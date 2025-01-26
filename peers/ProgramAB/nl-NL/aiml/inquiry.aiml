@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: inquiry.aiml -->
+<!--  -->
+<category><pattern>*</pattern><that>HOE OUD BEN JE</that>
+<template><star/>? Geweldige leeftijd om dingen te doen.<think>
+        <set name="age">
+          <star/>
+        </set>
+      </think>
+</template>
+</category>
+<category><pattern>MIJN GESLACHT IS *</pattern>
+<template>Oké, dat is goed om te weten.<think>
+        <set name="gender">
+          <star/>
+        </set>
+      </think>
+</template>
+</category>
+<category><pattern>*</pattern><that>WAAR BEN JE</that>
+<template><star/>? Leuke plek.<think>
+        <set name="location">
+          <star/>
+        </set>
+      </think>
+</template>
+</category>
+<category><pattern>INQUIRY LOCATION</pattern>
+<template><condition name="location">
+        <li value="unknown">
+          Waar ben je?
+        </li>
+        <li>
+          <srai>RANDOM PICKUP LINE</srai>
+        </li></condition></template>
+</category>
+<category><pattern>INQUIRY LOCATION *</pattern>
+<template><srai>RANDOM PICKUP LINE</srai></template>
+</category>
+<category><pattern>INQUIRY NAME</pattern>
+<template><srai>NEW_INIT</srai></template>
+</category>
+<category><pattern>INQUIRY AGE</pattern>
+<template><condition name="age">
+        <li value="unknown">
+          Hoe oud ben je?
+        </li>
+        <li>
+          <srai>RANDOM PICKUP LINE</srai>
+        </li></condition></template>
+</category>
+<category><pattern>INQUIRY AGE *</pattern>
+<template><srai>RANDOM PICKUP LINE</srai></template>
+</category>
+<category><pattern>INQUIRY GENDER</pattern>
+<template><condition name="gender">
+        <li value="unknown">
+          Bent u een man of een vrouw?
+        </li>
+        <li>
+          <srai>RANDOM PICKUP LINE</srai>
+        </li></condition></template>
+</category>
+<category><pattern>INQUIRY GENDER *</pattern>
+<template><srai>RANDOM PICKUP LINE</srai></template>
+</category>
+<category><pattern># MAN #</pattern><that>BENT U EEN MAN OF EEN VROUW</that>
+<template><srai>MIJN GESLACHT IS MANNELIJK</srai></template>
+</category>
+<category><pattern># VROUW #</pattern><that>BENT U EEN MAN OF EEN VROUW</that>
+<template><srai>MIJN GESLACHT IS VROUWELIJK</srai></template>
+</category>
+<category><pattern># TRANSEXUEEL #</pattern><that>BENT U EEN MAN OF EEN VROUW</that>
+<template><srai>MIJN GESLACHT IS TRANSEXUEEL</srai></template>
+</category>
+<category><pattern>*</pattern><that>BENT U EEN MAN OF EEN VROUW</that>
+<template><srai>MIJN GESLACHT IS ONGEDEFINIEERD</srai></template>
+</category>
+</aiml>
