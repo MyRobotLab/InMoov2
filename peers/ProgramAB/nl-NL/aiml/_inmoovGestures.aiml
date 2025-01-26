@@ -270,6 +270,19 @@
       <template>Mijn hand sluiten.
         <oob><mrl><service>python</service><method>exec</method><param>handclose()</param></mrl></oob></template>
     </category>
+
+    <category>
+      <pattern>OPEN HANDEN</pattern>
+      <template>Open hand.
+        <oob><mrl><service>python</service><method>exec</method><param>handsopen()</param></mrl></oob></template>
+    </category>
+
+
+    <category>
+      <pattern>SLUIT HANDEN</pattern>
+      <template>Mijn hand sluiten.
+        <oob><mrl><service>python</service><method>exec</method><param>handsclose()</param></mrl></oob></template>
+    </category>
   
   
     <category>
@@ -814,52 +827,52 @@
 
 
     <category>
-      <pattern>MOVEMENT NUMBER 1</pattern>
-      <template>CYCLE GESTURE ONE
+      <pattern>BEWEGINGSNUMMER 1</pattern>
+      <template>CYCLUSGEBAAR ÉÉN
         <oob><mrl><service>python</service><method>exec</method><param>cyclegesture1()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>MOVEMENT NUMBER ONE</pattern>
+      <pattern>BEWEGINGSNUMMER ÉÉN</pattern>
       <template>
-        <srai>MOVEMENT NUMBER 1</srai>
+        <srai>BEWEGINGSNUMMER 1</srai>
       </template>
     </category>
 
 
     <category>
-      <pattern>MOVEMENT NUMBER 2</pattern>
-      <template>CYCLE GESTURE TWO
+      <pattern>BEWEGINGSNUMMER 2</pattern>
+      <template>CYCLUSGEBAAR TWEE
         <oob><mrl><service>python</service><method>exec</method><param>cyclegesture2()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>MOVEMENT NUMBER TWO</pattern>
+      <pattern>BEWEGINGSNUMMER TWEE</pattern>
       <template>
-        <srai>MOVEMENT NUMBER 2</srai>
+        <srai>BEWEGINGSNUMMER 2</srai>
       </template>
     </category>
 
 
     <category>
-      <pattern>MOVEMENT NUMBER 3</pattern>
-      <template>CYCLE GESTURE THREE
+      <pattern>BEWEGINGSNUMMER 3</pattern>
+      <template>CYCLUSGEBAAR DRIE
         <oob><mrl><service>python</service><method>exec</method><param>cyclegesture3()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>MOVEMENT NUMBER THREE</pattern>
+      <pattern>BEWEGINGSNUMMER DRIE</pattern>
       <template>
-        <srai>MOVEMENT NUMBER 3</srai>
+        <srai>BEWEGINGSNUMMER 3</srai>
       </template>
     </category>
 
 
     <category>
-      <pattern>REPEAT MOVEMENT FOR LONDON</pattern>
+      <pattern>HERHAAL BEWEGING VOOR LONDEN</pattern>
       <template>
         <oob>
           <mrl>
@@ -873,7 +886,7 @@
 
 
     <category>
-      <pattern>MOVEMENT FOR LONDON NUMBER 2</pattern>
+      <pattern>BEWEGING VOOR LONDEN NUMMER 2</pattern>
       <template>
         <oob>
           <mrl>
@@ -887,15 +900,15 @@
 
 
     <category>
-      <pattern>MOVEMENT FOR LONDON NUMBER TWO</pattern>
+      <pattern>BEWEGING VOOR LONDEN NUMMER TWEE</pattern>
       <template>
-        <srai>MOVEMENT FOR LONDON NUMBER 2</srai>
+        <srai>BEWEGING VOOR LONDEN NUMMER 2</srai>
       </template>
     </category>
 
 
     <category>
-      <pattern>MOVEMENT FOR LONDON NUMBER 3</pattern>
+      <pattern>BEWEGING VOOR LONDEN NUMMER 3</pattern>
       <template>
         <oob>
           <mrl>
@@ -909,15 +922,15 @@
 
 
     <category>
-      <pattern>MOVEMENT FOR LONDON NUMBER THREE</pattern>
+      <pattern>BEWEGING VOOR LONDEN NUMMER DRIE</pattern>
       <template>
-        <srai>MOVEMENT FOR LONDON NUMBER 3</srai>
+        <srai>BEWEGING VOOR LONDEN NUMMER 3</srai>
       </template>
     </category>
 
 
     <category>
-      <pattern>MOVEMENT NUMBER 4</pattern>
+      <pattern>BEWEGINGSNUMMER 4</pattern>
       <template>
         <oob>
           <mrl>
@@ -931,23 +944,15 @@
 
 
     <category>
-      <pattern>MOVEMENT NUMBER FOUR</pattern>
+      <pattern>BEWEGINGSNUMMER VIER</pattern>
       <template>
-        <srai>MOVEMENT NUMBER 4</srai>
+        <srai>BEWEGINGSNUMMER 4</srai>
       </template>
     </category>
 
 
     <category>
-      <pattern>MOVEMENT NUMBER FOR</pattern>
-      <template>
-        <srai>MOVEMENT NUMBER 4</srai>
-      </template>
-    </category>
-
-
-    <category>
-      <pattern>RIGHT CLOTHES</pattern>
+      <pattern>JUISTE KLEDING</pattern>
       <template>
         <oob>
           <mrl>
@@ -961,7 +966,7 @@
 
 
     <category>
-      <pattern>RELEASE YOUR CLOTHES</pattern>
+      <pattern>LAAT UW KLEDING VRIJ</pattern>
       <template>
         <oob>
           <mrl>
@@ -975,85 +980,85 @@
 
 
     <category>
-      <pattern>SHOW YOUR MUSCLES</pattern>
-      <template>Let me show you my muscles.
+      <pattern>TOON JE SPIEREN</pattern>
+      <template>Laat me je mijn spieren laten zien.
         <oob><mrl><service>python</service><method>exec</method><param>muscle()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>SHAKE HAND</pattern>
-      <template>Shall we shake hand.
+      <pattern>SCHUD DE HAND</pattern>
+      <template>Zullen we elkaar de hand schudden.
         <oob><mrl><service>python</service><method>exec</method><param>shakehand()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>SHAKE HANDS</pattern>
+      <pattern>HANDEN SCHUDDEN</pattern>
       <template>
-        <srai>SHAKE HAND</srai>
+        <srai>SCHUD DE HAND</srai>
       </template>
     </category>
 
 
     <category>
-      <pattern>UNHAPPY</pattern>
-      <template>UNHAPPY
+      <pattern>ONGELUKKIG</pattern>
+      <template>ONGELUKKIG
         <oob><mrl><service>python</service><method>exec</method><param>unhappy()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>TAKE THIS</pattern>
-      <template>Taking this object.
+      <pattern>NEEM DIT</pattern>
+      <template>Dit object nemen.
         <oob><mrl><service>python</service><method>exec</method><param>takethis()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>ROCK PAPER SCISSORS</pattern>
-      <template>Rock paper scissors.
+      <pattern>STEEN PAPIER SCHAAR</pattern>
+      <template>Steen papier schaar.
         <oob><mrl><service>python</service><method>exec</method><param>rockpaperscissors()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>READY</pattern>
-      <template>Ready.
+      <pattern>KLAAR</pattern>
+      <template>klaar.
         <oob><mrl><service>python</service><method>exec</method><param>ready()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>ROCK</pattern>
-      <template>Rock.
+      <pattern>STEEN</pattern>
+      <template>Steen.
         <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>PAPER</pattern>
-      <template>Paper.
+      <pattern>PAPIER</pattern>
+      <template>Papier.
         <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>SCISSORS</pattern>
-      <template>Scissors.
+      <pattern>SCHAAR</pattern>
+      <template>Schaar.
         <oob><mrl><service>python</service><method>exec</method><param>scissors()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>THAT WAS FUN</pattern>
-      <template>That was fun.
+      <pattern>DAT WAS LEUK</pattern>
+      <template>Dat was leuk.
         <oob><mrl><service>python</service><method>exec</method><param>thatwasfun()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>GUESS WHAT</pattern>
+      <pattern>RAAD EENS WAT</pattern>
       <template>
         <oob>
           <mrl>
@@ -1067,21 +1072,21 @@
 
 
     <category>
-      <pattern>FINGER RIGHT</pattern>
-      <template>Finger right.
+      <pattern>VINGER RECHTS</pattern>
+      <template>Vinger rechts.
         <oob><mrl><service>python</service><method>exec</method><param>fingerright()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>FINGER LEFT</pattern>
-      <template>Finger left.
+      <pattern>VINGER LINKS</pattern>
+      <template>Vinger links.
         <oob><mrl><service>python</service><method>exec</method><param>fingerleft()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>COME HERE</pattern>
+      <pattern>KOM HIER</pattern>
       <template>
         <oob>
           <mrl>
@@ -1095,29 +1100,29 @@
 
 
     <category>
-      <pattern>APPROACH</pattern>
-      <template>APPROACH
+      <pattern>BENADERING</pattern>
+      <template>Benadering
         <oob><mrl><service>python</service><method>exec</method><param>approach()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>BRAKE</pattern>
-      <template>Shall I brake this.
+      <pattern>AFBREKEN</pattern>
+      <template>Zal ik dit breken.
         <oob><mrl><service>python</service><method>exec</method><param>brake()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>MADE BY</pattern>
-      <template>MADE BY
+      <pattern>GEMAAKT DOOR</pattern>
+      <template>Gemaakt door
         <oob><mrl><service>python</service><method>exec</method><param>madeby()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>MADE BY IN FRENCH</pattern>
-      <template>Made by in french.
+      <pattern>GEMAAKT DOOR IN HET FRANS</pattern>
+      <template>Gemaakt door in het Frans.
         <oob><mrl><service>python</service><method>exec</method><param>madebyfrench()</param></mrl></oob></template>
     </category>
 
@@ -1130,7 +1135,7 @@
 
 
     <category>
-      <pattern>PHONE HOME</pattern>
+      <pattern>TELEFOON THUIS</pattern>
       <template>
         <oob>
           <mrl>
@@ -1144,15 +1149,15 @@
 
 
     <category>
-      <pattern>WHERE ARE YOU FROM</pattern>
+      <pattern>WAAR KOM JE VANDAAN</pattern>
       <template>
-        <srai>PHONE HOME</srai>
+        <srai>TELEFOON THUIS</srai>
       </template>
     </category>
 
 
     <category>
-      <pattern>HOW DO YOU FEEL</pattern>
+      <pattern>HOE VOEL JE JE</pattern>
       <template>
         <oob>
           <mrl>
@@ -1166,7 +1171,7 @@
 
 
     <category>
-      <pattern>PLAY YOUR SONG</pattern>
+      <pattern>SPEEL JE LIED</pattern>
       <template>
         <oob>
           <mrl>
@@ -1180,35 +1185,35 @@
 
 
     <category>
-      <pattern>QUIT YOUR ACTION</pattern>
-      <template>Quitting my action.
+      <pattern>STOP MET UW ACTIE</pattern>
+      <template>Mijn actie stoppen.
         <oob><mrl><service>python</service><method>exec</method><param>stopit()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>CARRY THE BABY</pattern>
-      <template>Carry baby.
+      <pattern>DRAAG DE BABY</pattern>
+      <template>Draag kindje.
         <oob><mrl><service>python</service><method>exec</method><param>carrybaby()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>SYSTEM CHECK</pattern>
-      <template>System check.
+      <pattern>SYSTEEMCONTROLE</pattern>
+      <template>Systeemcontrole.
         <oob><mrl><service>python</service><method>exec</method><param>systemcheck()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DEMONSTRATE YOUR BALANCE</pattern>
-      <template>I will demonstrate my balance.
+      <pattern>DEMONSTREER JE EVENWICHT</pattern>
+      <template>Ik zal mijn evenwicht demonstreren.
         <oob><mrl><service>python</service><method>exec</method><param>balance()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>WHAT ABOUT STAR WARS</pattern>
+      <pattern>* STAR WARS</pattern>
       <template>
         <oob>
           <mrl>
@@ -1222,7 +1227,7 @@
 
 
     <category>
-      <pattern>CAN YOU GIVE ME THE TIME</pattern>
+      <pattern>KUN JE ME DE TIJD GEVEN</pattern>
       <template>
         <oob>
           <mrl>
@@ -1250,7 +1255,7 @@
 
 
     <category>
-      <pattern>NO WORRY</pattern>
+      <pattern>GEEN ZORGEN</pattern>
       <template>
         <oob>
           <mrl>
@@ -1264,11 +1269,11 @@
 
 
     <category>
-      <pattern>BATTERY LEVEL</pattern>
+      <pattern>BATTERIJNIVEAU</pattern>
       <template>
         <random>
-          <li>Battery level is</li>
-          <li>Currently the battery is</li>
+          <li>Batterijniveau is</li>
+          <li>Momenteel is de batterij</li>
         </random>
         <oob>
           <mrl>
@@ -1282,48 +1287,40 @@
 
 
     <category>
-      <pattern>START FACE RECOGNIZER</pattern>
-      <template>I'm starting face recognizer<oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
+      <pattern>START GEZICHT HERKENNING</pattern>
+      <template>Ik begin gezicht herkenning<oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>FACE RECOGNIZER</pattern>
+      <pattern>GEZICHTSHERKENNING</pattern>
       <template>
-        <srai>START FACE RECOGNIZER</srai>
+        <srai>START GEZICHT HERKENNING</srai>
       </template>
     </category>
 
 
     <category>
-      <pattern>FACE RECOGNITION</pattern>
-      <template>
-        <srai>START FACE RECOGNIZER</srai>
-      </template>
+      <pattern>STOP GEZICHTSHERKENNING</pattern>
+      <template>Ik stop met gezicht herkenning<oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>STOP FACE RECOGNIZER</pattern>
-      <template>I'm stopping face recognizer<oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
-    </category>
-
-
-    <category>
-      <pattern>MAKE A SIGNATURE</pattern>
-      <template>Okay give the paper - I will do that for you <oob><mrl><service>python</service><method>exec</method><param>signature()</param></mrl></oob></template>
+      <pattern>MAAK EEN HANDTEKENING</pattern>
+      <template>Oké, geef de krant, dat zal ik voor je doen.<oob><mrl><service>python</service><method>exec</method><param>signature()</param></mrl></oob></template>
     </category>
 
 
     <category>
       <pattern>PLAY UTUBE</pattern>
-      <template>Okay <oob><mrl><service>python</service><method>exec</method><param>PlayUtub()</param></mrl></oob></template>
+      <template>Oké <oob><mrl><service>python</service><method>exec</method><param>PlayUtub()</param></mrl></oob></template>
     </category>
 
 
     <category>
       <pattern>PLAY UTUB</pattern>
-      <template>Okay <oob><mrl><service>python</service><method>exec</method><param>PlayUtub()</param></mrl></oob></template>
+      <template>Oké <oob><mrl><service>python</service><method>exec</method><param>PlayUtub()</param></mrl></oob></template>
     </category>
 
 
@@ -1336,22 +1333,16 @@
 
 
     <category>
-      <pattern>SHOW ME A PICTURE OF A *</pattern>
-      <template>Okay <oob><mrl><service>python</service><method>exec</method><param>find_image("<star />")</param></mrl></oob></template>
+      <pattern>LAAT MIJ EEN FOTO ZIEN VAN A *</pattern>
+      <template>Oké <oob><mrl><service>python</service><method>exec</method><param>find_image("<star />")</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>SHOW ME A PICTURE OF THE *</pattern>
+      <pattern>LAAT ME EEN FOTO VAN DE *</pattern>
       <template>
-        <srai>SHOW ME A PICTURE OF A * </srai>
+        <srai>LAAT ME EEN FOTO ZIEN VAN EEN * </srai>
       </template>
-    </category>
-
-
-    <category>
-      <pattern>FIX THE MICROPHONE</pattern>
-      <template>Okay <oob><mrl><service>python</service><method>exec</method><param>WebkitSpeechRecognitionON()</param></mrl></oob></template>
     </category>
 
 
@@ -1359,9 +1350,9 @@
       <pattern>OPEN FACEBOOK</pattern>
       <template>
         <random>
-          <li>Launching facebook </li>
-          <li>Getting facebook started </li>
-          <li>Right away, sir! </li>
+          <li>Facebook lanceren </li>
+          <li>Facebook aan de slag krijgen </li>
+          <li>Meteen, meneer! </li>
         </random>
         <oob>
           <mrl>
@@ -1375,12 +1366,12 @@
 
 
     <category>
-      <pattern>ROBOT RESEARCH *</pattern>
+      <pattern>ROBOTONDERZOEK *</pattern>
       <template>
         <random>
-          <li>Launching browser </li>
-          <li>Searching for you! </li>
-          <li>Looking on the net! </li>
+          <li>Browser starten </li>
+          <li>Op zoek naar u! </li>
+          <li>Kijken op het net! </li>
         </random>
         <oob>
           <mrl>
@@ -1394,7 +1385,7 @@
 
 
     <category>
-      <pattern>ROBOTIC RESEARCH *</pattern>
+      <pattern>ROBOTISCH ONDERZOEK *</pattern>
       <template>I will do that
         <oob><mrl><service>python</service><method>exec</method><param>inmoovsearch("<star />")</param></mrl></oob></template>
     </category>
@@ -1402,37 +1393,37 @@
 
     <category>
       <pattern>YOUTUBE *</pattern>
-      <template>Lets play
+      <template>Laten we spelen
         <oob><mrl><service>python</service><method>exec</method><param>BareBonesBrowserLaunch.openURL("https://www.youtube.com/results?search_query=<star />")</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>RANDOM PAUSE</pattern>
-      <template>Thanks
+      <pattern>WILLEKEURIGE PAUZE</pattern>
+      <template>Bedankt
         <oob><mrl><service>python</service><method>exec</method><param>VieAleatoire()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>RANDOM LIFE</pattern>
+      <pattern>WILLEKEURIG LEVEN</pattern>
       <template>
-        <srai>RANDOM PAUSE</srai>
+        <srai>WILLEKEURIGE PAUZE</srai>
       </template>
     </category>
 
 
     <category>
-      <pattern>STOP RANDOM PAUSE</pattern>
-      <template>Okay
+      <pattern>STOP DE WILLEKEURIGE PAUZE</pattern>
+      <template>Oké
         <oob><mrl><service>python</service><method>exec</method><param>VieAleatoireStop()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>STOP RANDOM LIFE</pattern>
+      <pattern>STOP HET WILLEKEURIGE LEVEN</pattern>
       <template>
-        <srai>STOP RANDOM PAUSE</srai>
+        <srai>STOP WILLEKEURIGE PAUZE</srai>
       </template>
     </category>
 
