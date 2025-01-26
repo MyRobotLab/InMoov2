@@ -29,7 +29,7 @@
           SLUIT UW RECHTERHAND.<br/>
           SLUIT LANGZAAM UW LINKERHAND.<br/>
           SLUIT LANGZAAM UW RECHTERHAND.<br/>
-          Je kunt een langere lijst bekijken op het tabblad Python, maar je kunt nog VEEL meer spraakopdrachten vinden in de map data, programAB, aiml files.
+          Je kunt een langere lijst bekijken op het tabblad Python, maar je kunt nog VEEL meer spraakopdrachten vinden in de map resource/programAB/nl-NL/aiml files.
           <!--<oob>
         <mrl>
           <service>python</service><method>exec</method><param>printList_NL()</param>

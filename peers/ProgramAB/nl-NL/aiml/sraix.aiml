@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: sraix.aiml -->
+<!--  -->
+
+<category><pattern>SRAIXFAILED *</pattern>
+<template><condition name="llm">
+        <li value="enabled"><img src="../Llm.png"/>
+        <think>
+          <set name="topic"><star/></set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_llm.getResponse("<star/>")</param>
+          </mrl>
+        </oob>
+        </li>
+        <li>
+        <random>
+        <li>Ik weet het antwoord niet.</li>
+        <li>Ik heb mijn levenslijn gebruikt om een andere robot te vragen, maar hij wist het niet.</li>
+        <li>Ik vroeg het aan een andere robot, maar hij wist het niet.</li>
+        <li>Sorry, niets gevonden in webservices.</li>
+        <li>Ik kan het antwoord niet vinden via webservices.</li>
+        <li>Geen van de andere robots kan me het antwoord vertellen.</li>
+        <li>Ik kan geen antwoord vinden.</li>
+        <li>Ik ben in de war, ik weet niet wat ik moet antwoorden.</li>
+      </random>
+      <!--<random>
+        <li>Kun je het mij leren? </li>
+        <li>Ik zou graag willen weten of u het antwoord weet. </li>
+        <li>Ik wil graag leren, leer het mij alstublieft. </li>
+        <li>Ik luister naar je om het antwoord te leren. </li>
+      </random><think><set name="topic">learnf</set></think><srai>LEARN SRAIXFAILED</srai>-->
+        </li>
+      </condition>
+        </template>
+</category>
+</aiml>
