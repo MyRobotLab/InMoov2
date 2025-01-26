@@ -819,13 +819,6 @@
       <template><oob><mrl><service>python</service><method>exec</method><param>ultrasonicRight("In centimeters, aan mijn rechterkant, meet ik ")</param></mrl></oob></template>
     </category>
 
-
-
-  <!-- THE FOLLOWING STILL NEEDS TO BE TRANSLATED -->
-
-
-
-
     <category>
       <pattern>BEWEGINGSNUMMER 1</pattern>
       <template>CYCLUSGEBAAR ÉÉN
@@ -1426,5 +1419,158 @@
         <srai>STOP WILLEKEURIGE PAUZE</srai>
       </template>
     </category>
+
+
+    <category><pattern>ONTHOUD DEZE PERSOON</pattern>
+<template><srai>ONTHOUDEN DEZE PERSOON</srai></template>
+</category>          
+<category><pattern>ONTHOUDEN DEZE PERSOON</pattern>
+<template>Oké, welke naam moet ik onthouden voor deze persoon?.
+    <think>
+        <set name="memoriseinit">started</set>
+      </think>
+      <think>
+        <set name="topic">memoriseinit</set>
+      </think>
+          </template>
+</category>
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># WELKE NAAM MOET IK ONTHOUDEN #</that>
+<template><set name="memorisenameinit">is <star/> de naam die je wilt onthouden, zeg ja of nee</set>
+       <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern># JA #</pattern><that># DE NAAM DIE JE WILT ONTHOUDEN #</that>
+<template>Oké, ik zal <get name="tmpname"/> instellen als naam.
+    <think>
+        <set name="memorisename"><get name="tmpname"/>
+        </set>
+    </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.savePredicates(), YesName(u"<get name="memorisename"/>")</param>                
+            </mrl>
+         </oob></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern># NEE #</pattern><that># DE NAAM DIE JE WILT ONTHOUDEN #</that>
+<template>Oké kun je de naam herhalen ?</template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># OKÉ KUN JE DE NAAM HERHALEN #</that>
+<template><set name="memorisenameinit">is <star/> de naam die je wilt onthouden, zeg ja of nee</set>
+       <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># ZEG JA OF NEE #</that>
+<template>Kunt u antwoorden, het is noodzakelijk
+        <get name="memorisenameinit"/></template>
+</category></topic>
+
+<category><pattern>WIE IS DEZE PERSOON</pattern>
+<template>Laat me het controleren.
+          <oob><mrl><service>python</service><method>exec</method><param>whoisthis()</param></mrl></oob></template>
+</category>
+
+<category><pattern># VOOR REIZEN</pattern>
+<template>Oké, ik maak me klaar om te reizen.
+          <oob><mrl><service>python</service><method>exec</method><param>travel()</param></mrl></oob></template>
+</category>
+<category><pattern>STOP MET REIZEN</pattern>
+<template>Oké, ik zal in rustpositie komen.
+          <oob><mrl><service>python</service><method>exec</method><param>stopTravel()</param></mrl></oob></template>
+</category>
+<category><pattern>KAN IK JE PIJN DOEN</pattern>
+<template><srai>APPFEAR</srai><oob><mrl><service>python</service><method>exec</method><param>call_911()</param></mrl></oob></template>
+</category>
+<category><pattern>KUN JE DE MENIGTE VERWELKOMEN</pattern>
+<template><oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>gritting()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>WELKOM HET PUBLIEK</pattern>
+<template><srai>KUN JE DE MENIGTE VERWELKOMEN</srai></template>
+</category>
+<category><pattern>KUNT U HET PUBLIEK VERWELKOMEN</pattern>
+<template><srai>KUN JE DE MENIGTE VERWELKOMEN</srai></template>
+</category>
+<category><pattern>WELKOM IEDEREEN</pattern>
+<template><srai>KUN JE DE MENIGTE VERWELKOMEN</srai></template>
+</category>
+<category><pattern>BONJOUR</pattern>
+<template>Bonjour
+          <oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>agreeanswersmall()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>MAG IK JE VERHAAL VERTELLEN?</pattern>
+<template>Wees zeker niet verlegen.
+          <oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>Yes()</param>
+          </mrl>
+        </oob></template>
+</category>
+
+<category><pattern>VANG DE BAL RECHTS</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>catchBallRight()</param></mrl></oob></template>
+</category>
+<category><pattern>VANG BALL LINKS</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>catchBallLeft()</param></mrl></oob></template>
+</category>
+<category><pattern># JONGLEREN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>juggle()</param></mrl></oob></template>
+</category>
+<category><pattern># JONGLEER VERSIE TWEE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>juggle2()</param></mrl></oob></template>
+</category>
+<category><pattern># JONGLE EN DICHTE HAND</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>juggleCloseHand()</param></mrl></oob></template>
+</category>
+<category><pattern>VANG DE BAL</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>catchball()</param></mrl></oob></template>
+</category>
+<category><pattern>SLUIT BEIDE HANDEN LANGZAAM</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>CloseBothHandSlow()</param></mrl></oob></template>
+</category>
+<category><pattern># KWAADAARDIG</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>evilLaugh1()</param></mrl></oob></template>
+</category>
+<category><pattern>EXECUTEREN * </pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>openMyApp('<star/>')</param></mrl></oob></template>
+</category>
+<category>
+<pattern>CHECK_BINDING</pattern>
+  <template>
+    <javascript>function getUptime(){ var Runtime=Java.type ("org.myrobotlab.service.Runtime");
+return Runtime.getUptime();} getUptime();</javascript>
+  </template>
+</category>
+
+<!--This is for servoMixer gestures-->
+<category><pattern>DOE GEBAAR *</pattern>
+<template>Ok<oob><mrl><service>i01.servoMixer</service><method>playGesture</method><param><star/></param></mrl></oob></template>
+</category>
 
 </aiml>
