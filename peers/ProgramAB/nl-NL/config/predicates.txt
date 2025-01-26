@@ -1,4 +1,4 @@
-userDescription:Pas de fiche personnelle
+userDescription:Geen persoonlijk blad
 firstinit:unknown
 name:human
 lockInsult:off
