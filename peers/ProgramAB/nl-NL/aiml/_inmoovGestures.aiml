@@ -341,6 +341,10 @@
         <oob><mrl><service>python</service><method>exec</method><param>giving()</param></mrl></oob></template>
     </category>
 
+    <category><pattern>HOE DOET JE</pattern>
+      <template><oob><mrl><service>python</service><method>exec</method><param>howdoyoudo()</param></mrl></oob></template>
+    </category>
+
 
     <category>
       <pattern>VECHTER</pattern>
@@ -999,6 +1003,70 @@
       <template>ONGELUKKIG
         <oob><mrl><service>python</service><method>exec</method><param>unhappy()</param></mrl></oob></template>
     </category>
+
+    <category><pattern>WAT ZIE JE</pattern>
+    <template><condition name="llm">
+        <li value="enabled">
+          <img src="../Llm.png"/><img src="../photoreel.1.png"/>
+            <random>
+            <li>Wees geduldig, ik moet verwerken.</li>
+            <li>Dit duurt enkele seconden om te verwerken.</li>
+            <li>Wacht alsjeblieft, ik zal dingen in mijn gezichtsveld analyseren.</li>
+            </random>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>describeImage(u"Describe this image")</param>
+              </mrl>
+            </oob>
+      </li>
+      <li>
+        <think>
+      <!--  initial sentence ( workarround, because sraix blocking action here, sentence pushed inside a set )-->
+        <set name="startupSentence">
+          <random>
+            <li>Wees geduldig, ik moet verwerken.</li>
+            <li>Dit duurt enkele seconden om te verwerken.</li>
+            <li>Een ogenblik geduld, ik zal de dingen in mijn gezichtsveld analyseren.</li>
+          </random>
+        </set>
+      </think>
+      <think><set name="yoloReturn"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>startYoloInventory(5)</param></mrl></oob></sraix></set></think>
+      <condition name="yoloReturn"> 
+        <!-- not detected ! -->
+        <li value="none">
+          <random>
+            <li>Sorry, object, of de persoon, is te ver!</li>
+            <li>Als ik mijn sensor gebruik, moet het object zich binnen een bereik van 2 meter bevinden.</li>
+          </random>
+        </li>
+        <!--  detected ! -->
+        <li>Ik zie <get name="yoloTotalDetected"/> dingen, <get name="yoloReturn"/> in volgorde, van links naar rechts.</li>
+      </condition>
+      </li>
+      </condition></template>
+</category>
+<category><pattern># DIT IS</pattern>
+<template>Laat me eens kijken.
+        <oob><mrl><service>python</service><method>exec</method><param>YoloOnUSonic()</param></mrl></oob></template>
+</category>
+<category><pattern>SYSTEM_NO_OBJECT</pattern>
+<template><random>
+          <li>Object of de persoon is te ver</li>
+          <li>Het object moet zich binnen een bereik van 2 meter bevinden</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_GET_OBJECT_CLOSER</pattern>
+<template><random>
+          <li>Kom dichterbij, laat het object zien</li>
+          <li>Presenteer het object dichterbij</li>
+          <li>Laat het object dichterbij zien</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_SEE_OBJECT</pattern>
+<template><srai>WAT ZIE JE</srai></template>
+</category>
 
 
     <category>
