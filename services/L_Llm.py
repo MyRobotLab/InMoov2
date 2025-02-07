@@ -22,7 +22,7 @@ def initLlm():
     python.subscribe(llm.getName(), "publishText", "onFilterText")
     config = llm.getConfig()
     if config.url == "null" or config.url == "http://localhost:11434" or config.url == "http://localhost:11434/v1/chat/completions":
-        config.url = "http://localhost:11434/api/generate"
+      config.url = "http://localhost:11434/api/generate"
       runtime.warn('url is set by default to a localhost')
     if setSystem == "You are a helpful robot.":
       if runtime.getLocale().getTag() == en:
