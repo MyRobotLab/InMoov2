@@ -295,13 +295,13 @@
     </template>
   </category>
   <category>
-    <pattern>CLIN D OEIL</pattern>
+    <pattern>CLIN D'OEIL</pattern>
     <template>
       <srai>APPACCOMPLICE</srai>
     </template>
   </category>
   <category>
-    <pattern>DÉGOÛTER</pattern>
+    <pattern>DÉGOÛTÉ</pattern>
     <template>
       <srai>APPDISGUST</srai>
     </template>
