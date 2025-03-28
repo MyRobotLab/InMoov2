@@ -661,4 +661,29 @@
     <pattern>CUÁL ES EL SUJETO</pattern>
     <template>El tema es <get name="topic" />.</template>
   </category>
+  <category><pattern>COMUNICACIÓN EN LENGUAJES AMPLIOS</pattern>
+  <template>
+    <condition name="llm">
+      <li value="enabled">
+        <think><set name="topic">llmfull</set>
+               <set name="llmStop"></set></think>
+          Está bien, estoy listo para eso.. Si quieres salir, di: deja de usar lenguaje soez.
+      </li>
+      <li>No tengo llm iniciado.</li>
+    </condition>
+  </template>
+</category>
+
+<topic name="LLMFULL">
+<category><pattern>#</pattern>
+  <template><think><set name="llmStop"><star/></set></think>
+            <condition>
+            <li name="llmStop" value="deja de usar lenguaje soez">Ok, volvamos al programa AB.
+                <think><set name="topic">default</set>
+                       <set name="llmStop"></set>
+                </think></li>
+            <li><img src="../Llm.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_llm.onText("<star/>")</param></mrl></oob></li>
+            </condition>
+  </template>
+</category>
 </aiml>
