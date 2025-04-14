@@ -1,5 +1,8 @@
 ###///FACE EXPRESSIONS LIST///###
 
+## If set to False, body expressions will be executed along the face expressions
+muteBody=True
+
 def faceMove(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9, pos10, pos11, pos12, pos13):
   if runtime.isStarted('i01.head'):
     i01_head_eyeX.moveTo(pos1)
@@ -88,8 +91,14 @@ def anger():
   upperLipU()
   cheeksD()
   browsD()
-  sleep(1)
-  neutral() 
+  angerBody()
+  sleep(2)
+  neutral()
+  relax()
+
+def angerBody():
+  if muteBody==0:
+    handsclose()
 
 def blinkLeft():
   cheekLeftU()
@@ -109,16 +118,38 @@ def disgust():
   lowerEyelidsClose()
   cheekRightU()
   browsD()
-  sleep(1)
+  disgustBody()
+  sleep(1.5)
+  relax()
   neutralHalfSpeed()
+
+def disgustBody():
+  if muteBody==0:
+    i01.moveHead(44,82)
+    i01.moveArm("left",15,55,32,10)
+    i01.moveArm("right",13,40,32,13)
+    i01.moveHand("left",61,0,14,0,0,180)
+    i01.moveHand("right",0,24,24,19,21,25)
+    i01.finishedGesture()  
 
 def fear():
   eyelidsOpen()
   cheeksD()
   browsU()
   forheadsU()
-  sleep(1)
+  fearBody()
+  sleep(1.0)
+  relax()
   neutral()
+
+def fearBody():
+  if muteBody==0:
+    i01.moveHead(44,82)
+    i01.moveArm("left",0,85,28,22)
+    i01.moveArm("right",0,85,28,22)
+    i01.moveHand("left",0,0,0,0,0,76)
+    i01.moveHand("right",0,0,0,0,0,100)
+    i01.finishedGesture()
 
 def happy():
   browsHalfSpeed()
@@ -140,8 +171,19 @@ def happy():
 def sad():
   upperEyelidsClose()
   cheeksD()
+  sadBody()
   sleep(1)
+  relax()
   neutral()
+
+def sadBody():
+  if muteBody==0:
+    i01.moveHead(79,100,122,64,36,90)
+    i01.moveArm("left",0,84,25,12)
+    i01.moveArm("right",0,82,25,12)
+    i01.moveHand("left",92,33,37,50,60,25)
+    i01.moveHand("right",81,66,82,50,60,160)
+    i01.finishedGesture()  
 
 def sigh():
   if runtime.isStarted('i01.head.eyeLeftUD') and runtime.isStarted('i01.head.eyeLeftLR') and runtime.isStarted('i01.head.eyeRightUD') and runtime.isStarted('i01.head.eyeRightLR'):
@@ -203,12 +245,22 @@ def surprise():
   browsU()
   upperEyelidsOpen()
   forheadsD()
+  surpriseBody()
   if runtime.isStarted('i01.head'):
     i01_head_jaw.moveTo(160)
   sleep(0.5)
   if runtime.isStarted('i01.head'):
     i01_head_jaw.rest()
+  relax()
   neutralHalfSpeed()
+
+def surpriseBody():
+  if muteBody==0:
+    i01.moveArm("left",2,55,28,22)
+    i01.moveArm("right",2,55,28,22)
+    i01.moveHand("left",20,20,20,20,20,76)
+    i01.moveHand("right",20,20,20,20,20,100)
+    i01.finishedGesture()
 
 def suspicious():
   upperLipD()
@@ -225,6 +277,7 @@ def thinking():
   forheadsU()
   eyelidsHalfSpeed()
   lowerEyelidsClose()
+  thinkingBody()
   if runtime.isStarted('i01.head.eyeY'):
     i01_head_eyeY.moveTo(130)
   if runtime.isStarted('i01.head.eyeX'):
@@ -234,7 +287,17 @@ def thinking():
     i01_head_eyeY.rest()
   if runtime.isStarted('i01.head.eyeX'):
     i01_head_eyeX.rest()
+  relax()
   neutral()
+
+def thinkingBody():
+  if muteBody==0:
+    i01.moveHead(134,117,137)
+    i01.moveArm("left",41,40,39,12)
+    i01.moveArm("right",55,40,34,12)
+    i01.moveHand("left",110,50,50,40,60,76)
+    i01.moveHand("right",110,66,82,60,60,160)
+    i01.finishedGesture()
 
 def unamused():
   browRightD()
