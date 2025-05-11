@@ -3,18 +3,6 @@
   <!--  -->
   <!--  -->
   <category>
-    <pattern>*</pattern>
-    <that>QUANTI ANNI HAI?</that>
-    <template>
-      <think>
-        <set name="age">
-          <star />
-        </set>
-      </think>
-      <srai>LA MIA ETÀ È <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>RICERCA LOCALIZZAZIONE</pattern>
     <template>
       <srai>RICERCA LOCALIZZAZIONE <get name="location" /></srai>
@@ -22,7 +10,22 @@
   </category>
   <category>
     <pattern>RICERCA LOCALIZZAZIKONE DOVE</pattern>
-    <template>Dove sei adesso?</template>
+    <template><condition name="location">
+        <li value="false">
+          Dove sei adesso ?
+        </li>
+        <li><srai>UDC</srai></li>
+      </condition></template>
+  </category>
+  <category>
+    <pattern>*</pattern>
+    <that>DOVE SEI ADESSO</that>
+    <template>
+      <think>
+        <set name="location"><star/></set>
+      </think>
+      Mi sembra un posto molto esotico.
+    </template>
   </category>
   <category>
     <pattern>RICERCA LOCALIZZAZIONE *</pattern>
@@ -54,7 +57,22 @@
   </category>
   <category>
     <pattern>RICERCA ETÀ QUANTI</pattern>
-    <template>Quanti anni hai?</template>
+    <template><condition name="age">
+        <li value="false">
+          Quanti anni hai ?
+        </li>
+        <li><srai>UDC</srai></li>
+      </condition></template>
+  </category>
+  <category>
+    <pattern>*</pattern>
+    <that>QUANTI ANNI HAI</that>
+    <template>
+      <think>
+        <set name="age"><star/></set>
+      </think>
+      <srai>LA MIA ETÀ È <star/></srai>
+    </template>
   </category>
   <category>
     <pattern>RICERCA ETÀ *</pattern>
@@ -70,40 +88,27 @@
   </category>
   <category>
     <pattern>RICERCA GENERE SCONOSCIUTO</pattern>
-    <template>Sei uomo o donna?</template>
+    <template><condition name="gender">
+        <li value="false">
+          Sei uomo o donna ?
+        </li>
+        <li><srai>UDC</srai></li>
+      </condition></template>
   </category>
   <category>
-    <pattern>RICERCA GENERE*</pattern>
+    <pattern>RICERCA GENERE *</pattern>
     <template>
       <srai>PRENDI UNA LINEA A CASO</srai>
     </template>
   </category>
   <category>
-    <pattern># UOMO #</pattern>
-    <that>SEI UOMO O DONNA</that>
-    <template>
-      <srai>IL MIO GENERE È MASCHILE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern># DONNA #</pattern>
-    <that>SEI UOMO O DONNA</that>
-    <template>
-      <srai>IL MIO GENERE È FEMMINILE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern># TRANSESSUALE #</pattern>
-    <that>SEI UOMO O DONNA</that>
-    <template>
-      <srai>IL MIO GENERE È TRANSESSUALE</srai>
-    </template>
-  </category>
-    <category>
     <pattern>*</pattern>
     <that>SEI UOMO O DONNA</that>
     <template>
-      <srai>IL MIO GENERE È INDEFINITO</srai>
+      <think>
+        <set name="gender"><star/></set>
+      </think>
+      Buono a sapersi.
     </template>
   </category>
 </aiml>

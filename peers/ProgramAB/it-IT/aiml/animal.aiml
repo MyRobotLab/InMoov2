@@ -66,7 +66,7 @@
 <category><pattern>QUANTE ZAMPE ^ <set>animale</set> #</pattern>
 <template><srai>ZAMPE <star index="2"/></srai></template>
 </category>
-<category><pattern>QUANTE ZAMPE ^ <set>animals</set> #</pattern>
+<category><pattern>QUANTE ZAMPE ^ <set>animali</set> #</pattern>
 <template><srai>ZAMPE <srai>SINGOLARE <star index="2"/></srai></srai></template>
 </category>
 <category><pattern>*</pattern>
