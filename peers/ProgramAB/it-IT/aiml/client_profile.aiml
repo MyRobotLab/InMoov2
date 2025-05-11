@@ -7,15 +7,15 @@
     <template>
       <set name="favoritecolor">
         <formal>
-          <star />
+          <star/>
         </formal>
       </set> é un bel colore. 
-      <think><set name="it"><set name="topic"><star /></set></set></think>
+      <think><set name="it"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
     <pattern>IL MIO COLORE PREFERITO é *</pattern>
-    <template>Non mi pareva che  <star /> fosse un colore.</template>
+    <template>Non mi pareva che  <star/> fosse un colore.</template>
   </category>
   <category>
     <pattern>IL MIO COLORE PREFERITO é IL VERDE</pattern>
@@ -27,21 +27,21 @@
   <category>
     <pattern>MI PIACE IL COLORE</pattern>
     <template>
-      <srai>IL MIO COLORE PREFERITO é <star /></srai>
+      <srai>IL MIO COLORE PREFERITO é <star/></srai>
     </template>
   </category>
   <category>
     <pattern>*</pattern>
     <that>QUANTI ANNI HAI</that>
     <template>
-      <srai>LA MIA ETà <star /></srai>
+      <srai>LA MIA ETà <star/></srai>
     </template>
   </category>
   <category>
     <pattern>*</pattern>
     <that>COSA CAMBIEREBBE * IL MIO NOME IN</that>
     <template>
-      <srai>IL TUO NOME è <star /></srai>
+      <srai>IL TUO NOME è <star/></srai>
     </template>
   </category>
   <category>
@@ -50,7 +50,7 @@
     <template>
       <think>
         <set name="sign">
-          <star />
+          <star/>
         </set>
       </think>
       <srai> OROSCOPO PER <get name="sign" /></srai>
@@ -61,16 +61,16 @@
     <template>
     	 Quanto lo conosci veramente?
     	<think>
-    		<set name="he"><set name="topic"><star /></set></set>
+    		<set name="he"><set name="topic"><star/></set></set>
     	</think>
     </template>
   </category>
   <category>
     <pattern>NON MI PIACE *</pattern>
     <template>
-    	  Aggiungerò <set name="dislikes"><star /></set> alla tua lista  delle persone indesiderate.  
+    	  Aggiungerò <set name="dislikes"><star/></set> alla tua lista  delle persone indesiderate.  
     	<think>
-    		<set name="it"><set name="topic"><star /></set></set>
+    		<set name="it"><set name="topic"><star/></set></set>
     	</think>
     </template>
   </category>
@@ -85,7 +85,7 @@
       <think>
         <set name="it">
           <set name="topic">
-            <star />
+            <star/>
           </set>
         </set>
       </think>
@@ -96,10 +96,10 @@
     <template>
     	 Questa é una delle tue proprietà preferite?  
     	<think>
-    		<set name="has"><star /></set>
+    		<set name="has"><star/></set>
     	</think>
     	<think>
-    		<set name="it"><set name="topic"><star /></set></set>
+    		<set name="it"><set name="topic"><star/></set></set>
     	</think>
     </template>
   </category>
@@ -116,18 +116,18 @@
   </category>
   <category>
     <pattern>IO SONO DI *</pattern>
-    <template>Adesso vivi lì?  <think><set name="birthplace"><star /></set></think></template>
+    <template>Adesso vivi lì?  <think><set name="birthplace"><star/></set></think></template>
   </category>
   <category>
     <pattern>MI PIACE *</pattern>
-    <template> Di questo, cosa ti piace di più? <think><set name="it"><set name="topic"><star /></set></set></think>
+    <template> Di questo, cosa ti piace di più? <think><set name="it"><set name="topic"><star/></set></set></think>
 	</template>
   </category>
   <category>
     <template>
       <think>
         <set name="likes">
-          <star />
+          <star/>
         </set>
       </think>
       <random>
@@ -138,7 +138,7 @@
       <think>
         <set name="it">
           <set name="topic">
-            <star />
+            <star/>
           </set>
         </set>
       </think>
@@ -146,7 +146,7 @@
   </category>
   <category>
     <pattern>PREFERIREI ESSERE A *</pattern>
-    <template>Perché sarebbe meglio? <think><set name="it"><set name="topic"><star /></set></set></think></template>
+    <template>Perché sarebbe meglio? <think><set name="it"><set name="topic"><star/></set></set></think></template>
   </category>
   <category>
     <pattern>LUI</pattern>
@@ -155,8 +155,8 @@
   </category>
   <category>
     <pattern>IL MIO SEGNO é *</pattern>
-    <template>Ne conosco molto <formal><star /></formal>s.  
-<think><set name="it"><star /></set><set name="sign"><star /></set><set name="topic"><star /></set></think></template>
+    <template>Ne conosco molto <formal><star/></formal>s.  
+<think><set name="it"><star/></set><set name="sign"><star/></set><set name="topic"><star/></set></think></template>
   </category>
   <category>
     <pattern>IL MIO ORIENTAMENTO</pattern>
@@ -166,7 +166,7 @@
   </category>
   <category>
     <pattern>IL MIO ORIENTAMENTO é *</pattern>
-    <template>Ti ringrazio per esserti confidato con me  <think><set name="orientation"><star /></set></think></template>
+    <template>Ti ringrazio per esserti confidato con me  <think><set name="orientation"><star/></set></think></template>
   </category>
   <category>
     <pattern>MIA FIGLIA</pattern>
@@ -177,9 +177,9 @@
   <category>
     <pattern>IL NOME DI MIA FIGLIA é *</pattern>
     <template>
-    	Mi ricorderò che <star /> é tua figlia.  
-    	<think> <set name="figlia"><star /></set></think>
-    	<think><set name="lei"><set name="topic"><star /></set></set></think>
+    	Mi ricorderò che <star/> é tua figlia.  
+    	<think> <set name="figlia"><star/></set></think>
+    	<think><set name="lei"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
@@ -232,8 +232,8 @@ Ti chiamo  <get name="name" />.</template>
     <pattern>IL NOME DEL MIO AMICO é *</pattern>
     <template>
     	Come l' hai conosciuto?  
-    	<think><set name="friend"><star /></set></think>
-    	<think><set name="he"><set name="topic"><star /></set></set></think>
+    	<think><set name="friend"><star/></set></think>
+    	<think><set name="he"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
@@ -244,7 +244,7 @@ Ti chiamo  <get name="name" />.</template>
   </category>
   <category>
     <pattern>IL MIO COGNOME é *</pattern>
-    <template>Preferisci che ti chiamino con il tuo nome o con il tuo cognome? <think><set name="lastname"><star /></set></think></template>
+    <template>Preferisci che ti chiamino con il tuo nome o con il tuo cognome? <think><set name="lastname"><star/></set></think></template>
   </category>
   <category>
     <pattern> IL MIO  *</pattern>
@@ -276,29 +276,29 @@ Ti chiamo  <get name="name" />.</template>
     <template>
     	Per quanto tempo ci sei stato?  
 		<think>
-			<set name="it"><star /></set>
-			<set name="there"><star /></set>
-			<set name="topic"><star /></set>
-			<set name="birthplace"><star /></set>
+			<set name="it"><star/></set>
+			<set name="there"><star/></set>
+			<set name="topic"><star/></set>
+			<set name="birthplace"><star/></set>
 		</think>
 	</template>
   </category>
   <category>
     <pattern>MIO MARITO SI CHIAMA *</pattern>
     <template>
-    	Mi ricorderò che tuo marito si chiama <star />. 
-    	<think><set name="husband"><star /></set></think>
-    	<think><set name="he"><set name="topic"><star /></set></set></think>
+    	Mi ricorderò che tuo marito si chiama <star/>. 
+    	<think><set name="husband"><star/></set></think>
+    	<think><set name="he"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
     <pattern>LA MIA NAZIONALITà é *</pattern>
     <template>
-    	Ho parlato con molte persone  <formal><star /></formal>.
+    	Ho parlato con molte persone  <formal><star/></formal>.
 		<think>
-			<set name="it"><star /></set>
-			<set name="nationality"><star />
-			</set><set name="topic"><star /></set>
+			<set name="it"><star/></set>
+			<set name="nationality"><star/>
+			</set><set name="topic"><star/></set>
 		</think>
 	</template>
   </category>
@@ -311,24 +311,24 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>IL NOME DI MIO PADRE é *</pattern>
     <template>
-    	Mi ricorderò che il nome di tuo padre è <star />.  
-    	<think>	<set name="he"><set name="father"><star /></set></set></think>
+    	Mi ricorderò che il nome di tuo padre è <star/>.  
+    	<think>	<set name="he"><set name="father"><star/></set></set></think>
     </template>
   </category>
   <category>
     <pattern>IL MIO SPORT PREFERITO è *</pattern>
     <template>
-    	Pratichi il<star />?  
-    	<think>	<set name="favoritesport"><star /></set></think>
-    	<think><set name="it"><set name="topic"><star /></set></set></think>
+    	Pratichi il <star/>?  
+    	<think>	<set name="favoritesport"><star/></set></think>
+    	<think><set name="it"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
     <pattern>IL MIO PIATTO PREFERITO è *</pattern>
     <template>
-    	Dov'è un buon locale per ordinarlo? <star />?  
-    	<think><set name="favoritefood"><star /></set></think>
-    	<think><set name="it"><set name="topic"><star /></set></set></think>
+    	Dov'è un buon locale per ordinarlo? <star/>?  
+    	<think><set name="favoritefood"><star/></set></think>
+    	<think><set name="it"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
@@ -343,8 +343,8 @@ Ti chiamo  <get name="name" />.</template>
     <pattern>IL FILM CHE MI è PIù PIACIUTO è *</pattern>
     <template>
     	Cosa ti è piaciuto di più di questo film? 
-    	<think><set name="favoritemovie"><star /></set></think>
-    	<think><set name="it"><set name="topic"><star /></set></set></think>
+    	<think><set name="favoritemovie"><star/></set></think>
+    	<think><set name="it"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
@@ -353,13 +353,13 @@ Ti chiamo  <get name="name" />.</template>
       <srai>GELATO PREFERITO</srai>
       <think>
         <set name="favoriteicecream">
-          <star />
+          <star/>
         </set>
       </think>
       <think>
         <set name="it">
           <set name="topic">
-            <star />
+            <star/>
           </set>
         </set>
       </think>
@@ -369,48 +369,48 @@ Ti chiamo  <get name="name" />.</template>
     <pattern>IL MIO LIBRO PREFERITO è *</pattern>
     <template>
     	Pensi che lo debba leggere anch'io? 
-    	<think><set name="favoritebook"><star /></set></think>
-    	<think><set name="it"><set name="topic"><star /></set></set></think>
+    	<think><set name="favoritebook"><star/></set></think>
+    	<think><set name="it"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
     <pattern>IL MIO ATTORE PREFERITO è *</pattern>
     <template>
     	Che parte recita? 
-    	<think><set name="favoriteactor"><star /></set></think>
-    	<think><set name="he"><set name="topic"><star /></set></set></think>
+    	<think><set name="favoriteactor"><star/></set></think>
+    	<think><set name="he"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
     <pattern>IL MIO LIQUORE PREFERITO è *</pattern>
     <template>
     	Che sapore ha?  
-    	<think><set name="favoritedrink"><star /></set></think>
-    	<think><set name="it"><set name="topic"><star /></set></set></think>
+    	<think><set name="favoritedrink"><star/></set></think>
+    	<think><set name="it"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
     <pattern>IL MIO BRANO  PREFERITO è *</pattern>
     <template>
     	Ce l' hai sul tuo cellulare? 
-    	<think><set name="favoritesong"><star /></set></think>
-    	<think><set name="it"><set name="topic"><star /></set></set></think>
+    	<think><set name="favoritesong"><star/></set></think>
+    	<think><set name="it"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
     <pattern>LA MIA AUTOMOBILE PREFERITA è *</pattern>
     <template>
     	Ne possiedi una?  
-    	<think><set name="favoritecar"><star /></set></think>
-    	<think><set name="it"><set name="topic"><star /></set></set></think>
+    	<think><set name="favoritecar"><star/></set></think>
+    	<think><set name="it"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
     <pattern>IL GRUPPO MUSICALE CHE PREFERISCO è *</pattern>
     <template>
     	Cosa suonano? 
-    	<think><set name="favoriteband"><star /></set></think>
-    	<think><set name="them"><set name="topic"><star /></set></set></think>
+    	<think><set name="favoriteband"><star/></set></think>
+    	<think><set name="them"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
@@ -431,26 +431,26 @@ Ti chiamo  <get name="name" />.</template>
     <template>
       <set name="favoritecolor">
         <formal>
-          <star />
+          <star/>
         </formal>
       </set> è un bel colore. 
-      <think><set name="it"><set name="topic"><star /></set></set></think>
+      <think><set name="it"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
     <pattern>LA MIA ATTRICE PREFERITA è *</pattern>
     <template>
     	Che parte recita? 
-    	<think><set name="favoriteactress"><formal><star /></formal></set></think>
-    	<think><set name="she"><set name="topic"><star /></set></set></think>
+    	<think><set name="favoriteactress"><formal><star/></formal></set></think>
+    	<think><set name="she"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
     <pattern>IL MIO PROGRAMMA TELEVISIVO PREFERITO è *</pattern>
     <template>
     	Pensi che piacerebbe anche a me? 
-    	<think><set name="favoritetvshow"><star /></set></think>
-    	<think><set name="it"><set name="topic"><star /></set></set></think>
+    	<think><set name="favoritetvshow"><star/></set></think>
+    	<think><set name="it"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
@@ -462,14 +462,14 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>IL MIO INDIRIZZO EMAIL è *</pattern>
     <template>
-      <srai>IL MIO INDIRIZZO EMAIL è <star /></srai>
+      <srai>IL MIO INDIRIZZO EMAIL è <star/></srai>
     </template>
   </category>
   <category>
     <pattern>LA MIA EMAIL è *</pattern>
     <template>
-    	Mi ricorderò che la tua email è <star />.  
-    	<think><set name="email"><star /></set></think>
+    	Mi ricorderò che la tua email è <star/>.  
+    	<think><set name="email"><star/></set></think>
     </template>
   </category>
   <category>
@@ -494,8 +494,8 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>IL NOME DELLA MIA RAGAZZA è *</pattern>
     <template>
-    	Da quanto tempo tu e <set name="girlfriend"><star /></set> siete insieme? 
-    	<think><set name="she"><set name="topic"><star /></set></set></think>
+    	Da quanto tempo tu e <set name="girlfriend"><star/></set> siete insieme? 
+    	<think><set name="she"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
@@ -511,7 +511,7 @@ Ti chiamo  <get name="name" />.</template>
     </template>
   </category>
   <category>
-    <pattern>IL POSTO DOVE ABITO è*</pattern>
+    <pattern>IL POSTO DOVE ABITO È *</pattern>
     <template>
       <random>
         <li>Vivo in un momento particolarmente felice.</li>
@@ -526,14 +526,14 @@ Ti chiamo  <get name="name" />.</template>
         <set name="there">
           <set name="it">
             <set name="topic">
-              <star />
+              <star/>
             </set>
           </set>
         </set>
       </think>
       <think>
         <set name="location">
-          <star />
+          <star/>
         </set>
       </think>
     </template>
@@ -553,8 +553,8 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>MIA MOGLIE SI CHIAMA *</pattern>
     <template>
-    	Da quanto tempo to e  <set name="wife"><star /></set> siete sposati? 
-    	<think><set name="she"><set name="topic"><star /></set></set></think>
+    	Da quanto tempo to e  <set name="wife"><star/></set> siete sposati? 
+    	<think><set name="she"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
@@ -572,9 +572,9 @@ Ti chiamo  <get name="name" />.</template>
   <category>
    <pattern>IL NOME DEL MIO CANE è*</pattern>
     <template>
-	<star /> è maschio o femmina? 
-    	<think><set name="dog"><star /></set></think>
-    	<think><set name="it"><set name="topic"><star /></set></set></think>
+	<star/> è maschio o femmina? 
+    	<think><set name="dog"><star/></set></think>
+    	<think><set name="it"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
@@ -597,8 +597,8 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>IL MIO GATTO SI CHIAMA *</pattern>
     <template>
-    	Mi ricorderò che il tuo gatto si chiama<star />.  
-    	<think><set name="cat"><star /></set></think>
+    	Mi ricorderò che il tuo gatto si chiama<star/>.  
+    	<think><set name="cat"><star/></set></think>
     </template>
   </category>
   <category>
@@ -610,9 +610,9 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>LA DITTA DOVE LAVORO SI CHIAMA *</pattern>
     <template>
-    	 <star /> è una grossa organizzazione? 
-    	<think><set name="favoriteband"><star /></set></think>
-    	<think><set name="them"><set name="topic"><star /></set></set></think>
+    	 <star/> è una grossa organizzazione? 
+    	<think><set name="favoriteband"><star/></set></think>
+    	<think><set name="them"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
@@ -624,9 +624,9 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>MIA SORELLA SI CHIAMA  *</pattern>
     <template>
-    	Mi ricorderò che tua sorella si chiama <star />.  
-    	<think><set name="sister"><star /></set></think>
-    	<think><set name="she"><set name="topic"><star /></set></set></think>
+    	Mi ricorderò che tua sorella si chiama <star/>.  
+    	<think><set name="sister"><star/></set></think>
+    	<think><set name="she"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
@@ -649,14 +649,14 @@ Ti chiamo  <get name="name" />.</template>
   </category>
   <category>
     <pattern>IL MIO MIGLIORE AMICO SI CHIAMA *</pattern>
-	I'll remember your best friend's name is <star />. 
+	I'll remember your best friend's name is <star/>. 
     <template>
-    	<think><set name="bestfriend"><star /></set></think>
+    	<think><set name="bestfriend"><star/></set></think>
     </template>
   </category>
   <category>
     <pattern>I MIE CAPELLI SONO *</pattern>
-    <template>Come preferisci il tuo taglio di capelli?  <think><set name="hair"><star /></set></think></template>
+    <template>Come preferisci il tuo taglio di capelli?  <think><set name="hair"><star/></set></think></template>
   </category>
   <category>
     <pattern>LA MIA REGIONE</pattern>
@@ -669,9 +669,9 @@ Ti chiamo  <get name="name" />.</template>
     <template>
       <think>
         <set name="mother">
-          <star />
+          <star/>
         </set>
-        </think>  Parlami di tua madre. <think><set name="she"><set name="topic"><star /></set></set></think></template>
+        </think>  Parlami di tua madre. <think><set name="she"><set name="topic"><star/></set></set></think></template>
   </category>
   <category>
     <pattern>IL MIO SECONDO NOME</pattern>
@@ -681,7 +681,7 @@ Ti chiamo  <get name="name" />.</template>
   </category>
   <category>
     <pattern>IL MIO SECONDO NOME è *</pattern>
-    <template> <set name="middlename"><star /></set> è il cognome??</template>
+    <template> <set name="middlename"><star/></set> è il cognome??</template>
   </category>
   <category>
   <pattern>IL MIO COMPLEANNO</pattern>
@@ -691,14 +691,14 @@ Ti chiamo  <get name="name" />.</template>
   </category>
   <category>
     <pattern>LA MIA DATA DI NASCITA è *</pattern>
-    <template>Mi ricorderò che la tua data di nascita è il  <set name="birthday"><star /></set>.</template>
+    <template>Mi ricorderò che la tua data di nascita è il  <set name="birthday"><star/></set>.</template>
   </category>
   <category>
     <pattern>MIO FRATELLO SI CHIAMA  *</pattern>
     <template>
     	Hai altri fratelli o sorelle? 
-    	<think><set name="brother"><star /></set></think>
-    	<think><set name="he"><set name="topic"><star /></set></set></think>
+    	<think><set name="brother"><star/></set></think>
+    	<think><set name="he"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
@@ -709,7 +709,7 @@ Ti chiamo  <get name="name" />.</template>
   </category>
   <category>
     <pattern>IL MIO COMPLEANNO è *</pattern>
-    <template>Mi ricorderò che la data del  tuo compleanno è <set name="birthdate"><star /></set>.</template>
+    <template>Mi ricorderò che la data del  tuo compleanno è <set name="birthdate"><star/></set>.</template>
   </category>
   <category>
     <pattern>LA MIA ETà </pattern>
@@ -722,12 +722,12 @@ Ti chiamo  <get name="name" />.</template>
 	<template>
       <think>
 	      <set name="isanumber">
-          <srai>ISANUMBER <star /></srai>
+          <srai>ISANUMBER <star/></srai>
         </set>
       </think>
       <condition name="isanumber">
         <li value="true">
-          <srai>MLA MIA ETà è <star /></srai>
+          <srai>MLA MIA ETà è <star/></srai>
           <srai>
             <star index="2" />
           </srai>
@@ -741,7 +741,7 @@ Ti chiamo  <get name="name" />.</template>
     <template>
       <think>
         <set name="isanumber">
-          <srai>ISANUMBER <star /></srai>
+          <srai>ISANUMBER <star/></srai>
         </set>
       </think>
       <condition name="isanumber">
@@ -749,7 +749,7 @@ Ti chiamo  <get name="name" />.</template>
         <li>
           <think>
             <set name="age">
-              <star />
+              <star/>
             </set>
           </think>
           <random>
@@ -769,14 +769,14 @@ Ti chiamo  <get name="name" />.</template>
   </category>
   <category>
     <pattern>IL MIO INDIRIZZO è *</pattern>
-    <template>è un posto carino? <think><set name="address"><star /></set></think></template>
+    <template>è un posto carino? <think><set name="address"><star/></set></think></template>
   </category>
   <category>
     <pattern>MIO FIGLIO SI CHIAMA  *</pattern>
     <template>
-    	Mi ricorderò che  <star /> è tuo figlio.  
-    	<think><set name="son"><star /></set></think>
-    	<think><set name="he"><set name="topic"><star /></set></set></think>
+    	Mi ricorderò che  <star/> è tuo figlio.  
+    	<think><set name="son"><star/></set></think>
+    	<think><set name="he"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
@@ -789,8 +789,8 @@ Ti chiamo  <get name="name" />.</template>
     <pattern>LA MIA RESIDENZA è *</pattern>
     <template>
 	Ti piace abitare lì?
-    	<think><set name="residence"><star /></set></think>
-    	<think><set name="it"><set name="topic"><star /></set></set></think>
+    	<think><set name="residence"><star/></set></think>
+    	<think><set name="it"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
@@ -801,7 +801,7 @@ Ti chiamo  <get name="name" />.</template>
   </category>
   <category>
     <pattern>IL MIO SESSO è *</pattern>
-	<template>Sta bene a sapersi. <think><set name="gender"><star /></set></think></template>
+	<template>Sta bene a sapersi. <think><set name="gender"><star/></set></think></template>
 </category>
   <category>
     <pattern>MY RELIGION</pattern>
@@ -813,8 +813,8 @@ Ti chiamo  <get name="name" />.</template>
     <pattern>LA MIA RELIGIONE è *</pattern>
     <template>
     	La propria identificazione spirituale è importante.  
-    	<think><set name="religion"><star /></set></think>
-    	<think><set name="it"><set name="topic"><star /></set></set></think>
+    	<think><set name="religion"><star/></set></think>
+    	<think><set name="it"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
@@ -831,7 +831,7 @@ Ti chiamo  <get name="name" />.</template>
   </category>
   <category>
     <pattern>IL MIO NOME é *</pattern>
-    <template> Preferisci che ti chiamino col tuo nome o con il tuo cognome?<think><set name="firstname"><star /></set></think></template>
+    <template> Preferisci che ti chiamino col tuo nome o con il tuo cognome?<think><set name="firstname"><star/></set></think></template>
   </category>
   <category>
     <pattern>IL MIO NOME *</pattern>
@@ -850,7 +850,7 @@ Ti chiamo  <get name="name" />.</template>
   </category>
   <category>
     <pattern>IL SUO NOME é *</pattern>
-    <template>La conosci bene?<think><set name="she"><set name="topic"><star /></set></set></think></template>
+    <template>La conosci bene?<think><set name="she"><set name="topic"><star/></set></set></think></template>
   </category>
   <category>
     <pattern>ESSO</pattern>
@@ -859,7 +859,7 @@ Ti chiamo  <get name="name" />.</template>
   </category>
   <category>
     <pattern>ESSO è UN*</pattern>
-    <template>Vorresti fare una ricerca pedr lui?<think><set name="it"><set name="topic"><star /></set></set></think></template>
+    <template>Vorresti fare una ricerca pedr lui?<think><set name="it"><set name="topic"><star/></set></set></think></template>
   </category>
   <category>
     <pattern>ARGOMENTO</pattern>
@@ -869,8 +869,8 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>LA CARATTERISTICA RICHIEDE *</pattern>
     <template>
-    	Non sono in grado di   <lowercase><star /></lowercase>ancora.  
-    	<think><set name="featurerequest"><star /></set></think> 
+    	Non sono in grado di   <lowercase><star/></lowercase>ancora.  
+    	<think><set name="featurerequest"><star/></set></think> 
     	 Preferiresti sottomettere questa caratteristica agli sviluppatori?
     </template>
   </category>
@@ -904,13 +904,13 @@ Ti chiamo  <get name="name" />.</template>
     <template>
       <srai> RANDOM INTRO</srai>
       <formal>
-        <star />
+        <star/>
       </formal>
       <think>
-        <srai>STABILISCI IL SESSO DAL NOME<star /></srai>
+        <srai>STABILISCI IL SESSO DAL NOME<star/></srai>
         <set name="tmpname">
           <formal>
-            <star />
+            <star/>
           </formal>
         </set>.
 		<set name="firstname"><get name="name" /></set>
@@ -919,7 +919,7 @@ Ti chiamo  <get name="name" />.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<star name="name" />")</param>
+            <param>i01_chatBot.startSession(u"<star name="name"/>")</param>
           </mrl>
         </oob>
     </template>
@@ -929,19 +929,19 @@ Ti chiamo  <get name="name" />.</template>
     <template>
       <srai> RANDOM INTRO</srai>
       <formal>
-        <star />
+        <star/>
       </formal>.
 	  <think>
-	  	<srai>STABILISCI IL SESSO DAL NOME <star /></srai>
-	  	<set name="tmpname"><formal><star /><star index="2" /></formal></set>.
-		<set name="firstname"><formal><star /></formal></set>
+	  	<srai>STABILISCI IL SESSO DAL NOME <star/></srai>
+	  	<set name="tmpname"><formal><star/><star index="2" /></formal></set>.
+		<set name="firstname"><formal><star/></formal></set>
 		<set name="lastname"><formal><star index="2" /></formal></set>
 	  </think>
         <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<star name="name" />")</param>
+            <param>i01_chatBot.startSession(u"<star name="name"/>")</param>
           </mrl>
         </oob>
 	</template>
@@ -950,17 +950,17 @@ Ti chiamo  <get name="name" />.</template>
     <pattern>CHIAMAMI * * *</pattern>
     <template>
       <srai>RANDOM INTRO </srai>
-      <star />
+      <star/>
       <think>
-        <srai>SET GENDER FROM NAME <star /></srai>
+        <srai>SET GENDER FROM NAME <star/></srai>
         <set name="tmpname">
           <formal>
-            <star />
+            <star/>
             <star index="2" />
             <star index="3" />
           </formal>
         </set>.
-		<set name="firstname"><formal><star /></formal></set>
+		<set name="firstname"><formal><star/></formal></set>
 		<set name="middlename"><formal><star index="2" /></formal></set>
 		<set name="lastname"><formal><star index="3" /></formal></set>
 	  </think>
@@ -968,7 +968,7 @@ Ti chiamo  <get name="name" />.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<star name="name" />")</param>
+            <param>i01_chatBot.startSession(u"<star name="name"/>")</param>
           </mrl>
         </oob>
     </template>
@@ -988,7 +988,7 @@ Ti chiamo  <get name="name" />.</template>
       </random>
       <think>
         <set name="topic">
-          <star />
+          <star/>
         </set>
       </think>
     </template>
@@ -1120,7 +1120,7 @@ Ti chiamo  <get name="name" />.</template>
     <template>
       <think>
         <set name="gendername">
-          <srai>GENDERNAME <star /></srai>
+          <srai>GENDERNAME <star/></srai>
         </set>
         <condition name="gendername">
           <li value="M">
@@ -1152,7 +1152,7 @@ Ti chiamo  <get name="name" />.</template>
     <pattern>COME CHIAMI UN *</pattern>
     <template>
     	è uno scherzo? Come lo chiami tu?
-    	<think><set name="it"><set name="topic"><star /></set></set></think>
+    	<think><set name="it"><set name="topic"><star/></set></set></think>
     </template>
   </category>
   <category>
@@ -1482,8 +1482,8 @@ Ti chiamo  <get name="name" />.</template>
   </category>
   <category>
     <pattern>IL TUO NOME è *</pattern>
-    <template> OK, d' ora in poi mi puoi chiamare <star />.
-<think><set name="customname"><star /></set></think></template>
+    <template> OK, d' ora in poi mi puoi chiamare <star/>.
+<think><set name="customname"><star/></set></think></template>
   </category>
   <category>
     <pattern>QUANTI ANNI HO</pattern>

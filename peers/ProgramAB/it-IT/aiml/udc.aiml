@@ -3,7 +3,14 @@
 <!--  -->
 <!--  -->
 <category><pattern>*</pattern>
-<template><srai>UDC</srai></template>
+<template><condition name="llm">
+        <li value="enabled">
+        <sraix><star/></sraix>
+        </li>
+        <li>
+        <srai>UDC</srai>
+        </li>
+      </condition></template>
 </category>
 <category><pattern>UDC</pattern>
 <template><random>
@@ -11,13 +18,13 @@
           <srai>LINEA DI RACCOLTA CASUALE</srai>
         </li>
         <li>
-          <srai>ETÀ DI RICHIESTA</srai>
+          <srai>RICERCA ETÀ QUANTI</srai>
         </li>
         <li>
-          <srai>RICHIESTA GENERE</srai>
+          <srai>RICERCA GENERE SCONOSCIUTO</srai>
         </li>
         <li>
-          <srai>RICHIESTA LOCALIZZAZIONE</srai>
+          <srai>RICERCA LOCALIZZAZIKONE DOVE</srai>
         </li>
       </random></template>
 </category>

@@ -207,6 +207,7 @@
             </category>
         </learnf></template>
 </category>
+
 <category><pattern>*</pattern><that>COSA DOVREI DIRE AL SUO POSTO</that>
 <template><srai>LEARN NEW RESPONSE <star/></srai></template>
 </category>
@@ -401,6 +402,64 @@
 <category><pattern>NON IMPORTA</pattern><that>INVECE COSA DOVREI DIRE</that>
 <template>Ok, Ci ritorneremo sopr più tardi.</template>
 </category>
+
+<category><pattern>LEARN SRAIXFAILED</pattern>
+<template><think>
+        <set name="newpattern">
+          <input index="2"/>
+        </set>
+      </think>
+    Hai detto "<Input Index =" 2 "/>".
+    COSA DOVREI RISPONDERE ?</template>
+</category>
+
+<category><pattern>LEARN NEW RESPONSE *</pattern>
+<template>OK.  Ora ogni volta che dici "<get name =" newpattern "/>", risponderò con "<star/>".
+    <learnf>
+      <category>
+        <pattern><eval><normalize><get name="newpattern"/></normalize></eval></pattern>
+        <template><eval><star/></eval>.</template>
+      </category>
+    </learnf></template>
+</category>
+
+<category><pattern>*</pattern><that>COSA DOVREI RISPONDERE</that>
+<template><srai>LEARN NEW RESPONSE <star/></srai></template>
+</category>
+<category><pattern>MIO _</pattern><that>COSA DOVREI RISPONDERE</that>
+<template><srai>LEARN NEW RESPONSE Mio <star/></srai></template>
+</category>
+<category><pattern>VOI _</pattern><that>COSA DOVREI RISPONDERE</that>
+<template><srai>LEARN NEW RESPONSE Voi <star/></srai></template>
+</category>
+<category><pattern>UN _</pattern><that>COSA DOVREI RISPONDERE</that>
+<template><srai>LEARN NEW RESPONSE Un <star/></srai></template>
+</category>
+<category><pattern>LUI _</pattern><that>COSA DOVREI RISPONDERE</that>
+<template><srai>LEARN NEW RESPONSE Lui <star/></srai></template>
+</category>
+<category><pattern>QUELLO _</pattern><that>COSA DOVREI RISPONDERE</that>
+<template><srai>LEARN NEW RESPONSE Quello <star/></srai></template>
+</category>
+<category><pattern>ESSO _</pattern><that>COSA DOVREI RISPONDERE</that>
+<template><srai>LEARN NEW RESPONSE Esso <star/></srai></template>
+</category>
+<category><pattern>LEI _</pattern><that>COSA DOVREI RISPONDERE</that>
+<template><srai>LEARN NEW RESPONSE Lei <star/></srai></template>
+</category>
+<category><pattern>DIRE _</pattern><that>COSA DOVREI RISPONDERE</that>
+<template><srai>LEARN NEW RESPONSE <star/></srai></template>
+</category>
+<category><pattern>NOI _</pattern><that>COSA DOVREI RISPONDERE</that>
+<template><srai>LEARN NEW RESPONSE Noi <star/></srai></template>
+</category>
+<category><pattern>IL _</pattern><that>COSA DOVREI RISPONDERE</that>
+<template><srai>LEARN NEW RESPONSE Il <star/></srai></template>
+</category>
+<category><pattern>ESSI _</pattern><that>COSA DOVREI RISPONDERE</that>
+<template><srai>LEARN NEW RESPONSE Essi <star/></srai></template>
+</category>
+
 <category><pattern>ARGOMENTO DI DOMANDA NOME</pattern>
 <template>CHI</template>
 </category>

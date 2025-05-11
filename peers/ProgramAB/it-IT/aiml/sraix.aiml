@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: sraix.aiml -->
+<!--  -->
+
+<category><pattern>SRAIXFAILED *</pattern>
+<template><condition name="llm">
+        <li value="enabled"><img src="../Llm.png"/>
+        <think>
+          <set name="topic"><star/></set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_llm.getResponse("<star/>")</param>
+          </mrl>
+        </oob>
+        </li>
+        <li>
+        <random>
+        <li>Non conosco la risposta.</li>
+        <li>Ho usato la mia linea di vita per chiedere un altro robot, ma non lo sapeva.</li>
+        <li>Ho chiesto un altro robot, ma non lo sapeva.</li>
+        <li>Scusa, niente trovato nei servizi web.</li>
+        <li>Non riesco a trovare la risposta dai servizi web.</li>
+        <li>Nessuno degli altri robot può dirmi la risposta.</li>
+        <li>Non riesco a trovare una risposta.</li>
+        <li>Sono confuso, non so cosa rispondere.</li>
+      </random>
+      <random>
+        <li>Puoi insegnarmi? </li>
+        <li>Vorrei imparare se conosci la risposta. </li>
+        <li>Vorrei imparare, per favore insegnami. </li>
+        <li>Ti sto ascoltando per imparare la risposta. </li>
+      </random><think><set name="topic">learnf</set></think><srai>LEARN SRAIXFAILED</srai>
+        </li>
+      </condition>
+        </template>
+</category>
+</aiml>
