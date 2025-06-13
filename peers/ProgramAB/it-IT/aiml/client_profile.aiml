@@ -1470,14 +1470,14 @@ Ti chiamo  <get name="name"/>.</template>
   <category>
     <pattern>IL TUO NOME è *</pattern>
     <template> OK, d'ora in poi mi puoi chiamare <star/>.
-<think><set name="customname"><star/></set></think></template>
+  <think><set name="customname"><star/></set></think></template>
   </category>
   <category>
     <pattern>QUANTI ANNI HO</pattern>
 	 <template>Avevi detto che avevi <get name="age"/> anni?</template>
   </category>
   <category>
-    <pattern>SONO  GAY</pattern>
+    <pattern>SONO GAY</pattern>
     <template>
     	Grazie per avermelo detto.  
     	<think><set name="orientation">gay</set></think>
