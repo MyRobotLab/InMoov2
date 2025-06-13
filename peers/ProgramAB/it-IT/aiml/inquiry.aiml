@@ -5,13 +5,13 @@
   <category>
     <pattern>RICERCA LOCALIZZAZIONE</pattern>
     <template>
-      <srai>RICERCA LOCALIZZAZIONE <get name="location" /></srai>
+      <srai>RICERCA LOCALIZZAZIONE <get name="location"/></srai>
     </template>
   </category>
   <category>
     <pattern>RICERCA LOCALIZZAZIKONE DOVE</pattern>
     <template><condition name="location">
-        <li value="false">
+        <li value="where">
           Dove sei adesso ?
         </li>
         <li><srai>UDC</srai></li>
@@ -36,7 +36,7 @@
   <category>
     <pattern>RICERCA IL NOME</pattern>
     <template>
-      <srai>RICERCA IL NOME <get name="name" /></srai>
+      <srai>RICERCA IL NOME <get name="name"/></srai>
     </template>
   </category>
   <category>
@@ -52,13 +52,13 @@
   <category>
     <pattern>RICERCA ETÀ</pattern>
     <template>
-      <srai>RICERCA ETÀ <get name="age" /></srai>
+      <srai>RICERCA ETÀ <get name="age"/></srai>
     </template>
   </category>
   <category>
     <pattern>RICERCA ETÀ QUANTI</pattern>
     <template><condition name="age">
-        <li value="false">
+        <li value="how many">
           Quanti anni hai ?
         </li>
         <li><srai>UDC</srai></li>
@@ -83,13 +83,13 @@
   <category>
     <pattern>RICERCA GENERE</pattern>
     <template>
-      <srai>RICERCA GENERE <get name="gender" /></srai>
+      <srai>RICERCA GENERE <get name="gender"/></srai>
     </template>
   </category>
   <category>
     <pattern>RICERCA GENERE SCONOSCIUTO</pattern>
     <template><condition name="gender">
-        <li value="false">
+        <li value="unknown">
           Sei uomo o donna ?
         </li>
         <li><srai>UDC</srai></li>

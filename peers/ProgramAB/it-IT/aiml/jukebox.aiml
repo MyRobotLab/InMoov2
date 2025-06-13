@@ -8,4 +8,234 @@
 <category><pattern>STOP JUKEBOX</pattern>
 <template>Ok, fermiamolo. <oob><mrl><service>python</service><method>exec</method><param>PlayUtub("stop","0")</param></mrl></oob></template>
 </category>
+
+
+<category><pattern>RIPRODURRE MUSICA</pattern>
+    <template><srai>INIZIA PLAYLIST</srai></template>
+  </category>
+
+  <category><pattern>INIZIA PLAYLIST</pattern>
+    <template><random>
+          <li>Elenco di gioco di inizio ora.</li>
+          <li>Grande!</li>
+        </random>
+        <think><set name="playsong">ko</set></think>
+      <oob><mrl><service>python</service><method>exec</method><param>playMusic()</param></mrl></oob></template>
+  </category>
+
+  <category><pattern>INIZIA PLAYLIST *</pattern>
+    <template><random>
+          <li>Avvio della playlist <star/> ora.</li>
+          <li>Playlist di lancio <star/>.</li>
+        </random>
+        <think><set name="playsong">ko</set></think>
+      <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.startPlaylist('<star/>')</param></mrl></oob></template>
+  </category>
+
+  <category><pattern>SUONA MUSICA CASUALE</pattern>
+    <template><random>
+          <li>Selezione di musica casuale</li>
+          <li>Sicuro!</li>
+          <li>OK!</li>
+        </random>
+        <think><set name="playsong">ko</set></think>
+      <oob><mrl><service>python</service><method>exec</method><param>playRandomMusic()</param></mrl></oob></template>
+  </category>
+
+  <category><pattern>FERMA LA MUSICA</pattern>
+    <template><srai>STOP PLAYLIST</srai></template>
+  </category>
+
+  <category><pattern>FERMARE LA MUSICA</pattern>
+    <template><srai>STOP PLAYLIST</srai></template>
+  </category>
+
+  <category><pattern>STOP PLAYLIST</pattern>
+    <template><random>
+          <li>Come te per favore</li>
+          <li>Fermare la playlist ora</li>
+          <li>OK!</li>
+        </random>
+        <think><set name="playsong">ok</set></think>
+      <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stopPlaylist(), i01_audioPlayer.stop()</param></mrl></oob></template>
+  </category>
+
+  <category><pattern>PAUSA MUSICA</pattern>
+  <template><random>
+          <li>Musica in pausa</li>
+          <li>Metti in pausa la musica adesso</li>
+          <li>OK!</li>
+        </random>
+      <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.pause()</param></mrl></oob></template>
+  </category>
+
+  <category><pattern>RIPRENDI LA MUSICA</pattern>
+  <template><random>
+          <li>Riprendendo la musica ora</li>
+          <li>Sicuro!</li>
+        </random>
+      <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.resume()</param></mrl></oob></template>
+  </category>
+
+  <category><pattern>CERCA NELLA CANZONE *</pattern>
+  <template>.
+    <think><set name="song"><star/></set><set name="playsong">ok</set></think>
+      <oob><mrl>
+        <service>python</service><method>exec</method><param>searchPlay("<get name="song"/>")</param>
+        </mrl></oob>
+        </template>
+  </category>
+
+  <category><pattern># CANZONE PROSSIMA</pattern>
+    <template>.
+      <think><get name = "playsong"></get></think>
+       <condition name="playsong" value="ok">
+          <oob><mrl><service>python</service><method>exec</method><param>nextPlay()</param></mrl></oob>
+      </condition>  
+      <condition name="playsong" value="ko">
+    <oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.stop()</param></mrl></oob>
+      </condition>
+    </template>
+  </category>
+
+  <category><pattern># CANZONE PRECEDENTE</pattern>
+  <template>.
+   <think><get name = "playsong"></get></think>
+     <condition name="playsong" value="ok">
+          <oob><mrl><service>python</service><method>exec</method><param>previousPlay()</param></mrl></oob>
+    </condition> 
+    <condition name="playsong" value="ko">
+      I precedenti non funzionano in modalità playlist, ma solo in modalità di ricerca.
+    </condition> 
+    </template>
+  </category>
+
+  <category><pattern>MUSICA DI VOLUME PIÙ FORTE</pattern>
+    <template>Impostare la musica più forte.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(1.0)</param></mrl></oob></template>
+  </category>
+
+  <category><pattern>MUSICA DI VOLUME INFERIORE</pattern>
+    <template>Impostazione della musica più bassa.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.9)</param></mrl></oob></template>
+  </category>
+
+  <category><pattern>MUSICA DI VOLUME PIÙ BASSA</pattern>
+    <template>Impostazione della musica più bassa.<oob><mrl><service>python</service><method>exec</method><param>i01_audioPlayer.setVolume(0.8)</param></mrl></oob></template>
+  </category>
+
+  <category>
+    <pattern>* RADIO *</pattern>
+    <template>Ok, sto cercando la radio <star index="2"/>.
+      <think><set name="radio"><star index="2"/></set></think>
+     <condition name="radio">
+      <li value="france info"><think><set name="radio">"http://direct.franceinfo.fr/live/franceinfo-midfi.mp3"</set></think></li>
+      <li value="france inter"><think><set name="radio">"http://direct.franceinter.fr/live/franceinter-midfi.mp3"</set></think></li>
+      <li value="fip"><think><set name="radio">"http://direct.fipradio.fr/live/fip-webradio4.mp3"</set></think></li>
+      <li value="rire et chansons"><think><set name="radio">"http://cdn.nrjaudio.fm/adwz1/fr/30407/mp3_128.mp3?origine=fluxradios"</set></think></li>
+      <li value="france"><think><set name="radio">"http://icecast.radiofrance.fr/francemusiqueconcertsradiofrance-midfi.mp3"</set></think></li>
+      <li value="chérie fm"><think><set name="radio">"http://cdn.nrjaudio.fm/adwz1/fr/55495/mp3_128.mp3"</set></think></li>
+      <li value="europe 1"><think><set name="radio">"http://wr.lmn.fm/e1-wr5.mp3"</set></think></li>
+      <li value="jazz"><think><set name="radio">"http://jazz-wr01.ice.infomaniak.ch/jazz-wr01-128.mp3"</set></think></li>
+      <li value="nostalgie"><think><set name="radio">"http://cdn.nrjaudio.fm/adwz1/fr/30605/mp3_128.mp3?"</set></think></li>
+      <li value="nrj"><think><set name="radio">"http://cdn.nrjaudio.fm/adwz2/fr/30001/mp3_128.mp3?origine=fluxradios"</set></think></li>
+      <li value="rfm"><think><set name="radio">"http://rfm.lmn.fm/rfm.mp3"</set></think></li>
+      <li value="rtl"><think><set name="radio">"http://streaming.radio.rtl.fr:80/rtl-1-44-128?listen=webCwsBCggNCQgLDQUGBAcGBg"</set></think></li>
+      <li value="france bleu"><think><set name="radio">"http://direct.francebleu.fr/live/fbazur-midfi.mp3"</set></think></li>
+    <li value="*" ><think><set name="radio">" "</set></think></li>
+    </condition>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>startRadio(<get name="radio"/>)</param>
+        </mrl>
+      </oob>
+    <srai>APPSMILE</srai>
+    </template>
+  </category>
+
+  <category><pattern>* GROOVE MUSIC</pattern>
+    <template>Ecco un po 'di musica da scanalatura.
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>startRadio("http://jazz-wr08.ice.infomaniak.ch/jazz-wr08-128.mp3")</param>
+        </mrl>
+      </oob>
+    <srai>APPSMILE</srai>
+    </template>
+  </category>
+
+  <category><pattern>FERMARE LA RADIO</pattern>
+    <template>Ok, smetto la radio.
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>stopRadio()</param>
+        </mrl>
+      </oob>
+    <srai>APPSMILE</srai>
+    </template>
+  </category>
+
+  <category><pattern> * NOME * PLAYLIST</pattern>
+    <template> 
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>authorPlaylist()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+
+  <category><pattern> * AUTORE * PLAYLIST</pattern>
+    <template>
+      <srai><star/> NOME <star index="2"/> PLAYLIST</srai>
+    </template>
+  </category>
+
+  <category><pattern>SYSTEM_NEXT_SONG</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>nextPlay()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+
+  <category><pattern>NEXT_SONG</pattern>
+    <template>Ecco la canzone.
+    </template>
+  </category>
+
+  <category><pattern>DO_NOT_HAVE_SONG</pattern>
+    <template>Non ho questa canzone nelle mie liste o il file contiene lettere maiuscole.
+    </template>
+  </category>
+
+  <category><pattern>DO_NOT_HAVE_PLAYLIST</pattern>
+    <template>Non ho una playlist configurata per impostazione predefinita.
+    </template>
+  </category>
+
+  <category><pattern>END_PLAYLIST</pattern>
+    <template>Ho raggiunto la fine della mia playlist. Riavvia dall'inizio.
+    </template>
+  </category>
+
+  <category><pattern>DO_NOT_HAVE_RADIO</pattern>
+    <template>Non conosco questa radio.
+    </template>
+  </category>
+
+  <category><pattern>BEGIN_PLAYLIST</pattern>
+    <template>Sei già all'inizio della playlist. Rimango all'inizio della lista.
+    </template>
+  </category>
 </aiml>

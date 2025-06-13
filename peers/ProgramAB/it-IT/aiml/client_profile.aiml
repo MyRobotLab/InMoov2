@@ -14,8 +14,8 @@
     </template>
   </category>
   <category>
-    <pattern>IL MIO COLORE PREFERITO é *</pattern>
-    <template>Non mi pareva che  <star/> fosse un colore.</template>
+    <pattern>IL MIO COLORE PREFERITO É *</pattern>
+    <template>Non mi pareva che <star/> fosse un colore.</template>
   </category>
   <category>
     <pattern>IL MIO COLORE PREFERITO é IL VERDE</pattern>
@@ -25,35 +25,28 @@
     </template>
   </category>
   <category>
-    <pattern>MI PIACE IL COLORE</pattern>
+    <pattern>MI PIACE IL COLORE *</pattern>
     <template>
-      <srai>IL MIO COLORE PREFERITO é <star/></srai>
+      <srai>IL MIO COLORE PREFERITO É <star/></srai>
     </template>
   </category>
   <category>
     <pattern>*</pattern>
     <that>QUANTI ANNI HAI</that>
     <template>
-      <srai>LA MIA ETà <star/></srai>
+      <srai>LA MIA ETÀ <star/></srai>
     </template>
   </category>
   <category>
     <pattern>*</pattern>
-    <that>COSA CAMBIEREBBE * IL MIO NOME IN</that>
-    <template>
-      <srai>IL TUO NOME è <star/></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>*</pattern>
-    <that> QUALE è IL TUO SEGNO ZODIACALE </that>
+    <that> QUALE È IL TUO SEGNO ZODIACALE </that>
     <template>
       <think>
         <set name="sign">
           <star/>
         </set>
       </think>
-      <srai> OROSCOPO PER <get name="sign" /></srai>
+      <srai> OROSCOPO PER <get name="sign"/></srai>
     </template>
   </category>
   <category>
@@ -118,12 +111,7 @@
     <pattern>IO SONO DI *</pattern>
     <template>Adesso vivi lì?  <think><set name="birthplace"><star/></set></think></template>
   </category>
-  <category>
-    <pattern>MI PIACE *</pattern>
-    <template> Di questo, cosa ti piace di più? <think><set name="it"><set name="topic"><star/></set></set></think>
-	</template>
-  </category>
-  <category>
+  <category><pattern>MI PIACE *</pattern>
     <template>
       <think>
         <set name="likes">
@@ -151,7 +139,7 @@
   <category>
     <pattern>LUI</pattern>
     <template>
-      <get name="he" />?</template>
+      <get name="he"/>?</template>
   </category>
   <category>
     <pattern>IL MIO SEGNO é *</pattern>
@@ -161,7 +149,7 @@
   <category>
     <pattern>IL MIO ORIENTAMENTO</pattern>
     <template>
-      <get name="orientation" />
+      <get name="orientation"/>
     </template>
   </category>
   <category>
@@ -171,7 +159,7 @@
   <category>
     <pattern>MIA FIGLIA</pattern>
     <template>
-      <get name="daughter" />
+      <get name="daughter"/>
     </template>
   </category>
   <category>
@@ -185,47 +173,47 @@
   <category>
     <pattern>LA MIA LATITUDINE</pattern>
     <template>
-      <get name="latitudine" />
+      <get name="latitudine"/>
     </template>
   </category>
   <category>
   <pattern>IL MIO RAGAZZO</pattern>
     <template>
-      <get name="ragazzo" />?</template>
+      <get name="ragazzo"/>?</template>
   </category>
     <category>
     <pattern>IL MIO NOME</pattern>
     <template>
-      <get name="name" />
+      <get name="name"/>
     </template>
   </category>
    <category>
     <pattern>IL MIO NOME COMPLETO </pattern>
     <template>
       <condition name="firstname">
-        <li value="what" />
+        <li value="what"/>
         <li>
-          <get name="firstname" />
+          <get name="firstname"/>
         </li>
       </condition>
       <condition name="middlename">
-        <li value="what" />
+        <li value="what"/>
         <li>
-          <get name="middlename" />
+          <get name="middlename"/>
         </li>
       </condition>
       <condition name="lastname">
-        <li value="what" />
+        <li value="what"/>
         <li>
-          <get name="lastname" />
+          <get name="lastname"/>
         </li>
       </condition>.
-Ti chiamo  <get name="name" />.</template>
+Ti chiamo  <get name="name"/>.</template>
   </category>
   <category>
     <pattern>LA MIA CITTà</pattern>
     <template>
-      <get name="town" />
+      <get name="town"/>
     </template>
   </category>
   <category>
@@ -239,7 +227,7 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>IL MIO COGNOME</pattern>
     <template>
-      <get name="lastname" />
+      <get name="lastname"/>
     </template>
   </category>
   <category>
@@ -247,28 +235,28 @@ Ti chiamo  <get name="name" />.</template>
     <template>Preferisci che ti chiamino con il tuo nome o con il tuo cognome? <think><set name="lastname"><star/></set></think></template>
   </category>
   <category>
-    <pattern> IL MIO  *</pattern>
-    <that>* NOME O COGNOME</that>
+    <pattern>IL MIO *</pattern>
+    <that>PREFERISCI CHE TI *</that>
     <template>
-      <srai> CHIAMAMI PER COGNOME</srai>
+      <srai>CHIAMAMI PER COGNOME</srai>
     </template>
   </category>
   <category>
     <pattern>MIA NIPOTE</pattern>
     <template>
-      <get name="niece" />
+      <get name="niece"/>
     </template>
   </category>
   <category>
     <pattern>MIO NIPOTE</pattern>
     <template>
-      <get name="nephew" />
+      <get name="nephew"/>
     </template>
   </category>
   <category>
     <pattern>LA MIA CITTà NATALE</pattern>
     <template>
-      <get name="birthplace" />
+      <get name="birthplace"/>
     </template>
   </category>
   <category>
@@ -305,7 +293,7 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>MIO PADRE</pattern>
     <template>
-      <get name="father" />
+      <get name="father"/>
     </template>
   </category>
   <category>
@@ -423,7 +411,7 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>IL MIO COLORE PREFERITO è</pattern>
     <template>
-      <get name="favoritecolor" />
+      <get name="favoritecolor"/>
     </template>
   </category>
   <category>
@@ -456,7 +444,7 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>LA MIA EMAIL</pattern>
     <template>
-      <get name="email" />
+      <get name="email"/>
     </template>
   </category>
   <category>
@@ -482,13 +470,13 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>MIA NONNA</pattern>
     <template>
-      <get name="grandmother" />
+      <get name="grandmother"/>
     </template>
   </category>
    <category>
     <pattern>LA MIA RAGAZZA</pattern>
     <template>
-      <get name="girlfriend" />
+      <get name="girlfriend"/>
     </template>
   </category>
   <category>
@@ -501,13 +489,13 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>LA MIA PATRIA</pattern>
     <template>
-      <get name="country" />
+      <get name="country"/>
     </template>
   </category>
   <category>
   <pattern>IL POSTO DOVE ABITO</pattern>
     <template>
-      <get name="location" />
+      <get name="location"/>
     </template>
   </category>
   <category>
@@ -541,13 +529,13 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>LA MIA PROVINCIA</pattern>
     <template>
-      <get name="province" />
+      <get name="province"/>
     </template>
   </category>
   <category>
     <pattern>MIA MOGLIE</pattern>
     <template>
-      <get name="wife" />
+      <get name="wife"/>
     </template>
   </category>
   <category>
@@ -560,17 +548,17 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>LA MIA LONGITUDINE</pattern>
     <template>
-      <get name="longitute" />
+      <get name="longitute"/>
     </template>
   </category>
   <category>
     <pattern>IL MIO CANE</pattern>
     <template>
-      <get name="dog" />
+      <get name="dog"/>
     </template>
   </category>
   <category>
-   <pattern>IL NOME DEL MIO CANE è*</pattern>
+   <pattern>IL NOME DEL MIO CANE è *</pattern>
     <template>
 	<star/> è maschio o femmina? 
     	<think><set name="dog"><star/></set></think>
@@ -583,7 +571,7 @@ Ti chiamo  <get name="name" />.</template>
       <condition name="sign">
         <li value="which">Quale è il tuo segno zodiacale?</li>
         <li>
-          <srai>OROSCOPO PER <get name="sign" /></srai>
+          <srai>OROSCOPO PER <get name="sign"/></srai>
         </li>
       </condition>
     </template>
@@ -591,20 +579,20 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>IL MIO GATTO</pattern>
     <template>
-      <get name="cat" />
+      <get name="cat"/>
     </template>
   </category>
   <category>
     <pattern>IL MIO GATTO SI CHIAMA *</pattern>
     <template>
-    	Mi ricorderò che il tuo gatto si chiama<star/>.  
+    	Mi ricorderò che il tuo gatto si chiama <star/>.  
     	<think><set name="cat"><star/></set></think>
     </template>
   </category>
   <category>
     <pattern>LA MIA  META</pattern>
     <template>
-      <get name="meta" />
+      <get name="meta"/>
     </template>
   </category>
   <category>
@@ -618,7 +606,7 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>MIA SORELLA</pattern>
     <template>
-      <get name="sister" />
+      <get name="sister"/>
     </template>
   </category>
   <category>
@@ -632,24 +620,24 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>LA MIA CITTà</pattern>
     <template>
-      <get name="city" />
+      <get name="city"/>
     </template>
   </category>
   <category>
     <pattern>LA MIA NAZIONE</pattern>
     <template>
-      <get name="state" />
+      <get name="state"/>
     </template>
   </category>
   <category>
   <pattern>LA MIA VIA</pattern>
    <template>
-      <get name="street" />
+      <get name="street"/>
     </template>
   </category>
   <category>
     <pattern>IL MIO MIGLIORE AMICO SI CHIAMA *</pattern>
-	I'll remember your best friend's name is <star/>. 
+	Ricorderò che il nome del tuo migliore amico è <star/>. 
     <template>
     	<think><set name="bestfriend"><star/></set></think>
     </template>
@@ -661,7 +649,7 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>LA MIA REGIONE</pattern>
     <template>
-      <get name="county" />
+      <get name="county"/>
     </template>
   </category>
   <category>
@@ -676,17 +664,17 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>IL MIO SECONDO NOME</pattern>
     <template>
-      <get name="middlename" />
+      <get name="middlename"/>
     </template>
   </category>
   <category>
     <pattern>IL MIO SECONDO NOME è *</pattern>
-    <template> <set name="middlename"><star/></set> è il cognome??</template>
+    <template> <set name="middlename"><star/></set> è il cognome?</template>
   </category>
   <category>
   <pattern>IL MIO COMPLEANNO</pattern>
     <template>
-      <get name="birthday" />
+      <get name="birthday"/>
     </template>
   </category>
   <category>
@@ -694,7 +682,7 @@ Ti chiamo  <get name="name" />.</template>
     <template>Mi ricorderò che la tua data di nascita è il  <set name="birthday"><star/></set>.</template>
   </category>
   <category>
-    <pattern>MIO FRATELLO SI CHIAMA  *</pattern>
+    <pattern>MIO FRATELLO SI CHIAMA *</pattern>
     <template>
     	Hai altri fratelli o sorelle? 
     	<think><set name="brother"><star/></set></think>
@@ -704,7 +692,7 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>LA DATA DEL MIO COMPLEANNO</pattern>
     <template>
-      <get name="birthdate" />
+      <get name="birthdate"/>
     </template>
   </category>
   <category>
@@ -712,13 +700,13 @@ Ti chiamo  <get name="name" />.</template>
     <template>Mi ricorderò che la data del  tuo compleanno è <set name="birthdate"><star/></set>.</template>
   </category>
   <category>
-    <pattern>LA MIA ETà </pattern>
+    <pattern>LA MIA ETà</pattern>
     <template>
-      <get name="age" />
+      <get name="age"/>
     </template>
   </category>
   <category>
-    <pattern>LA MIA ETà è * * </pattern>
+    <pattern>LA MIA ETà è * *</pattern>
 	<template>
       <think>
 	      <set name="isanumber">
@@ -727,9 +715,9 @@ Ti chiamo  <get name="name" />.</template>
       </think>
       <condition name="isanumber">
         <li value="true">
-          <srai>MLA MIA ETà è <star/></srai>
+          <srai>LA MIA ETà è <star/></srai>
           <srai>
-            <star index="2" />
+            <star index="2"/>
           </srai>
         </li>
         <li>Quanti anni hai?</li>
@@ -753,9 +741,9 @@ Ti chiamo  <get name="name" />.</template>
             </set>
           </think>
           <random>
-            <li> L età è un problema del pensiero verso l' importanza.Se non ci pensi, non importa</li>
-            <li>L età considera, la gioventù rischia.</li>
-            <li> L' età è il caro prezzo che si paga per la maturità. </li>
+            <li> L'età è un problema del pensiero verso l'importanza.Se non ci pensi, non importa.</li>
+            <li>L'età considera, la gioventù rischia.</li>
+            <li> L'età è il caro prezzo che si paga per la maturità.</li>
           </random>
         </li>
       </condition>
@@ -764,7 +752,7 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>MIL MIO INDIRIZZO</pattern>
     <template>
-      <get name="address" />
+      <get name="address"/>
     </template>
   </category>
   <category>
@@ -772,9 +760,9 @@ Ti chiamo  <get name="name" />.</template>
     <template>è un posto carino? <think><set name="address"><star/></set></think></template>
   </category>
   <category>
-    <pattern>MIO FIGLIO SI CHIAMA  *</pattern>
+    <pattern>MIO FIGLIO SI CHIAMA *</pattern>
     <template>
-    	Mi ricorderò che  <star/> è tuo figlio.  
+    	Mi ricorderò che <star/> è tuo figlio.  
     	<think><set name="son"><star/></set></think>
     	<think><set name="he"><set name="topic"><star/></set></set></think>
     </template>
@@ -782,7 +770,7 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>LA MIA RESIDENZA</pattern>
     <template>
-      <get name="residence" />
+      <get name="residence"/>
     </template>
   </category>
   <category>
@@ -796,7 +784,7 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>IL MIO SESSO</pattern>
     <template>
-      <get name="gender" />
+      <get name="gender"/>
     </template>
   </category>
   <category>
@@ -806,7 +794,7 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>MY RELIGION</pattern>
     <template>
-      <get name="religion" />
+      <get name="religion"/>
     </template>
   </category>
   <category>
@@ -820,33 +808,33 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>LA MIA STRADA</pattern>
     <template>
-      <get name="road" />
+      <get name="road"/>
     </template>
   </category>
   <category>
     <pattern>IL MIO NOME</pattern>
     <template>
-      <get name="firstname" />
+      <get name="firstname"/>
     </template>
   </category>
   <category>
     <pattern>IL MIO NOME é *</pattern>
-    <template> Preferisci che ti chiamino col tuo nome o con il tuo cognome?<think><set name="firstname"><star/></set></think></template>
+    <template>Preferisci che ti chiamino col tuo nome o con il tuo cognome?<think><set name="firstname"><star/></set></think></template>
   </category>
   <category>
-    <pattern>IL MIO NOME *</pattern>
-    <that>* NOME O COGNOME</that>
+    <pattern>PER NOME</pattern>
+    <that>PREFERISCI CHE TI CHIAMINO *</that>
     <template>
       <srai>CHIAMAMI PER NOME</srai>
     </template>
   </category>
   <category>
     <pattern>DOVE LAVORO</pattern>
-    <template>Hai detto che lavori alla <get name="employer" />.</template>
+    <template>Hai detto che lavori alla <get name="employer"/>.</template>
   </category>
   <category>
     <pattern>DOVE VIVO</pattern>
-    <template>Hai detto che era <get name="residence" />?</template>
+    <template>Hai detto che era <get name="residence"/>?</template>
   </category>
   <category>
     <pattern>IL SUO NOME é *</pattern>
@@ -855,7 +843,7 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>ESSO</pattern>
     <template>
-      <get name="it" />?</template>
+      <get name="it"/>?</template>
   </category>
   <category>
     <pattern>ESSO è UN*</pattern>
@@ -864,62 +852,62 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>ARGOMENTO</pattern>
     <template>
-      <get name="topic" />?</template>
+      <get name="topic"/>?</template>
   </category>
   <category>
     <pattern>LA CARATTERISTICA RICHIEDE *</pattern>
     <template>
-    	Non sono in grado di   <lowercase><star/></lowercase>ancora.  
+    	Non sono in grado di <lowercase><star/></lowercase> ancora.  
     	<think><set name="featurerequest"><star/></set></think> 
     	 Preferiresti sottomettere questa caratteristica agli sviluppatori?
     </template>
   </category>
   <category>
     <pattern>CHI è MIO FRATELLO</pattern>
-    <template>Avevi detto che era <get name="brother" />.</template>
+    <template>Avevi detto che era <get name="brother"/>.</template>
   </category>
   <category>
     <pattern>CHI è IL MIO AMICOD</pattern>
-    <template>Avevi menzionato <get name="friend" />.</template>
+    <template>Avevi menzionato <get name="friend"/>.</template>
   </category>
   <category>
     <pattern>LEI</pattern>
     <template>
-      <get name="she" />?</template>
+      <get name="she"/>?</template>
   </category>
   <category>
     <pattern>CHIAMAMI PER COGNOME</pattern>
     <template>
-      <srai>CHIAMAMI <get name="firstname" /></srai>
+      <srai>CHIAMAMI <get name="lastname"/></srai>
     </template>
   </category>
   <category>
     <pattern>CHIAMAMI PER NOME</pattern>
     <template>
-      <srai>CHIAMAMI <get name="firstname" /></srai>
+      <srai>CHIAMAMI <get name="firstname"/></srai>
     </template>
   </category>
   <category>
     <pattern>CHIAMAMI *</pattern>
     <template>
-      <srai> RANDOM INTRO</srai>
+      <srai>RANDOM INTRO</srai>
       <formal>
         <star/>
       </formal>
       <think>
         <srai>STABILISCI IL SESSO DAL NOME<star/></srai>
-        <set name="tmpname">
+        <!--<set name="tmpname">
           <formal>
             <star/>
           </formal>
         </set>.
-		<set name="firstname"><get name="name" /></set>
+		<set name="firstname"><get name="name"/></set>-->
 	  </think>
         <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<star name="name"/>")</param>
+            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"<star name="name"/>","lastUsername",u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname",u"<star/>"), i01_chatBot.setPredicate(u"<star/>","firstname",u"<star/>"), i01_chatBot.setPredicate(u"<star/>","name",u"<star/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<star/>"), takeMyPicture(u"<star/>"), i01_chatBot.setPredicate(u"<star/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"<star/>","img",u"../ProgramAB/<star/>.png"), i01_chatBot.savePredicates(), memorisePerson(u"<star/>"), i01_chatBot.startSession(u"<star name="name"/>")</param>
           </mrl>
         </oob>
     </template>
@@ -933,15 +921,15 @@ Ti chiamo  <get name="name" />.</template>
       </formal>.
 	  <think>
 	  	<srai>STABILISCI IL SESSO DAL NOME <star/></srai>
-	  	<set name="tmpname"><formal><star/><star index="2" /></formal></set>.
+	  	<!--<set name="tmpname"><formal><star/><star index="2"/></formal></set>.
 		<set name="firstname"><formal><star/></formal></set>
-		<set name="lastname"><formal><star index="2" /></formal></set>
+		<set name="lastname"><formal><star index="2"/></formal></set>-->
 	  </think>
         <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<star name="name"/>")</param>
+            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"<star name="name"/>","lastUsername",u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname",u"<star/>"), i01_chatBot.setPredicate(u"<star/>","firstname",u"<star/>"), i01_chatBot.setPredicate(u"<star/>","name",u"<star/>"), i01_chatBot.setPredicate(u"<star/>","lastname",u"<star index="2"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<star/>"), takeMyPicture(u"<star/>"), i01_chatBot.setPredicate(u"<star/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"<star/>","img",u"../ProgramAB/<star/>.png"), i01_chatBot.savePredicates(), YesName(u"<star/>"), i01_chatBot.startSession(u"<star name="name"/>")</param>
           </mrl>
         </oob>
 	</template>
@@ -953,33 +941,33 @@ Ti chiamo  <get name="name" />.</template>
       <star/>
       <think>
         <srai>SET GENDER FROM NAME <star/></srai>
-        <set name="tmpname">
+        <!--<set name="tmpname">
           <formal>
             <star/>
-            <star index="2" />
-            <star index="3" />
+            <star index="2"/>
+            <star index="3"/>
           </formal>
         </set>.
 		<set name="firstname"><formal><star/></formal></set>
-		<set name="middlename"><formal><star index="2" /></formal></set>
-		<set name="lastname"><formal><star index="3" /></formal></set>
+		<set name="middlename"><formal><star index="2"/></formal></set>
+		<set name="lastname"><formal><star index="3"/></formal></set>-->
 	  </think>
         <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_chatBot.startSession(u"<star name="name"/>")</param>
+            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"<star name="name"/>","lastUsername",u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname",u"<star/> <star index="2"/> <star index="3"/>"), i01_chatBot.setPredicate(u"<star/>","firstname",u"<star/>"), i01_chatBot.setPredicate(u"<star/>","middlename",u"<star index="2"/>"), i01_chatBot.setPredicate(u"<star/>","lastname",u"<star index="3"/>"), i01_chatBot.setPredicate(u"<star/>","name",u"<star/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<star/>"), takeMyPicture(u"<star/>"), i01_chatBot.setPredicate(u"<star/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"<star/>","img",u"../ProgramAB/<star/>.png"), i01_chatBot.savePredicates(), YesName(u"<star/>"), i01_chatBot.startSession(u"<star name="name"/>")</param>
           </mrl>
         </oob>
     </template>
   </category>
   <category>
-    <pattern>NOI </pattern>
+    <pattern>NOI</pattern>
     <template>
-      <get name="we" />?</template>
+      <get name="we"/>?</template>
   </category>
   <category>
-    <pattern>L ARGOMENTO é *</pattern>
+    <pattern>L'ARGOMENTO é *</pattern>
     <template>
       <random>
         <li>Certo, <person /> é un buon argomento.</li>
@@ -996,7 +984,7 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>LORO</pattern>
     <template>
-      <get name="them" />?</template>
+      <get name="them"/>?</template>
   </category>
   <category>
     <pattern>RANDOM INTRO</pattern>
@@ -1027,12 +1015,12 @@ Ti chiamo  <get name="name" />.</template>
   <category>
     <pattern>LORO</pattern>
     <template>
-      <get name="them" />?</template>
+      <get name="them"/>?</template>
   </category>
   <category>
     <pattern>SALVA I PREDICATI</pattern>
     <template>
-      <srai>SET PREDICATES <get name="meta" /></srai>
+      <srai>SET PREDICATES <get name="meta"/></srai>
     </template>
   </category>
   <category>
@@ -1133,17 +1121,16 @@ Ti chiamo  <get name="name" />.</template>
       </think>
     </template>
   </category>
-  <category>
-    <pattern>CAMBIA IL TUO NOME</pattern>
-    <template>Come vuoi che cambi il mio nome?</template>
+  <category><pattern>CAMBIA IL TUO NOME</pattern>
+  <template><srai>NEW_INIT</srai></template>
   </category>
   <category>
     <pattern>QUANDO CADE IL MIO COMPLEANNO</pattern>
-    <template>Avevi detto che era il <get name="birthday" />?</template>
+    <template>Avevi detto che era il <get name="birthday"/>?</template>
   </category>
   <category>
     <pattern>NOME</pattern>
-    <that>* NOME O COGNOME</that>
+    <that>PREFERISCI CHE TI CHIAMINO *</that>
     <template>
       <srai>CHIAMAMI PER NOME</srai>
     </template>
@@ -1161,7 +1148,7 @@ Ti chiamo  <get name="name" />.</template>
       <think>
         <set name="gender">
           <lowercase>
-            <get name="gender" />
+            <get name="gender"/>
           </lowercase>
         </set>
       </think> 
@@ -1178,35 +1165,35 @@ Ti chiamo  <get name="name" />.</template>
   </category>
   <category>
     <pattern>CHE NOME HA MIA MOGLIE</pattern>
-    <template>Tu hai detto che si chiama <get name="wife" />.</template>
+    <template>Tu hai detto che si chiama <get name="wife"/>.</template>
   </category>
   <category>
     <pattern>CHE NOME HA MIO MARITO?</pattern>
-    <template>Tu avevi detto che era<get name="husband" />.</template>
+    <template>Tu avevi detto che era<get name="husband"/>.</template>
   </category>
   <category>
     <pattern>COME SI CHIAMA MIA FIGLIA?</pattern>
-    <template>Avevi detto che si chiamava <get name="daughter" />.</template>
+    <template>Avevi detto che si chiamava <get name="daughter"/>.</template>
   </category>
   <category>
     <pattern> QUAL'è IL GUSTO DI GELATO CHE PREFERISCO</pattern>
-    <template>Avevi detto che era  <get name="favoriteicecream" />.</template>
+    <template>Avevi detto che era  <get name="favoriteicecream"/>.</template>
   </category>
   <category>
     <pattern>COME SI CHIAMA MIA MADRE</pattern>
-    <template>Avevi detto che si chiamava<get name="mother" />.</template>
+    <template>Avevi detto che si chiamava<get name="mother"/>.</template>
   </category>
   <category>
     <pattern>Qual' è il nome di mio fratello?</pattern>
-    <template>Avevi detto che era <get name="brother" />.</template>
+    <template>Avevi detto che era <get name="brother"/>.</template>
   </category>
   <category>
     <pattern>QUAL'è IL MIO INDIRIZZO</pattern>
-    <template>Avevi detto che era <get name="address" />?</template>
+    <template>Avevi detto che era <get name="address"/>?</template>
   </category>
   <category>
     <pattern>DOVE ABITO?</pattern>
-    <template>Credo che tu abiti a <get name="location" />.</template>
+    <template>Credo che tu abiti a <get name="location"/>.</template>
   </category>
   <category>
     <pattern>COGNOME</pattern><that>* NOME O COGNOME</that>
@@ -1216,281 +1203,281 @@ Ti chiamo  <get name="name" />.</template>
     <pattern>PROFILO DEL CLIENTE</pattern>
     <template>
       <condition name="address">
-        <li value="where" />
-        <li>address: <get name="address" />.</li>
+        <li value="where"/>
+        <li>address: <get name="address"/>.</li>
       </condition>
       <condition name="age">
-        <li value="how many" />
-        <li>età: <get name="age" />.</li>
+        <li value="how many"/>
+        <li>età: <get name="age"/>.</li>
       </condition>
       <condition name="bestfriend">
-        <li value="who" />
-        <li>migliore amico: <get name="bestfriend" />.</li>
+        <li value="who"/>
+        <li>migliore amico: <get name="bestfriend"/>.</li>
       </condition>
       <condition name="birthday">
-        <li value="when" />
-        <li>compleanno: <get name="birthday" />.</li>
+        <li value="when"/>
+        <li>compleanno: <get name="birthday"/>.</li>
       </condition>
       <condition name="birthplace">
-        <li value="where" />
-        <li>luogo di nascita: <get name="birthplace" />.</li>
+        <li value="where"/>
+        <li>luogo di nascita: <get name="birthplace"/>.</li>
       </condition>
       <condition name="boyfriend">
-        <li value="who" />
-        <li>il mio ragazzo: <get name="boyfriend" />.</li>
+        <li value="who"/>
+        <li>il mio ragazzo: <get name="boyfriend"/>.</li>
       </condition>
       <condition name="brother">
-        <li value="who" />
-        <li>fratello: <get name="brother" />.</li>
+        <li value="who"/>
+        <li>fratello: <get name="brother"/>.</li>
       </condition>
       <condition name="cat">
-        <li value="what" />
-        <li>gatto: <get name="cat" />.</li>
+        <li value="what"/>
+        <li>gatto: <get name="cat"/>.</li>
       </condition>
       <condition name="city">
-        <li value="which" />
-        <li>città: <get name="city" />.</li>
+        <li value="which"/>
+        <li>città: <get name="city"/>.</li>
       </condition>
       <condition name="country">
-        <li value="which" />
-        <li>nazione: <get name="country" />.</li>
+        <li value="which"/>
+        <li>nazione: <get name="country"/>.</li>
       </condition>
       <condition name="county">
-        <li value="which" />
-        <li>regione: <get name="county" />.</li>
+        <li value="which"/>
+        <li>regione: <get name="county"/>.</li>
       </condition>
       <condition name="customname">
-        <li value="unknown" />
-        <li> nome codificato: <get name="customname" />.</li>
+        <li value="unknown"/>
+        <li> nome codificato: <get name="customname"/>.</li>
       </condition>
       <condition name="daughter">
-        <li value="who" />
-        <li>figlia: <get name="daughter" />.</li>
+        <li value="who"/>
+        <li>figlia: <get name="daughter"/>.</li>
       </condition>
       <condition name="dog">
-        <li value="who" />
-        <li>cane: <get name="dog" />.</li>
+        <li value="who"/>
+        <li>cane: <get name="dog"/>.</li>
       </condition>
       <condition name="email">
-        <li value="what" />
-        <li>email: <get name="email" />.</li>
+        <li value="what"/>
+        <li>email: <get name="email"/>.</li>
       </condition>
       <condition name="employer">
-        <li value="who" />
-        <li>datore di lavoro: <get name="employer" />.</li>
+        <li value="who"/>
+        <li>datore di lavoro: <get name="employer"/>.</li>
       </condition>
       <condition name="father">
-        <li value="who" />
-        <li>padre: <get name="father" />.</li>
+        <li value="who"/>
+        <li>padre: <get name="father"/>.</li>
       </condition>
       <condition name="favoriteactor">
-        <li value="who" />
-        <li>attore preferito: <get name="favoriteactor" />.</li>
+        <li value="who"/>
+        <li>attore preferito: <get name="favoriteactor"/>.</li>
       </condition>
       <condition name="favoriteactress">
-        <li value="who" />
-        <li>attrice preferita: <get name="favoriteactress" />.</li>
+        <li value="who"/>
+        <li>attrice preferita: <get name="favoriteactress"/>.</li>
       </condition>
       <condition name="favoriteband">
-        <li value="who" />
-        <li>complesso preferito: <get name="favoriteband" />.</li>
+        <li value="who"/>
+        <li>complesso preferito: <get name="favoriteband"/>.</li>
       </condition>
       <condition name="favoritebook">
-        <li value="what" />
-        <li>libro preferito: <get name="favoritebook" />.</li>
+        <li value="what"/>
+        <li>libro preferito: <get name="favoritebook"/>.</li>
       </condition>
       <condition name="favoritecar">
-        <li value="what" />
-		<li>automobile preferita:<get name="favoritecar" />.</li>
+        <li value="what"/>
+		<li>automobile preferita:<get name="favoritecar"/>.</li>
       </condition>
       <condition name="favoritecolor">
-        <li value="what" />
-        <li>colore preferito: <get name="favoritecolor" />.</li>
+        <li value="what"/>
+        <li>colore preferito: <get name="favoritecolor"/>.</li>
       </condition>
       <condition name="favoritedrink">
-        <li value="what" />
-        <li>drink preferito: <get name="favoritedrink" />.</li>
+        <li value="what"/>
+        <li>drink preferito: <get name="favoritedrink"/>.</li>
       </condition>
       <condition name="favoritefood">
-        <li value="what" />
-        <li>piatto preferito: <get name="favoritefood" />.</li>
+        <li value="what"/>
+        <li>piatto preferito: <get name="favoritefood"/>.</li>
       </condition>
       <condition name="favoriteicecream">
-        <li value="what" />
-        <li>gelato preferito: <get name="favoriteicecream" />.</li>
+        <li value="what"/>
+        <li>gelato preferito: <get name="favoriteicecream"/>.</li>
       </condition>
       <condition name="favoritemovie">
-        <li value="what" />
-        <li>film preferito: <get name="favoritemovie" />.</li>
+        <li value="what"/>
+        <li>film preferito: <get name="favoritemovie"/>.</li>
       </condition>
       <condition name="favoritesong">
-        <li value="what" />
-        <li>canzone preferita: <get name="favoritesong" />.</li>
+        <li value="what"/>
+        <li>canzone preferita: <get name="favoritesong"/>.</li>
       </condition>
       <condition name="favoritesport">
-        <li value="what" />
-        <li>sport preferito: <get name="favoritesport" />.</li>
+        <li value="what"/>
+        <li>sport preferito: <get name="favoritesport"/>.</li>
       </condition>
       <condition name="favoritetvshow">
-        <li value="what" />
-        <li>spettacoilo preferito: <get name="favoritetvshow" />.</li>
+        <li value="what"/>
+        <li>spettacoilo preferito: <get name="favoritetvshow"/>.</li>
       </condition>
       <condition name="firstname">
-        <li value="what" />
-        <li>nome di battesimo: <get name="firstname" />.</li>
+        <li value="what"/>
+        <li>nome di battesimo: <get name="firstname"/>.</li>
       </condition>
       <condition name="friend">
-        <li value="who" />
-        <li>amico: <get name="friend" />.</li>
+        <li value="who"/>
+        <li>amico: <get name="friend"/>.</li>
       </condition>
       <condition name="gender">
-        <li value="unknown" />
-        <li>genere: <get name="gender" />.</li>
+        <li value="unknown"/>
+        <li>genere: <get name="gender"/>.</li>
       </condition>
       <condition name="girlfriend">
-        <li value="who" />
-        <li>fidanzata: <get name="girlfriend" />.</li>
+        <li value="who"/>
+        <li>fidanzata: <get name="girlfriend"/>.</li>
       </condition>
       <condition name="hair">
-        <li value="what" />
-        <li>capelli: <get name="hair" />.</li>
+        <li value="what"/>
+        <li>capelli: <get name="hair"/>.</li>
       </condition>
       <condition name="has">
-        <li value="what" />
-        <li>ha: <get name="has" />.</li>
+        <li value="what"/>
+        <li>ha: <get name="has"/>.</li>
       </condition>
       <condition name="he">
-        <li value="who" />
-        <li>lui: <get name="he" />.</li>
+        <li value="who"/>
+        <li>lui: <get name="he"/>.</li>
       </condition>
       <condition name="husband">
-        <li value="who" />
-        <li>marito: <get name="husband" />.</li>
+        <li value="who"/>
+        <li>marito: <get name="husband"/>.</li>
       </condition>
       <condition name="it">
-        <li value="what" />
-        <li>esso: <get name="it" />.</li>
+        <li value="what"/>
+        <li>esso: <get name="it"/>.</li>
       </condition>
       <condition name="lastname">
-        <li value="what" />
-        <li>cognome: <get name="lastname" />.</li>
+        <li value="what"/>
+        <li>cognome: <get name="lastname"/>.</li>
       </condition>
       <condition name="latitude">
-        <li value="which" />
-        <li>latitude: <get name="latitude" />.</li>
+        <li value="which"/>
+        <li>latitude: <get name="latitude"/>.</li>
       </condition>
       <condition name="likes">
-        <li value="what" />
-        <li>preferenze: <get name="likes" />.</li>
+        <li value="what"/>
+        <li>preferenze: <get name="likes"/>.</li>
       </condition>
       <condition name="location">
-        <li value="where" />
-        <li>posizione: <get name="location" />.</li>
+        <li value="where"/>
+        <li>posizione: <get name="location"/>.</li>
       </condition>
       <condition name="longitute">
-        <li value="which" />
-        <li>longitudine: <get name="longitute" />.</li>
+        <li value="which"/>
+        <li>longitudine: <get name="longitute"/>.</li>
       </condition>
       <condition name="middlename">
-        <li value="what" />
-        <li>secondo nome: <get name="middlename" />.</li>
+        <li value="what"/>
+        <li>secondo nome: <get name="middlename"/>.</li>
       </condition>
       <condition name="mother">
-        <li value="who" />
-        <li>madre: <get name="mother" />.</li>
+        <li value="who"/>
+        <li>madre: <get name="mother"/>.</li>
       </condition>
       <condition name="name">
-        <li value="Friend" />
-        <li>nome: <get name="name" />.</li>
+        <li value="Friend"/>
+        <li>nome: <get name="name"/>.</li>
       </condition>
       <condition name="orientation">
-        <li value="unknown" />
-        <li>orientamento: <get name="orientation" />.</li>
+        <li value="unknown"/>
+        <li>orientamento: <get name="orientation"/>.</li>
       </condition>
       <condition name="phonenumber">
-        <li value="unknown" />
+        <li value="unknown"/>
       </condition>
       <condition name="province">
-        <li value="which" />
-        <li>provincia: <get name="province" />.</li>
+        <li value="which"/>
+        <li>provincia: <get name="province"/>.</li>
       </condition>
       <condition name="religion">
-        <li value="unknown" />
-        <li>religione: <get name="religion" />.</li>
+        <li value="unknown"/>
+        <li>religione: <get name="religion"/>.</li>
       </condition>
       <condition name="residence">
-        <li value="where" />
-        <li>residenza: <get name="residence" />.</li>
+        <li value="where"/>
+        <li>residenza: <get name="residence"/>.</li>
       </condition>
       <condition name="road">
-        <li value="which" />
-        <li>strada: <get name="road" />.</li>
+        <li value="which"/>
+        <li>strada: <get name="road"/>.</li>
       </condition>
       <condition name="she">
-        <li value="who" />
-        <li>lei: <get name="she" />.</li>
+        <li value="who"/>
+        <li>lei: <get name="she"/>.</li>
       </condition>
       <condition name="sign">
-        <li value="which" />
-        <li>segno: <get name="sign" />.</li>
+        <li value="which"/>
+        <li>segno: <get name="sign"/>.</li>
       </condition>
       <condition name="sister">
-        <li value="who" />
-        <li>sorella: <get name="sister" />.</li>
+        <li value="who"/>
+        <li>sorella: <get name="sister"/>.</li>
       </condition>
       <condition name="state">
-        <li value="which" />
-        <li>stato: <get name="state" />.</li>
+        <li value="which"/>
+        <li>stato: <get name="state"/>.</li>
       </condition>
       <condition name="status">
-        <li value="what" />
-        <li>stato di famiglia: <get name="status" />.</li>
+        <li value="what"/>
+        <li>stato di famiglia: <get name="status"/>.</li>
       </condition>
       <condition name="street">
-        <li value="which" />
-        <li>via: <get name="street" />.</li>
+        <li value="which"/>
+        <li>via: <get name="street"/>.</li>
       </condition>
       <condition name="there">
-        <li value="where" />
-        <li>là: <get name="there" />.</li>
+        <li value="where"/>
+        <li>là: <get name="there"/>.</li>
       </condition>
       <condition name="them">
-        <li value="who" />
-        <li>loro: <get name="them" />.</li>
+        <li value="who"/>
+        <li>loro: <get name="them"/>.</li>
       </condition>
       <condition name="topic">
-        <li value="unknown" />
-        <li>argomento: <get name="topic" />.</li>
+        <li value="unknown"/>
+        <li>argomento: <get name="topic"/>.</li>
       </condition>
       <condition name="town">
-        <li value="which" />
-        <li>città: <get name="town" />.</li>
+        <li value="which"/>
+        <li>città: <get name="town"/>.</li>
       </condition>
       <condition name="voicemailnumber">
-        <li value="unknown" />
-        <li>numero della casella vocale: <get name="voicemailnumber" />.</li>
+        <li value="unknown"/>
+        <li>numero della casella vocale: <get name="voicemailnumber"/>.</li>
       </condition>
       <condition name="we">
-        <li value="who" />
-        <li>noi: <get name="we" />.</li>
+        <li value="who"/>
+        <li>noi: <get name="we"/>.</li>
       </condition>
       <condition name="wife">
-        <li value="who" />
-        <li>moglie: <get name="wife" />.</li>
+        <li value="who"/>
+        <li>moglie: <get name="wife"/>.</li>
       </condition>
     </template>
   </category>
   <category>
     <pattern>IL TUO NOME è *</pattern>
-    <template> OK, d' ora in poi mi puoi chiamare <star/>.
-<think><set name="customname"><star/></set></think></template>
+    <template> OK, d'ora in poi mi puoi chiamare <star/>.
+  <think><set name="customname"><star/></set></think></template>
   </category>
   <category>
     <pattern>QUANTI ANNI HO</pattern>
-	 <template>Avevi detto che avevi <get name="age" /> anni?</template>
+	 <template>Avevi detto che avevi <get name="age"/> anni?</template>
   </category>
   <category>
-    <pattern>SONO  GAY</pattern>
+    <pattern>SONO GAY</pattern>
     <template>
     	Grazie per avermelo detto.  
     	<think><set name="orientation">gay</set></think>
