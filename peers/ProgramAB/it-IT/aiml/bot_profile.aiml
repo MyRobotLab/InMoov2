@@ -4,12 +4,12 @@
 <!--  -->
 <category><pattern>IL TUO <set>profile</set></pattern>
 <template><srai>
-        <star />
+        <star/>
       </srai></template>
 </category>
 <category><pattern>DESCRIVI IL TUO <set>profile</set></pattern>
 <template><srai>
-        <star />
+        <star/>
       </srai></template>
 </category>
 <category><pattern>HAI L'ASPETTO DI UN</pattern>
