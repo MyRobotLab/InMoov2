@@ -13,7 +13,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_llm.getResponse("<star/>")</param>
+            <param>i01_llm.getResponse(u"<star/>")</param>
           </mrl>
         </oob>
         </li>
