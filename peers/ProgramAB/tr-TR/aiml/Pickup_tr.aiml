@@ -35,7 +35,20 @@
 	
 <!--   -->
  
-<category> <pattern>*</pattern>  <template> <srai>RANDOM MALZEME ÇEKME SATIRI</srai> <think> <set name="it"> <set name="topic"> <person/>  </set> </set> <srai>PUSH <get name="topic"/></srai> </think> </template> </category> 
+<category><pattern>*</pattern>
+<template><think> <set name="it"> <set name="topic"> <person/>  </set> </set> <srai>PUSH <get name="topic"/></srai> </think>
+      <condition name="llm">
+        <li value="enabled">
+        <sraix><star/></sraix>
+        </li>
+        <li>
+        <srai>RANDOM MALZEME ÇEKME SATIRI</srai>
+        </li>
+      </condition></template>
+</category>
+
+ 
+<!--<category> <pattern>*</pattern>  <template> <srai>RANDOM MALZEME ÇEKME SATIRI</srai> <think> <set name="it"> <set name="topic"> <person/>  </set> </set> <srai>PUSH <get name="topic"/></srai> </think> </template> </category>--> 
 <category> <pattern>RANDOM MALZEME ÇEKME SATIRI</pattern>  
 <template> 
 <random> 
