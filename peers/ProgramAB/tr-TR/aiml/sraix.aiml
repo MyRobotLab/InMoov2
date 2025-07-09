@@ -12,7 +12,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_llm.onText("<star/>")</param>
+            <param>i01_llm.onText(u"<star/>")</param>
           </mrl>
         </oob>
         </li>
