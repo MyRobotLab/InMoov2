@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: sraix.aiml -->
+<!--  -->
+<category><pattern>SRAIXFAILED *</pattern>
+<template><condition name="llm">
+        <li value="enabled"><img src="../Llm.png"/>
+        <think>
+          <set name="topic"><star/></set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_llm.onText("<star/>")</param>
+          </mrl>
+        </oob>
+        </li>
+        <li>
+        <random>
+        <li>Cevabı bilmiyorum.</li>
+        <li>Can simidimi kullanarak başka bir robota sordum ama o bilmiyordu.</li>
+      </random>
+        </li>
+      </condition>
+        </template>
+</category>
+
+</aiml>
