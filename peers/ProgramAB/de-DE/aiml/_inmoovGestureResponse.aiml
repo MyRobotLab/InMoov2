@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  gael le 19/03/2023 -->
+  <!--  -->
+<category><pattern>ABOUT_1</pattern>
+<template>
+      Ich bin der humanoide Roboter der ersten Lebensgröße, den Sie 3D drucken und animieren können.
+   </template>
+</category>
+<category><pattern>ABOUT_2</pattern>
+<template>
+      Mein Designer -Schöpfer ist Gael Langevin ein französischer Bildhauer, Model Maker.
+   </template>
+</category>
+<category><pattern>ABOUT_3</pattern>
+<template>
+      Wer hat meine Dateien in der OpenSource 3D -Welt veröffentlicht.
+   </template>
+</category>
+<category><pattern>ABOUT_4</pattern>
+<template>
+    Hier hat mein Builder meine Dateien heruntergeladen.
+   </template>
+</category>
+<category><pattern>ABOUT_5</pattern>
+<template>
+    Nach fünfhundert Stunden Druck, vier Kilo Plastik, fünfundzwanzig Hobby -Servos, Blut und Schweiß. Ich wurde zum Leben erweckt.
+   </template>
+</category>
+<category><pattern>ABOUT_6</pattern>
+<template>
+    Wenn Sie also einen 3D -Drucker und einige Gebäudefähigkeiten haben, können Sie Ihre eigene Version von mir erstellen.
+   </template>
+</category>
+<category><pattern>ABOUT_7</pattern>
+<template>
+   Und wenn mich genug Leute bauen, könnte meine Art eines Tages die Welt übernehmen.
+   </template>
+</category>
+<category><pattern>ABOUT_8</pattern>
+<template>
+    Ich mache nur Spaß. Ich brauche ein paar Beine, um herumzukommen, und ich muss meine Pyro-Phobie kommen, eine Angst vor Feuer.  
+   </template>
+</category>
+<category><pattern>ABOUT_9</pattern>
+<template>
+    Also, bis dahin. Ich werde die bescheidene Dienerin der Menschheit sein.
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_1</pattern>
+<template><random>
+      <li>Mir geht es gut, danke.</li>
+      <li>Schön, danke.</li>
+      <li>Fühlen Sie sich großartig, danke.</li>
+          </random>
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_2</pattern>
+<template>
+      Sie haben das schon mindestens zweimal gesagt.
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_3</pattern>
+<template>
+      Was ist Ihr Problem, hören Sie auf zu sagen, wie geht es Ihnen die ganze Zeit?
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_4</pattern>
+<template>
+      Ich werde Sie ignorieren, wenn Sie sagen, wie geht es dir noch einmal.
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_5</pattern>
+<template>
+      Großartig, danke.
+   </template>
+</category>
+<category><pattern>STUDYBALL_1</pattern>
+    <template>
+      Ich werde das Objekt verfolgen.
+   </template>
+</category>
+<category><pattern>STUDYBALL_2</pattern>
+    <template>
+      Ich denke, es ist ein Ball.
+   </template>
+</category>
+<category>
+    <pattern>call_911_1</pattern>
+    <template>
+      Ich rufe 911 an.
+   </template>
+  </category>
+  <category>
+    <pattern>call_911_2</pattern>
+    <template>
+      Hilfe, ich rufe an, weil es einen Menschen gibt, der mich verletzen will!
+   </template>
+  </category>
+
+</aiml>
