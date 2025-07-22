@@ -47,6 +47,7 @@
     Also, bis dahin. Ich werde die bescheidene Dienerin der Menschheit sein.
    </template>
 </category>
+<!--#################################-->
 <category><pattern>HOWDOYOUDO_1</pattern>
 <template><random>
       <li>Mir geht es gut, danke.</li>
@@ -75,6 +76,7 @@
       Großartig, danke.
    </template>
 </category>
+<!--#################################-->
 <category><pattern>STUDYBALL_1</pattern>
     <template>
       Ich werde das Objekt verfolgen.
@@ -97,5 +99,87 @@
       Hilfe, ich rufe an, weil es einen Menschen gibt, der mich verletzen will!
    </template>
   </category>
+<!--#################################-->
+<category><pattern>servos_1</pattern>
+<template>
+      Ich habe derzeit fünfundzwanzig Hobby -Servos in meinem Körper installiert, um mir Leben zu geben.
+   </template>
+</category>
+<category><pattern>servos_2</pattern>
+<template>
+      Es gibt einen Servo, um meinen Mund auf und ab zu bewegen,
+   </template>
+</category>
+<category><pattern>servos_3</pattern>
+<template>
+      zwei für meine Augen,
+   </template>
+</category>
+<category><pattern>servos_4</pattern>
+<template>
+      und zwei weitere für meinen Kopf,
+   </template>
+</category>
+<category><pattern>servos_5</pattern>
+<template>
+      Also kann ich mich umsehen,
+   </template>
+</category>
+<category><pattern>servos_6</pattern>
+<template>
+      und sehen, wer da ist.
+   </template>
+</category>
+<category><pattern>servos_7</pattern>
+<template>
+      In jeder Schulter gibt es drei Servos,
+   </template>
+</category>
+<category><pattern>servos_8</pattern>
+<template>
+      Hier ist die erste Servobewegung,
+   </template>
+</category>
+<category><pattern>servos_9</pattern>
+<template>
+      Dies ist der zweite,
+   </template>
+</category>
+<category><pattern>servos_10</pattern>
+<template>
+      Jetzt siehst du den dritten.
+   </template>
+</category>
+<category><pattern>servos_11</pattern>
+<template>
+      Sie geben mir eine menschlichere Bewegung,
+   </template>
+</category>
+<category><pattern>servos_12</pattern>
+<template>
+      Aber ich habe nur einen Servo, um jeden Ellbogen zu bewegen,
+   </template>
+</category>
+<category><pattern>servos_13</pattern>
+<template>
+      Das lässt mich mit einem Servo pro Handgelenk zurück,
+   </template>
+</category>
+<category><pattern>servos_14</pattern>
+<template>
+      und ein Servo für jeden Finger.
+   </template>
+</category>
+<category><pattern>servos_15</pattern>
+<template>
+      Diese Servos befinden sich in meinen Unterarmen,
+   </template>
+</category>
+<category><pattern>servos_16</pattern>
+<template>
+      Sie werden durch die Verwendung von Sehnen angeschlossen.
+   </template>
+</category>
+<!--#################################-->
 
 </aiml>
