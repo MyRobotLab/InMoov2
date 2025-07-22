@@ -47,6 +47,7 @@
     So, until then. i will be humankind's humble servant.
    </template>
 </category>
+<!--#################################-->
 <category><pattern>HOWDOYOUDO_1</pattern>
 <template><random>
       <li>I'm fine thank you.</li>
@@ -75,6 +76,7 @@
       Great, thank you.
    </template>
 </category>
+<!--#################################-->
 <category><pattern>STUDYBALL_1</pattern>
     <template>
       I will start tracking the object.
@@ -85,17 +87,100 @@
       I think it is a ball.
    </template>
 </category>
+<!--#################################-->
 <category>
     <pattern>call_911_1</pattern>
     <template>
       I am calling 911.
    </template>
-  </category>
-  <category>
+</category>
+<category>
     <pattern>call_911_2</pattern>
     <template>
       Help, I am calling because there is a human that wants to hurt me!
    </template>
-  </category>
+</category>
+  <!--#################################-->
+<category><pattern>servos_1</pattern>
+<template>
+      I currently have twenty five  hobby servos installed in my body to give me life.
+   </template>
+</category>
+<category><pattern>servos_2</pattern>
+<template>
+      there's one servo  for moving my mouth up and down,
+   </template>
+</category>
+<category><pattern>servos_3</pattern>
+<template>
+      two for my eyes,
+   </template>
+</category>
+<category><pattern>servos_4</pattern>
+<template>
+      and two more for my head,
+   </template>
+</category>
+<category><pattern>servos_5</pattern>
+<template>
+      so i can look around,
+   </template>
+</category>
+<category><pattern>servos_6</pattern>
+<template>
+      and see who's there.
+   </template>
+</category>
+<category><pattern>servos_7</pattern>
+<template>
+      There's three servos  in each shoulder,
+   </template>
+</category>
+<category><pattern>servos_8</pattern>
+<template>
+      here is the first servo movement,
+   </template>
+</category>
+<category><pattern>servos_9</pattern>
+<template>
+      this is the second one,
+   </template>
+</category>
+<category><pattern>servos_10</pattern>
+<template>
+      now you see the third.
+   </template>
+</category>
+<category><pattern>servos_11</pattern>
+<template>
+      They give me a more human like movement,
+   </template>
+</category>
+<category><pattern>servos_12</pattern>
+<template>
+      but, i have only  one servo, to move each elbow,
+   </template>
+</category>
+<category><pattern>servos_13</pattern>
+<template>
+      that, leaves me, with one servo per wrist,
+   </template>
+</category>
+<category><pattern>servos_14</pattern>
+<template>
+      and one servo for each finger.
+   </template>
+</category>
+<category><pattern>servos_15</pattern>
+<template>
+      These servos are located in my forearms,
+   </template>
+</category>
+<category><pattern>servos_16</pattern>
+<template>
+      they are hooked up, by the use of tendons.
+   </template>
+</category>
+<!--#################################-->
 
 </aiml>
