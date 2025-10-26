@@ -1022,7 +1022,7 @@
 </category>
 <category><pattern>MEMORIZE THIS PERSON</pattern>
 <template><srai>ZAPOMNITE SI TO OSEBO</srai></template>
-</category
+</category>
 <category><pattern>ZAPOMNITE SI TO OSEBO</pattern>
 <template>V redu, katero ime naj si zapomnim za to osebo.
     <think>
