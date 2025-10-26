@@ -223,6 +223,8 @@ def describeImage(prompt):
       cfg.defaultImagePrompt = u"Sempre responda em português. O que você vê?"
     if runtime.getLocale().getTag() == ru:
       cfg.defaultImagePrompt = u"Всегда отвечайте на русском языке. Что ты видишь?"
+    if runtime.getLocale().getTag() == sl:
+      cfg.defaultImagePrompt = u"Vedno odgovori v slovenščini. Kaj je ta slika?"   
     if runtime.getLocale().getTag() == tr:
       cfg.defaultImagePrompt = u"Daima Türkçe yanıt verin. Ne görüyorsun?"        
     if cfg.url == None or cfg.url == "http://localhost:11434/api/generate" or cfg.url == "http://localhost:11434/v1/chat/completions":
@@ -248,5 +250,6 @@ def describeImage(prompt):
     sleep(0.1)
     opencv.stopCapture()
   
+
 
 
