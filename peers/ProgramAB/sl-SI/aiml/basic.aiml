@@ -5,6 +5,7 @@
     <template>
       <srai>apphappy</srai>
       <random>
+        <li>Hi </li>
         <li>Zdravo </li>
         <li>Hej </li>
       </random>
@@ -189,4 +190,5 @@
       <template>Upam, da ni resno. Obstaja pregovor, ki pravi, da s časom vse mine. Ne vem pa, če je res.</template>
     </category>
   </topic>
+
 </aiml>
