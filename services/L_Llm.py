@@ -9,6 +9,7 @@ it = 'it-IT'
 nl = 'nl-NL'
 pl = 'pl-PL'
 pt = 'pt-PT'
+sl = 'sl-SI'
 ru = 'ru-RU'
 tr = 'tr-TR'
 def initLlm():
@@ -247,4 +248,5 @@ def describeImage(prompt):
     sleep(0.1)
     opencv.stopCapture()
   
+
 
