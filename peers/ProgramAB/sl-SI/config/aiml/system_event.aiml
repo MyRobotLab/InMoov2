@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+<category>
+<pattern>SYSTEM_EVENT WAKE</pattern>
+<template><srai>WAKE UP</srai></template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT INIT</pattern>
+<template>Inicializacijske skripte</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT CONFIG LOADED</pattern>
+<template>Konfiguracija je naložena
+<srai>BOOTUP</srai></template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED *</pattern>
+<template>Začetek <lowercase><star/></lowercase>
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED *</pattern>
+<template>Ustavljanje <lowercase><star/></lowercase>
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT LOAD GESTURES</pattern>
+<template>nalaganje potez
+</template>
+</category>
+  
+<category>
+<pattern>SYSTEM_EVENT STARTED RIGHTARM</pattern>
+<template>Začetek desne roke
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED RIGHTARM</pattern>
+<template>Zaustavitev desne roke
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED LEFTARM</pattern>
+<template>Začetek leve roke
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED LEFTARM</pattern>
+<template>Zaustavitev leve roke
+</template>
+</category>  
+
+<category>
+<pattern>SYSTEM_EVENT STARTED HTMLFILTER</pattern>
+<template>Zagon filtra za usta
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED HTMLFILTER</pattern>
+<template>Filter za zapiranje ust
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED LOG</pattern>
+<template>Zagon storitve dnevnika
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED LOG</pattern>
+<template>Zaustavitev storitve dnevnika
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED LLM</pattern>
+<template>Zagon velikega jezikovnega modela
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED LLM</pattern>
+<template>Zaustavitev velikega jezikovnega modela
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED MOUTH AUDIOFILE</pattern>
+<template>Zvočna datoteka z usti
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED MOUTH AUDIOFILE</pattern>
+<template>Zvočna datoteka z zapiranjem ust
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED IMAGEDISPLAY</pattern>
+<template>Zagon storitve prikaza slik
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED IMAGEDISPLAY</pattern>
+<template>Ustavitev storitve prikaza slike
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED OAKD</pattern>
+<template>Začetek oak
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED OAKD</pattern>
+<template>Ustavljanje oak
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED OPENCV</pattern>
+<template>Začetna vizija
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED OPENCV</pattern>
+<template>Zaustavitev vida
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED PIR</pattern>
+<template>Zagon senzorja gibanja
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED PIR</pattern>
+<template>Zaustavitev senzorja gibanja
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED PCA9685</pattern>
+<template>Začetek pca 9685
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED PCA9685</pattern>
+<template>Ustavljanje pca 9685
+</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED CHATBOT</pattern>
+<template>Klepetalni robot je naložen, lahko zaženem druge komponente, počakajte.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT CONFIGSTARTED</pattern>
+<template>Konfiguracija se je začela.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT CONFIG STARTED *</pattern>
+<template>Konfiguracija <star/> začela.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT CONFIG LOADED *</pattern>
+<template>Konfiguracija <star/> naloženo.
+<srai>BOOTUP</srai></template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED LEFT HAND SENSOR</pattern>
+<template>Levi senzor za zagon.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED RIGHT HAND SENSOR</pattern>
+<template>Zagon desnega senzorja.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED LEFT HAND SENSOR</pattern>
+<template>Zaustavitev levega senzorja.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED RIGHT HAND SENSOR</pattern>
+<template>Zaustavitev desnega senzorja.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED LEFT</pattern>
+<template>Zagon levega krmilnika.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED RIGHT</pattern>
+<template>Zagon desnega krmilnika.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STARTED PLATFORM</pattern>
+<template>Začetna plošča</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT STOPPED PLATFORM</pattern>
+<template>Plošča za zaustavitev</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT SHUTDOWN</pattern>
+<template>Zapiranje mojega robotskega laboratorija, počakajte 10 sekund.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT SHUTDOWNCOMPLETE</pattern>
+<template>Zaustavitev računalnika, počakajte na postopek.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT GESTURE_ERROR</pattern>
+<template>Ne morem naložiti potez, težava je z eno od njih.</template>
+</category>
+
+<category>
+<pattern>SYSTEM_EVENT LOAD SCRIPTS ERROR</pattern>
+<template>Ne morem naložiti skriptov, težava je z enim od njih.</template>
+</category>
+
+</aiml>

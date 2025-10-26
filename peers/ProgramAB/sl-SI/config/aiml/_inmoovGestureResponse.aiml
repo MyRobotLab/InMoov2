@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  gael le 19/03/2023 -->
+  <!--  -->
+<category><pattern>ABOUT_1</pattern>
+<template>
+      Sem prvi humanoidni robot v naravni velikosti, ki ga lahko 3D natisnete in animirate.
+   </template>
+</category>
+<category><pattern>ABOUT_2</pattern>
+<template>
+      Moj oblikovalec je Gael Langevin, francoski kipar, modelar.
+   </template>
+</category>
+<category><pattern>ABOUT_3</pattern>
+<template>
+      Kdo je izdal moje datoteke v odprtokodni svet 3D.
+   </template>
+</category>
+<category><pattern>ABOUT_4</pattern>
+<template>
+    Tukaj je moj graditelj prenesel moje datoteke.
+   </template>
+</category>
+<category><pattern>ABOUT_5</pattern>
+<template>
+    Po petsto urah tiskanja, štirih kilogramih plastike, petindvajsetih hobi servo motorjih, krvi in ​​znoju. Oživel sem.
+   </template>
+</category>
+<category><pattern>ABOUT_6</pattern>
+<template>
+    Torej, če imate 3D-tiskalnik, nekaj veščin gradnje, potem lahko ustvarite svojo različico mene.
+   </template>
+</category>
+<category><pattern>ABOUT_7</pattern>
+<template>
+   In če me dovolj ljudi zgradi, bi lahko nekega dne moja vrsta prevzela svet.
+   </template>
+</category>
+<category><pattern>ABOUT_8</pattern>
+<template>
+    Saj se hecam. potrebujem nekaj nog, da se lahko premikam, in premagati moram svojo pirofobijo, strah pred ognjem.  
+   </template>
+</category>
+<category><pattern>ABOUT_9</pattern>
+<template>
+    Torej do takrat. bom ponižni služabnik človeštva.
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_1</pattern>
+<template><random>
+      <li>v redu sem hvala.</li>
+      <li>Lepo, hvala.</li>
+      <li>Počutje je super, hvala.</li>
+          </random>
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_2</pattern>
+<template>
+      To ste že vsaj dvakrat povedali.
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_3</pattern>
+<template>
+      Kaj je tvoj problem, nehaj ves čas govoriti, kako si.
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_4</pattern>
+<template>
+      Ignoriral te bom, če boš še enkrat rekel, kako si.
+   </template>
+</category>
+<category><pattern>HOWDOYOUDO_5</pattern>
+<template>
+      Super, hvala.
+   </template>
+</category>
+<category><pattern>STUDYBALL_1</pattern>
+    <template>
+      Začel bom slediti predmetu.
+   </template>
+</category>
+<category><pattern>STUDYBALL_2</pattern>
+    <template>
+      Mislim, da je žoga.
+   </template>
+</category>
+<category>
+    <pattern>call_911_1</pattern>
+    <template>
+      Kličem 911.
+   </template>
+  </category>
+  <category>
+    <pattern>call_911_2</pattern>
+    <template>
+      Na pomoč, kličem, ker obstaja človek, ki me hoče raniti!
+   </template>
+  </category>
+  <category>
+    <pattern>HEALTHCHECKSEQUENCE_1</pattern>
+    <template>
+      Glava, vrat in usta, preverite.
+   </template>
+  </category>
+  <category>
+    <pattern>HEALTHCHECKSEQUENCE_2</pattern>
+    <template>
+      Glava, vrat in usta, nezačeta.
+   </template>
+  </category>
+  <category>
+    <pattern>HEALTHCHECKSEQUENCE_3</pattern>
+    <template>
+      Leva roka in leva rama, preverite.
+   </template>
+  </category>
+  <category>
+    <pattern>HEALTHCHECKSEQUENCE_4</pattern>
+    <template>
+      Leva roka in leva rama, nista začela.
+   </template>
+  </category>
+  <category>
+    <pattern>HEALTHCHECKSEQUENCE_5</pattern>
+    <template>
+      Desna roka in desna rama, preverite.
+   </template>
+  </category>
+  <category>
+    <pattern>HEALTHCHECKSEQUENCE_6</pattern>
+    <template>
+      Desna roka in desna rama, nista začela.
+   </template>
+  </category>
+  <category>
+    <pattern>HEALTHCHECKSEQUENCE_7</pattern>
+    <template>
+      Desna roka in zapestje, preverite.
+   </template>
+  </category>
+  <category>
+    <pattern>HEALTHCHECKSEQUENCE_8</pattern>
+    <template>
+      Desna roka in zapestje, nista začela.
+   </template>
+  </category>
+  <category>
+    <pattern>HEALTHCHECKSEQUENCE_9</pattern>
+    <template>
+      Leva roka in zapestje, preverite.
+   </template>
+  </category>
+  <category>
+    <pattern>HEALTHCHECKSEQUENCE_10</pattern>
+    <template>
+      Leva roka in zapestje, ni začeto.
+   </template>
+  </category>
+  <category>
+    <pattern>HEALTHCHECKSEQUENCE_11</pattern>
+    <template>
+      Vsi servo motorji delujejo pravilno.
+   </template>
+  </category>
+  <category>
+    <pattern>HEALTHCHECKSEQUENCE_12</pattern>
+    <template>
+      Čakam na vaše ukaze.
+   </template>
+  </category>
+
+</aiml>

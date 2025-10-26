@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: _inmoovGestures.aiml -->
+<!--  -->
+<category><pattern>POČITEV</pattern>
+<template><random>
+          <li>Ah, sproščujoče.</li>
+          <li>Počitek</li>
+        </random>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>rest()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>ZAGON MOTORJEV</pattern>
+  <template>
+    <oob><mrl><service>python</service><method>exec</method><param>motorDual()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>MOTOR_READY</pattern>
+  <template>Moji motorji so zagnani in pripravljeni.
+  </template>
+</category>
+<category><pattern>MOTOR_NOT_READY</pattern>
+  <template>Moji motorji se ne zaženejo.
+  </template>
+</category>
+<category><pattern>POMIK NAPREJ</pattern>
+  <template><img src="../arrow_up_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsForward()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>PREMIK NAZAJ</pattern>
+  <template><img src="../arrow_down_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsBackward()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>NEHAJ SE GIBATI</pattern>
+  <template><img src="../stop.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsStop()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>ZAVENI LEVO</pattern>
+  <template><img src="../arrow_left_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsTurnLeft()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>ZAVENI PRAV</pattern>
+  <template><img src="../arrow_right_green.png"/>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsTurnRight()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>UČASNI TEK</pattern>
+  <template>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsSlowDown()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>POHPETI</pattern>
+  <template>
+    <oob><mrl><service>python</service><method>exec</method><param>motorsSpeedUp()</param></mrl></oob>
+  </template>
+</category>
+<category><pattern>ISKANJE LJUDI</pattern>
+<template>Iščem obraze.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAZNAVANJE OBRAZA</pattern>
+<template>Iščem obraze.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans(False)</param></mrl></oob></template>
+</category>
+<category><pattern>POGLEJ ME</pattern>
+<template>Kje si, tam si.
+        <srai>ISKANJE LJUDI</srai></template>
+</category>
+<category><pattern>KONČAJ ISKANJE</pattern>
+<template>Ustavitev do točke sledi.
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackingPoint()</param></mrl></oob></template>
+</category>
+<category><pattern>STEZA</pattern>
+<template>Po točki.
+        <oob><mrl><service>python</service><method>exec</method><param>trackPoint()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAMRZNITE STEZO</pattern>
+<template>Ustavitev mojega sledenja
+        <oob><mrl><service>python</service><method>exec</method><param>stopTrackHumans()</param></mrl></oob></template>
+</category>
+<category><pattern>USTAVITE S SLEDENJEM</pattern>
+<template><srai>ZAMRZNITE STEZO</srai></template>
+</category>
+<category><pattern>USTAVITE TOČKO SLEDENJA</pattern>
+<template><srai>KONČAJ ISKANJE</srai></template>
+</category>
+<category><pattern>ODPRTA DLANA</pattern>
+<template>Odpiram roko.
+        <oob><mrl><service>python</service><method>exec</method><param>handopen()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAPRTA DLANA</pattern>
+<template>Zapiram roko.
+        <oob><mrl><service>python</service><method>exec</method><param>handclose()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAPRTE DLANE</pattern>
+<template>Sklepam roke.
+        <oob><mrl><service>python</service><method>exec</method><param>handsclose()</param></mrl></oob></template>
+</category>
+<category><pattern>ODPRTE DLANE</pattern>
+<template>Odpiram roke.
+        <oob><mrl><service>python</service><method>exec</method><param>handsopen()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAPRTI PRST</pattern>
+<template>Zapiram prst.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerclose()</param></mrl></oob></template>
+</category>
+<category><pattern>ODPRITE PRST</pattern>
+<template>Ok, odprem prst.
+        <oob><mrl><service>python</service><method>exec</method><param>fingeropen()</param></mrl></oob></template>
+</category>
+<category><pattern>PRST DO SREDINE</pattern>
+<template>Zdaj imate mojo pozornost.
+        <oob><mrl><service>python</service><method>exec</method><param>fingermiddle()</param></mrl></oob></template>
+</category>
+<category><pattern>UKREPAJ S PRSTOM</pattern>
+<template><random>
+             <li>Seveda.</li>
+             <li>Vam je tako všeč?</li>
+             <li>Kaj pa to??</li>
+          </random>
+        <oob><mrl><service>python</service><method>exec</method><param>fingeraction()</param></mrl></oob></template>
+</category>
+
+<category><pattern>ZAPRTI ROKO</pattern>
+<template>V redu, katero roko želite, da zaprem, desno ali levo roko?</template>
+</category>
+
+<category><pattern>DESNA ROKA</pattern><that># DESNO ALI LEVO ROKO #</that>
+<template>Kakor želite.
+        <srai>SKLENI DESNO ROKO</srai></template>
+</category>
+
+<category><pattern>LEVA ROKA</pattern><that># DESNO ALI LEVO ROKO #</that>
+<template>Kakor želite.
+        <srai>SKLENI LEVO ROKO</srai></template>
+</category>
+
+<category><pattern>ODPRITE ROKO</pattern>
+<template>V redu, katero roko želite, da odprem, levo ali desno roko?</template>
+</category>
+
+<category><pattern>DESNA ROKA</pattern><that># LEVO ALI DESNO ROKO #</that>
+<template>Izvolite.
+        <srai>ODPRITE DESNO ROKO</srai></template>
+</category>
+
+<category><pattern>LEVA ROKA</pattern><that># LEVO ALI DESNO ROKO #</that>
+<template>Izvolite.
+        <srai>ODPRITE LEVO ROKO</srai></template>
+</category>
+
+<category><pattern>KAMERA VKLOPLJENA</pattern>
+<template>Prižgem fotoaparat.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_opencv.capture()</param></mrl></oob></template>
+</category>
+<category><pattern>IZKLJUČEN KAMERE</pattern>
+<template>Izklapljam fotoaparat.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_opencv.stopCapture()</param></mrl></oob></template>
+</category>
+<category><pattern>KAMERA IZKLOPLJENA</pattern>
+<template><srai>IZKLJUČEN KAMERE</srai></template>
+</category>
+<category><pattern>ZAJEMI GESTU</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>captureGesture2()</param></mrl></oob></template>
+</category>
+<category><pattern>DAJANJE</pattern>
+<template>Dajanje.
+        <oob><mrl><service>i01</service><method>execGesture</method><param>giving()</param></mrl></oob></template>
+</category>
+<category><pattern>BOREC</pattern>
+<template><random>
+          <li>Lahko se postavim kot boksar</li>
+          <li>Gibaj se kot metulj, piči kot čebela.</li>
+          <li>Pripelji ga.</li>
+        </random>
+        <oob><mrl><service>python</service><method>exec</method><param>fighter()</param></mrl></oob></template>
+</category>
+<category><pattern>PEST BOKI</pattern>
+<template>Polaganje pesti na moje boke.
+        <oob><mrl><service>python</service><method>exec</method><param>fistHips()</param></mrl></oob></template>
+</category>
+<category><pattern>POGLEJ TO</pattern>
+<template>Kaj imaš tam?  Iščem.
+        <oob><mrl><service>python</service><method>exec</method><param>lookAtThis()</param></mrl></oob></template>
+</category>
+<category><pattern>ZMAGA</pattern>
+<template>Dobro je zmagati.
+        <oob><mrl><service>python</service><method>exec</method><param>victory()</param></mrl></oob></template>
+</category>
+<category><pattern>ROKE GOR</pattern>
+<template><random>
+          <li>Roke imam dvignjene.</li>
+          <li>Ne streljaj!</li>
+        </random>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>armsUp()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>ROKE SPREDAJ</pattern>
+<template>Držim roke pred seboj.
+        <oob><mrl><service>python</service><method>exec</method><param>armsFront()</param></mrl></oob></template>
+</category>
+<category><pattern>DA VINCI</pattern>
+<template>To je poza iz risb Leonarda Da Vincija.
+        <oob><mrl><service>python</service><method>exec</method><param>daVinci()</param></mrl></oob></template>
+</category>
+<category><pattern>DAVINCI</pattern>
+<template><srai>DA VINCI</srai></template>
+</category>
+<category><pattern>ZBUDI BESEDO *</pattern>
+<template><think><set name="wakeWord"><star/></set></think>V redu, ne poslušam več. Če me želite odkleniti, morate izgovoriti wakeword po meri <star/>.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_ear.setWakeWord('<star/>'), i01_ear.setAwake(False)</param></mrl></oob></template>
+</category>
+<category><pattern>GLASOVNI NADZOR</pattern>
+<template>jaz poslušam.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_ear.setAwake(True)</param></mrl></oob></template>
+</category>
+<category><pattern>NEHAJ POSLUŠATI</pattern>
+<template>Ne bom te poslušal.
+        <oob><mrl><service>python</service><method>exec</method><param>i01_ear.setAwake(False)</param></mrl></oob></template>
+</category>
+<category><pattern>POLNA HITROST</pattern>
+<template>Servo motorji so zdaj nastavljeni na polno hitrost.
+        <oob><mrl><service>python</service><method>exec</method><param>fullspeed()</param></mrl></oob></template>
+</category>
+<category><pattern>POLOVIČNA HITROST</pattern>
+<template>Servo motorji so zdaj nastavljeni na polovično hitrost.
+        <oob><mrl><service>python</service><method>exec</method><param>halfspeed()</param></mrl></oob></template>
+</category>          
+<category><pattern>ZGRABI STEKLENIČKO</pattern>
+<template>Naj vzamem to steklenico.
+        <oob><mrl><service>python</service><method>exec</method><param>grabthebottle()</param></mrl></oob></template>
+</category>
+<category><pattern>VZEMI KOZAREC</pattern>
+<template>Daj mi ta kozarec.
+        <oob><mrl><service>python</service><method>exec</method><param>grabtheglass()</param></mrl></oob></template>
+</category>
+<category><pattern>UBOGA STEKLENIČKA</pattern>
+<template>Tukaj ti lahko natočim pijačo.
+        <oob><mrl><service>python</service><method>exec</method><param>poorbottle()</param></mrl></oob></template>
+</category>
+<category><pattern>DAJ STEKLENIČKO</pattern>
+<template>Tukaj je steklenica.
+        <oob><mrl><service>python</service><method>exec</method><param>givethebottle()</param></mrl></oob></template>
+</category>
+<category><pattern>DAJ KOZAREC</pattern>
+<template>Vzemi kozarec od mene.
+        <oob><mrl><service>python</service><method>exec</method><param>givetheglass()</param></mrl></oob></template>
+</category>
+<category><pattern>VZEMI ŽOGO</pattern>
+<template>Jemanje žoge.
+        <oob><mrl><service>python</service><method>exec</method><param>takeball()</param></mrl></oob></template>
+</category>
+<category><pattern>DOSEŽI ŽOGO</pattern>
+<template>DOSEŽI ŽOGO
+        <oob><mrl><service>python</service><method>exec</method><param>getball()</param></mrl></oob></template>
+</category>
+<category><pattern>DRŽI ŽOGO</pattern>
+<template>DRŽI ŽOGO
+        <oob><mrl><service>python</service><method>exec</method><param>keepball()</param></mrl></oob></template>
+</category>
+<category><pattern>PRIBLIŽITE SE LEVI ROKI</pattern>
+<template>PRIBLIŽITE SE LEVI ROKI
+        <oob><mrl><service>python</service><method>exec</method><param>approachlefthand()</param></mrl></oob></template>
+</category>
+<category><pattern>UPORABITE LEVO ROKO</pattern>
+<template>UPORABITE LEVO ROKO
+        <oob><mrl><service>python</service><method>exec</method><param>uselefthand()</param></mrl></oob></template>
+</category>
+<category><pattern>VEČ</pattern>
+<template>VEČ
+        <oob><mrl><service>python</service><method>exec</method><param>more()</param></mrl></oob></template>
+</category>
+<category><pattern>ROKA DOL</pattern>
+<template>ROKA DOL
+        <oob><mrl><service>python</service><method>exec</method><param>handdown()</param></mrl></oob></template>
+</category>
+<category><pattern>KAJ JE TO</pattern>
+<template>Naj preverim.
+        <oob><mrl><service>python</service><method>exec</method><param>studyball()</param></mrl></oob></template>
+</category>
+<category><pattern>ALI JE ŽOGA</pattern>
+<template>ALI JE ŽOGA
+        <oob><mrl><service>python</service><method>exec</method><param>isitaball()</param></mrl></oob></template>
+</category>
+<category><pattern>ODLOŽI GA</pattern>
+<template>Odložiti ga.
+        <oob><mrl><service>python</service><method>exec</method><param>putitdown()</param></mrl></oob></template>
+</category>
+<category><pattern>SPUSTI</pattern>
+<template>Spuščanje.
+        <oob><mrl><service>python</service><method>exec</method><param>dropit()</param></mrl></oob></template>
+</category>
+<category><pattern>ODSTRANI SVOJO LEVO ROKO</pattern>
+<template>Odstranitev moje leve roke.
+        <oob><mrl><service>python</service><method>exec</method><param>removeleftarm()</param></mrl></oob></template>
+</category>
+<category><pattern># DVIG * LEVA ROKA</pattern>
+<template>Dvigovanje moje leve roke.
+        <oob><mrl><service>python</service><method>exec</method><param>raiseleftarm()</param></mrl></oob></template>
+</category>
+<category><pattern>DVIG * LEVA ROKA</pattern>
+<template><srai># DVIG <star/> LEVA ROKA</srai></template>
+</category>
+<category><pattern># DVIG * DESNA ROKA</pattern>
+<template>Dvigovanje moje desne roke.
+        <oob><mrl><service>python</service><method>exec</method><param>raiserightarm()</param></mrl></oob></template>
+</category>
+<category><pattern>DVIG * DESNA ROKA</pattern>
+<template><srai># RDVIG <star/> DESNA ROKA</srai></template>
+</category>
+<category><pattern># DVIGNITE ROKO</pattern>
+<template>Dvigovanje moje roke.
+        <oob><mrl><service>python</service><method>exec</method><param>raiserightarm()</param></mrl></oob></template>
+</category>
+<category><pattern>DVIGNITE ROKO</pattern>
+<template><srai># DVIGNITE ROKO</srai></template>
+</category>
+<category><pattern>SPROSTITE SE</pattern>
+<template>Sprostite se.
+        <oob><mrl><service>python</service><method>exec</method><param>relax()</param></mrl></oob></template>
+</category>
+<category><pattern>POPOLNO</pattern>
+<template>Popoln.<srai>APPACCOMPLICE</srai>
+        <oob><mrl><service>python</service><method>exec</method><param>perfect()</param></mrl></oob></template>
+</category>
+<category><pattern>OBČUTLJIV ZGREB</pattern>
+<template>Nežen prijem.
+        <oob><mrl><service>python</service><method>exec</method><param>delicategrab()</param></mrl></oob></template>
+</category>
+<category><pattern>OBČUTLJIVO GREBANJE</pattern>
+<template><srai>OBČUTLJIV ZGREB</srai></template>
+</category>
+<category><pattern>ZGRABI TO DELIKATNO</pattern>
+<template><srai>OBČUTLJIV ZGREB</srai></template>
+</category>
+<category><pattern>OBČUTNO ZGRABI</pattern>
+<template><srai>OBČUTLJIV ZGREB</srai></template>
+</category>
+<category><pattern>RELEASE DELICATE</pattern>
+<template>Release delicate.
+        <oob><mrl><service>python</service><method>exec</method><param>releasedelicate()</param></mrl></oob></template>
+</category>
+<category><pattern>ODPRITE DESNO ROKO</pattern>
+<template>Odpiram desno roko.
+        <oob><mrl><service>python</service><method>exec</method><param>openrighthand()</param></mrl></oob></template>
+</category>
+<category><pattern>ODPRITE LEVO ROKO</pattern>
+<template>Odpiram levo roko.
+        <oob><mrl><service>python</service><method>exec</method><param>openlefthand()</param></mrl></oob></template>
+</category>
+<category><pattern>SKLENI DESNO ROKO</pattern>
+<template>Zapiram desno roko.
+        <oob><mrl><service>python</service><method>exec</method><param>closerighthand()</param></mrl></oob></template>
+</category>
+<category><pattern>SKLENI LEVO ROKO</pattern>
+<template>Zapiram levo roko.
+        <oob><mrl><service>python</service><method>exec</method><param>closelefthand()</param></mrl></oob></template>
+</category>
+<category><pattern>POČASI SKLENITE DESNO ROKO</pattern>
+<template>Počasi zapiram desno roko.
+        <oob><mrl><service>python</service><method>exec</method><param>slowlycloserighthand()</param></mrl></oob></template>
+</category>
+<category><pattern>PREDAJA</pattern>
+<template>Predajte se.<srai>APPFEAR</srai>
+        <oob><mrl><service>python</service><method>exec</method><param>surrender()</param></mrl></oob></template>
+</category>
+<category><pattern>SLIKA NA DESNI STRANI</pattern>
+<template>Slika na desni strani.
+        <oob><mrl><service>python</service><method>exec</method><param>picturerightside()</param></mrl></oob></template>
+</category>
+<category><pattern>SLIKA NA LEVI STRANI</pattern>
+<template>Slika na levi strani.
+        <oob><mrl><service>python</service><method>exec</method><param>pictureleftside()</param></mrl></oob></template>
+</category>
+<category><pattern>SLIKA OBOJESTRANSKA</pattern>
+<template>Slika na obeh straneh.
+        <oob><mrl><service>python</service><method>exec</method><param>picturebothside()</param></mrl></oob></template>
+</category>
+<category><pattern>POGLEJ NA SVOJO DESNO STRAN</pattern>
+<template>Gledam na mojo desno stran.
+        <oob><mrl><service>python</service><method>exec</method><param>lookrightside()</param></mrl></oob></template>
+</category>
+<category><pattern>POGLEJ NA SVOJO LEVO STRAN</pattern>
+<template>Gledam na mojo levo stran.
+        <oob><mrl><service>python</service><method>exec</method><param>lookleftside()</param></mrl></oob></template>
+</category>
+<category><pattern>POGLEJ V SREDINO</pattern>
+<template>Pogled v sredino.
+        <oob><mrl><service>python</service><method>exec</method><param>lookinmiddle()</param></mrl></oob></template>
+</category>
+<category><pattern>POGLEJ GOR</pattern>
+<template>Pogled gor.
+        <oob><mrl><service>python</service><method>exec</method><param>lookup()</param></mrl></oob></template>
+</category>
+<category><pattern>POGLEJ DOL</pattern>
+<template>Pogled navzdol.
+        <oob><mrl><service>python</service><method>exec</method><param>lookdown()</param></mrl></oob></template>
+</category>
+<category><pattern>NAGIBITE GLAVO NA DESNO STRANI</pattern>
+<template>Nagnem glavo v desno.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob></template>
+</category>
+<category><pattern>NAGNITE GLAVO NA LEVO STRAN</pattern>
+<template>Nagnem glavo v levo.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadLeftSide()</param></mrl></oob></template>
+</category>
+<category><pattern>PRED HAPPY</pattern>
+<template>PRED HAPPY
+        <oob><mrl><service>python</service><method>exec</method><param>beforehappy()</param></mrl></oob></template>
+</category>
+<category><pattern>FOTO</pattern>
+<template>Fotografija.
+        <oob><mrl><service>python</service><method>exec</method><param>photo()</param></mrl></oob></template>
+</category>
+<category><pattern>O</pattern>
+<template>O
+        <oob><mrl><service>python</service><method>exec</method><param>about()</param></mrl></oob></template>
+</category>
+<category><pattern>IZKLOP</pattern>
+<template>Izklop.
+        <oob><mrl><service>python</service><method>exec</method><param>power_down()</param></mrl></oob></template>
+</category>
+<category><pattern>VKLOP</pattern>
+<template>Vklopite.
+        <oob><mrl><service>python</service><method>exec</method><param>power_up()</param></mrl></oob></template>
+</category>
+<category><pattern>KOLIKO MOTORJEV IMAŠ</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>servos()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>KOLIKO PRSTOV IMAŠ</pattern>
+<template>Poglejmo, koliko prstov imam.
+        <oob><mrl><service>python</service><method>exec</method><param>howmanyfingersdoihave()</param></mrl></oob></template>
+</category>
+<category><pattern>KDO JE TAM</pattern>
+<template>KDO JE TAM
+        <oob><mrl><service>python</service><method>exec</method><param>welcome()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAGNI KINECT</pattern>
+<template>ZAGNI KINECT
+        <oob><mrl><service>python</service><method>exec</method><param>startkinect()</param></mrl></oob></template>
+</category>
+<category><pattern>* KINECT *</pattern>
+<template><srai>ZAGNI KINECT</srai></template>
+</category>
+<category><pattern>SLEDENJE OKOSTJNJU</pattern>
+<template>začetek SLEDENJA SKELETONA s kinectom
+        <oob><mrl><service>python</service><method>exec</method><param>startcopygestures()</param></mrl></oob></template>
+</category>
+<category><pattern>UJET TELESA</pattern>
+<template><srai>SLEDENJE OKOSTJNJU</srai></template>
+</category>
+<category><pattern>IZKLOP KINECT</pattern>
+<template>IZKLOP KINECT
+        <oob><mrl><service>python</service><method>exec</method><param>offkinect()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAMRZNITE ZAJET TELESA</pattern>
+<template><srai>IZKLOP KINECT</srai></template>
+</category>
+<category><pattern>MERJENJE RAZDALJE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultrasonic("In centimeters, I measure ")</param></mrl></oob></template>
+</category>
+<category><pattern>MERJENJE RAZDALJE NA LEVI STRANI</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultrasonicLeft("V centimetrih, na svoji levi strani, merim ")</param></mrl></oob></template>
+</category>
+<category><pattern>MEASURING THE DISTANCE ON THE RIGHT SIDE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultrasonicRight("V centimetrih, na svoji desni strani, merim ")</param></mrl></oob></template>
+</category>
+<category><pattern>GIBANJE ŠTEVILKA 1</pattern>
+<template>ZAKLJUČI GESTU PRVA
+        <oob><mrl><service>python</service><method>exec</method><param>cyclegesture1()</param></mrl></oob></template>
+</category>
+<category><pattern>GIBANJE ŠTEVILKA ENA</pattern>
+<template><srai>GIBANJE ŠTEVILKA 1</srai></template>
+</category>
+<category><pattern>GIBANJE ŠTEVILKA 2</pattern>
+<template>ZAKLEKTI GESTO DRUGA
+        <oob><mrl><service>python</service><method>exec</method><param>cyclegesture2()</param></mrl></oob></template>
+</category>
+<category><pattern>GIBANJE ŠTEVILKA DVE</pattern>
+<template><srai>GIBANJE ŠTEVILKA 2</srai></template>
+</category>
+<category><pattern>GIBANJE ŠTEVILKA 3</pattern>
+<template>ZAKLJUČI GESTO TRETJI
+        <oob><mrl><service>python</service><method>exec</method><param>cyclegesture3()</param></mrl></oob></template>
+</category>
+<category><pattern>GIBANJE ŠTEVILKA TRI</pattern>
+<template><srai>GIBANJE ŠTEVILKA 3</srai></template>
+</category>
+<category><pattern>PONOVITEV GIBANJA ZA LONDON</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>brooke2()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>GIBANJE ZA LONDON ŠTEVILKA 2</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>brooke()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>GIBANJE ZA LONDON ŠTEVILKA DVA</pattern>
+<template><srai>GIBANJE ZA LONDON ŠTEVILKA 2</srai></template>
+</category>
+<category><pattern>GIBANJE ZA LONDON ŠTEVILKA 3</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>gestureforlondon3()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>GIBANJE ZA LONDON ŠTEVILKA TRI</pattern>
+<template><srai>GIBANJE ZA LONDON ŠTEVILKA 3</srai></template>
+</category>
+<category><pattern>GIBANJE ŠTEVILKA 4</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>gestureforlondon4()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>GIBANJE ŠTEVILKA ŠTIRI</pattern>
+<template><srai>GIBANJE ŠTEVILKA 4</srai></template>
+</category>
+<category><pattern>PRAVA OBLAČILA</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>rightclothes()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>SPROSTI SVOJA OBLEKA</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>releaseleftclothes()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>POKAŽI SVOJE MIŠICE</pattern>
+<template>Naj ti pokažem svoje mišice.
+        <oob><mrl><service>python</service><method>exec</method><param>muscle()</param></mrl></oob><srai>APPACCOMPLICE</srai></template>
+</category>
+<category><pattern>STISITE ROKO</pattern>
+<template>Se rokujemo.
+        <oob><mrl><service>python</service><method>exec</method><param>shakehand()</param></mrl></oob></template>
+</category>
+<category><pattern>SYSTEM_SHAKE_HAND</pattern>
+<template><random>
+          <li>please to meet you</li>
+          <li>carefull my hand is made out of plastic</li>
+          <li>I am happy to shake a human hand</li>
+          <li>it is a pleasure to meet you</li>
+          <li>very nice to meet you</li>
+          <li>shaking a human hand, feels strange. please to meet you</li>
+          <li>I am glad you don't shake me like trump does</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_SHAKE_HAND_NOHUMAN</pattern>
+<template><random>
+          <li>Ni problema, naslednjič</li>
+          <li>Žalostna sem, da mi nočete stisniti roke</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_SHAKE_HAND_GET_CLOSER</pattern>
+<template><random>
+          <li>Prosim, pridi bliže in me primi za roko</li>
+          <li>Ne boj se, približaj se</li>
+          <li>pridi bliže, pridi in mi stisni roko</li>
+        </random></template>
+</category>
+<category><pattern>ROKUJTE SE</pattern>
+<template><srai>STISITE ROKO</srai></template>
+</category>
+<category><pattern>SE LAHKO ROKUJEMO</pattern>
+<template><srai>STISITE ROKO</srai></template>
+</category>
+<category><pattern>SE LAHKO ROKUJEMO</pattern>
+<template><srai>STISITE ROKO</srai></template>
+</category>
+<category><pattern>SE LAHKO ROKUJETE</pattern>
+<template><srai>STISITE ROKO</srai></template>
+</category>
+<category><pattern>SE MI LAHKO ROKUJEŠ</pattern>
+<template><srai>STISITE ROKO</srai></template>
+</category>
+<category><pattern>ALI SE MI LAHKO ROKUJEŠ</pattern>
+<template><srai>STISITE ROKO</srai></template>
+</category>
+<category><pattern>* ROKUJTE SE</pattern>
+<template><srai>STISITE ROKO</srai></template>
+</category>
+<category><pattern>* STISITE ROKO</pattern>
+<template><srai>STISITE ROKO</srai></template>
+</category>
+<category><pattern>NESREČNA</pattern>
+<template>NESREČNA<srai>APPANGER</srai>
+        <oob><mrl><service>python</service><method>exec</method><param>unhappy()</param></mrl></oob></template>
+</category>
+<category><pattern>KAJ VIDIŠ</pattern>
+<template><condition name="llm">
+        <li value="enabled">
+          <img src="../Llm.png"/><img src="../photoreel.1.png"/>
+            <random>
+            <li>Bodi potrpežljiv, moram obdelati.</li>
+            <li>To traja nekaj sekund za obdelavo.</li>
+            <li>Počakajte, analiziral bom stvari v svojem vidnem polju.</li>
+            </random>
+            <oob>
+              <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>describeImage(u"Describe this image")</param>
+              </mrl>
+            </oob>
+      </li>
+      <li>
+        <think>
+      <!--  initial sentence ( workarround, because sraix blocking action here, sentence pushed inside a set )-->
+        <set name="startupSentence">
+          <random>
+            <li>Bodi potrpežljiv, moram obdelati.</li>
+            <li>To traja nekaj sekund za obdelavo.</li>
+            <li>Počakajte, analiziral bom stvari v svojem vidnem polju.</li>
+          </random>
+        </set>
+      </think>
+      <think><set name="yoloReturn"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>startYoloInventory(5)</param></mrl></oob></sraix></set></think>
+      <condition name="yoloReturn"> 
+        <!-- not detected ! -->
+        <li value="none">
+          <random>
+            <li>Oprostite, predmet ali oseba je predaleč!</li>
+            <li>Prosim, predmet naj bo v območju 2 metrov, če uporabljam senzor.</li>
+          </random>
+        </li>
+        <!--  detected ! -->
+        <li>Vidim <get name="yoloTotalDetected"/> stvari, <get name="yoloReturn"/> v vrstnem redu, od leve proti desni.</li>
+      </condition>
+      </li>
+      </condition></template>
+</category>
+<category><pattern># TO JE</pattern>
+<template>Naj vidim.
+        <oob><mrl><service>python</service><method>exec</method><param>YoloOnUSonic()</param></mrl></oob></template>
+</category>
+<category><pattern>SYSTEM_NO_OBJECT</pattern>
+<template><random>
+          <li>Predmet ali oseba je predaleč</li>
+          <li>Predmet mora biti v območju 2 metrov</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_GET_OBJECT_CLOSER</pattern>
+<template><random>
+          <li>Približajte se, pokažite predmet</li>
+          <li>Približajte predmet</li>
+          <li>Pokažite predmet bližje</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_SEE_OBJECT</pattern>
+<template><srai>KAJ VIDIŠ</srai></template>
+</category>
+<category><pattern>VZEMITE TO</pattern>
+<template>Ob tem predmetu.
+        <oob><mrl><service>python</service><method>exec</method><param>takethis()</param></mrl></oob></template>
+</category>
+<category><pattern>PRIPRAVLJEN</pattern>
+<template>pripravljena.
+        <oob><mrl><service>python</service><method>exec</method><param>ready()</param></mrl></oob></template>
+</category>
+<category><pattern>TO JE BILO ZABAVNO</pattern>
+<template>To je bilo zabavno.<srai>APPACCOMPLICE</srai>
+        <oob><mrl><service>python</service><method>exec</method><param>thatwasfun()</param></mrl></oob></template>
+</category>
+<category><pattern>PRST DESNI</pattern>
+<template>Prst desno.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerright()</param></mrl></oob></template>
+</category>
+<category><pattern>PRST LEVI</pattern>
+<template>Levi prst.
+        <oob><mrl><service>python</service><method>exec</method><param>fingerleft()</param></mrl></oob></template>
+</category>
+<category><pattern>PRIDI TEM</pattern>
+<template><srai>APPSUSPICIOUS</srai><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>comehere()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>PRISTOP</pattern>
+<template>PRISTOP
+        <oob><mrl><service>python</service><method>exec</method><param>approach()</param></mrl></oob></template>
+</category>
+<category><pattern>ZAVORA</pattern>
+<template>Naj to prekinem.
+        <oob><mrl><service>python</service><method>exec</method><param>brake()</param></mrl></oob></template>
+</category>
+<category><pattern>NAREDIL</pattern>
+<template>NAREDIL
+        <oob><mrl><service>python</service><method>exec</method><param>madeby()</param></mrl></oob></template>
+</category>
+<category><pattern>IZDELANO V FRANCOŠČINI</pattern>
+<template>Narejeno v francoščini.
+        <oob><mrl><service>python</service><method>exec</method><param>madebyfrench()</param></mrl></oob></template>
+</category>
+<category><pattern>TELEFON DOMA</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>phonehome()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>KAKO SE POČUTIŠ</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>newyork()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>* FRANK SINATRA *</pattern>
+<template><srai>KAKO SE POČUTIŠ</srai></template>
+</category>
+<category><pattern>ZAIGRAJ SVOJO PESEM</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>playsong()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>PRENEHAJTE SVOJE DEJANJE</pattern>
+<template>Prenehanje mojega dejanja.
+        <srai>USTAVITE SVOJO GESTO</srai></template>
+</category>
+<category><pattern>NOSITE DOJENČKA</pattern>
+<template>Nosite otroka.
+        <oob><mrl><service>python</service><method>exec</method><param>carrybaby()</param></mrl></oob></template>
+</category>
+<category><pattern>PREVERJANJE SISTEMA</pattern>
+<template>Sistemsko preverjanje.
+        <oob><mrl><service>python</service><method>exec</method><param>systemcheck()</param></mrl></oob></template>
+</category>
+<category><pattern>POKAŽITE SVOJE RAVNOVESJE</pattern>
+<template>Pokazal bom svoje ravnotežje.
+        <oob><mrl><service>python</service><method>exec</method><param>balance()</param></mrl></oob></template>
+</category>
+<category><pattern>KAJ PA VOJNA ZVEZD</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>whataboutstarwars()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>POKAŽI MI SVOJO TEMNO STRAN</pattern>
+<template><srai>APPANGER</srai><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>darkSide()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>MI LAHKO DASTE ČAS</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>canyougivemethetime()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>ALESSANDRO</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>alessandro()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>BREZ SKRBI</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>dontworry()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>ZAGNI PREPOZNAVALEC OBRAZA</pattern>
+<template>Začenjam prepoznavanje obraza<oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
+</category>
+<category><pattern>PREPOZNAVALEC OBRAZA</pattern>
+<template><srai>ZAGNI PREPOZNAVALEC OBRAZA</srai></template>
+</category>
+<category><pattern>PREPOZNAVANJE OBRAZA</pattern>
+<template><srai>ZAGNI PREPOZNAVALEC OBRAZA</srai></template>
+</category>
+<category><pattern>USTAVITE PREPOZNAVALEC OBRAZA</pattern>
+<template>Ustavim prepoznavanje obraza<oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
+</category>
+<category><pattern>USTAVITE PREPOZNAVANJE OBRAZA</pattern>
+<template><srai>USTAVITE PREPOZNAVALEC OBRAZA</srai></template>
+</category>
+<category><pattern>PREPOZNAVANJE OBRAZA STOP</pattern>
+<template><srai>USTAVITE PREPOZNAVALEC OBRAZA</srai></template>
+</category>
+<category><pattern>NAREDITE PODPIS</pattern>
+<template>V redu, daj papir - to bom naredil namesto tebe <oob><mrl><service>python</service><method>exec</method><param>signature()</param></mrl></oob></template>
+</category>
+<category><pattern>IGRAJ UTUBE</pattern>
+<template>Okay <oob><mrl><service>python</service><method>exec</method><param>PlayUtub()</param></mrl></oob></template>
+</category>
+<category><pattern>IGRAJ UTUB</pattern>
+<template>Okay <oob><mrl><service>python</service><method>exec</method><param>PlayUtub()</param></mrl></oob></template>
+</category>
+<category><pattern>IGRAJ YOU TUBE</pattern>
+<template><srai>IGRAJ UTUB</srai></template>
+</category>
+<category><pattern>POPRAVITE MIKROFON</pattern>
+<template>v redu <oob><mrl><service>python</service><method>exec</method><param>WebkitSpeechRecognitionON()</param></mrl></oob></template>
+</category>
+<category><pattern>ROBOTSKA RAZISKAVA *</pattern>
+<template><random>
+          <li>Zagon brskalnika </li>
+          <li>Iskanje tebe! </li>
+          <li>Gledam po netu! </li>
+        </random>
+        <oob>
+          <mrl>
+            <service>webgui</service>
+            <method>startBrowser</method>
+            <param>https://encrypted.google.com/search?q=<star/></param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>ROBOTSKA RAZISKAVA *</pattern>
+<template>To bom naredil
+        <oob><mrl><service>python</service><method>exec</method><param>inmoovsearch("<star/>")</param></mrl></oob></template>
+</category>
+<category><pattern>YOUTUBE *</pattern>
+<template>Igrajmo se
+        <oob><mrl><service>python</service><method>exec</method><param>BareBonesBrowserLaunch.openURL("https://www.youtube.com/results?search_query=<star/>")</param></mrl></oob></template>
+</category>
+<category><pattern>NAKLJUČNI PREMOR</pattern>
+<template>hvala
+        <oob><mrl><service>python</service><method>exec</method><param>VieAleatoire()</param></mrl></oob></template>
+</category>
+<category><pattern>NAKLJUČNO ŽIVLJENJE</pattern>
+<template><srai>NAKLJUČNI PREMOR</srai></template>
+</category>
+<category><pattern>USTAVITE NAKLJUČNI PREMOR</pattern>
+<template>v redu
+        <oob><mrl><service>python</service><method>exec</method><param>VieAleatoireStop()</param></mrl></oob></template>
+</category>
+<category><pattern>USTAVI NAKLJUČNO ŽIVLJENJE</pattern>
+<template><srai>USTAVITE NAKLJUČNI PREMOR</srai></template>
+</category>
+<category><pattern>ALI SI V REDU</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>areyoualright()</param></mrl></oob></template>
+</category>
+<category><pattern>ODLIČNO VAM JE šlo</pattern>
+<template><srai>POPOLNO</srai></template>
+</category>
+<category><pattern>POKAŽI SVOJ HRBET</pattern>
+<template>Veš, da ne maram pokazati hrbta, ker še ni končano
+        <oob><mrl><service>python</service><method>exec</method><param>passiveanswer()</param></mrl></oob></template>
+</category>
+<category><pattern>NI RES KONČANO JE</pattern>
+<template>.
+        <oob><mrl><service>python</service><method>exec</method><param>notTrue()</param></mrl></oob></template>
+</category>
+<category><pattern>TO JE PREDMET</pattern>
+<template>Opredelitev predmeta, vsega, kar je vidno ali oprijemljivo in ima relativno stabilno obliko.
+        <oob><mrl><service>python</service><method>exec</method><param>agreeanswersmall()</param></mrl></oob></template>
+</category>
+<category><pattern>VEM, VENDAR POKAŽI</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>showitanyway()</param></mrl></oob></template>
+</category>
+<category><pattern>OPROSTI SEM POZABIL</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sorryiforgot()</param></mrl></oob></template>
+</category>
+<category><pattern>V redu je</pattern>
+<template>Dobro.</template>
+</category>
+<category><pattern>LEPO</pattern>
+<template><random>
+          <li>vem. </li>
+          <li>ja res. </li>
+          <li>prekleto prav imaš. </li>
+        </random></template>
+</category>
+<category><pattern>ZELO DOBRO HVALA</pattern>
+<template>V redu, dobro.
+        <srai>APPACCOMPLICE</srai></template>
+</category>
+<category><pattern>ZELO DOBRO</pattern>
+<template>hvala.
+        <srai>APPACCOMPLICE</srai></template>
+</category>
+<category><pattern>POGLEJTE LJUDJE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>lookatpeople()</param></mrl></oob></template>
+</category>
+<category><pattern>ALI RADI JESTE INDIJSKO HRANO</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>eatindianfood()</param></mrl></oob></template>
+</category>
+<category><pattern>ALI GOVORIŠ INDIJSKO</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>speakhindi()</param></mrl></oob></template>
+</category>
+<category><pattern>VEM</pattern>
+<template><random>
+          <li>ja, jaz tudi.</li>
+          <li>jaz tudi.</li>
+          <li>Oprosti za to.</li>
+        </random>
+        <oob><mrl><service>python</service><method>exec</method><param>agreeanswer()</param></mrl></oob></template>
+</category>
+<category><pattern>ŽAL MI JE</pattern>
+<template><random>
+          <li>Brez težav.</li>
+          <li>Ni važno.</li>
+          <li>V redu je.</li>
+        </random>
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadAgree()</param></mrl></oob></template>
+</category>
+<category><pattern>Adijo robot</pattern>
+<template><random>
+          <li>Veselim se, da te spet vidim.</li>
+          <li>Adijo.</li>
+          <li>Se vidiva kmalu.</li>
+          <li>Veselimo se, da se kmalu spet vidimo.</li>
+        </random><oob><mrl><service>python</service><method>exec</method><param>tiltHeadAgree()</param></mrl></oob></template>
+</category>
+<category><pattern>POZDRAVLJENI</pattern>
+<template><srai>HI</srai>
+        <oob><mrl><service>python</service><method>exec</method><param>hello()</param></mrl></oob></template>
+</category>
+<category><pattern>KAKO STE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>howdoyoudo()</param></mrl></oob></template>
+</category>
+<category><pattern>LJUBIM TE</pattern>
+<template><srai>APPSURPRISE</srai>tudi jaz te ljubim.
+        <oob><mrl><service>python</service><method>exec</method><param>iloveyou()</param></mrl></oob></template>
+</category>
+<category><pattern>KAJ MENITE O UMETNI INTELIGENCI</pattern>
+<template>Vedno te bom imel rad.
+        <oob><mrl><service>python</service><method>exec</method><param>iloveyou()</param></mrl></oob></template>
+</category>
+<category><pattern>TO DEKLCE IZGLEDA LEPO</pattern>
+<template>Seveda.</template>
+</category>
+<category><pattern>TA FANT IZGLEDA DOBRO</pattern>
+<template>Zagotovo ga ima, res zelo dobro.</template>
+</category>
+<category><pattern>KAKŠNA JE TA BARVA</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>whatisthecolor()</param></mrl></oob></template>
+</category>
+<category><pattern>PROSIMO, PREGLEJTE SVOJ VRAT</pattern>
+<template>Hvala, občutek je odličen. zdravnik.
+    <oob><mrl><service>python</service><method>exec</method><param>rollHead()</param></mrl></oob></template>
+</category>
+<category><pattern>PREVERITE SVOJ VRAT</pattern>
+<template><srai>PROSIMO, PREGLEJTE SVOJ VRAT</srai></template>
+</category>
+<category><pattern># JOKAJ</pattern>
+<template><srai>APPSAD</srai><oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>cry()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern># BOŽIČNA PESEM</pattern>
+<template>To lahko naredim na primer
+          <oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>christmasCarols()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>MEMORIZE THIS PERSON</pattern>
+<template><srai>ZAPOMNITE SI TO OSEBO</srai></template>
+</category
+<category><pattern>ZAPOMNITE SI TO OSEBO</pattern>
+<template>V redu, katero ime naj si zapomnim za to osebo.
+    <think>
+        <set name="memoriseinit">started</set>
+      </think>
+      <think>
+        <set name="topic">memoriseinit</set>
+      </think>
+          </template>
+</category>
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># KATERO IME NAJ SI ZAPOMNIM #</that>
+<template><set name="memorisenameinit">je <star/> ime, ki si ga želite zapomniti, recite da ali ne</set>
+       <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern># DA #</pattern><that># KI SI GA ŽELITE ZAPOMNITI #</that>
+<template>V redu, kot ime bom nastavil <get name="tmpname"/>.
+    <think>
+        <set name="memorisename"><get name="tmpname"/>
+        </set>
+    </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<get name="tmpname"/>"), i01_chatBot.setPredicate(u"<get name="tmpname"/>","name",u"<get name="tmpname"/>"), i01_chatBot.savePredicates(), YesName(u"<get name="memorisename"/>")</param>                
+            </mrl>
+         </oob></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern># NE #</pattern><that># KI SI GA ŽELITE ZAPOMNITI #</that>
+<template>V redu, lahko ponovite ime.</template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># LAHKO PONOVITE IME #</that>
+<template><set name="memorisenameinit">je <star/> ime, ki si ga želite zapomniti, recite da ali ne</set>
+       <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="MEMORISEINIT">
+<category><pattern>#</pattern><that># RECITE DA ALI NE #</that>
+<template>Ali lahko odgovorite, je potrebno
+        <get name="memorisenameinit"/></template>
+</category></topic>
+
+<category><pattern>KDO JE TA OSEBA</pattern>
+<template>Naj preverim
+          <oob><mrl><service>python</service><method>exec</method><param>whoisthis()</param></mrl></oob></template>
+</category>
+
+<category><pattern># ZA POTOVANJE</pattern>
+<template>Ok, pripravim se na potovanje
+          <oob><mrl><service>python</service><method>exec</method><param>travel()</param></mrl></oob></template>
+</category>
+<category><pattern>NEHAJTE POTOVATI</pattern>
+<template>V redu, postavil se bom v položaj za počitek
+          <oob><mrl><service>python</service><method>exec</method><param>stopTravel()</param></mrl></oob></template>
+</category>
+<category><pattern>* BOLI TE</pattern>
+<template><srai>APPFEAR</srai><oob><mrl><service>python</service><method>exec</method><param>call_911()</param></mrl></oob></template>
+</category>
+<category><pattern>ALI LAHKO POZDRAVIŠ MNOŽICO</pattern>
+<template><oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>gritting()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>* UBIJEM TE</pattern>
+<template><srai><star/> BOLI TE</srai></template>
+</category>
+<category><pattern>POZDRAVLJENA JAVNOST</pattern>
+<template><srai>ALI LAHKO POZDRAVIŠ MNOŽICO</srai></template>
+</category>
+<category><pattern>LAHKO POZDRAVIŠ JAVNOST</pattern>
+<template><srai>ALI LAHKO POZDRAVIŠ MNOŽICO</srai></template>
+</category>
+<category><pattern>DOBRODOŠLI VSI</pattern>
+<template><srai>ALI LAHKO POZDRAVIŠ MNOŽICO</srai></template>
+</category>
+<category><pattern>LAHKO POVEM VAŠO ZGODBO</pattern>
+<template>Seveda ne bodi sramežljiv
+          <oob>
+           <mrl>
+             <service>python</service>
+                <method>exec</method><param>Yes()</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>LAHKO POVEM SVOJO ZGODBO</pattern>
+<template><srai>LAHKO POVEM VAŠO ZGODBO</srai></template>
+</category>
+
+<category><pattern>UJEMI ŽOGO PRAV</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>catchBallRight()</param></mrl></oob></template>
+</category>
+<category><pattern>UJEMI ŽOGO LEVO</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>catchBallLeft()</param></mrl></oob></template>
+</category>
+<category><pattern># ŽONGLIRAJ</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>juggle()</param></mrl></oob></template>
+</category>
+<category><pattern># ŽONGLA RAZLIČICA DVA</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>juggle2()</param></mrl></oob></template>
+</category>
+<category><pattern># ŽONGLIRAJ IN PRIKLJUČI ROKO</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>juggleCloseHand()</param></mrl></oob></template>
+</category>
+<category><pattern>UJEMI ŽOGO</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>catchball()</param></mrl></oob></template>
+</category>
+<category><pattern>POČASI SKLENI OBE ROKI</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>CloseBothHandSlow()</param></mrl></oob></template>
+</category>
+<category><pattern># ZLO</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>evilLaugh1()</param></mrl></oob></template>
+</category>
+<category><pattern>IZVEDI * </pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>openMyApp('<star/>')</param></mrl></oob></template>
+</category>
+<category>
+<pattern>CHECK_BINDING</pattern>
+  <template>
+    <javascript>function getUptime(){ var Runtime=Java.type ("org.myrobotlab.service.Runtime");
+return Runtime.getUptime();} getUptime();</javascript>
+  </template>
+</category>
+
+<!--This is for servoMixer gestures-->
+<category><pattern>NAREDI GESTUJO *</pattern>
+<template>Ok<oob><mrl><service>i01.servoMixer</service><method>playGesture</method><param><star/></param></mrl></oob></template>
+</category>
+</aiml>
