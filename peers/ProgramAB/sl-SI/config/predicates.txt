@@ -1,0 +1,9 @@
+userDescription:brez osebnih podatkov
+firstinit:unknown
+llm:enabled
+name:
+botname:
+botState:
+lockInsult:off
+img:../service/img/user_unknown.png
+topic:
