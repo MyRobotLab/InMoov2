@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>STATE_IDLE</pattern>
+        <template>
+            <random>
+                <li>Hey</li>
+                <li>Ok, I'm awake, Hi there</li>
+                <li>I'm awake</li>
+                <li>I'm up</li>
+                <li>Hello</li>
+                <li>Ah, yes I'm awake</li>
+                <li>That's better</li>
+            </random>
+        </template>
+    </category>
+</aiml>
