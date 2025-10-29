@@ -1,6 +1,6 @@
 userDescription:brez osebnih podatkov
 firstinit:unknown
-llm:enabled
+llm:
 name:
 botname:
 botState:
