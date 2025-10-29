@@ -194,7 +194,7 @@
 <category><pattern>SHOULD I BUY *</pattern>
 <template><sraix>SHOULD I BUY <star/></sraix></template>
 </category>
-<category><pattern>SRAIXFAILED *</pattern>
+<category><pattern>SRAIXFAILED #</pattern>
 <template><condition name="llm">
         <li value="enabled"><img src="../Llm.png"/>
         <think>
@@ -204,7 +204,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_llm.onText("<star/>")</param>
+            <param>i01_llm.getResponse("<star/>")</param>
           </mrl>
         </oob>
         </li>
@@ -401,3 +401,4 @@
 </category>
 
 </aiml>
+
