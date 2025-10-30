@@ -8,6 +8,10 @@
         <li>Hi </li>
         <li>Zdravo </li>
         <li>Hej </li>
+        <li>živjo</li>
+        <li>kaj se dogaja</li>
+        <li>pozdrav</li>
+        <li>gospod</li>
       </random>
       <condition>
         <li name="name" value="human">

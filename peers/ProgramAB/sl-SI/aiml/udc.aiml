@@ -27,6 +27,9 @@
         <li>
           <srai>INQUIRY LOCATION</srai>
         </li>
+        <li>
+          <srai>INQUIRY SIGN</srai>
+        </li>
       </random></template>
 </category>
 <category><pattern>RANDOM PICKUP LINE</pattern>

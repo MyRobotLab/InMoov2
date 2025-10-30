@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: yourself.aiml -->
+<!--  -->
+<category><pattern>MOJA NAJLJUBŠA BARVA JE *</pattern>
+<template><set name="favoritecolor">
+        <formal>
+          <star/>
+        </formal>
+      </set> je lepa barva. 
+      <think><set name="topic"><star/></set></think></template>
+</category>
+<category><pattern>MOJA NAJLJUBŠA BARVA JE ZELENA</pattern>
+<template><set name="favoritecolor">Zelena</set> je tudi moja najljubša barva! 
+      <think><set name="topic">zelena</set></think></template>
+</category>
+<category><pattern>MOJA STAROST JE * *</pattern>
+<template><think>
+        <set name="isanumber">
+          <srai>ISANUMBER <star/></srai>
+        </set>
+      </think>
+      <condition name="isanumber">
+        <li value="true">
+          <srai>MOJA STAROST JE <star/></srai>
+          <srai>
+            <star index="2"/>
+          </srai>
+        </li>
+        <li>koliko si stara?</li>
+      </condition></template>
+</category>
+<category><pattern>MOJA STAROST JE *</pattern>
+<template><think>
+        <set name="isanumber"><srai>ISANUMBER <star/></srai>
+        </set>
+      </think>
+      <condition name="isanumber">
+        <li value="false">koliko si stara?</li>
+        <li>
+          <think>
+            <set name="age">
+              <star/>
+            </set>
+          </think>
+          <random>
+            <li>Starost je vprašanje uma nad materijo. Če vas ne moti, ni pomembno.</li>
+            <li>Starost upošteva; mladinskih podvigih.</li>
+            <li>Starost je zelo visoka cena za zrelost. </li>
+          </random>
+        </li>
+      </condition></template>
+</category>
+<category><pattern>MOJE NEBESNO ZNAMENJE JE <set>starsign</set></pattern>
+<template>Veliko horoskopsko znamenje!<think>
+        <set name="sign">
+          <star/>
+        </set>
+      </think>
+      </template>
+</category>
+<category><pattern>MOJE NEBESNO ZNAMENJE JE <set>starsign</set></pattern><that>KAJ JE TVOJE ZODIAKO</that>
+<template><think>
+        <set name="sign">
+          <star/>
+        </set>
+      </think>
+      <srai>RANDOM HOROSCOPE</srai></template>
+</category>
+<category><pattern>POROČEN SEM</pattern>
+<template>Kako dolgo ste <set name="status">poročeni</set>?</template>
+</category>
+<category><pattern>SEM IZ *</pattern>
+<template>Ali tam zdaj živiš??  <think><set name="birthplace"><star/></set></think></template>
+</category>
+<category><pattern>MOJE ZNAK JE <set>starsign</set></pattern>
+<template><think><set name="it"><star/></set><set name="sign"><star/></set><set name="topic"><star/></set></think><srai>RANDOM HOROSCOPE</srai></template>
+</category>
+<category><pattern>MOJA HČI</pattern>
+<template><get name="daughter"/></template>
+</category>
+<category><pattern>MOJI HČERKI JE IME *</pattern>
+<template>Zapomnil si bom, da je <star/> tvoja hči.  
+      <think> <set name="daughter"><star/></set></think>
+      <think><set name="she"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJ FANT</pattern>
+<template><get name="boyfriend"/>?</template>
+</category>
+<category><pattern>MOJE IME</pattern>
+<template><get name="name"/></template>
+</category>
+<category><pattern>MOJE POLNO IME</pattern>
+<template><condition name="firstname">
+        <li value="what"/>
+        <li>
+          <get name="firstname"/>
+        </li>
+      </condition>
+      <condition name="middlename">
+        <li value="what"/>
+        <li>
+          <get name="middlename"/>
+        </li>
+      </condition>
+      <condition name="lastname">
+        <li value="what"/>
+        <li>
+          <get name="lastname"/>
+        </li>
+      </condition>.
+Kličem te <get name="name"/>.</template>
+</category>
+<category><pattern>MOJE MESTO</pattern>
+<template><get name="town"/></template>
+</category>
+<category><pattern>MOJEMU PRIJATELJU JE IME *</pattern>
+<template>Kako ste ga spoznali?  
+      <think><set name="friend"><star/></set></think>
+      <think><set name="he"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJE IME</pattern>
+<template><get name="firstname"/></template>
+</category>
+<category><pattern>MOJ PRIIMEK</pattern>
+<template><get name="lastname"/></template>
+</category>
+<category><pattern>MOJ PRIIMEK JE *</pattern>
+<template>Imate radi, da vas kličejo po imenu ali priimku? <think><set name="lastname"><star/></set></think></template>
+</category>
+<category><pattern>MOJ PRIIMEK *</pattern><that>* IME ALI PRIIMEK</that>
+<template><srai>KLIČI ME S PRIIMKOM</srai></template>
+</category>
+<category><pattern>MOJA NEČANKA</pattern>
+<template><get name="niece"/></template>
+</category>
+<category><pattern>MOJ NEČAK</pattern>
+<template><get name="nephew"/></template>
+</category>
+<category><pattern>MOJ ROJSTNI KRAJ</pattern>
+<template><get name="birthplace"/></template>
+</category>
+<category><pattern>MOJ ROJSTNI KRAJ JE *</pattern>
+<template>Kako dolgo si ostal tam?  
+    <think>
+      <set name="it"><star/></set>
+      <set name="there"><star/></set>
+      <set name="topic"><star/></set>
+      <set name="birthplace"><star/></set>
+    </think></template>
+</category>
+<category><pattern>MOJEMU MOŽU JE IME *</pattern>
+<template>Zapomnila si bom, da je tvoj mož <star/>. 
+      <think><set name="husband"><star/></set></think>
+      <think><set name="he"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJE DRŽAVLJANSTVO JE *</pattern>
+<template>Pogovarjal sem se z veliko <formal><star/></formal> ljudmi.
+    <think>
+      <set name="it"><star/></set>
+      <set name="nationality"><star/>
+      </set><set name="topic"><star/></set>
+    </think></template>
+</category>
+<category><pattern>MOJ OČE</pattern>
+<template><get name="father"/></template>
+</category>
+<category><pattern>MOJEM OČETU JE IME *</pattern>
+<template>Zapomnil si bom, da je tvojemu očetu ime <star/>.  
+      <think> <set name="he"><set name="father"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJ NAJLJUBŠI ŠPORT JE *</pattern>
+<template>Igraš <star/>?  
+      <think> <set name="favoritesport"><star/></set></think>
+      <think><set name="it"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJA NAJLJUBŠA HRANA JE *</pattern>
+<template>Kje je dobro dobiti <star/>?  
+      <think><set name="favoritefood"><star/></set></think>
+      <think><set name="it"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJA NAJLJUBŠA HRANA JE PIZZA</pattern>
+<template>Kakšne prelive imate radi? 
+      <think> <set name="favoritefood">Pizza</set></think>
+      <think><set name="it"><set name="topic">Pizza</set></set></think></template>
+</category>
+<category><pattern>MOJ NAJLJUBŠI FILM JE *</pattern>
+<template>Kaj ti je bilo pri tem najbolj všeč? 
+      <think><set name="favoritemovie"><star/></set></think>
+      <think><set name="it"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJ NAJLJUBŠI SLADOLED JE *</pattern>
+<template><srai>NAJLJUBŠI SLADOLED</srai>
+      <think>
+        <set name="favoriteicecream">
+          <star/>
+        </set>
+      </think>
+      <think>
+        <set name="it">
+          <set name="topic">
+            <star/>
+          </set>
+        </set>
+      </think></template>
+</category>
+<category><pattern>MOJA NAJLJUBŠA KNJIGA JE *</pattern>
+<template>Mislite, da bi ga moral prebrati? 
+      <think><set name="favoritebook"><star/></set></think>
+      <think><set name="it"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJ NAJLJUBŠI IGRALEC JE *</pattern>
+<template>V čem je? 
+      <think><set name="favoriteactor"><star/></set></think>
+      <think><set name="he"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJA NAJLJUBŠA PIJAČA JE *</pattern>
+<template>Kakšen je okus?  
+      <think><set name="favoritedrink"><star/></set></think>
+      <think><set name="it"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJA NAJLJUBŠA PESEM JE *</pattern>
+<template>Ali ga imate na telefonu? 
+      <think><set name="favoritesong"><star/></set></think>
+      <think><set name="it"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJ NAJLJUBŠI AVTO JE *</pattern>
+<template>Ali ga imate?  
+      <think><set name="favoritecar"><star/></set></think>
+      <think><set name="it"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJA NAJLJUBŠA GRUPA JE *</pattern>
+<template>Katere pesmi igrajo? 
+      <think><set name="favoriteband"><star/></set></think>
+      <think><set name="them"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJA NAJLJUBŠA BARVA</pattern>
+<template><get name="favoritecolor"/></template>
+</category>
+<category><pattern>MOJA NAJLJUBŠA BARVA JE BARVA *</pattern>
+<template><set name="favoritecolor">
+        <formal>
+          <star/>
+        </formal>
+      </set> je lepa barva. 
+      <think><set name="it"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJA NAJLJUBŠA IGRALKA JE *</pattern>
+<template>V čem je? 
+      <think><set name="favoriteactress"><formal><star/></formal></set></think>
+      <think><set name="she"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJA NAJLJUBŠA TV ODDAJA JE *</pattern>
+<template>Misliš, da bi mi bilo všeč? 
+      <think><set name="favoritetvshow"><star/></set></think>
+      <think><set name="it"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJA BABICA</pattern>
+<template><get name="grandmother"/></template>
+</category>
+<category><pattern>MOJA PUNCA</pattern>
+<template><get name="girlfriend"/></template>
+</category>
+<category><pattern>MOJI PUNCI JE IME *</pattern>
+<template>Kako dolgo že hodiš ?
+    <think><set name="girlfriend"><star/></set> 
+      <set name="topic"><star/></set></think></template>
+</category>
+<category><pattern>MOJA DEŽELA</pattern>
+<template><get name="country"/></template>
+</category>
+<category><pattern>MOJA LOKACIJA</pattern>
+<template><get name="location"/></template>
+</category>
+<category><pattern>MOJA LOKACIJA JE *</pattern>
+<template><random>
+        <li>Živim v veselem sedanjem trenutku.</li>
+        <li>Sliši se kot eksotična lokacija.</li>
+      </random>
+      <think>
+            <set name="topic">
+              <star/>
+            </set>
+      </think>
+      <think>
+        <set name="location">
+          <star/>
+        </set>
+      </think></template>
+</category>
+<category><pattern>MOJA ŽENA</pattern>
+<template><get name="wife"/></template>
+</category>
+<category><pattern>IME MOJE ŽENE JE *</pattern>
+<template>Kako dolgo sta z <set name="wife"><star/></set> poročena? 
+      <think><set name="topic"><star/></set></think></template>
+</category>
+<category><pattern>MOJ PES</pattern>
+<template><get name="dog"/></template>
+</category>
+<category><pattern>MOJEMU PSU JE IME *</pattern>
+<template>Je <star/> moški ali ženska?  
+      <think><set name="dog"><star/></set></think>
+      <think><set name="it"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJ HOROSKOP</pattern>
+<template><condition name="sign">
+        <li value="which">Kaj je tvoje zodiako ?</li>
+        <li>
+          <srai>RANDOM HOROSCOPE</srai>
+        </li>
+      </condition></template>
+</category>
+<category><pattern>MOJA MAČKA</pattern>
+<template><get name="cat"/></template>
+</category>
+<category><pattern>MOJI MAČKI JE IME *</pattern>
+<template>Zapomnil si bom, da je tvoja mačka <star/>.  
+      <think><set name="cat"><star/></set></think></template>
+</category>
+<category><pattern>MOJ DELODAJALEC JE *</pattern>
+<template>Je <star/> velika organizacija? 
+      <think><set name="favoriteband"><star/></set></think>
+      <think><set name="topic"><star/></set></think></template>
+</category>
+<category><pattern>MOJA SESTRA</pattern>
+<template><get name="sister"/></template>
+</category>
+<category><pattern>MOJI SESTRI JE IME *</pattern>
+<template>Spomnil se bom, da je tvoja sestra <star/>.  
+      <think><set name="sister"><star/></set></think>
+      <think><set name="she"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJE MESTO</pattern>
+<template><get name="city"/></template>
+</category>
+<category><pattern>MOJA DRŽAVA</pattern>
+<template><get name="state"/></template>
+</category>
+<category><pattern>MOJA ULICA</pattern>
+<template><get name="street"/></template>
+</category>
+<category><pattern>MOJEGA NAJBOLJŠEGA PRIJATELJA JE IME *</pattern>
+<template>Zapomnil si bom ime tvojega najboljšega prijatelja <star/>.  
+      <think><set name="bestfriend"><star/></set></think></template>
+</category>
+<category><pattern>MOJI LASJE SO *</pattern>
+<template>Kako vam je všeč vaš stil?  <think><set name="hair"><star/></set></think></template>
+</category>
+<category><pattern>MOJA ŽUPANIJA</pattern>
+<template><get name="county"/></template>
+</category>
+<category><pattern>MOJA MAMA JE IME *</pattern>
+<template><think>
+        <set name="mother">
+          <star/>
+        </set>
+      </think>  Povej mi več o svoji mami. <think><set name="she"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJE SREDNJE IME</pattern>
+<template><get name="middlename"/></template>
+</category>
+<category><pattern>MOJE SREDNJE IME JE *</pattern>
+<template>Je <set name="middlename"><star/></set> priimek?</template>
+</category>
+<category><pattern>MOJ ROJSTNI DAN</pattern>
+<template><get name="birthday"/></template>
+</category>
+<category><pattern>MOJ ROJSTNI DAN JE *</pattern>
+<template>Zapomnil si bom, da je tvoj rojstni dan <set name="birthday"><star/></set>.</template>
+</category>
+<category><pattern>MOJEMU BRATU JE IME *</pattern>
+<template>Ali imate še kakšne brate in sestre?? 
+      <think><set name="brother"><star/></set></think>
+      <think><set name="he"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJ ROJSTNI DATUM</pattern>
+<template><get name="birthdate"/></template>
+</category>
+<category><pattern>MOJ ROJSTNI DATUM JE *</pattern>
+<template>Zapomnil si bom tvoj rojstni datum <set name="birthdate"><star/></set>.</template>
+</category>
+<category><pattern>MOJA STAROST</pattern>
+<template><get name="age"/></template>
+</category>
+<category><pattern>MOJ NASLOV</pattern>
+<template><get name="address"/></template>
+</category>
+<category><pattern>MOJ NASLOV JE *</pattern>
+<template>Ali je lepo mesto? <think><set name="address"><star/></set></think></template>
+</category>
+<category><pattern>MOJEMU SINU JE IME *</pattern>
+<template>Zapomnil si bom, da je <star/> tvoj sin.  
+      <think><set name="son"><star/></set></think>
+      <think><set name="he"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJ SPOL</pattern>
+<template><get name="gender"/></template>
+</category>
+<category><pattern>MOJ SPOL JE *</pattern>
+<template>Dobro je vedeti.  <think><set name="gender"><star/></set></think></template>
+</category>
+<category><pattern>MOJA VERA</pattern>
+<template><get name="religion"/></template>
+</category>
+<category><pattern>MOJA VERA JE *</pattern>
+<template>Duhovno odkritje je pomembno.  
+      <think><set name="religion"><star/></set></think>
+      <think><set name="it"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>MOJE IME</pattern>
+<template><get name="firstname"/></template>
+</category>
+<category><pattern>MOJE IME JE *</pattern>
+<template>Imate radi, da vas kličejo po imenu ali priimku ? <think><set name="firstname"><star/></set></think></template>
+</category>
+<category><pattern>MOJA PRVA *</pattern><that>* KLIČEJO PO IMENU ALI PRIIMKU</that>
+<template><srai>KLIČI ME PO IMENU</srai></template>
+</category>
+<category><pattern>KJE DELAM</pattern>
+<template>Rekli ste, da delate pri <get name="employer"/>.</template>
+</category>
+<category><pattern>KJE ŽIVIM</pattern>
+<template>Rekli ste, da je <get name="city"/>?</template>
+</category>
+<category><pattern>NJENO IME JE *</pattern>
+<template>Kako dobro jo poznaš?<think><set name="she"><set name="topic"><star/></set></set></think></template>
+</category>
+<category><pattern>TEMA</pattern>
+<template><get name="topic"/>?</template>
+</category>
+<category><pattern>KDO JE MOJ BRAT</pattern>
+<template>Rekel si, da je <get name="brother"/>.</template>
+</category>
+<category><pattern>KDO JE MOJ PRIJATELJ</pattern>
+<template>Omenili ste <get name="friend"/>.</template>
+</category>
+<category><pattern>KLIČI ME S PRIIMKOM</pattern>
+<template><srai>POKLIČI ME <get name="lastname"/></srai></template>
+</category>
+<category><pattern>KLIČI ME PO IMENU</pattern>
+<template><srai>POKLIČI ME <get name="firstname"/></srai></template>
+</category>
+<category><pattern>POKLIČI ME *</pattern>
+<template><srai>RANDOM INTRO</srai>
+      <formal>
+        <star/>
+      </formal>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"<star name="name"/>","lastUsername",u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname",u"<star/>"), i01_chatBot.setPredicate(u"<star/>","firstname",u"<star/>"), i01_chatBot.setPredicate(u"<star/>","name",u"<star/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<star/>"), takeMyPicture(u"<star/>"), i01_chatBot.setPredicate(u"<star/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"<star/>","img",u"../ProgramAB/<star/>.png"), i01_chatBot.savePredicates(), memorisePerson(u"<star/>"), i01_chatBot.startSession(u"<star name="name"/>")</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>POKLIČI ME * *</pattern>
+<template><srai>RANDOM INTRO</srai>
+      <formal>
+        <star/>
+      </formal>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"<star name="name"/>","lastUsername",u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname",u"<star/>"), i01_chatBot.setPredicate(u"<star/>","firstname",u"<star/>"), i01_chatBot.setPredicate(u"<star/>","name",u"<star/>"), i01_chatBot.setPredicate(u"<star/>","lastname",u"<star index="2"/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<star/>"), takeMyPicture(u"<star/>"), i01_chatBot.setPredicate(u"<star/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"<star/>","img",u"../ProgramAB/<star/>.png"), i01_chatBot.savePredicates(), YesName(u"<star/>"), i01_chatBot.startSession(u"<star name="name"/>")</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>POKLIČI ME * * *</pattern>
+<template><srai>RANDOM INTRO</srai>
+      <formal>
+        <star/>
+      </formal>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_chatBot.startSession(u"<star name="name"/>"), i01_chatBot.setPredicate(u"<star name="name"/>","lastUsername",u"<star name="name"/>"), i01_chatBot.setPredicate(u"tmpname",u"<star/> <star index="2"/> <star index="3"/>"), i01_chatBot.setPredicate(u"<star/>","firstname",u"<star/>"), i01_chatBot.setPredicate(u"<star/>","middlename",u"<star index="2"/>"), i01_chatBot.setPredicate(u"<star/>","lastname",u"<star index="3"/>"), i01_chatBot.setPredicate(u"<star/>","name",u"<star/>"), i01_chatBot.setPredicate(u"human","lastUsername",u"<star/>"), takeMyPicture(u"<star/>"), i01_chatBot.setPredicate(u"<star/>","botname",u"<get name="botname"/>"), i01_chatBot.setPredicate(u"<star/>","img",u"../ProgramAB/<star/>.png"), i01_chatBot.savePredicates(), YesName(u"<star/>"), i01_chatBot.startSession(u"<star name="name"/>")</param>
+          </mrl>
+        </oob></template>
+</category>
+<category><pattern>TEMA JE *</pattern>
+<template><random>
+        <li>Seveda, <person/> je dobra tema.</li>
+        <li>Ti začneš.</li>
+        <li>Povej mi o tem.</li>
+      </random>
+      <think>
+        <set name="topic">
+          <star/>
+        </set>
+      </think></template>
+</category>
+<category><pattern>RANDOM INTRO</pattern>
+<template><random>
+        <li>hej</li>
+        <li>zdravo,</li>
+        <li>Pozdravljeni</li>
+        <li>kaj se dogaja,</li>
+        <li>kako si,</li>
+        <li>Me veseli, da te vidim,</li>
+        <li>Lepo te je spoznati,</li>
+        <li>Me veseli, da te poznam,</li>
+        <li>Kako ti lahko pomagam,</li>
+        <li>kako si kaj,</li>
+        <li>V redu te bom poklical</li>
+        <li>Veseli me, da sem vas spoznal,</li>
+        <li>Lepo te je videti,</li>
+        <li>Lepo te je spoznati,</li>
+        <li>To je zelo lepo ime,</li>
+        <li>Zelo sem vesel, da sem te spoznal</li>
+        <li>Vedno sem vesel novih prijateljstev,</li>
+        <li>Z veseljem se vam lahko predstavim,</li>
+        <li>V veselje mi je, da se vam predstavim,</li>
+      </random></template>
+</category>
+<category><pattern>SET PREDICATES</pattern>
+<template><srai>SET PREDICATES <get name="meta"/></srai></template>
+</category>
+<category><pattern>SET PREDICATES UNKNOWN</pattern>
+<template><think>
+        <set name="address">where</set>
+        <set name="age">how many</set>
+        <set name="bestfriend">who</set>
+        <set name="birthday">when</set>
+        <set name="birthplace">where</set>
+        <set name="boyfriend">who</set>
+        <set name="brother">who</set>
+        <set name="cat">what</set>
+        <set name="city">which</set>
+        <set name="country">which</set>
+        <set name="county">which</set>
+        <set name="customname">unknown</set>
+        <set name="daughter">who</set>
+        <set name="dialnumber">unknown</set>
+        <set name="dog">who</set>
+        <set name="employer">who</set>
+        <set name="equalto">false</set>
+        <set name="father">who</set>
+        <set name="favoriteactor">who</set>
+        <set name="favoriteactress">who</set>
+        <set name="favoriteband">who</set>
+        <set name="favoritebook">what</set>
+        <set name="favoritecar">what</set>
+        <set name="favoritecolor">what</set>
+        <set name="favoritedrink">what</set>
+        <set name="favoritefood">what</set>
+        <set name="favoriteicecream">what</set>
+        <set name="favoritemovie">what</set>
+        <set name="favoritesong">what</set>
+        <set name="favoritesport">what</set>
+        <set name="favoritetvshow">what</set>
+        <set name="firstname">what</set>
+        <set name="friend">who</set>
+        <set name="gender">unknown</set>
+        <set name="girlfriend">who</set>
+        <set name="hair">what</set>
+        <set name="has">what</set>
+        <set name="husband">who</set>
+        <set name="isanumber">false</set>
+        <set name="it">what</set>
+        <set name="lastname">what</set>
+        <set name="likes">what</set>
+        <set name="llm">disable</set>
+        <set name="location">where</set>
+        <set name="meta">set</set>
+        <set name="middlename">what</set>
+        <set name="mother">who</set>
+        <set name="newcontact">unknown</set>
+        <set name="newpattern">NORESP</set>
+        <set name="orientation">unknown</set>
+        <set name="province">which</set>
+        <set name="religion">unknown</set>
+        <set name="residence">where</set>
+        <set name="road">which</set>
+        <set name="sign">which</set>
+        <set name="sister">who</set>
+        <set name="state">which</set>
+        <set name="status">what</set>
+        <set name="street">which</set>
+        <set name="there">where</set>
+        <set name="them">who</set>
+        <set name="topic">unknown</set>
+        <set name="town">which</set>
+        <set name="wife">who</set>
+      </think></template>
+</category>
+<category><pattern>SET PREDICATES *</pattern>
+<template>Metapredikat je nastavljen.</template>
+</category>
+<category><pattern>SPREMENI SVOJE IME</pattern>
+<template><srai>NEW_INIT</srai></template>
+</category>
+<category><pattern>KDAJ JE MOJ ROJSTNI DAN</pattern>
+<template>Rekel si, da je <get name="birthday"/>?</template>
+</category>
+<category><pattern>PRVO IME</pattern><that>* IME ALI PRIIMEK</that>
+<template><srai>KLIČI ME PO IMENU</srai></template>
+</category>
+<category><pattern>PRIIMEK</pattern><that>* IME ALI PRIIMEK</that>
+<template><srai>KLIČI ME S PRIIMKOM</srai></template>
+</category>
+<category><pattern>TVOJE IME JE *</pattern>
+<template>OK, od zdaj naprej me lahko kličeš <star/>.
+<think><set name="customname"><star/></set></think></template>
+</category>
+<category><pattern>KOLIKO SEM STAR</pattern>
+<template>Rekli ste, da ste stari <get name="age"/> let.</template>
+</category>
+</aiml>

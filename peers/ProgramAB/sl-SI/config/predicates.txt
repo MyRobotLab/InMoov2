@@ -1,9 +1,13 @@
 userDescription:brez osebnih podatkov
+age:how many
 firstinit:unknown
-llm:
+gender:unknown
+location:where
+llm:disable
 name:
 botname:
 botState:
 lockInsult:off
 img:../service/img/user_unknown.png
+sign:which
 topic:

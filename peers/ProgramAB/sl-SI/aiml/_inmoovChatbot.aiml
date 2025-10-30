@@ -76,7 +76,8 @@
 <category><pattern># DA #</pattern><that># VAŠ OBRAZ OB VAŠEM IMENU #</that>
 <template>V redu, obrnite se proti kameri in ne nosite očal.<think>
           <set name="topic">default</set>
-        </think><oob>
+        </think>
+        <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>

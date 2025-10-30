@@ -2,60 +2,80 @@
 <aiml>
 <!-- File: inquiry.aiml -->
 <!--  -->
-<category><pattern>*</pattern><that>KOLIKO SI STAR</that>
-<template><think>
-        <set name="age">
-          <star/>
-        </set>
-      </think>
-      <srai>MOJA STAROST JE <star/></srai></template>
+<category><pattern>ISANUMBER <set>number</set></pattern>
+<template>true</template>
 </category>
+<category><pattern>ISANUMBER *</pattern>
+<template>false</template>
+</category>
+
+
 <category><pattern>INQUIRY LOCATION</pattern>
 <template><srai>INQUIRY LOCATION <get name="location"/></srai></template>
 </category>
 <category><pattern>INQUIRY LOCATION WHERE</pattern>
-<template>kje si?</template>
+<template>kje si ?</template>
+</category>
+<category><pattern>*</pattern><that>KJE SI</that>
+<template>
+      <srai>MOJA LOKACIJA JE <star/></srai>
+      </template>
 </category>
 <category><pattern>INQUIRY LOCATION *</pattern>
 <template><srai>RANDOM PICKUP LINE</srai></template>
 </category>
-<category><pattern>INQUIRY NAME</pattern>
-<template><srai>INQUIRY NAME <get name="name"/></srai></template>
-</category>
-<category><pattern>INQUIRY NAME *</pattern>
-<template><srai>RANDOM PICKUP LINE</srai></template>
-</category>
-<category><pattern>INQUIRY NAME FRIEND</pattern>
-<template>kako ti je ime?</template>
-</category>
+
+
 <category><pattern>INQUIRY AGE</pattern>
 <template><srai>INQUIRY AGE <get name="age"/></srai></template>
 </category>
 <category><pattern>INQUIRY AGE HOW MANY</pattern>
-<template>koliko si stara?</template>
+<template>koliko si stara ?</template>
+</category>
+<category><pattern>*</pattern><that>KOLIKO SI STARA</that>
+<template><think>
+        <set name="isanumber">
+          <srai>ISANUMBER <star/></srai>
+        </set>
+      </think>
+      <srai>MOJA STAROST JE <star/></srai>
+      </template>
 </category>
 <category><pattern>INQUIRY AGE *</pattern>
 <template><srai>RANDOM PICKUP LINE</srai></template>
 </category>
+
+
 <category><pattern>INQUIRY GENDER</pattern>
 <template><srai>INQUIRY GENDER <get name="gender"/></srai></template>
 </category>
 <category><pattern>INQUIRY GENDER UNKNOWN</pattern>
-<template>Ste moški ali ženska?</template>
+<template>Ste moški ali ženska ?</template>
+</category>
+<category><pattern>*</pattern><that>STE MOŠKI ALI ŽENSKA</that>
+<template><think>
+        <set name="gender">
+          <star/>
+        </set>
+      </think></template>
 </category>
 <category><pattern>INQUIRY GENDER *</pattern>
 <template><srai>RANDOM PICKUP LINE</srai></template>
 </category>
-<category><pattern># ČLOVEK #</pattern><that>ALI SI MOŠKI ALI ŽENSKA</that>
-<template><srai>MOJ SPOL JE MOŠKI</srai></template>
+
+
+<category><pattern>INQUIRY SIGN</pattern>
+<template><srai>INQUIRY SIGN <get name="sign"/></srai></template>
 </category>
-<category><pattern># ŽENSKA #</pattern><that>ALI SI MOŠKI ALI ŽENSKA</that>
-<template><srai>MOJ SPOL JE ŽENSKI</srai></template>
+<category><pattern>INQUIRY SIGN WHICH</pattern>
+<template>Kaj je tvoje zodiako ?</template>
 </category>
-<category><pattern># TRANSPOLNO #</pattern><that>ALI SI MOŠKI ALI ŽENSKA</that>
-<template><srai>MOJ SPOL JE TRANSPOLNI</srai></template>
+<category><pattern>*</pattern><that>KAJ JE TVOJE ZODIAKO</that>
+<template>
+      <srai>MOJE NEBESNO ZNAMENJE JE <star/></srai>
+      </template>
 </category>
-<category><pattern>*</pattern><that>ALI SI MOŠKI ALI ŽENSKA</that>
-<template><srai>MOJ SPOL JE NEDOLOČEN</srai></template>
+<category><pattern>INQUIRY SIGN *</pattern>
+<template><srai>RANDOM PICKUP LINE</srai></template>
 </category>
 </aiml>
