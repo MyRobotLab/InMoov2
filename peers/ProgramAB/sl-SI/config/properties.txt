@@ -5,7 +5,7 @@ lastname:Inmoov
 location:zemeljski planet
 fullname:Umetna robotska in lingvistična internetna računalniška entiteta, različica 1.0
 email:inmoov.robot@gmail.com
-gender:male
+gender:človek
 creator:Gael Langevin
 botmaster:GroG
 botdoctor:Anthony Gallot
