@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: sraix.aiml -->
+<!--  -->
+<category><pattern>SRAIXFAILED #</pattern>
+<template><condition name="llm">
+        <li value="enabled"><img src="img/InMoov2/brain-resize.gif"/>
+        <think>
+          <set name="topic"><star/></set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01_llm.getResponse(u"<star/>")</param>
+          </mrl>
+        </oob>
+        </li>
+        <li>
+        <random>
+        <li>Я не знаю ответа.</li>
+        <li>Я использовал свой спасательный круг, чтобы спросить другого робота, но он не знал.</li>
+        <li>Я спросил у другого робота, но он не знал.</li>
+        <li>К сожалению, в веб-сервисах ничего не найдено.</li>
+      </random>
+        </li>
+      </condition>
+        </template>
+</category>
+<category><pattern>LLM_RESPONSE #</pattern>
+<template><img src="../Llm.png"/></template>
+</category>
+
+</aiml>
