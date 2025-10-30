@@ -279,9 +279,12 @@
                 <think><set name="topic">default</set>
                        <set name="llmStop"></set>
                 </think></li>
-            <li><img src="../Llm.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_llm.getResponse(u"<star/>")</param></mrl></oob></li>
+            <li><img src="img/InMoov2/brain-resize.gif"/><oob><mrl><service>python</service><method>exec</method><param>i01_llm.getResponse(u"<star/>")</param></mrl></oob></li>
             </condition>
   </template>
+</category>
+<category><pattern>LLM_RESPONSE #</pattern>
+<template><img src="../Llm.png"/></template>
 </category>
 </topic>
 </aiml>
