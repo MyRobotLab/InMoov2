@@ -3,16 +3,24 @@
 
 <!-- Ultimate default category (UDC) -->
 <!-- The UDC is used by the bot to provide an answer if no other suitable category can be matched-->
-<category>
-    <pattern>*</pattern>
-    <template>
-        <random>
-            <li>Мне нечего сказать по этому поводу</li>
-            <li>У меня нет ответа.</li>
-            <li>Затрудняюсь ответить.</li>
-            <li>Сложно сказать...</li>
-        </random>
-    </template>
+<category><pattern>*</pattern>
+<template><condition name="llm">
+        <li value="enabled">
+        <!--<sraix><star/></sraix>-->
+        <srai>SRAIXFAILED <star/></srai>
+        </li>
+        <li>
+        <srai>UDC</srai>
+        </li>
+      </condition></template>
 </category>
 
+<category><pattern>UDC</pattern>
+<template><random>
+        <li>Мне нечего сказать по этому поводу</li>
+        <li>У меня нет ответа.</li>
+        <li>Затрудняюсь ответить.</li>
+        <li>Сложно сказать...</li>
+      </random></template>
+</category>
 </aiml>
