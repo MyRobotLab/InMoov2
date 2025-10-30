@@ -12,15 +12,15 @@
         </template>
 </category>
 
-<category><pattern>SRAIXFAILED *</pattern>
+<category><pattern>SRAIXFAILED #</pattern>
 <template>
       <condition name="llm">
-        <li value="enabled"><img src="../Llm.png"/>
+        <li value="enabled"><img src="img/InMoov2/brain-resize.gif"/>
         <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_llm.onText("<condition name="askLlm">
+            <param>i01_llm.getResponse("<condition name="askLlm">
         <li value="unknown"><get name="quoi" /></li><li><get name="askLlm" /> <get name="courant" /></li></condition>")</param>
           </mrl>
         </oob>
@@ -38,21 +38,10 @@
         </condition>
         </template>
 </category>
+<category><pattern>LLM_RESPONSE #</pattern>
+<template><img src="../Llm.png"/></template>
+</category>
 
-<!--<category><pattern>SRAIXFAILED *</pattern>
-<template><think>
-        <set name="determinantinterogatif">
-          <star index="2"/>
-        </set>
-      </think>
-      <condition name="apprendre">
-        <li value="unknown">
-        </li>
-        <li>
-          <srai>SYSTEM_LEARNING</srai>
-        </li>
-      </condition></template>
-</category>-->
 <category><pattern>SYSTEM_WIKIDATA_CATEGORIE <set>articles</set> * <set>articles</set> *</pattern>
 <template><oob>
         <mrl>

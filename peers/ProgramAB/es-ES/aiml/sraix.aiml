@@ -20,9 +20,9 @@
         </template>
 </category>
 
-<category><pattern>SRAIXFAILED *</pattern>
+<category><pattern>SRAIXFAILED #</pattern>
 <template><condition name="llm">
-        <li value="enabled"><img src="../Llm.png"/>
+        <li value="enabled"><img src="img/InMoov2/brain-resize.gif"/>
         <think>
           <set name="topic"><star/></set>
         </think>
@@ -30,7 +30,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_llm.onText("<star/>")</param>
+            <param>i01_llm.getResponse(u"<star/>")</param>
           </mrl>
         </oob>
         </li>
@@ -54,6 +54,10 @@
         </li>
       </condition>
         </template>
+</category>
+
+<category><pattern>LLM_RESPONSE #</pattern>
+<template><img src="../Llm.png"/></template>
 </category>
 
 <category><pattern>COMUNICACIÓN LLM</pattern>
@@ -83,3 +87,4 @@
 </topic>
 
 </aiml>
+

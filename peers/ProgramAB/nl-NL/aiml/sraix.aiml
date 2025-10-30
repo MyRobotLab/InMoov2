@@ -3,9 +3,9 @@
 <!-- File: sraix.aiml -->
 <!--  -->
 
-<category><pattern>SRAIXFAILED *</pattern>
+<category><pattern>SRAIXFAILED #</pattern>
 <template><condition name="llm">
-        <li value="enabled"><img src="../Llm.png"/>
+        <li value="enabled"><img src="img/InMoov2/brain-resize.gif"/>
         <think>
           <set name="topic"><star/></set>
         </think>
@@ -38,4 +38,8 @@
       </condition>
         </template>
 </category>
+<category><pattern>LLM_RESPONSE #</pattern>
+<template><img src="../Llm.png"/></template>
+</category>
 </aiml>
+
