@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <aiml>
   <category>
     <pattern>KAKO TI JE IME</pattern>
@@ -112,8 +112,8 @@
         </set>
       </think>
       <condition var="years">
-        <li value="0">I am <get var="months"/> months old.</li>
-        <li>I am <get var="years"/> years old.</li>
+        <li value="0">Star sem <get var="months"/> mesecev.</li>
+        <li>Star sem <get var="years"/> let.</li>
       </condition></template>
 </category>
   <category>

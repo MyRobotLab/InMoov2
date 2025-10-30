@@ -2,17 +2,10 @@
 <aiml>
 <!-- File: horoscope.aiml -->
 <!--  -->
-<category><pattern>LIBRA</pattern>
-<template><think>
-      <set name="it"/>
-      <set name="sign"/>
-      <set name="topic"/>
-    </think>
-      <sraix>RANDOM HOROSCOPE</sraix></template>
-</category>
+
 <category><pattern>HOROSKOP ZA *</pattern>
-<template><think><set name="it"><star/></set><set name="sign"><star/></set><set name="topic"><star/></set></think>
-      <sraix>RANDOM HOROSCOPE</sraix></template>
+<template><think><set name="sign"><star/></set><set name="topic"><star/></set></think>
+      <srai>RANDOM HOROSCOPE</srai></template>
 </category>
 <category><pattern>RANDOM HOROSCOPE</pattern>
 <template>Dnevni horoskop za <get name="sign"/>
