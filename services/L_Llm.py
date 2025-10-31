@@ -20,7 +20,7 @@ def initLlm():
     llm.getConfig()
     setSystem = llm.getConfig().system
     runtime.getConfig()
-    python.subscribe(llm.getName(), "publishText", "onFilterText")
+    #python.subscribe(llm.getName(), "publishText", "onFilterText")
     config = llm.getConfig()
     if config.url == None or config.url == "http://localhost:11434" or config.url == "http://localhost:11434/v1/chat/completions":
       config.url = "http://localhost:11434/api/generate"
@@ -143,7 +143,7 @@ def initLlm():
    The current date is {{Date}}.\
    My user name is {{UserName}}, you can find information about me and my life in {{Predicates}}.\
    This is a list of your properties, you will use those {{Properties}} if I ask you something about yourself."
-    llm.removeListener('publishText', 'i01.htmlFilter', 'onText')  
+    #llm.removeListener('publishText', 'i01.htmlFilter', 'onText')  
     llm.save()  
     llm.apply(config)
     llm.broadcastState()
@@ -235,7 +235,7 @@ def describeImage(prompt):
     if cfg.stream == "false":
       cfg.stream = "true"
     #python.subscribe(llmImg.getName(), "publishText", "onFilterText")
-    i01_htmlFilter.subscribe(llmImg.getName(), "publishText", "onText")
+    #i01_htmlFilter.subscribe(llmImg.getName(), "publishText", "onText")
     #llmImg.removeListener('publishText', 'i01.htmlFilter', 'onText')
     llmImg.save()
     llmImg.apply(cfg)
@@ -250,6 +250,7 @@ def describeImage(prompt):
     sleep(0.1)
     opencv.stopCapture()
   
+
 
 
 

@@ -12,13 +12,13 @@ if chatBot:
    chatBot.savePredicates()
 
 llm = runtime.getService('i01.llm')
-htmlFilter = runtime.getService('i01.htmlFilter')
+#htmlFilter = runtime.getService('i01.htmlFilter')
 if llm:
    config = llm.getConfig()
    config.system = "You are a helpful robot."
-   if htmlFilter:
-      htmlFilter.subscribe(llm.getName(), "publishText", "onText")
-   llm.removeListener('publishText', 'python', 'onFilterText')   
+   #if htmlFilter:
+      #htmlFilter.subscribe(llm.getName(), "publishText", "onText")
+   #llm.removeListener('publishText', 'python', 'onFilterText')   
    llm.save()
    llm.apply(config)
    llm.broadcastState()
