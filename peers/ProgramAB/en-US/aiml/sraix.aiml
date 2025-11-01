@@ -228,6 +228,9 @@
       </random><think><set name="topic">learnf</set></think><srai>LEARN SRAIXFAILED</srai>
         </li>
       </condition>
+        <think>
+          <set name="newpattern"> </set>
+        </think>
         </template>
 </category>
 <category><pattern>LLM_RESPONSE #</pattern>
@@ -406,6 +409,7 @@
 </category>
 
 </aiml>
+
 
 
 
