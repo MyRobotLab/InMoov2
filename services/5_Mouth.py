@@ -129,7 +129,8 @@ def onFilterText(text):
     if runtime.isStarted('i01.mouth'):
       i01_mouth.speak(filtered_text)
     if runtime.isStarted('i01.chatBot'):
-      i01_chatBot.getResponse("LLM_RESPONSE " + filtered_text)  
+      if filtered_text and not re.match(r'^\s*\*[\w\s]+\*\s*$', filtered_text):
+          send_llm_to_chatbotUI(filtered_text)  
     print("Extracted Word:", extracted_word)
     print("Parameters:", params)
     function_to_call = globals().get(extracted_word)
@@ -141,6 +142,17 @@ def onFilterText(text):
     else:
         result = "No function found matching '{}'".format(extracted_word)
     print(result)
-
+  
+def send_llm_to_chatbotUI(text):
+    from org.myrobotlab.programab import Response
+    from java.util import ArrayList
+    payloads = ArrayList()
+    resp = Response(i01_chatBot.getCurrentBotName(),
+                    i01_chatBot.getCurrentUserName(),
+                    text,
+                    payloads)
+    #i01_chatBot.publishResponse(resp)
+    i01_chatBot.invoke("publishResponse", resp)
+  
 if runtime.isStarted('i01.mouth'):
   initMouth()
