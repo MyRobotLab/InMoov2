@@ -3,12 +3,8 @@
 <!-- File: _inmoovKnowledge.aiml-->
 <!--  -->
 <category><pattern># <set>determinantinterogatif</set> JE NE SAIS PAS</pattern>
-<template><!--<think>
-          <set name="determinantinterogatif">
-          <star index="1"/>
-        </set>
-      </think>-->
-      <sraix><get name="courant"/></sraix>
+<template>
+      <srai>SRAIXFAILED <star/></srai>
         </template>
 </category>
 
@@ -16,17 +12,22 @@
 <template>
       <condition name="llm">
         <li value="enabled"><img src="img/InMoov2/brain-resize.gif"/>
+        <think>
+          <set name="topic"><star/></set>
+          <set name="newpattern"><input index="2"/></set>
+        </think>
         <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_llm.getResponse("<condition name="askLlm">
-        <li value="unknown"><get name="quoi" /></li><li><get name="askLlm" /> <get name="courant" /></li></condition>")</param>
+            <!--<param>i01_llm.getResponse("<condition name="askLlm">
+        <li value="unknown"></li><li><input index="2"/></li></condition>")</param>-->
+            <param>i01_llm.getResponse(u"<input index="2"/>")</param>
           </mrl>
         </oob>
-        <think><set name="askLlm">
+        <!--<think><set name="askLlm">
           <get name="null"/>
-         </set></think>
+         </set></think>-->
         </li>
         <li><condition name="learn">
           <li value="enabled">
@@ -36,10 +37,10 @@
         </condition>
         </li>
         </condition>
+        <think>
+          <set name="newpattern"> </set>
+        </think>
         </template>
-</category>
-<category><pattern>LLM_RESPONSE #</pattern>
-<template><img src="../Llm.png"/></template>
 </category>
 
 <category><pattern>SYSTEM_WIKIDATA_CATEGORIE <set>articles</set> * <set>articles</set> *</pattern>

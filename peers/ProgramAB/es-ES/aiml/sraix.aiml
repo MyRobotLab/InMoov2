@@ -25,12 +25,13 @@
         <li value="enabled"><img src="img/InMoov2/brain-resize.gif"/>
         <think>
           <set name="topic"><star/></set>
+          <set name="newpattern"><input index="2"/></set>
         </think>
         <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_llm.getResponse(u"<star/>")</param>
+            <param>i01_llm.getResponse(u"<input index="2"/>")</param>
           </mrl>
         </oob>
         </li>
@@ -53,11 +54,10 @@
       </random><srai>LEARN SRAIXFAILED</srai>
         </li>
       </condition>
+         <think>
+          <set name="newpattern"> </set>
+        </think>
         </template>
-</category>
-
-<category><pattern>LLM_RESPONSE #</pattern>
-<template><img src="../Llm.png"/></template>
 </category>
 
 <category><pattern>COMUNICACIÓN LLM</pattern>
@@ -80,11 +80,12 @@
                 <think><set name="topic">default</set>
                        <set name="llmStop"></set>
                 </think></li>
-            <li><img src="../Llm.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_llm.onText("<star/>")</param></mrl></oob></li>
+            <li><img src="../Llm.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_llm.getResponse("<star/>")</param></mrl></oob></li>
             </condition>
   </template>
 </category>
 </topic>
 
 </aiml>
+
 

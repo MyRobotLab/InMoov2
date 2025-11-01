@@ -3,17 +3,18 @@
 <!--  -->
 <!-- gpt -->
 
-<category><pattern>SRAIXFAILED *</pattern>
+<category><pattern>SRAIXFAILED #</pattern>
 <template><condition name="llm">
         <li value="enabled"><img src="img/InMoov2/brain-resize.gif"/>
         <think>
           <set name="topic"><star/></set>
+          <set name="newpattern"><input index="2"/></set>
         </think>
         <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_llm.onText("<star/>")</param>
+            <param>i01_llm.getResponse("<input index="2"/>")</param>
           </mrl>
         </oob>
         </li>
@@ -30,11 +31,10 @@
       </random>
       </li>
       </condition>
+        <think>
+          <set name="newpattern"> </set>
+        </think>
         </template>
-</category>
-
-<category><pattern>LLM_RESPONSE #</pattern>
-  <template><img src="../Llm.png"/></template>
 </category>
 
 <category><pattern>LLM KOMMUNIKATION</pattern>
@@ -62,4 +62,6 @@
 </category>
 </topic>
 </aiml>
+
+
 
