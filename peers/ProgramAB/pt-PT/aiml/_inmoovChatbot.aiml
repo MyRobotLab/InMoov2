@@ -496,7 +496,7 @@
                 <think><set name="topic">default</set>
                        <set name="llmStop"></set>
                 </think></li>
-            <li><img src="img/InMoov2/brain-resize.gif"/><oob><mrl><service>python</service><method>exec</method><param>i01_llm.onText("<star/>")</param></mrl></oob></li>
+            <li><img src="img/InMoov2/brain-resize.gif"/><oob><mrl><service>python</service><method>exec</method><param>i01_llm.getResponse("<star/>")</param></mrl></oob></li>
             </condition>
   </template>
 </category>
