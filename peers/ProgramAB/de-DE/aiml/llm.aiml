@@ -8,13 +8,12 @@
         <li value="enabled"><img src="img/InMoov2/brain-resize.gif"/>
         <think>
           <set name="topic"><star/></set>
-          <set name="newpattern"><input index="2"/></set>
         </think>
         <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01_llm.getResponse("<input index="2"/>")</param>
+            <param>i01_llm.getResponse("<star/>")</param>
           </mrl>
         </oob>
         </li>
@@ -31,9 +30,6 @@
       </random>
       </li>
       </condition>
-        <think>
-          <set name="newpattern"> </set>
-        </think>
         </template>
 </category>
 
@@ -56,12 +52,13 @@
             <li name="llmStop" value="stoppen Sie llm">Ok, zurück zum Programm AB.                <think><set name="topic">default</set>
                        <set name="llmStop"></set>
                 </think></li>
-            <li><img src="../Llm.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_llm.onText("<star/>")</param></mrl></oob></li>
+            <li><img src="../Llm.png"/><oob><mrl><service>python</service><method>exec</method><param>i01_llm.getResponse("<star/>")</param></mrl></oob></li>
             </condition>
   </template>
 </category>
 </topic>
 </aiml>
+
 
 
 
