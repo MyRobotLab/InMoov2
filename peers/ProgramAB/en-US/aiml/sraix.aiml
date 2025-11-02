@@ -233,10 +233,6 @@
         </think>
         </template>
 </category>
-<category><pattern>LLM_RESPONSE #</pattern>
-<template><img src="../Llm.png"/></template>
-</category>
-
 <category><pattern>APPOINTMENT *</pattern>
 <template><srai>SCHEDULEDESCRIPTION <star/> SCHEDULEREQUEST APPOINTMENT <star/></srai></template>
 </category>
@@ -409,6 +405,7 @@
 </category>
 
 </aiml>
+
 
 
 

@@ -3,11 +3,7 @@
 <!-- File: _inmoovKnowledge.aiml-->
 <!--  -->
 <category><pattern># <set>determinantinterogatif</set> JE NE SAIS PAS</pattern>
-<template><!--<think>
-          <set name="determinantinterogatif">
-          <star index="1"/>
-        </set>
-      </think>-->
+<template>
       <sraix><get name="courant"/></sraix>
         </template>
 </category>
@@ -16,12 +12,15 @@
 <template>
       <condition name="llm">
         <li value="enabled"><img src="img/InMoov2/brain-resize.gif"/>
+        <think>
+          <set name="topic"><star/></set>
+        </think>
         <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
             <param>i01_llm.getResponse("<condition name="askLlm">
-        <li value="unknown"><get name="quoi" /></li><li><get name="askLlm" /> <get name="courant" /></li></condition>")</param>
+        <li value="unknown"><get name="quoi" /></li><li><get name="askLlm" /> <get name="articles" /> <get name="courant" /></li></condition>")</param>
           </mrl>
         </oob>
         <think><set name="askLlm">
@@ -37,9 +36,6 @@
         </li>
         </condition>
         </template>
-</category>
-<category><pattern>LLM_RESPONSE #</pattern>
-<template><img src="../Llm.png"/></template>
 </category>
 
 <category><pattern>SYSTEM_WIKIDATA_CATEGORIE <set>articles</set> * <set>articles</set> *</pattern>
