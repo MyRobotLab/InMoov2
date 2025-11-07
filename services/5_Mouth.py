@@ -28,8 +28,9 @@ def onEndSpeaking(text):
         if runtime.isStarted('i01.head'):
           i01_random.disable('i01.setHeadSpeed')
           i01_random.disable('i01.moveHead')
-          i01_random.disable('randomBlink')
-          i01_random.disable('randomFace')
+          ## commenting out these two lines, although I am pretty sure there was a case when they were necessary.
+          #i01_random.disable('randomBlink')
+          #i01_random.disable('randomFace')
     if i01.getConfig().neoPixelFlashWhenSpeaking==1 and runtime.isStarted('i01.neoPixel'):i01_neoPixel.clear()
   
 def onStartSpeaking(text):
