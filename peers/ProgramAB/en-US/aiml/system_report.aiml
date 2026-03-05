@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+   <category>
+      <pattern>SYSTEM_REPORT</pattern>
+      <template>
+         <date format="%I:%M %p" jformat="h:mm a"/> running version <get name="system.version" />.
+         up for <get name="system.uptime" />,
+         <get name="system.freeMemory" /> megabytes of memory available,
+         battery is <get name="system.batteryLevel" /> percent,  
+         <get name="system.servoCount" /> servo motors online,
+         <get name="system.serviceCount" /> services running,
+
+         <condition name="system.errorsExist">
+            <li value="false">there are no errors</li>
+            <li value="true">there are <get name="system.errorCount" /> errors</li>
+        </condition>.
+
+         current state is <get name="state" />
+      </template>
+   </category>
+</aiml>

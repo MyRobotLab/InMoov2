@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>STATE_RANDOM</pattern>
+        <template>
+            <random>
+                <li>Hmm, I wonder what I should do</li>
+                <li>This is interesting</li>
+                <li>What is that ?</li>
+                <li>Interesting</li>
+                <li>I never noticed that before</li>
+            </random>
+        </template>
+    </category>
+</aiml>
