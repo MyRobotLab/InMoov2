@@ -98,7 +98,7 @@ if runtime.isStarted('i01.left'):
                         stopFinger(finger, 1)
                         pressure[finger] = 0
 
-                print("Value:", value, "Pin:", pins[finger], finger)
+                print "Value: %s Pin: %s Finger: %s" % (value, pins[finger], finger)
 
         if runtime.isStarted('i01.chatBot'):
             i01_chatBot.getResponse("SYSTEM_EVENT STARTED LEFT HAND SENSOR")
