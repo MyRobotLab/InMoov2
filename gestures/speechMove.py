@@ -1,4 +1,11 @@
+import random
+
 def speechMove():
+    moves = [speechMove1, speechMove2, speechMove3, speechMove4]
+    choice = random.choice(moves)
+    choice()
+
+def EndSpeechMove():
   i01_torso.moveTo(95.0,90.0,90.0)
   i01_rightHand.moveTo(81.0,66.0,82.0,60.0,90.0)
   i01_rightArm.moveTo(5.0,82.0,25.0,12.0)
@@ -17,9 +24,9 @@ def speechMove1():
   i01_rightHand.moveTo(60.0,15.0,15.0,13.0,90.0)
   i01_rightArm.moveTo(5.0,79.0,36.0,17.0)
   i01_leftHand.moveTo(24.0,120.0,95.0,83.0,90.0)
-  i01_leftArm.moveTo(6.0,63.0,38.0,22.0)
+  i01_leftArm.moveTo(6.0,63.0,38.0,15.0)
   sleep(1)
-  speechMove()
+  EndSpeechMove()
   print('speechMove1')
 
 def speechMove2():
@@ -30,11 +37,11 @@ def speechMove2():
   i01_leftArm.setSpeed(45.0, 45.0, 45.0, 45.0)
   i01_torso.moveTo(89.0,86.0,89.0)
   i01_rightHand.moveTo(24.0,100.0,95.0,83.0,120.0)
-  i01_rightArm.moveTo(6.0,63.0,38.0,22.0)
+  i01_rightArm.moveTo(6.0,30.0,20.0,22.0)
   i01_leftHand.moveTo(24.0,120.0,95.0,83.0,90.0)
-  i01_leftArm.moveTo(6.0,63.0,38.0,22.0)
+  i01_leftArm.moveTo(6.0,30.0,20.0,22.0)
   sleep(1)
-  speechMove()
+  EndSpeechMove()
   print('speechMove2')
 
 def speechMove3():
@@ -49,7 +56,7 @@ def speechMove3():
   i01_leftHand.moveTo(78.0,61.0,61.0,61.0,61.0)
   i01_leftArm.moveTo(15.0,108.0,35.0,19.0)
   sleep(1)
-  speechMove()
+  EndSpeechMove()
   print('speechMove3')
 
 def speechMove4():
@@ -57,7 +64,7 @@ def speechMove4():
   i01_rightHand.moveTo(47.0,49.0,49.0,49.0,49.0)
   i01_rightArm.moveTo(7.0,66.0,30.0,11.0)
   i01_leftHand.moveTo(157.0,152.0,152.0,131.0,97.0)
-  i01_leftArm.moveTo(5.0,62.0,29.0,11.0)
+  i01_leftArm.moveTo(5.0,62.0,15.0,11.0)
   sleep(1)
-  speechMove()
+  EndSpeechMove()
   print('speechMove4')
