@@ -22,6 +22,8 @@ def initLlm():
     runtime.getConfig()
     #python.subscribe(llm.getName(), "publishText", "onFilterText")
     config = llm.getConfig()
+    if config.listeners == None or config.listeners == []:
+      python.subscribe(llm.getName(), "publishText", "onFilterText")
     if config.url == None or config.url == "http://localhost:11434" or config.url == "http://localhost:11434/v1/chat/completions":
       config.url = "http://localhost:11434/api/generate"
       runtime.warn('url is set by default to a localhost')
