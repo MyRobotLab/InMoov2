@@ -70,13 +70,13 @@ def onStartSpeaking(text):
                   i01_random.enable('i01.moveHead')
                   i01_random.addRandom("randomBlink", 5000, 30000, "python", "exec", "blink()")
                   i01_random.enable('randomBlink')
-                  i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "halfSpeedFaceMove()", "speechMove()")
+                  i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "halfSpeedFaceMove()")
                   i01_random.enable('randomFace')
 
           else:
               i01_random.addRandom("randomBlink", 5000, 30000, "python", "exec", "blink()")
               i01_random.enable('randomBlink')
-              i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "halfSpeedFaceMove()", "speechMove()")
+              i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "halfSpeedFaceMove()")
               i01_random.enable('randomFace')
       else:
         i01_random = i01.startPeer('random')
@@ -92,13 +92,13 @@ def onStartSpeaking(text):
                     i01_random.enable('i01.moveHead')
                     i01_random.addRandom("randomBlink", 5000, 30000, "python", "exec", "blink()")
                     i01_random.enable('randomBlink')
-                    i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "halfSpeedFaceMove()", "speechMove()")
+                    i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "halfSpeedFaceMove()")
                     i01_random.enable('randomFace')
 
             else:
                 i01_random.addRandom("randomBlink", 5000, 30000, "python", "exec", "blink()")
                 i01_random.enable('randomBlink')
-                i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "halfSpeedFaceMove()", "speechMove()")
+                i01_random.addRandom("randomFace", 1000, 2000, "python", "exec", "blink()", "halfSpeedFaceMove()")
 
 import re
 def onFilterText(text):
@@ -131,7 +131,8 @@ def onFilterText(text):
       i01_mouth.speak(filtered_text)
     if runtime.isStarted('i01.chatBot'):
       if filtered_text and not re.match(r'^\s*\*[\w\s]+\*\s*$', filtered_text):
-          send_llm_to_chatbotUI(filtered_text)  
+          send_llm_to_chatbotUI(filtered_text)
+          speechMove()
     print("Extracted Word:", extracted_word)
     print("Parameters:", params)
     function_to_call = globals().get(extracted_word)
